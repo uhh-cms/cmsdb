@@ -1,10 +1,10 @@
 # coding: utf-8
 
 """
-Scinentific constants.
+Scientific constants.
 """
 
-from scinum import Number, Correlation, REL
+from scinum import Number, Correlation
 from law.util import DotDict
 
 
@@ -30,11 +30,11 @@ br_z = DotDict(
 )
 
 br_h = DotDict(
-    ww=Number(0.2152, {"br_h_ww": (REL, 0.0153, 0.0152)}),
-    zz=Number(0.02641, {"br_h_zz": (REL, 0.0153, 0.0152)}),
-    gg=Number(0.002270, {"br_h_gg": (REL, 0.0205, 0.0209)}),
-    bb=Number(0.5809, {"br_h_bb": (REL, 0.0124, 0.0126)}),
-    tt=Number(0.06256, {"br_h_tt": (REL, 0.0165, 0.0163)}),
+    ww=Number(0.2152, {"br_h_ww": (0.0153j, 0.0152j)}),
+    zz=Number(0.02641, {"br_h_zz": (0.0153j, 0.0152j)}),
+    gg=Number(0.002270, {"br_h_gg": (0.0205j, 0.0209j)}),
+    bb=Number(0.5809, {"br_h_bb": (0.0124j, 0.0126j)}),
+    tt=Number(0.06256, {"br_h_tt": (0.0165j, 0.0163j)}),
 )
 
 br_hh = DotDict(

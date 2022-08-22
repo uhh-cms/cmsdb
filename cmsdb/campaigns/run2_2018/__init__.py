@@ -33,7 +33,7 @@ campaign_run2_2018.add_dataset(
     name="data_mu_a",
     id=14046760,
     is_data=True,
-    processes=[procs.process_data_mu],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2018A-02Apr2020-v1/NANOAOD",
     ],
@@ -44,7 +44,7 @@ campaign_run2_2018.add_dataset(
 campaign_run2_2018.add_dataset(
     name="st_tchannel_t",
     id=14293903,
-    processes=[procs.process_st_tchannel_t],
+    processes=[procs.st_tchannel_t],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -87,7 +87,7 @@ campaign_run2_2018.add_dataset(
 campaign_run2_2018.add_dataset(
     name="st_tchannel_tbar",
     id=14296756,
-    processes=[procs.process_st_tchannel_tbar],
+    processes=[procs.st_tchannel_tbar],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -130,7 +130,7 @@ campaign_run2_2018.add_dataset(
 campaign_run2_2018.add_dataset(
     name="st_twchannel_t",
     id=14248830,
-    processes=[procs.process_st_twchannel_t],
+    processes=[procs.st_twchannel_t],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -145,7 +145,7 @@ campaign_run2_2018.add_dataset(
 campaign_run2_2018.add_dataset(
     name="st_twchannel_tbar",
     id=14253778,
-    processes=[procs.process_st_twchannel_tbar],
+    processes=[procs.st_twchannel_tbar],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -160,7 +160,7 @@ campaign_run2_2018.add_dataset(
 campaign_run2_2018.add_dataset(
     name="tt_sl",
     id=14235437,
-    processes=[procs.process_tt_sl],
+    processes=[procs.tt_sl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -203,7 +203,7 @@ campaign_run2_2018.add_dataset(
 campaign_run2_2018.add_dataset(
     name="tt_dl",
     id=14234474,
-    processes=[procs.process_tt_dl],
+    processes=[procs.tt_dl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -246,7 +246,7 @@ campaign_run2_2018.add_dataset(
 campaign_run2_2018.add_dataset(
     name="tt_fh",
     id=14232068,
-    processes=[procs.process_tt_fh],
+    processes=[procs.tt_fh],
     info=dict(
         nominal=DatasetInfo(
             keys=[
