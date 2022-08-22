@@ -1,0 +1,55 @@
+name: Lint and test
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ⬇️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+          submodules: recursive
+
+      - name: Setup python 🐍
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies ☕️
+        run: |
+          pip install -U pip
+          pip install -r requirements_dev.txt
+
+      - name: Lint 🔍
+        run: |
+          flake8 cmsdb
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ⬇️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+          submodules: recursive
+
+      - name: Setup python 🐍
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies ☕️
+        run: |
+          pip install -U pip
+          pip install -r requirements_dev.txt.txt
+
+      - name: Test 🚦
+        run: |
+          python -c "from cmsdb.campaigns.run2_2016 import *"
+          python -c "from cmsdb.campaigns.run2_2017 import *"
+          python -c "from cmsdb.campaigns.run2_2018 import *"
