@@ -5,7 +5,8 @@ Scientific constants.
 """
 
 from scinum import Number, Correlation
-from law.util import DotDict
+
+from cmsdb.util import DotDict
 
 
 # misc
