@@ -568,7 +568,7 @@ campaign_run2_2017.add_dataset(
 #
 
 campaign_run2_2017.add_dataset(
-    name="st_tchannel_t",
+    name="st_tchannel_t_powheg",
     id=14296960,
     processes=[procs.st_tchannel_t],
     info=dict(
@@ -625,7 +625,7 @@ campaign_run2_2017.add_dataset(
 )
 
 campaign_run2_2017.add_dataset(
-    name="st_tchannel_tbar",
+    name="st_tchannel_tbar_powheg",
     id=14296742,
     processes=[procs.st_tchannel_tbar],
     info=dict(
