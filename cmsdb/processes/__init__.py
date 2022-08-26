@@ -826,6 +826,82 @@ hh_vbf = hh.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+hh_ggf_kt_1_kl_0 = hh_ggf.add_process(
+    name="hh_ggf_kt_1_kl_0",
+    id=21001,
+    xsecs={
+        13: Number(0.07038, {
+            "scale": (0.024j, 0.061j),
+            "pdf": 0.03j,
+            "mtop": (0.06j, 0.12j),
+        })
+    },
+)
+
+hh_ggf_kt_1_kl_1 = hh_ggf.add_process(
+    name="hh_ggf_kt_1_kl_1",
+    id=21002,
+    xsecs={
+        13: Number(0.03105, {
+            "scale": (0.022j, 0.050j),
+            "pdf": 0.03j,
+            "mtop": (0.04j, 0.18j),
+        })
+    },
+)
+
+hh_ggf_kt_1_kl_2p45= hh_ggf.add_process(
+    name="hh_ggf_kt_1_kl_2p45",
+    id=21003,
+    xsecs={
+        13: Number(0.01310, {
+            "scale": (0.023j, 0.051j),
+            "pdf": 0.03j,
+            "mtop": (0.04j, 0.22j),
+        })
+    },
+)
+
+hh_ggf_kt_1_kl_5= hh_ggf.add_process(
+    name="hh_ggf_kt_1_kl_5",
+    id=21004,
+    xsecs={
+        13: Number(0.09482, {
+            "scale": (0.049j, 0.088j),
+            "pdf": 0.03j,
+            "mtop": (0.13j, 0.04j),
+        })
+    },
+)
+
+#
+# HH -> bbWW -> bbWWqqlnu
+#
+
+hh_ggf_kt_1_kl_0_bbww_sl = hh_ggf_kt_1_kl_0.add_process(
+    name="hh_ggf_kt_1_kl_0_bbww_sl",
+    id=21220,
+    xsecs={13: hh_ggf_kt_1_kl_0.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl},
+)
+hh_ggf_kt_1_kl_1_bbww_sl = hh_ggf_kt_1_kl_1.add_process(
+    name="hh_ggf_kt_1_kl_1_bbww_sl",
+    id=21221,
+    xsecs={13: hh_ggf_kt_1_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl},
+)
+hh_ggf_kt_1_kl_2p45_bbww_sl = hh_ggf_kt_1_kl_2p45.add_process(
+    name="hh_ggf_kt_1_kl_2p45_bbww_sl",
+    id=21222,
+    xsecs={13: hh_ggf_kt_1_kl_2p45.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl},
+)
+hh_ggf_kt_1_kl_5_bbww_sl = hh_ggf_kt_1_kl_5.add_process(
+    name="hh_ggf_kt_1_kl_5_bbww_sl",
+    id=21223,
+    xsecs={13: hh_ggf_kt_1_kl_5.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl},
+)
+
+#
+# HH -> bbtautau
+#
 
 #
 # ggF -> H -> HH

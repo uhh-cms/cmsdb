@@ -11,7 +11,6 @@ from order import Campaign, DatasetInfo
 
 import cmsdb.processes as procs
 
-
 #
 # campaign
 #
@@ -24,6 +23,8 @@ campaign_run2_2017 = Campaign(
     aux={"year": 2017},
 )
 
+# trailing imports
+import cmsdb.campaigns.run2_2017.hh2bbww
 
 #
 # real data
