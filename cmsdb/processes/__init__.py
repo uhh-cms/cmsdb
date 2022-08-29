@@ -834,7 +834,7 @@ hh_ggf_kt_1_kl_0 = hh_ggf.add_process(
             "scale": (0.024j, 0.061j),
             "pdf": 0.03j,
             "mtop": (0.06j, 0.12j),
-        })
+        }),
     },
 )
 
@@ -846,11 +846,11 @@ hh_ggf_kt_1_kl_1 = hh_ggf.add_process(
             "scale": (0.022j, 0.050j),
             "pdf": 0.03j,
             "mtop": (0.04j, 0.18j),
-        })
+        }),
     },
 )
 
-hh_ggf_kt_1_kl_2p45= hh_ggf.add_process(
+hh_ggf_kt_1_kl_2p45 = hh_ggf.add_process(
     name="hh_ggf_kt_1_kl_2p45",
     id=21003,
     xsecs={
@@ -858,11 +858,11 @@ hh_ggf_kt_1_kl_2p45= hh_ggf.add_process(
             "scale": (0.023j, 0.051j),
             "pdf": 0.03j,
             "mtop": (0.04j, 0.22j),
-        })
+        }),
     },
 )
 
-hh_ggf_kt_1_kl_5= hh_ggf.add_process(
+hh_ggf_kt_1_kl_5 = hh_ggf.add_process(
     name="hh_ggf_kt_1_kl_5",
     id=21004,
     xsecs={
@@ -870,7 +870,7 @@ hh_ggf_kt_1_kl_5= hh_ggf.add_process(
             "scale": (0.049j, 0.088j),
             "pdf": 0.03j,
             "mtop": (0.13j, 0.04j),
-        })
+        }),
     },
 )
 

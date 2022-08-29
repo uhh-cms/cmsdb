@@ -1,10 +1,8 @@
 # coding: utf-8
 
 """
-HH -> bbWW Datasets for the 2017 data-taking campaign
+HH -> bbWW datasets for the 2017 data-taking campaign
 """
-
-from order import Campaign
 
 import cmsdb.processes as procs
 
@@ -28,7 +26,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     keys=[
         "/GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM", # noqa
     ],
-    n_files=2,  # 24
+    n_files=24,
     n_events=399994,
 )
 
