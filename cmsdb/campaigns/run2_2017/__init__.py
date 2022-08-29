@@ -21,15 +21,12 @@ campaign_run2_2017 = Campaign(
     aux={"year": 2017},
 )
 
-# Data
+
+# trailing imports to load datasets
 import cmsdb.campaigns.run2_2017.data  # noqa
-
-# Backgrounds
 import cmsdb.campaigns.run2_2017.top  # noqa
-import cmsdb.campaigns.run2_2017.electroweak  # noqa
-import cmsdb.campaigns.run2_2017.higgs  # noqa
+import cmsdb.campaigns.run2_2017.ewk  # noqa
 import cmsdb.campaigns.run2_2017.qcd  # noqa
-
-# Signal
+import cmsdb.campaigns.run2_2017.higgs  # noqa
 import cmsdb.campaigns.run2_2017.hh2bbtautau  # noqa
 import cmsdb.campaigns.run2_2017.hh2bbww  # noqa

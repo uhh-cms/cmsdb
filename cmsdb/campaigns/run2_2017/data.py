@@ -5,11 +5,14 @@ CMS datasets from the 2017 data-taking campaign
 """
 
 import cmsdb.processes as procs
+from cmsdb.campaigns.run2_2017 import campaign_run2_2017
 
-from cmsdb.campaigns import run2_2017
 
+#
 # SingleElectron
-run2_2017.campaign_run2_2017.add_dataset(
+#
+
+campaign_run2_2017.add_dataset(
     name="data_e_b",
     id=14226251,
     is_data=True,
@@ -21,7 +24,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=60537490,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_e_c",
     id=14226092,
     is_data=True,
@@ -33,7 +36,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=136637888,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_e_d",
     id=14227611,
     is_data=True,
@@ -45,7 +48,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=51512837,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_e_e",
     id=14226090,
     is_data=True,
@@ -57,7 +60,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=102122055,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_e_f",
     id=14226476,
     is_data=True,
@@ -69,8 +72,12 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=128467223,
 )
 
+
+#
 # SingleMuon
-run2_2017.campaign_run2_2017.add_dataset(
+#
+
+campaign_run2_2017.add_dataset(
     name="data_mu_b",
     id=14226191,
     is_data=True,
@@ -82,7 +89,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=136300266,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_mu_c",
     id=14226140,
     is_data=True,
@@ -94,7 +101,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=165652756,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_mu_d",
     id=14226234,
     is_data=True,
@@ -106,7 +113,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=70361660,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_mu_e",
     id=14235644,
     is_data=True,
@@ -118,7 +125,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=154618774,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_mu_f",
     id=14226183,
     is_data=True,
@@ -130,8 +137,12 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=242140980,
 )
 
+
+#
 # Tau
-run2_2017.campaign_run2_2017.add_dataset(
+#
+
+campaign_run2_2017.add_dataset(
     name="data_tau_b",
     id=14233603,
     is_data=True,
@@ -143,7 +154,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=38158216,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_tau_c",
     id=14233706,
     is_data=True,
@@ -155,7 +166,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=55416425,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_tau_d",
     id=14233103,
     is_data=True,
@@ -167,7 +178,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=20530776,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_tau_e",
     id=14233325,
     is_data=True,
@@ -179,7 +190,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=0,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_tau_f",
     id=14232807,
     is_data=True,
@@ -191,8 +202,12 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=88502118,
 )
 
+
+#
 # MET
-run2_2017.campaign_run2_2017.add_dataset(
+#
+
+campaign_run2_2017.add_dataset(
     name="data_met_b",
     id=14225468,
     is_data=True,
@@ -204,7 +219,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=51623474,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_met_c",
     id=14226051,
     is_data=True,
@@ -216,7 +231,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=115906496,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_met_d",
     id=14230935,
     is_data=True,
@@ -228,7 +243,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=20075033,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_met_e",
     id=14225819,
     is_data=True,
@@ -240,7 +255,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=71418865,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="data_met_f",
     id=14224849,
     is_data=True,

@@ -5,10 +5,10 @@ QCD datasets for the 2017 data-taking campaign
 """
 
 import cmsdb.processes as procs
+from cmsdb.campaigns.run2_2017 import campaign_run2_2017
 
-from cmsdb.campaigns import run2_2017
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht50to100_madgraph",
     id=14165805,
     processes=[procs.qcd_ht50to100],
@@ -19,7 +19,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=40370559,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht100to200_madgraph",
     id=14165816,
     processes=[procs.qcd_ht100to200],
@@ -30,7 +30,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=77551016,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht200to300_madgraph",
     id=14165798,
     processes=[procs.qcd_ht200to300],
@@ -41,7 +41,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=57400723,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht300to500_madgraph",
     id=14165206,
     processes=[procs.qcd_ht300to500],
@@ -52,7 +52,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=56549740,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht500to700_madgraph",
     id=14165524,
     processes=[procs.qcd_ht500to700],
@@ -64,7 +64,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=9027879 + 57880117,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht700to1000_madgraph",
     id=14165795,
     processes=[procs.qcd_ht700to1000],
@@ -75,7 +75,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=45812757,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht1000to1500_madgraph",
     id=14165562,
     processes=[procs.qcd_ht1000to1500],
@@ -86,7 +86,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=15346629,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht1500to2000_madgraph",
     id=14165704,
     processes=[procs.qcd_ht1500to2000],
@@ -97,7 +97,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=10598209,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="qcd_ht2000_madgraph",
     id=14165502,
     processes=[procs.qcd_ht2000],

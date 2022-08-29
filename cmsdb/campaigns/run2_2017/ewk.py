@@ -5,15 +5,15 @@ Electroweak datasets for the 2017 data-taking campaign
 """
 
 import cmsdb.processes as procs
+from cmsdb.campaigns.run2_2017 import campaign_run2_2017
 
-from cmsdb.campaigns import run2_2017
 
 #
 # Drell-Yan
 #
 
 # jet binned, madgraph
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_1j_madgraph",
     id=14242968,
     processes=[procs.dy_lep_m50_1j],
@@ -24,7 +24,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=65903452,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_2j_madgraph",
     id=14235404,
     processes=[procs.dy_lep_m50_2j],
@@ -35,7 +35,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=27099640,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_3j_madgraph",
     id=14235548,
     processes=[procs.dy_lep_m50_3j],
@@ -46,7 +46,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=20165687,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_4j_madgraph",
     id=14235551,
     processes=[procs.dy_lep_m50_4j],
@@ -58,7 +58,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # jet binned, amcatnlo
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_0j_amcatnlo",
     id=14302706,
     processes=[procs.dy_lep_0j],
@@ -69,7 +69,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=78288099,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_1j_amcatnlo",
     id=14300055,
     processes=[procs.dy_lep_1j],
@@ -80,7 +80,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=84321311,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_2j_amcatnlo",
     id=14231469,
     processes=[procs.dy_lep_2j],
@@ -92,7 +92,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # ht binned
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht70to100_madgraph",
     id=14235248,
     processes=[procs.dy_lep_m50_ht70to100],
@@ -103,7 +103,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=12205958,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht100to200_madgraph",
     id=14235412,
     processes=[procs.dy_lep_m50_ht100to200],
@@ -114,7 +114,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=18648544,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht200to400_madgraph",
     id=14235285,
     processes=[procs.dy_lep_m50_ht200to400],
@@ -125,7 +125,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=12451701,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht400to600_madgraph",
     id=14234754,
     processes=[procs.dy_lep_m50_ht400to600],
@@ -136,7 +136,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=5384252,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht600to800_madgraph",
     id=14234976,
     processes=[procs.dy_lep_m50_ht600to800],
@@ -147,7 +147,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=5118706,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht800to1200_madgraph",
     id=14234833,
     processes=[procs.dy_lep_m50_ht800to1200],
@@ -158,7 +158,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=4347168,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht1200to2500_madgraph",
     id=14243239,
     processes=[procs.dy_lep_m50_ht1200to2500],
@@ -169,7 +169,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=4725936,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_m50_ht2500_madgraph",
     id=14244972,
     processes=[procs.dy_lep_m50_ht2500],
@@ -181,7 +181,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # pt binned
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_pt50To100_amcatnlo",
     id=14231159,
     processes=[procs.dy_lep_pt50To100],
@@ -192,7 +192,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=107079717,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_pt100To250_amcatnlo",
     id=14300156,
     processes=[procs.dy_lep_pt100To250],
@@ -203,7 +203,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=75818801,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_pt250To400_amcatnlo",
     id=14235259,
     processes=[procs.dy_lep_pt250To400],
@@ -214,7 +214,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=18739246,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_pt400To650_amcatnlo",
     id=14228178,
     processes=[procs.dy_lep_pt400To650],
@@ -225,7 +225,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=1895259,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="dy_lep_pt650_amcatnlo",
     id=14232153,
     processes=[procs.dy_lep_pt650],
@@ -242,7 +242,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 #
 
 # inclusive
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_madgraph",
     id=14233715,
     processes=[procs.w_lnu],
@@ -254,7 +254,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # ht binned
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht70To100_madgraph",
     id=14245091,
     processes=[procs.w_lnu_ht70To100],
@@ -265,7 +265,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=44576510,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht100To200_madgraph",
     id=14231627,
     processes=[procs.w_lnu_ht100To200],
@@ -276,7 +276,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=47424468,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht200To400_madgraph",
     id=14239255,
     processes=[procs.w_lnu_ht200To400],
@@ -287,7 +287,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=42281979,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht400To600_madgraph",
     id=14231356,
     processes=[procs.w_lnu_ht400To600],
@@ -298,7 +298,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=5468473,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht600To800_madgraph",
     id=14230638,
     processes=[procs.w_lnu_ht600To800],
@@ -309,7 +309,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=5545298,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht800To1200_madgraph",
     id=14346984,
     processes=[procs.w_lnu_ht800To1200],
@@ -320,7 +320,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=5088483,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht1200To2500_madgraph",
     id=14231551,
     processes=[procs.w_lnu_ht1200To2500],
@@ -331,7 +331,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=4752118,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="w_lnu_ht2500_madgraph",
     id=14267094,
     processes=[procs.w_lnu_ht2500],
@@ -348,7 +348,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 # (vector boson emissions)
 #
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="ewk_wm_lnu_madgraph",
     id=14301832,
     processes=[procs.ewk_wm_lnu],
@@ -359,7 +359,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=4077000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="ewk_w_lnu_madgraph",
     id=14300978,
     processes=[procs.ewk_wp_lnu],
@@ -370,7 +370,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=3595000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="ewk_z_ll_madgraph",
     id=14301412,
     processes=[procs.ewk_z_ll],
@@ -387,7 +387,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 #
 
 # ZZ
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="zz_pythia",
     id=14227451,
     processes=[procs.zz],
@@ -398,7 +398,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=2706000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="zz_qqll_m4_amcatnlo",
     id=14298864,
     processes=[procs.zz_qqll_m4],
@@ -409,7 +409,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=29521496,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="zz_llnunu_powheg",
     id=14237024,
     processes=[procs.zz_llnunu],
@@ -420,7 +420,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=40839000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="zz_llll_powheg",
     id=14243658,
     processes=[procs.zz_llll],
@@ -432,7 +432,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # WZ
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="wz_pythia",
     id=14230373,
     processes=[procs.wz],
@@ -443,7 +443,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=7889000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="wz_lllnu_amcatnlo",
     id=14253602,
     processes=[procs.wz_lllnu],
@@ -454,7 +454,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=10339582,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="wz_qqll_m4_amcatnlo",
     id=14328000,
     processes=[procs.wz_qqll_m4],
@@ -466,7 +466,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # WW
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="ww_pythia",
     id=14229298,
     processes=[procs.ww],
@@ -477,7 +477,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=15634000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="ww_lnulnu_powheg",
     id=14241651,
     processes=[procs.ww_lnulnu],
@@ -493,7 +493,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 # Triple-boson
 #
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="zzz_amcatnlo",
     id=14231380,
     processes=[procs.zzz],
@@ -505,7 +505,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=178000 + 9524000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="wzz_amcatnlo",
     id=14247843,
     processes=[procs.wzz],
@@ -517,7 +517,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=298000 + 9898000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="wwz_amcatnlo",
     id=14231348,
     processes=[procs.wwz],
@@ -529,7 +529,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=178000 + 9938400,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="www_amcatnlo",
     id=14231501,
     processes=[procs.www],
