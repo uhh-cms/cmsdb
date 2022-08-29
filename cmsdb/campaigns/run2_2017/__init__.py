@@ -7,9 +7,7 @@ See https://python-order.readthedocs.io/en/latest/quickstart.html#analysis-campa
 Dataset ids are identical to those in DAS (https://cmsweb.cern.ch/das).
 """
 
-from order import Campaign, DatasetInfo
-
-import cmsdb.processes as procs
+from order import Campaign
 
 #
 # campaign
