@@ -5,15 +5,15 @@ Higgs datasets for the 2017 data-taking campaign
 """
 
 import cmsdb.processes as procs
+from cmsdb.campaigns.run2_2017 import campaign_run2_2017
 
-from cmsdb.campaigns import run2_2017
 
 #
 # Single Higgs
 #
 
 # ggf
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="h_ggf_tautau_powheg",
     id=14230587,
     processes=[procs.h_ggf_tautau],
@@ -25,7 +25,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # vbf
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="h_vbf_tautau_powheg",
     id=14232168,
     processes=[procs.h_vbf_tautau],
@@ -37,7 +37,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # H radiation
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="zh_tautau_powheg",
     id=14363472,
     processes=[procs.zh_tautau],
@@ -48,7 +48,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=4614054,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="zh_bb_powheg",
     id=14275939,
     processes=[procs.zh_bb],
@@ -59,7 +59,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=4958035,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="wph_tautau_powheg",
     id=14232214,
     processes=[procs.wph_tautau],
@@ -70,7 +70,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=3985990,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="wmh_tautau_powheg",
     id=14231275,
     processes=[procs.wmh_tautau],
@@ -81,7 +81,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=3828192,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="ggzh_llbb_powheg",
     id=14355451,
     processes=[procs.ggzh_llbb],
@@ -93,7 +93,7 @@ run2_2017.campaign_run2_2017.add_dataset(
 )
 
 # ttH
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="tth_tautau_powheg",
     id=14230113,
     processes=[procs.tth_tautau],
@@ -104,7 +104,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=21165000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="tth_bb_powheg",
     id=14260809,
     processes=[procs.tth_bb],
@@ -115,7 +115,7 @@ run2_2017.campaign_run2_2017.add_dataset(
     n_events=7825000,
 )
 
-run2_2017.campaign_run2_2017.add_dataset(
+campaign_run2_2017.add_dataset(
     name="tth_nonbb_powheg",
     id=14261730,
     processes=[procs.tth_nonbb],
