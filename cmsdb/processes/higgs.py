@@ -179,6 +179,9 @@ hh_ggf_kt_1_kl_0 = hh_ggf.add_process(
     },
 )
 
+# Cross sections and uncertainties are based on:
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?rev=76
+
 hh_ggf_kt_1_kl_1 = hh_ggf.add_process(
     name="hh_ggf_kt_1_kl_1",
     id=21002,
