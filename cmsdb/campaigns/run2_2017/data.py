@@ -22,6 +22,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=32,
     n_events=60537490,
+    aux={
+        "jec_era": "RunB",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -34,6 +37,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=59,
     n_events=136637888,
+    aux={
+        "jec_era": "RunC",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -46,6 +52,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=37,
     n_events=51512837,
+    aux={
+        "jec_era": "RunD",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -58,6 +67,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=51,
     n_events=102122055,
+    aux={
+        "jec_era": "RunE",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -70,6 +82,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=66,
     n_events=128467223,
+    aux={
+        "jec_era": "RunF",
+    },
 )
 
 
@@ -87,6 +102,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=79,
     n_events=136300266,
+    aux={
+        "jec_era": "RunB",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -99,6 +117,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=117,
     n_events=165652756,
+    aux={
+        "jec_era": "RunC",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -111,6 +132,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=47,
     n_events=70361660,
+    aux={
+        "jec_era": "RunD",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -123,6 +147,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=78,
     n_events=154618774,
+    aux={
+        "jec_era": "RunE",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -135,6 +162,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=115,
     n_events=242140980,
+    aux={
+        "jec_era": "RunF",
+    },
 )
 
 
@@ -152,6 +182,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=32,
     n_events=38158216,
+    aux={
+        "jec_era": "RunB",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -164,6 +197,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=45,
     n_events=55416425,
+    aux={
+        "jec_era": "RunC",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -176,6 +212,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=13,
     n_events=20530776,
+    aux={
+        "jec_era": "RunD",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -188,6 +227,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=0,
     n_events=0,
+    aux={
+        "jec_era": "RunE",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -200,6 +242,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=59,
     n_events=88502118,
+    aux={
+        "jec_era": "RunF",
+    },
 )
 
 
@@ -217,6 +262,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=43,
     n_events=51623474,
+    aux={
+        "jec_era": "RunB",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -229,6 +277,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=53,
     n_events=115906496,
+    aux={
+        "jec_era": "RunC",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -241,6 +292,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=15,
     n_events=20075033,
+    aux={
+        "jec_era": "RunD",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -253,6 +307,9 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=48,
     n_events=71418865,
+    aux={
+        "jec_era": "RunE",
+    },
 )
 
 campaign_run2_2017.add_dataset(
@@ -265,4 +322,7 @@ campaign_run2_2017.add_dataset(
     ],
     n_files=133,
     n_events=177521562,
+    aux={
+        "jec_era": "RunF",
+    },
 )
