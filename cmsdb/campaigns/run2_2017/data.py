@@ -223,10 +223,10 @@ campaign_run2_2017.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/Tau/Run2017E-UL2017_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
-    n_files=0,
-    n_events=0,
+    n_files=36,
+    n_events=44316628,
     aux={
         "jec_era": "RunE",
     },
