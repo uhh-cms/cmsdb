@@ -5,10 +5,10 @@ HH -> bbWW datasets for the 2017 data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2017 import campaign_run2_2017
+from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_kt_1_kl_0_bbww_sl_powheg",
     id=14057341,
     processes=[procs.hh_ggf_kt_1_kl_0_bbww_sl],
@@ -19,7 +19,7 @@ campaign_run2_2017.add_dataset(
     n_events=392598,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_kt_1_kl_1_bbww_sl_powheg",
     id=14065482,
     processes=[procs.hh_ggf_kt_1_kl_1_bbww_sl],
@@ -30,7 +30,7 @@ campaign_run2_2017.add_dataset(
     n_events=399994,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_kt_1_kl_2p45_bbww_sl_powheg",
     id=14066581,
     processes=[procs.hh_ggf_kt_1_kl_2p45_bbww_sl],
@@ -41,7 +41,7 @@ campaign_run2_2017.add_dataset(
     n_events=399996,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_kt_1_kl_5_bbww_sl_powheg",
     id=14058363,
     processes=[procs.hh_ggf_kt_1_kl_5_bbww_sl],
