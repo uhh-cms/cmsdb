@@ -12,7 +12,8 @@ __all__ = [
     "tth", "tth_tautau", "tth_bb", "tth_nonbb",
     "hh",
     "hh_ggf", "hh_ggf_kt_1_kl_0", "hh_ggf_kt_1_kl_1", "hh_ggf_kt_1_kl_2p45", "hh_ggf_kt_1_kl_5",
-    "hh_vbf",
+    "hh_vbf", "hh_vbf_cv_0p5_c2v_1_c3_1", "hh_vbf_cv_1p5_c2v_1_c3_1", "hh_vbf_cv_1_c2v_0_c3_1",
+    "hh_vbf_cv_1_c2v_1_c3_0", "hh_vbf_cv_1_c2v_1_c3_1", "hh_vbf_cv_1_c2v_1_c3_2", "hh_vbf_cv_1_c2v_2_c3_1",
     "radion_hh_ggf", "graviton_hh_ggf", "radion_hh_vbf", "graviton_hh_vbf",
 ]
 
@@ -225,6 +226,82 @@ hh_vbf = hh.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+hh_vbf_cv_0p5_c2v_1_c3_1 = hh_vbf.add_process(
+    name="hh_vbf_cv_0p5_c2v_1_c3_1",
+    id=22001,
+    xsecs={  # TODO
+        13: Number(0.001723, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+hh_vbf_cv_1p5_c2v_1_c3_1 = hh_vbf.add_process(
+    name="hh_vbf_cv_1p5_c2v_1_c3_1",
+    id=22002,
+    xsecs={  # TODO
+        13: Number(0.001723, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+hh_vbf_cv_1_c2v_0_c3_1 = hh_vbf.add_process(
+    name="hh_vbf_cv_1_c2v_0_c3_1",
+    id=22003,
+    xsecs={  # TODO
+        13: Number(0.001723, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+hh_vbf_cv_1_c2v_1_c3_0 = hh_vbf.add_process(
+    name="hh_vbf_cv_1_c2v_1_c3_0",
+    id=22004,
+    xsecs={  # TODO
+        13: Number(0.001723, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+hh_vbf_cv_1_c2v_1_c3_1 = hh_vbf.add_process(
+    name="hh_vbf_cv_1_c2v_1_c3_1",
+    id=22005,
+    xsecs={
+        13: Number(0.001723, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+hh_vbf_cv_1_c2v_1_c3_2 = hh_vbf.add_process(
+    name="hh_vbf_cv_1_c2v_1_c3_2",
+    id=22006,
+    xsecs={  # TODO
+        13: Number(0.001723, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+hh_vbf_cv_1_c2v_2_c3_1 = hh_vbf.add_process(
+    name="hh_vbf_cv_1_c2v_2_c3_1",
+    id=22007,
+    xsecs={  # TODO
+        13: Number(0.001723, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
 
 #
 # Resonant BSM HH production
