@@ -7,14 +7,14 @@ top quark datasets for the 2017 data-taking campaign
 from order import DatasetInfo
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2017 import campaign_run2_2017
+from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 
 
 #
 # ttbar
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="tt_sl_powheg",
     id=14231639,
     processes=[procs.tt_sl],
@@ -71,7 +71,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="tt_dl_powheg",
     id=14265841,
     processes=[procs.tt_dl],
@@ -128,7 +128,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="tt_fh_powheg",
     id=14299346,
     processes=[procs.tt_fh],
@@ -191,7 +191,7 @@ campaign_run2_2017.add_dataset(
 # ttbar + 1 vector boson
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="ttz_llnunu_amcatnlo",
     id=14229512,
     processes=[procs.ttz_llnunu],
@@ -220,7 +220,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="ttw_nlu_amcatnlo",
     id=14228083,
     processes=[procs.ttw_lnu],
@@ -249,7 +249,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="ttw_qq_amcatnlo",
     id=14235122,
     processes=[procs.ttw_qq],
@@ -265,7 +265,7 @@ campaign_run2_2017.add_dataset(
 # ttbar + 2 vector bosons
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="ttzz_madgraph",
     id=14234743,
     processes=[procs.ttzz],
@@ -276,7 +276,7 @@ campaign_run2_2017.add_dataset(
     n_events=327000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="ttwz_madgraph",
     id=14230416,
     processes=[procs.ttwz],
@@ -287,7 +287,7 @@ campaign_run2_2017.add_dataset(
     n_events=350000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="ttww_madgraph",
     id=14234141,
     processes=[procs.ttww],
@@ -303,7 +303,7 @@ campaign_run2_2017.add_dataset(
 # single top
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="st_tchannel_t_powheg",
     id=14296960,
     processes=[procs.st_tchannel_t],
@@ -360,7 +360,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="st_tchannel_tbar_powheg",
     id=14296742,
     processes=[procs.st_tchannel_tbar],
@@ -417,7 +417,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="st_twchannel_t_powheg",
     id=14246131,
     processes=[procs.st_twchannel_t],
@@ -439,7 +439,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="st_twchannel_tbar_powheg",
     id=14248566,
     processes=[procs.st_twchannel_tbar],
@@ -461,7 +461,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="st_schannel_lep_amcatnlo",
     id=14235125,
     processes=[procs.st_schannel_lep],
@@ -490,7 +490,7 @@ campaign_run2_2017.add_dataset(
     ),
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="st_schannel_had_amcatnlo",
     id=14378997,
     processes=[procs.st_schannel_had],

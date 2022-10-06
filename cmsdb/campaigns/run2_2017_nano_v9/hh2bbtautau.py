@@ -5,7 +5,7 @@ HH -> bbtautau datasets for the 2017 data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2017 import campaign_run2_2017
+from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 
 
 #
@@ -13,7 +13,7 @@ from cmsdb.campaigns.run2_2017 import campaign_run2_2017
 #
 
 # SM
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_madgraph",
     id=14336680,
     processes=[procs.hh_ggf_bbtautau],
@@ -25,7 +25,7 @@ campaign_run2_2017.add_dataset(
 )
 
 # BSM scenarios
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node1_madgraph",
     id=14366362,
     processes=[procs.hh_ggf_bbtautau_node1],
@@ -37,7 +37,7 @@ campaign_run2_2017.add_dataset(
 )
 
 # missing
-# campaign_run2_2017.add_dataset(
+# cpn.add_dataset(
 #     name="hh_ggf_bbtautau_node2_madgraph",
 #     id=,
 #     processes=[procs.hh_ggf_bbtautau_node2],
@@ -48,7 +48,7 @@ campaign_run2_2017.add_dataset(
 #     n_events=,
 # )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node3_madgraph",
     id=14369747,
     processes=[procs.hh_ggf_bbtautau_node3],
@@ -59,7 +59,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node4_madgraph",
     id=14368375,
     processes=[procs.hh_ggf_bbtautau_node4],
@@ -70,7 +70,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node5_madgraph",
     id=14364195,
     processes=[procs.hh_ggf_bbtautau_node5],
@@ -81,7 +81,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node6_madgraph",
     id=14368376,
     processes=[procs.hh_ggf_bbtautau_node6],
@@ -92,7 +92,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node7_madgraph",
     id=14369764,
     processes=[procs.hh_ggf_bbtautau_node7],
@@ -103,7 +103,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node8_madgraph",
     id=14370426,
     processes=[procs.hh_ggf_bbtautau_node8],
@@ -114,7 +114,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node9_madgraph",
     id=14366977,
     processes=[procs.hh_ggf_bbtautau_node9],
@@ -125,7 +125,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node10_madgraph",
     id=14369844,
     processes=[procs.hh_ggf_bbtautau_node10],
@@ -136,7 +136,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node11_madgraph",
     id=14368408,
     processes=[procs.hh_ggf_bbtautau_node11],
@@ -147,7 +147,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="hh_ggf_bbtautau_node12_madgraph",
     id=14368374,
     processes=[procs.hh_ggf_bbtautau_node12],
@@ -163,7 +163,7 @@ campaign_run2_2017.add_dataset(
 # ggF -> radion -> HH
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m250_madgraph",
     id=14302777,
     processes=[procs.radion_hh_ggf_bbtautau_m250],
@@ -174,7 +174,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m260_madgraph",
     id=14346707,
     processes=[procs.radion_hh_ggf_bbtautau_m260],
@@ -185,7 +185,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m270_madgraph",
     id=14308899,
     processes=[procs.radion_hh_ggf_bbtautau_m270],
@@ -196,7 +196,7 @@ campaign_run2_2017.add_dataset(
     n_events=393000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m280_madgraph",
     id=14346524,
     processes=[procs.radion_hh_ggf_bbtautau_m280],
@@ -207,7 +207,7 @@ campaign_run2_2017.add_dataset(
     n_events=388000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m300_madgraph",
     id=14305216,
     processes=[procs.radion_hh_ggf_bbtautau_m300],
@@ -218,7 +218,7 @@ campaign_run2_2017.add_dataset(
     n_events=276000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m320_madgraph",
     id=14317863,
     processes=[procs.radion_hh_ggf_bbtautau_m320],
@@ -229,7 +229,7 @@ campaign_run2_2017.add_dataset(
     n_events=286000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m350_madgraph",
     id=14305228,
     processes=[procs.radion_hh_ggf_bbtautau_m350],
@@ -240,7 +240,7 @@ campaign_run2_2017.add_dataset(
     n_events=282000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m400_madgraph",
     id=14304148,
     processes=[procs.radion_hh_ggf_bbtautau_m400],
@@ -251,7 +251,7 @@ campaign_run2_2017.add_dataset(
     n_events=288000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m450_madgraph",
     id=14327613,
     processes=[procs.radion_hh_ggf_bbtautau_m450],
@@ -262,7 +262,7 @@ campaign_run2_2017.add_dataset(
     n_events=294000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m500_madgraph",
     id=14305221,
     processes=[procs.radion_hh_ggf_bbtautau_m500],
@@ -273,7 +273,7 @@ campaign_run2_2017.add_dataset(
     n_events=285000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m550_madgraph",
     id=14302808,
     processes=[procs.radion_hh_ggf_bbtautau_m550],
@@ -284,7 +284,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m600_madgraph",
     id=14308469,
     processes=[procs.radion_hh_ggf_bbtautau_m600],
@@ -295,7 +295,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m650_madgraph",
     id=14346493,
     processes=[procs.radion_hh_ggf_bbtautau_m650],
@@ -306,7 +306,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m700_madgraph",
     id=14346372,
     processes=[procs.radion_hh_ggf_bbtautau_m700],
@@ -317,7 +317,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m750_madgraph",
     id=14346507,
     processes=[procs.radion_hh_ggf_bbtautau_m750],
@@ -328,7 +328,7 @@ campaign_run2_2017.add_dataset(
     n_events=191000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m800_madgraph",
     id=14327247,
     processes=[procs.radion_hh_ggf_bbtautau_m800],
@@ -339,7 +339,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m850_madgraph",
     id=14329740,
     processes=[procs.radion_hh_ggf_bbtautau_m850],
@@ -350,7 +350,7 @@ campaign_run2_2017.add_dataset(
     n_events=189000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m900_madgraph",
     id=14346605,
     processes=[procs.radion_hh_ggf_bbtautau_m900],
@@ -361,7 +361,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m1000_madgraph",
     id=14305457,
     processes=[procs.radion_hh_ggf_bbtautau_m1000],
@@ -372,7 +372,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m1250_madgraph",
     id=14302759,
     processes=[procs.radion_hh_ggf_bbtautau_m1250],
@@ -383,7 +383,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m1500_madgraph",
     id=14304452,
     processes=[procs.radion_hh_ggf_bbtautau_m1500],
@@ -394,7 +394,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m1750_madgraph",
     id=14302315,
     processes=[procs.radion_hh_ggf_bbtautau_m1750],
@@ -405,7 +405,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m2000_madgraph",
     id=14304853,
     processes=[procs.radion_hh_ggf_bbtautau_m2000],
@@ -416,7 +416,7 @@ campaign_run2_2017.add_dataset(
     n_events=97000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m2500_madgraph",
     id=14305723,
     processes=[procs.radion_hh_ggf_bbtautau_m2500],
@@ -427,7 +427,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m3000_madgraph",
     id=14346584,
     processes=[procs.radion_hh_ggf_bbtautau_m3000],
@@ -443,7 +443,7 @@ campaign_run2_2017.add_dataset(
 # ggF -> bulk graviton -> HH
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m250_madgraph",
     id=14309793,
     processes=[procs.graviton_hh_ggf_bbtautau_m250],
@@ -454,7 +454,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m260_madgraph",
     id=14302792,
     processes=[procs.graviton_hh_ggf_bbtautau_m260],
@@ -465,7 +465,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m270_madgraph",
     id=14330676,
     processes=[procs.graviton_hh_ggf_bbtautau_m270],
@@ -476,7 +476,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m280_madgraph",
     id=14330326,
     processes=[procs.graviton_hh_ggf_bbtautau_m280],
@@ -487,7 +487,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m300_madgraph",
     id=14346485,
     processes=[procs.graviton_hh_ggf_bbtautau_m300],
@@ -498,7 +498,7 @@ campaign_run2_2017.add_dataset(
     n_events=300000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m320_madgraph",
     id=14335123,
     processes=[procs.graviton_hh_ggf_bbtautau_m320],
@@ -509,7 +509,7 @@ campaign_run2_2017.add_dataset(
     n_events=297000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m350_madgraph",
     id=14346502,
     processes=[procs.graviton_hh_ggf_bbtautau_m350],
@@ -520,7 +520,7 @@ campaign_run2_2017.add_dataset(
     n_events=285000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m400_madgraph",
     id=14346355,
     processes=[procs.graviton_hh_ggf_bbtautau_m400],
@@ -531,7 +531,7 @@ campaign_run2_2017.add_dataset(
     n_events=300000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m450_madgraph",
     id=14311442,
     processes=[procs.graviton_hh_ggf_bbtautau_m450],
@@ -542,7 +542,7 @@ campaign_run2_2017.add_dataset(
     n_events=286000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m500_madgraph",
     id=14307226,
     processes=[procs.graviton_hh_ggf_bbtautau_m500],
@@ -553,7 +553,7 @@ campaign_run2_2017.add_dataset(
     n_events=300000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m550_madgraph",
     id=14302414,
     processes=[procs.graviton_hh_ggf_bbtautau_m550],
@@ -564,7 +564,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m600_madgraph",
     id=14302378,
     processes=[procs.graviton_hh_ggf_bbtautau_m600],
@@ -575,7 +575,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m650_madgraph",
     id=14309720,
     processes=[procs.graviton_hh_ggf_bbtautau_m650],
@@ -586,7 +586,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m700_madgraph",
     id=14305200,
     processes=[procs.graviton_hh_ggf_bbtautau_m700],
@@ -597,7 +597,7 @@ campaign_run2_2017.add_dataset(
     n_events=198000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m750_madgraph",
     id=14346504,
     processes=[procs.graviton_hh_ggf_bbtautau_m750],
@@ -608,7 +608,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m800_madgraph",
     id=14346495,
     processes=[procs.graviton_hh_ggf_bbtautau_m800],
@@ -619,7 +619,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m850_madgraph",
     id=14346604,
     processes=[procs.graviton_hh_ggf_bbtautau_m850],
@@ -630,7 +630,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m900_madgraph",
     id=14330168,
     processes=[procs.graviton_hh_ggf_bbtautau_m900],
@@ -641,7 +641,7 @@ campaign_run2_2017.add_dataset(
     n_events=189000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m1000_madgraph",
     id=14307192,
     processes=[procs.graviton_hh_ggf_bbtautau_m1000],
@@ -652,7 +652,7 @@ campaign_run2_2017.add_dataset(
     n_events=95000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m1250_madgraph",
     id=14305219,
     processes=[procs.graviton_hh_ggf_bbtautau_m1250],
@@ -663,7 +663,7 @@ campaign_run2_2017.add_dataset(
     n_events=98000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m1500_madgraph",
     id=14302337,
     processes=[procs.graviton_hh_ggf_bbtautau_m1500],
@@ -674,7 +674,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m1750_madgraph",
     id=14307183,
     processes=[procs.graviton_hh_ggf_bbtautau_m1750],
@@ -685,7 +685,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m2000_madgraph",
     id=14304912,
     processes=[procs.graviton_hh_ggf_bbtautau_m2000],
@@ -696,7 +696,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m2500_madgraph",
     id=14306377,
     processes=[procs.graviton_hh_ggf_bbtautau_m2500],
@@ -707,7 +707,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m3000_madgraph",
     id=14305674,
     processes=[procs.graviton_hh_ggf_bbtautau_m3000],
@@ -723,7 +723,7 @@ campaign_run2_2017.add_dataset(
 # vbf -> radion -> HH
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m250_madgraph",
     id=14313383,
     processes=[procs.radion_hh_vbf_bbtautau_m250],
@@ -734,7 +734,7 @@ campaign_run2_2017.add_dataset(
     n_events=397000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m260_madgraph",
     id=14312102,
     processes=[procs.radion_hh_vbf_bbtautau_m260],
@@ -745,7 +745,7 @@ campaign_run2_2017.add_dataset(
     n_events=394000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m270_madgraph",
     id=14315423,
     processes=[procs.radion_hh_vbf_bbtautau_m270],
@@ -756,7 +756,7 @@ campaign_run2_2017.add_dataset(
     n_events=379000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m280_madgraph",
     id=14315394,
     processes=[procs.radion_hh_vbf_bbtautau_m280],
@@ -767,7 +767,7 @@ campaign_run2_2017.add_dataset(
     n_events=394000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m300_madgraph",
     id=14312259,
     processes=[procs.radion_hh_vbf_bbtautau_m300],
@@ -778,7 +778,7 @@ campaign_run2_2017.add_dataset(
     n_events=294000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m320_madgraph",
     id=14315335,
     processes=[procs.radion_hh_vbf_bbtautau_m320],
@@ -789,7 +789,7 @@ campaign_run2_2017.add_dataset(
     n_events=276000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m350_madgraph",
     id=14315249,
     processes=[procs.radion_hh_vbf_bbtautau_m350],
@@ -800,7 +800,7 @@ campaign_run2_2017.add_dataset(
     n_events=297000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m400_madgraph",
     id=14315364,
     processes=[procs.radion_hh_vbf_bbtautau_m400],
@@ -812,7 +812,7 @@ campaign_run2_2017.add_dataset(
 )
 
 # missing
-# campaign_run2_2017.add_dataset(
+# cpn.add_dataset(
 #     name="radion_hh_vbf_bbtautau_m450_madgraph",
 #     id=,
 #     processes=[procs.radion_hh_vbf_bbtautau_m450],
@@ -823,7 +823,7 @@ campaign_run2_2017.add_dataset(
 #     n_events=,
 # )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m500_madgraph",
     id=14315911,
     processes=[procs.radion_hh_vbf_bbtautau_m500],
@@ -834,7 +834,7 @@ campaign_run2_2017.add_dataset(
     n_events=300000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m550_madgraph",
     id=14313492,
     processes=[procs.radion_hh_vbf_bbtautau_m550],
@@ -845,7 +845,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m600_madgraph",
     id=14313271,
     processes=[procs.radion_hh_vbf_bbtautau_m600],
@@ -856,7 +856,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m650_madgraph",
     id=14313413,
     processes=[procs.radion_hh_vbf_bbtautau_m650],
@@ -867,7 +867,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m700_madgraph",
     id=14312044,
     processes=[procs.radion_hh_vbf_bbtautau_m700],
@@ -878,7 +878,7 @@ campaign_run2_2017.add_dataset(
     n_events=194000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m750_madgraph",
     id=14313296,
     processes=[procs.radion_hh_vbf_bbtautau_m750],
@@ -889,7 +889,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m800_madgraph",
     id=14311221,
     processes=[procs.radion_hh_vbf_bbtautau_m800],
@@ -900,7 +900,7 @@ campaign_run2_2017.add_dataset(
     n_events=194000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m850_madgraph",
     id=14312594,
     processes=[procs.radion_hh_vbf_bbtautau_m850],
@@ -911,7 +911,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m900_madgraph",
     id=14312083,
     processes=[procs.radion_hh_vbf_bbtautau_m900],
@@ -922,7 +922,7 @@ campaign_run2_2017.add_dataset(
     n_events=197000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1000_madgraph",
     id=14311676,
     processes=[procs.radion_hh_vbf_bbtautau_m1000],
@@ -933,7 +933,7 @@ campaign_run2_2017.add_dataset(
     n_events=97000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1250_madgraph",
     id=14313782,
     processes=[procs.radion_hh_vbf_bbtautau_m1250],
@@ -944,7 +944,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1500_madgraph",
     id=14315286,
     processes=[procs.radion_hh_vbf_bbtautau_m1500],
@@ -955,7 +955,7 @@ campaign_run2_2017.add_dataset(
     n_events=97000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1750_madgraph",
     id=14314144,
     processes=[procs.radion_hh_vbf_bbtautau_m1750],
@@ -966,7 +966,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m2000_madgraph",
     id=14319538,
     processes=[procs.radion_hh_vbf_bbtautau_m2000],
@@ -977,7 +977,7 @@ campaign_run2_2017.add_dataset(
     n_events=94000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m2500_madgraph",
     id=14316124,
     processes=[procs.radion_hh_vbf_bbtautau_m2500],
@@ -988,7 +988,7 @@ campaign_run2_2017.add_dataset(
     n_events=97000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m3000_madgraph",
     id=14316141,
     processes=[procs.radion_hh_vbf_bbtautau_m3000],
@@ -1004,7 +1004,7 @@ campaign_run2_2017.add_dataset(
 # vbf -> bulk graviton -> HH
 #
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m250_madgraph",
     id=14313377,
     processes=[procs.graviton_hh_vbf_bbtautau_m250],
@@ -1015,7 +1015,7 @@ campaign_run2_2017.add_dataset(
     n_events=399000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m260_madgraph",
     id=14312620,
     processes=[procs.graviton_hh_vbf_bbtautau_m260],
@@ -1026,7 +1026,7 @@ campaign_run2_2017.add_dataset(
     n_events=394000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m270_madgraph",
     id=14311771,
     processes=[procs.graviton_hh_vbf_bbtautau_m270],
@@ -1037,7 +1037,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m280_madgraph",
     id=14313366,
     processes=[procs.graviton_hh_vbf_bbtautau_m280],
@@ -1048,7 +1048,7 @@ campaign_run2_2017.add_dataset(
     n_events=400000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m300_madgraph",
     id=14312031,
     processes=[procs.graviton_hh_vbf_bbtautau_m300],
@@ -1059,7 +1059,7 @@ campaign_run2_2017.add_dataset(
     n_events=291000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m320_madgraph",
     id=14312181,
     processes=[procs.graviton_hh_vbf_bbtautau_m320],
@@ -1070,7 +1070,7 @@ campaign_run2_2017.add_dataset(
     n_events=300000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m350_madgraph",
     id=14312121,
     processes=[procs.graviton_hh_vbf_bbtautau_m350],
@@ -1081,7 +1081,7 @@ campaign_run2_2017.add_dataset(
     n_events=297000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m400_madgraph",
     id=14312057,
     processes=[procs.graviton_hh_vbf_bbtautau_m400],
@@ -1093,7 +1093,7 @@ campaign_run2_2017.add_dataset(
 )
 
 # missing
-# campaign_run2_2017.add_dataset(
+# cpn.add_dataset(
 #     name="graviton_hh_vbf_bbtautau_m450_madgraph",
 #     id=,
 #     processes=[procs.graviton_hh_vbf_bbtautau_m450],
@@ -1104,7 +1104,7 @@ campaign_run2_2017.add_dataset(
 #     n_events=,
 # )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m500_madgraph",
     id=14312369,
     processes=[procs.graviton_hh_vbf_bbtautau_m500],
@@ -1115,7 +1115,7 @@ campaign_run2_2017.add_dataset(
     n_events=297000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m550_madgraph",
     id=14312211,
     processes=[procs.graviton_hh_vbf_bbtautau_m550],
@@ -1126,7 +1126,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m600_madgraph",
     id=14312266,
     processes=[procs.graviton_hh_vbf_bbtautau_m600],
@@ -1137,7 +1137,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m650_madgraph",
     id=14312370,
     processes=[procs.graviton_hh_vbf_bbtautau_m650],
@@ -1148,7 +1148,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m700_madgraph",
     id=14313347,
     processes=[procs.graviton_hh_vbf_bbtautau_m700],
@@ -1159,7 +1159,7 @@ campaign_run2_2017.add_dataset(
     n_events=198000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m750_madgraph",
     id=14312212,
     processes=[procs.graviton_hh_vbf_bbtautau_m750],
@@ -1170,7 +1170,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m800_madgraph",
     id=14312060,
     processes=[procs.graviton_hh_vbf_bbtautau_m800],
@@ -1181,7 +1181,7 @@ campaign_run2_2017.add_dataset(
     n_events=200000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m850_madgraph",
     id=14312295,
     processes=[procs.graviton_hh_vbf_bbtautau_m850],
@@ -1193,7 +1193,7 @@ campaign_run2_2017.add_dataset(
 )
 
 # missing
-# campaign_run2_2017.add_dataset(
+# cpn.add_dataset(
 #     name="graviton_hh_vbf_bbtautau_m900_madgraph",
 #     id=,
 #     processes=[procs.graviton_hh_vbf_bbtautau_m900],
@@ -1204,7 +1204,7 @@ campaign_run2_2017.add_dataset(
 #     n_events=,
 # )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m1000_madgraph",
     id=14312631,
     processes=[procs.graviton_hh_vbf_bbtautau_m1000],
@@ -1215,7 +1215,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m1250_madgraph",
     id=14311308,
     processes=[procs.graviton_hh_vbf_bbtautau_m1250],
@@ -1226,7 +1226,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m1500_madgraph",
     id=14311279,
     processes=[procs.graviton_hh_vbf_bbtautau_m1500],
@@ -1237,7 +1237,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m1750_madgraph",
     id=14312650,
     processes=[procs.graviton_hh_vbf_bbtautau_m1750],
@@ -1248,7 +1248,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m2000_madgraph",
     id=14312081,
     processes=[procs.graviton_hh_vbf_bbtautau_m2000],
@@ -1259,7 +1259,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m2500_madgraph",
     id=14312147,
     processes=[procs.graviton_hh_vbf_bbtautau_m2500],
@@ -1270,7 +1270,7 @@ campaign_run2_2017.add_dataset(
     n_events=100000,
 )
 
-campaign_run2_2017.add_dataset(
+cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m3000_madgraph",
     id=14313382,
     processes=[procs.graviton_hh_vbf_bbtautau_m3000],

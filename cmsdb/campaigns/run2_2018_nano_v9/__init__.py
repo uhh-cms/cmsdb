@@ -1,7 +1,8 @@
 # coding: utf-8
 
 """
-Common, analysis independent definition of the 2018 data-taking campaign.
+Common, analysis independent definition of the 2018 data-taking campaign
+with datasets at NanoAOD tier in version 9.
 See https://python-order.readthedocs.io/en/latest/quickstart.html#analysis-campaign-and-config.
 
 Dataset ids are identical to those in DAS (https://cmsweb.cern.ch/das).
@@ -16,12 +17,12 @@ import cmsdb.processes as procs
 # campaign
 #
 
-campaign_run2_2018 = Campaign(
-    name="run2_2018",
+cpn = campaign_run2_2018_nano_v9 = Campaign(
+    name="run2_2018_nano_v9",
     id=220181,
     ecm=13,
     bx=25,
-    aux={"year": 2018},
+    aux={"year": 2018, "tier": "NanoAOD", "version": "9"},
 )
 
 
@@ -29,7 +30,7 @@ campaign_run2_2018 = Campaign(
 # datasets
 #
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="data_mu_a",
     id=14046760,
     is_data=True,
@@ -41,7 +42,7 @@ campaign_run2_2018.add_dataset(
     n_events=241608232,
 )
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="st_tchannel_t",
     id=14293903,
     processes=[procs.st_tchannel_t],
@@ -84,7 +85,7 @@ campaign_run2_2018.add_dataset(
     ),
 )
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="st_tchannel_tbar",
     id=14296756,
     processes=[procs.st_tchannel_tbar],
@@ -127,7 +128,7 @@ campaign_run2_2018.add_dataset(
     ),
 )
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="st_twchannel_t",
     id=14248830,
     processes=[procs.st_twchannel_t],
@@ -142,7 +143,7 @@ campaign_run2_2018.add_dataset(
     ),
 )
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="st_twchannel_tbar",
     id=14253778,
     processes=[procs.st_twchannel_tbar],
@@ -157,7 +158,7 @@ campaign_run2_2018.add_dataset(
     ),
 )
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="tt_sl",
     id=14235437,
     processes=[procs.tt_sl],
@@ -200,7 +201,7 @@ campaign_run2_2018.add_dataset(
     ),
 )
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="tt_dl",
     id=14234474,
     processes=[procs.tt_dl],
@@ -243,7 +244,7 @@ campaign_run2_2018.add_dataset(
     ),
 )
 
-campaign_run2_2018.add_dataset(
+cpn.add_dataset(
     name="tt_fh",
     id=14232068,
     processes=[procs.tt_fh],

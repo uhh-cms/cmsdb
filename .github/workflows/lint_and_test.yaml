@@ -50,6 +50,6 @@ jobs:
 
       - name: Test 🚦
         run: |
-          python -c "from cmsdb.campaigns.run2_2016 import *"
-          python -c "from cmsdb.campaigns.run2_2017 import *"
-          python -c "from cmsdb.campaigns.run2_2018 import *"
+          python -c "from cmsdb.campaigns.run2_2016_nano_v9 import *"
+          python -c "from cmsdb.campaigns.run2_2017_nano_v9 import *"
+          python -c "from cmsdb.campaigns.run2_2018_nano_v9 import *"
