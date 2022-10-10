@@ -5,18 +5,18 @@ HH -> bbWW process definitions.
 """
 
 __all__ = [
-    "hh_ggf_bbww_sl", "hh_ggf_kt_1_kl_0_bbww_sl", "hh_ggf_kt_1_kl_1_bbww_sl",
-    "hh_ggf_kt_1_kl_2p45_bbww_sl", "hh_ggf_kt_1_kl_5_bbww_sl",
-    "hh_vbf_bbww_sl", "hh_vbf_cv_0p5_c2v_1_c3_1_bbww_sl", "hh_vbf_cv_1p5_c2v_1_c3_1_bbww_sl",
-    "hh_vbf_cv_1_c2v_0_c3_1_bbww_sl", "hh_vbf_cv_1_c2v_1_c3_0_bbww_sl", "hh_vbf_cv_1_c2v_1_c3_1_bbww_sl",
-    "hh_vbf_cv_1_c2v_1_c3_2_bbww_sl", "hh_vbf_cv_1_c2v_2_c3_1_bbww_sl",
+    "ggHH_sl_hbbhww", "ggHH_kl_0_kt_1_sl_hbbhww", "ggHH_kl_1_kt_1_sl_hbbhww",
+    "ggHH_kl_2p45_kt_1_sl_hbbhww", "ggHH_kl_5_kt_1_sl_hbbhww",
+    "qqHH_sl_hbbhww", "qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww", "qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww",
+    "qqHH_CV_1_C2V_0_kl_1_sl_hbbhww", "qqHH_CV_1_C2V_1_kl_0_sl_hbbhww", "qqHH_CV_1_C2V_1_kl_1_sl_hbbhww",
+    "qqHH_CV_1_C2V_1_kl_2_sl_hbbhww", "qqHH_CV_1_C2V_2_kl_1_sl_hbbhww",
 ]
 
 import cmsdb.constants as const
 from cmsdb.processes.higgs import (
-    hh_ggf, hh_ggf_kt_1_kl_0, hh_ggf_kt_1_kl_1, hh_ggf_kt_1_kl_2p45, hh_ggf_kt_1_kl_5,
-    hh_vbf, hh_vbf_cv_0p5_c2v_1_c3_1, hh_vbf_cv_1p5_c2v_1_c3_1, hh_vbf_cv_1_c2v_0_c3_1,
-    hh_vbf_cv_1_c2v_1_c3_0, hh_vbf_cv_1_c2v_1_c3_1, hh_vbf_cv_1_c2v_1_c3_2, hh_vbf_cv_1_c2v_2_c3_1,
+    hh_ggf, ggHH_kl_0_kt_1, ggHH_kl_1_kt_1, ggHH_kl_2p45_kt_1, ggHH_kl_5_kt_1,
+    hh_vbf, qqHH_CV_1_C2V_1_kl_1, qqHH_CV_1_C2V_1_kl_0, qqHH_CV_1_C2V_1_kl_2,
+    qqHH_CV_1_C2V_0_kl_1, qqHH_CV_1_C2V_2_kl_1, qqHH_CV_0p5_C2V_1_kl_1, qqHH_CV_1p5_C2V_1_kl_1,
 )
 
 
@@ -28,48 +28,48 @@ from cmsdb.processes.higgs import (
 # ggf
 #
 
-hh_ggf_bbww_sl = hh_ggf.add_process(
-    name="hh_ggf_bbww_sl",
-    id=21120,
+ggHH_sl_hbbhww = hh_ggf.add_process(
+    name="ggHH_sl_hbbhww",
+    id=21110,
     label=r"$HH_{ggf} \rightarrow bbWW(qql\nu)$",
     xsecs={
         13: hh_ggf.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
-hh_ggf_kt_1_kl_0_bbww_sl = hh_ggf_kt_1_kl_0.add_process(
-    name="hh_ggf_kt_1_kl_0_bbww_sl",
-    id=21221,
+ggHH_kl_0_kt_1_sl_hbbhww = ggHH_kl_0_kt_1.add_process(
+    name="ggHH_kl_0_kt_1_sl_hbbhww",
+    id=21211,
     label=r"$HH_{ggf}^{\kappa\lambda=0} \rightarrow bbWW(qql\nu)$",
     xsecs={
-        13: hh_ggf_kt_1_kl_0.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+        13: ggHH_kl_0_kt_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
-hh_ggf_kt_1_kl_1_bbww_sl = hh_ggf_kt_1_kl_1.add_process(
-    name="hh_ggf_kt_1_kl_1_bbww_sl",
+ggHH_kl_1_kt_1_sl_hbbhww = ggHH_kl_1_kt_1.add_process(
+    name="ggHH_kl_1_kt_1_sl_hbbhww",
     label=r"$HH_{ggf}^{\kappa\lambda=1} \rightarrow bbWW(qql\nu)$",
-    id=21222,
+    id=21212,
     xsecs={
-        13: hh_ggf_kt_1_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+        13: ggHH_kl_1_kt_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
-hh_ggf_kt_1_kl_2p45_bbww_sl = hh_ggf_kt_1_kl_2p45.add_process(
-    name="hh_ggf_kt_1_kl_2p45_bbww_sl",
+ggHH_kl_2p45_kt_1_sl_hbbhww = ggHH_kl_2p45_kt_1.add_process(
+    name="ggHH_kl_2p45_kt_1_sl_hbbhww",
     label=r"$HH_{ggf}^{\kappa\lambda=2.45} \rightarrow bbWW(qql\nu)$",
-    id=21223,
+    id=21213,
     xsecs={
-        13: hh_ggf_kt_1_kl_2p45.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+        13: ggHH_kl_2p45_kt_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
-hh_ggf_kt_1_kl_5_bbww_sl = hh_ggf_kt_1_kl_5.add_process(
-    name="hh_ggf_kt_1_kl_5_bbww_sl",
+ggHH_kl_5_kt_1_sl_hbbhww = ggHH_kl_5_kt_1.add_process(
+    name="ggHH_kl_5_kt_1_sl_hbbhww",
     label=r"$HH_{ggf}^{\kappa\lambda=5} \rightarrow bbWW(qql\nu)$",
-    id=21224,
+    id=21214,
     xsecs={
-        13: hh_ggf_kt_1_kl_5.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+        13: ggHH_kl_5_kt_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
@@ -77,74 +77,75 @@ hh_ggf_kt_1_kl_5_bbww_sl = hh_ggf_kt_1_kl_5.add_process(
 # VBF
 #
 
-hh_vbf_bbww_sl = hh_vbf.add_process(
-    name="hh_vbf_bbww_sl",
+qqHH_sl_hbbhww = hh_vbf.add_process(
+    name="qqHH_sl_hbbhww",
     label=r"$HH_{vbf} \rightarrow bbWW(qql\nu)$",
-    id=22200,
+    id=22210,
     xsecs={
         13: hh_vbf.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
-hh_vbf_cv_0p5_c2v_1_c3_1_bbww_sl = hh_vbf_cv_0p5_c2v_1_c3_1.add_process(
-    name="hh_vbf_cv_0p5_c2v_1_c3_1_bbww_sl",
-    label=r"$HH_{vbf}^{0.5,1,1} \rightarrow bbWW(qql\nu)$",
-    id=22201,
-    xsecs={
-        13: hh_vbf_cv_0p5_c2v_1_c3_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
-    },
-)
-
-hh_vbf_cv_1p5_c2v_1_c3_1_bbww_sl = hh_vbf_cv_1p5_c2v_1_c3_1.add_process(
-    name="hh_vbf_cv_1p5_c2v_1_c3_1_bbww_sl",
-    label=r"$HH_{vbf}^{1.5,1,1} \rightarrow bbWW(qql\nu)$",
-    id=22202,
-    xsecs={
-        13: hh_vbf_cv_1p5_c2v_1_c3_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
-    },
-)
-
-hh_vbf_cv_1_c2v_0_c3_1_bbww_sl = hh_vbf_cv_1_c2v_0_c3_1.add_process(
-    name="hh_vbf_cv_1_c2v_0_c3_1_bbww_sl",
-    label=r"$HH_{vbf}^{1,0,1} \rightarrow bbWW(qql\nu)$",
-    id=22203,
-    xsecs={
-        13: hh_vbf_cv_1_c2v_0_c3_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
-    },
-)
-
-hh_vbf_cv_1_c2v_1_c3_0_bbww_sl = hh_vbf_cv_1_c2v_1_c3_0.add_process(
-    name="hh_vbf_cv_1_c2v_1_c3_0_bbww_sl",
-    label=r"$HH_{vbf}^{1,1,0} \rightarrow bbWW(qql\nu)$",
-    id=22204,
-    xsecs={
-        13: hh_vbf_cv_1_c2v_1_c3_0.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
-    },
-)
-
-hh_vbf_cv_1_c2v_1_c3_1_bbww_sl = hh_vbf_cv_1_c2v_1_c3_1.add_process(
-    name="hh_vbf_cv_1_c2v_1_c3_1_bbww_sl",
+qqHH_CV_1_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1_C2V_1_kl_1.add_process(
+    name="qqHH_CV_1_C2V_1_kl_1_sl_hbbhww",
     label=r"$HH_{vbf}^{1,1,1} \rightarrow bbWW(qql\nu)$",
-    id=22205,
+    id=22211,
     xsecs={
-        13: hh_vbf_cv_1_c2v_1_c3_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+        13: qqHH_CV_1_C2V_1_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
-hh_vbf_cv_1_c2v_1_c3_2_bbww_sl = hh_vbf_cv_1_c2v_1_c3_2.add_process(
-    name="hh_vbf_cv_1_c2v_1_c3_2_bbww_sl",
+qqHH_CV_1_C2V_1_kl_0_sl_hbbhww = qqHH_CV_1_C2V_1_kl_0.add_process(
+    name="qqHH_CV_1_C2V_1_kl_0_sl_hbbhww",
+    label=r"$HH_{vbf}^{1,1,0} \rightarrow bbWW(qql\nu)$",
+    id=22212,
+    xsecs={
+        13: qqHH_CV_1_C2V_1_kl_0.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+    },
+)
+
+qqHH_CV_1_C2V_1_kl_2_sl_hbbhww = qqHH_CV_1_C2V_1_kl_2.add_process(
+    name="qqHH_CV_1_C2V_1_kl_2_sl_hbbhww",
     label=r"$HH_{vbf}^{1,1,2} \rightarrow bbWW(qql\nu)$",
-    id=22206,
+    id=22213,
     xsecs={
-        13: hh_vbf_cv_1_c2v_1_c3_2.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+        13: qqHH_CV_1_C2V_1_kl_2.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
 
-hh_vbf_cv_1_c2v_2_c3_1_bbww_sl = hh_vbf_cv_1_c2v_2_c3_1.add_process(
-    name="hh_vbf_cv_1_c2v_2_c3_1_bbww_sl",
-    label=r"$HH_{vbf}^{1,2,1} \rightarrow bbWW(qql\nu)$",
-    id=22207,
+qqHH_CV_1_C2V_0_kl_1_sl_hbbhww = qqHH_CV_1_C2V_0_kl_1.add_process(
+    name="qqHH_CV_1_C2V_0_kl_1_sl_hbbhww",
+    label=r"$HH_{vbf}^{1,0,1} \rightarrow bbWW(qql\nu)$",
+    id=22214,
     xsecs={
-        13: hh_vbf_cv_1_c2v_2_c3_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+        13: qqHH_CV_1_C2V_0_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+    },
+)
+
+qqHH_CV_1_C2V_2_kl_1_sl_hbbhww = qqHH_CV_1_C2V_2_kl_1.add_process(
+    name="qqHH_CV_1_C2V_2_kl_1_sl_hbbhww",
+    label=r"$HH_{vbf}^{1,2,1} \rightarrow bbWW(qql\nu)$",
+    id=22215,
+    xsecs={
+        13: qqHH_CV_1_C2V_2_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+    },
+)
+
+
+qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww = qqHH_CV_0p5_C2V_1_kl_1.add_process(
+    name="qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww",
+    label=r"$HH_{vbf}^{0.5,1,1} \rightarrow bbWW(qql\nu)$",
+    id=22216,
+    xsecs={
+        13: qqHH_CV_0p5_C2V_1_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
+    },
+)
+
+qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1p5_C2V_1_kl_1.add_process(
+    name="qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww",
+    label=r"$HH_{vbf}^{1.5,1,1} \rightarrow bbWW(qql\nu)$",
+    id=22217,
+    xsecs={
+        13: qqHH_CV_1p5_C2V_1_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
 )
