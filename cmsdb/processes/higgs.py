@@ -11,8 +11,9 @@ __all__ = [
     "vh", "zh", "zh_tautau", "zh_bb", "wph", "wph_tautau", "wmh", "wmh_tautau", "ggzh", "ggzh_llbb",
     "tth", "tth_tautau", "tth_bb", "tth_nonbb",
     "hh",
-    "hh_ggf", "hh_ggf_kt_1_kl_0", "hh_ggf_kt_1_kl_1", "hh_ggf_kt_1_kl_2p45", "hh_ggf_kt_1_kl_5",
-    "hh_vbf",
+    "hh_ggf", "ggHH_kl_0_kt_1", "ggHH_kl_1_kt_1", "ggHH_kl_2p45_kt_1", "ggHH_kl_5_kt_1",
+    "hh_vbf", "qqHH_CV_1_C2V_1_kl_1", "qqHH_CV_1_C2V_1_kl_0", "qqHH_CV_1_C2V_1_kl_2",
+    "qqHH_CV_1_C2V_0_kl_1", "qqHH_CV_1_C2V_2_kl_1", "qqHH_CV_0p5_C2V_1_kl_1", "qqHH_CV_1p5_C2V_1_kl_1",
     "radion_hh_ggf", "graviton_hh_ggf", "radion_hh_vbf", "graviton_hh_vbf",
 ]
 
@@ -167,11 +168,16 @@ hh_ggf = hh.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-hh_ggf_kt_1_kl_0 = hh_ggf.add_process(
-    name="hh_ggf_kt_1_kl_0",
+# Naming conventions, cross sections and uncertainties are based on:
+# https://gitlab.cern.ch/hh/naming-conventions
+# Missing uncertainties are based on:
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?rev=76
+
+ggHH_kl_0_kt_1 = hh_ggf.add_process(
+    name="ggHH_kl_0_kt_1",
     id=21001,
     xsecs={
-        13: Number(0.07038, {
+        13: Number(0.069725, {
             "scale": (0.024j, 0.061j),
             "pdf": 0.03j,
             "mtop": (0.06j, 0.12j),
@@ -179,14 +185,11 @@ hh_ggf_kt_1_kl_0 = hh_ggf.add_process(
     },
 )
 
-# Cross sections and uncertainties are based on:
-# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?rev=76
-
-hh_ggf_kt_1_kl_1 = hh_ggf.add_process(
-    name="hh_ggf_kt_1_kl_1",
+ggHH_kl_1_kt_1 = hh_ggf.add_process(
+    name="ggHH_kl_1_kt_1",
     id=21002,
     xsecs={
-        13: Number(0.03105, {
+        13: Number(0.031047, {
             "scale": (0.022j, 0.050j),
             "pdf": 0.03j,
             "mtop": (0.04j, 0.18j),
@@ -194,11 +197,11 @@ hh_ggf_kt_1_kl_1 = hh_ggf.add_process(
     },
 )
 
-hh_ggf_kt_1_kl_2p45 = hh_ggf.add_process(
-    name="hh_ggf_kt_1_kl_2p45",
+ggHH_kl_2p45_kt_1 = hh_ggf.add_process(
+    name="ggHH_kl_2p45_kt_1",
     id=21003,
     xsecs={
-        13: Number(0.01310, {
+        13: Number(0.013124, {
             "scale": (0.023j, 0.051j),
             "pdf": 0.03j,
             "mtop": (0.04j, 0.22j),
@@ -206,11 +209,11 @@ hh_ggf_kt_1_kl_2p45 = hh_ggf.add_process(
     },
 )
 
-hh_ggf_kt_1_kl_5 = hh_ggf.add_process(
-    name="hh_ggf_kt_1_kl_5",
+ggHH_kl_5_kt_1 = hh_ggf.add_process(
+    name="ggHH_kl_5_kt_1",
     id=21004,
     xsecs={
-        13: Number(0.09482, {
+        13: Number(0.091172, {
             "scale": (0.049j, 0.088j),
             "pdf": 0.03j,
             "mtop": (0.13j, 0.04j),
@@ -225,6 +228,82 @@ hh_vbf = hh.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+qqHH_CV_1_C2V_1_kl_1 = hh_vbf.add_process(
+    name="qqHH_CV_1_C2V_1_kl_1",
+    id=22001,
+    xsecs={
+        13: Number(0.0017260, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+qqHH_CV_1_C2V_1_kl_0 = hh_vbf.add_process(
+    name="qqHH_CV_1_C2V_1_kl_0",
+    id=22002,
+    xsecs={
+        13: Number(0.0046089, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+qqHH_CV_1_C2V_1_kl_2 = hh_vbf.add_process(
+    name="qqHH_CV_1_C2V_1_kl_2",
+    id=22003,
+    xsecs={
+        13: Number(0.0014228, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+qqHH_CV_1_C2V_0_kl_1 = hh_vbf.add_process(
+    name="qqHH_CV_1_C2V_0_kl_1",
+    id=22004,
+    xsecs={
+        13: Number(0.0270800, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+qqHH_CV_1_C2V_2_kl_1 = hh_vbf.add_process(
+    name="qqHH_CV_1_C2V_2_kl_1",
+    id=22005,
+    xsecs={
+        13: Number(0.00142178, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+qqHH_CV_0p5_C2V_1_kl_1 = hh_vbf.add_process(
+    name="qqHH_CV_0p5_C2V_1_kl_1",
+    id=22006,
+    xsecs={
+        13: Number(0.0108237, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
+
+qqHH_CV_1p5_C2V_1_kl_1 = hh_vbf.add_process(
+    name="qqHH_CV_1p5_C2V_1_kl_1",
+    id=22007,
+    xsecs={
+        13: Number(0.0660185, {
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
+        }),
+    },
+)
 
 #
 # Resonant BSM HH production
