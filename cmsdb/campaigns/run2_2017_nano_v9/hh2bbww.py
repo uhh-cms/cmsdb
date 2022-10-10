@@ -60,7 +60,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_1_sl_hbbhww_powheg",
+    name="qqHH_CV_1_C2V_1_kl_1_sl_hbbhww_madgraph",
     id=14152276,
     processes=[procs.qqHH_CV_1_C2V_1_kl_1_sl_hbbhww],
     keys=[
@@ -71,7 +71,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_0_sl_hbbhww_powheg",
+    name="qqHH_CV_1_C2V_1_kl_0_sl_hbbhww_madgraph",
     id=14153107,
     processes=[procs.qqHH_CV_1_C2V_1_kl_0_sl_hbbhww],
     keys=[
@@ -82,7 +82,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_2_sl_hbbhww_powheg",
+    name="qqHH_CV_1_C2V_1_kl_2_sl_hbbhww_madgraph",
     id=14152113,
     processes=[procs.qqHH_CV_1_C2V_1_kl_2_sl_hbbhww],
     keys=[
@@ -93,7 +93,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_0_kl_1_sl_hbbhww_powheg",
+    name="qqHH_CV_1_C2V_0_kl_1_sl_hbbhww_madgraph",
     id=14154259,
     processes=[procs.qqHH_CV_1_C2V_0_kl_1_sl_hbbhww],
     keys=[
@@ -104,7 +104,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_2_kl_1_sl_hbbhww_powheg",
+    name="qqHH_CV_1_C2V_2_kl_1_sl_hbbhww_madgraph",
     id=14149758,
     processes=[procs.qqHH_CV_1_C2V_2_kl_1_sl_hbbhww],
     keys=[
@@ -115,7 +115,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww_powheg",
+    name="qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww_madgraph",
     id=14151042,
     processes=[procs.qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww],
     keys=[
@@ -126,7 +126,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww_powheg",
+    name="qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww_madgraph",
     id=14149171,
     processes=[procs.qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww],
     keys=[
