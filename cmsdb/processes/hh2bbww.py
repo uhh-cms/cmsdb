@@ -30,7 +30,7 @@ from cmsdb.processes.higgs import (
 
 ggHH_sl_hbbhww = hh_ggf.add_process(
     name="ggHH_sl_hbbhww",
-    id=21110,
+    id=21210,
     label=r"$HH_{ggf} \rightarrow bbWW(qql\nu)$",
     xsecs={
         13: hh_ggf.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
