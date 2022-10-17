@@ -31,6 +31,8 @@ __all__ = [
 from order import Process
 from scinum import Number
 
+import cmsdb.constants as const
+
 
 #
 # Drell-Yan
@@ -50,130 +52,141 @@ dy_lep = dy.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+# NNLO cross section, based on:
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV
+
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: const.n_leps * Number(6077.22, {
+        "integration": 1.49,
+        "scale": 0.02j,
+        "pdf": 14.78,
+    })},
 )
 
+# based on datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(928.3)},  # TODO
 )
 
 dy_lep_m50_2j = dy_lep_m50.add_process(
     name="dy_lep_m50_2j",
     id=51112,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(293.6)},  # TODO
 )
 
 dy_lep_m50_3j = dy_lep_m50.add_process(
     name="dy_lep_m50_3j",
     id=51113,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(86.53)},  # TODO
 )
 
 dy_lep_m50_4j = dy_lep_m50.add_process(
     name="dy_lep_m50_4j",
     id=51114,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(41.28)},  # TODO
 )
 
+# based on datasets DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 dy_lep_0j = dy_lep.add_process(
     name="dy_lep_0j",
     id=51200,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(5129.0)},  # TODO
 )
 
 dy_lep_1j = dy_lep.add_process(
     name="dy_lep_1j",
     id=51300,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(951.5)},  # TODO
 )
 
 dy_lep_2j = dy_lep.add_process(
-    name="dy_lep_3j",
+    name="dy_lep_2j",
     id=51400,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(361.4)},  # TODO
 )
 
+# based on datasets DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Autumn18, LO)
 dy_lep_m50_ht70to100 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht70to100",
     id=51121,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(146.5)},  # TODO
 )
 
 dy_lep_m50_ht100to200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht100to200",
     id=51122,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(160.7)},  # TODO
 )
 
 dy_lep_m50_ht200to400 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht200to400",
     id=51123,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(48.63)},  # TODO
 )
 
 dy_lep_m50_ht400to600 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht400to600",
     id=51124,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(6.993)},  # TODO
 )
 
 dy_lep_m50_ht600to800 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht600to800",
     id=51125,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(1.761)},  # TODO
 )
 
 dy_lep_m50_ht800to1200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht800to1200",
     id=51126,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.8021)},  # TODO
 )
 
 dy_lep_m50_ht1200to2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht1200to2500",
     id=51127,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1937)},  # TODO
 )
 
 dy_lep_m50_ht2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht2500",
     id=51128,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.003514)},  # TODO
 )
 
+# based on datasets DYJetsToLL_Pt-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 dy_lep_pt50To100 = dy_lep.add_process(
     name="dy_lep_pt50To100",
     id=51510,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(398.8)},  # TODO
 )
 
 dy_lep_pt100To250 = dy_lep.add_process(
     name="dy_lep_pt100To250",
     id=51520,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(93.61)},  # TODO
 )
 
 dy_lep_pt250To400 = dy_lep.add_process(
     name="dy_lep_pt250To400",
     id=51530,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(3.67)},  # TODO
 )
 
 dy_lep_pt400To650 = dy_lep.add_process(
     name="dy_lep_pt400To650",
     id=51540,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.5)},  # TODO
 )
 
 dy_lep_pt650 = dy_lep.add_process(
     name="dy_lep_pt650",
     id=51550,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.04704)},  # TODO
 )
 
 
@@ -188,59 +201,69 @@ w = Process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+# NNLO cross section, based on:
+# https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=27
+
 w_lnu = w.add_process(
     name="w_lnu",
     id=6100,
     label=rf"{w.label} ($W \rightarrow l\nu$)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: const.n_leps * Number(20508.9, {
+        "scale": (165.7, 88.2),
+        "pdf": 770.9,
+    })},
 )
 
+# LO cross sections, scaled to NNLO
+# inclusive cross section based on WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# ht bins based on datasets WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 w_lnu_ht70To100 = w_lnu.add_process(
     name="w_lnu_ht70To100",
     id=6110,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 1264.0 / 53870.0},
 )
 
 w_lnu_ht100To200 = w_lnu.add_process(
     name="w_lnu_ht100To200",
     id=6120,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 1256.0 / 53870.0},
 )
 
 w_lnu_ht200To400 = w_lnu.add_process(
     name="w_lnu_ht200To400",
     id=6130,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 335.5 / 53870.0},
 )
 
 w_lnu_ht400To600 = w_lnu.add_process(
     name="w_lnu_ht400To600",
     id=6140,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 45.25 / 53870.0},
 )
 
 w_lnu_ht600To800 = w_lnu.add_process(
     name="w_lnu_ht600To800",
     id=6150,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 10.97 / 53870.0},
 )
 
 w_lnu_ht800To1200 = w_lnu.add_process(
     name="w_lnu_ht800To1200",
     id=6160,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 4.933 / 53870.0},
 )
 
 w_lnu_ht1200To2500 = w_lnu.add_process(
     name="w_lnu_ht1200To2500",
     id=6170,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 1.16 / 53870.0},
 )
 
+# NOTE: Summer20UL16 not available in xsdb, Fall17 cross section is used instead
 w_lnu_ht2500 = w_lnu.add_process(
     name="w_lnu_ht2500",
     id=6180,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: w_lnu.get_xsec(13) * 0.008001 / 53870.0},
 )
 
 
