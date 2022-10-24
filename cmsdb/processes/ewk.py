@@ -53,7 +53,7 @@ dy_lep = dy.add_process(
 )
 
 # NNLO cross section, based on:
-# https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=27
 
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
@@ -69,124 +69,124 @@ dy_lep_m50 = dy_lep.add_process(
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
-    xsecs={13: Number(928.3)},  # TODO
+    xsecs={13: Number(928.3)},
 )
 
 dy_lep_m50_2j = dy_lep_m50.add_process(
     name="dy_lep_m50_2j",
     id=51112,
-    xsecs={13: Number(293.6)},  # TODO
+    xsecs={13: Number(293.6)},
 )
 
 dy_lep_m50_3j = dy_lep_m50.add_process(
     name="dy_lep_m50_3j",
     id=51113,
-    xsecs={13: Number(86.53)},  # TODO
+    xsecs={13: Number(86.53)},
 )
 
 dy_lep_m50_4j = dy_lep_m50.add_process(
     name="dy_lep_m50_4j",
     id=51114,
-    xsecs={13: Number(41.28)},  # TODO
+    xsecs={13: Number(41.28)},
 )
 
 # based on datasets DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 dy_lep_0j = dy_lep.add_process(
     name="dy_lep_0j",
     id=51200,
-    xsecs={13: Number(5129.0)},  # TODO
+    xsecs={13: Number(5129.0)},
 )
 
 dy_lep_1j = dy_lep.add_process(
     name="dy_lep_1j",
     id=51300,
-    xsecs={13: Number(951.5)},  # TODO
+    xsecs={13: Number(951.5)},
 )
 
 dy_lep_2j = dy_lep.add_process(
     name="dy_lep_2j",
     id=51400,
-    xsecs={13: Number(361.4)},  # TODO
+    xsecs={13: Number(361.4)},
 )
 
 # based on datasets DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Autumn18, LO)
 dy_lep_m50_ht70to100 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht70to100",
     id=51121,
-    xsecs={13: Number(146.5)},  # TODO
+    xsecs={13: Number(146.5)},
 )
 
 dy_lep_m50_ht100to200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht100to200",
     id=51122,
-    xsecs={13: Number(160.7)},  # TODO
+    xsecs={13: Number(160.7)},
 )
 
 dy_lep_m50_ht200to400 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht200to400",
     id=51123,
-    xsecs={13: Number(48.63)},  # TODO
+    xsecs={13: Number(48.63)},
 )
 
 dy_lep_m50_ht400to600 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht400to600",
     id=51124,
-    xsecs={13: Number(6.993)},  # TODO
+    xsecs={13: Number(6.993)},
 )
 
 dy_lep_m50_ht600to800 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht600to800",
     id=51125,
-    xsecs={13: Number(1.761)},  # TODO
+    xsecs={13: Number(1.761)},
 )
 
 dy_lep_m50_ht800to1200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht800to1200",
     id=51126,
-    xsecs={13: Number(0.8021)},  # TODO
+    xsecs={13: Number(0.8021)},
 )
 
 dy_lep_m50_ht1200to2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht1200to2500",
     id=51127,
-    xsecs={13: Number(0.1937)},  # TODO
+    xsecs={13: Number(0.1937)},
 )
 
 dy_lep_m50_ht2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht2500",
     id=51128,
-    xsecs={13: Number(0.003514)},  # TODO
+    xsecs={13: Number(0.003514)},
 )
 
 # based on datasets DYJetsToLL_Pt-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 dy_lep_pt50To100 = dy_lep.add_process(
     name="dy_lep_pt50To100",
     id=51510,
-    xsecs={13: Number(398.8)},  # TODO
+    xsecs={13: Number(398.8)},
 )
 
 dy_lep_pt100To250 = dy_lep.add_process(
     name="dy_lep_pt100To250",
     id=51520,
-    xsecs={13: Number(93.61)},  # TODO
+    xsecs={13: Number(93.61)},
 )
 
 dy_lep_pt250To400 = dy_lep.add_process(
     name="dy_lep_pt250To400",
     id=51530,
-    xsecs={13: Number(3.67)},  # TODO
+    xsecs={13: Number(3.67)},
 )
 
 dy_lep_pt400To650 = dy_lep.add_process(
     name="dy_lep_pt400To650",
     id=51540,
-    xsecs={13: Number(0.5)},  # TODO
+    xsecs={13: Number(0.5)},
 )
 
 dy_lep_pt650 = dy_lep.add_process(
     name="dy_lep_pt650",
     id=51550,
-    xsecs={13: Number(0.04704)},  # TODO
+    xsecs={13: Number(0.04704)},
 )
 
 
