@@ -28,53 +28,80 @@ qcd = Process(
 qcd_ht50to100 = qcd.add_process(
     name="qcd_ht50to100",
     id=31001,
-    xsecs={13: Number(185900000)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(185900000),
+    },
 )
 
 qcd_ht100to200 = qcd.add_process(
     name="qcd_ht100to200",
     id=31002,
-    xsecs={13: Number(23610000)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(23610000),
+    },
 )
 
 qcd_ht200to300 = qcd.add_process(
     name="qcd_ht200to300",
     id=31003,
-    xsecs={13: Number(1551000)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(1551000),
+    },
 )
 
 qcd_ht300to500 = qcd.add_process(
     name="qcd_ht300to500",
     id=31004,
-    xsecs={13: Number(324300)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(324300),
+    },
 )
 
 qcd_ht500to700 = qcd.add_process(
     name="qcd_ht500to700",
     id=31005,
-    xsecs={13: Number(30340)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(30340),
+    },
 )
 
 qcd_ht700to1000 = qcd.add_process(
     name="qcd_ht700to1000",
     id=31006,
-    xsecs={13: Number(6440)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(6440),
+    },
 )
 
 qcd_ht1000to1500 = qcd.add_process(
     name="qcd_ht1000to1500",
     id=31007,
-    xsecs={13: Number(1118)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(1118),
+    },
 )
 
 qcd_ht1500to2000 = qcd.add_process(
     name="qcd_ht1500to2000",
     id=31008,
-    xsecs={13: Number(108)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(108),
+    },
 )
 
 qcd_ht2000 = qcd.add_process(
     name="qcd_ht2000",
     id=31090,
-    xsecs={13: Number(22)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(22),
+    },
 )

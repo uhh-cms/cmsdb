@@ -312,7 +312,10 @@ zz = vv.add_process(
     name="zz",
     id=8100,
     label="ZZ",
-    xsecs={13: Number(12.13)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(12.13),
+    },
 )
 
 zz_qqll_m4 = zz.add_process(
@@ -337,7 +340,10 @@ wz = vv.add_process(
     name="wz",
     id=8200,
     label="WZ",
-    xsecs={13: Number(25.56)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(25.56),
+    },
 )
 
 wz_lllnu = wz.add_process(
@@ -356,7 +362,10 @@ ww = vv.add_process(
     name="ww",
     id=8300,
     label="WW",
-    xsecs={13: Number(75.91)},  # AN-19-197_v3
+    xsecs={
+        # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
+        13: Number(75.91),
+    },
 )
 
 ww_lnulnu = ww.add_process(
