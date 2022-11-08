@@ -326,3 +326,83 @@ cpn.add_dataset(
         "jec_era": "RunF",
     },
 )
+
+
+#
+# SinglePhoton
+#
+
+cpn.add_dataset(
+    name="data_pho_b",
+    id=14226103,
+    is_data=True,
+    processes=[procs.data_pho],
+    keys=[
+        "/SinglePhoton/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=10,
+    n_events=15950935,
+    aux={
+        "jec_era": "RunB",
+    },
+)
+
+cpn.add_dataset(
+    name="data_pho_c",
+    id=14226292,
+    is_data=True,
+    processes=[procs.data_pho],
+    keys=[
+        "/SinglePhoton/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=34,
+    n_events=42182948,
+    aux={
+        "jec_era": "RunC",
+    },
+)
+
+cpn.add_dataset(
+    name="data_pho_d",
+    id=14226047,
+    is_data=True,
+    processes=[procs.data_pho],
+    keys=[
+        "/SinglePhoton/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=7,
+    n_events=9753462,
+    aux={
+        "jec_era": "RunD",
+    },
+)
+
+cpn.add_dataset(
+    name="data_pho_e",
+    id=14226326,
+    is_data=True,
+    processes=[procs.data_pho],
+    keys=[
+        "/SinglePhoton/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=22,
+    n_events=19011446,
+    aux={
+        "jec_era": "RunE",
+    },
+)
+
+cpn.add_dataset(
+    name="data_pho_f",
+    id=14226332,
+    is_data=True,
+    processes=[procs.data_pho],
+    keys=[
+        "/SinglePhoton/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=31,
+    n_events=29783015,
+    aux={
+        "jec_era": "RunF",
+    },
+)
