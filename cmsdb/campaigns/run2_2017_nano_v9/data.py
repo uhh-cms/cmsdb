@@ -343,7 +343,7 @@ cpn.add_dataset(
     n_files=10,
     n_events=15950935,
     aux={
-        "jec_era": "RunB",
+        "era": "B",
     },
 )
 
@@ -358,7 +358,7 @@ cpn.add_dataset(
     n_files=34,
     n_events=42182948,
     aux={
-        "jec_era": "RunC",
+        "era": "C",
     },
 )
 
@@ -373,7 +373,7 @@ cpn.add_dataset(
     n_files=7,
     n_events=9753462,
     aux={
-        "jec_era": "RunD",
+        "era": "D",
     },
 )
 
@@ -388,7 +388,7 @@ cpn.add_dataset(
     n_files=22,
     n_events=19011446,
     aux={
-        "jec_era": "RunE",
+        "era": "E",
     },
 )
 
@@ -403,6 +403,6 @@ cpn.add_dataset(
     n_files=31,
     n_events=29783015,
     aux={
-        "jec_era": "RunF",
+        "era": "F",
     },
 )
