@@ -254,7 +254,7 @@ cpn.add_dataset(
     id=14285245,
     processes=[procs.qcd_mu_pt30to50],
     keys=[
-        "/QCD_Pt-30to50_MuEnrichedPt5_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+        "/QCD_Pt-30To50_MuEnrichedPt5_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
     n_files=110,
     n_events=58639613,
@@ -368,7 +368,7 @@ cpn.add_dataset(
     id=14356198,
     processes=[procs.qcd_em_pt15to20],
     keys=[
-        "/QCD_Pt-15To20_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+        "/QCD_Pt-15to20_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
     n_files=25,
     n_events=7966910,
@@ -379,7 +379,7 @@ cpn.add_dataset(
     id=14345164,
     processes=[procs.qcd_em_pt20to30],
     keys=[
-        "/QCD_Pt-20To30_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+        "/QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
     n_files=72,
     n_events=14166147,
