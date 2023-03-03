@@ -125,6 +125,7 @@ qcd_mu = qcd.add_process(
 )
 
 # based on datasets QCD_Pt-{i}To{j}_MuEnrichedPt5_TuneCP5_13TeV-pythia8 (Summer20UL16)
+# https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt-15To20_MuEnrichedPt5_TuneCP5_13TeV-pythia8  # noqa
 qcd_mu_pt15to20 = qcd_mu.add_process(
     name="qcd_mu_pt15to20",
     id=31101,
@@ -231,6 +232,7 @@ qcd_em = qcd.add_process(
 )
 
 # based on datasets QCD_Pt-{i}to{j}_EMEnriched_TuneCP5_13TeV-pythia8 (Summer20UL16)
+# https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt-15to20_EMEnriched_TuneCP5_13TeV-pythia8  # noqa
 qcd_em_pt15to20 = qcd_em.add_process(
     name="qcd_em_pt15to20",
     id=31201,
@@ -305,6 +307,7 @@ qcd_bctoe = qcd.add_process(
 )
 
 # based on datasets QCD_Pt_{i}to{j}_bcToE_TuneCP5_13TeV_pythia8 (Autumn18 (pt15to20) or Fall17 (all other))
+# https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8
 qcd_bctoe_pt15to20 = qcd_bctoe.add_process(
     name="qcd_bctoe_pt15to20",
     id=31301,
