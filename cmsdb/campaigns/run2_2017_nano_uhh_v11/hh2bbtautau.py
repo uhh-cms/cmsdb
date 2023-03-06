@@ -14,16 +14,16 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 #
 
 # # SM
-# cpn.add_dataset(
-#     name="hh_ggf_bbtautau_madgraph",
-#     id=14336680,
-#     processes=[procs.hh_ggf_bbtautau],
-#     keys=[
-#         "/GluGluToHHTo2B2Tau_TuneCP5_PSWeights_node_SM_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
-#     ],
-#     n_files=9,
-#     n_events=400000,
-# )
+cpn.add_dataset(
+    name="hh_ggf_bbtautau_madgraph",
+    id=14336680,
+    processes=[procs.hh_ggf_bbtautau],
+    keys=[
+        "/GluGluToHHTo2B2Tau_TuneCP5_PSWeights_node_SM_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=9,
+    n_events=400000,
+)
 #
 # # BSM scenarios
 # cpn.add_dataset(
@@ -521,16 +521,16 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 #     n_events=285000,
 # )
 #
-# cpn.add_dataset(
-#     name="graviton_hh_ggf_bbtautau_m400_madgraph",
-#     id=14346355,
-#     processes=[procs.graviton_hh_ggf_bbtautau_m400],
-#     keys=[
-#         "/GluGluToBulkGravitonToHHTo2B2Tau_M-400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
-#     ],
-#     n_files=9,
-#     n_events=300000,
-# )
+cpn.add_dataset(
+    name="graviton_hh_ggf_bbtautau_m400_madgraph",
+    id=14346355,
+    processes=[procs.graviton_hh_ggf_bbtautau_m400],
+    keys=[
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODvv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=9,
+    n_events=300000,
+)
 #
 # cpn.add_dataset(
 #     name="graviton_hh_ggf_bbtautau_m450_madgraph",
