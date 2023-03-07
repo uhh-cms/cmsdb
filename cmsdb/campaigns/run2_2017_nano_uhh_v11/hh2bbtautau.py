@@ -655,7 +655,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m1250_madgraph",
-    id=14305219,
+    id=14305051,
     processes=[procs.graviton_hh_ggf_bbtautau_m1250],
     keys=[
         "/GluGluToBulkGravitonToHHTo2B2Tau_M-1250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
@@ -677,7 +677,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m1750_madgraph",
-    id=14307183,
+    id=14307182,
     processes=[procs.graviton_hh_ggf_bbtautau_m1750],
     keys=[
         "/GluGluToBulkGravitonToHHTo2B2Tau_M-1750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa

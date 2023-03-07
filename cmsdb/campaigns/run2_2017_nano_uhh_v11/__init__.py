@@ -33,7 +33,7 @@ campaign_run2_2017_nano_uhh_v11 = Campaign(
         "custom": {
             "name": "run2_2017_nano_uhh_v11",
             "creator": "uhh",
-            "location": "gsiftp://dcache-door-cms04.desy.de:2811//pnfs/desy.de/cms/tier2/store/user/bwieders/nano_uhh_v11/merged_512.0MB",  # noqa
+            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/bwieders/nano_uhh_v11/merged_2048.0MB",  # noqa
         },
     },
 )
