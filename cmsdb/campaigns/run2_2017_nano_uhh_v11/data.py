@@ -13,50 +13,51 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 # # SingleElectron
 # #
 #
-# cpn.add_dataset(
-#     name="data_e_b",
-#     id=14226251,
-#     is_data=True,
-#     processes=[procs.data_e],
-#     keys=[
-#         "/SingleElectron/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=32,
-#     n_events=60537490,
-#     aux={
-#         "era": "B",
-#     },
-# )
-#
-# cpn.add_dataset(
-#     name="data_e_c",
-#     id=14226092,
-#     is_data=True,
-#     processes=[procs.data_e],
-#     keys=[
-#         "/SingleElectron/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=59,
-#     n_events=136637888,
-#     aux={
-#         "era": "C",
-#     },
-# )
-#
-# cpn.add_dataset(
-#     name="data_e_d",
-#     id=14227611,
-#     is_data=True,
-#     processes=[procs.data_e],
-#     keys=[
-#         "/SingleElectron/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=37,
-#     n_events=51512837,
-#     aux={
-#         "era": "D",
-#     },
-# )
+cpn.add_dataset(
+    name="data_e_b",
+    id=14172939,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/SingleElectron/Run2017B-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=21,
+    n_events=60537490,
+    aux={
+        "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_e_c",
+    id=14172612,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/SingleElectron/Run2017C-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=56,
+    n_events=136637888,
+    aux={
+        "era": "C",
+    },
+)
+
+
+cpn.add_dataset(
+    name="data_e_d",
+    id=14173006,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/SingleElectron/Run2017D-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=22,
+    n_events=51526521,
+    aux={
+        "era": "D",
+    },
+)
 #
 # cpn.add_dataset(
 #     name="data_e_e",
@@ -72,103 +73,106 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 #         "era": "E",
 #     },
 # )
-#
-# cpn.add_dataset(
-#     name="data_e_f",
-#     id=14226476,
-#     is_data=True,
-#     processes=[procs.data_e],
-#     keys=[
-#         "/SingleElectron/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=66,
-#     n_events=128467223,
-#     aux={
-#         "era": "F",
-#     },
-# )
-#
+
+cpn.add_dataset(
+    name="data_e_f",
+    id=14173745,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/SingleElectron/Run2017F-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=57,
+    n_events=128467223,
+    aux={
+        "era": "F",
+    },
+)
+
 #
 # #
 # # SingleMuon
 # #
-#
-# cpn.add_dataset(
-#     name="data_mu_b",
-#     id=14226191,
-#     is_data=True,
-#     processes=[procs.data_mu],
-#     keys=[
-#         "/SingleMuon/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=79,
-#     n_events=136300266,
-#     aux={
-#         "era": "B",
-#     },
-# )
-#
-# cpn.add_dataset(
-#     name="data_mu_c",
-#     id=14226140,
-#     is_data=True,
-#     processes=[procs.data_mu],
-#     keys=[
-#         "/SingleMuon/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=117,
-#     n_events=165652756,
-#     aux={
-#         "era": "C",
-#     },
-# )
-#
-# cpn.add_dataset(
-#     name="data_mu_d",
-#     id=14226234,
-#     is_data=True,
-#     processes=[procs.data_mu],
-#     keys=[
-#         "/SingleMuon/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=47,
-#     n_events=70361660,
-#     aux={
-#         "era": "D",
-#     },
-# )
-#
-# cpn.add_dataset(
-#     name="data_mu_e",
-#     id=14235644,
-#     is_data=True,
-#     processes=[procs.data_mu],
-#     keys=[
-#         "/SingleMuon/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=78,
-#     n_events=154618774,
-#     aux={
-#         "era": "E",
-#     },
-# )
-#
-# cpn.add_dataset(
-#     name="data_mu_f",
-#     id=14226183,
-#     is_data=True,
-#     processes=[procs.data_mu],
-#     keys=[
-#         "/SingleMuon/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=115,
-#     n_events=242140980,
-#     aux={
-#         "era": "F",
-#     },
-# )
-#
-#
+
+cpn.add_dataset(
+    name="data_mu_b",
+    id=14175335,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/SingleMuon/Run2017B-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=51,
+    n_events=136300266,
+    aux={
+        "era": "B",
+    },
+)
+
+
+
+cpn.add_dataset(
+    name="data_mu_c",
+    id=14175349,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/SingleMuon/Run2017C-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=65,
+    n_events=165652756,
+    aux={
+        "era": "C",
+    },
+)
+
+
+cpn.add_dataset(
+    name="data_mu_d",
+    id=14173875,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/SingleMuon/Run2017D-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=28,
+    n_events=70361660,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_e",
+    id=14172567,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/SingleMuon/Run2017E-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=62,
+    n_events=154618774,
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_f",
+    id=14172671,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/SingleMuon/Run2017F-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=101,
+    n_events=242140980,
+    aux={
+        "era": "F",
+    },
+)
+
+
 # #
 # # Tau
 # #
@@ -272,21 +276,20 @@ cpn.add_dataset(
     },
 )
 
-# cpn.add_dataset(
-#     name="data_met_c",
-#     id=14226051,
-#     is_data=True,
-#     processes=[procs.data_met],
-#     keys=[
-#         "/MET/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=53,
-#     n_events=115906496,
-#     aux={
-#         "era": "C",
-#     },
-# )
-#
+cpn.add_dataset(
+    name="data_met_c",
+    id=14173597,
+    is_data=True,
+    processes=[procs.data_met],
+    keys=[
+        "/MET/Run2017C-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=36,
+    n_events=115906496,
+    aux={
+        "era": "C",
+    },
+)
 
 cpn.add_dataset(
     name="data_met_d",
@@ -303,32 +306,33 @@ cpn.add_dataset(
     },
 )
 
-# cpn.add_dataset(
-#     name="data_met_e",
-#     id=14225819,
-#     is_data=True,
-#     processes=[procs.data_met],
-#     keys=[
-#         "/MET/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=48,
-#     n_events=71418865,
-#     aux={
-#         "era": "E",
-#     },
-# )
-#
-# cpn.add_dataset(
-#     name="data_met_f",
-#     id=14224849,
-#     is_data=True,
-#     processes=[procs.data_met],
-#     keys=[
-#         "/MET/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=133,
-#     n_events=177521562,
-#     aux={
-#         "era": "F",
-#     },
-# )
+cpn.add_dataset(
+    name="data_met_e",
+    id=14173654,
+    is_data=True,
+    processes=[procs.data_met],
+    keys=[
+        "/MET/Run2017E-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=38,
+    n_events=71418865,
+    aux={
+        "era": "E",
+    },
+)
+
+
+cpn.add_dataset(
+    name="data_met_f",
+    id=14174316,
+    is_data=True,
+    processes=[procs.data_met],
+    keys=[
+        "/MET/Run2017F-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=88,
+    n_events=177521562,
+    aux={
+        "era": "F",
+    },
+)
