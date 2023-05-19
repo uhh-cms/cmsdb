@@ -108,16 +108,16 @@ cpn.add_dataset(
 )
 
 # # ttH
-# cpn.add_dataset(
-#     name="tth_tautau_powheg",
-#     id=14230113,
-#     processes=[procs.tth_tautau],
-#     keys=[
-#         "/ttHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-#     ],
-#     n_files=68,
-#     n_events=21165000,
-# )
+cpn.add_dataset(
+    name="tth_tautau_powheg",
+    id=14198429,
+    processes=[procs.tth_tautau],
+    keys=[
+        "/ttHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=32,
+    n_events=21700000,
+)
 
 cpn.add_dataset(
     name="tth_bb_powheg",

@@ -12,9 +12,18 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 # #
 # # Drell-Yan
 # #
-#
-# # jet binned, madgraph
+cpn.add_dataset(
+    name="dy_lep_m50_amcatnlo",
+    id=14262131,
+    processes=[procs.dy_lep_m50],
+    keys=[
+        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=143,
+    n_events=196329377,
+)
 
+# # jet binned, madgraph
 # cpn.add_dataset(
 #     name="dy_lep_m50_1j_madgraph",
 #     id=14242968,
@@ -186,6 +195,7 @@ cpn.add_dataset(
 #
 # # pt binned
 
+
 cpn.add_dataset(
     name="dy_lep_pt0To50_amcatnlo",
     id=14349689,
@@ -208,16 +218,16 @@ cpn.add_dataset(
     n_events=123053065,
 )
 
-# cpn.add_dataset(
-#     name="dy_lep_pt100To250_amcatnlo",
-#     id=14300156,
-#     processes=[procs.dy_lep_pt100To250],
-#     keys=[
-#         "/DYJetsToLL_Pt-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-#     ],
-#     n_files=56,
-#     n_events=75818801,
-# )
+cpn.add_dataset(
+    name="dy_lep_pt100To250_amcatnlo",
+    id=14353573,
+    processes=[procs.dy_lep_pt100To250],
+    keys=[
+        "/DYJetsToLL_LHEFilterPtZ-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=72,
+    n_events=80740184,
+)
 
 
 cpn.add_dataset(
@@ -243,18 +253,16 @@ cpn.add_dataset(
     n_events=4042549,
 )
 
-# cpn.add_dataset(
-#     name="dy_lep_pt650_amcatnlo",
-#     id=14232153,
-#     processes=[procs.dy_lep_pt650],
-#     keys=[
-#         "/DYJetsToLL_Pt-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-#     ],
-#     n_files=24,
-#     n_events=1921546,
-# )
-#
-#
+cpn.add_dataset(
+    name="dy_lep_pt650_amcatnlo",
+    id=14349880,
+    processes=[procs.dy_lep_pt650],
+    keys=[
+        "/DYJetsToLL_LHEFilterPtZ-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=6,
+    n_events=4034670,
+)
 # #
 # # W boson production
 # #
