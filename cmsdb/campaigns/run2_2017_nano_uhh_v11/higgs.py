@@ -39,9 +39,9 @@ cpn.add_dataset(
 
 # H radiation
 cpn.add_dataset(
-    name="zh_tautau_powheg",
+    name="zh_llbb_powheg",
     id=14336755,
-    processes=[procs.zh_tautau],
+    processes=[procs.zh_llbb],
     keys=[
         "/ZH_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -50,9 +50,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zh_bb_powheg",
+    name="zh_qqbb_powheg",
     id=14354874,
-    processes=[procs.zh_bb],
+    processes=[procs.zh_qqbb],
     keys=[
         "/ZH_HToBB_ZToQQ_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],

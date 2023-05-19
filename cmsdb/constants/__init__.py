@@ -27,6 +27,7 @@ br_ww = DotDict(
 )
 
 br_z = DotDict(
+    qq=Number(0.69911, {"br_z_qq": 0.00056}),
     clep=Number(0.033658, {"br_z_clep": 0.000023}) * n_leps,
 )
 
