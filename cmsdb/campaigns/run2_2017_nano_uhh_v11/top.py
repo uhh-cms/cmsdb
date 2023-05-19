@@ -52,9 +52,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_llnunu_amcatnlo",
+    name="ttz_llnunu_m10_amcatnlo",
     id=14196941,
-    processes=[procs.ttz_llnunu],
+    processes=[procs.ttz_llnunu_m10],
     keys=[
         "/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],

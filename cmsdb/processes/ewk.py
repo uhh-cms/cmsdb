@@ -19,7 +19,7 @@ __all__ = [
     "w_lnu_ht70To100", "w_lnu_ht100To200", "w_lnu_ht200To400", "w_lnu_ht400To600",
     "w_lnu_ht600To800", "w_lnu_ht800To1200", "w_lnu_ht1200To2500", "w_lnu_ht2500",
     "ewk",
-    "ewk_wp_lnu", "ewk_wm_lnu", "ewk_z_ll",
+    "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
     "vv",
     "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll",
     "wz", "wz_lllnu", "wz_qqll_m4",
@@ -284,20 +284,20 @@ ewk = Process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ewk_wp_lnu = ewk.add_process(
-    name="ewk_wp_lnu",
+ewk_wp_lnu_m50 = ewk.add_process(
+    name="ewk_wp_lnu_m50",
     id=7100,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ewk_wm_lnu = ewk.add_process(
-    name="ewk_wm_lnu",
+ewk_wm_lnu_m50 = ewk.add_process(
+    name="ewk_wm_lnu_m50",
     id=7200,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ewk_z_ll = ewk.add_process(
-    name="ewk_z_ll",
+ewk_z_ll_m50 = ewk.add_process(
+    name="ewk_z_ll_m50",
     id=7300,
     xsecs={13: Number(0.1)},  # TODO
 )
