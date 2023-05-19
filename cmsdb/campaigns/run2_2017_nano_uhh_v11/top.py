@@ -5,15 +5,13 @@ Top quark datasets for the 2017 data-taking campaign with datasets at NanoAOD ti
 version 11, created with custom content at UHH.
 """
 
-from order import DatasetInfo
-
 import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v11 as cpn
 
 
-# #
-# # ttbar
-# #
+#
+# ttbar
+#
 
 cpn.add_dataset(
     name="tt_sl_powheg",
@@ -47,10 +45,11 @@ cpn.add_dataset(
     n_files=296,
     n_events=235719999,
 )
+
+
 #
-# #
-# # ttbar + 1 vector boson
-# #
+# ttbar + 1 vector boson
+#
 
 cpn.add_dataset(
     name="ttz_llnunu_amcatnlo",
@@ -86,11 +85,11 @@ cpn.add_dataset(
     n_events=655018,
 )
 
+
 #
-# #
-# # ttbar + 2 vector bosons
-# #
+# ttbar + 2 vector bosons
 #
+
 cpn.add_dataset(
     name="ttzz_madgraph",
     id=14212185,
@@ -124,9 +123,10 @@ cpn.add_dataset(
     n_events=698000,
 )
 
-# #
-# # single top
-# #
+
+#
+# single top
+#
 
 cpn.add_dataset(
     name="st_tchannel_t_powheg",
@@ -170,44 +170,3 @@ cpn.add_dataset(
     n_files=7,
     n_events=5674000,
 )
-
-#
-# cpn.add_dataset(
-#     name="st_schannel_lep_amcatnlo",
-#     id=14235125,
-#     processes=[procs.st_schannel_lep],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-#             ],
-#             n_files=16,
-#             n_events=13620000,
-#         ),
-#         tune_up=DatasetInfo(
-#             keys=[
-#                 "/ST_s-channel_4f_leptonDecays_TuneCP5up_13TeV-amcatnlo-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=20,
-#             n_events=5562000,
-#         ),
-#         tune_down=DatasetInfo(
-#             keys=[
-#                 "/ST_s-channel_4f_leptonDecays_TuneCP5down_13TeV-amcatnlo-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=15,
-#             n_events=5496000,
-#         ),
-#     ),
-# )
-#
-# cpn.add_dataset(
-#     name="st_schannel_had_amcatnlo",
-#     id=14378997,
-#     processes=[procs.st_schannel_had],
-#     keys=[
-#         "/ST_s-channel_4f_hadronicDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-#     ],
-#     n_files=34,
-#     n_events=11696999,
-# )

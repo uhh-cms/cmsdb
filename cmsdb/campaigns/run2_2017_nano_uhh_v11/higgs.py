@@ -9,11 +9,11 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v11 as cpn
 
 
-# #
-# # Single Higgs
-# #
 #
-# # ggf
+# Single Higgs
+#
+
+# ggf
 cpn.add_dataset(
     name="h_ggf_tautau_powheg",
     id=14198289,
@@ -25,8 +25,7 @@ cpn.add_dataset(
     n_events=12974000,
 )
 
-# # vbf
-
+# vbf
 cpn.add_dataset(
     name="h_vbf_tautau_powheg",
     id=14198046,
@@ -38,9 +37,7 @@ cpn.add_dataset(
     n_events=2876240,
 )
 
-
-# # H radiation
-
+# H radiation
 cpn.add_dataset(
     name="zh_tautau_powheg",
     id=14336755,
@@ -107,7 +104,7 @@ cpn.add_dataset(
     n_events=4833000,
 )
 
-# # ttH
+# ttH
 cpn.add_dataset(
     name="tth_tautau_powheg",
     id=14198429,
@@ -129,7 +126,6 @@ cpn.add_dataset(
     n_files=13,
     n_events=7825000,
 )
-
 
 cpn.add_dataset(
     name="tth_nonbb_powheg",

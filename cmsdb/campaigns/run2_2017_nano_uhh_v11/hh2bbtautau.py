@@ -242,7 +242,6 @@ cpn.add_dataset(
     n_events=282000,
 )
 
-#
 # cpn.add_dataset(
 #     name="radion_hh_ggf_bbtautau_m400_madgraph",
 #     id=14304148,
@@ -342,7 +341,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m850_madgraph",
     id=14329739,
@@ -389,7 +387,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=100000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m1500_madgraph",
@@ -447,10 +444,10 @@ cpn.add_dataset(
     n_events=100000,
 )
 
+
 #
-# #
-# # ggF -> bulk graviton -> HH
-# #
+# ggF -> bulk graviton -> HH
+#
 
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m250_madgraph",
@@ -462,6 +459,7 @@ cpn.add_dataset(
     n_files=1,
     n_events=400000,
 )
+
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m260_madgraph",
     id=14302685,
@@ -483,6 +481,7 @@ cpn.add_dataset(
     n_files=1,
     n_events=400000,
 )
+
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m280_madgraph",
     id=14330317,
@@ -538,7 +537,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=300000,
 )
-
 
 # cpn.add_dataset(
 #     name="graviton_hh_ggf_bbtautau_m450_madgraph",
@@ -644,7 +642,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m900_madgraph",
     id=14330164,
@@ -714,7 +711,6 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m2500_madgraph",
     id=14306376,
@@ -726,9 +722,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=100000,
 )
-
-
-
 
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m3000_madgraph",
@@ -744,9 +737,7 @@ cpn.add_dataset(
 
 
 #
-# #
-# # vbf -> radion -> HH
-# #
+# vbf -> radion -> HH
 #
 
 cpn.add_dataset(
@@ -782,7 +773,6 @@ cpn.add_dataset(
     n_events=394000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m280_madgraph",
     id=14310792,
@@ -793,7 +783,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=394000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m300_madgraph",
@@ -806,7 +795,6 @@ cpn.add_dataset(
     n_events=294000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m320_madgraph",
     id=14310054,
@@ -817,7 +805,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=285000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m350_madgraph",
@@ -830,7 +817,6 @@ cpn.add_dataset(
     n_events=297000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m400_madgraph",
     id=14310977,
@@ -841,7 +827,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=297000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m450_madgraph",
@@ -864,7 +849,7 @@ cpn.add_dataset(
 #     n_files=6,
 #     n_events=300000,
 # )
-#
+
 # cpn.add_dataset(
 #     name="radion_hh_vbf_bbtautau_m550_madgraph",
 #     id=14313492,
@@ -875,7 +860,6 @@ cpn.add_dataset(
 #     n_files=11,
 #     n_events=200000,
 # )
-#
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m600_madgraph",
@@ -888,7 +872,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m650_madgraph",
     id=14310409,
@@ -900,9 +883,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
-
-
 # cpn.add_dataset(
 #     name="radion_hh_vbf_bbtautau_m700_madgraph",
 #     id=14312044,
@@ -913,8 +893,6 @@ cpn.add_dataset(
 #     n_files=14,
 #     n_events=194000,
 # )
-#
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m750_madgraph",
@@ -927,7 +905,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m800_madgraph",
     id=14309809,
@@ -938,8 +915,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=194000,
 )
-
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m850_madgraph",
@@ -963,7 +938,6 @@ cpn.add_dataset(
     n_events=197000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1000_madgraph",
     id=14311029,
@@ -975,7 +949,6 @@ cpn.add_dataset(
     n_events=97000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1250_madgraph",
     id=14310917,
@@ -986,7 +959,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=100000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1500_madgraph",
@@ -1009,7 +981,7 @@ cpn.add_dataset(
 #     n_files=2,
 #     n_events=100000,
 # )
-#
+
 # cpn.add_dataset(
 #     name="radion_hh_vbf_bbtautau_m2000_madgraph",
 #     id=14319538,
@@ -1020,7 +992,7 @@ cpn.add_dataset(
 #     n_files=10,
 #     n_events=94000,
 # )
-#
+
 # cpn.add_dataset(
 #     name="radion_hh_vbf_bbtautau_m2500_madgraph",
 #     id=14316124,
@@ -1031,8 +1003,6 @@ cpn.add_dataset(
 #     n_files=10,
 #     n_events=97000,
 # )
-#
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m3000_madgraph",
@@ -1044,10 +1014,10 @@ cpn.add_dataset(
     n_files=1,
     n_events=100000,
 )
+
+
 #
-# #
-# # vbf -> bulk graviton -> HH
-# #
+# vbf -> bulk graviton -> HH
 #
 
 cpn.add_dataset(
@@ -1060,7 +1030,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=400000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m260_madgraph",
@@ -1084,7 +1053,6 @@ cpn.add_dataset(
     n_events=400000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m280_madgraph",
     id=14310663,
@@ -1106,7 +1074,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=300000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m320_madgraph",
@@ -1152,7 +1119,6 @@ cpn.add_dataset(
     n_events=300000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m500_madgraph",
     id=14309757,
@@ -1175,7 +1141,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m600_madgraph",
     id=14310015,
@@ -1197,6 +1162,7 @@ cpn.add_dataset(
     n_files=1,
     n_events=200000,
 )
+
 # cpn.add_dataset(
 #     name="graviton_hh_vbf_bbtautau_m700_madgraph",
 #     id=14313347,
@@ -1207,7 +1173,6 @@ cpn.add_dataset(
 #     n_files=10,
 #     n_events=198000,
 # )
-#
 
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m750_madgraph",
@@ -1242,19 +1207,17 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
-
-# # missing
-# # cpn.add_dataset(
-# #     name="graviton_hh_vbf_bbtautau_m900_madgraph",
-# #     id=,
-# #     processes=[procs.graviton_hh_vbf_bbtautau_m900],
-# #     keys=[
-# #         "/VBFToBulkGravitonToHHTo2B2Tau_M-900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-# #     ],
-# #     n_files=,
-# #     n_events=,
-# # )
+# missing
+# cpn.add_dataset(
+#     name="graviton_hh_vbf_bbtautau_m900_madgraph",
+#     id=,
+#     processes=[procs.graviton_hh_vbf_bbtautau_m900],
+#     keys=[
+#         "/VBFToBulkGravitonToHHTo2B2Tau_M-900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+#     ],
+#     n_files=,
+#     n_events=,
+# )
 
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m1000_madgraph",
@@ -1278,7 +1241,6 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m1500_madgraph",
     id=14310112,
@@ -1289,7 +1251,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=100000,
 )
-
 
 # cpn.add_dataset(
 #     name="graviton_hh_vbf_bbtautau_m1750_madgraph",
@@ -1314,7 +1275,6 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m2500_madgraph",
     id=14310162,
@@ -1336,4 +1296,3 @@ cpn.add_dataset(
     n_files=1,
     n_events=100000,
 )
-

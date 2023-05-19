@@ -9,10 +9,10 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v11 as cpn
 
 
-# #
-# # SingleElectron
-# #
 #
+# SingleElectron
+#
+
 cpn.add_dataset(
     name="data_e_b",
     id=14172939,
@@ -43,7 +43,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="data_e_d",
     id=14173006,
@@ -58,7 +57,7 @@ cpn.add_dataset(
         "era": "D",
     },
 )
-#
+
 # cpn.add_dataset(
 #     name="data_e_e",
 #     id=14226090,
@@ -89,10 +88,10 @@ cpn.add_dataset(
     },
 )
 
+
 #
-# #
-# # SingleMuon
-# #
+# SingleMuon
+#
 
 cpn.add_dataset(
     name="data_mu_b",
@@ -109,8 +108,6 @@ cpn.add_dataset(
     },
 )
 
-
-
 cpn.add_dataset(
     name="data_mu_c",
     id=14175349,
@@ -125,7 +122,6 @@ cpn.add_dataset(
         "era": "C",
     },
 )
-
 
 cpn.add_dataset(
     name="data_mu_d",
@@ -173,11 +169,9 @@ cpn.add_dataset(
 )
 
 
-# #
-# # Tau
-# #
 #
-
+# Tau
+#
 
 cpn.add_dataset(
     name="data_tau_b",
@@ -190,10 +184,9 @@ cpn.add_dataset(
     n_files=21,
     n_events=38158216,
     aux={
-    "era": "B",
+        "era": "B",
     },
 )
-
 
 cpn.add_dataset(
     name="data_tau_c",
@@ -255,10 +248,9 @@ cpn.add_dataset(
     },
 )
 
+
 #
-# #
-# # MET
-# #
+# MET
 #
 
 cpn.add_dataset(

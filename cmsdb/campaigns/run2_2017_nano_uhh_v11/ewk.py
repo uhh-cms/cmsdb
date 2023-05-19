@@ -9,10 +9,11 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v11 as cpn
 
 
-# #
-# # Drell-Yan
-# #
+#
+# Drell-Yan
+#
 cpn.add_dataset(
+
     name="dy_lep_m50_amcatnlo",
     id=14262131,
     processes=[procs.dy_lep_m50],
@@ -23,7 +24,7 @@ cpn.add_dataset(
     n_events=196329377,
 )
 
-# # jet binned, madgraph
+# jet binned, madgraph
 # cpn.add_dataset(
 #     name="dy_lep_m50_1j_madgraph",
 #     id=14242968,
@@ -68,8 +69,8 @@ cpn.add_dataset(
 #     n_events=10872554,
 # )
 #
-# # jet binned, amcatnlo
 
+# jet binned, amcatnlo
 cpn.add_dataset(
     name="dy_lep_0j_amcatnlo",
     id=14222486,
@@ -103,8 +104,7 @@ cpn.add_dataset(
     n_events=47006742,
 )
 
-# # ht binned
-
+# ht binned
 # cpn.add_dataset(
 #     name="dy_lep_m50_ht70to100_madgraph",
 #     id=14235248,
@@ -193,9 +193,8 @@ cpn.add_dataset(
 #     n_events=1480047,
 # )
 #
-# # pt binned
 
-
+# pt binned
 cpn.add_dataset(
     name="dy_lep_pt0To50_amcatnlo",
     id=14349689,
@@ -229,7 +228,6 @@ cpn.add_dataset(
     n_events=80740184,
 )
 
-
 cpn.add_dataset(
     name="dy_lep_pt250To400_amcatnlo",
     id=14353503,
@@ -240,7 +238,6 @@ cpn.add_dataset(
     n_files=34,
     n_events=24283448,
 )
-
 
 cpn.add_dataset(
     name="dy_lep_pt400To650_amcatnlo",
@@ -263,12 +260,13 @@ cpn.add_dataset(
     n_files=6,
     n_events=4034670,
 )
-# #
-# # W boson production
-# #
-#
-# # inclusive
 
+
+#
+# W boson production
+#
+
+# inclusive
 cpn.add_dataset(
     name="w_lnu_madgraph",
     id=14196281,
@@ -280,7 +278,7 @@ cpn.add_dataset(
     n_events=78981243,
 )
 
-# # ht binned
+# ht binned
 cpn.add_dataset(
     name="w_lnu_ht70To100_madgraph",
     id=14240461,
@@ -369,9 +367,11 @@ cpn.add_dataset(
     n_events=1185699,
 )
 
-# # EWK
-# # (vector boson emissions)
-# #
+
+#
+# EWK
+# (vector boson emissions)
+#
 
 cpn.add_dataset(
     name="ewk_wm_lnu_madgraph",
@@ -405,12 +405,13 @@ cpn.add_dataset(
     n_files=1,
     n_events=579000,
 )
+
+
 #
-# #
-# # Di-boson
-# #
+# Di-boson
 #
-# # ZZ
+
+# ZZ
 cpn.add_dataset(
     name="zz_pythia",
     id=14197074,
@@ -432,7 +433,7 @@ cpn.add_dataset(
 #     n_files=24,
 #     n_events=29521496,
 # )
-#
+
 # cpn.add_dataset(
 #     name="zz_llnunu_powheg",
 #     id=14237024,
@@ -443,7 +444,7 @@ cpn.add_dataset(
 #     n_files=29,
 #     n_events=40839000,
 # )
-#
+
 # cpn.add_dataset(
 #     name="zz_llll_powheg",
 #     id=14243658,
@@ -454,8 +455,8 @@ cpn.add_dataset(
 #     n_files=109,
 #     n_events=99388000,
 # )
-#
-# # WZ
+
+# WZ
 cpn.add_dataset(
     name="wz_pythia",
     id=14173898,
@@ -477,7 +478,7 @@ cpn.add_dataset(
 #     n_files=31,
 #     n_events=10339582,
 # )
-#
+
 # cpn.add_dataset(
 #     name="wz_qqll_m4_amcatnlo",
 #     id=14328000,
@@ -488,8 +489,8 @@ cpn.add_dataset(
 #     n_files=30,
 #     n_events=29091996,
 # )
-#
-# # WW
+
+# WW
 cpn.add_dataset(
     name="ww_pythia",
     id=14175175,
@@ -501,7 +502,6 @@ cpn.add_dataset(
     n_events=15634000,
 )
 
-#
 # cpn.add_dataset(
 #     name="ww_lnulnu_powheg",
 #     id=14241651,
@@ -512,12 +512,11 @@ cpn.add_dataset(
 #     n_files=46,
 #     n_events=7098000,
 # )
-#
-#
-# #
-# # Triple-boson
-# #
 
+
+#
+# Triple-boson
+#
 
 cpn.add_dataset(
     name="zzz_amcatnlo",
