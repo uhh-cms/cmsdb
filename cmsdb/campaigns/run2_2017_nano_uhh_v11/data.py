@@ -58,20 +58,20 @@ cpn.add_dataset(
     },
 )
 
-# cpn.add_dataset(
-#     name="data_e_e",
-#     id=14226090,
-#     is_data=True,
-#     processes=[procs.data_e],
-#     keys=[
-#         "/SingleElectron/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
-#     ],
-#     n_files=51,
-#     n_events=102122055,
-#     aux={
-#         "era": "E",
-#     },
-# )
+cpn.add_dataset(
+    name="data_e_e",
+    id=14173005,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/SingleElectron/Run2017E-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+    ],
+    n_files=46,
+    n_events=102122055,
+    aux={
+        "era": "E",
+    },
+)
 
 cpn.add_dataset(
     name="data_e_f",
