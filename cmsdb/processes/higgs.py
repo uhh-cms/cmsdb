@@ -77,7 +77,7 @@ zh_tautau = zh.add_process(
     name="zh_tautau",
     id=13110,
     label=rf"{zh.label}, $H \rightarrow \tau\tau$",
-    xsecs={13: zh.get_xsec(13) * const.br_h.tt},  # TODO
+    xsecs={13: zh.get_xsec(13) * const.br_h.tt},
 )
 
 zh_llbb = zh.add_process(
@@ -141,21 +141,21 @@ tth_tautau = tth.add_process(
     name="tth_tautau",
     id=15100,
     label=rf"{tth.label}, $H \rightarrow \tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: tth.get_xsec(13) * const.br_h.tt},
 )
 
 tth_bb = tth.add_process(
     name="tth_bb",
     id=15200,
     label=rf"{tth.label}, $H \rightarrow bb$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: tth.get_xsec(13) * const.br_h.bb},
 )
 
 tth_nonbb = tth.add_process(
     name="tth_nonbb",
     id=15300,
     label=rf"{tth.label}, $H \rightarrow$ non-$bb$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: tth.get_xsec(13) * (1 - const.br_h.bb)},
 )
 
 
