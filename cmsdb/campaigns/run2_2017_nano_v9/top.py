@@ -192,9 +192,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_llnunu_amcatnlo",
+    name="ttz_llnunu_m10_amcatnlo",
     id=14229512,
-    processes=[procs.ttz_llnunu],
+    processes=[procs.ttz_llnunu_m10],
     info=dict(
         nominal=DatasetInfo(
             keys=[

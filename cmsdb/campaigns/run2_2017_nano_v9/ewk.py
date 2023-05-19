@@ -349,9 +349,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ewk_wm_lnu_madgraph",
+    name="ewk_wm_lnu_m50_madgraph",
     id=14301832,
-    processes=[procs.ewk_wm_lnu],
+    processes=[procs.ewk_wm_lnu_m50],
     keys=[
         "/EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -360,9 +360,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ewk_w_lnu_madgraph",
+    name="ewk_w_lnu_m50_madgraph",
     id=14300978,
-    processes=[procs.ewk_wp_lnu],
+    processes=[procs.ewk_wp_lnu_m50],
     keys=[
         "/EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -371,9 +371,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ewk_z_ll_madgraph",
+    name="ewk_z_ll_m50_madgraph",
     id=14301412,
-    processes=[procs.ewk_z_ll],
+    processes=[procs.ewk_z_ll_m50],
     keys=[
         "/EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],

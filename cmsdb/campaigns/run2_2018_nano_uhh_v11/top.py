@@ -6,7 +6,7 @@ version 11, created with custom content at UHH.
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v11 as cpn
+from cmsdb.campaigns.run2_2018_nano_uhh_v11 import campaign_run2_2018_nano_uhh_v11 as cpn
 
 
 #
