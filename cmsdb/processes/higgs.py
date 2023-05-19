@@ -8,8 +8,8 @@ __all__ = [
     "h",
     "h_ggf", "h_ggf_tautau",
     "h_vbf", "h_vbf_tautau",
-    "vh", "zh", "zh_tautau", "zh_bb", "wph", "wph_tautau", "wmh", "wmh_tautau", "ggzh", "ggzh_llbb",
-    "tth", "tth_tautau", "tth_bb", "tth_nonbb",
+    "vh", "zh", "zh_tautau", "zh_llbb", "zh_qqbb", "wph", "wph_tautau", "wmh", "wmh_tautau", "ggzh",
+    "ggzh_llbb", "tth", "tth_tautau", "tth_bb", "tth_nonbb",
     "hh",
     "hh_ggf", "ggHH_kl_0_kt_1", "ggHH_kl_1_kt_1", "ggHH_kl_2p45_kt_1", "ggHH_kl_5_kt_1",
     "hh_vbf", "qqHH_CV_1_C2V_1_kl_1", "qqHH_CV_1_C2V_1_kl_0", "qqHH_CV_1_C2V_1_kl_2",
@@ -19,6 +19,8 @@ __all__ = [
 
 from order import Process
 from scinum import Number
+
+import cmsdb.constants as const
 
 
 #
@@ -75,14 +77,21 @@ zh_tautau = zh.add_process(
     name="zh_tautau",
     id=13110,
     label=rf"{zh.label}, $H \rightarrow \tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: zh.get_xsec(13) * const.br_h.tt},
 )
 
-zh_bb = zh.add_process(
-    name="zh_bb",
+zh_llbb = zh.add_process(
+    name="zh_llbb",
     id=13120,
-    label=rf"{zh.label}, $H \rightarrow bb$",
-    xsecs={13: Number(0.1)},  # TODO
+    label=rf"{zh.label}, $H \rightarrow bb$, $Z \rightarrow ll$",
+    xsecs={13: zh.get_xsec(13) * const.br_h.bb * const.br_z.clep},
+)
+
+zh_qqbb = zh.add_process(
+    name="zh_qqbb",
+    id=13121,
+    label=rf"{zh.label}, $H \rightarrow bb$, $Z \rightarrow qq$",
+    xsecs={13: zh.get_xsec(13) * const.br_h.bb * const.br_z.qq},
 )
 
 wph = vh.add_process(
@@ -132,21 +141,21 @@ tth_tautau = tth.add_process(
     name="tth_tautau",
     id=15100,
     label=rf"{tth.label}, $H \rightarrow \tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: tth.get_xsec(13) * const.br_h.tt},
 )
 
 tth_bb = tth.add_process(
     name="tth_bb",
     id=15200,
     label=rf"{tth.label}, $H \rightarrow bb$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: tth.get_xsec(13) * const.br_h.bb},
 )
 
 tth_nonbb = tth.add_process(
     name="tth_nonbb",
     id=15300,
     label=rf"{tth.label}, $H \rightarrow$ non-$bb$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: tth.get_xsec(13) * (1 - const.br_h.bb)},
 )
 
 

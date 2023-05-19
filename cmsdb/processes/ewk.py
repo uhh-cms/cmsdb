@@ -12,14 +12,14 @@ __all__ = [
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
     "dy_lep_m50_ht400to600", "dy_lep_m50_ht600to800", "dy_lep_m50_ht800to1200",
     "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500",
-    "dy_lep_pt50To100", "dy_lep_pt100To250", "dy_lep_pt250To400", "dy_lep_pt400To650",
-    "dy_lep_pt650",
+    "dy_lep_pt0To50", "dy_lep_pt50To100", "dy_lep_pt100To250", "dy_lep_pt250To400",
+    "dy_lep_pt400To650", "dy_lep_pt650",
     "w",
     "w_lnu",
     "w_lnu_ht70To100", "w_lnu_ht100To200", "w_lnu_ht200To400", "w_lnu_ht400To600",
     "w_lnu_ht600To800", "w_lnu_ht800To1200", "w_lnu_ht1200To2500", "w_lnu_ht2500",
     "ewk",
-    "ewk_wp_lnu", "ewk_wm_lnu", "ewk_z_ll",
+    "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
     "vv",
     "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll",
     "wz", "wz_lllnu", "wz_qqll_m4",
@@ -159,33 +159,39 @@ dy_lep_m50_ht2500 = dy_lep_m50.add_process(
 )
 
 # based on datasets DYJetsToLL_Pt-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+dy_lep_pt0To50 = dy_lep.add_process(
+    name="dy_lep_pt0To50",
+    id=51510,
+    xsecs={13: Number(1.0)},  # TODO
+)
+
 dy_lep_pt50To100 = dy_lep.add_process(
     name="dy_lep_pt50To100",
-    id=51510,
+    id=51520,
     xsecs={13: Number(398.8)},
 )
 
 dy_lep_pt100To250 = dy_lep.add_process(
     name="dy_lep_pt100To250",
-    id=51520,
+    id=51530,
     xsecs={13: Number(93.61)},
 )
 
 dy_lep_pt250To400 = dy_lep.add_process(
     name="dy_lep_pt250To400",
-    id=51530,
+    id=51540,
     xsecs={13: Number(3.67)},
 )
 
 dy_lep_pt400To650 = dy_lep.add_process(
     name="dy_lep_pt400To650",
-    id=51540,
+    id=51550,
     xsecs={13: Number(0.5)},
 )
 
 dy_lep_pt650 = dy_lep.add_process(
     name="dy_lep_pt650",
-    id=51550,
+    id=51560,
     xsecs={13: Number(0.04704)},
 )
 
@@ -278,20 +284,20 @@ ewk = Process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ewk_wp_lnu = ewk.add_process(
-    name="ewk_wp_lnu",
+ewk_wp_lnu_m50 = ewk.add_process(
+    name="ewk_wp_lnu_m50",
     id=7100,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ewk_wm_lnu = ewk.add_process(
-    name="ewk_wm_lnu",
+ewk_wm_lnu_m50 = ewk.add_process(
+    name="ewk_wm_lnu_m50",
     id=7200,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ewk_z_ll = ewk.add_process(
-    name="ewk_z_ll",
+ewk_z_ll_m50 = ewk.add_process(
+    name="ewk_z_ll_m50",
     id=7300,
     xsecs={13: Number(0.1)},  # TODO
 )

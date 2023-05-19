@@ -20,7 +20,11 @@ campaign_run2_2017_nano_v9 = Campaign(
     id=220171,
     ecm=13,
     bx=25,
-    aux={"year": 2017, "tier": "NanoAOD", "version": "9"},
+    aux={
+        "tier": "NanoAOD",
+        "year": 2017,
+        "version": 9,
+    },
 )
 
 

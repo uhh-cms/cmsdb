@@ -14,7 +14,7 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
-    "ttz", "ttz_llnunu",
+    "ttz", "ttz_llnunu_m10",
     "ttw", "ttw_lnu", "ttw_qq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
@@ -271,8 +271,8 @@ ttz = ttv.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ttz_llnunu = ttz.add_process(
-    name="ttz_llnunu",
+ttz_llnunu_m10 = ttz.add_process(
+    name="ttz_llnunu_m10",  # non-hadronically decaying Z
     id=3110,
     xsecs={13: Number(0.1)},  # TODO
 )

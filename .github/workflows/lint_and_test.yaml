@@ -53,3 +53,5 @@ jobs:
           python -c "from cmsdb.campaigns.run2_2016_nano_v9 import *"
           python -c "from cmsdb.campaigns.run2_2017_nano_v9 import *"
           python -c "from cmsdb.campaigns.run2_2018_nano_v9 import *"
+          python -c "from cmsdb.campaigns.run2_2017_nano_uhh_v11 import *"
+          python -c "from cmsdb.campaigns.run2_2018_nano_uhh_v11 import *"
