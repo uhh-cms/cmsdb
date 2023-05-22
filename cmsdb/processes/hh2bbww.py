@@ -10,6 +10,30 @@ __all__ = [
     "qqHH_sl_hbbhww", "qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww", "qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww",
     "qqHH_CV_1_C2V_0_kl_1_sl_hbbhww", "qqHH_CV_1_C2V_1_kl_0_sl_hbbhww", "qqHH_CV_1_C2V_1_kl_1_sl_hbbhww",
     "qqHH_CV_1_C2V_1_kl_2_sl_hbbhww", "qqHH_CV_1_C2V_2_kl_1_sl_hbbhww",
+    "radion_hh_ggf_bbww",
+    "radion_hh_ggf_bbww_m250", "radion_hh_ggf_bbww_m260", "radion_hh_ggf_bbww_m270",
+    "radion_hh_ggf_bbww_m280", "radion_hh_ggf_bbww_m300", "radion_hh_ggf_bbww_m320",
+    "radion_hh_ggf_bbww_m350", "radion_hh_ggf_bbww_m400", "radion_hh_ggf_bbww_m450",
+    "radion_hh_ggf_bbww_m500", "radion_hh_ggf_bbww_m550", "radion_hh_ggf_bbww_m600",
+    "radion_hh_ggf_bbww_m650", "radion_hh_ggf_bbww_m700", "radion_hh_ggf_bbww_m750",
+    "radion_hh_ggf_bbww_m800", "radion_hh_ggf_bbww_m850", "radion_hh_ggf_bbww_m900",
+    "radion_hh_ggf_bbww_m1000", "radion_hh_ggf_bbww_m1250", "radion_hh_ggf_bbww_m1500",
+    "radion_hh_ggf_bbww_m1750", "radion_hh_ggf_bbww_m2000", "radion_hh_ggf_bbww_m2500",
+    "radion_hh_ggf_bbww_m3000",
+    "graviton_hh_ggf_bbww",
+    "graviton_hh_ggf_bbww_m250", "graviton_hh_ggf_bbww_m260",
+    "graviton_hh_ggf_bbww_m270", "graviton_hh_ggf_bbww_m280",
+    "graviton_hh_ggf_bbww_m300", "graviton_hh_ggf_bbww_m320",
+    "graviton_hh_ggf_bbww_m350", "graviton_hh_ggf_bbww_m400",
+    "graviton_hh_ggf_bbww_m450", "graviton_hh_ggf_bbww_m500",
+    "graviton_hh_ggf_bbww_m550", "graviton_hh_ggf_bbww_m600",
+    "graviton_hh_ggf_bbww_m650", "graviton_hh_ggf_bbww_m700",
+    "graviton_hh_ggf_bbww_m750", "graviton_hh_ggf_bbww_m800",
+    "graviton_hh_ggf_bbww_m850", "graviton_hh_ggf_bbww_m900",
+    "graviton_hh_ggf_bbww_m1000", "graviton_hh_ggf_bbww_m1250",
+    "graviton_hh_ggf_bbww_m1500", "graviton_hh_ggf_bbww_m1750",
+    "graviton_hh_ggf_bbww_m2000", "graviton_hh_ggf_bbww_m2500",
+    "graviton_hh_ggf_bbww_m3000",
 ]
 
 import cmsdb.constants as const
@@ -17,6 +41,7 @@ from cmsdb.processes.higgs import (
     hh_ggf, ggHH_kl_0_kt_1, ggHH_kl_1_kt_1, ggHH_kl_2p45_kt_1, ggHH_kl_5_kt_1,
     hh_vbf, qqHH_CV_1_C2V_1_kl_1, qqHH_CV_1_C2V_1_kl_0, qqHH_CV_1_C2V_1_kl_2,
     qqHH_CV_1_C2V_0_kl_1, qqHH_CV_1_C2V_2_kl_1, qqHH_CV_0p5_C2V_1_kl_1, qqHH_CV_1p5_C2V_1_kl_1,
+    radion_hh_ggf, graviton_hh_ggf,
 )
 
 
@@ -148,4 +173,327 @@ qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1p5_C2V_1_kl_1.add_process(
     xsecs={
         13: qqHH_CV_1p5_C2V_1_kl_1.get_xsec(13) * const.br_hh.bbww * const.br_ww.sl,
     },
+)
+
+#
+# ggF -> radion -> HH
+#
+
+radion_hh_ggf_bbww = radion_hh_ggf.add_process(
+    name="radion_hh_ggf_bbww",
+    id=23100,
+    label=rf"{radion_hh_ggf.label} $\rightarrow bb\tau\tau$",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m250 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m250",
+    id=23101,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m260 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m260",
+    id=23102,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m270 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m270",
+    id=23103,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m280 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m280",
+    id=23104,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m300 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m300",
+    id=23105,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m320 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m320",
+    id=23106,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m350 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m350",
+    id=23107,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m400 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m400",
+    id=23108,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m450 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m450",
+    id=23109,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m500 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m500",
+    id=23110,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m550 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m550",
+    id=23111,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m600 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m600",
+    id=23112,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m650 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m650",
+    id=23113,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m700 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m700",
+    id=23114,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m750 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m750",
+    id=23115,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m800 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m800",
+    id=23116,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m850 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m850",
+    id=23117,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m900 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m900",
+    id=23118,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m1000 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m1000",
+    id=23119,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m1250 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m1250",
+    id=23120,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m1500 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m1500",
+    id=23121,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m1750 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m1750",
+    id=23122,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m2000 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m2000",
+    id=23123,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m2500 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m2500",
+    id=23124,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbww_m3000 = radion_hh_ggf_bbww.add_process(
+    name="radion_hh_ggf_bbww_m3000",
+    id=23125,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+
+#
+# ggF -> bulk graviton -> HH
+#
+
+graviton_hh_ggf_bbww = graviton_hh_ggf.add_process(
+    name="graviton_hh_ggf_bbww",
+    id=24100,
+    label=rf"{graviton_hh_ggf.label} $\rightarrow bbWW$",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m250 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m250",
+    id=24101,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m260 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m260",
+    id=24102,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m270 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m270",
+    id=24103,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m280 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m280",
+    id=24104,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m300 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m300",
+    id=24105,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m320 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m320",
+    id=24106,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m350 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m350",
+    id=24107,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m400 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m400",
+    id=24108,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m450 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m450",
+    id=24109,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m500 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m500",
+    id=24110,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m550 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m550",
+    id=24111,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m600 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m600",
+    id=24112,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m650 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m650",
+    id=24113,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m700 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m700",
+    id=24114,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m750 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m750",
+    id=24115,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m800 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m800",
+    id=24116,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m850 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m850",
+    id=24117,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m900 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m900",
+    id=24118,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m1000 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m1000",
+    id=24119,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m1250 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m1250",
+    id=24120,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m1500 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m1500",
+    id=24121,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m1750 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m1750",
+    id=24122,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m2000 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m2000",
+    id=24123,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m2500 = graviton_hh_ggf_bbww.add_process(
+    name="graviton_hh_ggf_bbww_m2500",
+    id=24124,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+graviton_hh_ggf_bbww_m3000 = graviton_hh_ggf_bbww.add_process(
+    name="hh_ggf_graviton_bbww_m3000",
+    id=24125,
+    xsecs={13: Number(0.1)},  # TODO
 )
