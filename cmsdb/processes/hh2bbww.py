@@ -36,6 +36,8 @@ __all__ = [
     "graviton_hh_ggf_bbww_m3000",
 ]
 
+from scinum import Number
+
 import cmsdb.constants as const
 from cmsdb.processes.higgs import (
     hh_ggf, ggHH_kl_0_kt_1, ggHH_kl_1_kt_1, ggHH_kl_2p45_kt_1, ggHH_kl_5_kt_1,
