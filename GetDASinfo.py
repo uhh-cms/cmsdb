@@ -1,5 +1,8 @@
 # coding: utf-8
 
+# USAGE: python GetDASinfo.py -d das_string
+# e.g. /JetHT/Run2018C-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+
 from __future__ import annotations
 
 import subprocess
