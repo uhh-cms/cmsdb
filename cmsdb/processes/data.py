@@ -58,7 +58,7 @@ data_pho = data.add_process(
     label=r"Data $\gamma$",
 )
 
-data_dijet = data.add_process(
+data_jetht = data.add_process(
     name="data_jetht",
     id=100,
     is_data=True,
