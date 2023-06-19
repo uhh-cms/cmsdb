@@ -13,8 +13,8 @@ from cmsdb.campaigns.run2_2018_JMEnano_v9 import campaign_run2_2018_JMEnano_v9 a
 #
 
 cpn.add_dataset(
-    name="data_jetht_a", 
-    id=14260294, # from das
+    name="data_jetht_a",
+    id=14260294,  # from das
     is_data=True,
     processes=[procs.data_dijet],
     keys=[

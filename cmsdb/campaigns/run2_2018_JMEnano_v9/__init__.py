@@ -21,12 +21,12 @@ campaign_run2_2018_JMEnano_v9 = Campaign(
     ecm=13,
     bx=25,
     aux={
-        "year": 2018, 
-        "tier": "NanoAOD", 
-        "version": "9"
+        "year": 2018,
+        "tier": "NanoAOD",
+        "version": "9",
     },
 )
 
 # trailing imports to load datasets
-import cmsdb.campaigns.run2_2018_JMEnano_v9.data
-import cmsdb.campaigns.run2_2018_JMEnano_v9.qcd
+import cmsdb.campaigns.run2_2018_JMEnano_v9.data  # noqa
+import cmsdb.campaigns.run2_2018_JMEnano_v9.qcd  # noqa

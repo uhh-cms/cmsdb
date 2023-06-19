@@ -8,9 +8,11 @@ from __future__ import annotations
 import subprocess
 import json
 from argparse import ArgumentParser
+
 import law
 
-def get_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
+
+def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
     for das_string in das_strings:
         # set default keys of interest
         keys_of_interest = keys_of_interest or (
@@ -35,7 +37,7 @@ def get_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
                 raise Exception(f"dasgoclient query failed:\n{out}")
             infos = json.loads(out)
             for info in infos:
-                dataset_name = info.get('dataset',[])[0].get('name',"")
+                dataset_name = info.get("dataset", [])[0].get("name", "")
                 # print(dataset_name) # keep for debugging purpose
                 datasets.append(dataset_name)
 
@@ -51,7 +53,7 @@ def get_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
             if code != 0:
                 raise Exception(f"dasgoclient query failed:\n{out}")
             infos = json.loads(out)
-            info_of_interest = {'name': dataset}
+            info_of_interest = {"name": dataset}
             for info in infos:
                 dataset_info = info["dataset"][0]
                 # Get json format of single das_string gives multiple dictornaries with different info
@@ -66,6 +68,6 @@ def get_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument('-d', '--dataset', dest='dataset', nargs='+', help='das name')
+    parser.add_argument("-d", "--dataset", dest="dataset", nargs="+", help="das name")
     args = parser.parse_args()
-    get_das_info(args.dataset)
+    print_das_info(args.dataset)
