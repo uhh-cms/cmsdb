@@ -5,7 +5,7 @@ Data process definitions.
 """
 
 __all__ = [
-    "data", "data_e", "data_mu", "data_tau", "data_met", "data_pho", "data_dijet",
+    "data", "data_e", "data_mu", "data_tau", "data_met", "data_pho", "data_jetht",
 ]
 
 from order import Process
@@ -59,8 +59,8 @@ data_pho = data.add_process(
 )
 
 data_dijet = data.add_process(
-    name="data_dijet",
+    name="data_jetht",
     id=100,
     is_data=True,
-    label=r"Data $\gamma$",
+    label=r"Data JetHT",
 )
