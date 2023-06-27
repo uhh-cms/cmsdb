@@ -27,7 +27,7 @@ jobs:
 
       - name: Lint 🔍
         run: |
-          flake8 cmsdb
+          flake8 cmsdb scripts
 
   test:
     runs-on: ubuntu-latest
@@ -55,3 +55,4 @@ jobs:
           python -c "from cmsdb.campaigns.run2_2018_nano_v9 import *"
           python -c "from cmsdb.campaigns.run2_2017_nano_uhh_v11 import *"
           python -c "from cmsdb.campaigns.run2_2018_nano_uhh_v11 import *"
+          python -c "from cmsdb.campaigns.run2_2018_JMEnano_v9 import *"
