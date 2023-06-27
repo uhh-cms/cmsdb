@@ -73,7 +73,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ggHH_kl_1_kt_1_dl_hbbhww_powheg",
     id=14057872,
-    processes=[procs.ggHH_kl_1_kt_1_dl_hbbhww_],
+    processes=[procs.ggHH_kl_1_kt_1_dl_hbbhww],
     keys=[
         "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
@@ -189,9 +189,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="qqHH_CV_0_5_C2V_1_kl_1_dl_hbbhww_madgraph",
+    name="qqHH_CV_0p5_C2V_1_kl_1_dl_hbbhww_madgraph",
     id=14154110,
-    processes=[procs.qqHH_CV_0_5_C2V_1_kl_1_dl_hbbhww],
+    processes=[procs.qqHH_CV_0p5_C2V_1_kl_1_dl_hbbhww],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
@@ -200,9 +200,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_5_C2V_1_kl_1_dl_hbbhww_madgraph",
+    name="qqHH_CV_1p5_C2V_1_kl_1_dl_hbbhww_madgraph",
     id=14151539,
-    processes=[procs.qqHH_CV_1_5_C2V_1_kl_1_dl_hbbhww],
+    processes=[procs.qqHH_CV_1p5_C2V_1_kl_1_dl_hbbhww],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
