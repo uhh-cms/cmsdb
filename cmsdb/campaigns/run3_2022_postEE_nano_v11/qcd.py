@@ -28,7 +28,7 @@ from cmsdb.campaigns.run3_2022_postEE_nano_v11 import campaign_run3_2022_postEE_
 
 # GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22EEGS&nanoaod_version=v11&dataset=QCD_PT-15*Flat2018&chained_request=EpsilonPU  # noqa
 cpn.add_dataset(
-    name="qcd_flat2018_epsilonPU_pythia",
+    name="qcd_flat2018_epsilon_pu_pythia",
     id=14685056,
     is_data=False,
     processes=[procs.qcd_flat],
