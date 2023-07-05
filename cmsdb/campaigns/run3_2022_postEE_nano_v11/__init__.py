@@ -2,7 +2,13 @@
 
 """
 Common, analysis independent definition of the 2022 post-EE data-taking campaign
-with datasets at NanoAOD tier in version 11.
+with datasets at NanoAOD tier in version 11. The 'post-EE' refers to data taken
+after part of the positive ECAL endcap (EE+) had to be shut down because of a water
+leak inside the detector in late 2022 (more details can be found at
+https://cms.cern/news/problems-and-solutions-ecal-leak-story).
+A corresponding set of MC samples was produced to simulate the effect of the missing
+endcap region.
+
 See https://python-order.readthedocs.io/en/latest/quickstart.html#analysis-campaign-and-config.
 
 Dataset ids are identical to those in DAS (https://cmsweb.cern.ch/das).
