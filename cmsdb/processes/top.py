@@ -10,6 +10,9 @@ __all__ = [
     "st",
     "st_tchannel", "st_tchannel_t", "st_tchannel_tbar",
     "st_twchannel", "st_twchannel_t", "st_twchannel_tbar",
+    "st_twchannel_t_sl", "st_twchannel_tbar_sl",
+    "st_twchannel_t_dl", "st_twchannel_tbar_dl",
+    "st_twchannel_t_fh", "st_twchannel_tbar_fh",
     "st_schannel", "st_schannel_lep", "st_schannel_had",
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
@@ -153,6 +156,24 @@ st_twchannel_t = st_twchannel.add_process(
     },
 )
 
+st_twchannel_t_sl = st_twchannel_t.add_process(
+    name="st_twchannel_t_sl",
+    id=2211,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+st_twchannel_t_dl = st_twchannel_t.add_process(
+    name="st_twchannel_t_dl",
+    id=2212,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+st_twchannel_t_fh = st_twchannel_t.add_process(
+    name="st_twchannel_t_fh",
+    id=2213,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
 st_twchannel_tbar = st_twchannel.add_process(
     name="st_twchannel_tbar",
     id=2220,
@@ -162,6 +183,24 @@ st_twchannel_tbar = st_twchannel.add_process(
             pdf=1.70,
         )),
     },
+)
+
+st_twchannel_tbar_sl = st_twchannel_tbar.add_process(
+    name="st_twchannel_tbar_sl",
+    id=2221,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+st_twchannel_tbar_dl = st_twchannel_tbar.add_process(
+    name="st_twchannel_tbar_dl",
+    id=2222,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+st_twchannel_tbar_fh = st_twchannel_tbar.add_process(
+    name="st_twchannel_tbar_fh",
+    id=2223,
+    xsecs={13: Number(0.1)},  # TODO
 )
 
 st_schannel = st.add_process(

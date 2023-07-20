@@ -6,16 +6,60 @@ QCD-related process definitions.
 
 __all__ = [
     "qcd",
-    "qcd_ht50to100", "qcd_ht100to200", "qcd_ht200to300", "qcd_ht300to500", "qcd_ht500to700",
-    "qcd_ht700to1000", "qcd_ht1000to1500", "qcd_ht1500to2000", "qcd_ht2000",
-    "qcd_mu", "qcd_em", "qcd_bctoe",
-    "qcd_mu_pt15to20", "qcd_mu_pt20to30", "qcd_mu_pt30to50", "qcd_mu_pt50to80",
-    "qcd_mu_pt80to120", "qcd_mu_pt120to170", "qcd_mu_pt170to300", "qcd_mu_pt300to470",
-    "qcd_mu_pt470to600", "qcd_mu_pt600to800", "qcd_mu_pt800to1000", "qcd_mu_pt1000",
-    "qcd_em_pt15to20", "qcd_em_pt20to30", "qcd_em_pt30to50", "qcd_em_pt50to80",
-    "qcd_em_pt80to120", "qcd_em_pt120to170", "qcd_em_pt170to300", "qcd_em_pt300toInf",
-    "qcd_bctoe_pt15to20", "qcd_bctoe_pt20to30", "qcd_bctoe_pt30to80", "qcd_bctoe_pt80to170",
-    "qcd_bctoe_pt170to250", "qcd_bctoe_pt250toInf",
+    "qcd_flat",
+    "qcd_ht50to100",
+    "qcd_ht100to200",
+    "qcd_ht200to300",
+    "qcd_ht300to500",
+    "qcd_ht500to700",
+    "qcd_ht700to1000",
+    "qcd_ht1000to1500",
+    "qcd_ht1500to2000",
+    "qcd_ht2000",
+    "qcd_pt15to30",
+    "qcd_pt30to50",
+    "qcd_pt50to80",
+    "qcd_pt80to120",
+    "qcd_pt120to170",
+    "qcd_pt170to300",
+    "qcd_pt300to470",
+    "qcd_pt470to600",
+    "qcd_pt600to800",
+    "qcd_pt800to1000",
+    "qcd_pt1000to1400",
+    "qcd_pt1400to1800",
+    "qcd_pt1800to2400",
+    "qcd_pt2400to3200",
+    "qcd_pt3200",
+    "qcd_mu",
+    "qcd_mu_pt15to20",
+    "qcd_mu_pt20to30",
+    "qcd_mu_pt30to50",
+    "qcd_mu_pt50to80",
+    "qcd_mu_pt80to120",
+    "qcd_mu_pt120to170",
+    "qcd_mu_pt170to300",
+    "qcd_mu_pt300to470",
+    "qcd_mu_pt470to600",
+    "qcd_mu_pt600to800",
+    "qcd_mu_pt800to1000",
+    "qcd_mu_pt1000",
+    "qcd_em",
+    "qcd_em_pt15to20",
+    "qcd_em_pt20to30",
+    "qcd_em_pt30to50",
+    "qcd_em_pt50to80",
+    "qcd_em_pt80to120",
+    "qcd_em_pt120to170",
+    "qcd_em_pt170to300",
+    "qcd_em_pt300toInf",
+    "qcd_bctoe",
+    "qcd_bctoe_pt15to20",
+    "qcd_bctoe_pt20to30",
+    "qcd_bctoe_pt30to80",
+    "qcd_bctoe_pt80to170",
+    "qcd_bctoe_pt170to250",
+    "qcd_bctoe_pt250toInf",
 ]
 
 from order import Process
@@ -32,6 +76,23 @@ qcd = Process(
     label="QCD",
     xsecs={13: Number(0.1)},  # TODO
 )
+
+
+#
+# QCD (flat sample)
+#
+
+qcd_flat = Process(
+    name="qcd_flat",
+    id=30001,
+    label="QCD",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+
+#
+# QCD HT-binned
+#
 
 qcd_ht50to100 = qcd.add_process(
     name="qcd_ht50to100",
@@ -115,7 +176,131 @@ qcd_ht2000 = qcd.add_process(
 )
 
 #
-# QCD pt-binned (muon enriched)
+# QCD pT-binned
+#
+
+qcd_pt15to30 = qcd.add_process(
+    name="qcd_pt15to30",
+    id=31901,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt30to50 = qcd.add_process(
+    name="qcd_pt30to50",
+    id=31902,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt50to80 = qcd.add_process(
+    name="qcd_pt50to80",
+    id=31903,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt80to120 = qcd.add_process(
+    name="qcd_pt80to120",
+    id=31904,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt120to170 = qcd.add_process(
+    name="qcd_pt120to170",
+    id=31905,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt170to300 = qcd.add_process(
+    name="qcd_pt170to300",
+    id=31906,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt300to470 = qcd.add_process(
+    name="qcd_pt300to470",
+    id=31907,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt470to600 = qcd.add_process(
+    name="qcd_pt470to600",
+    id=31908,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt600to800 = qcd.add_process(
+    name="qcd_pt600to800",
+    id=31909,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt800to1000 = qcd.add_process(
+    name="qcd_pt800to1000",
+    id=31910,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt1000to1400 = qcd.add_process(
+    name="qcd_pt1000to1400",
+    id=31911,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt1400to1800 = qcd.add_process(
+    name="qcd_pt1400to1800",
+    id=31912,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt1800to2400 = qcd.add_process(
+    name="qcd_pt1800to2400",
+    id=31913,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt2400to3200 = qcd.add_process(
+    name="qcd_pt2400to3200",
+    id=31914,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+qcd_pt3200 = qcd.add_process(
+    name="qcd_pt3200",
+    id=31915,
+    xsecs={
+        13: Number(0.01),  # TODO
+    },
+)
+
+#
+# QCD pT-binned (muon enriched)
 #
 
 qcd_mu = qcd.add_process(
@@ -222,7 +407,7 @@ qcd_mu_pt1000 = qcd_mu.add_process(
 )
 
 #
-# QCD pt-binned (EM enriched)
+# QCD pT-binned (EM enriched)
 #
 
 qcd_em = qcd.add_process(
@@ -297,7 +482,7 @@ qcd_em_pt300toInf = qcd_em.add_process(
 )
 
 #
-# QCD pt-binned (bcToE)
+# QCD pT-binned (bcToE)
 #
 
 qcd_bctoe = qcd.add_process(
