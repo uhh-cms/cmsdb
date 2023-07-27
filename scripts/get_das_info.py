@@ -11,6 +11,27 @@ from argparse import ArgumentParser
 
 import law
 
+def convert_to_desired_structure(data_dict):
+
+    # Create placeholders for nameing scheme
+    name = "PLACEHOLDER"
+    process = "PLACEHOLDER"
+
+    # Create the function call as a string
+    function_call = (
+        f'can.add_dataset(\n'
+        f'    name={name!r},\n'
+        f'    id={data_dict["dataset_id"]},\n'
+        f'    processes=procs.{process},\n'
+        f'    keys=[\n'
+        f'        {data_dict["name"]!r}\n'
+        f'    ],\n'
+        f'    n_files={data_dict["nfiles"]},\n'
+        f'    n_events={data_dict["nevents"]}\n'
+        f')'
+    )
+
+    return function_call
 
 def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
     for das_string in das_strings:
@@ -41,6 +62,7 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
                 # print(dataset_name) # keep for debugging purpose
                 datasets.append(dataset_name)
 
+        datasets.sort() # TODO: Sort e.g. qcd from lower to higher HT bins
         for dataset in datasets:
             # call dasgoclient command
             cmd = f"dasgoclient -query='dataset={dataset}' -json"
@@ -63,8 +85,10 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
                 elif "filesummaries" in info["das"]["services"][0]:
                     info_of_interest["nfiles"] = dataset_info.get("nfiles", "")
                     info_of_interest["nevents"] = dataset_info.get("nevents", "")
-            print(json.dumps(info_of_interest, indent=4))
 
+            desired_output = convert_to_desired_structure(info_of_interest)
+            print(desired_output)
+            print()
 
 if __name__ == "__main__":
     parser = ArgumentParser()
