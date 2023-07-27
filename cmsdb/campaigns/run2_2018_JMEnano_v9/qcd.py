@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-QCD datasets for the 2017 data-taking campaign
+QCD datasets for the 2018 data-taking campaign
 """
 
 import cmsdb.processes as procs
