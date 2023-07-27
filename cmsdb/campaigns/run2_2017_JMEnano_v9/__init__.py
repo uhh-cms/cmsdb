@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Common, analysis independent definition of the 2018 data-taking campaign
+Common, analysis independent definition of the 2017 data-taking campaign
 with datasets at NanoAOD tier in version 9.
 See https://python-order.readthedocs.io/en/latest/quickstart.html#analysis-campaign-and-config.
 
