@@ -22,12 +22,12 @@ def convert_to_desired_structure(data_dict):
         f'can.add_dataset(\n'
         f'    name={name!r},\n'
         f'    id={data_dict["dataset_id"]},\n'
-        f'    processes=procs.{process},\n'
+        f'    processes=[procs.{process}],\n'
         f'    keys=[\n'
         f'        {data_dict["name"]!r}\n'
         f'    ],\n'
         f'    n_files={data_dict["nfiles"]},\n'
-        f'    n_events={data_dict["nevents"]}\n'
+        f'    n_events={data_dict["nevents"]},\n'
         f')'
     )
 
