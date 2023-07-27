@@ -17,15 +17,6 @@ def convert_to_desired_structure(data_dict):
     name = "PLACEHOLDER"
     process = "PLACEHOLDER"
 
-    # TODO: 'name' only adjusted to QCD from JMEnano
-    #        Add placeholder to prevent weird naming
-    if "QCD" in data_dict["name"] and "JMENano" in data_dict["name"]:
-        # Extracting the name and process from the original name
-        name_parts = data_dict["name"].split("/")[1].lower()
-        name = "_".join(name_parts.split("_")[:2])
-        process = name
-        name = name+"madgraph"
-
     # Create the function call as a string
     function_call = (
         f'can.add_dataset(\n'
