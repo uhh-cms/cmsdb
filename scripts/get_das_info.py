@@ -11,6 +11,7 @@ from argparse import ArgumentParser
 
 import law
 
+
 def convert_to_desired_structure(data_dict):
 
     # Create placeholders for nameing scheme
@@ -32,6 +33,7 @@ def convert_to_desired_structure(data_dict):
     )
 
     return function_call
+
 
 def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
     for das_string in das_strings:
@@ -59,10 +61,10 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
             infos = json.loads(out)
             for info in infos:
                 dataset_name = info.get("dataset", [])[0].get("name", "")
-                # print(dataset_name) # keep for debugging purpose
                 datasets.append(dataset_name)
 
-        datasets.sort() # TODO: Sort e.g. qcd from lower to higher HT bins
+        # TODO: Sort e.g. qcd from lower to higher HT bins
+        datasets.sort()
         for dataset in datasets:
             # call dasgoclient command
             cmd = f"dasgoclient -query='dataset={dataset}' -json"
@@ -89,6 +91,7 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
             desired_output = convert_to_desired_structure(info_of_interest)
             print(desired_output)
             print()
+
 
 if __name__ == "__main__":
     parser = ArgumentParser()
