@@ -18,18 +18,23 @@ def convert_to_desired_structure(data_dict):
     name = "PLACEHOLDER"
     process = "PLACEHOLDER"
 
+    var_id = data_dict["dataset_id"]
+    var_key = data_dict["name"]
+    var_file = data_dict["nfiles"]
+    var_events = data_dict["nevents"]
+
     # Create the function call as a string
     function_call = (
-        f'can.add_dataset(\n'
-        f'    name={name!r},\n'
-        f'    id={data_dict["dataset_id"]},\n'
-        f'    processes=[procs.{process}],\n'
-        f'    keys=[\n'
-        f'        {data_dict["name"]!r}\n'
-        f'    ],\n'
-        f'    n_files={data_dict["nfiles"]},\n'
-        f'    n_events={data_dict["nevents"]},\n'
-        f')'
+        f"can.add_dataset(\n"
+        f"    name=\"{name}\",\n"
+        f"    id={var_id},\n"
+        f"    processes=[procs.{process}],\n"
+        f"    keys=[\n"
+        f"        \"{var_key}\",\n"
+        f"    ],\n"
+        f"    n_files={var_file},\n"
+        f"    n_events={var_events},\n"
+        f")"
     )
 
     return function_call
