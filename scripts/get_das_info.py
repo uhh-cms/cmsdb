@@ -24,13 +24,14 @@ def convert_to_desired_structure(data_dict):
     var_events = data_dict["nevents"]
 
     # Create the function call as a string
+    # \042 ASCII code for quotation mark "
     function_call = (
         f"can.add_dataset(\n"
-        f"    name=\"{name}\",\n"
+        f"    name=\042{name}\042,\n"
         f"    id={var_id},\n"
         f"    processes=[procs.{process}],\n"
         f"    keys=[\n"
-        f"        \"{var_key}\",\n"
+        f"        \042{var_key}\042,\n"
         f"    ],\n"
         f"    n_files={var_file},\n"
         f"    n_events={var_events},\n"
