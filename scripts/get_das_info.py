@@ -12,33 +12,17 @@ from argparse import ArgumentParser
 import law
 
 
-def convert_to_desired_structure(data_dict):
-
-    # Create placeholders for nameing scheme
-    name = "PLACEHOLDER"
-    process = "PLACEHOLDER"
-
-    var_id = data_dict["dataset_id"]
-    var_key = data_dict["name"]
-    var_file = data_dict["nfiles"]
-    var_events = data_dict["nevents"]
-
-    # Create the function call as a string
-    # \042 ASCII code for quotation mark "
-    function_call = (
-        f"can.add_dataset(\n"
-        f"    name=\042{name}\042,\n"
-        f"    id={var_id},\n"
-        f"    processes=[procs.{process}],\n"
-        f"    keys=[\n"
-        f"        \042{var_key}\042,\n"
-        f"    ],\n"
-        f"    n_files={var_file},\n"
-        f"    n_events={var_events},\n"
-        f")"
-    )
-
-    return function_call
+def convert_to_desired_structure(data: dict) -> str:
+    return f"""cpn.add_dataset(
+    name="PLACEHOLDER",
+    id={data['dataset_id']}
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        {data['name']},  # noqa
+    ],
+    n_files={data['nfiles']},
+    n_events={data['nevents']},
+    )"""
 
 
 def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
@@ -69,8 +53,6 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
                 dataset_name = info.get("dataset", [])[0].get("name", "")
                 datasets.append(dataset_name)
 
-        # TODO: Sort e.g. qcd from lower to higher HT bins
-        datasets.sort()
         for dataset in datasets:
             # call dasgoclient command
             cmd = f"dasgoclient -query='dataset={dataset}' -json"
