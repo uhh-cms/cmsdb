@@ -22,7 +22,7 @@ def convert_to_desired_structure(data: dict) -> str:
     ],
     n_files={data['nfiles']},
     n_events={data['nevents']},
-    )"""
+)"""
 
 
 def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
