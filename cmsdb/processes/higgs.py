@@ -49,7 +49,7 @@ h_ggf_tautau = h_ggf.add_process(
 h_ggf_4l = h_ggf.add_process(
     name="h_ggf_4l",
     id=11110,
-    xsecs={13: h_ggf.get_xsec(13)*const.br_h.fourl}
+    xsecs={13: h_ggf.get_xsec(13) * const.br_h.fourl},
 )
 
 h_vbf = h.add_process(
