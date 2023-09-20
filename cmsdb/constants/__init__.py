@@ -37,6 +37,7 @@ br_h = DotDict(
     gg=Number(0.002270, {"br_h_gg": (0.0205j, 0.0209j)}),
     bb=Number(0.5809, {"br_h_bb": (0.0124j, 0.0126j)}),
     tt=Number(0.06256, {"br_h_tt": (0.0165j, 0.0163j)}),
+    fourl=Number(0.0002745, {}),
 )
 
 br_hh = DotDict(

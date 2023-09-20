@@ -6,7 +6,7 @@ Higgs process definitions.
 
 __all__ = [
     "h",
-    "h_ggf", "h_ggf_tautau",
+    "h_ggf", "h_ggf_tautau", "h_ggf_4l",
     "h_vbf", "h_vbf_tautau",
     "vh", "zh", "zh_tautau", "zh_llbb", "zh_qqbb", "wph", "wph_tautau", "wmh", "wmh_tautau", "ggzh",
     "ggzh_llbb", "tth", "tth_tautau", "tth_bb", "tth_nonbb",
@@ -37,13 +37,19 @@ h_ggf = h.add_process(
     name="h_ggf",
     id=11000,
     label=r"$H_{ggf}$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(48.58)},  # TODO
 )
 
 h_ggf_tautau = h_ggf.add_process(
     name="h_ggf_tautau",
     id=11100,
     xsecs={13: Number(0.1)},  # TODO
+)
+
+h_ggf_4l = h_ggf.add_process(
+    name="h_ggf_4l",
+    id=11110,
+    xsecs={13: h_ggf.get_xsec(13)*const.br_h.fourl}
 )
 
 h_vbf = h.add_process(
