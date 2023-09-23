@@ -9,6 +9,8 @@ Dataset ids are identical to those in DAS (https://cmsweb.cern.ch/das).
 """
 
 from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
+import cmsdb.processes as procs
+from order import DatasetInfo
 
 #
 # datasets
