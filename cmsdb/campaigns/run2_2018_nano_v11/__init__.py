@@ -19,7 +19,7 @@ campaign_run2_2018_nano_v11 = Campaign(
     id=220182,
     ecm=13,
     bx=25,
-    aux={"year": 2018, "tier": "NanoAOD", "version": "11"},
+    aux={"year": 2018, "tier": "NanoAOD", "version": 11, "preUL": False},
 )
 
 import cmsdb.campaigns.run2_2018_nano_v11.higgs  # noqa
