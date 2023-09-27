@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Higgs datasets for the 2017 data-taking campaign
+Higgs datasets for the 2018 data-taking campaign
 """
 
 import cmsdb.processes as procs
