@@ -7,9 +7,17 @@ Higgs process definitions.
 __all__ = [
     "h",
     "h_ggf", "h_ggf_tautau", "h_ggf_4l",
-    "h_vbf", "h_vbf_tautau",
-    "vh", "zh", "zh_tautau", "zh_llbb", "zh_qqbb", "wph", "wph_tautau", "wmh", "wmh_tautau", "ggzh",
-    "ggzh_llbb", "tth", "tth_tautau", "tth_bb", "tth_nonbb",
+    "h_vbf", "h_vbf_tautau", "h_vbf_4l",
+    "vh",
+    "zh", "zh_tautau", "zh_llbb", "zh_qqbb", "zh_4l",
+    "wph", "wph_tautau", "wph_4l",
+    "wmh", "wmh_tautau", "wmh_4l",
+    "ggzh", "ggzh_llbb",
+    "tth", "tth_tautau", "tth_bb", "tth_nonbb", "tth_4l",
+    "bbh", "bbh_4l",
+    "thq", "thq_4l",
+    "ggf", "ggf_4e", "ggf_4mu", "ggf_4tau",
+    "ggf_2e2mu", "ggf_2e2tau", "ggf_2mu2tau",
     "hh",
     "hh_ggf", "ggHH_kl_0_kt_1", "ggHH_kl_1_kt_1", "ggHH_kl_2p45_kt_1", "ggHH_kl_5_kt_1",
     "hh_vbf", "qqHH_CV_1_C2V_1_kl_1", "qqHH_CV_1_C2V_1_kl_0", "qqHH_CV_1_C2V_1_kl_2",
@@ -65,6 +73,12 @@ h_vbf_tautau = h_vbf.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+h_vbf_4l = h_vbf.add_process(
+    name="h_vbf_4l",
+    id=12110,
+    xsecs={13: h_vbf.get_xsec(13) * const.br_h.fourl},
+)
+
 vh = h.add_process(
     name="vh",
     id=13000,
@@ -100,6 +114,13 @@ zh_qqbb = zh.add_process(
     xsecs={13: zh.get_xsec(13) * const.br_h.bb * const.br_z.qq},
 )
 
+zh_4l = zh.add_process(
+    name="zh_4l",
+    id=13122,
+    label=rf"{zh.label}, $H \rightarrow Z \rightarrow 4\ell$",
+    xsecs={13: zh.get_xsec(13) * const.br_h.fourl},
+)
+
 wph = vh.add_process(
     name="wph",
     id=13200,
@@ -112,6 +133,12 @@ wph_tautau = wph.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+wph_4l = wph.add_process(
+    name="wph_4l",
+    id=13220,
+    xsecs={13: wph.get_xsec(13) * const.br_h.fourl},
+)
+
 wmh = vh.add_process(
     name="wmh",
     id=13300,
@@ -122,6 +149,12 @@ wmh_tautau = wmh.add_process(
     name="wmh_tautau",
     id=13310,
     xsecs={13: Number(0.1)},  # TODO
+)
+
+wmh_4l = wmh.add_process(
+    name="wmh_4l",
+    id=13320,
+    xsecs={13: wmh.get_xsec(13) * const.br_h.fourl},
 )
 
 ggzh = vh.add_process(
@@ -162,6 +195,41 @@ tth_nonbb = tth.add_process(
     id=15300,
     label=rf"{tth.label}, $H \rightarrow$ non-$bb$",
     xsecs={13: tth.get_xsec(13) * (1 - const.br_h.bb)},
+)
+
+tth_4l = tth.add_process(
+    name="tth_4l",
+    id=15400,
+    label=rf"{tth.label}, $H \rightarrow 4\ell$",
+    xsecs={13: tth.get_xsec(13) * const.br_h.fourl},
+)
+
+bbh = h.add_process(
+    name="bbh",
+    id=16000,
+    label=r"$b\bar{b}H$",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+bbh_4l = bbh.add_process(
+    name="bbh_4l",
+    id=16400,
+    label=rf"{bbh.label}, $H \rightarrow 4\ell$",
+    xsecs={13: bbh.get_xsec(13) * const.br_h.fourl},
+)
+
+thq = h.add_process(
+    name="thq",
+    id=17000,
+    label=r"tHq",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+thq_4l = thq.add_process(
+    name="thq_4l",
+    id=17400,
+    label=rf"{thq.label}, $H \rightarrow 4\ell$",
+    xsecs={13: thq.get_xsec(13) * const.br_h.fourl},
 )
 
 
@@ -349,5 +417,57 @@ graviton_hh_vbf = hh_vbf.add_process(
     name="graviton_hh_vbf",
     id=26000,
     label=r"Graviton $\rightarrow HH_{vbf}$",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+
+# -- electroweak backgrounds to ggF higgs production
+
+ggf = Process(
+    name="ggf",
+    id=30000,
+    label=r"ggF",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ggf_4e = ggf.add_process(
+    name=r"gg $\rightarrow$ 4e",
+    id=30100,
+    label=r"ggf_4e",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ggf_4mu = ggf.add_process(
+    name=r"gg $\rightarrow$ 4$\mu$",
+    id=30200,
+    label=r"ggf_4mu",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ggf_4tau = ggf.add_process(
+    name=r"gg $\rightarrow$ 4$\tau$",
+    id=30300,
+    label=r"ggf_4tau",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ggf_2e2mu = ggf.add_process(
+    name=r"gg $\rightarrow$ 2e2$\mu$",
+    id=30400,
+    label=r"ggf_2e2mu",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ggf_2e2tau = ggf.add_process(
+    name=r"gg $\rightarrow$ 2e2$\tau$",
+    id=30500,
+    label=r"ggf_2e2tau",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ggf_2mu2tau = ggf.add_process(
+    name=r"gg $\rightarrow$ 2$\mu$2$\tau$",
+    id=30600,
+    label=r"ggf_2mu2tau",
     xsecs={13: Number(0.1)},  # TODO
 )
