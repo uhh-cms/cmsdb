@@ -12,6 +12,31 @@ from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 # Drell-Yan
 #
 
+# inclusive
+cpn.add_dataset(
+    name="dy_lep_m50_amcatnlo",
+    id=14262316,
+    processes=[procs.dy_lep_m50],
+    keys=[
+        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=153,
+    n_events=195529774,
+)
+
+# inclusive with low mll
+cpn.add_dataset(
+    name="dy_lep_m10to50_amcatnlo",
+    id=14550981,
+    processes=[procs.dy_lep_m10to50],
+    keys=[
+        "/DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=41,
+    n_events=95894507,
+)
+
+
 # jet binned, madgraph
 cpn.add_dataset(
     name="dy_lep_m50_1j_madgraph",
@@ -382,6 +407,9 @@ cpn.add_dataset(
 )
 
 
+# -- ewk
+
+
 #
 # Di-boson
 #
@@ -430,6 +458,7 @@ cpn.add_dataset(
     n_files=109,
     n_events=99388000,
 )
+
 
 # WZ
 cpn.add_dataset(
