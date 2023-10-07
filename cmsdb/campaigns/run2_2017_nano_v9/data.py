@@ -89,6 +89,81 @@ cpn.add_dataset(
 
 
 #
+# DoubleEG
+#
+
+cpn.add_dataset(
+    name="data_double_egamma_b",
+    id=14232887
+    processes=[procs.data_double_egamma],
+    keys=[
+        "/DoubleEG/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=29,
+    n_events=58088760,
+    aux={
+        "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_egamma_c",
+    id=14233479
+    processes=[procs.data_double_egamma],
+    keys=[
+        "/DoubleEG/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=44,
+    n_events=65181125,
+    aux={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_egamma_d",
+    id=14233182
+    processes=[procs.data_double_egamma],
+    keys=[
+        "/DoubleEG/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=14,
+    n_events=25911432,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_egamma_e",
+    id=14233016
+    processes=[procs.data_double_egamma],
+    keys=[
+        "/DoubleEG/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=32,
+    n_events=56241190,
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_egamma_f",
+    id=14238185
+    processes=[procs.data_double_egamma],
+    keys=[
+        "/DoubleEG/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=54,
+    n_events=74265012,
+    aux={
+        "era": "F",
+    },
+)
+
+
+#
 # SingleMuon
 #
 
@@ -162,6 +237,156 @@ cpn.add_dataset(
     ],
     n_files=115,
     n_events=242140980,
+    aux={
+        "era": "F",
+    },
+)
+
+
+#
+# DoubleMuon
+#
+
+cpn.add_dataset(
+    name="data_double_mu_b",
+    id=14233059
+    processes=[procs.data_double_mu],
+    keys=[
+        "/DoubleMuon/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=8,
+    n_events=14501767,
+    aux={
+        "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_mu_c",
+    id=14233377
+    processes=[procs.data_double_mu],
+    keys=[
+        "/DoubleMuon/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=29,
+    n_events=49636525,
+    aux={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_mu_d",
+    id=14233223
+    processes=[procs.data_double_mu],
+    keys=[
+        "/DoubleMuon/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=16,
+    n_events=23075733,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_mu_e",
+    id=14237140
+    processes=[procs.data_double_mu],
+    keys=[
+        "/DoubleMuon/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=34,
+    n_events=51531477,
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_double_mu_f",
+    id=14237115
+    processes=[procs.data_double_mu],
+    keys=[
+        "/DoubleMuon/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=60,
+    n_events=79756560,
+    aux={
+        "era": "F",
+    },
+)
+
+
+#
+# MuonEG
+#
+
+cpn.add_dataset(
+    name="data_mu_egamma_b",
+    id=14230851
+    processes=[procs.data_mu_egamma],
+    keys=[
+        "/MuonEG/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=6,
+    n_events=4453465,
+    aux={
+        "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_egamma_c",
+    id=14224831
+    processes=[procs.data_mu_egamma],
+    keys=[
+        "/MuonEG/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=17,
+    n_events=15595214,
+    aux={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_egamma_d",
+    id=14225413
+    processes=[procs.data_mu_egamma],
+    keys=[
+        "/MuonEG/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=13,
+    n_events=9164365,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_egamma_e",
+    id=14232069
+    processes=[procs.data_mu_egamma],
+    keys=[
+        "/MuonEG/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=15,
+    n_events=19043421,
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_egamma_f",
+    id=14224832
+    processes=[procs.data_mu_egamma],
+    keys=[
+        "/MuonEG/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=23,
+    n_events=25776363,
     aux={
         "era": "F",
     },
