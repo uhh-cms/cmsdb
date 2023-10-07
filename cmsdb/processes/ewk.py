@@ -7,6 +7,7 @@ EWK-related process definitions.
 __all__ = [
     "dy",
     "dy_lep",
+    "dy_lep_m10to50",
     "dy_lep_m50", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
     "dy_lep_0j", "dy_lep_1j", "dy_lep_2j",
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
@@ -63,6 +64,12 @@ dy_lep_m50 = dy_lep.add_process(
         "scale": 0.02j,
         "pdf": 14.78,
     })},
+)
+
+dy_lep_m10to50 = dy_lep.add_process(
+    name="dy_lep_m10to50",
+    id=51601,
+    xsecs={13: Number(0.1)},  # TODO
 )
 
 # based on datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
