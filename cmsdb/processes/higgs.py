@@ -57,6 +57,7 @@ h_ggf_tautau = h_ggf.add_process(
 h_ggf_4l = h_ggf.add_process(
     name="h_ggf_4l",
     id=11110,
+    label=rf"{h_ggf.label} $\rightarrow$ 4$\ell$",
     xsecs={13: h_ggf.get_xsec(13) * const.br_h.fourl},
 )
 
@@ -76,6 +77,7 @@ h_vbf_tautau = h_vbf.add_process(
 h_vbf_4l = h_vbf.add_process(
     name="h_vbf_4l",
     id=12110,
+    label=rf"{h_vbf.label} $\rightarrow$ 4$\ell$",
     xsecs={13: h_vbf.get_xsec(13) * const.br_h.fourl},
 )
 
@@ -117,7 +119,7 @@ zh_qqbb = zh.add_process(
 zh_4l = zh.add_process(
     name="zh_4l",
     id=13122,
-    label=rf"{zh.label}, $H \rightarrow Z \rightarrow 4\ell$",
+    label=rf"{zh.label}, $H \rightarrow ZZ \rightarrow 4\ell$",
     xsecs={13: zh.get_xsec(13) * const.br_h.fourl},
 )
 
