@@ -95,6 +95,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_egamma_b",
     id=14232887,
+    is_data=True,
     processes=[procs.data_double_egamma],
     keys=[
         "/DoubleEG/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -109,6 +110,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_egamma_c",
     id=14233479,
+    is_data=True,
     processes=[procs.data_double_egamma],
     keys=[
         "/DoubleEG/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -123,6 +125,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_egamma_d",
     id=14233182,
+    is_data=True,
     processes=[procs.data_double_egamma],
     keys=[
         "/DoubleEG/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -137,6 +140,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_egamma_e",
     id=14233016,
+    is_data=True,
     processes=[procs.data_double_egamma],
     keys=[
         "/DoubleEG/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -151,6 +155,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_egamma_f",
     id=14238185,
+    is_data=True,
     processes=[procs.data_double_egamma],
     keys=[
         "/DoubleEG/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -250,6 +255,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_mu_b",
     id=14233059,
+    is_data=True,
     processes=[procs.data_double_mu],
     keys=[
         "/DoubleMuon/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -264,6 +270,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_mu_c",
     id=14233377,
+    is_data=True,
     processes=[procs.data_double_mu],
     keys=[
         "/DoubleMuon/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -278,6 +285,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_mu_d",
     id=14233223,
+    is_data=True,
     processes=[procs.data_double_mu],
     keys=[
         "/DoubleMuon/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -292,6 +300,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_mu_e",
     id=14237140,
+    is_data=True,
     processes=[procs.data_double_mu],
     keys=[
         "/DoubleMuon/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -306,6 +315,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_double_mu_f",
     id=14237115,
+    is_data=True,
     processes=[procs.data_double_mu],
     keys=[
         "/DoubleMuon/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -325,6 +335,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_mu_egamma_b",
     id=14230851,
+    is_data=True,
     processes=[procs.data_mu_egamma],
     keys=[
         "/MuonEG/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -339,6 +350,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_mu_egamma_c",
     id=14224831,
+    is_data=True,
     processes=[procs.data_mu_egamma],
     keys=[
         "/MuonEG/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -353,6 +365,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_mu_egamma_d",
     id=14225413,
+    is_data=True,
     processes=[procs.data_mu_egamma],
     keys=[
         "/MuonEG/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -367,6 +380,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_mu_egamma_e",
     id=14232069,
+    is_data=True,
     processes=[procs.data_mu_egamma],
     keys=[
         "/MuonEG/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
@@ -381,6 +395,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_mu_egamma_f",
     id=14224832,
+    is_data=True,
     processes=[procs.data_mu_egamma],
     keys=[
         "/MuonEG/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
