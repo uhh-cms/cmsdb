@@ -425,49 +425,49 @@ graviton_hh_vbf = hh_vbf.add_process(
 
 ggf = Process(
     name="ggf",
-    id=30000,
+    id=300000,
     label=r"ggF",
     xsecs={13: Number(0.1)},  # TODO
 )
 
 ggf_4e = ggf.add_process(
-    name=r"gg $\rightarrow$ 4e",
-    id=30100,
-    label=r"ggf_4e",
+    name=r"ggf_4e",
+    id=300100,
+    label=r"gg $\rightarrow$ 4e",
     xsecs={13: Number(0.1)},  # TODO
 )
 
 ggf_4mu = ggf.add_process(
-    name=r"gg $\rightarrow$ 4$\mu$",
-    id=30200,
-    label=r"ggf_4mu",
+    name=r"ggf_4mu",
+    id=300200,
+    label=r"gg $\rightarrow$ 4$\mu$",
     xsecs={13: Number(0.1)},  # TODO
 )
 
 ggf_4tau = ggf.add_process(
-    name=r"gg $\rightarrow$ 4$\tau$",
-    id=30300,
-    label=r"ggf_4tau",
+    name=r"ggf_4tau",
+    id=300300,
+    label=r"gg $\rightarrow$ 4$\tau$",
     xsecs={13: Number(0.1)},  # TODO
 )
 
 ggf_2e2mu = ggf.add_process(
-    name=r"gg $\rightarrow$ 2e2$\mu$",
-    id=30400,
-    label=r"ggf_2e2mu",
+    name=r"ggf_2e2mu",
+    id=300400,
+    label=r"gg $\rightarrow$ 2e2$\mu$",
     xsecs={13: Number(0.1)},  # TODO
 )
 
 ggf_2e2tau = ggf.add_process(
-    name=r"gg $\rightarrow$ 2e2$\tau$",
-    id=30500,
-    label=r"ggf_2e2tau",
+    name=r"ggf_2e2tau",
+    id=300500,
+    label=r"gg $\rightarrow$ 2e2$\tau$",
     xsecs={13: Number(0.1)},  # TODO
 )
 
 ggf_2mu2tau = ggf.add_process(
-    name=r"gg $\rightarrow$ 2$\mu$2$\tau$",
-    id=30600,
-    label=r"ggf_2mu2tau",
+    name=r"ggf_2mu2tau",
+    id=300600,
+    label=r"gg $\rightarrow$ 2$\mu$2$\tau$",
     xsecs={13: Number(0.1)},  # TODO
 )
