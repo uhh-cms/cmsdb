@@ -632,7 +632,7 @@ graviton_hh_ggf_bbww_m2500 = graviton_hh_ggf_bbww.add_process(
 )
 
 graviton_hh_ggf_bbww_m3000 = graviton_hh_ggf_bbww.add_process(
-    name="hh_ggf_graviton_bbww_m3000",
+    name="graviton_hh_ggf_bbww_m3000",
     id=24225,
     xsecs={13: Number(0.1)},  # TODO
 )
