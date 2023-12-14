@@ -342,7 +342,7 @@ z_nunu_ht2500 = z_nunu.add_process(
 z_qq = z.add_process(
     name="z_qq",
     id=6700,
-    label=rf"{z.label} ($Z \rightarrow q\bar{{{q}}}$)",
+    label=rf"{z.label} ($Z \rightarrow q\bar{{q}}$)",
     xsecs={13: Number(0.1)},  # TODO
 )
 
