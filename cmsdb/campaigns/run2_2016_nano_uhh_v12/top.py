@@ -5,6 +5,8 @@ Top quark datasets for the 2016 data-taking campaign with datasets at NanoAOD ti
 version 12, created with custom content at UHH.
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2016_nano_uhh_v12 import campaign_run2_2016_nano_uhh_v12 as cpn
 
@@ -457,4 +459,3 @@ cpn.add_dataset(
     n_files=3,
     n_events=2554000,
 )
-

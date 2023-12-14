@@ -20,16 +20,16 @@ __all__ = [
     "w_lnu_ht600To800", "w_lnu_ht800To1200", "w_lnu_ht1200To2500", "w_lnu_ht2500",
     "z",
     "z_nunu",
-    "z_nunu_ht100To200", "z_nunu_ht200To400", "z_nunu_ht400To600", "z_nunu_ht600To800", 
-    "z_nunu_ht800To1200", "z_nunu_ht1200To2500", "z_nunu_ht2500", 
+    "z_nunu_ht100To200", "z_nunu_ht200To400", "z_nunu_ht400To600", "z_nunu_ht600To800",
+    "z_nunu_ht800To1200", "z_nunu_ht1200To2500", "z_nunu_ht2500",
     "z_qq",
     "z_qq_ht200To400", "z_qq_ht400To600", "z_qq_ht600To800", "z_qq_ht800",
     "ewk",
     "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
     "vv",
-    "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll", "zz_qqqq", "zz_nunuqq", 
+    "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll", "zz_qqqq", "zz_nunuqq",
     "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnuqq",
-    "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq", 
+    "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
     "zzz", "wzz", "wwz", "www",
 ]
@@ -293,82 +293,81 @@ z_nunu = z.add_process(
     name="z_nunu",
     id=6600,
     label=rf"{z.label} ($Z \rightarrow \nu\nu$)",
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht100To200= z_nunu.add_process(
+z_nunu_ht100To200 = z_nunu.add_process(
     name="z_nunu_ht100To200",
     id=6610,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht200To400= z_nunu.add_process(
+z_nunu_ht200To400 = z_nunu.add_process(
     name="z_nunu_ht200To400",
     id=6620,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht400To600= z_nunu.add_process(
+z_nunu_ht400To600 = z_nunu.add_process(
     name="z_nunu_ht400To600",
     id=6630,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht600To800= z_nunu.add_process(
+z_nunu_ht600To800 = z_nunu.add_process(
     name="z_nunu_ht600To800",
     id=6640,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht800To1200= z_nunu.add_process(
+z_nunu_ht800To1200 = z_nunu.add_process(
     name="z_nunu_ht800To1200",
     id=6650,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht1200To2500= z_nunu.add_process(
+z_nunu_ht1200To2500 = z_nunu.add_process(
     name="z_nunu_ht1200To2500",
     id=6660,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht2500= z_nunu.add_process(
+z_nunu_ht2500 = z_nunu.add_process(
     name="z_nunu_ht2500",
     id=6670,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
-
 
 
 z_qq = z.add_process(
     name="z_qq",
     id=6700,
-    label=rf"{z.label} ($Z \rightarrow q\bar{q}$)",
-    xsecs={13:  Number(0.1)}, # TODO
+    label=rf"{z.label} ($Z \rightarrow q\bar{{{q}}}$)",
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_qq_ht200To400= z_qq.add_process(
+z_qq_ht200To400 = z_qq.add_process(
     name="z_qq_ht200To400",
     id=6710,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_qq_ht400To600= z_qq.add_process(
+z_qq_ht400To600 = z_qq.add_process(
     name="z_qq_ht400To600",
     id=6720,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_qq_ht600To800= z_qq.add_process(
+z_qq_ht600To800 = z_qq.add_process(
     name="z_qq_ht600To800",
     id=6730,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
-z_qq_ht800= z_qq.add_process(
+z_qq_ht800 = z_qq.add_process(
     name="z_qq_ht800",
     id=6740,
-    xsecs={13:  Number(0.1)}, # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
 
@@ -452,7 +451,6 @@ zz_nunuqq = zz.add_process(
     id=8150,
     xsecs={13: Number(0.1)},  # TODO
 )
-
 
 
 wz = vv.add_process(
