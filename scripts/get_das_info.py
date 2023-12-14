@@ -12,6 +12,19 @@ from argparse import ArgumentParser
 import law
 
 
+def convert_to_desired_structure(data: dict) -> str:
+    return f"""cpn.add_dataset(
+    name="PLACEHOLDER",
+    id={data['dataset_id']}
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        {data['name']},  # noqa
+    ],
+    n_files={data['nfiles']},
+    n_events={data['nevents']},
+)"""
+
+
 def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
     for das_string in das_strings:
         # set default keys of interest
@@ -38,7 +51,6 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
             infos = json.loads(out)
             for info in infos:
                 dataset_name = info.get("dataset", [])[0].get("name", "")
-                # print(dataset_name) # keep for debugging purpose
                 datasets.append(dataset_name)
 
         for dataset in datasets:
@@ -63,7 +75,10 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
                 elif "filesummaries" in info["das"]["services"][0]:
                     info_of_interest["nfiles"] = dataset_info.get("nfiles", "")
                     info_of_interest["nevents"] = dataset_info.get("nevents", "")
-            print(json.dumps(info_of_interest, indent=4))
+
+            desired_output = convert_to_desired_structure(info_of_interest)
+            print(desired_output)
+            print()
 
 
 if __name__ == "__main__":
