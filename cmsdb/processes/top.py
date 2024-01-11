@@ -33,8 +33,8 @@ import cmsdb.constants as const
 # ttbar
 # (ids up to 1999)
 #
-# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO?rev=16#Top_quark_pair_cross_sections_at
-# use mtop = 172.5 GeV, see
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO?rev=21#Recommendations_for_most_analyse
+# cross sections correspond to mtop = 172.5 GeV, see
 # https://twiki.cern.ch/twiki/bin/view/CMS/TopMonteCarloSystematics?rev=7#mtop
 #
 
@@ -44,10 +44,15 @@ tt = Process(
     label=r"$t\bar{t}$ + Jets",
     color=(205, 0, 9),
     xsecs={
-        13: Number(831.76, {
-            "scale": (19.77, 29.20),
-            "pdf": 35.06,
-            "mtop": (23.18, 22.45),
+        13: Number(833.9, {
+            "scale": (20.5, 30.0),
+            "pdf": 21.0,
+            "mtop": (23.2, 22.5),
+        }),
+        13.6: Number(923.6, {
+            "scale": (22.6, 33.4),
+            "pdf": 22.8,
+            "mtop": (25.4, 24.6),
         }),
     },
 )
@@ -58,7 +63,7 @@ tt_sl = tt.add_process(
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
     xsecs={
-        13: tt.get_xsec(13) * const.br_ww.sl,
+        ecm: tt.get_xsec(ecm) * const.br_ww.sl for ecm in tt.xsecs.keys()
     },
 )
 
@@ -68,7 +73,7 @@ tt_dl = tt.add_process(
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
     xsecs={
-        13: tt.get_xsec(13) * const.br_ww.dl,
+        ecm: tt.get_xsec(ecm) * const.br_ww.dl for ecm in tt.xsecs.keys()
     },
 )
 
@@ -78,7 +83,7 @@ tt_fh = tt.add_process(
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs={
-        13: tt.get_xsec(13) * const.br_ww.fh,
+        ecm: tt.get_xsec(ecm) * const.br_ww.fh for ecm in tt.xsecs.keys()
     },
 )
 
