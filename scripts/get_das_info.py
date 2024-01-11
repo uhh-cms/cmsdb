@@ -15,10 +15,10 @@ import law
 def convert_to_desired_structure(data: dict) -> str:
     return f"""cpn.add_dataset(
     name="PLACEHOLDER",
-    id={data['dataset_id']}
+    id={data['dataset_id']},
     processes=[procs.PLACEHOLDER],
     keys=[
-        {data['name']},  # noqa
+        "{data['name']}",  # noqa
     ],
     n_files={data['nfiles']},
     n_events={data['nevents']},
