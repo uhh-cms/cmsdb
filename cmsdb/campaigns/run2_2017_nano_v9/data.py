@@ -333,10 +333,10 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_pho_b",
+    name="data_gamma_b",
     id=14226103,
     is_data=True,
-    processes=[procs.data_pho],
+    processes=[procs.data_gamma],
     keys=[
         "/SinglePhoton/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -348,10 +348,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_pho_c",
+    name="data_gamma_c",
     id=14226292,
     is_data=True,
-    processes=[procs.data_pho],
+    processes=[procs.data_gamma],
     keys=[
         "/SinglePhoton/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -363,10 +363,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_pho_d",
+    name="data_gamma_d",
     id=14226047,
     is_data=True,
-    processes=[procs.data_pho],
+    processes=[procs.data_gamma],
     keys=[
         "/SinglePhoton/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -378,10 +378,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_pho_e",
+    name="data_gamma_e",
     id=14226326,
     is_data=True,
-    processes=[procs.data_pho],
+    processes=[procs.data_gamma],
     keys=[
         "/SinglePhoton/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -393,10 +393,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_pho_f",
+    name="data_gamma_f",
     id=14226332,
     is_data=True,
-    processes=[procs.data_pho],
+    processes=[procs.data_gamma],
     keys=[
         "/SinglePhoton/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
