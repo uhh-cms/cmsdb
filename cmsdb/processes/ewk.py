@@ -61,7 +61,7 @@ dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
     xsecs={
-        13: const.n_leps * Number(6077.22, {  # NOTE: is this correct to multiple this with n_leps?
+        13: Number(6077.22, {
             "integration": 1.49,
             "scale": 0.02j,
             "pdf": 14.78,
