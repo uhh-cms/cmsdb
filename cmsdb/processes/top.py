@@ -251,13 +251,13 @@ st_schannel = st.add_process(
 st_schannel_lep = st_schannel.add_process(
     name="st_schannel_lep",
     id=2301,
-    xsecs=multiply_xsecs(st_schannel, const.br_w_lep),
+    xsecs=multiply_xsecs(st_schannel, const.br_w.lep),
 )
 
 st_schannel_had = st_schannel.add_process(
     name="st_schannel_had",
     id=2302,
-    xsecs=multiply_xsecs(st_schannel, const.br_w_had),
+    xsecs=multiply_xsecs(st_schannel, const.br_w.had),
 )
 
 st_schannel_t = st_schannel.add_process(
@@ -275,13 +275,13 @@ st_schannel_t = st_schannel.add_process(
 st_schannel_t_lep = st_schannel_t.add_process(
     name="st_schannel_t_lep",
     id=2311,
-    xsecs=multiply_xsecs(st_schannel_t, const.br_w_lep),
+    xsecs=multiply_xsecs(st_schannel_t, const.br_w.lep),
 )
 
 st_schannel_t_had = st_schannel_t.add_process(
     name="st_schannel_t_had",
     id=2312,
-    xsecs=multiply_xsecs(st_schannel_t, const.br_w_had),
+    xsecs=multiply_xsecs(st_schannel_t, const.br_w.had),
 )
 
 st_schannel_tbar = st_schannel.add_process(
@@ -299,13 +299,13 @@ st_schannel_tbar = st_schannel.add_process(
 st_schannel_tbar_lep = st_schannel_tbar.add_process(
     name="st_schannel_tbar_lep",
     id=2321,
-    xsecs=multiply_xsecs(st_schannel_tbar, const.br_w_lep),
+    xsecs=multiply_xsecs(st_schannel_tbar, const.br_w.lep),
 )
 
 st_schannel_tbar_had = st_schannel_tbar.add_process(
     name="st_schannel_tbar_had",
     id=2322,
-    xsecs=multiply_xsecs(st_schannel_tbar, const.br_w_had),
+    xsecs=multiply_xsecs(st_schannel_tbar, const.br_w.had),
 )
 
 # define the combined single top cross section as the sum of the three channels
@@ -360,15 +360,13 @@ ttw = ttv.add_process(
             "scale": (26.1j, 16.2j),
             "pdf": 2.1j,
         }),
-        14: (
-            Number(0.429, {  # ttW+
-                "scale": (26.4j, 16.7j),
-                "pdf": 3.2j,
-            }) + Number(0.224, {  # ttW-
-                "scale": (26.4j, 16.4j),
-                "pdf": 3.6j,
-            }),
-        ),
+        14: Number(0.429, {  # ttW+
+            "scale": (26.4j, 16.7j),
+            "pdf": 3.2j,
+        }) + Number(0.224, {  # ttW-
+            "scale": (26.4j, 16.4j),
+            "pdf": 3.6j,
+        }),
     },
 )
 
@@ -379,13 +377,13 @@ for ecm in (13, 14):
 ttw_lnu = ttw.add_process(
     name="ttw_lnu",
     id=3210,
-    xsecs=multiply_xsecs(ttw, const.br_w_lep),
+    xsecs=multiply_xsecs(ttw, const.br_w.lep),
 )
 
 ttw_qq = ttw.add_process(
     name="ttw_qq",
     id=3220,
-    xsecs=multiply_xsecs(ttw, const.br_w_had),
+    xsecs=multiply_xsecs(ttw, const.br_w.had),
 )
 
 
