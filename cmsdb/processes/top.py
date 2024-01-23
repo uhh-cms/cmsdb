@@ -27,22 +27,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
-
-
-#
-# helper
-#
-
-def multiply_xsecs(base_proc: Process, factor: float):
-    """
-    Helper to multiply all cross sections of a base process *base_proc*
-    with some value *factor*
-    """
-    xsecs = {
-        ecm: base_proc.get_xsec(ecm) * factor
-        for ecm in base_proc.xsecs.keys()
-    }
-    return xsecs
+from cmsdb.util import multiply_xsecs
 
 
 #

@@ -49,9 +49,8 @@ __all__ = [
 
 from scinum import Number
 
-import order as od
-
 import cmsdb.constants as const
+from cmsdb.util import multiply_xsecs
 from cmsdb.processes.higgs import (
     hh_ggf, ggHH_kl_0_kt_1, ggHH_kl_1_kt_1, ggHH_kl_2p45_kt_1, ggHH_kl_5_kt_1,
     hh_vbf, qqHH_CV_1_C2V_1_kl_1, qqHH_CV_1_C2V_1_kl_0, qqHH_CV_1_C2V_1_kl_2,
@@ -65,18 +64,6 @@ from cmsdb.processes.higgs import (
 
 br_bbww_sl = const.br_hh.bbww * const.br_ww.sl
 br_bbww_dl = const.br_hh.bbww * const.br_ww.dl
-
-
-def multiply_xsecs(base_proc: od.Process, factor: float):
-    """
-    Helper to multiply all cross sections of a base process *base_proc*
-    with some value *factor*
-    """
-    xsecs = {
-        ecm: base_proc.get_xsec(ecm) * factor
-        for ecm in base_proc.xsecs.keys()
-    }
-    return xsecs
 
 
 #
