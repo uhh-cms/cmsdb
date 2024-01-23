@@ -319,8 +319,9 @@ st.set_xsec(
 # ttbar + 1 vector boson
 #
 
-# ttv cross section values based on: https://www.arxiv.org/abs/1812.08622
-# NOTE: Im not sure if I took the correct scale choice
+# ttv cross section values based on
+# 13 TeV: https://www.arxiv.org/abs/2001.03031
+# 14 TeV: https://www.arxiv.org/abs/1812.08622
 
 ttv = Process(
     name="ttv",
@@ -333,9 +334,9 @@ ttz = ttv.add_process(
     id=3100,
     label=f"{tt.label} + Z",
     xsecs={
-        13: Number(0.863, {
-            "scale": (8.5j, 9.9j),
-            "pdf": 3.2j,
+        13: Number(0.859, {
+            "scale": (8.6j, 9.5j),
+            "pdf": 2.3j,
         }),
         14: Number(1.045, {
             "scale": (8.8j, 9.9j),
@@ -354,41 +355,25 @@ ttw = ttv.add_process(
     name="ttw",
     id=3200,
     label=f"{tt.label} + W",
-)
-
-ttwplus = ttw.add_process(
-    name="ttwplus",
-    id=3201,
     xsecs={
-        13: Number(0.374, {
-            "scale": (25.3j, 16.4j),
-            "pdf": 3.2j,
+        13: Number(592, {
+            "scale": (26.1j, 16.2j),
+            "pdf": 2.1j,
         }),
-        14: Number(0.429, {
-            "scale": (26.4j, 16.7j),
-            "pdf": 3.2j,
-        }),
-    },
-)
-
-ttwminus = ttw.add_process(
-    name="ttwminus",
-    id=3202,
-    xsecs={
-        13: Number(0.192, {
-            "scale": (25.2j, 16.1j),
-            "pdf": 3.7j,
-        }),
-        14: Number(0.224, {
-            "scale": (26.4j, 16.4j),
-            "pdf": 3.6j,
-        }),
+        14: (
+            Number(0.429, {  # ttW+
+                "scale": (26.4j, 16.7j),
+                "pdf": 3.2j,
+            }) + Number(0.224, {  # ttW-
+                "scale": (26.4j, 16.4j),
+                "pdf": 3.6j,
+            }),
+        ),
     },
 )
 
 # set combined cross sections
 for ecm in (13, 14):
-    ttw.set_xsec(ecm, ttwplus.get_xsec(ecm) + ttwminus.get_xsec(ecm))
     ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
 
 ttw_lnu = ttw.add_process(
