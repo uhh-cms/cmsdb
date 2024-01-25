@@ -37,7 +37,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="THE_NAhh_ggf_bbtautau_node9_madgraphME",
+    name="hh_ggf_bbtautau_node9_madgraph",
     id=14359169,
     processes=[procs.hh_ggf_bbtautau_node9],
     keys=[
