@@ -10,13 +10,13 @@ from cmsdb.campaigns.run2_2016_HIPM_uhh_v12 import campaigns.run2_2016_HIPM_uhh_
 
 cpn.add_dataset(
     name="zzz_amcatnlo",
-    id=14215019,
+    id=  ### TO FIX ###
     processes=[procs.zzz],
     keys=[
-        "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1-v1/NANOAODSIM",  # noqa
+        "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=5302000,
+    n_files= ### TO FIX ###
+    n_events= ### TO FIX ###
 )
 
 cpn.add_dataset(
@@ -65,14 +65,13 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="www_amcatnlo",
-    id=14215136,
+    id= ### TO FIX ###
     processes=[procs.www],
     keys=[
-        "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1-v1/NANOAODSIM",  # noqa
+        "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=5190000,
-)
+    n_files= ### TO FIX ###
+    n_events= ### TO FIX ###
 
 cpn.add_dataset(
     name="www_ext_amcatnlo",
