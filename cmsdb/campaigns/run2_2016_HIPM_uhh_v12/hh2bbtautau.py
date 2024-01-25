@@ -28,7 +28,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="hh_ggf_bbtautau_node6_madgraph",
     id=14347302,
-    processes=[procs.hh_ggf_bbtautau_madgraph_node6],
+    processes=[procs.hh_ggf_bbtautau_node6],
     keys=[
         "/GluGluToHHTo2B2Tau_TuneCP5_PSWeights_node_6_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
     ],
