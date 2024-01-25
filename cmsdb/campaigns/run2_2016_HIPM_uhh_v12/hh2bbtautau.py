@@ -1243,7 +1243,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m1500_madgraph",
     id=14309566,
-    processes=[procs.graviton_hh_vbf_bbtautau_m1550],
+    processes=[procs.graviton_hh_vbf_bbtautau_m1500],
     keys=[
         "/VBFToBulkGravitonToHHTo2B2Tau_M-1500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
     ],
