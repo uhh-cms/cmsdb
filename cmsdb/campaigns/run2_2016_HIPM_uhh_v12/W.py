@@ -99,7 +99,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="w_lnu_ht200To400_madgraph",
     id=14212310,
-    processes=[procs.w_lnu_ht200To400_madgraph],
+    processes=[procs.w_lnu_ht200To400],
     keys=[
         "/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],

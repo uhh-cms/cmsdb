@@ -12,7 +12,7 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 cpn.add_dataset(
     name="ttww_madgraph",
     id=14214929,
-    processes=[procs.ttw],
+    processes=[procs.ttww],
     keys=[
         "/TTWW_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],

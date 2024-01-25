@@ -42,7 +42,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="THEdy_lep_2j_amcatnlo",
+    name="dy_lep_2j_amcatnlo",
     id=14212211,
     processes=[procs.dy_lep_2j],
     keys=[

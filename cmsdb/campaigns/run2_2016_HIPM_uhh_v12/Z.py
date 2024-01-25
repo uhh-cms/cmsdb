@@ -1,12 +1,12 @@
 # coding: utf-8
 
 '''
-Multi boson datasets from the 2016 data-taking campaign with datasets at NanoAOD tier in
+Z boson datasets from the 2016 data-taking campaign with datasets at NanoAOD tier in
 version 12, created with custom content at UHH.
 '''
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v11 as cpn
+from cmsdb.campaigns.run2_2016_HIMP_nano_uhh_v12 import campaign_run2_2016_HIMP_nano_uhh_v12 as cpn
 
 cpn.add_dataset(
     name="z_nunu_ht600To800_madgraph",
