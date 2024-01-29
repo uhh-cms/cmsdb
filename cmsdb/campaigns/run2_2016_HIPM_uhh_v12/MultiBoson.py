@@ -10,13 +10,13 @@ from cmsdb.campaigns.run2_2016_HIPM_uhh_v12 import campaigns.run2_2016_HIPM_uhh_
 
 cpn.add_dataset(
     name="zzz_amcatnlo",
-    id=  ### TO FIX ###
+    id=14213425,
     processes=[procs.zzz],
     keys=[
         "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],
-    n_files= ### TO FIX ###
-    n_events= ### TO FIX ###
+    n_files=1,
+    n_events=81000,
 )
 
 cpn.add_dataset(
