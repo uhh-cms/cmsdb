@@ -7,6 +7,15 @@ import importlib as imp
 
 
 class TestCampaign(unittest.TestCase):
+    @unittest.skipIf("TESTMODULE" not in os.environ, "TESTMODULE not set")
+    @unittest.skipIf(
+        os.environ["TESTMODULE"].strip("/").endswith("run2_2016_nano_v9"),
+        "Tests for module 'run2_2016_nano_v9' are not implemented yet.",
+    )
+    @unittest.skipIf(
+        os.environ["TESTMODULE"].strip("/").endswith("__pycache__"),
+        "'__pycache__' is not a valid module.",
+    )
     @classmethod
     def setUpClass(cls):
         modpath = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
@@ -28,12 +37,35 @@ class TestCampaign(unittest.TestCase):
             cls.submodules = {x: getattr(cls.module, x) for x in all_objects}
 
     def test_campaign_properties(self):
+        # loop through the different campaign objects in the current module
         for name, submodule in self.submodules.items():
+            # run the test for each submodule
             with self.subTest(f"testing object {name}"):
+                # make sure the campaign defines a basic set of properties
                 self.assertTrue(hasattr(submodule, "name"))
                 self.assertTrue(hasattr(submodule, "id"))
                 self.assertTrue(hasattr(submodule, "ecm"))
                 self.assertTrue(hasattr(submodule, "bx"))
+
+    def test_campaign_datasets(self):
+        # loop through the different campaign objects in the current module
+        for campaign_name, submodule in self.submodules.items():
+            # run the test for each submodule
+            with self.subTest(f"testing dataset of object '{campaign_name}'"):
+                # make sure the campaign defines datasets in the first place
+                self.assertTrue(hasattr(submodule, "datasets"))
+                datasets = submodule.datasets
+                # loop through the datasets and test their properties
+                for dataset_name, _, dataset in datasets.items():
+                    with self.subTest(f"testing dataset {campaign_name}/{dataset_name}"):
+                        # might want to implement naming conventions here,
+                        # e.g. the name of the dataset is the process name + suffix
+                        self.assertTrue(hasattr(dataset, "name"))
+                        self.assertTrue(hasattr(dataset, "id"))
+                        self.assertTrue(hasattr(dataset, "processes"))
+                        self.assertTrue(hasattr(dataset, "keys"))
+                        self.assertTrue(hasattr(dataset, "n_files"))
+                        self.assertTrue(hasattr(dataset, "n_events"))
 
 
 if __name__ == "__main__":
