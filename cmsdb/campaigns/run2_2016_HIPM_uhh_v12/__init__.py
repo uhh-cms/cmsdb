@@ -32,7 +32,7 @@ campaign_run2_2016_HIPM_uhh_v12 = Campaign(
         "identifier": "HIMP",
         "version": 12,
         "custom": {
-            "name": "run2_2016_HIMP_nano_uhh_v12",
+            "name": "run2_2016_HIPM_nano_uhh_v12",
             "creator": "uhh",
             "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/aalvesan/nano_uhh_v12_2016_HIPM/merged_2048.0MB",  # noqa
         },
