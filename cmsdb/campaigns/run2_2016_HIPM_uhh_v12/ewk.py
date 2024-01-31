@@ -214,15 +214,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="www_amcatnlo",
-    id= ### TO FIX ###
+    id=14213401,
     processes=[procs.www],
     keys=[
         "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],
-    n_files= ### TO FIX ###
-    n_events= ### TO FIX ###
+    n_files=1,
+    n_events=71000,
 )
-
 
 cpn.add_dataset(
     name="www_ext_amcatnlo",
