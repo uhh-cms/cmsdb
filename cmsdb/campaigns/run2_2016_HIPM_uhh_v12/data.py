@@ -11,36 +11,6 @@ from cmsdb.campaigns.run2_2016_HIPM_uhh_v12 import campaigns.run2_2016_HIPM_uhh_
 # SingleElectron
 
 cpn.add_dataset(
-    name="data_e_f",
-    id=14215954,
-    is_data=True,
-    processes=[procs.data_e],
-    keys=[
-        "/SingleElectron/Run2016F-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
-    ],
-    n_files=27,
-    n_events=61735326,
-    aux={
-        "era": "F",
-    },
-)
-
-cpn.add_dataset(
-    name="data_e_d",
-    id=14215730,
-    is_data=True,
-    processes=[procs.data_e],
-    keys=[
-        "/SingleElectron/Run2016D-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
-    ],
-    n_files=60,
-    n_events=148167727,
-    aux={
-        "era": "D",
-    },
-)
-
-cpn.add_dataset(
     name="data_e_b",
     id=14215862,
     is_data=True,
@@ -71,6 +41,21 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="data_e_d",
+    id=14215730,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/SingleElectron/Run2016D-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+    ],
+    n_files=60,
+    n_events=148167727,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
     name="data_e_e",
     id=14245922,
     is_data=True,
@@ -82,6 +67,21 @@ cpn.add_dataset(
     n_events=117269446,
     aux={
         "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_e_f",
+    id=14215954,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/SingleElectron/Run2016F-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+    ],
+    n_files=27,
+    n_events=61735326,
+    aux={
+        "era": "F",
     },
 )
 
@@ -244,21 +244,6 @@ cpn.add_dataset(
 # MET
 
 cpn.add_dataset(
-    name="data_met_c",
-    id=14216283,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/MET/Run2016C-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
-    ],
-    n_files=7,
-    n_events=17381222,
-    aux={
-        "era": "C",
-    },
-)
-
-cpn.add_dataset(
     name="data_met_b",
     id=14216190,
     is_data=True,
@@ -270,6 +255,21 @@ cpn.add_dataset(
     n_events=35987712,
     aux={
         "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_met_c",
+    id=14216283,
+    is_data=True,
+    processes=[procs.data_met],
+    keys=[
+        "/MET/Run2016C-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+    ],
+    n_files=7,
+    n_events=17381222,
+    aux={
+        "era": "C",
     },
 )
 
@@ -288,20 +288,6 @@ cpn.add_dataset(
     },
 )
 
-cpn.add_dataset(
-    name="data_met_f",
-    id=14216275,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/MET/Run2016F-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
-    ],
-    n_files=6,
-    n_events=11936579,
-    aux={
-        "era": "F",
-    },
-)
 
 cpn.add_dataset(
     name="data_met_e",
@@ -315,5 +301,20 @@ cpn.add_dataset(
     n_events=22348402,
     aux={
         "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_met_f",
+    id=14216275,
+    is_data=True,
+    processes=[procs.data_met],
+    keys=[
+        "/MET/Run2016F-HIPM_UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+    ],
+    n_files=6,
+    n_events=11936579,
+    aux={
+        "era": "F",
     },
 )
