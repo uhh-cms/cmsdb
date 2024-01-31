@@ -33,7 +33,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_1j_amcatnlo",
     id=14238480,
-    processes=[procs.dy_lep_0j],
+    processes=[procs.dy_lep_1j],
     keys=[
         "/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],
