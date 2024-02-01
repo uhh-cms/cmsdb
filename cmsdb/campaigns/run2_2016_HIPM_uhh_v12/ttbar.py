@@ -164,7 +164,7 @@ cpn.add_dataset(
                 "/TTTo2L2Nu_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
             ],
             n_files=16,
-            n_events=16848000,            
+            n_events=16848000,
         ),
         mtop_down=DatasetInfo(
             keys=[
@@ -287,7 +287,7 @@ cpn.add_dataset(
                 "/TTToSemiLeptonic_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
             ],
             n_files=53,
-            n_events=55256000
+            n_events=55256000,
         ),
     ),
 )
