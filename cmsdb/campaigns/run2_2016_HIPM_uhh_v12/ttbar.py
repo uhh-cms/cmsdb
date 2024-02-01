@@ -6,7 +6,8 @@ version 12, created with custom content at UHH.
 '''
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2016_HIPM_uhh_v12 import campaigns.run2_2016_HIPM_uhh_v12 as cpn
+from cmsdb.campaigns.run2_2016_HIPM_uhh_v12 import campaigns_run2_2016_HIPM_uhh_v12 as cpn
+from order import DatasetInfo
 
 # TTWW
 cpn.add_dataset(
