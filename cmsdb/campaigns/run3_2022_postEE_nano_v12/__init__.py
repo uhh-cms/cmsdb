@@ -39,3 +39,4 @@ import cmsdb.campaigns.run3_2022_postEE_nano_v12.data  # noqa
 import cmsdb.campaigns.run3_2022_postEE_nano_v12.top  # noqa
 import cmsdb.campaigns.run3_2022_postEE_nano_v12.ewk  # noqa
 import cmsdb.campaigns.run3_2022_postEE_nano_v12.qcd  # noqa
+import cmsdb.campaigns.run3_2022_postEE_nano_v12.hh2bbww  # noqa
