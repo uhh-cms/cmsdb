@@ -1,15 +1,15 @@
 # coding: utf-8
 
-'''
-HH -> bbtautau datasets from the 2016 data-taking campaign with datasets at NanoAOD tier in
-version 12, created with custom content at UHH.
-'''
+
+"""HH -> bbtautau datasets from the 2016 data-taking campaign with datasets at NanoAOD tier in
+version 12, created with custom content at UHH."""
+
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2016_HIPM_uhh_v12 import campaigns_run2_2016_HIPM_uhh_v12 as cpn
 
 #####
-# SM 
+# SM
 #####
 
 # ggF -> H -> HH
@@ -156,8 +156,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=216000,
 )
-
-
 
 ################
 # BSM scenarios

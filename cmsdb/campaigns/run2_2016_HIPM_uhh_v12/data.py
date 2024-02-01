@@ -1,9 +1,9 @@
 # coding: utf-8
 
-'''
-CMS datasets from the 2016 data-taking campaign with datasets at NanoAOD tier in
-version 12, created with custom content at UHH.
-'''
+
+"""CMS datasets from the 2016 data-taking campaign with datasets at NanoAOD tier in
+version 12, created with custom content at UHH."""
+
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2016_HIPM_uhh_v12 import campaigns_run2_2016_HIPM_uhh_v12 as cpn
