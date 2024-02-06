@@ -1,6 +1,6 @@
 # coding: utf-8
 
-# USAGE: python GetDASinfo.py -d das_string
+# USAGE: python get_das_info.py -d das_string
 # e.g. /JetHT/Run2018C-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD
 
 from __future__ import annotations
@@ -13,6 +13,9 @@ import law
 
 
 def convert_to_desired_structure(data: dict) -> str:
+    """
+    Function that converts dataset info into one order Dataset per query
+    """
     return f"""cpn.add_dataset(
     name="PLACEHOLDER",
     id={data['dataset_id']},
@@ -22,10 +25,105 @@ def convert_to_desired_structure(data: dict) -> str:
     ],
     n_files={data['nfiles']},
     n_events={data['nevents']},
+)
+"""
+
+
+identifier_map = {
+    "_TuneCP5Down_": "tune_down",
+    "_TuneCP5Up_": "tune_up",
+    "_TuneCP5CR1_": "cr_1",
+    "_TuneCP5CR2_": "cr_2",
+    "_Hdamp-158_": "hdamp_down",
+    "_Hdamp-418_": "hdamp_up",
+    "_MT-171p5_": "mtop_down",
+    "_MT-173p5_": "mtop_up",
+    # dataset types that I have no use for but want to keep anyways
+    "_MT-166p5_": "xxx",
+    "_MT-169p5_": "xxx",
+    "_MT-175p5_": "xxx",
+    "_MT-178p5_": "xxx",
+    "_DS_TuneCP5_": "xxx",
+    "_TuneCP5_ERDOn_": "xxx",
+    "_TuneCH3_": "xxx",
+    # nominal entry as the last one such that other dataset types get priority
+    "_TuneCP5_": "nominal",
+}
+
+
+def convert_for_top_queries(data: dict) -> str:
+    """
+    Function that converts dataset info into either an order Datset for nominal datasets
+    or to a DatasetInfo for variations of datasets such as tune or mtop.
+
+    Exemplary usage:
+    python get_das_info.py -f convert_for_top_queries -d "/TTtoLNu2Q*/Run3Summer22EENanoAODv12-130X_*/NANOAODSIM"
+    """
+    dataset_type = None
+
+    for identifier in identifier_map:
+        if identifier in data["name"]:
+            dataset_type = identifier_map[identifier]
+            break
+
+    if not dataset_type:
+        return f"""
+        #####
+        #####ERROR! Did not manage to determine type of dataset {data['name']}
+        #####
+        """
+
+    if dataset_type == "nominal":
+        return f"""cpn.add_dataset(
+    name="PLACEHOLDER",
+    id={data['dataset_id']},
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "{data['name']}",  # noqa
+            ],
+            n_files={data['nfiles']},
+            n_events={data['nevents']},
+        ),
+    ),
 )"""
+    elif dataset_type == "xxx":
+        # comment out this dataset
+        return f"""        # {dataset_type}=DatasetInfo(
+        #     keys=[
+        #         "{data['name']}",  # noqa
+        #     ],
+        #     n_files={data['nfiles']},
+        #     n_events={data['nevents']},
+        # ),"""
+    else:
+        # some known variation of the dataset
+        return f"""        {dataset_type}=DatasetInfo(
+            keys=[
+                "{data['name']}",  # noqa
+            ],
+            n_files={data['nfiles']},
+            n_events={data['nevents']},
+        ),"""
 
 
-def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None):
+convert_functions = {
+    "convert_to_desired_structure": convert_to_desired_structure,
+    "convert_for_top_queries": convert_for_top_queries,
+}
+
+
+def print_das_info(
+    das_strings: list[str],
+    keys_of_interest: tuple | None = None,
+    convert_function_str: str | None = None,
+):
+    # get the requested convert function
+    if not convert_function_str:
+        convert_function_str = "convert_to_desired_structure"
+    convert_function = convert_functions[convert_function_str]
+
     for das_string in das_strings:
         # set default keys of interest
         keys_of_interest = keys_of_interest or (
@@ -76,13 +174,13 @@ def print_das_info(das_strings: list[str], keys_of_interest: tuple | None = None
                     info_of_interest["nfiles"] = dataset_info.get("nfiles", "")
                     info_of_interest["nevents"] = dataset_info.get("nevents", "")
 
-            desired_output = convert_to_desired_structure(info_of_interest)
+            desired_output = convert_function(info_of_interest)
             print(desired_output)
-            print()
 
 
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("-d", "--dataset", dest="dataset", nargs="+", help="das name")
+    parser.add_argument("-f", "--function", dest="function", help="function that converts info into code")
     args = parser.parse_args()
-    print_das_info(args.dataset)
+    print_das_info(args.dataset, convert_function_str=args.function)
