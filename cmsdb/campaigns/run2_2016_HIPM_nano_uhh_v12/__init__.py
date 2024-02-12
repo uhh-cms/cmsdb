@@ -11,7 +11,7 @@ Since this is a custom production, neither can LFNs be obtained through DAS (or 
 can PFNs be located through the usual, central redirectors.
 
 They are centrally saved at the dCache instance at DESY (e.g. dcache-door-cms04.desy.de) under
-/pnfs/desy.de/cms/tier2/store/user/alvesan/nano_uhh_v12_2016_HIPM.
+/pnfs/desy.de/cms/tier2/store/user/aalvesan/nano_uhh_v12_2016_HIPM.
 """
 
 from order import Campaign
