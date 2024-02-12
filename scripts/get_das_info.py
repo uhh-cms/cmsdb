@@ -12,7 +12,7 @@ from argparse import ArgumentParser
 import law
 
 
-def convert_to_desired_structure(data: dict) -> str:
+def convert_default(data: dict) -> str:
     """
     Function that converts dataset info into one order Dataset per query
     """
@@ -39,25 +39,27 @@ identifier_map = {
     "_MT-171p5_": "mtop_down",
     "_MT-173p5_": "mtop_up",
     # dataset types that I have no use for but want to keep anyways
-    "_MT-166p5_": "xxx",
-    "_MT-169p5_": "xxx",
-    "_MT-175p5_": "xxx",
-    "_MT-178p5_": "xxx",
-    "_DS_TuneCP5_": "xxx",
-    "_TuneCP5_ERDOn_": "xxx",
-    "_TuneCH3_": "xxx",
+    "_MT-166p5_": "comment",
+    "_MT-169p5_": "comment",
+    "_MT-175p5_": "comment",
+    "_MT-178p5_": "comment",
+    "_DS_TuneCP5_": "comment",
+    "_TuneCP5_ERDOn_": "comment",
+    "_TuneCH3_": "comment",
+    # dataset types that I want to skip completely
+    # "example_key": "ignore",
     # nominal entry as the last one such that other dataset types get priority
     "_TuneCP5_": "nominal",
 }
 
 
-def convert_for_top_queries(data: dict) -> str:
+def convert_top(data: dict) -> str:
     """
     Function that converts dataset info into either an order Datset for nominal datasets
     or to a DatasetInfo for variations of datasets such as tune or mtop.
 
     Exemplary usage:
-    python get_das_info.py -f convert_for_top_queries -d "/TTtoLNu2Q*/Run3Summer22EENanoAODv12-130X_*/NANOAODSIM"
+    python get_das_info.py -c convert_top -d "/TTtoLNu2Q*/Run3Summer22EENanoAODv12-130X_*/NANOAODSIM"
     """
     dataset_type = None
 
@@ -88,15 +90,17 @@ def convert_for_top_queries(data: dict) -> str:
         ),
     ),
 )"""
-    elif dataset_type == "xxx":
+    elif dataset_type == "comment":
         # comment out this dataset
         return f"""        # {dataset_type}=DatasetInfo(
         #     keys=[
-        #         "{data['name']}",  # noqa
+        #         "xxx",  # noqa
         #     ],
         #     n_files={data['nfiles']},
         #     n_events={data['nevents']},
         # ),"""
+    elif dataset_type == "ignore":
+        return ""
     else:
         # some known variation of the dataset
         return f"""        {dataset_type}=DatasetInfo(
@@ -109,8 +113,8 @@ def convert_for_top_queries(data: dict) -> str:
 
 
 convert_functions = {
-    "convert_to_desired_structure": convert_to_desired_structure,
-    "convert_for_top_queries": convert_for_top_queries,
+    "convert_default": convert_default,
+    "convert_top": convert_top,
 }
 
 
@@ -121,7 +125,7 @@ def print_das_info(
 ):
     # get the requested convert function
     if not convert_function_str:
-        convert_function_str = "convert_to_desired_structure"
+        convert_function_str = "convert_default"
     convert_function = convert_functions[convert_function_str]
 
     for das_string in das_strings:
@@ -181,6 +185,6 @@ def print_das_info(
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("-d", "--dataset", dest="dataset", nargs="+", help="das name")
-    parser.add_argument("-f", "--function", dest="function", help="function that converts info into code")
+    parser.add_argument("-c", "--convert", dest="convert", help="function that converts info into code")
     args = parser.parse_args()
     print_das_info(args.dataset, convert_function_str=args.function)
