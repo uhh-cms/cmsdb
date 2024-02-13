@@ -113,8 +113,8 @@ def convert_top(data: dict) -> str:
 
 
 convert_functions = {
-    "convert_default": convert_default,
-    "convert_top": convert_top,
+    "default": convert_default,
+    "top": convert_top,
 }
 
 
@@ -188,7 +188,7 @@ if __name__ == "__main__":
         "--convert",
         dest="convert",
         help="function that converts info into code",
-        default="convert_default",
+        default="default",
         choices=list(convert_functions),
     )
     args = parser.parse_args()
