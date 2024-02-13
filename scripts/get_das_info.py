@@ -124,8 +124,6 @@ def print_das_info(
     convert_function_str: str | None = None,
 ):
     # get the requested convert function
-    if not convert_function_str:
-        convert_function_str = "convert_default"
     convert_function = convert_functions[convert_function_str]
 
     for das_string in das_strings:
@@ -185,6 +183,13 @@ def print_das_info(
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("-d", "--dataset", dest="dataset", nargs="+", help="das name")
-    parser.add_argument("-c", "--convert", dest="convert", help="function that converts info into code")
+    parser.add_argument(
+        "-c",
+        "--convert",
+        dest="convert",
+        help="function that converts info into code",
+        default="convert_default",
+        choices=list(convert_functions),
+    )
     args = parser.parse_args()
-    print_das_info(args.dataset, convert_function_str=args.function)
+    print_das_info(args.dataset, convert_function_str=args.convert)
