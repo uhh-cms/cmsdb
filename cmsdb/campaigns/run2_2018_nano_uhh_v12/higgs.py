@@ -84,16 +84,16 @@ cpn.add_dataset(
 #     n_events=4958035,
 # )
 
-# cpn.add_dataset(
-#     name="wph_tautau_powheg",
-#     id=14198100,
-#     processes=[procs.wph_tautau],
-#     keys=[
-#         "/WplusHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
-#     ],
-#     n_files=4,
-#     n_events=3985990,
-# )
+cpn.add_dataset(
+    name="wph_tautau_powheg",
+    id=14198104,
+    processes=[procs.wph_tautau],
+    keys=[
+        "/WplusHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=3972496,
+)
 
 cpn.add_dataset(
     name="wmh_tautau_powheg",
@@ -132,16 +132,17 @@ cpn.add_dataset(
     n_events=21621000,
 )
 
-# cpn.add_dataset(
-#     name="tth_bb_powheg",
-#     id=14260234,
-#     processes=[procs.tth_bb],
-#     keys=[
-#         "/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
-#     ],
-#     n_files=13,
-#     n_events=7825000,
-# )
+
+cpn.add_dataset(
+    name="tth_bb_powheg",
+    id=14196265,
+    processes=[procs.tth_bb],
+    keys=[
+        "/ttHJetTobb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=14,
+    n_events=10020658,
+)
 
 
 cpn.add_dataset(
@@ -154,3 +155,4 @@ cpn.add_dataset(
     n_files=10,
     n_events=7328993,
 )
+
