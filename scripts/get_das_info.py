@@ -59,7 +59,7 @@ def convert_top(data: dict) -> str:
     or to a DatasetInfo for variations of datasets such as tune or mtop.
 
     Exemplary usage:
-    python get_das_info.py -c convert_top -d "/TTtoLNu2Q*/Run3Summer22EENanoAODv12-130X_*/NANOAODSIM"
+    python get_das_info.py -c top -d "/TTtoLNu2Q*/Run3Summer22EENanoAODv12-130X_*/NANOAODSIM"
     """
     dataset_type = None
 
@@ -92,9 +92,9 @@ def convert_top(data: dict) -> str:
 )"""
     elif dataset_type == "comment":
         # comment out this dataset
-        return f"""        # {dataset_type}=DatasetInfo(
+        return f"""        # {identifier}=DatasetInfo(
         #     keys=[
-        #         "xxx",  # noqa
+        #         "{data['name']}",  # noqa
         #     ],
         #     n_files={data['nfiles']},
         #     n_events={data['nevents']},
