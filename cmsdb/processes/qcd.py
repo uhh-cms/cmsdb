@@ -180,7 +180,7 @@ qcd_ht2000 = qcd.add_process(
 #
 
 # 13 TeV cross sections taken from:
-# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v8, p. 11)
+# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2021/015 (v7, p. 11)
 
 qcd_pt15to30 = qcd.add_process(
     name="qcd_pt15to30",
