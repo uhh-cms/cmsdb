@@ -46,10 +46,10 @@ h_ggf = h.add_process(
     label=r"$H_{ggf}$",
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: Number(56.11, {
-            "pdf": 0.021j,
+        13.6: Number(52.23, {  # value for mH=125 GeV
+            "pdf": 0.032j,
             "th": (0.046j, 0.067j),
-            "th_gaussian": 0.040,
+            "th_gaussian": 0.039,
         }),  # TODO: only preliminary
     },
 )
@@ -66,7 +66,7 @@ h_vbf = h.add_process(
     label=r"$H_{vbf}$",
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: Number(4.075, {
+        13.6: Number(4.078, {  # value for mH=125 GeV
             "scale": (0.005j, 0.003j),
             "pdf": 0.021j,
         }),  # TODO: only preliminary
@@ -92,7 +92,7 @@ zh = vh.add_process(
     label="ZH",
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: Number(0.9439, {
+        13.6: Number(0.9439, {  # value for mH=125 GeV
             "scale": (0.037j, 0.032j),
             "pdf": 0.016j,
         }),  # TODO: only preliminary
@@ -125,7 +125,7 @@ wph = vh.add_process(
     id=13200,
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: Number(0.88696, {
+        13.6: Number(0.8889, {  # value for mH=125 GeV
             "scale": (0.004j, 0.007j),
             "pdf": 0.018j,
         }),  # TODO: only preliminary
@@ -143,7 +143,7 @@ wmh = vh.add_process(
     id=13300,
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: Number(0.566359, {
+        13.6: Number(0.5677, {  # value for mH=125 GeV
             "scale": (0.004j, 0.007j),
             "pdf": 0.018j,
         }),  # TODO: only preliminary
@@ -173,7 +173,7 @@ tth = h.add_process(
     label=r"$t\bar{t}H$",
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: Number(5.688, {
+        13.6: Number(0.5700, {  # value for mH=125 GeV
             "scale": (0.060j, 0.093j),
             "pdf": 0.035j,
         }),  # TODO: only preliminary
@@ -246,7 +246,7 @@ ggHH_kl_1_kt_1 = hh_ggf.add_process(
             "pdf": 0.03j,
             "mtop": (0.04j, 0.18j),
         }),
-        13.6: Number(0.03443, {
+        13.6: Number(0.03443, {  # value for mH=125 GeV
             "scale": (0.021j, 0.049j),
             "pdf": 0.03j,
             "mtop": (0.04j, 0.18j),

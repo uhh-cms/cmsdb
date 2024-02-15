@@ -68,7 +68,7 @@ dy_lep_m50 = dy_lep.add_process(
         }),
         13.6: const.n_leps * Number(2091.7, {
             "scale": (0.008j, 0.013j),
-            "pdf": 1.0j,
+            "pdf": 0.01j,
         }),
     },
 )
