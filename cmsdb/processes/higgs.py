@@ -28,7 +28,9 @@ import cmsdb.constants as const
 #
 
 # preliminary Higgs cross sections at 13.6 TeV taken from here:
-# https://cds.cern.ch/record/2886099
+# https://cds.cern.ch/record/2886099/files/LHCHWG-2024-001.pdf?version=2
+# Twiki of (currently outdated) 13.6 TeV Higgs cross sections (might be a useful source when updated):
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap?rev=5
 # TODO: h xsecs at 13 TeV
 
 h = Process(

@@ -55,7 +55,7 @@ dy_lep = dy.add_process(
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=27
 # and for 13.6 TeV, based on:
-# https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
@@ -218,7 +218,7 @@ w = Process(
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=27
 # and for 13.6 TeV, based on:
-# https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
 wm_lnu_xs_13p6 = const.n_leps * Number(9009.5, {
     "scale": (0.014j, 0.012j),
