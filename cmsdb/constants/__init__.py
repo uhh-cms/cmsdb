@@ -26,7 +26,7 @@ br_w["lep"] = 1 - br_w.had
 br_ww = DotDict(
     fh=br_w.had ** 2,
     dl=br_w.lep ** 2,
-    sl=2 * ((br_w.had * Correlation(br_w_had=-1)) * br_w.lep),  # what does this correlation term do?
+    sl=2 * ((br_w.had * Correlation(br_w_had=-1)) * br_w.lep),  # use correlation to reduce error on br
 )
 
 br_z = DotDict(
