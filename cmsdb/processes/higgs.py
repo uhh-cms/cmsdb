@@ -27,7 +27,7 @@ import cmsdb.constants as const
 # Single Higgs
 #
 
-# Source: xsecs were given in fb, uncertainties in %, values are taken fro m_H = 125 GeV
+# Source: xsecs were given in pb, uncertainties in %, values are taken fro m_H = 125 GeV
 # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV?rev=24
 
 h = Process(
@@ -304,6 +304,8 @@ ggHH_kl_5_kt_1 = hh_ggf.add_process(
     },
 )
 
+# Source: xsecs were given in fb but are converted to pb,
+# uncertainties in %, values are taken for m_H = 125 GeV
 # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?rev=90#HHjj_VBF
 
 hh_vbf = hh.add_process(
