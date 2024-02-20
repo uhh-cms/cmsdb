@@ -140,7 +140,7 @@ wph_tautau = wph.add_process(
     name="wph_tautau",
     id=13210,
     xsecs={
-        13: wph.get_xsec(13) * const.br_h.tt
+        13: wph.get_xsec(13) * const.br_h.tt,
     },
 )
 
@@ -179,7 +179,7 @@ ggzh_llbb = ggzh.add_process(
     name="ggzh_llbb",
     id=14100,
     xsecs={
-        13: Number(ggzh.get_xsec(13) * const.br_h.bb * const.br_z.clep)
+        13: Number(ggzh.get_xsec(13) * const.br_h.bb * const.br_z.clep),
     },  # TODO
 )
 
