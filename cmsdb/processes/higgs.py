@@ -54,7 +54,7 @@ h_ggf_tautau = h_ggf.add_process(
     name="h_ggf_tautau",
     id=11100,
     xsecs={
-        13: h_ggf.xsecs["13"] * const.br_h.tt,
+        13: h_ggf.xsecs[13] * const.br_h.tt,
     },
 )
 
@@ -74,7 +74,7 @@ h_vbf_tautau = h_vbf.add_process(
     name="h_vbf_tautau",
     id=12100,
     xsecs={
-        13: h_vbf.xsecs["13"] * const.br_h.tt,
+        13: h_vbf.xsecs[13] * const.br_h.tt,
     },
 )
 
