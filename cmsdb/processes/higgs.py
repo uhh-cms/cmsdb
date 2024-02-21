@@ -179,7 +179,7 @@ ggzh_llbb = ggzh.add_process(
     name="ggzh_llbb",
     id=14100,
     xsecs={
-        13: Number(ggzh.get_xsec(13) * const.br_h.bb * const.br_z.clep),
+        13: ggzh.get_xsec(13) * const.br_h.bb * const.br_z.clep,
     },  # TODO
 )
 
