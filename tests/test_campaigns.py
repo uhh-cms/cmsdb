@@ -63,6 +63,7 @@ class TestCampaign(unittest.TestCase):
                         self.assertTrue(hasattr(dataset, "name"))
                         self.assertTrue(hasattr(dataset, "id"))
                         self.assertTrue(hasattr(dataset, "processes"))
+                        self.assertTrue(len(dataset.processes) > 0)
                         self.assertTrue(hasattr(dataset, "keys"))
                         self.assertTrue(hasattr(dataset, "n_files"))
                         self.assertTrue(hasattr(dataset, "n_events"))
