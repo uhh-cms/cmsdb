@@ -61,12 +61,12 @@ __all__ = [
 ]
 
 from scinum import Number
+import cmsdb.constants as const
 
 from cmsdb.processes.higgs import (
     hh_ggf, radion_hh_ggf, graviton_hh_ggf, radion_hh_vbf, graviton_hh_vbf,
 )
-
-
+from cmsdb.scripts.xsec_bsm_nodes import calc_xsec_bsm_node
 #
 # ggF -> H -> HH
 #
@@ -75,91 +75,115 @@ hh_ggf_bbtautau = hh_ggf.add_process(
     name="hh_ggf_bbtautau",
     id=21100,
     label=r"$HH_{ggf} \rightarrow bb\tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(hh_ggf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
 )
 
 hh_ggf_bbtautau_node1 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node1",
     id=21101,
     label=f"{hh_ggf_bbtautau.label} (node 1)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=1),
+    },
 )
 
 hh_ggf_bbtautau_node2 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node2",
     id=21102,
     label=f"{hh_ggf_bbtautau.label} (node 2)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=2),
+    },
 )
 
 hh_ggf_bbtautau_node3 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node3",
     id=21103,
     label=f"{hh_ggf_bbtautau.label} (node 3)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=3),
+    },
 )
 
 hh_ggf_bbtautau_node4 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node4",
     id=21104,
     label=f"{hh_ggf_bbtautau.label} (node 4)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=4),
+    },
 )
 
 hh_ggf_bbtautau_node5 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node5",
     id=21105,
     label=f"{hh_ggf_bbtautau.label} (node 5)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=5),
+    },
 )
 
 hh_ggf_bbtautau_node6 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node6",
     id=21106,
     label=f"{hh_ggf_bbtautau.label} (node 6)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=6),
+    },
 )
 
 hh_ggf_bbtautau_node7 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node7",
     id=21107,
     label=f"{hh_ggf_bbtautau.label} (node 7)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=7),
+    },
 )
 
 hh_ggf_bbtautau_node8 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node8",
     id=21108,
     label=f"{hh_ggf_bbtautau.label} (node 8)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=8),
+    },
 )
 
 hh_ggf_bbtautau_node9 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node9",
     id=21109,
     label=f"{hh_ggf_bbtautau.label} (node 9)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=9),
+    },
 )
 
 hh_ggf_bbtautau_node10 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node10",
     id=21110,
     label=f"{hh_ggf_bbtautau.label} (node 10)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=10),
+    },
 )
 
 hh_ggf_bbtautau_node11 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node11",
     id=21111,
     label=f"{hh_ggf_bbtautau.label} (node 11)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=11),
+    },
 )
 
 hh_ggf_bbtautau_node12 = hh_ggf.add_process(
     name="hh_ggf_bbtautau_node12",
     id=21112,
     label=f"{hh_ggf_bbtautau.label} (node 12)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: calc_xsec_bsm_node(13, hh_ggf_bbtautau.get_xsec(13), node_number=12),
+    },
 )
 
 
@@ -171,7 +195,7 @@ radion_hh_ggf_bbtautau = radion_hh_ggf.add_process(
     name="radion_hh_ggf_bbtautau",
     id=23100,
     label=rf"{radion_hh_ggf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(radion_hh_ggf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
 )
 
 radion_hh_ggf_bbtautau_m250 = radion_hh_ggf_bbtautau.add_process(
@@ -333,7 +357,7 @@ graviton_hh_ggf_bbtautau = graviton_hh_ggf.add_process(
     name="graviton_hh_ggf_bbtautau",
     id=24100,
     label=rf"{graviton_hh_ggf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(graviton_hh_ggf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
 )
 
 graviton_hh_ggf_bbtautau_m250 = graviton_hh_ggf_bbtautau.add_process(
@@ -495,7 +519,7 @@ radion_hh_vbf_bbtautau = radion_hh_vbf.add_process(
     name="radion_hh_vbf_bbtautau",
     id=25100,
     label=rf"{radion_hh_vbf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(radion_hh_vbf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
 )
 
 radion_hh_vbf_bbtautau_m250 = radion_hh_vbf_bbtautau.add_process(
@@ -657,7 +681,7 @@ graviton_hh_vbf_bbtautau = graviton_hh_vbf.add_process(
     name="graviton_hh_vbf_bbtautau",
     id=26100,
     label=rf"{graviton_hh_vbf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(graviton_hh_vbf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
 )
 
 graviton_hh_vbf_bbtautau_m250 = graviton_hh_vbf_bbtautau.add_process(
