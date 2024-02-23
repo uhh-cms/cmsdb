@@ -30,6 +30,7 @@ campaign_run2_2016_nano_uhh_v12 = Campaign(
         "tier": "NanoAOD",
         "year": 2016,
         "version": 12,
+        "vfp": "post",
         "custom": {
             "name": "run2_2016_nano_uhh_v12",
             "creator": "uhh",
