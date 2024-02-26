@@ -75,7 +75,7 @@ hh_ggf_bbtautau = hh_ggf.add_process(
     name="hh_ggf_bbtautau",
     id=21100,
     label=r"$HH_{ggf} \rightarrow bb\tau\tau$",
-    xsecs={13: Number(hh_ggf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
+    xsecs={13: hh_ggf.get_xsec(13) * const.br_hh.bbtt},  # TODO
 )
 
 hh_ggf_bbtautau_node1 = hh_ggf.add_process(
@@ -195,7 +195,7 @@ radion_hh_ggf_bbtautau = radion_hh_ggf.add_process(
     name="radion_hh_ggf_bbtautau",
     id=23100,
     label=rf"{radion_hh_ggf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(radion_hh_ggf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
+    xsecs={13: radion_hh_ggf.get_xsec(13) * const.br_hh.bbtt},  # TODO
 )
 
 radion_hh_ggf_bbtautau_m250 = radion_hh_ggf_bbtautau.add_process(
@@ -357,7 +357,7 @@ graviton_hh_ggf_bbtautau = graviton_hh_ggf.add_process(
     name="graviton_hh_ggf_bbtautau",
     id=24100,
     label=rf"{graviton_hh_ggf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(graviton_hh_ggf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
+    xsecs={13: graviton_hh_ggf.get_xsec(13) * const.br_hh.bbtt},  # TODO
 )
 
 graviton_hh_ggf_bbtautau_m250 = graviton_hh_ggf_bbtautau.add_process(
@@ -519,7 +519,7 @@ radion_hh_vbf_bbtautau = radion_hh_vbf.add_process(
     name="radion_hh_vbf_bbtautau",
     id=25100,
     label=rf"{radion_hh_vbf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(radion_hh_vbf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
+    xsecs={13: radion_hh_vbf.get_xsec(13) * const.br_hh.bbtt},  # TODO
 )
 
 radion_hh_vbf_bbtautau_m250 = radion_hh_vbf_bbtautau.add_process(
@@ -681,7 +681,7 @@ graviton_hh_vbf_bbtautau = graviton_hh_vbf.add_process(
     name="graviton_hh_vbf_bbtautau",
     id=26100,
     label=rf"{graviton_hh_vbf.label} $\rightarrow bb\tau\tau$",
-    xsecs={13: Number(graviton_hh_vbf.get_xsec(13) * const.br_hh.bbtt)},  # TODO
+    xsecs={13: graviton_hh_vbf.get_xsec(13) * const.br_hh.bbtt},  # TODO
 )
 
 graviton_hh_vbf_bbtautau_m250 = graviton_hh_vbf_bbtautau.add_process(
