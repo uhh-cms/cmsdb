@@ -34,6 +34,7 @@ import cmsdb.constants as const
 # (ids up to 1999)
 #
 # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO?rev=21#Updated_reference_cross_sections
+# cross sections correspond to mtop = 172.5 GeV
 #
 
 tt = Process(
@@ -84,6 +85,7 @@ tt_fh = tt.add_process(
 #
 # single-top
 #
+# using updated tables from 2022
 # t- and tw-channel: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20#Predictions_for_top_quark_produc  # noqa
 # s-channel: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_s_channel_cross_secti
 # for the tW-channel, the t and tbar channels contribute equally as stated in

@@ -178,7 +178,7 @@ def calculate_xsec_node(center_of_mass_energy: float, xsec_sm: float, node_numbe
     Returns:
         TYPE: Description
     """
-    if node_number not in list(range(1,13)):
+    if node_number not in list(range(1, 13)):
         raise ValueError(f"Node number is {node_number}, but must be between 1 and 12")
 
     eft_coefficients = _coefficient_EFT_benchmarks[node_number]
