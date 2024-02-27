@@ -23,10 +23,16 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=187,
+            n_events=87986940,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=187 + 716,
-            n_events=87986940 + 76955324,
+            n_files=716,
+            n_events=76955324,
         ),
         hdamp_down=DatasetInfo(
             keys=[
@@ -138,10 +144,16 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TTto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=67,
+            n_events=23778148,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TTto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=67 + 319,
-            n_events=23778148 + 24047488,
+            n_files=319,
+            n_events=24047488,
         ),
         hdamp_down=DatasetInfo(
             keys=[
@@ -260,10 +272,16 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TTto4Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=114,
+            n_events=53605620,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TTto4Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=114 + 498,
-            n_events=53605620 + 51819730,
+            n_files=498,
+            n_events=51819730,
         ),
         hdamp_down=DatasetInfo(
             keys=[
@@ -415,11 +433,18 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+
+            ],
+            n_files=64,
+            n_events=4643600,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
 
             ],
-            n_files=64 + 119,
-            n_events=4643600 + 4899672,
+            n_files=119,
+            n_events=4899672,
         ),
         # xxx=DatasetInfo(
         #     keys=[
@@ -516,11 +541,18 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+
+            ],
+            n_files=50,
+            n_events=4407845,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
 
             ],
-            n_files=50 + 116,
-            n_events=4407845 + 4850663,
+            n_files=116,
+            n_events=4850663,
         ),
         # xxx=DatasetInfo(
         #     keys=[
@@ -617,10 +649,16 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TWminusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=21,
+            n_events=2369680,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TWminusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=21 + 56,
-            n_events=2369680 + 2387360,
+            n_files=56,
+            n_events=2387360,
         ),
         # xxx=DatasetInfo(
         #     keys=[
@@ -724,10 +762,16 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TbarWplusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=26,
+            n_events=2465972,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TbarWplusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=26 + 55,
-            n_events=2465972 + 2461995,
+            n_files=55,
+            n_events=2461995,
         ),
         # xxx=DatasetInfo(
         #     keys=[
@@ -831,10 +875,16 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TWminusto4Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=48,
+            n_events=3883455,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TWminusto4Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=48 + 62,
-            n_events=3883455 + 3880525,
+            n_files=62,
+            n_events=3880525,
         ),
         # xxx=DatasetInfo(
         #     keys=[
@@ -931,10 +981,16 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TbarWplusto4Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=24,
+            n_events=3762952,
+        ),
+        extension=DatasetInfo(
+            keys=[
                 "/TbarWplusto4Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=24 + 71,
-            n_events=3762952 + 4000000,
+            n_files=71,
+            n_events=4000000,
         ),
         # xxx=DatasetInfo(
         #     keys=[
