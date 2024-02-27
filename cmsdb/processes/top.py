@@ -339,12 +339,12 @@ ttz = ttv.add_process(
     label=f"{tt.label} + Z",
     xsecs={
         13: Number(0.859, {
-            "scale": (8.6j, 9.5j),
-            "pdf": 2.3j,
+            "scale": (0.086j, 0.095j),
+            "pdf": 0.023j,
         }),
         14: Number(1.045, {
-            "scale": (8.8j, 9.9j),
-            "pdf": 3.1j,
+            "scale": (0.088j, 0.099j),
+            "pdf": 0.031j,
         }),
     },
 )
@@ -361,15 +361,15 @@ ttw = ttv.add_process(
     label=f"{tt.label} + W",
     xsecs={
         13: Number(592, {
-            "scale": (26.1j, 16.2j),
-            "pdf": 2.1j,
+            "scale": (0.261j, 0.162j),
+            "pdf": 0.021j,
         }),
         14: Number(0.429, {  # ttW+
-            "scale": (26.4j, 16.7j),
-            "pdf": 3.2j,
+            "scale": (0.264j, 0.167j),
+            "pdf": 0.032j,
         }) + Number(0.224, {  # ttW-
-            "scale": (26.4j, 16.4j),
-            "pdf": 3.6j,
+            "scale": (0.264j, 0.164j),
+            "pdf": 0.036j,
         }),
     },
 )
