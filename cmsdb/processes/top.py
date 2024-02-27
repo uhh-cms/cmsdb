@@ -87,9 +87,11 @@ tt_fh = tt.add_process(
 #
 # single-top
 #
-# https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopSigma?rev=12#Single_Top_Cross_sections_at_13
+# all st cross sections except s-channel are taken from here:
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
 #
-# 13.6 TeV source: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+# 13 TeV s-channel cross sections from here:
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopSigma?rev=12#Single_Top_Cross_sections_at_13?rev=12
 
 st = Process(
     name="st",
@@ -103,10 +105,12 @@ st_tchannel = st.add_process(
     id=2100,
     label=f"{st.label}, t-channel",
     xsecs={
-        13: Number(216.99, dict(
-            scale=(6.62, 4.64),
-            pdf=6.16,  # includes alpha_s
-            mtop=1.81,
+        13: Number(214.2, dict(
+            scale=(2.4, 1.7),
+            pdf=(3.3, 2.2),  # includes alpha_s
+            mtop=(1.7, 1.9),
+            E_beam=(0.4, 0.3),
+            integration=0.2,
         )),
         13.6: Number(232.2, dict(
             scale=(2.6, 1.9),
@@ -122,10 +126,12 @@ st_tchannel_t = st_tchannel.add_process(
     name="st_tchannel_t",
     id=2110,
     xsecs={
-        13: Number(136.02, dict(
-            scale=(4.09, 2.92),
-            pdf=3.52,  # includes alpha_s
-            mtop=1.11,
+        13: Number(134.2, dict(
+            scale=(1.5, 1.1),
+            pdf=(2.1, 1.3),  # includes alpha_s
+            mtop=(1.0, 1.2),
+            E_beam=(0.2, 0.2),
+            integration=0.1,
         )),
         13.6: Number(145.0, dict(
             scale=(1.7, 1.1),
@@ -142,10 +148,12 @@ st_tchannel_tbar = st_tchannel.add_process(
     name="st_tchannel_tbar",
     id=2120,
     xsecs={
-        13: Number(80.95, dict(
-            scale=(2.53, 1.71),
-            pdf=3.18,  # includes alpha_s
-            mtop=(0.71, 0.70),
+        13: Number(80.0, dict(
+            scale=(1.5, 1.1),
+            pdf=(1.6, 1.2),  # includes alpha_s
+            mtop=(0.7, 0.7),
+            E_beam=(0.2, 0.1),
+            integration=0.1,
         )),
         13.6: Number(87.2, dict(
             scale=(0.9, 0.8),
@@ -162,14 +170,16 @@ st_twchannel = st.add_process(
     id=2200,
     label=f"{st.label}, tW-channel",
     xsecs={
-        13: Number(71.7, dict(
-            scale=1.8,
-            pdf=3.4,
+        13: Number(79.3, dict(
+            scale=(1.9, 1.8),
+            pdf=2.2,  # includes alpha_s
+            mtop=1.2,
+            E_beam=0.2,
         )),
         13.6: Number(87.9, dict(
             scale=(2.0, 1.9),
-            pdf=2.4,
-            mtop=1.4,
+            pdf=2.4,  # includes alpha_s
+            mtop=1.3,
             E_beam=0.2,
         )),
     },
@@ -179,10 +189,7 @@ st_twchannel_t = st_twchannel.add_process(
     name="st_twchannel_t",
     id=2210,
     xsecs={
-        13: Number(35.85, dict(
-            scale=0.90,
-            pdf=1.70,
-        )),
+        13: st_twchannel.get_xsec(13) / 2,
         13.6: st_twchannel.get_xsec(13.6) / 2,
     },
 )
@@ -209,10 +216,7 @@ st_twchannel_tbar = st_twchannel.add_process(
     name="st_twchannel_tbar",
     id=2220,
     xsecs={
-        13: Number(35.85, dict(
-            scale=0.90,
-            pdf=1.70,
-        )),
+        13: st_twchannel.get_xsec(13) / 2,
         13.6: st_twchannel.get_xsec(13.6) / 2,
     },
 )
