@@ -29,8 +29,22 @@ jobs:
         run: |
           flake8 cmsdb scripts
 
-  test:
+  collect_dirs:
     runs-on: ubuntu-latest
+    outputs:
+      dirs: ${{ steps.dirs.outputs.dirs }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: dirs
+        run: echo "dirs=$(ls -d cmsdb/campaigns/*/ | jq --raw-input --slurp --compact-output 'split("\n")[:-1]')" >> ${GITHUB_OUTPUT}
+
+
+  test:
+    needs: collect_dirs
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir: ${{ fromJson(needs.collect_dirs.outputs.dirs) }}
     steps:
       - name: Checkout ⬇️
         uses: actions/checkout@master
@@ -48,11 +62,7 @@ jobs:
           pip install -U pip
           pip install -r requirements_dev.txt
 
-      - name: Test 🚦
-        run: |
-          python -c "from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import *"
-          python -c "from cmsdb.campaigns.run2_2017_nano_v9 import *"
-          python -c "from cmsdb.campaigns.run2_2018_nano_v9 import *"
-          python -c "from cmsdb.campaigns.run2_2017_nano_uhh_v11 import *"
-          python -c "from cmsdb.campaigns.run2_2018_nano_uhh_v11 import *"
-          python -c "from cmsdb.campaigns.run2_2018_JMEnano_v9 import *"
+      - name: Test Campaigns 🚦
+        run: python -m unittest tests/test_campaigns.py
+        env:
+          TESTMODULE: ${{ matrix.dir }}
