@@ -14,6 +14,13 @@ __all__ = [
     "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500",
     "dy_lep_pt0To50", "dy_lep_pt50To100", "dy_lep_pt100To250", "dy_lep_pt250To400",
     "dy_lep_pt400To650", "dy_lep_pt650",
+    "z",
+    "z_nunu",
+    "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
+    "z_nunu_ht600to800", "z_nunu_ht800to1200", "z_nunu_ht1200to2500",
+    "z_nunu_ht2500",
+    "z_qq",
+    "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800",
     "w",
     "w_lnu",
     "w_lnu_ht70To100", "w_lnu_ht100To200", "w_lnu_ht200To400", "w_lnu_ht400To600",
@@ -199,6 +206,143 @@ dy_lep_pt650 = dy_lep.add_process(
     name="dy_lep_pt650",
     id=51560,
     xsecs={13: Number(0.04704)},
+)
+
+#
+# Z boson (no photon/DY)
+#
+
+z = Process(
+    name="z",
+    id=55000,
+    label="Z + jets",
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+# Z -> neutrinos
+
+z_nunu = z.add_process(
+    name="z_nunu",
+    id=55100,
+    label=rf"{z.label} (Z $\rightarrow$ $\nu\nu$)",
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht100to200 = z_nunu.add_process(
+    name="z_nunu_ht100to200",
+    id=55110,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht200to400 = z_nunu.add_process(
+    name="z_nunu_ht200to400",
+    id=55120,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht400to600 = z_nunu.add_process(
+    name="z_nunu_ht400to600",
+    id=55130,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht600to800 = z_nunu.add_process(
+    name="z_nunu_ht600to800",
+    id=55140,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht800to1200 = z_nunu.add_process(
+    name="z_nunu_ht800to1200",
+    id=55150,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht1200to2500 = z_nunu.add_process(
+    name="z_nunu_ht1200to2500",
+    id=55160,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht2500 = z_nunu.add_process(
+    name="z_nunu_ht2500",
+    id=55170,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+# Z -> quarks
+
+z_qq = z.add_process(
+    name="z_qq",
+    id=55210,
+    label=rf"{z.label} (Z $\rightarrow$ $\text{{q}}\overline{{\text{{q}}}}$)",
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht200to400 = z_qq.add_process(
+    name="z_qq_ht200to400",
+    id=55210,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht400to600 = z_qq.add_process(
+    name="z_qq_ht400to600",
+    id=55220,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht600to800 = z_qq.add_process(
+    name="z_qq_ht600to800",
+    id=55230,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht800 = z_qq.add_process(
+    name="z_qq_ht800",
+    id=55240,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
 )
 
 
