@@ -24,3 +24,4 @@ campaign_run2_2018_nano_v11 = Campaign(
 
 import cmsdb.campaigns.run2_2018_nano_v11.higgs  # noqa
 import cmsdb.campaigns.run2_2018_nano_v11.data  # noqa
+import cmsdb.campaigns.run2_2018_nano_v11.ewk  # noqa
