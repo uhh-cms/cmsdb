@@ -1,0 +1,112 @@
+08-Mar-2024 15:18:19 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/075F9427-8E30-3C49-970D-F5CD6AC73FB4.root
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:18:26 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/075F9427-8E30-3C49-970D-F5CD6AC73FB4.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:18:26 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/075F9427-8E30-3C49-970D-F5CD6AC73FB4.root?tried=.
+%MSG
+08-Mar-2024 15:18:26 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/075F9427-8E30-3C49-970D-F5CD6AC73FB4.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+%MSG-w XrdAdaptor:  file_open 08-Mar-2024 15:18:41 CET pre-events
+Data is served from fnal.gov instead of original site T2_FR_GRIF_LLR
+%MSG
+08-Mar-2024 15:19:27 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/075F9427-8E30-3C49-970D-F5CD6AC73FB4.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+Begin processing the 1st record. Run 1, Event 168805, LumiSection 37 on stream 0 at 08-Mar-2024 15:19:38.601 CET
+08-Mar-2024 15:19:42 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/075F9427-8E30-3C49-970D-F5CD6AC73FB4.root
+08-Mar-2024 15:19:42 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/B0EAFFAB-EF46-E54D-B918-FE179560F30D.root
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:19:43 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/B0EAFFAB-EF46-E54D-B918-FE179560F30D.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:19:43 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/B0EAFFAB-EF46-E54D-B918-FE179560F30D.root?tried=.
+%MSG
+08-Mar-2024 15:19:43 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/B0EAFFAB-EF46-E54D-B918-FE179560F30D.root
+%MSG-w XrdAdaptor:  file_open 08-Mar-2024 15:19:55 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_FR_GRIF_LLR
+%MSG
+08-Mar-2024 15:19:56 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/B0EAFFAB-EF46-E54D-B918-FE179560F30D.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+08-Mar-2024 15:20:04 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/B0EAFFAB-EF46-E54D-B918-FE179560F30D.root
+08-Mar-2024 15:20:04 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/F8132C80-6DD1-7A4D-9353-8E463CFB3DBE.root
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:20:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/F8132C80-6DD1-7A4D-9353-8E463CFB3DBE.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:20:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/F8132C80-6DD1-7A4D-9353-8E463CFB3DBE.root?tried=.
+%MSG
+08-Mar-2024 15:20:05 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/F8132C80-6DD1-7A4D-9353-8E463CFB3DBE.root
+%MSG-w XrdAdaptor:  file_open 08-Mar-2024 15:20:24 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_FR_GRIF_LLR
+%MSG
+08-Mar-2024 15:20:24 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/F8132C80-6DD1-7A4D-9353-8E463CFB3DBE.root
+08-Mar-2024 15:20:32 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/110000/F8132C80-6DD1-7A4D-9353-8E463CFB3DBE.root
+08-Mar-2024 15:20:32 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/260000/3C3F3CDA-ED1A-314C-A913-D68446497AA8.root
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:20:33 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/260000/3C3F3CDA-ED1A-314C-A913-D68446497AA8.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 08-Mar-2024 15:20:33 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/260000/3C3F3CDA-ED1A-314C-A913-D68446497AA8.root?tried=.
+%MSG
+08-Mar-2024 15:20:33 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/260000/3C3F3CDA-ED1A-314C-A913-D68446497AA8.root
+%MSG-w XrdAdaptor:  file_open 08-Mar-2024 15:20:47 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_FR_GRIF_LLR
+%MSG
+08-Mar-2024 15:20:47 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/260000/3C3F3CDA-ED1A-314C-A913-D68446497AA8.root
+Begin processing the 100001st record. Run 1, Event 946434, LumiSection 202 on stream 0 at 08-Mar-2024 15:20:52.824 CET
+      0.013667      0.000105      0.000013             3
+      0.002205      0.000043      0.000013             2
+      0.045459      0.000206      0.000013             4
+ 
+08-Mar-2024 15:20:53 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v2/260000/3C3F3CDA-ED1A-314C-A913-D68446497AA8.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		1.324e-05 +/- 1.270e-07		2	2	0	39	39	0	6.788e-07 +/- 4.676e-07		5.1 +/- 3.5	5.1 +/- 3.5
+1		2.280e-03 +/- 2.589e-06		1867	1867	0	44134	44134	0	9.646e-05 +/- 2.187e-06		4.2 +/- 0.1	4.2 +/- 0.1
+2		1.368e-02 +/- 6.966e-06		6093	6093	0	272797	272797	0	3.055e-04 +/- 3.873e-06		2.2 +/- 0.0	2.2 +/- 0.0
+3		4.540e-02 +/- 1.298e-05		102499	102499	0	890463	890463	0	5.226e-03 +/- 1.543e-05		11.5 +/- 0.0	11.5 +/- 0.0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		6.137e-02 +/- 1.495e-05		110461	110461	0	1207433	1207433	0	5.614e-03 +/- 1.616e-05		9.1 +/- 0.0	9.1 +/- 0.0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 6.137e-02 +- 1.495e-05 pb
+After matching: total cross section = 5.614e-03 +- 1.616e-05 pb
+Matching efficiency = 0.1 +/- 0.0   [TO BE USED IN MCM]
+Filter efficiency (taking into account weights)= (110461) / (110461) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (110461) / (110461) = 1.000e+00 +- 0.000e+00    [TO BE USED IN MCM]
+
+After filter: final cross section = 5.614e-03 +- 1.616e-05 pb
+After filter: final fraction of events with negative weights = 0.000e+00 +- 0.000e+00
+After filter: final equivalent lumi for 1M events (1/fb) = 1.781e+05 +- 5.427e+02
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                      18       18
+    2 XrdAdaptor           -w file_open                              4        4
+    3 XrdAdaptorInternal   -w file_open                              8        8
+    4 fileAction           -s file_close                             4        4
+    5 fileAction           -s file_open                             12       12
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostGlobalEndRun PostGlobalEndRun PostGlobalEndRun
+    2 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    3 XrdAdaptorInternal   pre-events       pre-events       PostProcessEvent
+    4 fileAction           PostProcessEvent PostProcessEvent PostGlobalEndRun
+    5 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                30                  30
+System                 16                  16
+
+dropped waiting message count 0

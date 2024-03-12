@@ -1,0 +1,973 @@
+01-Mar-2024 22:30:28 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/86CC2EF2-F0BD-D746-83E2-C5A479A3E481.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:30:29 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/86CC2EF2-F0BD-D746-83E2-C5A479A3E481.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:30:29 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/86CC2EF2-F0BD-D746-83E2-C5A479A3E481.root?tried=.
+%MSG
+01-Mar-2024 22:30:29 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/86CC2EF2-F0BD-D746-83E2-C5A479A3E481.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:30:39 CET pre-events
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:30:43 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/86CC2EF2-F0BD-D746-83E2-C5A479A3E481.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+Unable to load sec.protocol plugin libXrdSecztn.so
+Begin processing the 1st record. Run 1, Event 425236, LumiSection 55 on stream 0 at 01-Mar-2024 22:31:09.495 CET
+01-Mar-2024 22:31:15 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/86CC2EF2-F0BD-D746-83E2-C5A479A3E481.root
+01-Mar-2024 22:31:15 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/0EC1C6C1-4EBC-8E47-B396-EE458335A522.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:31:16 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/0EC1C6C1-4EBC-8E47-B396-EE458335A522.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:31:16 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/0EC1C6C1-4EBC-8E47-B396-EE458335A522.root?tried=.
+%MSG
+01-Mar-2024 22:31:16 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/0EC1C6C1-4EBC-8E47-B396-EE458335A522.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:31:23 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:31:24 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/0EC1C6C1-4EBC-8E47-B396-EE458335A522.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+Begin processing the 100001st record. Run 1, Event 23196400, LumiSection 2946 on stream 0 at 01-Mar-2024 22:32:42.515 CET
+01-Mar-2024 22:32:45 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/0EC1C6C1-4EBC-8E47-B396-EE458335A522.root
+01-Mar-2024 22:32:45 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/70DFA37D-9E4C-C746-9620-39B9DCB0FBB6.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:32:46 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/70DFA37D-9E4C-C746-9620-39B9DCB0FBB6.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:32:46 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/70DFA37D-9E4C-C746-9620-39B9DCB0FBB6.root?tried=.
+%MSG
+01-Mar-2024 22:32:46 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/70DFA37D-9E4C-C746-9620-39B9DCB0FBB6.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:32:57 CET PostProcessEvent
+Data is served from T2_US_Caltech instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:32:58 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/70DFA37D-9E4C-C746-9620-39B9DCB0FBB6.root
+Begin processing the 200001st record. Run 1, Event 40647710, LumiSection 5163 on stream 0 at 01-Mar-2024 22:33:13.302 CET
+01-Mar-2024 22:33:15 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/70DFA37D-9E4C-C746-9620-39B9DCB0FBB6.root
+01-Mar-2024 22:33:15 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/BD914A98-F442-3442-830A-D2B777A4B8BA.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:33:16 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/BD914A98-F442-3442-830A-D2B777A4B8BA.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:33:16 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/BD914A98-F442-3442-830A-D2B777A4B8BA.root?tried=.
+%MSG
+01-Mar-2024 22:33:16 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/BD914A98-F442-3442-830A-D2B777A4B8BA.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:33:24 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:33:25 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/BD914A98-F442-3442-830A-D2B777A4B8BA.root
+Begin processing the 300001st record. Run 1, Event 45365181, LumiSection 5762 on stream 0 at 01-Mar-2024 22:34:17.649 CET
+01-Mar-2024 22:34:17 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/BD914A98-F442-3442-830A-D2B777A4B8BA.root
+01-Mar-2024 22:34:17 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/DE21084C-9026-6F4C-A16D-3DE15A98F88B.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:34:18 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/DE21084C-9026-6F4C-A16D-3DE15A98F88B.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:34:18 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/DE21084C-9026-6F4C-A16D-3DE15A98F88B.root?tried=.
+%MSG
+01-Mar-2024 22:34:18 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/DE21084C-9026-6F4C-A16D-3DE15A98F88B.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:34:25 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:34:26 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/DE21084C-9026-6F4C-A16D-3DE15A98F88B.root
+01-Mar-2024 22:34:32 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/DE21084C-9026-6F4C-A16D-3DE15A98F88B.root
+01-Mar-2024 22:34:32 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A80B8EAF-FA67-8142-A238-DC70FA381863.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:34:33 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A80B8EAF-FA67-8142-A238-DC70FA381863.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:34:33 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A80B8EAF-FA67-8142-A238-DC70FA381863.root?tried=.
+%MSG
+01-Mar-2024 22:34:33 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A80B8EAF-FA67-8142-A238-DC70FA381863.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:34:42 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:34:43 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A80B8EAF-FA67-8142-A238-DC70FA381863.root
+01-Mar-2024 22:34:48 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A80B8EAF-FA67-8142-A238-DC70FA381863.root
+01-Mar-2024 22:34:48 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/002AD5BF-F3C3-7843-92F1-D6A85C081686.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:34:49 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/002AD5BF-F3C3-7843-92F1-D6A85C081686.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:34:49 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/002AD5BF-F3C3-7843-92F1-D6A85C081686.root?tried=.
+%MSG
+01-Mar-2024 22:34:49 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/002AD5BF-F3C3-7843-92F1-D6A85C081686.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:35:34 CET PostProcessEvent
+Data is served from T2_US_Vanderbilt instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:35:34 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/002AD5BF-F3C3-7843-92F1-D6A85C081686.root
+Begin processing the 400001st record. Run 1, Event 41260499, LumiSection 5241 on stream 0 at 01-Mar-2024 22:35:45.213 CET
+01-Mar-2024 22:35:45 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/002AD5BF-F3C3-7843-92F1-D6A85C081686.root
+01-Mar-2024 22:35:45 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E23890CC-CF8C-FA42-9CE0-BFA771835FA8.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:35:46 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E23890CC-CF8C-FA42-9CE0-BFA771835FA8.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:35:46 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E23890CC-CF8C-FA42-9CE0-BFA771835FA8.root?tried=.
+%MSG
+01-Mar-2024 22:35:46 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E23890CC-CF8C-FA42-9CE0-BFA771835FA8.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:35:54 CET PostProcessEvent
+Data is served from T2_US_Vanderbilt instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:35:55 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E23890CC-CF8C-FA42-9CE0-BFA771835FA8.root
+01-Mar-2024 22:36:03 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E23890CC-CF8C-FA42-9CE0-BFA771835FA8.root
+01-Mar-2024 22:36:03 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EC5D5554-BE89-414B-B8FD-BE5730B2337A.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:36:04 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EC5D5554-BE89-414B-B8FD-BE5730B2337A.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:36:04 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EC5D5554-BE89-414B-B8FD-BE5730B2337A.root?tried=.
+%MSG
+01-Mar-2024 22:36:04 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EC5D5554-BE89-414B-B8FD-BE5730B2337A.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:36:11 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:36:12 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EC5D5554-BE89-414B-B8FD-BE5730B2337A.root
+01-Mar-2024 22:36:16 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EC5D5554-BE89-414B-B8FD-BE5730B2337A.root
+01-Mar-2024 22:36:16 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/13416CC2-C511-5442-8BD4-4503F7CCAAD4.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:36:17 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/13416CC2-C511-5442-8BD4-4503F7CCAAD4.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:36:17 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/13416CC2-C511-5442-8BD4-4503F7CCAAD4.root?tried=.
+%MSG
+01-Mar-2024 22:36:17 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/13416CC2-C511-5442-8BD4-4503F7CCAAD4.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:36:29 CET PostProcessEvent
+Data is served from cms.rcac.purdue.edu instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:36:30 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/13416CC2-C511-5442-8BD4-4503F7CCAAD4.root
+01-Mar-2024 22:36:34 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/13416CC2-C511-5442-8BD4-4503F7CCAAD4.root
+01-Mar-2024 22:36:34 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/507C1A2C-1C35-BF48-84F2-35B8C0B7A07F.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:36:35 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/507C1A2C-1C35-BF48-84F2-35B8C0B7A07F.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:36:35 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/507C1A2C-1C35-BF48-84F2-35B8C0B7A07F.root?tried=.
+%MSG
+01-Mar-2024 22:36:35 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/507C1A2C-1C35-BF48-84F2-35B8C0B7A07F.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:36:43 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:36:44 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/507C1A2C-1C35-BF48-84F2-35B8C0B7A07F.root
+Begin processing the 500001st record. Run 1, Event 35406904, LumiSection 4497 on stream 0 at 01-Mar-2024 22:37:35.381 CET
+01-Mar-2024 22:37:36 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/140000/507C1A2C-1C35-BF48-84F2-35B8C0B7A07F.root
+01-Mar-2024 22:37:36 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/2143A27B-6D04-5144-9E0C-8CB66D500DE1.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:37:37 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/2143A27B-6D04-5144-9E0C-8CB66D500DE1.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:37:37 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/2143A27B-6D04-5144-9E0C-8CB66D500DE1.root?tried=.
+%MSG
+01-Mar-2024 22:37:37 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/2143A27B-6D04-5144-9E0C-8CB66D500DE1.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:37:46 CET PostProcessEvent
+Data is served from T2_US_Wisconsin instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:37:47 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/2143A27B-6D04-5144-9E0C-8CB66D500DE1.root
+01-Mar-2024 22:37:58 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/2143A27B-6D04-5144-9E0C-8CB66D500DE1.root
+01-Mar-2024 22:37:58 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/33467742-35A0-9C4B-91A8-C9E5713563A6.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:37:59 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/33467742-35A0-9C4B-91A8-C9E5713563A6.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:37:59 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/33467742-35A0-9C4B-91A8-C9E5713563A6.root?tried=.
+%MSG
+01-Mar-2024 22:37:59 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/33467742-35A0-9C4B-91A8-C9E5713563A6.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:38:08 CET PostProcessEvent
+Data is served from T2_US_Wisconsin instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:38:08 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/33467742-35A0-9C4B-91A8-C9E5713563A6.root
+Begin processing the 600001st record. Run 1, Event 25586399, LumiSection 3250 on stream 0 at 01-Mar-2024 22:38:17.600 CET
+01-Mar-2024 22:38:19 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/33467742-35A0-9C4B-91A8-C9E5713563A6.root
+01-Mar-2024 22:38:19 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/9F80F2C8-F932-824F-987C-18403836A860.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:38:20 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/9F80F2C8-F932-824F-987C-18403836A860.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:38:20 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/9F80F2C8-F932-824F-987C-18403836A860.root?tried=.
+%MSG
+01-Mar-2024 22:38:20 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/9F80F2C8-F932-824F-987C-18403836A860.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:38:27 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:38:28 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/9F80F2C8-F932-824F-987C-18403836A860.root
+Begin processing the 700001st record. Run 1, Event 39927330, LumiSection 5071 on stream 0 at 01-Mar-2024 22:39:28.235 CET
+01-Mar-2024 22:39:30 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/9F80F2C8-F932-824F-987C-18403836A860.root
+01-Mar-2024 22:39:30 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A2C7126-5233-6446-8968-9288BA354152.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:39:31 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A2C7126-5233-6446-8968-9288BA354152.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:39:31 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A2C7126-5233-6446-8968-9288BA354152.root?tried=.
+%MSG
+01-Mar-2024 22:39:31 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A2C7126-5233-6446-8968-9288BA354152.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:39:39 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:39:40 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A2C7126-5233-6446-8968-9288BA354152.root
+01-Mar-2024 22:39:48 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A2C7126-5233-6446-8968-9288BA354152.root
+01-Mar-2024 22:39:48 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/361FEBA5-DC73-8244-8D27-C5DC6ADA86EE.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:39:49 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/361FEBA5-DC73-8244-8D27-C5DC6ADA86EE.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:39:49 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/361FEBA5-DC73-8244-8D27-C5DC6ADA86EE.root?tried=.
+%MSG
+01-Mar-2024 22:39:49 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/361FEBA5-DC73-8244-8D27-C5DC6ADA86EE.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:39:56 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:39:57 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/361FEBA5-DC73-8244-8D27-C5DC6ADA86EE.root
+Begin processing the 800001st record. Run 1, Event 50236954, LumiSection 6381 on stream 0 at 01-Mar-2024 22:40:07.793 CET
+01-Mar-2024 22:40:08 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/120000/361FEBA5-DC73-8244-8D27-C5DC6ADA86EE.root
+01-Mar-2024 22:40:08 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/3F38DC08-3387-6747-97C6-6EE1D89E6E12.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:40:09 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/3F38DC08-3387-6747-97C6-6EE1D89E6E12.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:40:09 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/3F38DC08-3387-6747-97C6-6EE1D89E6E12.root?tried=.
+%MSG
+01-Mar-2024 22:40:09 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/3F38DC08-3387-6747-97C6-6EE1D89E6E12.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:40:17 CET PostProcessEvent
+Data is served from T2_US_Wisconsin instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:40:18 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/3F38DC08-3387-6747-97C6-6EE1D89E6E12.root
+01-Mar-2024 22:40:28 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/3F38DC08-3387-6747-97C6-6EE1D89E6E12.root
+01-Mar-2024 22:40:28 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/23E1FB10-FF2E-6B44-9596-DCC35B8EAE8D.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:40:29 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/23E1FB10-FF2E-6B44-9596-DCC35B8EAE8D.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:40:29 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/23E1FB10-FF2E-6B44-9596-DCC35B8EAE8D.root?tried=.
+%MSG
+01-Mar-2024 22:40:29 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/23E1FB10-FF2E-6B44-9596-DCC35B8EAE8D.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:40:39 CET PostProcessEvent
+Data is served from T2_US_MIT instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:40:39 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/23E1FB10-FF2E-6B44-9596-DCC35B8EAE8D.root
+Begin processing the 900001st record. Run 1, Event 27613818, LumiSection 3507 on stream 0 at 01-Mar-2024 22:40:44.044 CET
+01-Mar-2024 22:40:45 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/23E1FB10-FF2E-6B44-9596-DCC35B8EAE8D.root
+01-Mar-2024 22:40:45 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C788BDF1-F42D-7145-9A57-92971EC4D8B4.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:40:46 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C788BDF1-F42D-7145-9A57-92971EC4D8B4.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:40:46 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C788BDF1-F42D-7145-9A57-92971EC4D8B4.root?tried=.
+%MSG
+01-Mar-2024 22:40:46 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C788BDF1-F42D-7145-9A57-92971EC4D8B4.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:40:53 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:40:54 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C788BDF1-F42D-7145-9A57-92971EC4D8B4.root
+01-Mar-2024 22:41:28 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C788BDF1-F42D-7145-9A57-92971EC4D8B4.root
+01-Mar-2024 22:41:28 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/5E1622A4-B6A5-4247-B7EB-60F8FC796A50.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:41:29 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/5E1622A4-B6A5-4247-B7EB-60F8FC796A50.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:41:29 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/5E1622A4-B6A5-4247-B7EB-60F8FC796A50.root?tried=.
+%MSG
+01-Mar-2024 22:41:29 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/5E1622A4-B6A5-4247-B7EB-60F8FC796A50.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:41:36 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:41:37 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/5E1622A4-B6A5-4247-B7EB-60F8FC796A50.root
+01-Mar-2024 22:41:46 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/5E1622A4-B6A5-4247-B7EB-60F8FC796A50.root
+01-Mar-2024 22:41:46 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/502E265B-F879-DB4F-B4FA-F4F93ACE5660.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:41:47 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/502E265B-F879-DB4F-B4FA-F4F93ACE5660.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:41:47 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/502E265B-F879-DB4F-B4FA-F4F93ACE5660.root?tried=.
+%MSG
+01-Mar-2024 22:41:47 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/502E265B-F879-DB4F-B4FA-F4F93ACE5660.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:41:55 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:41:55 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/502E265B-F879-DB4F-B4FA-F4F93ACE5660.root
+Begin processing the 1000001st record. Run 1, Event 13263378, LumiSection 1685 on stream 0 at 01-Mar-2024 22:43:07.109 CET
+01-Mar-2024 22:43:09 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/502E265B-F879-DB4F-B4FA-F4F93ACE5660.root
+01-Mar-2024 22:43:09 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/5D65CFAD-5FE4-E944-A827-235B1E314701.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:43:10 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/5D65CFAD-5FE4-E944-A827-235B1E314701.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:43:10 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/5D65CFAD-5FE4-E944-A827-235B1E314701.root?tried=.
+%MSG
+01-Mar-2024 22:43:10 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/5D65CFAD-5FE4-E944-A827-235B1E314701.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:43:17 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:43:18 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/5D65CFAD-5FE4-E944-A827-235B1E314701.root
+Begin processing the 1100001st record. Run 1, Event 52989193, LumiSection 6730 on stream 0 at 01-Mar-2024 22:43:25.239 CET
+01-Mar-2024 22:43:27 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/5D65CFAD-5FE4-E944-A827-235B1E314701.root
+01-Mar-2024 22:43:27 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/52AD1C74-68BA-8E41-B009-9383060B309C.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:43:28 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/52AD1C74-68BA-8E41-B009-9383060B309C.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:43:28 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/52AD1C74-68BA-8E41-B009-9383060B309C.root?tried=.
+%MSG
+01-Mar-2024 22:43:28 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/52AD1C74-68BA-8E41-B009-9383060B309C.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:43:35 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:43:36 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/52AD1C74-68BA-8E41-B009-9383060B309C.root
+Begin processing the 1200001st record. Run 1, Event 31195703, LumiSection 3962 on stream 0 at 01-Mar-2024 22:44:46.389 CET
+01-Mar-2024 22:44:48 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/52AD1C74-68BA-8E41-B009-9383060B309C.root
+01-Mar-2024 22:44:48 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/7C4D7A85-9269-7349-B62B-05A6091AEBCD.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:44:49 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/7C4D7A85-9269-7349-B62B-05A6091AEBCD.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:44:49 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/7C4D7A85-9269-7349-B62B-05A6091AEBCD.root?tried=.
+%MSG
+01-Mar-2024 22:44:49 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/7C4D7A85-9269-7349-B62B-05A6091AEBCD.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:44:56 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:44:57 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/7C4D7A85-9269-7349-B62B-05A6091AEBCD.root
+Begin processing the 1300001st record. Run 1, Event 42188904, LumiSection 5359 on stream 0 at 01-Mar-2024 22:45:05.795 CET
+01-Mar-2024 22:45:07 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/7C4D7A85-9269-7349-B62B-05A6091AEBCD.root
+01-Mar-2024 22:45:07 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/45B93771-97EF-3D4B-AC1A-CF7E401F46E2.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:45:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/45B93771-97EF-3D4B-AC1A-CF7E401F46E2.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:45:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/45B93771-97EF-3D4B-AC1A-CF7E401F46E2.root?tried=.
+%MSG
+01-Mar-2024 22:45:08 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/45B93771-97EF-3D4B-AC1A-CF7E401F46E2.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:45:15 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:45:16 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/45B93771-97EF-3D4B-AC1A-CF7E401F46E2.root
+01-Mar-2024 22:45:37 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/45B93771-97EF-3D4B-AC1A-CF7E401F46E2.root
+01-Mar-2024 22:45:37 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EEE64C7F-4347-D246-98F5-E27F2003AAF8.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:45:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EEE64C7F-4347-D246-98F5-E27F2003AAF8.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:45:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EEE64C7F-4347-D246-98F5-E27F2003AAF8.root?tried=.
+%MSG
+01-Mar-2024 22:45:38 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EEE64C7F-4347-D246-98F5-E27F2003AAF8.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:45:45 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:45:46 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EEE64C7F-4347-D246-98F5-E27F2003AAF8.root
+01-Mar-2024 22:46:25 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/EEE64C7F-4347-D246-98F5-E27F2003AAF8.root
+01-Mar-2024 22:46:25 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/0CE2E200-C0CD-9147-AA64-7FFE2D449530.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:46:26 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/0CE2E200-C0CD-9147-AA64-7FFE2D449530.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:46:26 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/0CE2E200-C0CD-9147-AA64-7FFE2D449530.root?tried=.
+%MSG
+01-Mar-2024 22:46:26 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/0CE2E200-C0CD-9147-AA64-7FFE2D449530.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:46:39 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:46:40 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/0CE2E200-C0CD-9147-AA64-7FFE2D449530.root
+Begin processing the 1400001st record. Run 1, Event 55682428, LumiSection 7072 on stream 0 at 01-Mar-2024 22:46:52.006 CET
+01-Mar-2024 22:46:55 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/0CE2E200-C0CD-9147-AA64-7FFE2D449530.root
+01-Mar-2024 22:46:55 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A10B2BD8-D383-D148-91A9-28F74420DEF3.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:46:56 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A10B2BD8-D383-D148-91A9-28F74420DEF3.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:46:56 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A10B2BD8-D383-D148-91A9-28F74420DEF3.root?tried=.
+%MSG
+01-Mar-2024 22:46:56 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A10B2BD8-D383-D148-91A9-28F74420DEF3.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:47:09 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:47:10 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A10B2BD8-D383-D148-91A9-28F74420DEF3.root
+Begin processing the 1500001st record. Run 1, Event 3717999, LumiSection 473 on stream 0 at 01-Mar-2024 22:47:20.239 CET
+01-Mar-2024 22:47:22 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/A10B2BD8-D383-D148-91A9-28F74420DEF3.root
+01-Mar-2024 22:47:22 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3D6144CA-845A-8B45-9F07-12719DF35927.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:47:23 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3D6144CA-845A-8B45-9F07-12719DF35927.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:47:23 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3D6144CA-845A-8B45-9F07-12719DF35927.root?tried=.
+%MSG
+01-Mar-2024 22:47:23 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3D6144CA-845A-8B45-9F07-12719DF35927.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:47:37 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:47:38 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3D6144CA-845A-8B45-9F07-12719DF35927.root
+Begin processing the 1600001st record. Run 1, Event 2350369, LumiSection 299 on stream 0 at 01-Mar-2024 22:47:47.212 CET
+01-Mar-2024 22:47:49 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3D6144CA-845A-8B45-9F07-12719DF35927.root
+01-Mar-2024 22:47:49 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE6CBA84-1FB5-1349-A7D1-6AC90AD30C23.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:47:50 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE6CBA84-1FB5-1349-A7D1-6AC90AD30C23.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:47:50 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE6CBA84-1FB5-1349-A7D1-6AC90AD30C23.root?tried=.
+%MSG
+01-Mar-2024 22:47:50 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE6CBA84-1FB5-1349-A7D1-6AC90AD30C23.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:48:04 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:48:05 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE6CBA84-1FB5-1349-A7D1-6AC90AD30C23.root
+Begin processing the 1700001st record. Run 1, Event 2476780, LumiSection 315 on stream 0 at 01-Mar-2024 22:48:15.445 CET
+01-Mar-2024 22:48:16 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE6CBA84-1FB5-1349-A7D1-6AC90AD30C23.root
+01-Mar-2024 22:48:16 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2FDBD819-713C-0E4E-9710-7FA7B26702A4.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:48:17 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2FDBD819-713C-0E4E-9710-7FA7B26702A4.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:48:17 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2FDBD819-713C-0E4E-9710-7FA7B26702A4.root?tried=.
+%MSG
+01-Mar-2024 22:48:17 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2FDBD819-713C-0E4E-9710-7FA7B26702A4.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:48:30 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:48:31 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2FDBD819-713C-0E4E-9710-7FA7B26702A4.root
+Begin processing the 1800001st record. Run 1, Event 36503287, LumiSection 4636 on stream 0 at 01-Mar-2024 22:48:42.254 CET
+01-Mar-2024 22:48:43 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2FDBD819-713C-0E4E-9710-7FA7B26702A4.root
+01-Mar-2024 22:48:43 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/216E5D79-7F55-6E40-BFF5-EDB2E46CD112.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:48:44 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/216E5D79-7F55-6E40-BFF5-EDB2E46CD112.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:48:44 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/216E5D79-7F55-6E40-BFF5-EDB2E46CD112.root?tried=.
+%MSG
+01-Mar-2024 22:48:44 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/216E5D79-7F55-6E40-BFF5-EDB2E46CD112.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:48:57 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:48:58 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/216E5D79-7F55-6E40-BFF5-EDB2E46CD112.root
+Begin processing the 1900001st record. Run 1, Event 6073674, LumiSection 772 on stream 0 at 01-Mar-2024 22:49:08.896 CET
+01-Mar-2024 22:49:09 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/216E5D79-7F55-6E40-BFF5-EDB2E46CD112.root
+01-Mar-2024 22:49:09 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6BD010EE-0FE9-EA4D-90CC-450A27ADD041.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:49:10 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6BD010EE-0FE9-EA4D-90CC-450A27ADD041.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:49:10 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6BD010EE-0FE9-EA4D-90CC-450A27ADD041.root?tried=.
+%MSG
+01-Mar-2024 22:49:10 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6BD010EE-0FE9-EA4D-90CC-450A27ADD041.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:49:24 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:49:24 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6BD010EE-0FE9-EA4D-90CC-450A27ADD041.root
+Begin processing the 2000001st record. Run 1, Event 16211757, LumiSection 2059 on stream 0 at 01-Mar-2024 22:49:34.062 CET
+01-Mar-2024 22:49:34 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6BD010EE-0FE9-EA4D-90CC-450A27ADD041.root
+01-Mar-2024 22:49:34 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FC8A772D-FCAC-6D49-80CF-9C33297B9288.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:49:35 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FC8A772D-FCAC-6D49-80CF-9C33297B9288.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:49:35 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FC8A772D-FCAC-6D49-80CF-9C33297B9288.root?tried=.
+%MSG
+01-Mar-2024 22:49:35 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FC8A772D-FCAC-6D49-80CF-9C33297B9288.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:49:49 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:49:49 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FC8A772D-FCAC-6D49-80CF-9C33297B9288.root
+Begin processing the 2100001st record. Run 1, Event 14612115, LumiSection 1856 on stream 0 at 01-Mar-2024 22:50:00.640 CET
+01-Mar-2024 22:50:01 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FC8A772D-FCAC-6D49-80CF-9C33297B9288.root
+01-Mar-2024 22:50:01 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3F5685D8-1DB3-4744-9A1D-12AD44DD70AC.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:50:02 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3F5685D8-1DB3-4744-9A1D-12AD44DD70AC.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:50:02 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3F5685D8-1DB3-4744-9A1D-12AD44DD70AC.root?tried=.
+%MSG
+01-Mar-2024 22:50:02 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3F5685D8-1DB3-4744-9A1D-12AD44DD70AC.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:50:27 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:50:27 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3F5685D8-1DB3-4744-9A1D-12AD44DD70AC.root
+Begin processing the 2200001st record. Run 1, Event 6003226, LumiSection 763 on stream 0 at 01-Mar-2024 22:50:38.443 CET
+01-Mar-2024 22:50:38 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3F5685D8-1DB3-4744-9A1D-12AD44DD70AC.root
+01-Mar-2024 22:50:38 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/98BAE9DA-9FE6-2C4E-863C-BE7BB637D187.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:50:39 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/98BAE9DA-9FE6-2C4E-863C-BE7BB637D187.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:50:39 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/98BAE9DA-9FE6-2C4E-863C-BE7BB637D187.root?tried=.
+%MSG
+01-Mar-2024 22:50:39 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/98BAE9DA-9FE6-2C4E-863C-BE7BB637D187.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:50:53 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:50:53 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/98BAE9DA-9FE6-2C4E-863C-BE7BB637D187.root
+Begin processing the 2300001st record. Run 1, Event 7637136, LumiSection 970 on stream 0 at 01-Mar-2024 22:51:04.705 CET
+01-Mar-2024 22:51:04 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/98BAE9DA-9FE6-2C4E-863C-BE7BB637D187.root
+01-Mar-2024 22:51:04 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/48E755E1-AA03-D946-A024-9A4760E6A394.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:51:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/48E755E1-AA03-D946-A024-9A4760E6A394.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:51:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/48E755E1-AA03-D946-A024-9A4760E6A394.root?tried=.
+%MSG
+01-Mar-2024 22:51:05 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/48E755E1-AA03-D946-A024-9A4760E6A394.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:51:25 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:51:26 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/48E755E1-AA03-D946-A024-9A4760E6A394.root
+01-Mar-2024 22:51:37 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/48E755E1-AA03-D946-A024-9A4760E6A394.root
+01-Mar-2024 22:51:37 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E4A54C01-EC9B-3F40-8DFC-6166389F242B.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:51:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E4A54C01-EC9B-3F40-8DFC-6166389F242B.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:51:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E4A54C01-EC9B-3F40-8DFC-6166389F242B.root?tried=.
+%MSG
+01-Mar-2024 22:51:38 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E4A54C01-EC9B-3F40-8DFC-6166389F242B.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:51:52 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:51:52 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E4A54C01-EC9B-3F40-8DFC-6166389F242B.root
+Begin processing the 2400001st record. Run 1, Event 15572486, LumiSection 1978 on stream 0 at 01-Mar-2024 22:52:00.494 CET
+01-Mar-2024 22:52:03 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E4A54C01-EC9B-3F40-8DFC-6166389F242B.root
+01-Mar-2024 22:52:03 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6EB5687B-5A98-2947-98A0-8E437BD5B4AF.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:52:04 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6EB5687B-5A98-2947-98A0-8E437BD5B4AF.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:52:04 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6EB5687B-5A98-2947-98A0-8E437BD5B4AF.root?tried=.
+%MSG
+01-Mar-2024 22:52:04 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6EB5687B-5A98-2947-98A0-8E437BD5B4AF.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:52:24 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:52:24 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6EB5687B-5A98-2947-98A0-8E437BD5B4AF.root
+Begin processing the 2500001st record. Run 1, Event 5952005, LumiSection 756 on stream 0 at 01-Mar-2024 22:52:32.685 CET
+01-Mar-2024 22:52:35 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/6EB5687B-5A98-2947-98A0-8E437BD5B4AF.root
+01-Mar-2024 22:52:35 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C088C185-A389-9042-85BE-754AF90E791F.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:52:36 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C088C185-A389-9042-85BE-754AF90E791F.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:52:36 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C088C185-A389-9042-85BE-754AF90E791F.root?tried=.
+%MSG
+01-Mar-2024 22:52:36 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C088C185-A389-9042-85BE-754AF90E791F.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:52:50 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:52:50 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C088C185-A389-9042-85BE-754AF90E791F.root
+Begin processing the 2600001st record. Run 1, Event 33632553, LumiSection 4272 on stream 0 at 01-Mar-2024 22:52:59.596 CET
+01-Mar-2024 22:53:02 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/C088C185-A389-9042-85BE-754AF90E791F.root
+01-Mar-2024 22:53:02 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/820180E3-5680-8246-A93A-214E492BDB68.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:53:03 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/820180E3-5680-8246-A93A-214E492BDB68.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:53:03 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/820180E3-5680-8246-A93A-214E492BDB68.root?tried=.
+%MSG
+01-Mar-2024 22:53:03 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/820180E3-5680-8246-A93A-214E492BDB68.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:53:29 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:53:29 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/820180E3-5680-8246-A93A-214E492BDB68.root
+Begin processing the 2700001st record. Run 1, Event 47034509, LumiSection 5974 on stream 0 at 01-Mar-2024 22:53:38.804 CET
+01-Mar-2024 22:53:40 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/820180E3-5680-8246-A93A-214E492BDB68.root
+01-Mar-2024 22:53:40 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/395C26F8-DAE3-1F4D-8781-74FA39B8C7CE.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:53:41 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/395C26F8-DAE3-1F4D-8781-74FA39B8C7CE.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:53:41 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/395C26F8-DAE3-1F4D-8781-74FA39B8C7CE.root?tried=.
+%MSG
+01-Mar-2024 22:53:41 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/395C26F8-DAE3-1F4D-8781-74FA39B8C7CE.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:53:55 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:53:55 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/395C26F8-DAE3-1F4D-8781-74FA39B8C7CE.root
+Begin processing the 2800001st record. Run 1, Event 46014807, LumiSection 5844 on stream 0 at 01-Mar-2024 22:54:03.848 CET
+01-Mar-2024 22:54:06 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/395C26F8-DAE3-1F4D-8781-74FA39B8C7CE.root
+01-Mar-2024 22:54:06 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/76F8E01E-1679-4D45-A46C-FB7C8F4526C4.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:54:07 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/76F8E01E-1679-4D45-A46C-FB7C8F4526C4.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:54:07 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/76F8E01E-1679-4D45-A46C-FB7C8F4526C4.root?tried=.
+%MSG
+01-Mar-2024 22:54:07 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/76F8E01E-1679-4D45-A46C-FB7C8F4526C4.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:54:26 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:54:26 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/76F8E01E-1679-4D45-A46C-FB7C8F4526C4.root
+Begin processing the 2900001st record. Run 1, Event 52439937, LumiSection 6660 on stream 0 at 01-Mar-2024 22:54:36.499 CET
+01-Mar-2024 22:54:37 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/76F8E01E-1679-4D45-A46C-FB7C8F4526C4.root
+01-Mar-2024 22:54:37 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A720943-04A8-C746-8F54-572203D3BB9B.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:54:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A720943-04A8-C746-8F54-572203D3BB9B.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:54:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A720943-04A8-C746-8F54-572203D3BB9B.root?tried=.
+%MSG
+01-Mar-2024 22:54:38 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A720943-04A8-C746-8F54-572203D3BB9B.root
+[2024-03-01 22:54:51.209298 +0100][Error  ][AsyncSock         ] [xrootd.cmsaf.mit.edu:1094 #0.0] Socket error encountered: [ERROR] Internal error
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:54:53 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:54:53 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A720943-04A8-C746-8F54-572203D3BB9B.root
+Begin processing the 3000001st record. Run 1, Event 7210382, LumiSection 916 on stream 0 at 01-Mar-2024 22:55:03.501 CET
+01-Mar-2024 22:55:04 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/2A720943-04A8-C746-8F54-572203D3BB9B.root
+01-Mar-2024 22:55:04 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E2D9363B-8FAC-C748-A654-503AB889E739.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:55:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E2D9363B-8FAC-C748-A654-503AB889E739.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:55:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E2D9363B-8FAC-C748-A654-503AB889E739.root?tried=.
+%MSG
+01-Mar-2024 22:55:05 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E2D9363B-8FAC-C748-A654-503AB889E739.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:55:25 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:55:25 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E2D9363B-8FAC-C748-A654-503AB889E739.root
+Begin processing the 3100001st record. Run 1, Event 23201962, LumiSection 2947 on stream 0 at 01-Mar-2024 22:55:34.754 CET
+01-Mar-2024 22:55:35 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E2D9363B-8FAC-C748-A654-503AB889E739.root
+01-Mar-2024 22:55:35 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/1975CD40-6C4C-F240-8895-C32AE14334FF.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:55:36 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/1975CD40-6C4C-F240-8895-C32AE14334FF.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:55:36 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/1975CD40-6C4C-F240-8895-C32AE14334FF.root?tried=.
+%MSG
+01-Mar-2024 22:55:36 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/1975CD40-6C4C-F240-8895-C32AE14334FF.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:55:50 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:55:50 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/1975CD40-6C4C-F240-8895-C32AE14334FF.root
+Begin processing the 3200001st record. Run 1, Event 26250613, LumiSection 3334 on stream 0 at 01-Mar-2024 22:56:00.812 CET
+01-Mar-2024 22:56:01 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/1975CD40-6C4C-F240-8895-C32AE14334FF.root
+01-Mar-2024 22:56:01 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/25C4A680-5B71-134D-948B-1D5CA32BC7B9.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:56:02 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/25C4A680-5B71-134D-948B-1D5CA32BC7B9.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:56:02 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/25C4A680-5B71-134D-948B-1D5CA32BC7B9.root?tried=.
+%MSG
+01-Mar-2024 22:56:02 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/25C4A680-5B71-134D-948B-1D5CA32BC7B9.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:56:28 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:56:28 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/25C4A680-5B71-134D-948B-1D5CA32BC7B9.root
+Begin processing the 3300001st record. Run 1, Event 14987929, LumiSection 1904 on stream 0 at 01-Mar-2024 22:56:38.732 CET
+01-Mar-2024 22:56:39 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/25C4A680-5B71-134D-948B-1D5CA32BC7B9.root
+01-Mar-2024 22:56:39 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3895F543-B5CD-BB4F-BC9A-881AB07525B1.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:56:40 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3895F543-B5CD-BB4F-BC9A-881AB07525B1.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:56:40 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3895F543-B5CD-BB4F-BC9A-881AB07525B1.root?tried=.
+%MSG
+01-Mar-2024 22:56:40 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3895F543-B5CD-BB4F-BC9A-881AB07525B1.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:56:53 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:56:53 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3895F543-B5CD-BB4F-BC9A-881AB07525B1.root
+Begin processing the 3400001st record. Run 1, Event 21431352, LumiSection 2722 on stream 0 at 01-Mar-2024 22:57:04.862 CET
+01-Mar-2024 22:57:04 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/3895F543-B5CD-BB4F-BC9A-881AB07525B1.root
+01-Mar-2024 22:57:04 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE05982D-DB1C-C74C-9E7F-A519DEE9D941.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:57:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE05982D-DB1C-C74C-9E7F-A519DEE9D941.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:57:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE05982D-DB1C-C74C-9E7F-A519DEE9D941.root?tried=.
+%MSG
+01-Mar-2024 22:57:05 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE05982D-DB1C-C74C-9E7F-A519DEE9D941.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:57:25 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:57:25 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE05982D-DB1C-C74C-9E7F-A519DEE9D941.root
+01-Mar-2024 22:57:35 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BE05982D-DB1C-C74C-9E7F-A519DEE9D941.root
+01-Mar-2024 22:57:35 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E6299330-443F-7F4F-B33D-25FA79AF4541.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:57:36 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E6299330-443F-7F4F-B33D-25FA79AF4541.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:57:36 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E6299330-443F-7F4F-B33D-25FA79AF4541.root?tried=.
+%MSG
+01-Mar-2024 22:57:36 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E6299330-443F-7F4F-B33D-25FA79AF4541.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:57:50 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:57:50 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E6299330-443F-7F4F-B33D-25FA79AF4541.root
+Begin processing the 3500001st record. Run 1, Event 15411183, LumiSection 1958 on stream 0 at 01-Mar-2024 22:57:59.311 CET
+01-Mar-2024 22:58:02 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/E6299330-443F-7F4F-B33D-25FA79AF4541.root
+01-Mar-2024 22:58:02 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/8AADF8D7-6A98-C649-98D0-DBAACE029A5E.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:58:03 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/8AADF8D7-6A98-C649-98D0-DBAACE029A5E.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:58:03 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/8AADF8D7-6A98-C649-98D0-DBAACE029A5E.root?tried=.
+%MSG
+01-Mar-2024 22:58:03 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/8AADF8D7-6A98-C649-98D0-DBAACE029A5E.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:58:29 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:58:29 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/8AADF8D7-6A98-C649-98D0-DBAACE029A5E.root
+Begin processing the 3600001st record. Run 1, Event 38998340, LumiSection 4953 on stream 0 at 01-Mar-2024 22:58:38.911 CET
+01-Mar-2024 22:58:41 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/8AADF8D7-6A98-C649-98D0-DBAACE029A5E.root
+01-Mar-2024 22:58:41 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B27CD9DC-7E8E-EE44-B698-3A767AB005DE.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:58:42 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B27CD9DC-7E8E-EE44-B698-3A767AB005DE.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:58:42 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B27CD9DC-7E8E-EE44-B698-3A767AB005DE.root?tried=.
+%MSG
+01-Mar-2024 22:58:42 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B27CD9DC-7E8E-EE44-B698-3A767AB005DE.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:58:56 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:58:56 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B27CD9DC-7E8E-EE44-B698-3A767AB005DE.root
+Begin processing the 3700001st record. Run 1, Event 16038338, LumiSection 2037 on stream 0 at 01-Mar-2024 22:59:04.622 CET
+01-Mar-2024 22:59:07 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B27CD9DC-7E8E-EE44-B698-3A767AB005DE.root
+01-Mar-2024 22:59:07 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B3190609-EF34-4C4E-BE27-FF14D903B094.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:59:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B3190609-EF34-4C4E-BE27-FF14D903B094.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:59:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B3190609-EF34-4C4E-BE27-FF14D903B094.root?tried=.
+%MSG
+01-Mar-2024 22:59:08 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B3190609-EF34-4C4E-BE27-FF14D903B094.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:59:28 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:59:28 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B3190609-EF34-4C4E-BE27-FF14D903B094.root
+Begin processing the 3800001st record. Run 1, Event 20670087, LumiSection 2626 on stream 0 at 01-Mar-2024 22:59:36.771 CET
+01-Mar-2024 22:59:39 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/B3190609-EF34-4C4E-BE27-FF14D903B094.root
+01-Mar-2024 22:59:39 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FCF0F521-A8B1-0E48-A89C-1E70E40335C9.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:59:40 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FCF0F521-A8B1-0E48-A89C-1E70E40335C9.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 22:59:40 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FCF0F521-A8B1-0E48-A89C-1E70E40335C9.root?tried=.
+%MSG
+01-Mar-2024 22:59:40 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FCF0F521-A8B1-0E48-A89C-1E70E40335C9.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 22:59:54 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 22:59:54 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FCF0F521-A8B1-0E48-A89C-1E70E40335C9.root
+Begin processing the 3900001st record. Run 1, Event 21872910, LumiSection 2778 on stream 0 at 01-Mar-2024 23:00:03.018 CET
+01-Mar-2024 23:00:05 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/FCF0F521-A8B1-0E48-A89C-1E70E40335C9.root
+01-Mar-2024 23:00:05 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/28BBD07F-0B00-7742-B458-CACEA2694564.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:00:06 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/28BBD07F-0B00-7742-B458-CACEA2694564.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:00:06 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/28BBD07F-0B00-7742-B458-CACEA2694564.root?tried=.
+%MSG
+01-Mar-2024 23:00:06 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/28BBD07F-0B00-7742-B458-CACEA2694564.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:00:26 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:00:26 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/28BBD07F-0B00-7742-B458-CACEA2694564.root
+Begin processing the 4000001st record. Run 1, Event 34277615, LumiSection 4354 on stream 0 at 01-Mar-2024 23:00:35.636 CET
+01-Mar-2024 23:00:37 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/28BBD07F-0B00-7742-B458-CACEA2694564.root
+01-Mar-2024 23:00:37 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/AABF1C49-731A-4141-A272-72BCC8995F26.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:00:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/AABF1C49-731A-4141-A272-72BCC8995F26.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:00:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/AABF1C49-731A-4141-A272-72BCC8995F26.root?tried=.
+%MSG
+01-Mar-2024 23:00:38 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/AABF1C49-731A-4141-A272-72BCC8995F26.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:00:52 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:00:52 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/AABF1C49-731A-4141-A272-72BCC8995F26.root
+Begin processing the 4100001st record. Run 1, Event 29283668, LumiSection 3720 on stream 0 at 01-Mar-2024 23:01:02.469 CET
+01-Mar-2024 23:01:03 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/AABF1C49-731A-4141-A272-72BCC8995F26.root
+01-Mar-2024 23:01:03 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/841C4109-5F78-3A47-A179-B316047D6EBE.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:01:04 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/841C4109-5F78-3A47-A179-B316047D6EBE.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:01:04 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/841C4109-5F78-3A47-A179-B316047D6EBE.root?tried=.
+%MSG
+01-Mar-2024 23:01:04 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/841C4109-5F78-3A47-A179-B316047D6EBE.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:01:30 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:01:30 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/841C4109-5F78-3A47-A179-B316047D6EBE.root
+Begin processing the 4200001st record. Run 1, Event 56032107, LumiSection 7117 on stream 0 at 01-Mar-2024 23:01:40.295 CET
+01-Mar-2024 23:01:41 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/841C4109-5F78-3A47-A179-B316047D6EBE.root
+01-Mar-2024 23:01:41 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BF9AE63E-9CFB-9F4B-A540-02CBA57D637F.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:01:42 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BF9AE63E-9CFB-9F4B-A540-02CBA57D637F.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:01:42 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BF9AE63E-9CFB-9F4B-A540-02CBA57D637F.root?tried=.
+%MSG
+01-Mar-2024 23:01:42 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BF9AE63E-9CFB-9F4B-A540-02CBA57D637F.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:01:56 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:01:56 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BF9AE63E-9CFB-9F4B-A540-02CBA57D637F.root
+Begin processing the 4300001st record. Run 1, Event 32879509, LumiSection 4176 on stream 0 at 01-Mar-2024 23:02:06.890 CET
+01-Mar-2024 23:02:07 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/BF9AE63E-9CFB-9F4B-A540-02CBA57D637F.root
+01-Mar-2024 23:02:07 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/F314DB39-8DB1-2E40-97FC-7A7D6CEB8E04.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:02:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/F314DB39-8DB1-2E40-97FC-7A7D6CEB8E04.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:02:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/F314DB39-8DB1-2E40-97FC-7A7D6CEB8E04.root?tried=.
+%MSG
+01-Mar-2024 23:02:08 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/F314DB39-8DB1-2E40-97FC-7A7D6CEB8E04.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:02:28 CET PostProcessEvent
+Data is served from T2_US_Nebraska instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:02:29 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/F314DB39-8DB1-2E40-97FC-7A7D6CEB8E04.root
+Begin processing the 4400001st record. Run 1, Event 36880868, LumiSection 4684 on stream 0 at 01-Mar-2024 23:02:39.527 CET
+01-Mar-2024 23:02:40 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/F314DB39-8DB1-2E40-97FC-7A7D6CEB8E04.root
+01-Mar-2024 23:02:40 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/6C72B4B0-2ED2-AF40-965F-FFE644D8267E.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:02:41 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/6C72B4B0-2ED2-AF40-965F-FFE644D8267E.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:02:41 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/6C72B4B0-2ED2-AF40-965F-FFE644D8267E.root?tried=.
+%MSG
+01-Mar-2024 23:02:41 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/6C72B4B0-2ED2-AF40-965F-FFE644D8267E.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:02:55 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:02:55 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/6C72B4B0-2ED2-AF40-965F-FFE644D8267E.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+01-Mar-2024 23:03:07 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/6C72B4B0-2ED2-AF40-965F-FFE644D8267E.root
+01-Mar-2024 23:03:07 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/1B183630-1EC9-B743-B659-C448C571DE7E.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:03:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/1B183630-1EC9-B743-B659-C448C571DE7E.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:03:08 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/1B183630-1EC9-B743-B659-C448C571DE7E.root?tried=.
+%MSG
+01-Mar-2024 23:03:08 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/1B183630-1EC9-B743-B659-C448C571DE7E.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:03:28 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:03:29 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/1B183630-1EC9-B743-B659-C448C571DE7E.root
+Unable to load sec.protocol plugin libXrdSecztn.so
+Begin processing the 4500001st record. Run 1, Event 17480861, LumiSection 2221 on stream 0 at 01-Mar-2024 23:03:57.986 CET
+01-Mar-2024 23:04:01 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/1B183630-1EC9-B743-B659-C448C571DE7E.root
+01-Mar-2024 23:04:01 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/58AAFE7F-AF34-C044-82F5-5DAAD6265574.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:04:02 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/58AAFE7F-AF34-C044-82F5-5DAAD6265574.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:04:02 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/58AAFE7F-AF34-C044-82F5-5DAAD6265574.root?tried=.
+%MSG
+01-Mar-2024 23:04:02 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/58AAFE7F-AF34-C044-82F5-5DAAD6265574.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:04:27 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:04:28 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/58AAFE7F-AF34-C044-82F5-5DAAD6265574.root
+Begin processing the 4600001st record. Run 1, Event 955037, LumiSection 122 on stream 0 at 01-Mar-2024 23:05:12.854 CET
+01-Mar-2024 23:05:14 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/58AAFE7F-AF34-C044-82F5-5DAAD6265574.root
+01-Mar-2024 23:05:14 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/0103E515-8A85-E247-8727-FEC5D7AF81DA.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:05:15 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/0103E515-8A85-E247-8727-FEC5D7AF81DA.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:05:15 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/0103E515-8A85-E247-8727-FEC5D7AF81DA.root?tried=.
+%MSG
+01-Mar-2024 23:05:15 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/0103E515-8A85-E247-8727-FEC5D7AF81DA.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:05:29 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:05:29 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/0103E515-8A85-E247-8727-FEC5D7AF81DA.root
+Begin processing the 4700001st record. Run 1, Event 36617477, LumiSection 4651 on stream 0 at 01-Mar-2024 23:05:40.062 CET
+01-Mar-2024 23:05:42 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/0103E515-8A85-E247-8727-FEC5D7AF81DA.root
+01-Mar-2024 23:05:42 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/03001870-D4F9-4D4D-B35F-0CE65FE687FE.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:05:43 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/03001870-D4F9-4D4D-B35F-0CE65FE687FE.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:05:43 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/03001870-D4F9-4D4D-B35F-0CE65FE687FE.root?tried=.
+%MSG
+01-Mar-2024 23:05:43 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/03001870-D4F9-4D4D-B35F-0CE65FE687FE.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:05:56 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:05:57 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/03001870-D4F9-4D4D-B35F-0CE65FE687FE.root
+Begin processing the 4800001st record. Run 1, Event 49964547, LumiSection 6346 on stream 0 at 01-Mar-2024 23:06:37.069 CET
+01-Mar-2024 23:06:37 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/03001870-D4F9-4D4D-B35F-0CE65FE687FE.root
+01-Mar-2024 23:06:37 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/AD3737D0-DDD9-2B4D-BEF4-944AE304A41E.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:06:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/AD3737D0-DDD9-2B4D-BEF4-944AE304A41E.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:06:38 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/AD3737D0-DDD9-2B4D-BEF4-944AE304A41E.root?tried=.
+%MSG
+01-Mar-2024 23:06:38 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/AD3737D0-DDD9-2B4D-BEF4-944AE304A41E.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:06:51 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:06:52 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/AD3737D0-DDD9-2B4D-BEF4-944AE304A41E.root
+Begin processing the 4900001st record. Run 1, Event 25849538, LumiSection 3283 on stream 0 at 01-Mar-2024 23:07:03.635 CET
+01-Mar-2024 23:07:04 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/130000/AD3737D0-DDD9-2B4D-BEF4-944AE304A41E.root
+01-Mar-2024 23:07:04 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/DEA425AA-97EE-EE45-BA7D-F1F2C50E2CCC.root
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:07:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/DEA425AA-97EE-EE45-BA7D-F1F2C50E2CCC.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 01-Mar-2024 23:07:05 CET PostProcessEvent
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/DEA425AA-97EE-EE45-BA7D-F1F2C50E2CCC.root?tried=.
+%MSG
+01-Mar-2024 23:07:05 CET  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/DEA425AA-97EE-EE45-BA7D-F1F2C50E2CCC.root
+%MSG-w XrdAdaptor:  file_open 01-Mar-2024 23:07:24 CET PostProcessEvent
+Data is served from fnal.gov instead of original site T2_IT_Pisa
+%MSG
+01-Mar-2024 23:07:24 CET  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/DEA425AA-97EE-EE45-BA7D-F1F2C50E2CCC.root
+    104.485772      0.575290      0.259010             1
+    487.271041      1.520301      0.259010             2
+    789.384953      1.565271      0.259010             3
+    654.257660      1.177761      0.259010             4
+ 
+01-Mar-2024 23:07:53 CET  Closed file root://xrootd-cms.infn.it//store/mc/RunIISummer20UL16MiniAODv2/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/DEA425AA-97EE-EE45-BA7D-F1F2C50E2CCC.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		1.039e+02 +/- 2.276e-02		632799	632799	0	2002992	2002992	0	3.282e+01 +/- 3.487e-02		31.6 +/- 0.0	31.6 +/- 0.0
+1		4.888e+02 +/- 5.687e-02		2080166	2080166	0	9121780	9121780	0	1.115e+02 +/- 6.913e-02		22.8 +/- 0.0	22.8 +/- 0.0
+2		7.896e+02 +/- 5.772e-02		1614048	1614048	0	14876647	14876647	0	8.567e+01 +/- 6.397e-02		10.8 +/- 0.0	10.8 +/- 0.0
+3		6.564e+02 +/- 4.531e-02		674015	674015	0	12305704	12305704	0	3.595e+01 +/- 4.265e-02		5.5 +/- 0.0	5.5 +/- 0.0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		2.039e+03 +/- 9.558e-02		5001028	5001028	0	38307123	38307123	0	2.661e+02 +/- 1.117e-01		13.1 +/- 0.0	13.1 +/- 0.0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 2.039e+03 +- 9.558e-02 pb
+After matching: total cross section = 2.661e+02 +- 1.117e-01 pb
+Matching efficiency = 0.1 +/- 0.0   [TO BE USED IN MCM]
+Filter efficiency (taking into account weights)= (5.00103e+06) / (5.00103e+06) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (5.00103e+06) / (5.00103e+06) = 1.000e+00 +- 0.000e+00    [TO BE USED IN MCM]
+
+After filter: final cross section = 2.661e+02 +- 1.117e-01 pb
+After filter: final fraction of events with negative weights = 0.000e+00 +- 0.000e+00
+After filter: final equivalent lumi for 1M events (1/fb) = 3.757e+00 +- 4.075e-03
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                      18       18
+    2 XrdAdaptor           -w file_open                             66       66
+    3 XrdAdaptorInternal   -w file_open                            132      132
+    4 fileAction           -s file_close                            66       66
+    5 fileAction           -s file_open                            198      198
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostGlobalEndRun PostGlobalEndRun PostGlobalEndRun
+    2 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    3 XrdAdaptorInternal   pre-events       pre-events       PostProcessEvent
+    4 fileAction           PostProcessEvent PostProcessEvent PostGlobalEndRun
+    5 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning               216                 216
+System                264                 264
+
+dropped waiting message count 0

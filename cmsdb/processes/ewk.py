@@ -67,33 +67,34 @@ dy_lep_m50 = dy_lep.add_process(
 
 
 # if needed for scaling from NLO to NNLO:
-# NLO cross section, based on DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) in xsdb
-# https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8
-# created in 2021 by sdeng for EGM
+# NLO cross section, based on GenXSecAnalyzer for
+# DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# see xsec_DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8.log
 
-dy_nlo_13TeV_xsec = Number(6404.0, {"tot": 27.69})
+dy_nlo_13TeV_xsec = Number(6421.0, {"tot": 11.25})
 
 # if needed for scaling from LO to NNLO:
-# LO cross section, based on DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO) in xsdb
-# created in 2021 by sdeng for TAU
+# LO cross section, based on GenXSecAnalyzer for DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# see xsec_DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8.log
 
-dy_lo_13TeV_xsec = Number(5398.0, {"tot": 13.12})
+dy_lo_13TeV_xsec = Number(5395.0, {"tot": 1.858})
 
-# based on datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO) in xsdb
-# created in 2021 by sdeng for TAU
+# based on GenXSecAnalyzer
+# for datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# see logs
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
-    xsecs={13: Number(928.3, {
-        "tot": 2.54,
+    xsecs={13: Number(926.8, {
+        "tot": 0.3597,
     })},
 )
 
 dy_lep_m50_2j = dy_lep_m50.add_process(
     name="dy_lep_m50_2j",
     id=51112,
-    xsecs={13: Number(293.6, {
-        "tot": 0.8613,
+    xsecs={13: Number(294.5, {
+        "tot": 0.1223,
     })},
 )
 
@@ -101,76 +102,77 @@ dy_lep_m50_3j = dy_lep_m50.add_process(
     name="dy_lep_m50_3j",
     id=51113,
     xsecs={13: Number(86.53, {
-        "tot": 0.2633,
+        "tot": 0.03853,
     })},
 )
 
 dy_lep_m50_4j = dy_lep_m50.add_process(
     name="dy_lep_m50_4j",
     id=51114,
-    xsecs={13: Number(41.28, {
-        "tot": 0.1267,
+    xsecs={13: Number(41.21, {
+        "tot": 0.02392,
     })},
 )
 
-# based on datasets DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) in xsdb
-# created in 2021 by sdeng for SMP
+# based on GenXSecAnalyzer
+# for DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# see logs
 dy_lep_0j = dy_lep.add_process(
     name="dy_lep_0j",
     id=51200,
-    xsecs={13: Number(5129.0, {
-        "tot": 8.715,
+    xsecs={13: Number(5134.0, {
+        "tot": 5.365,
     })},
 )
 
 dy_lep_1j = dy_lep.add_process(
     name="dy_lep_1j",
     id=51300,
-    xsecs={13: Number(951.5, {
-        "tot": 6.067,
+    xsecs={13: Number(952.7, {
+        "tot": 2.174,
     })},
 )
 
 dy_lep_2j = dy_lep.add_process(
     name="dy_lep_2j",
     id=51400,
-    xsecs={13: Number(361.4, {
-        "tot": 3.704,
+    xsecs={13: Number(359.1, {
+        "tot": 1.533,
     })},
 )
 
-# based on datasets DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Summer20UL17, LO)in xsdb
-# created in 2023 by yuzhe for SUS
-# chosen because only one with UL, but errors are larger
+# based on GenXSecAnalyzer
+# for DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# see logs
 dy_lep_m50_ht70to100 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht70to100",
     id=51121,
-    xsecs={13: Number(140.0, {
-        "tot": 1.255,
+    xsecs={13: Number(139.9, {
+        "tot": 0.5747,
     })},
 )
 
 dy_lep_m50_ht100to200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht100to200",
     id=51122,
-    xsecs={13: Number(139.2, {
-        "tot": 1.249,
+    xsecs={13: Number(140.1, {
+        "tot": 0.5875,
     })},
 )
 
 dy_lep_m50_ht200to400 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht200to400",
     id=51123,
-    xsecs={13: Number(38.4, {
-        "tot": 0.3494,
+    xsecs={13: Number(38.38, {
+        "tot": 0.01628,
     })},
 )
 
 dy_lep_m50_ht400to600 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht400to600",
     id=51124,
-    xsecs={13: Number(5.174, {
-        "tot": 0.04871,
+    xsecs={13: Number(5.212, {
+        "tot": 0.003149,
     })},
 )
 
