@@ -339,7 +339,8 @@ zz_llnunu = zz.add_process(
 zz_llll = zz.add_process(
     name="zz_llll",
     id=8130,
-    xsecs={13: Number(1.256)},  # TODO
+    # xsec * BR(Zll)**2. Number taken from HZZ main analysis: https://github.com/CJLST/ZZAnalysis/blob/Run3/NanoAnalysis/test/prod/samplesNano_2018_MC.csv#L21 
+    xsecs={13: Number(1.256)},
 )
 
 wz = vv.add_process(
