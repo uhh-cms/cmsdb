@@ -44,6 +44,5 @@ campaign_run2_2016_nano_uhh_v12 = Campaign(
 import cmsdb.campaigns.run2_2016_nano_uhh_v12.data  # noqa
 import cmsdb.campaigns.run2_2016_nano_uhh_v12.top  # noqa
 import cmsdb.campaigns.run2_2016_nano_uhh_v12.ewk  # noqa
-import cmsdb.campaigns.run2_2016_nano_uhh_v12.qcd  # noqa
 import cmsdb.campaigns.run2_2016_nano_uhh_v12.higgs  # noqa
 import cmsdb.campaigns.run2_2016_nano_uhh_v12.hh2bbtautau  # noqa
