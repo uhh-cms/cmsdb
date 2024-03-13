@@ -27,36 +27,56 @@ import cmsdb.constants as const
 # Single Higgs
 #
 
+# preliminary Higgs cross sections at 13.6 TeV taken from here:
+# https://cds.cern.ch/record/2886099
+# TODO: h xsecs at 13 TeV
+
 h = Process(
     name="h",
     id=10000,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
 )
 
 h_ggf = h.add_process(
     name="h_ggf",
     id=11000,
     label=r"$H_{ggf}$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(56.11, {
+            "pdf": 0.021j,
+            "th": (0.046j, 0.067j),
+            "th_gaussian": 0.040,
+        }),  # TODO: only preliminary
+    },
 )
 
 h_ggf_tautau = h_ggf.add_process(
     name="h_ggf_tautau",
     id=11100,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={ecm: h_ggf.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
 )
 
 h_vbf = h.add_process(
     name="h_vbf",
     id=12000,
     label=r"$H_{vbf}$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(4.075, {
+            "scale": (0.005j, 0.003j),
+            "pdf": 0.021j,
+        }),  # TODO: only preliminary
+    },
 )
 
 h_vbf_tautau = h_vbf.add_process(
     name="h_vbf_tautau",
     id=12100,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={ecm: h_vbf.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
 )
 
 vh = h.add_process(
@@ -70,52 +90,69 @@ zh = vh.add_process(
     name="zh",
     id=13100,
     label="ZH",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.9439, {
+            "scale": (0.037j, 0.032j),
+            "pdf": 0.016j,
+        }),  # TODO: only preliminary
+    },
 )
 
 zh_tautau = zh.add_process(
     name="zh_tautau",
     id=13110,
     label=rf"{zh.label}, $H \rightarrow \tau\tau$",
-    xsecs={13: zh.get_xsec(13) * const.br_h.tt},
+    xsecs={ecm: zh.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
 )
 
 zh_llbb = zh.add_process(
     name="zh_llbb",
     id=13120,
     label=rf"{zh.label}, $H \rightarrow bb$, $Z \rightarrow ll$",
-    xsecs={13: zh.get_xsec(13) * const.br_h.bb * const.br_z.clep},
+    xsecs={ecm: zh.get_xsec(ecm) * const.br_h.bb * const.br_z.clep for ecm in (13, 13.6)},
 )
 
 zh_qqbb = zh.add_process(
     name="zh_qqbb",
     id=13121,
     label=rf"{zh.label}, $H \rightarrow bb$, $Z \rightarrow qq$",
-    xsecs={13: zh.get_xsec(13) * const.br_h.bb * const.br_z.qq},
+    xsecs={ecm: zh.get_xsec(ecm) * const.br_h.bb * const.br_z.qq for ecm in (13, 13.6)},
 )
 
 wph = vh.add_process(
     name="wph",
     id=13200,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.88696, {
+            "scale": (0.004j, 0.007j),
+            "pdf": 0.018j,
+        }),  # TODO: only preliminary
+    },
 )
 
 wph_tautau = wph.add_process(
     name="wph_tautau",
     id=13210,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={ecm: wph.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
 )
 
 wmh = vh.add_process(
     name="wmh",
     id=13300,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.566359, {
+            "scale": (0.004j, 0.007j),
+            "pdf": 0.018j,
+        }),  # TODO: only preliminary
+    },
 )
-
 wmh_tautau = wmh.add_process(
     name="wmh_tautau",
     id=13310,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={ecm: wmh.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
 )
 
 ggzh = vh.add_process(
@@ -134,28 +171,34 @@ tth = h.add_process(
     name="tth",
     id=15000,
     label=r"$t\bar{t}H$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(5.688, {
+            "scale": (0.060j, 0.093j),
+            "pdf": 0.035j,
+        }),  # TODO: only preliminary
+    },
 )
 
 tth_tautau = tth.add_process(
     name="tth_tautau",
     id=15100,
     label=rf"{tth.label}, $H \rightarrow \tau\tau$",
-    xsecs={13: tth.get_xsec(13) * const.br_h.tt},
+    xsecs={ecm: tth.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
 )
 
 tth_bb = tth.add_process(
     name="tth_bb",
     id=15200,
     label=rf"{tth.label}, $H \rightarrow bb$",
-    xsecs={13: tth.get_xsec(13) * const.br_h.bb},
+    xsecs={ecm: tth.get_xsec(ecm) * const.br_h.bb for ecm in (13, 13.6)},
 )
 
 tth_nonbb = tth.add_process(
     name="tth_nonbb",
     id=15300,
     label=rf"{tth.label}, $H \rightarrow$ non-$bb$",
-    xsecs={13: tth.get_xsec(13) * (1 - const.br_h.bb)},
+    xsecs={ecm: tth.get_xsec(ecm) * (1 - const.br_h.bb) for ecm in (13, 13.6)},
 )
 
 
@@ -180,7 +223,7 @@ hh_ggf = hh.add_process(
 # Naming conventions, cross sections and uncertainties are based on:
 # https://gitlab.cern.ch/hh/naming-conventions
 # Missing uncertainties are based on:
-# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?rev=76
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?rev=89
 
 ggHH_kl_0_kt_1 = hh_ggf.add_process(
     name="ggHH_kl_0_kt_1",
@@ -200,6 +243,11 @@ ggHH_kl_1_kt_1 = hh_ggf.add_process(
     xsecs={
         13: Number(0.031047, {
             "scale": (0.022j, 0.050j),
+            "pdf": 0.03j,
+            "mtop": (0.04j, 0.18j),
+        }),
+        13.6: Number(0.03443, {
+            "scale": (0.021j, 0.049j),
             "pdf": 0.03j,
             "mtop": (0.04j, 0.18j),
         }),
