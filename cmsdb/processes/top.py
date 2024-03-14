@@ -339,13 +339,16 @@ ttz = ttv.add_process(
     },
 )
 
+# based on GenXSecAnalyzer
+# for TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
+# see logs
 ttz_llnunu_m10 = ttz.add_process(
     name="ttz_llnunu_m10",  # non-hadronically decaying Z
     id=3110,
     xsecs={
-        13: Number(0.2529, {
-            "total": 0.0003378,
-        }),  # Based on dataset TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8 in XSDB
+        13: Number(0.2439, {
+            "total": 0.0002995,
+        }),
     },
 )
 

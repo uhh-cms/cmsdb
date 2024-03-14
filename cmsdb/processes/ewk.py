@@ -179,83 +179,83 @@ dy_lep_m50_ht400to600 = dy_lep_m50.add_process(
 dy_lep_m50_ht600to800 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht600to800",
     id=51125,
-    xsecs={13: Number(1.258, {
-        "tot": 0.01194,
+    xsecs={13: Number(1.266, {
+        "tot": 0.0007976,
     })},
 )
 
 dy_lep_m50_ht800to1200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht800to1200",
     id=51126,
-    xsecs={13: Number(0.5598, {
-        "tot": 0.005237,
+    xsecs={13: Number(0.5684, {
+        "tot": 0.0003515,
     })},
 )
 
 dy_lep_m50_ht1200to2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht1200to2500",
     id=51127,
-    xsecs={13: Number(0.1305, {
-        "tot": 0.001241,
+    xsecs={13: Number(0.1332, {
+        "tot": 0.00009084,
     })},
 )
 
 dy_lep_m50_ht2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht2500",
     id=51128,
-    xsecs={13: Number(0.002997, {
-        "tot": 2.837 * 10**(-5),
+    xsecs={13: Number(0.002977, {
+        "tot": 0.000003412,
     })},
 )
 
-# based on datasets DYJetsToLL_LHEFilterPtZ-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL17, NLO)
-# in xsdb.
-# created in 2022 by yuzhe for SMP
+# based on GenXSecAnalyzer
+# for DYJetsToLL_LHEFilterPtZ-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# see logs
 dy_lep_pt0To50 = dy_lep.add_process(
     name="dy_lep_pt0To50",
     id=51510,
-    xsecs={13: Number(1485.0, {
-        "tot": 8.457,
+    xsecs={13: Number(1494.0, {
+        "tot": 1.751,
     })},
 )
 
 dy_lep_pt50To100 = dy_lep.add_process(
     name="dy_lep_pt50To100",
     id=51520,
-    xsecs={13: Number(397.4, {
-        "tot": 2.867,
+    xsecs={13: Number(398.3, {
+        "tot": 0.5600,
     })},
 )
 
 dy_lep_pt100To250 = dy_lep.add_process(
     name="dy_lep_pt100To250",
     id=51530,
-    xsecs={13: Number(97.2, {
-        "tot": 0.7121,
+    xsecs={13: Number(96.58, {
+        "tot": 0.1370,
     })},
 )
 
 dy_lep_pt250To400 = dy_lep.add_process(
     name="dy_lep_pt250To400",
     id=51540,
-    xsecs={13: Number(3.701, {
-        "tot": 0.02487,
+    xsecs={13: Number(3.738, {
+        "tot": 0.005305,
     })},
 )
 
 dy_lep_pt400To650 = dy_lep.add_process(
     name="dy_lep_pt400To650",
     id=51550,
-    xsecs={13: Number(0.5086, {
-        "tot": 0.003171,
+    xsecs={13: Number(0.5050, {
+        "tot": 0.0008169,
     })},
 )
 
 dy_lep_pt650 = dy_lep.add_process(
     name="dy_lep_pt650",
     id=51560,
-    xsecs={13: Number(0.04728, {
-        "tot": 0.0002801,
+    xsecs={13: Number(0.04763, {
+        "tot": 0.00007206,
     })},
 )
 
@@ -285,63 +285,64 @@ w_lnu = w.add_process(
 )
 
 
+# LO cross section, needed for scaling to NNLO:
+# based on GenXSecAnalyzer
+# for WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# see logs
+
+w_lnu_lo_13TeV_xsec = Number(54070.0, {"tot": 18.32})
+
 # LO cross sections, scaled to NNLO
 
-# needed for scaling to NNLO:
-# inclusive LO cross section, based on WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO) in xsdb
-# created in 2021 by sdeng for BTV
-
-w_lo_13TeV_xsec = Number(53870.0, {"tot": 129.7})
-
-# ht bins based on datasets WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO) in xsdb
-# created in 2021 by sdeng for SUS
+# ht bins based on GenXSecAnalyzer
+# for WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# see logs
 w_lnu_ht70To100 = w_lnu.add_process(
     name="w_lnu_ht70To100",
     id=6110,
-    xsecs={13: w_lnu.get_xsec(13) * Number(1264.0, {"tot": 3.696}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(1270.0, {"tot": 0.5259}) / w_lnu_lo_13TeV_xsec},
 )
 
 w_lnu_ht100To200 = w_lnu.add_process(
     name="w_lnu_ht100To200",
     id=6120,
-    xsecs={13: w_lnu.get_xsec(13) * Number(1256.0, {"tot": 3.724}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(1254.0, {"tot": 0.5274}) / w_lnu_lo_13TeV_xsec},
 )
 
 w_lnu_ht200To400 = w_lnu.add_process(
     name="w_lnu_ht200To400",
     id=6130,
-    xsecs={13: w_lnu.get_xsec(13) * Number(335.5, {"tot": 1.007}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(336.6, {"tot": 0.1528}) / w_lnu_lo_13TeV_xsec},
 )
 
 w_lnu_ht400To600 = w_lnu.add_process(
     name="w_lnu_ht400To600",
     id=6140,
-    xsecs={13: w_lnu.get_xsec(13) * Number(45.25, {"tot": 0.136}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(45.21, {"tot": 0.02966}) / w_lnu_lo_13TeV_xsec},
 )
 
 w_lnu_ht600To800 = w_lnu.add_process(
     name="w_lnu_ht600To800",
     id=6150,
-    xsecs={13: w_lnu.get_xsec(13) * Number(10.97, {"tot": 0.03307}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(10.98, {"tot": 0.006997}) / w_lnu_lo_13TeV_xsec},
 )
 
 w_lnu_ht800To1200 = w_lnu.add_process(
     name="w_lnu_ht800To1200",
     id=6160,
-    xsecs={13: w_lnu.get_xsec(13) * Number(4.993, {"tot": 0.01492}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(4.927, {"tot": 0.003229}) / w_lnu_lo_13TeV_xsec},
 )
 
 w_lnu_ht1200To2500 = w_lnu.add_process(
     name="w_lnu_ht1200To2500",
     id=6170,
-    xsecs={13: w_lnu.get_xsec(13) * Number(1.16, {"tot": 0.003605}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(1.157, {"tot": 0.0007663}) / w_lnu_lo_13TeV_xsec},
 )
 
-# NOTE: Summer20UL16 not available in xsdb, Fall17 cross section is used instead
 w_lnu_ht2500 = w_lnu.add_process(
     name="w_lnu_ht2500",
     id=6180,
-    xsecs={13: w_lnu.get_xsec(13) * Number(0.008001, {"tot": 2.486 * 10**(-5)}) / w_lo_13TeV_xsec},
+    xsecs={13: w_lnu.get_xsec(13) * Number(0.02624, {"tot": 0.00002981}) / w_lnu_lo_13TeV_xsec},
 )
 
 
@@ -353,31 +354,34 @@ ewk = Process(
     name="ewk",
     id=7000,
     label="EWK",
-    xsecs={13: Number(0.1)},  # TODO? Sum over the other?
+    xsecs={13: Number(0.1)},  # TODO? Sum over the other? maybe with scaled w xsec to inclusive?
 )
 
-# from EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO) on xsdb
-# created in 2021 by sdeng for HIG
+# based on GenXSecAnalyzer
+# for EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO)
+# see logs
 ewk_wp_lnu_m50 = ewk.add_process(
     name="ewk_wp_lnu_m50",
     id=7100,
-    xsecs={13: Number(39.05, {"tot": 0.0291})},
+    xsecs={13: Number(39.07, {"tot": 0.006454})},
 )
 
-# from EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO) on xsdb
-# created in 2021 by sdeng for HIG
+# based on GenXSecAnalyzer
+# for EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO)
+# see logs
 ewk_wm_lnu_m50 = ewk.add_process(
     name="ewk_wm_lnu_m50",
     id=7200,
-    xsecs={13: Number(32.05, {"tot": 0.02492})},
+    xsecs={13: Number(32.10, {"tot": 0.005308})},
 )
 
-# from EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO) on xsdb
-# created in 2021 by sdeng for HIG
+# based on GenXSecAnalyzer
+# for EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO)
+# see logs
 ewk_z_ll_m50 = ewk.add_process(
     name="ewk_z_ll_m50",
     id=7300,
-    xsecs={13: Number(6.215, {"tot": 0.004456})},
+    xsecs={13: Number(6.206, {"tot": 0.002081})},
 )
 
 
@@ -389,44 +393,53 @@ vv = Process(
     name="vv",
     id=8000,
     label="Di-Boson",
-    xsecs={13: Number(0.1)},  # TODO? Sum over WW WZ and ZZ?
+    xsecs={13: Number(0.1)},  # updated below as the sum over WW, WZ, ZZ
 )
 
 # ZZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
+# old value before update:
+# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(12.13) (LO)
 
 zz = vv.add_process(
     name="zz",
     id=8100,
     label="ZZ",
     xsecs={
-        # old: https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(12.13) (LO)
         13: Number(15.99, {"scale": (0.037j, 0.026j)}),
     },
 )
 
-# from ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL17, NLO) on xsdb
-# created 2023 by yuzhe for SMP
+# based on GenXSecAnalyzer
+# for ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# see logs
 zz_qqll_m4 = zz.add_process(
     name="zz_qqll_m4",
     id=8110,
-    xsecs={13: Number(3.676, {"tot": 0.03147})},  # TODO
+    xsecs={13: Number(3.697, {"tot": 0.002713})},
 )
 
-# from ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8 (Summer20UL17, NLO) on xsdb
-# created 2023 by yuzhe for SUS
+# looking at the generator config:
+# https://raw.githubusercontent.com/cms-sw/genproductions/ce68f8a7ab05f530e0a99124088c08d1cc2bf355/bin/Powheg/production/2017/13TeV/ZZ/ZZ_2L2NU_NNPDF31_13TeV.input  # noqa
+# it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
+# therefore values from GenXSecAnalyzer
+# for ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8 (Summer20UL16, NLO)
+# see logs
 zz_llnunu = zz.add_process(
     name="zz_llnunu",
     id=8120,
-    xsecs={13: Number(0.9738, {"tot": 0.0009971})},  # TODO
+    xsecs={13: Number(0.9738, {"tot": 0.0009971})},
 )
 
-# from ZZTo4L_TuneCP5_13TeV_powheg_pythia8 (Autumn18, NLO) on xsdb
-# created 2020 by sdeng for HIG
-# maybe better from branching ratios?
+# looking at the generator config:
+# https://raw.githubusercontent.com/cms-sw/genproductions/ce68f8a7ab05f530e0a99124088c08d1cc2bf355/bin/Powheg/production/2017/13TeV/ZZ/ZZ_4L_NNPDF31_13TeV.input  # noqa
+# it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
+# therefore values from GenXSecAnalyzer
+# from ZZTo4L_TuneCP5_13TeV_powheg_pythia8 (Summer20UL16, NLO)
+# see logs
 zz_llll = zz.add_process(
     name="zz_llll",
     id=8130,
-    xsecs={13: Number(1.325, {"tot": 0.00122})},  # TODO
+    xsecs={13: Number(1.325, {"tot": 0.00122})},
 )
 
 
@@ -436,53 +449,69 @@ wp_z_xsec = {13: Number(28.55, {"scale": (0.041j, 0.032j)})}
 
 wm_z_xsec = {13: Number(18.19, {"scale": (0.041j, 0.033j)})}
 
+# old value before update:
+# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(25.56) (LO)
 wz = vv.add_process(
     name="wz",
     id=8200,
     label="WZ",
     xsecs={
-        # old: https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(25.56) (LO)
+        # as a remark, the W cross section calculation from
+        # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=28
+        # shows a permille difference in the values calculated directly and the ones added from w+ and w-
         13: wp_z_xsec[13] + wm_z_xsec[13],
     },
 )
 
-# from WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) on xsdb
-# created in 2021 by sdeng for SMP
-# maybe better from branching ratios?
+# looking at the generator config:
+# https://github.com/cms-sw/genproductions/blob/2422e1837f93f875c54f8ace0f02d3dc962eca41/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/WZTo3LNu01j_5f_NLO_FXFX/WZTo3LNu01j_5f_NLO_FXFX_run_card.dat  # noqa
+# it seems that there is a lepton mass cut of 4 GeV for leptons from Z, like in the ZZTo2Q2L channel
+# therefore values from GenXSecAnalyzer
+# for WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# see logs
 wz_lllnu = wz.add_process(
     name="wz_lllnu",
     id=8210,
-    xsecs={13: Number(5.213, {"tot": 0.01618})},
+    xsecs={13: Number(5.218, {"tot": 0.00525})},
 )
 
-# from WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) on xsdb
-# created in 2021 by sdeng for SMP
-# maybe better from branching ratios?
+# based on GenXSecAnalyzer
+# for WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# see logs
 wz_qqll_m4 = wz.add_process(
     name="wz_qqll_m4",
     id=8220,
-    xsecs={13: Number(6.419, {"tot": 0.01984})},
+    xsecs={13: Number(6.431, {"tot": 0.007851})},
 )
 
 # NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
 # itself from https://arxiv.org/pdf/1408.5243.pdf v1
+
+# old value before update:
+# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(75.91) (LO)
 ww = vv.add_process(
     name="ww",
     id=8300,
     label="WW",
     xsecs={
-        # old: https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(75.91) (LO)
         13: Number(118.7, {"scale": (0.025j, 0.022j)}),
     },
 )
 
-# from WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8 (Summer20UL16, NLO) on xsdb
-# created in 2021 by sdeng for SUS
-# maybe better from branching ratios?
+# update vv cross section
+for cme in [13]:
+    vv.set_xsec(cme, ww.get_xsec(cme) + wz.get_xsec(cme) + zz.get_xsec(cme))
+
+# no additional cut found in generator card:
+# https://raw.githubusercontent.com/cms-sw/genproductions/master/bin/Powheg/production/2017/13TeV/WWTo2L2Nu_NNPDF31nnlo_13TeV/WWTo2L2Nu_NNPDF31nnlo_13TeV.input  # noqa
+# therefore, value obtained from branching ratio.
+# Log for GenXSecAnalyzer of
+# WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8 (Summer20UL16, NLO) with Number(11.09, {"tot": 0.00704})
+# also available, but not used here
 ww_lnulnu = ww.add_process(
     name="ww_lnulnu",
     id=8310,
-    xsecs={13: Number(11.09, {"tot": 0.00704})},
+    xsecs={13: ww.get_xsec(13) * const.br_ww.dl},  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
 )
 
 
@@ -494,37 +523,50 @@ vvv = Process(
     name="vvv",
     id=9000,
     label="Triple-Boson",
-    xsecs={13: Number(0.1)},  # TODO, or sum over the ones below?
+    xsecs={13: Number(0.1)},  # updated below as sum over individual processes
 )
 
-# from ZZZ_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO) on xsdb
-# created in 2021 by sdeng for SUS
+# based on GenXSecAnalyzer
+# for ZZZ_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
+# remark: calculated xsec has lower error for sample without ext-1 as not all events were used for calculation of ext-1
+# therefore the value for the sample without ext-1 is taken
+# see logs
 zzz = vvv.add_process(
     name="zzz",
     id=9100,
-    xsecs={13: Number(0.01476, {"tot": 2.5 * 10**(-6)})},
+    xsecs={13: Number(0.01476, {"tot": 2.347 * 10**(-6)})},
 )
 
-# from WZZ_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO) on xsdb
-# created in 2021 by sdeng for SMP
+# based on GenXSecAnalyzer
+# for WZZ_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO, ext-1)
+# remark: calculated xsec is the same for simple sample and ext-1 sample
+# see logs
 wzz = vvv.add_process(
     name="wzz",
     id=9200,
     xsecs={13: Number(0.05709, {"tot": 6.213 * 10**(-5)})},
 )
 
-# from WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO) on xsdb
-# created in 2021 by sdeng for SUS
+# based on GenXSecAnalyzer
+# for WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO, ext-1)
+# remark: calculated xsec is the same for simple sample and ext-1 sample
+# see logs
 wwz = vvv.add_process(
     name="wwz",
     id=9300,
     xsecs={13: Number(0.1707, {"tot": 0.0001757})},
 )
 
-# from WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO) on xsdb
-# created in 2021 by sdeng for SUS
+# based on GenXSecAnalyzer
+# for WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO, ext-1)
+# remark: calculated xsec is the same for simple sample and ext-1 sample
+# see logs
 www = vvv.add_process(
     name="www",
     id=9400,
     xsecs={13: Number(0.2158, {"tot": 0.0002479})},
 )
+
+# update vvv cross section
+for cme in [13]:
+    vvv.set_xsec(cme, www.get_xsec(cme) + wwz.get_xsec(cme) + wzz.get_xsec(cme) + zzz.get_xsec(cme))
