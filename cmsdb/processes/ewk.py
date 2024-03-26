@@ -14,16 +14,29 @@ __all__ = [
     "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500",
     "dy_lep_pt0To50", "dy_lep_pt50To100", "dy_lep_pt100To250", "dy_lep_pt250To400",
     "dy_lep_pt400To650", "dy_lep_pt650",
+    "z",
+    "z_nunu",
+    "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
+    "z_nunu_ht600to800", "z_nunu_ht800to1200", "z_nunu_ht1200to2500",
+    "z_nunu_ht2500",
+    "z_qq",
+    "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800",
     "w",
     "w_lnu",
     "w_lnu_ht70To100", "w_lnu_ht100To200", "w_lnu_ht200To400", "w_lnu_ht400To600",
     "w_lnu_ht600To800", "w_lnu_ht800To1200", "w_lnu_ht1200To2500", "w_lnu_ht2500",
+    "z",
+    "z_nunu",
+    "z_nunu_ht100To200", "z_nunu_ht200To400", "z_nunu_ht400To600", "z_nunu_ht600To800",
+    "z_nunu_ht800To1200", "z_nunu_ht1200To2500", "z_nunu_ht2500",
+    "z_qq",
+    "z_qq_ht200To400", "z_qq_ht400To600", "z_qq_ht600To800", "z_qq_ht800",
     "ewk",
     "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
     "vv",
-    "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll",
-    "wz", "wz_lllnu", "wz_qqll_m4",
-    "ww", "ww_lnulnu",
+    "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll", "zz_qqqq", "zz_nunuqq",
+    "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnuqq",
+    "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
     "zzz", "wzz", "wwz", "www",
 ]
@@ -259,6 +272,143 @@ dy_lep_pt650 = dy_lep.add_process(
     })},
 )
 
+#
+# Z boson (no photon/DY)
+#
+
+z = Process(
+    name="z",
+    id=55000,
+    label="Z + jets",
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+# Z -> neutrinos
+
+z_nunu = z.add_process(
+    name="z_nunu",
+    id=55100,
+    label=rf"{z.label} (Z $\rightarrow$ $\nu\nu$)",
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht100to200 = z_nunu.add_process(
+    name="z_nunu_ht100to200",
+    id=55110,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht200to400 = z_nunu.add_process(
+    name="z_nunu_ht200to400",
+    id=55120,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht400to600 = z_nunu.add_process(
+    name="z_nunu_ht400to600",
+    id=55130,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht600to800 = z_nunu.add_process(
+    name="z_nunu_ht600to800",
+    id=55140,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht800to1200 = z_nunu.add_process(
+    name="z_nunu_ht800to1200",
+    id=55150,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht1200to2500 = z_nunu.add_process(
+    name="z_nunu_ht1200to2500",
+    id=55160,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_nunu_ht2500 = z_nunu.add_process(
+    name="z_nunu_ht2500",
+    id=55170,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+# Z -> quarks
+
+z_qq = z.add_process(
+    name="z_qq",
+    id=55210,
+    label=rf"{z.label} (Z $\rightarrow$ $\text{{q}}\overline{{\text{{q}}}}$)",
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht200to400 = z_qq.add_process(
+    name="z_qq_ht200to400",
+    id=55210,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht400to600 = z_qq.add_process(
+    name="z_qq_ht400to600",
+    id=55220,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht600to800 = z_qq.add_process(
+    name="z_qq_ht600to800",
+    id=55230,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+z_qq_ht800 = z_qq.add_process(
+    name="z_qq_ht800",
+    id=55240,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+)
+
 
 #
 # W boson
@@ -345,6 +495,98 @@ w_lnu_ht2500 = w_lnu.add_process(
     name="w_lnu_ht2500",
     id=6180,
     xsecs={13: w_lnu.get_xsec(13) * Number(0.02624, {"tot": 0.00002981}) / w_lnu_lo_13TeV_xsec},
+)
+
+#
+# Z boson
+#
+
+z = Process(
+    name="z",
+    id=6500,
+    label="Z + jets",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu = z.add_process(
+    name="z_nunu",
+    id=6600,
+    label=rf"{z.label} ($Z \rightarrow \nu\nu$)",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu_ht100To200 = z_nunu.add_process(
+    name="z_nunu_ht100To200",
+    id=6610,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu_ht200To400 = z_nunu.add_process(
+    name="z_nunu_ht200To400",
+    id=6620,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu_ht400To600 = z_nunu.add_process(
+    name="z_nunu_ht400To600",
+    id=6630,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu_ht600To800 = z_nunu.add_process(
+    name="z_nunu_ht600To800",
+    id=6640,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu_ht800To1200 = z_nunu.add_process(
+    name="z_nunu_ht800To1200",
+    id=6650,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu_ht1200To2500 = z_nunu.add_process(
+    name="z_nunu_ht1200To2500",
+    id=6660,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_nunu_ht2500 = z_nunu.add_process(
+    name="z_nunu_ht2500",
+    id=6670,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+
+z_qq = z.add_process(
+    name="z_qq",
+    id=6700,
+    label=rf"{z.label} ($Z \rightarrow q\bar{{q}}$)",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_qq_ht200To400 = z_qq.add_process(
+    name="z_qq_ht200To400",
+    id=6710,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_qq_ht400To600 = z_qq.add_process(
+    name="z_qq_ht400To600",
+    id=6720,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_qq_ht600To800 = z_qq.add_process(
+    name="z_qq_ht600To800",
+    id=6730,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+z_qq_ht800 = z_qq.add_process(
+    name="z_qq_ht800",
+    id=6740,
+    xsecs={13: Number(0.1)},  # TODO
 )
 
 
@@ -444,6 +686,17 @@ zz_llll = zz.add_process(
     xsecs={13: Number(1.325, {"tot": 0.00122})},
 )
 
+zz_qqqq = zz.add_process(
+    name="zz_qqqq",
+    id=8140,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+zz_nunuqq = zz.add_process(
+    name="zz_nunuqq",
+    id=8150,
+    xsecs={13: Number(0.1)},  # TODO
+)
 
 # WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
 # can this be used too? https://arxiv.org/pdf/2110.11231.pdf -> actual measurement, no theory prediction
@@ -486,6 +739,12 @@ wz_qqll_m4 = wz.add_process(
     xsecs={13: Number(6.431, {"tot": 0.007851})},
 )
 
+wz_lnuqq = wz.add_process(
+    name="wz_lnuqq",
+    id=8230,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
 # NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
 # itself from https://arxiv.org/pdf/1408.5243.pdf v1
 
@@ -514,6 +773,18 @@ ww_lnulnu = ww.add_process(
     name="ww_lnulnu",
     id=8310,
     xsecs={13: ww.get_xsec(13) * const.br_ww.dl},  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
+)
+
+ww_lnuqq = ww.add_process(
+    name="ww_lnuqq",
+    id=8320,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ww_qqqq = ww.add_process(
+    name="ww_qqqq",
+    id=8330,
+    xsecs={13: Number(0.1)},  # TODO
 )
 
 
