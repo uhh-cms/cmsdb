@@ -341,7 +341,7 @@ ttz = ttv.add_process(
 
 # based on GenXSecAnalyzer
 # for TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 ttz_llnunu_m10 = ttz.add_process(
     name="ttz_llnunu_m10",  # non-hadronically decaying Z
     id=3110,
