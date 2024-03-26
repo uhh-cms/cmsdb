@@ -69,19 +69,19 @@ dy_lep_m50 = dy_lep.add_process(
 # if needed for scaling from NLO to NNLO:
 # NLO cross section, based on GenXSecAnalyzer for
 # DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# see xsec_DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8.log
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 
 dy_nlo_13TeV_xsec = Number(6421.0, {"tot": 11.25})
 
 # if needed for scaling from LO to NNLO:
 # LO cross section, based on GenXSecAnalyzer for DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# see xsec_DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8.log
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 
 dy_lo_13TeV_xsec = Number(5395.0, {"tot": 1.858})
 
 # based on GenXSecAnalyzer
 # for datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
@@ -116,7 +116,7 @@ dy_lep_m50_4j = dy_lep_m50.add_process(
 
 # based on GenXSecAnalyzer
 # for DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 dy_lep_0j = dy_lep.add_process(
     name="dy_lep_0j",
     id=51200,
@@ -143,7 +143,7 @@ dy_lep_2j = dy_lep.add_process(
 
 # based on GenXSecAnalyzer
 # for DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000
 dy_lep_m50_ht70to100 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht70to100",
     id=51121,
@@ -210,7 +210,7 @@ dy_lep_m50_ht2500 = dy_lep_m50.add_process(
 
 # based on GenXSecAnalyzer
 # for DYJetsToLL_LHEFilterPtZ-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000
 dy_lep_pt0To50 = dy_lep.add_process(
     name="dy_lep_pt0To50",
     id=51510,
@@ -288,7 +288,7 @@ w_lnu = w.add_process(
 # LO cross section, needed for scaling to NNLO:
 # based on GenXSecAnalyzer
 # for WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 
 w_lnu_lo_13TeV_xsec = Number(54070.0, {"tot": 18.32})
 
@@ -296,7 +296,7 @@ w_lnu_lo_13TeV_xsec = Number(54070.0, {"tot": 18.32})
 
 # ht bins based on GenXSecAnalyzer
 # for WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 w_lnu_ht70To100 = w_lnu.add_process(
     name="w_lnu_ht70To100",
     id=6110,
@@ -339,6 +339,8 @@ w_lnu_ht1200To2500 = w_lnu.add_process(
     xsecs={13: w_lnu.get_xsec(13) * Number(1.157, {"tot": 0.0007663}) / w_lnu_lo_13TeV_xsec},
 )
 
+# this ht bin needs the command:
+# ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000
 w_lnu_ht2500 = w_lnu.add_process(
     name="w_lnu_ht2500",
     id=6180,
@@ -359,7 +361,7 @@ ewk = Process(
 
 # based on GenXSecAnalyzer
 # for EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 ewk_wp_lnu_m50 = ewk.add_process(
     name="ewk_wp_lnu_m50",
     id=7100,
@@ -368,7 +370,7 @@ ewk_wp_lnu_m50 = ewk.add_process(
 
 # based on GenXSecAnalyzer
 # for EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 ewk_wm_lnu_m50 = ewk.add_process(
     name="ewk_wm_lnu_m50",
     id=7200,
@@ -377,7 +379,7 @@ ewk_wm_lnu_m50 = ewk.add_process(
 
 # based on GenXSecAnalyzer
 # for EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8 (Summer20UL16, LO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 ewk_z_ll_m50 = ewk.add_process(
     name="ewk_z_ll_m50",
     id=7300,
@@ -411,7 +413,7 @@ zz = vv.add_process(
 
 # based on GenXSecAnalyzer
 # for ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000
 zz_qqll_m4 = zz.add_process(
     name="zz_qqll_m4",
     id=8110,
@@ -423,7 +425,7 @@ zz_qqll_m4 = zz.add_process(
 # it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
 # therefore values from GenXSecAnalyzer
 # for ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 zz_llnunu = zz.add_process(
     name="zz_llnunu",
     id=8120,
@@ -435,7 +437,7 @@ zz_llnunu = zz.add_process(
 # it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
 # therefore values from GenXSecAnalyzer
 # from ZZTo4L_TuneCP5_13TeV_powheg_pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 zz_llll = zz.add_process(
     name="zz_llll",
     id=8130,
@@ -468,7 +470,7 @@ wz = vv.add_process(
 # it seems that there is a lepton mass cut of 4 GeV for leptons from Z, like in the ZZTo2Q2L channel
 # therefore values from GenXSecAnalyzer
 # for WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 wz_lllnu = wz.add_process(
     name="wz_lllnu",
     id=8210,
@@ -477,7 +479,7 @@ wz_lllnu = wz.add_process(
 
 # based on GenXSecAnalyzer
 # for WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000
 wz_qqll_m4 = wz.add_process(
     name="wz_qqll_m4",
     id=8220,
@@ -530,7 +532,7 @@ vvv = Process(
 # for ZZZ_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
 # remark: calculated xsec has lower error for sample without ext-1 as not all events were used for calculation of ext-1
 # therefore the value for the sample without ext-1 is taken
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000
 zzz = vvv.add_process(
     name="zzz",
     id=9100,
@@ -540,7 +542,7 @@ zzz = vvv.add_process(
 # based on GenXSecAnalyzer
 # for WZZ_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO, ext-1)
 # remark: calculated xsec is the same for simple sample and ext-1 sample
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17_ext1-v1 -n 5000000
 wzz = vvv.add_process(
     name="wzz",
     id=9200,
@@ -550,7 +552,7 @@ wzz = vvv.add_process(
 # based on GenXSecAnalyzer
 # for WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO, ext-1)
 # remark: calculated xsec is the same for simple sample and ext-1 sample
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17_ext1-v1 -n 5000000
 wwz = vvv.add_process(
     name="wwz",
     id=9300,
@@ -560,7 +562,7 @@ wwz = vvv.add_process(
 # based on GenXSecAnalyzer
 # for WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO, ext-1)
 # remark: calculated xsec is the same for simple sample and ext-1 sample
-# see logs
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17_ext1-v1 -n 5000000
 www = vvv.add_process(
     name="www",
     id=9400,
