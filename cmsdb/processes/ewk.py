@@ -65,11 +65,13 @@ dy_lep = dy.add_process(
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
-    xsecs={13: Number(6077.22, {
-        "integration": 1.49,  # error true? or is it error for Z-> mu mu?
-        "scale": 0.02j,
-        "pdf": 14.78,
-    })},
+    xsecs={
+        13: Number(6077.22, {
+            "integration": 1.49,  # error true? or is it error for Z-> mu mu?
+            "scale": 0.02j,
+            "pdf": 14.78,
+        }),
+    },
 )
 
 
@@ -92,33 +94,41 @@ dy_lep_m50_lo_13TeV_xsec = Number(5395.0, {"tot": 1.858})
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
-    xsecs={13: Number(926.8, {
-        "tot": 0.3597,
-    })},
+    xsecs={
+        13: Number(926.8, {
+            "tot": 0.3597,
+        }),
+    },
 )
 
 dy_lep_m50_2j = dy_lep_m50.add_process(
     name="dy_lep_m50_2j",
     id=51112,
-    xsecs={13: Number(294.5, {
-        "tot": 0.1223,
-    })},
+    xsecs={
+        13: Number(294.5, {
+            "tot": 0.1223,
+        }),
+    },
 )
 
 dy_lep_m50_3j = dy_lep_m50.add_process(
     name="dy_lep_m50_3j",
     id=51113,
-    xsecs={13: Number(86.53, {
-        "tot": 0.03853,
-    })},
+    xsecs={
+        13: Number(86.53, {
+            "tot": 0.03853,
+        }),
+    },
 )
 
 dy_lep_m50_4j = dy_lep_m50.add_process(
     name="dy_lep_m50_4j",
     id=51114,
-    xsecs={13: Number(41.21, {
-        "tot": 0.02392,
-    })},
+    xsecs={
+        13: Number(41.21, {
+            "tot": 0.02392,
+        }),
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -127,26 +137,34 @@ dy_lep_m50_4j = dy_lep_m50.add_process(
 dy_lep_0j = dy_lep.add_process(
     name="dy_lep_0j",
     id=51200,
-    xsecs={13: Number(5134.0, {
-        "tot": 5.365,
-    })},
+    xsecs={
+        13: Number(5134.0, {
+            "tot": 5.365,
+        }),
+    },
 )
 
 dy_lep_1j = dy_lep.add_process(
     name="dy_lep_1j",
     id=51300,
-    xsecs={13: Number(952.7, {
-        "tot": 2.174,
-    })},
+    xsecs={
+        13: Number(952.7, {
+            "tot": 2.174,
+        }),
+    },
 )
 
 dy_lep_2j = dy_lep.add_process(
     name="dy_lep_2j",
     id=51400,
-    xsecs={13: Number(359.1, {
-        "tot": 1.533,
-    })},
+    xsecs={
+        13: Number(359.1, {
+            "tot": 1.533,
+        }),
+    },
 )
+
+# LO cross sections, scaled to NNLO
 
 # based on GenXSecAnalyzer
 # for DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
@@ -154,65 +172,65 @@ dy_lep_2j = dy_lep.add_process(
 dy_lep_m50_ht70to100 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht70to100",
     id=51121,
-    xsecs={13: Number(139.9, {
-        "tot": 0.5747,
-    })},
+    xsecs={
+        13: Number(139.9, {"tot": 0.5747}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 dy_lep_m50_ht100to200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht100to200",
     id=51122,
-    xsecs={13: Number(140.1, {
-        "tot": 0.5875,
-    })},
+    xsecs={
+        13: Number(140.1, {"tot": 0.5875}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 dy_lep_m50_ht200to400 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht200to400",
     id=51123,
-    xsecs={13: Number(38.38, {
-        "tot": 0.01628,
-    })},
+    xsecs={
+        13: Number(38.38, {"tot": 0.01628}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 dy_lep_m50_ht400to600 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht400to600",
     id=51124,
-    xsecs={13: Number(5.212, {
-        "tot": 0.003149,
-    })},
+    xsecs={
+        13: Number(5.212, {"tot": 0.003149}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 dy_lep_m50_ht600to800 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht600to800",
     id=51125,
-    xsecs={13: Number(1.266, {
-        "tot": 0.0007976,
-    })},
+    xsecs={
+        13: Number(1.266, {"tot": 0.0007976}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 dy_lep_m50_ht800to1200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht800to1200",
     id=51126,
-    xsecs={13: Number(0.5684, {
-        "tot": 0.0003515,
-    })},
+    xsecs={
+        13: Number(0.5684, {"tot": 0.0003515}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 dy_lep_m50_ht1200to2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht1200to2500",
     id=51127,
-    xsecs={13: Number(0.1332, {
-        "tot": 0.00009084,
-    })},
+    xsecs={
+        13: Number(0.1332, {"tot": 0.00009084}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 dy_lep_m50_ht2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht2500",
     id=51128,
-    xsecs={13: Number(0.002977, {
-        "tot": 0.000003412,
-    })},
+    xsecs={
+        13: Number(0.002977, {"tot": 0.000003412}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -221,49 +239,61 @@ dy_lep_m50_ht2500 = dy_lep_m50.add_process(
 dy_lep_pt0to50 = dy_lep.add_process(
     name="dy_lep_pt0to50",
     id=51510,
-    xsecs={13: Number(1494.0, {
-        "tot": 1.751,
-    })},
+    xsecs={
+        13: Number(1494.0, {
+            "tot": 1.751,
+        }),
+    },
 )
 
 dy_lep_pt50to100 = dy_lep.add_process(
     name="dy_lep_pt50to100",
     id=51520,
-    xsecs={13: Number(398.3, {
-        "tot": 0.5600,
-    })},
+    xsecs={
+        13: Number(398.3, {
+            "tot": 0.5600,
+        }),
+    },
 )
 
 dy_lep_pt100to250 = dy_lep.add_process(
     name="dy_lep_pt100to250",
     id=51530,
-    xsecs={13: Number(96.58, {
-        "tot": 0.1370,
-    })},
+    xsecs={
+        13: Number(96.58, {
+            "tot": 0.1370,
+        }),
+    },
 )
 
 dy_lep_pt250to400 = dy_lep.add_process(
     name="dy_lep_pt250to400",
     id=51540,
-    xsecs={13: Number(3.738, {
-        "tot": 0.005305,
-    })},
+    xsecs={
+        13: Number(3.738, {
+            "tot": 0.005305,
+        }),
+    },
 )
 
 dy_lep_pt400to650 = dy_lep.add_process(
     name="dy_lep_pt400to650",
     id=51550,
-    xsecs={13: Number(0.5050, {
-        "tot": 0.0008169,
-    })},
+    xsecs={
+        13: Number(0.5050, {
+            "tot": 0.0008169,
+        }),
+    },
 )
 
 dy_lep_pt650 = dy_lep.add_process(
     name="dy_lep_pt650",
     id=51560,
-    xsecs={13: Number(0.04763, {
-        "tot": 0.00007206,
-    })},
+    xsecs={
+        13: Number(0.04763, {
+            "tot": 0.00007206,
+        }),
+    },
 )
 
 #
@@ -450,10 +480,12 @@ w_lnu = w.add_process(
     name="w_lnu",
     id=6100,
     label=rf"{w.label} ($W \rightarrow l\nu$)",
-    xsecs={13: const.n_leps * Number(20508.9, {
-        "scale": (165.7, 88.2),
-        "pdf": 770.9,
-    })},
+    xsecs={
+        13: const.n_leps * Number(20508.9, {
+            "scale": (165.7, 88.2),
+            "pdf": 770.9,
+        }),
+    },
 )
 
 
@@ -472,43 +504,57 @@ w_lnu_lo_13TeV_xsec = Number(54070.0, {"tot": 18.32})
 w_lnu_ht70to100 = w_lnu.add_process(
     name="w_lnu_ht70to100",
     id=6110,
-    xsecs={13: w_lnu.get_xsec(13) * Number(1270.0, {"tot": 0.5259}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(1270.0, {"tot": 0.5259}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 w_lnu_ht100to200 = w_lnu.add_process(
     name="w_lnu_ht100to200",
     id=6120,
-    xsecs={13: w_lnu.get_xsec(13) * Number(1254.0, {"tot": 0.5274}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(1254.0, {"tot": 0.5274}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 w_lnu_ht200to400 = w_lnu.add_process(
     name="w_lnu_ht200to400",
     id=6130,
-    xsecs={13: w_lnu.get_xsec(13) * Number(336.6, {"tot": 0.1528}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(336.6, {"tot": 0.1528}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 w_lnu_ht400to600 = w_lnu.add_process(
     name="w_lnu_ht400to600",
     id=6140,
-    xsecs={13: w_lnu.get_xsec(13) * Number(45.21, {"tot": 0.02966}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(45.21, {"tot": 0.02966}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 w_lnu_ht600to800 = w_lnu.add_process(
     name="w_lnu_ht600to800",
     id=6150,
-    xsecs={13: w_lnu.get_xsec(13) * Number(10.98, {"tot": 0.006997}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(10.98, {"tot": 0.006997}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 w_lnu_ht800to1200 = w_lnu.add_process(
     name="w_lnu_ht800to1200",
     id=6160,
-    xsecs={13: w_lnu.get_xsec(13) * Number(4.927, {"tot": 0.003229}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(4.927, {"tot": 0.003229}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 w_lnu_ht1200to2500 = w_lnu.add_process(
     name="w_lnu_ht1200to2500",
     id=6170,
-    xsecs={13: w_lnu.get_xsec(13) * Number(1.157, {"tot": 0.0007663}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(1.157, {"tot": 0.0007663}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 # this ht bin needs the command:
@@ -516,7 +562,9 @@ w_lnu_ht1200to2500 = w_lnu.add_process(
 w_lnu_ht2500 = w_lnu.add_process(
     name="w_lnu_ht2500",
     id=6180,
-    xsecs={13: w_lnu.get_xsec(13) * Number(0.02624, {"tot": 0.00002981}) / w_lnu_lo_13TeV_xsec},
+    xsecs={
+        13: Number(0.02624, {"tot": 0.00002981}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+    },
 )
 
 #
@@ -536,7 +584,9 @@ ewk = Process(
 ewk_wp_lnu_m50 = ewk.add_process(
     name="ewk_wp_lnu_m50",
     id=7100,
-    xsecs={13: Number(39.07, {"tot": 0.006454})},
+    xsecs={
+        13: Number(39.07, {"tot": 0.006454}),
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -545,7 +595,9 @@ ewk_wp_lnu_m50 = ewk.add_process(
 ewk_wm_lnu_m50 = ewk.add_process(
     name="ewk_wm_lnu_m50",
     id=7200,
-    xsecs={13: Number(32.10, {"tot": 0.005308})},
+    xsecs={
+        13: Number(32.10, {"tot": 0.005308}),
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -554,7 +606,9 @@ ewk_wm_lnu_m50 = ewk.add_process(
 ewk_z_ll_m50 = ewk.add_process(
     name="ewk_z_ll_m50",
     id=7300,
-    xsecs={13: Number(6.206, {"tot": 0.002081})},
+    xsecs={
+        13: Number(6.206, {"tot": 0.002081}),
+    },
 )
 
 
@@ -588,7 +642,9 @@ zz = vv.add_process(
 zz_qqll_m4 = zz.add_process(
     name="zz_qqll_m4",
     id=8110,
-    xsecs={13: Number(3.697, {"tot": 0.002713})},
+    xsecs={
+        13: Number(3.697, {"tot": 0.002713}),
+    },
 )
 
 # looking at the generator config:
@@ -600,7 +656,9 @@ zz_qqll_m4 = zz.add_process(
 zz_llnunu_m4 = zz.add_process(
     name="zz_llnunu_m4",
     id=8120,
-    xsecs={13: Number(0.9738, {"tot": 0.0009971})},
+    xsecs={
+        13: Number(0.9738, {"tot": 0.0009971}),
+    },
 )
 
 # looking at the generator config:
@@ -612,7 +670,9 @@ zz_llnunu_m4 = zz.add_process(
 zz_llll_m4 = zz.add_process(
     name="zz_llll_m4",
     id=8130,
-    xsecs={13: Number(1.325, {"tot": 0.00122})},
+    xsecs={
+        13: Number(1.325, {"tot": 0.00122}),
+    },
 )
 
 # no additional cut found in generator card in MCM:
@@ -624,7 +684,9 @@ zz_llll_m4 = zz.add_process(
 zz_qqqq = zz.add_process(
     name="zz_qqqq",
     id=8140,
-    xsecs={13: zz.get_xsec(13) * const.br_z["qq"] * const.br_z["qq"]},  # value around 7.8 -> discrepancy???
+    xsecs={
+        13: zz.get_xsec(13) * const.br_z["qq"] * const.br_z["qq"],  # value around 7.8
+    },
 )
 
 # no branching ratio Z->nunu available, so taking values from GenXSecAnalyzer
@@ -633,14 +695,20 @@ zz_qqqq = zz.add_process(
 zz_nunuqq = zz.add_process(
     name="zz_nunuqq",
     id=8150,
-    xsecs={13: Number(4.557, {"tot": 0.004843})},
+    xsecs={
+        13: Number(4.557, {"tot": 0.004843}),
+    },
 )
 
 # WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
 # can this be used too? https://arxiv.org/pdf/2110.11231.pdf -> actual measurement, no theory prediction
-wp_z_xsec = {13: Number(28.55, {"scale": (0.041j, 0.032j)})}
+wp_z_xsec = {
+    13: Number(28.55, {"scale": (0.041j, 0.032j)}),
+}
 
-wm_z_xsec = {13: Number(18.19, {"scale": (0.041j, 0.033j)})}
+wm_z_xsec = {
+    13: Number(18.19, {"scale": (0.041j, 0.033j)}),
+}
 
 # old value before update:
 # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(25.56) (LO)
@@ -665,7 +733,9 @@ wz = vv.add_process(
 wz_lllnu_m4 = wz.add_process(
     name="wz_lllnu_m4",
     id=8210,
-    xsecs={13: Number(5.218, {"tot": 0.00525})},
+    xsecs={
+        13: Number(5.218, {"tot": 0.00525}),
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -674,7 +744,9 @@ wz_lllnu_m4 = wz.add_process(
 wz_qqll_m4 = wz.add_process(
     name="wz_qqll_m4",
     id=8220,
-    xsecs={13: Number(6.431, {"tot": 0.007851})},
+    xsecs={
+        13: Number(6.431, {"tot": 0.007851}),
+    },
 )
 
 
@@ -687,7 +759,9 @@ wz_qqll_m4 = wz.add_process(
 wz_lnuqq = wz.add_process(
     name="wz_lnuqq",
     id=8230,
-    xsecs={13: wz.get_xsec(13) * const.br_w["lep"] * const.br_z["qq"]},  # value around 10.65 -> discrepancy???
+    xsecs={
+        13: wz.get_xsec(13) * const.br_w["lep"] * const.br_z["qq"],  # value around 10.65
+    },
 )
 
 # NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
@@ -717,7 +791,9 @@ for cme in [13]:
 ww_lnulnu = ww.add_process(
     name="ww_lnulnu",
     id=8310,
-    xsecs={13: ww.get_xsec(13) * const.br_ww.dl},  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
+    xsecs={
+        13: ww.get_xsec(13) * const.br_ww.dl,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
+    },
 )
 
 # no additional cut found in generator card in MCM:
@@ -729,7 +805,9 @@ ww_lnulnu = ww.add_process(
 ww_lnuqq = ww.add_process(
     name="ww_lnuqq",
     id=8320,
-    xsecs={13: ww.get_xsec(13) * const.br_ww.sl},  # value around 50.06 for comparison to GenXSecAnalyzer NLO result
+    xsecs={
+        13: ww.get_xsec(13) * const.br_ww.sl,  # value around 50.06 for comparison to GenXSecAnalyzer NLO result
+    },
 )
 
 # no additional cut found in generator card in MCM:
@@ -741,7 +819,9 @@ ww_lnuqq = ww.add_process(
 ww_qqqq = ww.add_process(
     name="ww_qqqq",
     id=8330,
-    xsecs={13: ww.get_xsec(13) * const.br_ww.fh},  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
+    xsecs={
+        13: ww.get_xsec(13) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
+    },
 )
 
 
@@ -764,7 +844,9 @@ vvv = Process(
 zzz = vvv.add_process(
     name="zzz",
     id=9100,
-    xsecs={13: Number(0.01476, {"tot": 2.347 * 10**(-6)})},
+    xsecs={
+        13: Number(0.01476, {"tot": 2.347 * 10**(-6)}),
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -774,7 +856,9 @@ zzz = vvv.add_process(
 wzz = vvv.add_process(
     name="wzz",
     id=9200,
-    xsecs={13: Number(0.05709, {"tot": 6.213 * 10**(-5)})},
+    xsecs={
+        13: Number(0.05709, {"tot": 6.213 * 10**(-5)}),
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -784,7 +868,9 @@ wzz = vvv.add_process(
 wwz = vvv.add_process(
     name="wwz",
     id=9300,
-    xsecs={13: Number(0.1707, {"tot": 0.0001757})},
+    xsecs={
+        13: Number(0.1707, {"tot": 0.0001757}),
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -794,7 +880,9 @@ wwz = vvv.add_process(
 www = vvv.add_process(
     name="www",
     id=9400,
-    xsecs={13: Number(0.2158, {"tot": 0.0002479})},
+    xsecs={
+        13: Number(0.2158, {"tot": 0.0002479}),
+    },
 )
 
 # update vvv cross section
