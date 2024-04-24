@@ -6,7 +6,7 @@ Helpful utilities.
 
 __all__ = ["DotDict"]
 
-
+from order import Process
 from collections import OrderedDict
 
 
@@ -64,3 +64,15 @@ class DotDict(OrderedDict):
         """
         wrap = lambda d: cls((k, wrap(v)) for k, v in d.items()) if isinstance(d, dict) else d
         return wrap(OrderedDict(*args, **kwargs))
+
+
+def multiply_xsecs(base_proc: Process, factor: float):
+    """
+    Helper to multiply all cross sections of a base process *base_proc*
+    with some value *factor*
+    """
+    xsecs = {
+        ecm: base_proc.get_xsec(ecm) * factor
+        for ecm in base_proc.xsecs.keys()
+    }
+    return xsecs

@@ -67,15 +67,23 @@ dy_lep = dy.add_process(
 
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=27
+# and for 13.6 TeV, based on:
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
-    xsecs={13: const.n_leps * Number(6077.22, {
-        "integration": 1.49,
-        "scale": 0.02j,
-        "pdf": 14.78,
-    })},
+    xsecs={
+        13: Number(6077.22, {
+            "integration": 1.49,
+            "scale": 0.02j,
+            "pdf": 14.78,
+        }),
+        13.6: const.n_leps * Number(2091.7, {
+            "scale": (0.008j, 0.013j),
+            "pdf": 0.01j,
+        }),
+    },
 )
 
 # based on datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
@@ -359,15 +367,30 @@ w = Process(
 
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=27
+# and for 13.6 TeV, based on:
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
+
+wm_lnu_xs_13p6 = const.n_leps * Number(9009.5, {
+    "scale": (0.014j, 0.012j),
+    "pdf": 0.008j,
+})
+wp_lnu_xs_13p6 = const.n_leps * Number(12122.5, {
+    "scale": (0.011j, 0.014),
+    "pdf": 0.007j,
+})
 
 w_lnu = w.add_process(
     name="w_lnu",
     id=6100,
     label=rf"{w.label} ($W \rightarrow l\nu$)",
-    xsecs={13: const.n_leps * Number(20508.9, {
-        "scale": (165.7, 88.2),
-        "pdf": 770.9,
-    })},
+    xsecs={
+        13: const.n_leps * Number(20508.9, {
+            "scale": (165.7, 88.2),
+            "pdf": 770.9,
+        }),
+        # addition necessary due to absence of combined value
+        13.6: wm_lnu_xs_13p6 + wp_lnu_xs_13p6,
+    },
 )
 
 # LO cross sections, scaled to NNLO
