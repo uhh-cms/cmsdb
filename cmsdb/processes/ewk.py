@@ -238,6 +238,7 @@ w_lnu = w.add_process(
             "scale": (165.7, 88.2),
             "pdf": 770.9,
         }),
+        # addition necessary due to absence of combined value
         13.6: wm_lnu_xs_13p6 + wp_lnu_xs_13p6,
     },
 )
