@@ -51,9 +51,9 @@ h_ggf = h.add_process(
     label=r"$H_{ggf}$",
     xsecs={
         13: Number(4.858E+01, {
-            "pdf": 3.2j,
-            "th": (4.6j, 6.7j),
-            "th_gaussian": 3.9j,
+            "pdf": 0.032j,
+            "th": (0.046j, 0.067j),
+            "th_gaussian": 0.039j,
         }),
         13.6: Number(52.23, {  # value for mH=125 GeV
             "pdf": 0.032j,
@@ -76,8 +76,8 @@ h_vbf = h.add_process(
     label=r"$H_{vbf}$",
     xsecs={
         13: Number(3.782E+00, {
-            "pdf": 2.1j,
-            "scale": (0.4j, 0.3j),
+            "pdf": 0.021j,
+            "scale": (0.004j, 0.003j),
         }),
         13.6: Number(4.078, {  # value for mH=125 GeV
             "scale": (0.005j, 0.003j),
@@ -106,8 +106,8 @@ zh = vh.add_process(
     label="ZH",
     xsecs={
         13: Number(8.839E-01, {
-            "scale": (3.8j, 3.1j),
-            "pdf": 1.6j,
+            "scale": (0.038j, 0.031j),
+            "pdf": 0.016j,
         }),
         13.6: Number(0.9439, {  # value for mH=125 GeV
             "scale": (0.037j, 0.032j),
@@ -142,8 +142,8 @@ wph = vh.add_process(
     id=13200,
     xsecs={
         13: Number(8.400E-01, {
-            "pdf": 1.9j,
-            "scale": (0.5j, 0.7j),
+            "pdf": 0.019j,
+            "scale": (0.005j, 0.007j),
         }),
         13.6: Number(0.8889, {  # value for mH=125 GeV
             "scale": (0.004j, 0.007j),
@@ -163,8 +163,8 @@ wmh = vh.add_process(
     id=13300,
     xsecs={
         13: Number(5.328E-01, {
-            "pdf": 1.9j,
-            "scale": (0.5j, 0.7j),
+            "pdf": 0.019j,
+            "scale": (0.005j, 0.007j),
         }),
         13.6: Number(0.5677, {  # value for mH=125 GeV
             "scale": (0.004j, 0.007j),
@@ -184,8 +184,8 @@ ggzh = vh.add_process(
     id=14000,
     xsecs={
         13: Number(0.1227, {
-            "scale": (25.1j, 18.9j),
-            "pdf": 1.9j,
+            "scale": (0.251j, 0.189j),
+            "pdf": 0.019j,
         }),
     },
 )
@@ -204,8 +204,8 @@ tth = h.add_process(
     label=r"$t\bar{t}H$",
     xsecs={
         13: Number(5.071E-01, {
-            "scale": (5.8j, 9.2j),
-            "pdf": 3.6j,
+            "scale": (0.058j, 0.092j),
+            "pdf": 0.036j,
         }),
         13.6: Number(0.5700, {  # value for mH=125 GeV
             "scale": (0.060j, 0.093j),
@@ -257,11 +257,11 @@ hh_ggf = hh.add_process(
     label=r"$HH_{ggf}$",
     xsecs={
         13: Number(31.05, {
-            "pdf": 3.0j,
-            "scale": (6j, 23j),
+            "pdf": 0.03j,
+            "scale": (0.06j, 0.23j),
         }),
         14: Number(34.43,
-    {"pdf": 3.0j, "scale": (6j, 23j)})},  # fb
+    {"pdf": 0.03j, "scale": (0.06j, 0.23j)})},  # fb
 )
 
 # Naming conventions, cross sections and uncertainties are based on:
@@ -332,8 +332,8 @@ hh_vbf = hh.add_process(
     label=r"$HH_{vbf}$",
     xsecs={
         13: Number(1.726, {
-            "scale": (0.03j, 0.04j),
-            "pdf": 2.1j,
+            "scale": (0.0003j, 0.0004j),
+            "pdf": 0.021j,
         }),
     },
 )
