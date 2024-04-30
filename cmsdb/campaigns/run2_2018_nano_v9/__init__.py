@@ -31,6 +31,8 @@ cpn = campaign_run2_2018_nano_v9 = Campaign(
     },
 )
 
+# trailing imports to load datasets
+import cmsdb.campaigns.run2_2018_nano_v9.data #noqa
 
 #
 # datasets
