@@ -118,7 +118,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_muoneg_e",
     id=14783435,
-    processes=[procs.data_muoneg_e],
+    processes=[procs.data_muoneg],
     keys=[
         "/MuonEG/Run2022E-22Sep2023-v1/NANOAOD",  # noqa
     ],
@@ -132,7 +132,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_muoneg_f",
     id=14784482,
-    processes=[procs.data_muoneg_f],
+    processes=[procs.data_muoneg],
     keys=[
         "/MuonEG/Run2022F-22Sep2023-v1/NANOAOD",  # noqa
     ],
@@ -146,7 +146,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_muoneg_g",
     id=14784485,
-    processes=[procs.data_muoneg_g],
+    processes=[procs.data_muoneg],
     keys=[
         "/MuonEG/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
     ],
