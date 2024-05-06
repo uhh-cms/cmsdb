@@ -108,3 +108,51 @@ cpn.add_dataset(
         "era": "G",
     },
 )
+
+
+#
+# MuonEG
+#
+
+
+cpn.add_dataset(
+    name="data_muoneg_e",
+    id=14783435,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022E-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=29,
+    n_events=12873327,
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_f",
+    id=14784482,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022F-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=95,
+    n_events=38219969,
+    aux={
+        "era": "F",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_g",
+    id=14784485,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=27,
+    n_events=6238527,
+    aux={
+        "era": "G",
+    },
+)
