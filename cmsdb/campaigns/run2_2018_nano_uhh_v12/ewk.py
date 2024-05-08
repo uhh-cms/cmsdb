@@ -415,8 +415,6 @@ cpn.add_dataset(
     n_events=66189554,
 )
 
-
-
 cpn.add_dataset(
     name="w_lnu_ht100to200_madgraph",
     id=14222479,
@@ -791,8 +789,6 @@ cpn.add_dataset(
     n_files=10,
     n_events=9961999,
 )
-
-
 
 cpn.add_dataset(
     name="www_amcatnlo",

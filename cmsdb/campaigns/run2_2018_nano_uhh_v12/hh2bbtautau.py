@@ -754,8 +754,6 @@ cpn.add_dataset(
     n_events=400000,
 )
 
-
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m270_madgraph",
     id=14310100,
@@ -866,8 +864,6 @@ cpn.add_dataset(
     n_events=194000,
 )
 
-
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m650_madgraph",
     id=14310036,
@@ -878,7 +874,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=200000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m700_madgraph",

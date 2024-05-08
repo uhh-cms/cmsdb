@@ -52,7 +52,7 @@ cpn.add_dataset(
     n_events=4885835,
 )
 
-#z -> ll , h -> bb
+# z -> ll , h -> bb
 cpn.add_dataset(
     name="gg_zh_zll_hbb_powheg",
     id=14340023,
@@ -64,18 +64,16 @@ cpn.add_dataset(
     n_events=4891000,
 )
 
-
-# cpn.add_dataset(
-#     name="zh_qqbb_powheg",
-#     id=14354874,
-#     processes=[procs.zh_qqbb],
-#     keys=[
-#         "/ZH_HToBB_ZToQQ_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
-#     ],
-#     n_files=11,
-#     n_events=9991620,
-# )
-
+cpn.add_dataset(
+    name="zh_qqbb_powheg",
+    id=14355708,
+    processes=[procs.zh_qqbb],
+    keys=[
+        "/ZH_HToBB_ZToQQ_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=8,
+    n_events=9957048,
+)
 
 cpn.add_dataset(
     name="zh_tautau_powheg",
@@ -147,4 +145,3 @@ cpn.add_dataset(
     n_files=10,
     n_events=7328993,
 )
-
