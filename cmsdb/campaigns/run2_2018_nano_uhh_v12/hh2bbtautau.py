@@ -1,12 +1,12 @@
 # coding: utf-8
 
 """
-HH -> bbtautau datasets for the 2017 data-taking campaign with datasets at NanoAOD tier in
-version 11, created with custom content at UHH.
+HH -> bbtautau datasets for the 2018 data-taking campaign with datasets at NanoAOD tier in
+version 12, created with custom content at UHH.
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v11 as cpn
+from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v12 as cpn
 
 
 # #
@@ -768,9 +768,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="THE_NAME",
+    name="radion_hh_vbf_bbtautau_m280_madgraph",
     id=14310981,
-    processes=[procs.THE_PROCESS],
+    processes=[procs.radion_hh_vbf_bbtautau_m280],
     keys=[
         "/VBFToRadionToHHTo2B2Tau_M-280_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],

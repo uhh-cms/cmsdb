@@ -21,28 +21,28 @@ from order import Campaign
 # campaign
 #
 
-campaign_run2_2018_nano_uhh_v11 = Campaign(
-    name="run2_2018_nano_uhh_v11",
-    id=220181121,  # 2 2018 11 21(u)
+campaign_run2_2018_nano_uhh_v12 = Campaign(
+    name="run2_2018_nano_uhh_v12",
+    id=220181221,  # 2 2018 12 21(u)
     ecm=13,
     bx=25,
     aux={
         "tier": "NanoAOD",
         "year": 2018,
-        "version": 11,
+        "version": 12,
         "custom": {
-            "name": "run2_2018_nano_uhh_v11",
+            "name": "run2_2018_nano_uhh_v12",
             "creator": "uhh",
-            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/bwieders/nano_uhh_v11/merged_2048.0MB",  # noqa
+            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/bwieders/nano_uhh_v12/merged_2048.0MB",  # noqa
         },
     },
 )
 
 
 # trailing imports to load datasets
-# import cmsdb.campaigns.run2_2018_nano_uhh_v11.data  # noqa
-import cmsdb.campaigns.run2_2018_nano_uhh_v11.top  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v11.ewk  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v11.qcd  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v11.higgs  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v11.hh2bbtautau  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.data  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.top  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.ewk  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.qcd  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.higgs  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.hh2bbtautau  # noqa
