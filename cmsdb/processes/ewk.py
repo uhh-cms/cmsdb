@@ -70,6 +70,12 @@ dy_lep = dy.add_process(
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
+dy_lep_m10to50 = dy_lep.add_process(
+    name="dy_lep_m10to50",
+    id=51001,
+    xsecs=Number(0.1),  # TODO
+)
+
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
