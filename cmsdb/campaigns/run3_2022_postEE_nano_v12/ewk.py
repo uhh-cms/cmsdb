@@ -27,7 +27,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_m10to50_amcatnlo",
     id=14803206,
-    # processes=[procs.dy_lep_m10to50],
+    processes=[procs.dy_lep_m10to50],
     keys=[
         "/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],

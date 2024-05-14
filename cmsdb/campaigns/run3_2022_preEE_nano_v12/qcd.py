@@ -144,7 +144,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_em_pt10to30_pythia",
     id=14805335,
-    # processes=[procs.qcd_em_pt10to30],
+    processes=[procs.qcd_em_pt10to30],
     keys=[
         "/QCD_PT-10to30_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -221,7 +221,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_doubleem_pt30to40_pythia",
     id=14801752,
-    # processes=[procs.qcd_doubleem_pt30to40],
+    processes=[procs.qcd_doubleem_pt30to40],
     keys=[
         "/QCD_PT-30to40_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -231,7 +231,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_doubleem_pt30toInf_pythia",
     id=14807962,
-    # processes=[procs.qcd_doubleem_pt30toInf],
+    processes=[procs.qcd_doubleem_pt30toInf],
     keys=[
         "/QCD_PT-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -241,7 +241,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_doubleem_pt40toInf_pythia",
     id=14803826,
-    # processes=[procs.qcd_doubleem_pt40toInf],
+    processes=[procs.qcd_doubleem_pt40toInf],
     keys=[
         "/QCD_PT-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
