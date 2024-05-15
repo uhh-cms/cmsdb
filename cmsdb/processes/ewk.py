@@ -73,7 +73,7 @@ dy_lep = dy.add_process(
 dy_lep_m10to50 = dy_lep.add_process(
     name="dy_lep_m10to50",
     id=51001,
-    xsecs=Number(0.1),  # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
 dy_lep_m50 = dy_lep.add_process(
