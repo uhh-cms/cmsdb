@@ -406,3 +406,83 @@ cpn.add_dataset(
         "era": "F",
     },
 )
+
+
+#
+# JetHT
+#
+
+cpn.add_dataset(
+    name="data_jetht_b",
+    id=14224834,
+    is_data=True,
+    processes=[procs.data_jetht],
+    keys=[
+        "/JetHT/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=33,
+    n_events=63043590,
+    aux={
+        "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetht_c",
+    id=14224757,
+    is_data=True,
+    processes=[procs.data_jetht],
+    keys=[
+        "/JetHT/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=66,
+    n_events=96264601,
+    aux={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetht_d",
+    id=14227117,
+    is_data=True,
+    processes=[procs.data_jetht],
+    keys=[
+        "/JetHT/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=37,
+    n_events=46145204,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetht_e",
+    id=14224755,
+    is_data=True,
+    processes=[procs.data_jetht],
+    keys=[
+        "/JetHT/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=58,
+    n_events=89630771,
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetht_f",
+    id=14224838,
+    is_data=True,
+    processes=[procs.data_jetht],
+    keys=[
+        "/JetHT/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+    ],
+    n_files=66,
+    n_events=115429972,
+    aux={
+        "era": "F",
+    },
+)
