@@ -53,6 +53,7 @@ __all__ = [
     "qcd_em_pt120to170",
     "qcd_em_pt170to300",
     "qcd_em_pt300toInf",
+    "qcd_em_pt10to30",
     "qcd_bctoe",
     "qcd_bctoe_pt15to20",
     "qcd_bctoe_pt20to30",
