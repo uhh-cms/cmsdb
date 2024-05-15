@@ -31,10 +31,11 @@ campaign_run2_2016_HIPM_nano_uhh_v12 = Campaign(
         "year": 2016,
         "vfp": "pre",
         "version": 12,
+        "vfp": "pre",
         "custom": {
             "name": "run2_2016_HIPM_nano_uhh_v12",
             "creator": "uhh",
-            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/aalvesan/nano_uhh_v12_2016_HIPM/merged_2048.0MB",  # noqa
+            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/mrieger/nanogen_store/CreateNano/config_ul16pre/prod2",  # noqa
         },
     },
 )
@@ -43,6 +44,6 @@ campaign_run2_2016_HIPM_nano_uhh_v12 = Campaign(
 import cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12.data  # noqa
 import cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12.ewk  # noqa
 import cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12.hh2bbtautau  # noqa
-import cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12.higgs  # noqa
+# import cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12.higgs  # noqa  # not yet available
 import cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12.st  # noqa
 import cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12.ttbar  # noqa
