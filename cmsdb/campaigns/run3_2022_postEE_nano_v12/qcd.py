@@ -223,7 +223,7 @@ cpn.add_dataset(
     n_events=4581753,
 )
 cpn.add_dataset(
-    name="qcd_doubleem_pt30toInf_mgg80toInf_pythia",
+    name="qcd_doubleem_pt30toInf_mgg40to80_pythia",
     id=14797413,
     processes=[procs.qcd_doubleem_pt30toInf_mgg40to80],
     keys=[
