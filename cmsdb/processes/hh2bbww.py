@@ -92,10 +92,10 @@ from cmsdb.processes.higgs import (
 #
 
 br_bbvv = const.br_hh.bbww + const.br_hh.bbzz
-br_bbvv_dl = const.br_hh.bbww * const.br_ww.dl + const.br_hh.bbzz * const.br_z.clep ** 2
+br_bbvv_dl = const.br_hh.bbww * const.br_ww.dl + const.br_hh.bbzz * const.br_zz.dl
 br_bbww_sl = const.br_hh.bbww * const.br_ww.sl
 br_bbww_dl = const.br_hh.bbww * const.br_ww.dl
-br_bbzz_dl = const.br_hh.bbzz * const.br_ww.dl
+br_bbzz_dl = const.br_hh.bbzz * const.br_zz.dl
 
 #
 # HH -> bbVV

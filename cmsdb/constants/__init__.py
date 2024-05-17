@@ -34,6 +34,11 @@ br_z = DotDict(
     clep=Number(0.033658, {"br_z_clep": 0.000023}) * n_leps,
 )
 
+br_zz = DotDict(
+    fh=br_z.qq ** 2,
+    dl=2 * br_z.qq * br_z.clep,
+)
+
 # higgs branching ratios from lhchwg, taken for mH = 125GeV
 # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR?rev=23
 
