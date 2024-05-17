@@ -7,6 +7,7 @@ EWK-related process definitions.
 __all__ = [
     "dy",
     "dy_lep",
+    "dy_lep_m10to50",
     "dy_lep_m50", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
     "dy_lep_0j", "dy_lep_1j", "dy_lep_2j",
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
@@ -69,6 +70,12 @@ dy_lep = dy.add_process(
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=27
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
+
+dy_lep_m10to50 = dy_lep.add_process(
+    name="dy_lep_m10to50",
+    id=51001,
+    xsecs={13: Number(0.1)},  # TODO
+)
 
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
