@@ -580,24 +580,24 @@ qcd_doubleem = qcd.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-qcd_doubleem_pt30to40_mgg80toInf = qcd_doubleem.add_process(
-    name="qcd_doubleem_pt30to40_mgg80toInf",
+qcd_doubleem_pt30to40_mgg80 = qcd_doubleem.add_process(
+    name="qcd_doubleem_pt30to40_mgg80",
     id=31401,
     xsecs={
         13: Number(0.1),  # TODO
     },
 )
 
-qcd_doubleem_pt40toInf_mgg80toInf = qcd_doubleem.add_process(
-    name="qcd_doubleem_pt40toInf_mgg80toInf",
+qcd_doubleem_pt40_mgg80 = qcd_doubleem.add_process(
+    name="qcd_doubleem_pt40_mgg80",
     id=31402,
     xsecs={
         13: Number(0.1),  # TODO
     },
 )
 
-qcd_doubleem_pt30toInf_mgg40to80 = qcd_doubleem.add_process(
-    name="qcd_doubleem_pt30toInf_mgg40to80",
+qcd_doubleem_pt30_mgg40to80 = qcd_doubleem.add_process(
+    name="qcd_doubleem_pt30_mgg40to80",
     id=31403,
     xsecs={
         13: Number(0.1),  # TODO

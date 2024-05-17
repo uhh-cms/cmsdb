@@ -213,9 +213,9 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="qcd_doubleem_pt30to40_mgg80toInf_pythia",
+    name="qcd_doubleem_pt30to40_mgg80_pythia",
     id=14798807,
-    processes=[procs.qcd_doubleem_pt30to40_mgg80toInf],
+    processes=[procs.qcd_doubleem_pt30to40_mgg80],
     keys=[
         "/QCD_PT-30to40_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
@@ -223,9 +223,9 @@ cpn.add_dataset(
     n_events=4581753,
 )
 cpn.add_dataset(
-    name="qcd_doubleem_pt30toInf_mgg40to80_pythia",
+    name="qcd_doubleem_pt30_mgg40to80_pythia",
     id=14797413,
-    processes=[procs.qcd_doubleem_pt30toInf_mgg40to80],
+    processes=[procs.qcd_doubleem_pt30_mgg40to80],
     keys=[
         "/QCD_PT-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13p6TeV_pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
@@ -233,9 +233,9 @@ cpn.add_dataset(
     n_events=9929160,
 )
 cpn.add_dataset(
-    name="qcd_doubleem_pt40toInf_mgg80toInf_pythia",
+    name="qcd_doubleem_pt40_mgg80_pythia",
     id=14810606,
-    processes=[procs.qcd_doubleem_pt40toInf_mgg80toInf],
+    processes=[procs.qcd_doubleem_pt40_mgg80],
     keys=[
         "/QCD_PT-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
