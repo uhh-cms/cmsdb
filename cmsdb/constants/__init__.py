@@ -33,10 +33,15 @@ br_z = DotDict(
     qq=Number(0.69911, {"br_z_qq": 0.00056}),
     clep=Number(0.033658, {"br_z_clep": 0.000023}) * n_leps,
 )
+br_z.nunu = 1 - br_z.qq - br_z.clep
 
 br_zz = DotDict(
-    fh=br_z.qq ** 2,
-    dl=2 * br_z.qq * br_z.clep,
+    qqqq=br_z.qq ** 2,
+    llll=br_z.clep ** 2,
+    nunununu=br_z.nunu ** 2,
+    llnunu=2 * br_z.nunu * br_z.clep,
+    llqq=2 * br_z.clep * br_z.qq,
+    qqnunu=2 * br_z.qq * br_z.nunu,
 )
 
 # higgs branching ratios from lhchwg, taken for mH = 125GeV

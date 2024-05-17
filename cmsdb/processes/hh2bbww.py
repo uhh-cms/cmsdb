@@ -7,7 +7,7 @@ IDs are assigned in the range 21200-21499 for ggHH and 22200-22499 for qqHH.
 bbWW processes are assigned IDs in the range 21200-21299 and 22200-22299.
 bbZZ processes are assigned IDs in the range 21300-21399 and 22300-22399.
 bbVV processes are assigned IDs in the range 21400-21499 and 22400-22499.
-SL processes are assigned the ranges from 10-19 and DL processes from 20-29 (FH still missing)
+qqlnu processes are assigned the ranges from 10-19 and 2l2nu processes from 20-29 (FH still missing)
 The merged processes are assigned the ranges from 1-9.
 """
 
@@ -112,9 +112,10 @@ from cmsdb.processes.higgs import (
 # Helper
 #
 
+# NOTE: bbzz_dl is not descriptive enough, should probably be updated to bbzz_2l2nu or similar (same for bbvv)
 br_bbww_sl = const.br_hh.bbww * const.br_ww.sl
 br_bbww_dl = const.br_hh.bbww * const.br_ww.dl
-br_bbzz_dl = const.br_hh.bbzz * const.br_zz.dl
+br_bbzz_dl = const.br_hh.bbzz * const.br_zz.llnunu
 br_bbvv = const.br_hh.bbww + const.br_hh.bbzz
 br_bbvv_sl = br_bbww_sl
 br_bbvv_dl = br_bbww_dl + br_bbzz_dl
