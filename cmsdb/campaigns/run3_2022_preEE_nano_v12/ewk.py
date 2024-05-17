@@ -4,6 +4,8 @@
 Electroweak datasets for the 2022 pre-EE data-taking campaign
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
 
@@ -24,14 +26,25 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_m10_amcatnlo",
+    name="dy_lep_m10to50_amcatnlo",
     id=14803891,
     processes=[procs.dy_lep_m10to50],
-    keys=[
-        "/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=141,
-    n_events=67681922,
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=141,
+            n_events=67681922,
+        ),
+        extension=DatasetInfo(
+            keys=[
+                "/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=73,
+            n_events=47494002,
+        ),
+    ),
 )
 
 #
