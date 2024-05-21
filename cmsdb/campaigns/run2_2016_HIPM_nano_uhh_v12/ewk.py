@@ -14,10 +14,10 @@ cpn.add_dataset(
     id=14217420,
     processes=[procs.ewk_wm_lnu_m50],
     keys=[
-        "/EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=2,
-    n_events=2248000,
+    n_files=29,
+    n_events=2_248_000,
 )
 
 cpn.add_dataset(
@@ -25,10 +25,10 @@ cpn.add_dataset(
     id=14216470,
     processes=[procs.ewk_wp_lnu_m50],
     keys=[
-        "/EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=2,
-    n_events=2185000,
+    n_files=46,
+    n_events=2_185_000,
 )
 
 cpn.add_dataset(
@@ -36,10 +36,10 @@ cpn.add_dataset(
     id=14214791,
     processes=[procs.ewk_z_ll_m50],
     keys=[
-        "/EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=1,
-    n_events=500000,
+    n_files=12,
+    n_events=500_000,
 )
 
 # DY
@@ -49,10 +49,10 @@ cpn.add_dataset(
     id=14212297,
     processes=[procs.dy_lep_m50],
     keys=[
-        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=49,
-    n_events=90947213,
+    n_files=980,
+    n_events=90_947_213,
 )
 
 cpn.add_dataset(
@@ -60,10 +60,10 @@ cpn.add_dataset(
     id=14212804,
     processes=[procs.dy_lep_0j],
     keys=[
-        "/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=41,
-    n_events=79751592,
+    n_files=882,
+    n_events=79_751_592,
 )
 
 cpn.add_dataset(
@@ -71,10 +71,10 @@ cpn.add_dataset(
     id=14238480,
     processes=[procs.dy_lep_1j],
     keys=[
-        "/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=54,
-    n_events=88364975,
+    n_files=907,
+    n_events=88_364_975,
 )
 
 cpn.add_dataset(
@@ -82,10 +82,10 @@ cpn.add_dataset(
     id=14212211,
     processes=[procs.dy_lep_2j],
     keys=[
-        "/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=32,
-    n_events=42948118,
+    n_files=669,
+    n_events=42_948_118,
 )
 
 cpn.add_dataset(
@@ -93,10 +93,10 @@ cpn.add_dataset(
     id=14342843,
     processes=[procs.dy_lep_pt100To250],
     keys=[
-        "/DYJetsToLL_LHEFilterPtZ-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/DYJetsToLL_LHEFilterPtZ-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=33,
-    n_events=40104234,
+    n_files=1_273,
+    n_events=40_115_413,
 )
 
 cpn.add_dataset(
@@ -104,10 +104,10 @@ cpn.add_dataset(
     id=14346965,
     processes=[procs.dy_lep_pt250To400],
     keys=[
-        "/DYJetsToLL_LHEFilterPtZ-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/DYJetsToLL_LHEFilterPtZ-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=13,
-    n_events=12085183,
+    n_files=356,
+    n_events=12_085_183,
 )
 
 cpn.add_dataset(
@@ -115,10 +115,10 @@ cpn.add_dataset(
     id=14335914,
     processes=[procs.dy_lep_pt50To100],
     keys=[
-        "/DYJetsToLL_LHEFilterPtZ-50To100_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/DYJetsToLL_LHEFilterPtZ-50To100_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=42,
-    n_events=60848787,
+    n_files=1_762,
+    n_events=60_848_787,
 )
 
 cpn.add_dataset(
@@ -126,10 +126,10 @@ cpn.add_dataset(
     id=14339864,
     processes=[procs.dy_lep_pt0To50],
     keys=[
-        "/DYJetsToLL_LHEFilterPtZ-0To50_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/DYJetsToLL_LHEFilterPtZ-0To50_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=62,
-    n_events=101338633,
+    n_files=2_335,
+    n_events=101_338_633,
 )
 
 cpn.add_dataset(
@@ -137,10 +137,10 @@ cpn.add_dataset(
     id=14349654,
     processes=[procs.dy_lep_pt650],
     keys=[
-        "/DYJetsToLL_LHEFilterPtZ-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/DYJetsToLL_LHEFilterPtZ-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=1999583,
+    n_files=82,
+    n_events=1_999_583,
 )
 
 cpn.add_dataset(
@@ -148,45 +148,45 @@ cpn.add_dataset(
     id=14350490,
     processes=[procs.dy_lep_pt400To650],
     keys=[
-        "/DYJetsToLL_LHEFilterPtZ-400To650_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/DYJetsToLL_LHEFilterPtZ-400To650_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=1993002,
+    n_files=79,
+    n_events=1_993_002,
 )
 
 # multi boson
 
 cpn.add_dataset(
     name="zzz_amcatnlo",
-    id=14213425,
-    processes=[procs.zzz],
-    keys=[
-        "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=1,
-    n_events=81000,
-)
-
-cpn.add_dataset(
-    name="zzz_ext_amcatnlo",
     id=14215019,
     processes=[procs.zzz],
     keys=[
-        "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1-v1/NANOAODSIM",  # noqa
+        "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=5302000,
+    n_files=98,
+    n_events=5_302_000,
 )
+
+# cpn.add_dataset(
+#     name="zzz_ext_amcatnlo",
+#     id=14215019,
+#     processes=[procs.zzz],
+#     keys=[
+#         "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
+#     ],
+#     n_files=5,
+#     n_events=5302000,
+# )
 
 cpn.add_dataset(
     name="ww_pythia",
     id=14214902,
     processes=[procs.ww],
     keys=[
-        "/WW_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WW_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=9,
-    n_events=15859000,
+    n_files=185,
+    n_events=15_859_000,
 )
 
 cpn.add_dataset(
@@ -194,10 +194,10 @@ cpn.add_dataset(
     id=14214976,
     processes=[procs.wz],
     keys=[
-        "/WZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=7934000,
+    n_files=103,
+    n_events=7_934_000,
 )
 
 cpn.add_dataset(
@@ -205,43 +205,44 @@ cpn.add_dataset(
     id=14214813,
     processes=[procs.zz],
     keys=[
-        "/ZZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/ZZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=1,
-    n_events=1282000,
+    n_files=24,
+    n_events=1_282_000,
 )
 
 cpn.add_dataset(
     name="www_amcatnlo",
-    id=14213401,
-    processes=[procs.www],
-    keys=[
-        "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=1,
-    n_events=71000,
-)
-
-cpn.add_dataset(
-    name="www_ext_amcatnlo",
     id=14215136,
     processes=[procs.www],
     keys=[
-        "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1-v1/NANOAODSIM",  # noqa
+        "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=5190000,
+    n_files=88,
+    n_events=5_190_000,
 )
+
+# cpn.add_dataset(
+#     name="www_ext_amcatnlo",
+#     id=14215136,
+#     processes=[procs.www],
+#     keys=[
+#         "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
+#     ],
+#     n_files=5,
+#     n_events=5190000,
+# )
+
 
 cpn.add_dataset(
     name="wzz_amcatnlo",
     id=14214901,
     processes=[procs.wzz],
     keys=[
-        "/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1-v1/NANOAODSIM",  # noqa
+        "/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=5394000,
+    n_files=85,
+    n_events=5_394_000,
 )
 
 cpn.add_dataset(
@@ -249,10 +250,10 @@ cpn.add_dataset(
     id=14214960,
     processes=[procs.wwz],
     keys=[
-        "/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1-v1/NANOAODSIM",  # noqa
+        "/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_ext1_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=5072000,
+    n_files=83,
+    n_events=5_072_000,
 )
 
 # W
@@ -262,10 +263,10 @@ cpn.add_dataset(
     id=14270880,
     processes=[procs.w_lnu],
     keys=[
-        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=32,
-    n_events=74676454,
+    n_files=859,
+    n_events=74_676_454,
 )
 
 cpn.add_dataset(
@@ -273,10 +274,10 @@ cpn.add_dataset(
     id=14266888,
     processes=[procs.w_lnu_ht2500],
     keys=[
-        "/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
     ],
-    n_files=2,
-    n_events=808649,
+    n_files=31,
+    n_events=808_649,
 )
 
 cpn.add_dataset(
@@ -284,10 +285,10 @@ cpn.add_dataset(
     id=14300594,
     processes=[procs.w_lnu_ht70To100],
     keys=[
-        "/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=10,
-    n_events=16931765,
+    n_files=225,
+    n_events=16_931_765,
 )
 
 cpn.add_dataset(
@@ -295,10 +296,10 @@ cpn.add_dataset(
     id=14221276,
     processes=[procs.w_lnu_ht100To200],
     keys=[
-        "/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=14,
-    n_events=21734530,
+    n_files=328,
+    n_events=21_734_530,
 )
 
 cpn.add_dataset(
@@ -306,10 +307,10 @@ cpn.add_dataset(
     id=14226935,
     processes=[procs.w_lnu_ht1200To2500],
     keys=[
-        "/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=2119975,
+    n_files=71,
+    n_events=2_119_975,
 )
 
 cpn.add_dataset(
@@ -317,10 +318,10 @@ cpn.add_dataset(
     id=14213493,
     processes=[procs.w_lnu_ht400To600],
     keys=[
-        "/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=2467498,
+    n_files=63,
+    n_events=2_467_498,
 )
 
 cpn.add_dataset(
@@ -328,10 +329,10 @@ cpn.add_dataset(
     id=14227116,
     processes=[procs.w_lnu_ht600To800],
     keys=[
-        "/WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=2344130,
+    n_files=56,
+    n_events=2_344_130,
 )
 
 cpn.add_dataset(
@@ -339,10 +340,10 @@ cpn.add_dataset(
     id=14212489,
     processes=[procs.w_lnu_ht800To1200],
     keys=[
-        "/WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=2510487,
+    n_files=96,
+    n_events=2_510_487,
 )
 
 cpn.add_dataset(
@@ -350,131 +351,131 @@ cpn.add_dataset(
     id=14212310,
     processes=[procs.w_lnu_ht200To400],
     keys=[
-        "/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
     ],
-    n_files=14,
-    n_events=17870845,
+    n_files=283,
+    n_events=17_870_845,
 )
 
 # Z
 
-cpn.add_dataset(
-    name="z_nunu_ht600to800_madgraph",
-    id=14238483,
-    processes=[procs.z_nunu_ht600to800],
-    keys=[
-        "/ZJetsToNuNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=2030858,
-)
+# cpn.add_dataset(
+#     name="z_nunu_ht600to800_madgraph",
+#     id=14238483,
+#     processes=[procs.z_nunu_ht600to800],
+#     keys=[
+#         "/ZJetsToNuNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=2,
+#     n_events=2030858,
+# )
 
-cpn.add_dataset(
-    name="z_nunu_ht400to600_madgraph",
-    id=14238470,
-    processes=[procs.z_nunu_ht400to600],
-    keys=[
-        "/ZJetsToNuNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=6,
-    n_events=6632524,
-)
+# cpn.add_dataset(
+#     name="z_nunu_ht400to600_madgraph",
+#     id=14238470,
+#     processes=[procs.z_nunu_ht400to600],
+#     keys=[
+#         "/ZJetsToNuNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=6,
+#     n_events=6632524,
+# )
 
-cpn.add_dataset(
-    name="z_nunu_ht200to400_madgraph",
-    id=14216548,
-    processes=[procs.z_nunu_ht200to400],
-    keys=[
-        "/ZJetsToNuNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=5,
-    n_events=7531529,
-)
+# cpn.add_dataset(
+#     name="z_nunu_ht200to400_madgraph",
+#     id=14216548,
+#     processes=[procs.z_nunu_ht200to400],
+#     keys=[
+#         "/ZJetsToNuNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+#     ],
+#     n_files=5,
+#     n_events=7531529,
+# )
 
-cpn.add_dataset(
-    name="z_nunu_ht800to1200_madgraph",
-    id=14285553,
-    processes=[procs.z_nunu_ht800to1200],
-    keys=[
-        "/ZJetsToNuNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=1,
-    n_events=703970,
-)
+# cpn.add_dataset(
+#     name="z_nunu_ht800to1200_madgraph",
+#     id=14285553,
+#     processes=[procs.z_nunu_ht800to1200],
+#     keys=[
+#         "/ZJetsToNuNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=1,
+#     n_events=703970,
+# )
 
-cpn.add_dataset(
-    name="z_nunu_ht1200to2500_madgraph",
-    id=14240780,
-    processes=[procs.z_nunu_ht1200to2500],
-    keys=[
-        "/ZJetsToNuNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=1,
-    n_events=136393,
-)
+# cpn.add_dataset(
+#     name="z_nunu_ht1200to2500_madgraph",
+#     id=14240780,
+#     processes=[procs.z_nunu_ht1200to2500],
+#     keys=[
+#         "/ZJetsToNuNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=1,
+#     n_events=136393,
+# )
 
-cpn.add_dataset(
-    name="z_nunu_ht2500_madgraph",
-    id=14242842,
-    processes=[procs.z_nunu_ht2500],
-    keys=[
-        "/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=1,
-    n_events=111838,
-)
+# cpn.add_dataset(
+#     name="z_nunu_ht2500_madgraph",
+#     id=14242842,
+#     processes=[procs.z_nunu_ht2500],
+#     keys=[
+#         "/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=1,
+#     n_events=111838,
+# )
 
-cpn.add_dataset(
-    name="z_nunu_ht100to200_madgraph",
-    id=14212946,
-    processes=[procs.z_nunu_ht100to200],
-    keys=[
-        "/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=5,
-    n_events=7784090,
-)
+# cpn.add_dataset(
+#     name="z_nunu_ht100to200_madgraph",
+#     id=14212946,
+#     processes=[procs.z_nunu_ht100to200],
+#     keys=[
+#         "/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+#     ],
+#     n_files=5,
+#     n_events=7784090,
+# )
 
-cpn.add_dataset(
-    name="z_qq_ht200to400_madgraph",
-    id=14303395,
-    processes=[procs.z_qq_ht200to400],
-    keys=[
-        "/ZJetsToQQ_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=6,
-    n_events=8753905,
-)
+# cpn.add_dataset(
+#     name="z_qq_ht200to400_madgraph",
+#     id=14303395,
+#     processes=[procs.z_qq_ht200to400],
+#     keys=[
+#         "/ZJetsToQQ_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=6,
+#     n_events=8753905,
+# )
 
-cpn.add_dataset(
-    name="z_qq_ht400to600_madgraph",
-    id=14284977,
-    processes=[procs.z_qq_ht400to600],
-    keys=[
-        "/ZJetsToQQ_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=7,
-    n_events=7709128,
-)
+# cpn.add_dataset(
+#     name="z_qq_ht400to600_madgraph",
+#     id=14284977,
+#     processes=[procs.z_qq_ht400to600],
+#     keys=[
+#         "/ZJetsToQQ_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=7,
+#     n_events=7709128,
+# )
 
-cpn.add_dataset(
-    name="z_qq_ht600to800_madgraph",
-    id=14275517,
-    processes=[procs.z_qq_ht600to800],
-    keys=[
-        "/ZJetsToQQ_HT-600to800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=7,
-    n_events=6116617,
-)
+# cpn.add_dataset(
+#     name="z_qq_ht600to800_madgraph",
+#     id=14275517,
+#     processes=[procs.z_qq_ht600to800],
+#     keys=[
+#         "/ZJetsToQQ_HT-600to800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=7,
+#     n_events=6116617,
+# )
 
-cpn.add_dataset(
-    name="z_qq_ht800_madgraph",
-    id=14305027,
-    processes=[procs.z_qq_ht800],
-    keys=[
-        "/ZJetsToQQ_HT-800toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=5,
-    n_events=3726992,
-)
+# cpn.add_dataset(
+#     name="z_qq_ht800_madgraph",
+#     id=14305027,
+#     processes=[procs.z_qq_ht800],
+#     keys=[
+#         "/ZJetsToQQ_HT-800toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=5,
+#     n_events=3726992,
+# )

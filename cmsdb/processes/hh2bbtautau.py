@@ -19,7 +19,11 @@ __all__ = [
     "radion_hh_ggf_bbtautau_m800", "radion_hh_ggf_bbtautau_m850", "radion_hh_ggf_bbtautau_m900",
     "radion_hh_ggf_bbtautau_m1000", "radion_hh_ggf_bbtautau_m1250", "radion_hh_ggf_bbtautau_m1500",
     "radion_hh_ggf_bbtautau_m1750", "radion_hh_ggf_bbtautau_m2000", "radion_hh_ggf_bbtautau_m2500",
-    "radion_hh_ggf_bbtautau_m3000",
+    "radion_hh_ggf_bbtautau_m3000", "radion_hh_ggf_bbtautau_m1100", "radion_hh_ggf_bbtautau_m2400",
+    "radion_hh_ggf_bbtautau_m1300", "radion_hh_ggf_bbtautau_m1700", "radion_hh_ggf_bbtautau_m1200",
+    "radion_hh_ggf_bbtautau_m2200", "radion_hh_ggf_bbtautau_m2600", "radion_hh_ggf_bbtautau_m1400",
+    "radion_hh_ggf_bbtautau_m2800", "radion_hh_ggf_bbtautau_m1600", "radion_hh_ggf_bbtautau_m1900",
+    "radion_hh_ggf_bbtautau_m1800",
     "graviton_hh_ggf_bbtautau",
     "graviton_hh_ggf_bbtautau_m250", "graviton_hh_ggf_bbtautau_m260",
     "graviton_hh_ggf_bbtautau_m270", "graviton_hh_ggf_bbtautau_m280",
@@ -324,6 +328,78 @@ radion_hh_ggf_bbtautau_m3000 = radion_hh_ggf_bbtautau.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+radion_hh_ggf_bbtautau_m1100 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1100",
+    id=23126,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m2400 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m2400",
+    id=23127,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m1300 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1300",
+    id=23128,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m1700 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1700",
+    id=23129,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m1200 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1200",
+    id=23130,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m2200 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m2200",
+    id=23131,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m2600 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m2600",
+    id=23132,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m1400 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1400",
+    id=23133,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m2800 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m2800",
+    id=23134,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m1600 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1600",
+    id=23135,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+radion_hh_ggf_bbtautau_m1900 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1900",
+    id=23136,
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+
+radion_hh_ggf_bbtautau_m1800 = radion_hh_ggf_bbtautau.add_process(
+    name="radion_hh_ggf_bbtautau_m1800",
+    id=23137,
+    xsecs={13: Number(0.1)},  # TODO
+)
 
 #
 # ggF -> bulk graviton -> HH
