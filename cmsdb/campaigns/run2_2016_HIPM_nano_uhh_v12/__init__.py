@@ -31,7 +31,6 @@ campaign_run2_2016_HIPM_nano_uhh_v12 = Campaign(
         "year": 2016,
         "vfp": "pre",
         "version": 12,
-        "vfp": "pre",
         "custom": {
             "name": "run2_2016_HIPM_nano_uhh_v12",
             "creator": "uhh",
