@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ⬇️
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
           submodules: recursive
 
       - name: Setup python 🐍
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.9
 
@@ -34,7 +34,7 @@ jobs:
     outputs:
       dirs: ${{ steps.dirs.outputs.dirs }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - id: dirs
         run: echo "dirs=$(ls -d cmsdb/campaigns/*/ | jq --raw-input --slurp --compact-output 'split("\n")[:-1]')" >> ${GITHUB_OUTPUT}
 
@@ -47,13 +47,13 @@ jobs:
         dir: ${{ fromJson(needs.collect_dirs.outputs.dirs) }}
     steps:
       - name: Checkout ⬇️
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
           submodules: recursive
 
       - name: Setup python 🐍
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.9
 
