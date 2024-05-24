@@ -5,8 +5,8 @@
 version 12, created with custom content at UHH."""
 
 
-import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_nano_uhh_v12 as cpn
+import cmsdb.processes as procs  # noqa
+from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_nano_uhh_v12 as cpn  # noqa
 
 # ggf
 
