@@ -19,7 +19,7 @@ cpn.add_dataset(
     id=14335916,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
-        "/GluGluToHHTo2B2Tau_TuneCP5_PSWeights_node_SM_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToHHTo2B2Tau_TuneCP5_PSWeights_node_SM_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=216_000,
@@ -168,7 +168,7 @@ cpn.add_dataset(
     id=14346431,
     processes=[procs.radion_hh_ggf_bbtautau_m700],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-700_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-700_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=6,
     n_events=108_000,
@@ -179,7 +179,7 @@ cpn.add_dataset(
     id=14346648,
     processes=[procs.radion_hh_ggf_bbtautau_m450],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-450_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-450_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=14,
     n_events=162_000,
@@ -190,7 +190,7 @@ cpn.add_dataset(
     id=14346436,
     processes=[procs.radion_hh_ggf_bbtautau_m300],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-300_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-300_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=6,
     n_events=162_000,
@@ -201,7 +201,7 @@ cpn.add_dataset(
     id=14346867,
     processes=[procs.radion_hh_ggf_bbtautau_m350],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-350_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-350_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=12,
     n_events=162_000,
@@ -212,7 +212,7 @@ cpn.add_dataset(
     id=14346824,
     processes=[procs.radion_hh_ggf_bbtautau_m750],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=108_000,
@@ -223,7 +223,7 @@ cpn.add_dataset(
     id=14346661,
     processes=[procs.radion_hh_ggf_bbtautau_m800],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=8,
     n_events=108_000,
@@ -234,7 +234,7 @@ cpn.add_dataset(
     id=14346643,
     processes=[procs.radion_hh_ggf_bbtautau_m3000],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-3000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-3000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=54_000,
@@ -245,7 +245,7 @@ cpn.add_dataset(
     id=14347450,
     processes=[procs.radion_hh_ggf_bbtautau_m650],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-650_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-650_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=9,
     n_events=108_000,
@@ -256,7 +256,7 @@ cpn.add_dataset(
     id=14346396,
     processes=[procs.radion_hh_ggf_bbtautau_m600],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=2,
     n_events=108_000,
@@ -267,7 +267,7 @@ cpn.add_dataset(
     id=14346575,
     processes=[procs.radion_hh_ggf_bbtautau_m400],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=5,
     n_events=162_000,
@@ -278,7 +278,7 @@ cpn.add_dataset(
     id=14357712,
     processes=[procs.radion_hh_ggf_bbtautau_m280],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-280_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-280_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=14,
     n_events=214_000,
@@ -289,7 +289,7 @@ cpn.add_dataset(
     id=14346515,
     processes=[procs.radion_hh_ggf_bbtautau_m850],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-850_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-850_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=10,
     n_events=108_000,
@@ -300,7 +300,7 @@ cpn.add_dataset(
     id=14346497,
     processes=[procs.radion_hh_ggf_bbtautau_m900],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=96_000,
@@ -311,7 +311,7 @@ cpn.add_dataset(
     id=14346666,
     processes=[procs.radion_hh_ggf_bbtautau_m500],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=16,
     n_events=162_000,
@@ -322,7 +322,7 @@ cpn.add_dataset(
     id=14346716,
     processes=[procs.radion_hh_ggf_bbtautau_m320],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-320_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-320_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=16,
     n_events=162_000,
@@ -333,7 +333,7 @@ cpn.add_dataset(
     id=14346591,
     processes=[procs.radion_hh_ggf_bbtautau_m550],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-550_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-550_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=19,
     n_events=108_000,
@@ -344,7 +344,7 @@ cpn.add_dataset(
     id=14346791,
     processes=[procs.radion_hh_ggf_bbtautau_m270],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-270_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-270_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=15,
     n_events=214_000,
@@ -355,7 +355,7 @@ cpn.add_dataset(
     id=14346788,
     processes=[procs.radion_hh_ggf_bbtautau_m260],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-260_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-260_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=19,
     n_events=216_000,
@@ -366,7 +366,7 @@ cpn.add_dataset(
     id=14346427,
     processes=[procs.radion_hh_ggf_bbtautau_m2500],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-2500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-2500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=54_000,
@@ -377,7 +377,7 @@ cpn.add_dataset(
     id=14346555,
     processes=[procs.radion_hh_ggf_bbtautau_m250],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=12,
     n_events=216_000,
@@ -388,7 +388,7 @@ cpn.add_dataset(
     id=14346581,
     processes=[procs.radion_hh_ggf_bbtautau_m2000],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-2000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-2000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=10,
     n_events=54_000,
@@ -399,7 +399,7 @@ cpn.add_dataset(
     id=14346610,
     processes=[procs.radion_hh_ggf_bbtautau_m1750],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=54_000,
@@ -410,7 +410,7 @@ cpn.add_dataset(
     id=14346361,
     processes=[procs.radion_hh_ggf_bbtautau_m1500],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=4,
     n_events=54_000,
@@ -421,7 +421,7 @@ cpn.add_dataset(
     id=14646635,
     processes=[procs.radion_hh_ggf_bbtautau_m1250],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v3/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v3/NANOAODSIM",  # noqa
     ],
     n_files=4,
     n_events=54_000,
@@ -432,7 +432,7 @@ cpn.add_dataset(
     id=14346516,
     processes=[procs.radion_hh_ggf_bbtautau_m1000],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=54_000,
@@ -443,7 +443,7 @@ cpn.add_dataset(
     id=14411934,
     processes=[procs.radion_hh_ggf_bbtautau_m1100],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1100_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1100_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v1/NANOAODSIM",  # noqa
     ],
     n_files=8,
     n_events=216_000,
@@ -454,7 +454,7 @@ cpn.add_dataset(
     id=14419410,
     processes=[procs.radion_hh_ggf_bbtautau_m1200],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1200_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1200_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v1/NANOAODSIM",  # noqa
     ],
     n_files=8,
     n_events=216_000,
@@ -465,7 +465,7 @@ cpn.add_dataset(
     id=14412110,
     processes=[procs.radion_hh_ggf_bbtautau_m1300],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1300_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1300_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v1/NANOAODSIM",  # noqa
     ],
     n_files=6,
     n_events=216_000,
@@ -476,7 +476,7 @@ cpn.add_dataset(
     id=14397712,
     processes=[procs.radion_hh_ggf_bbtautau_m1400],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v3/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v3/NANOAODSIM",  # noqa
     ],
     n_files=25,
     n_events=216_000,
@@ -487,7 +487,7 @@ cpn.add_dataset(
     id=14413443,
     processes=[procs.radion_hh_ggf_bbtautau_m1600],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v1/NANOAODSIM",  # noqa
     ],
     n_files=5,
     n_events=213_000,
@@ -498,7 +498,7 @@ cpn.add_dataset(
     id=14419235,
     processes=[procs.radion_hh_ggf_bbtautau_m1700],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1700_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v1/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1700_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v1/NANOAODSIM",  # noqa
     ],
     n_files=5,
     n_events=216_000,
@@ -509,7 +509,7 @@ cpn.add_dataset(
     id=14391871,
     processes=[procs.radion_hh_ggf_bbtautau_m1800],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v3/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v3/NANOAODSIM",  # noqa
     ],
     n_files=17,
     n_events=216_000,
@@ -520,7 +520,7 @@ cpn.add_dataset(
     id=14395552,
     processes=[procs.radion_hh_ggf_bbtautau_m1900],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-1900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v3/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-1900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v3/NANOAODSIM",  # noqa
     ],
     n_files=28,
     n_events=216_000,
@@ -531,7 +531,7 @@ cpn.add_dataset(
     id=14414886,
     processes=[procs.radion_hh_ggf_bbtautau_m2200],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-2200_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v3/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-2200_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v3/NANOAODSIM",  # noqa
     ],
     n_files=21,
     n_events=214_000,
@@ -542,7 +542,7 @@ cpn.add_dataset(
     id=14397821,
     processes=[procs.radion_hh_ggf_bbtautau_m2400],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-2400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v4/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-2400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v4/NANOAODSIM",  # noqa
     ],
     n_files=27,
     n_events=216_000,
@@ -553,7 +553,7 @@ cpn.add_dataset(
     id=14397727,
     processes=[procs.radion_hh_ggf_bbtautau_m2600],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-2600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v3/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-2600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v3/NANOAODSIM",  # noqa
     ],
     n_files=18,
     n_events=213_000,
@@ -564,7 +564,7 @@ cpn.add_dataset(
     id=14396084,
     processes=[procs.radion_hh_ggf_bbtautau_m2800],
     keys=[
-        "/GluGluToRadionToHHTo2B2Tau_M-2800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v4/NANOAODSIM",  # noqa
+        "/GluGluToRadionToHHTo2B2Tau_M-2800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v4/NANOAODSIM",  # noqa
     ],
     n_files=29,
     n_events=216_000,
@@ -578,7 +578,7 @@ cpn.add_dataset(
     id=14346388,
     processes=[procs.graviton_hh_ggf_bbtautau_m900],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-900_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=4,
     n_events=106_000,
@@ -589,7 +589,7 @@ cpn.add_dataset(
     id=14346601,
     processes=[procs.graviton_hh_ggf_bbtautau_m850],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-850_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-850_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=12,
     n_events=108_000,
@@ -600,7 +600,7 @@ cpn.add_dataset(
     id=14346568,
     processes=[procs.graviton_hh_ggf_bbtautau_m800],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-800_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=9,
     n_events=108_000,
@@ -611,7 +611,7 @@ cpn.add_dataset(
     id=14346412,
     processes=[procs.graviton_hh_ggf_bbtautau_m750],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=10,
     n_events=108_000,
@@ -622,7 +622,7 @@ cpn.add_dataset(
     id=14346469,
     processes=[procs.graviton_hh_ggf_bbtautau_m700],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-700_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-700_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=4,
     n_events=108_000,
@@ -633,7 +633,7 @@ cpn.add_dataset(
     id=14346723,
     processes=[procs.graviton_hh_ggf_bbtautau_m650],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-650_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-650_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=13,
     n_events=108_000,
@@ -644,7 +644,7 @@ cpn.add_dataset(
     id=14346637,
     processes=[procs.graviton_hh_ggf_bbtautau_m600],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-600_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=14,
     n_events=108_000,
@@ -655,7 +655,7 @@ cpn.add_dataset(
     id=14346640,
     processes=[procs.graviton_hh_ggf_bbtautau_m550],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-550_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-550_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=9,
     n_events=108_000,
@@ -666,7 +666,7 @@ cpn.add_dataset(
     id=14346606,
     processes=[procs.graviton_hh_ggf_bbtautau_m500],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=13,
     n_events=162_000,
@@ -677,7 +677,7 @@ cpn.add_dataset(
     id=14346556,
     processes=[procs.graviton_hh_ggf_bbtautau_m450],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-450_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-450_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=10,
     n_events=162_000,
@@ -688,7 +688,7 @@ cpn.add_dataset(
     id=14346409,
     processes=[procs.graviton_hh_ggf_bbtautau_m400],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-400_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=4,
     n_events=152_000,
@@ -699,7 +699,7 @@ cpn.add_dataset(
     id=14346554,
     processes=[procs.graviton_hh_ggf_bbtautau_m350],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-350_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-350_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=6,
     n_events=162_000,
@@ -710,7 +710,7 @@ cpn.add_dataset(
     id=14346528,
     processes=[procs.graviton_hh_ggf_bbtautau_m320],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-320_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-320_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=13,
     n_events=162_000,
@@ -721,7 +721,7 @@ cpn.add_dataset(
     id=14346475,
     processes=[procs.graviton_hh_ggf_bbtautau_m3000],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-3000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-3000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=11,
     n_events=52_000,
@@ -732,7 +732,7 @@ cpn.add_dataset(
     id=14346580,
     processes=[procs.graviton_hh_ggf_bbtautau_m300],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-300_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-300_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=16,
     n_events=162_000,
@@ -743,7 +743,7 @@ cpn.add_dataset(
     id=14346410,
     processes=[procs.graviton_hh_ggf_bbtautau_m280],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-280_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-280_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=11,
     n_events=216_000,
@@ -754,7 +754,7 @@ cpn.add_dataset(
     id=14346718,
     processes=[procs.graviton_hh_ggf_bbtautau_m270],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-270_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-270_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=14,
     n_events=216_000,
@@ -765,7 +765,7 @@ cpn.add_dataset(
     id=14346710,
     processes=[procs.graviton_hh_ggf_bbtautau_m260],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-260_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-260_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=18,
     n_events=216_000,
@@ -776,7 +776,7 @@ cpn.add_dataset(
     id=14346628,
     processes=[procs.graviton_hh_ggf_bbtautau_m250],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=16,
     n_events=216_000,
@@ -787,7 +787,7 @@ cpn.add_dataset(
     id=14346511,
     processes=[procs.graviton_hh_ggf_bbtautau_m2500],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-2500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-2500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=52_000,
@@ -798,7 +798,7 @@ cpn.add_dataset(
     id=14346848,
     processes=[procs.graviton_hh_ggf_bbtautau_m2000],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-2000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-2000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=14,
     n_events=54_000,
@@ -809,7 +809,7 @@ cpn.add_dataset(
     id=14347595,
     processes=[procs.graviton_hh_ggf_bbtautau_m1750],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1750_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=12,
     n_events=54_000,
@@ -820,7 +820,7 @@ cpn.add_dataset(
     id=14346362,
     processes=[procs.graviton_hh_ggf_bbtautau_m1500],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1500_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=11,
     n_events=54_000,
@@ -831,7 +831,7 @@ cpn.add_dataset(
     id=14346454,
     processes=[procs.graviton_hh_ggf_bbtautau_m1250],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1250_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=9,
     n_events=54_000,
@@ -842,7 +842,7 @@ cpn.add_dataset(
     id=14346419,
     processes=[procs.graviton_hh_ggf_bbtautau_m1000],
     keys=[
-        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODAPVv12UHH-v2/NANOAODSIM",  # noqa
+        "/GluGluToBulkGravitonToHHTo2B2Tau_M-1000_TuneCP5_PSWeights_narrow_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11_NanoAODv12UHH-v2/NANOAODSIM",  # noqa
     ],
     n_files=11,
     n_events=54_000,

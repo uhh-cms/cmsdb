@@ -16,7 +16,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleElectron/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=1_921,
     n_events=246_440_440,
@@ -31,7 +31,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleElectron/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=817,
     n_events=97_259_854,
@@ -46,7 +46,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleElectron/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=1_135,
     n_events=148_167_727,
@@ -61,7 +61,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v5/NANOAOD",  # noqa
+        "/SingleElectron/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v5/NANOAOD",  # noqa
     ],
     n_files=1_024,
     n_events=117_269_446,
@@ -76,7 +76,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleElectron/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=549,
     n_events=61_735_326,
@@ -93,7 +93,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=986,
     n_events=158_145_722,
@@ -108,7 +108,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=448,
     n_events=67_441_308,
@@ -123,7 +123,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=630,
     n_events=98_017_996,
@@ -138,7 +138,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=640,
     n_events=90_984_718,
@@ -153,7 +153,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=433,
     n_events=57_465_359,
@@ -171,7 +171,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v1/NANOAOD",  # noqa
+        "/Tau/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
     n_files=512,
     n_events=68_736_788,
@@ -186,7 +186,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v1/NANOAOD",  # noqa
+        "/Tau/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
     n_files=301,
     n_events=36_931_473,
@@ -201,7 +201,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v1/NANOAOD",  # noqa
+        "/Tau/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
     n_files=510,
     n_events=56_827_771,
@@ -216,7 +216,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v1/NANOAOD",  # noqa
+        "/Tau/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
     n_files=507,
     n_events=58_343_324,
@@ -231,7 +231,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v1/NANOAOD",  # noqa
+        "/Tau/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
     n_files=315,
     n_events=36_189_610,
@@ -249,7 +249,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/MET/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=274,
     n_events=35987712,
@@ -264,7 +264,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/MET/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=142,
     n_events=17381222,
@@ -279,7 +279,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/MET/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=187,
     n_events=20947429,
@@ -295,7 +295,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/MET/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=215,
     n_events=22348402,
@@ -310,7 +310,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODAPVv12UHH-v2/NANOAOD",  # noqa
+        "/MET/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv12UHH-v2/NANOAOD",  # noqa
     ],
     n_files=114,
     n_events=11936579,
