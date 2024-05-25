@@ -202,9 +202,9 @@ cpn.add_dataset(
     n_events=1007981,
 )
 cpn.add_dataset(
-    name="qcd_em_pt300toInf_pythia",
+    name="qcd_em_pt300toinf_pythia",
     id=14802354,
-    processes=[procs.qcd_em_pt300toInf],
+    processes=[procs.qcd_em_pt300toinf],
     keys=[
         "/QCD_PT-300toInf_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],

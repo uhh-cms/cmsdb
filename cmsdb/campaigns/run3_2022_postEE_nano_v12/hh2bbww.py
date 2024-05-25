@@ -21,6 +21,7 @@ cpn.add_dataset(
     ],
     n_files=40,
     n_events=769320,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -36,6 +37,7 @@ cpn.add_dataset(
     ],
     n_files=33,
     n_events=307250,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -51,4 +53,5 @@ cpn.add_dataset(
     ],
     n_files=64,
     n_events=302033,
+    aux={"allow_uppercase_name": True},
 )
