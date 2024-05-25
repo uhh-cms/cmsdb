@@ -52,14 +52,14 @@ __all__ = [
     "qcd_em_pt80to120",
     "qcd_em_pt120to170",
     "qcd_em_pt170to300",
-    "qcd_em_pt300toInf",
+    "qcd_em_pt300toinf",
     "qcd_bctoe",
     "qcd_bctoe_pt15to20",
     "qcd_bctoe_pt20to30",
     "qcd_bctoe_pt30to80",
     "qcd_bctoe_pt80to170",
     "qcd_bctoe_pt170to250",
-    "qcd_bctoe_pt250toInf",
+    "qcd_bctoe_pt250toinf",
 ]
 
 from order import Process
@@ -490,8 +490,8 @@ qcd_em_pt170to300 = qcd_em.add_process(
     },
 )
 
-qcd_em_pt300toInf = qcd_em.add_process(
-    name="qcd_em_pt300toInf",
+qcd_em_pt300toinf = qcd_em.add_process(
+    name="qcd_em_pt300toinf",
     id=31208,
     xsecs={
         13: Number(1104.0),
@@ -549,8 +549,8 @@ qcd_bctoe_pt170to250 = qcd_bctoe.add_process(
     },
 )
 
-qcd_bctoe_pt250toInf = qcd_bctoe.add_process(
-    name="qcd_bctoe_pt250toInf",
+qcd_bctoe_pt250toinf = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt250toinf",
     id=31306,
     xsecs={
         13: Number(562.5),

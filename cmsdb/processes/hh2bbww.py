@@ -74,12 +74,14 @@ ggHH_hbbhww = hh_ggf.add_process(
     name="ggHH_hbbhww",
     id=21200,
     label=r"$HH_{ggf} \rightarrow bbWW$",
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_hbbhww = hh_vbf.add_process(
     name="qqHH_hbbhww",
     id=21201,
     label=r"$HH_{vbf} \rightarrow bbWW$",
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -90,6 +92,7 @@ ggHH_sl_hbbhww = ggHH_hbbhww.add_process(
     name="ggHH_sl_hbbhww",
     id=21210,
     label=r"$HH_{ggf} \rightarrow bbWW(qql\nu)$",
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_0_kt_1_sl_hbbhww = ggHH_kl_0_kt_1.add_process(
@@ -97,6 +100,7 @@ ggHH_kl_0_kt_1_sl_hbbhww = ggHH_kl_0_kt_1.add_process(
     id=21211,
     label=r"$HH_{ggf}^{\kappa\lambda=0} \rightarrow bbWW(qql\nu)$",
     xsecs=multiply_xsecs(ggHH_kl_0_kt_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_1_kt_1_sl_hbbhww = ggHH_kl_1_kt_1.add_process(
@@ -104,6 +108,7 @@ ggHH_kl_1_kt_1_sl_hbbhww = ggHH_kl_1_kt_1.add_process(
     label=r"$HH_{ggf}^{\kappa\lambda=1} \rightarrow bbWW(qql\nu)$",
     id=21212,
     xsecs=multiply_xsecs(ggHH_kl_1_kt_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_2p45_kt_1_sl_hbbhww = ggHH_kl_2p45_kt_1.add_process(
@@ -111,6 +116,7 @@ ggHH_kl_2p45_kt_1_sl_hbbhww = ggHH_kl_2p45_kt_1.add_process(
     label=r"$HH_{ggf}^{\kappa\lambda=2.45} \rightarrow bbWW(qql\nu)$",
     id=21213,
     xsecs=multiply_xsecs(ggHH_kl_2p45_kt_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_5_kt_1_sl_hbbhww = ggHH_kl_5_kt_1.add_process(
@@ -118,6 +124,7 @@ ggHH_kl_5_kt_1_sl_hbbhww = ggHH_kl_5_kt_1.add_process(
     label=r"$HH_{ggf}^{\kappa\lambda=5} \rightarrow bbWW(qql\nu)$",
     id=21214,
     xsecs=multiply_xsecs(ggHH_kl_5_kt_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 # add process dependencies
@@ -134,6 +141,7 @@ ggHH_dl_hbbhww = ggHH_hbbhww.add_process(
     name="ggHH_dl_hbbhww",
     id=21220,
     label=r"$HH_{ggf} \rightarrow bbWW(l\nu l\nu)$",
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_0_kt_1_dl_hbbhww = ggHH_kl_0_kt_1.add_process(
@@ -141,6 +149,7 @@ ggHH_kl_0_kt_1_dl_hbbhww = ggHH_kl_0_kt_1.add_process(
     id=21221,
     label=r"$HH_{ggf}^{\kappa\lambda=0} \rightarrow bbWW(l\nu l\nu)$",
     xsecs=multiply_xsecs(ggHH_kl_0_kt_1, br_bbww_dl),
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_1_kt_1_dl_hbbhww = ggHH_kl_1_kt_1.add_process(
@@ -148,6 +157,7 @@ ggHH_kl_1_kt_1_dl_hbbhww = ggHH_kl_1_kt_1.add_process(
     label=r"$HH_{ggf}^{\kappa\lambda=1} \rightarrow bbWW(l\nu l\nu)$",
     id=21222,
     xsecs=multiply_xsecs(ggHH_kl_1_kt_1, br_bbww_dl),
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_2p45_kt_1_dl_hbbhww = ggHH_kl_2p45_kt_1.add_process(
@@ -155,6 +165,7 @@ ggHH_kl_2p45_kt_1_dl_hbbhww = ggHH_kl_2p45_kt_1.add_process(
     label=r"$HH_{ggf}^{\kappa\lambda=2.45} \rightarrow bbWW(l\nu l\nu)$",
     id=21223,
     xsecs=multiply_xsecs(ggHH_kl_2p45_kt_1, br_bbww_dl),
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_5_kt_1_dl_hbbhww = ggHH_kl_5_kt_1.add_process(
@@ -162,6 +173,7 @@ ggHH_kl_5_kt_1_dl_hbbhww = ggHH_kl_5_kt_1.add_process(
     label=r"$HH_{ggf}^{\kappa\lambda=5} \rightarrow bbWW(l\nu l\nu)$",
     id=21224,
     xsecs=multiply_xsecs(ggHH_kl_5_kt_1, br_bbww_dl),
+    aux={"allow_uppercase_name": True},
 )
 
 
@@ -179,6 +191,7 @@ qqHH_sl_hbbhww = qqHH_hbbhww.add_process(
     name="qqHH_sl_hbbhww",
     label=r"$HH_{vbf} \rightarrow bbWW(qql\nu)$",
     id=22210,
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1_C2V_1_kl_1.add_process(
@@ -186,6 +199,7 @@ qqHH_CV_1_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1_C2V_1_kl_1.add_process(
     label=r"$HH_{vbf}^{1,1,1} \rightarrow bbWW(qql\nu)$",
     id=22211,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_1_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_0_sl_hbbhww = qqHH_CV_1_C2V_1_kl_0.add_process(
@@ -193,6 +207,7 @@ qqHH_CV_1_C2V_1_kl_0_sl_hbbhww = qqHH_CV_1_C2V_1_kl_0.add_process(
     label=r"$HH_{vbf}^{1,1,0} \rightarrow bbWW(qql\nu)$",
     id=22212,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_1_kl_0, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_2_sl_hbbhww = qqHH_CV_1_C2V_1_kl_2.add_process(
@@ -200,6 +215,7 @@ qqHH_CV_1_C2V_1_kl_2_sl_hbbhww = qqHH_CV_1_C2V_1_kl_2.add_process(
     label=r"$HH_{vbf}^{1,1,2} \rightarrow bbWW(qql\nu)$",
     id=22213,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_1_kl_2, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_0_kl_1_sl_hbbhww = qqHH_CV_1_C2V_0_kl_1.add_process(
@@ -207,6 +223,7 @@ qqHH_CV_1_C2V_0_kl_1_sl_hbbhww = qqHH_CV_1_C2V_0_kl_1.add_process(
     label=r"$HH_{vbf}^{1,0,1} \rightarrow bbWW(qql\nu)$",
     id=22214,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_0_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_2_kl_1_sl_hbbhww = qqHH_CV_1_C2V_2_kl_1.add_process(
@@ -214,6 +231,7 @@ qqHH_CV_1_C2V_2_kl_1_sl_hbbhww = qqHH_CV_1_C2V_2_kl_1.add_process(
     label=r"$HH_{vbf}^{1,2,1} \rightarrow bbWW(qql\nu)$",
     id=22215,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_2_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww = qqHH_CV_0p5_C2V_1_kl_1.add_process(
@@ -221,6 +239,7 @@ qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww = qqHH_CV_0p5_C2V_1_kl_1.add_process(
     label=r"$HH_{vbf}^{0.5,1,1} \rightarrow bbWW(qql\nu)$",
     id=22216,
     xsecs=multiply_xsecs(qqHH_CV_0p5_C2V_1_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1p5_C2V_1_kl_1.add_process(
@@ -228,6 +247,7 @@ qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1p5_C2V_1_kl_1.add_process(
     label=r"$HH_{vbf}^{1.5,1,1} \rightarrow bbWW(qql\nu)$",
     id=22217,
     xsecs=multiply_xsecs(qqHH_CV_1p5_C2V_1_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 # add process dependencies
@@ -247,6 +267,7 @@ qqHH_dl_hbbhww = qqHH_hbbhww.add_process(
     name="qqHH_dl_hbbhww",
     label=r"$HH_{vbf} \rightarrow bbWW(l\nu l\nu)$",
     id=22220,
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_1_dl_hbbhww = qqHH_CV_1_C2V_1_kl_1.add_process(
@@ -254,6 +275,7 @@ qqHH_CV_1_C2V_1_kl_1_dl_hbbhww = qqHH_CV_1_C2V_1_kl_1.add_process(
     label=r"$HH_{vbf}^{1,1,1} \rightarrow bbWW(l\nu l\nu)$",
     id=22221,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_1_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_0_dl_hbbhww = qqHH_CV_1_C2V_1_kl_0.add_process(
@@ -261,6 +283,7 @@ qqHH_CV_1_C2V_1_kl_0_dl_hbbhww = qqHH_CV_1_C2V_1_kl_0.add_process(
     label=r"$HH_{vbf}^{1,1,0} \rightarrow bbWW(l\nu l\nu)$",
     id=22222,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_1_kl_0, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_2_dl_hbbhww = qqHH_CV_1_C2V_1_kl_2.add_process(
@@ -268,6 +291,7 @@ qqHH_CV_1_C2V_1_kl_2_dl_hbbhww = qqHH_CV_1_C2V_1_kl_2.add_process(
     label=r"$HH_{vbf}^{1,1,2} \rightarrow bbWW(l\nu l\nu)$",
     id=22223,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_1_kl_2, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_0_kl_1_dl_hbbhww = qqHH_CV_1_C2V_0_kl_1.add_process(
@@ -275,6 +299,7 @@ qqHH_CV_1_C2V_0_kl_1_dl_hbbhww = qqHH_CV_1_C2V_0_kl_1.add_process(
     label=r"$HH_{vbf}^{1,0,1} \rightarrow bbWW(l\nu l\nu)$",
     id=22224,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_0_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_2_kl_1_dl_hbbhww = qqHH_CV_1_C2V_2_kl_1.add_process(
@@ -282,6 +307,7 @@ qqHH_CV_1_C2V_2_kl_1_dl_hbbhww = qqHH_CV_1_C2V_2_kl_1.add_process(
     label=r"$HH_{vbf}^{1,2,1} \rightarrow bbWW(l\nu l\nu)$",
     id=22225,
     xsecs=multiply_xsecs(qqHH_CV_1_C2V_2_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_0p5_C2V_1_kl_1_dl_hbbhww = qqHH_CV_0p5_C2V_1_kl_1.add_process(
@@ -289,6 +315,7 @@ qqHH_CV_0p5_C2V_1_kl_1_dl_hbbhww = qqHH_CV_0p5_C2V_1_kl_1.add_process(
     label=r"$HH_{vbf}^{0.5,1,1} \rightarrow bbWW(l\nu l\nu)$",
     id=22226,
     xsecs=multiply_xsecs(qqHH_CV_0p5_C2V_1_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1p5_C2V_1_kl_1_dl_hbbhww = qqHH_CV_1p5_C2V_1_kl_1.add_process(
@@ -296,6 +323,7 @@ qqHH_CV_1p5_C2V_1_kl_1_dl_hbbhww = qqHH_CV_1p5_C2V_1_kl_1.add_process(
     label=r"$HH_{vbf}^{1.5,1,1} \rightarrow bbWW(l\nu l\nu)$",
     id=22227,
     xsecs=multiply_xsecs(qqHH_CV_1p5_C2V_1_kl_1, br_bbww_sl),
+    aux={"allow_uppercase_name": True},
 )
 
 # add process dependencies

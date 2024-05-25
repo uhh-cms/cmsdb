@@ -20,6 +20,7 @@ cpn.add_dataset(
     ],
     n_files=26,
     n_events=392598,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -31,6 +32,7 @@ cpn.add_dataset(
     ],
     n_files=24,
     n_events=399994,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -42,6 +44,7 @@ cpn.add_dataset(
     ],
     n_files=40,
     n_events=399996,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -53,6 +56,7 @@ cpn.add_dataset(
     ],
     n_files=28,
     n_events=395996,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -68,6 +72,7 @@ cpn.add_dataset(
     ],
     n_files=15,
     n_events=400000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -79,6 +84,7 @@ cpn.add_dataset(
     ],
     n_files=23,
     n_events=395000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -90,6 +96,7 @@ cpn.add_dataset(
     ],
     n_files=26,
     n_events=397398,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -101,6 +108,7 @@ cpn.add_dataset(
     ],
     n_files=22,
     n_events=399999,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -116,6 +124,7 @@ cpn.add_dataset(
     ],
     n_files=4,
     n_events=396993,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -127,6 +136,7 @@ cpn.add_dataset(
     ],
     n_files=14,
     n_events=389995,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -138,6 +148,7 @@ cpn.add_dataset(
     ],
     n_files=7,
     n_events=399997,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -149,6 +160,7 @@ cpn.add_dataset(
     ],
     n_files=18,
     n_events=399993,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -160,6 +172,7 @@ cpn.add_dataset(
     ],
     n_files=2,
     n_events=399997,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -171,6 +184,7 @@ cpn.add_dataset(
     ],
     n_files=3,
     n_events=399998,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -182,6 +196,7 @@ cpn.add_dataset(
     ],
     n_files=1,
     n_events=399998,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -197,6 +212,7 @@ cpn.add_dataset(
     ],
     n_files=20,
     n_events=396000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -208,6 +224,7 @@ cpn.add_dataset(
     ],
     n_files=2,
     n_events=399999,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -219,6 +236,7 @@ cpn.add_dataset(
     ],
     n_files=10,
     n_events=395998,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -230,6 +248,7 @@ cpn.add_dataset(
     ],
     n_files=2,
     n_events=400000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -241,6 +260,7 @@ cpn.add_dataset(
     ],
     n_files=7,
     n_events=395998,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -252,6 +272,7 @@ cpn.add_dataset(
     ],
     n_files=1,
     n_events=400000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
@@ -263,6 +284,7 @@ cpn.add_dataset(
     ],
     n_files=18,
     n_events=397998,
+    aux={"allow_uppercase_name": True},
 )
 
 #

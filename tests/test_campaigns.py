@@ -1,76 +1,63 @@
-# test_module.py
+# coding: utf-8
+
+__all__ = ["TestCampaigns"]
+
 import os
+import re
+import importlib
 import unittest
-import sys
-from glob import glob
-import importlib as imp
+
+import cmsdb
 
 
-class TestCampaign(unittest.TestCase):
-    @unittest.skipIf("TESTMODULE" not in os.environ, "TESTMODULE not set")
-    @unittest.skipIf(
-        os.environ["TESTMODULE"].strip("/").endswith("run2_2016_nano_v9"),
-        "Tests for module 'run2_2016_nano_v9' are not implemented yet.",
-    )
-    @unittest.skipIf(
-        os.environ["TESTMODULE"].strip("/").endswith("__pycache__"),
-        "'__pycache__' is not a valid module.",
-    )
+class TestCampaigns(unittest.TestCase):
+
     @classmethod
     def setUpClass(cls):
-        modpath = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
-        if modpath not in sys.path:
-            sys.path.append(modpath)
-        mod = os.environ["TESTMODULE"]
-        to_import = os.path.relpath(mod, modpath).replace("/", ".")
-        # Load the module to test
-        cls.module = imp.import_module(to_import)
+        # find campaigns
+        campaign_dir = os.path.join(os.path.dirname(cmsdb.__file__), "campaigns")
+        campaign_names = [
+            name
+            for name in os.listdir(campaign_dir)
+            if os.path.isdir(os.path.join(campaign_dir, name)) and re.match(r"^run\d.*v\d.*$", name)
+        ]
 
-        # get all submodules
-        all_objects = getattr(cls.module, "__all__", None)
-        cls.submodules = list()
-        if not isinstance(all_objects, list):
-            basename = cls.module.__name__.split(".")[-1]
-            object_name = f"campaign_{basename}"
-            cls.submodules = {object_name: getattr(cls.module, object_name)}
-        else:
-            cls.submodules = {x: getattr(cls.module, x) for x in all_objects}
+        # import modules and store campaign objects if present
+        cls.campaigns = {}
+        for name in campaign_names:
+            module = importlib.import_module(f"cmsdb.campaigns.{name}")
+            for attr in dir(module):
+                if attr.startswith("campaign_"):
+                    cls.campaigns[name] = getattr(module, attr)
 
     def test_campaign_properties(self):
-        # loop through the different campaign objects in the current module
-        for name, submodule in self.submodules.items():
-            # run the test for each submodule
-            with self.subTest(f"testing object {name}"):
-                # make sure the campaign defines a basic set of properties
-                self.assertTrue(hasattr(submodule, "name"))
-                self.assertTrue(hasattr(submodule, "id"))
-                self.assertTrue(hasattr(submodule, "ecm"))
-                self.assertTrue(hasattr(submodule, "bx"))
+        for campaign_inst in self.campaigns.values():
+            with self.subTest(f"testing {campaign_inst.name}"):
+                self.assertTrue(hasattr(campaign_inst, "name"))
+                self.assertTrue(hasattr(campaign_inst, "id"))
+                self.assertTrue(hasattr(campaign_inst, "ecm"))
+                self.assertTrue(hasattr(campaign_inst, "bx"))
 
     def test_campaign_datasets(self):
-        # loop through the different campaign objects in the current module
-        for campaign_name, submodule in self.submodules.items():
-            # run the test for each submodule
-            with self.subTest(f"testing dataset of object '{campaign_name}'"):
+        for campaign_inst in self.campaigns.values():
+            with self.subTest(f"testing datasets {campaign_inst.name}"):
                 # make sure the campaign defines datasets in the first place
-                self.assertTrue(hasattr(submodule, "datasets"))
-                datasets = submodule.datasets
+                self.assertTrue(hasattr(campaign_inst, "datasets"))
+
                 # loop through the datasets and test their properties
-                for dataset_name, _, dataset in datasets.items():
-                    with self.subTest(f"testing dataset {campaign_name}/{dataset_name}"):
-                        # might want to implement naming conventions here,
-                        # e.g. the name of the dataset is the process name + suffix
-                        self.assertTrue(hasattr(dataset, "name"))
-                        self.assertTrue(hasattr(dataset, "id"))
-                        self.assertTrue(hasattr(dataset, "processes"))
-                        self.assertTrue(len(dataset.processes) > 0)
-                        self.assertTrue(hasattr(dataset, "keys"))
-                        self.assertTrue(hasattr(dataset, "n_files"))
-                        self.assertTrue(hasattr(dataset, "n_events"))
+                for dataset_inst in campaign_inst.datasets.values():
+                    with self.subTest(f"testing dataset {campaign_inst.name}/{dataset_inst.name}"):
+                        # check existence of attributes
+                        self.assertTrue(hasattr(dataset_inst, "name"))
+                        self.assertTrue(hasattr(dataset_inst, "id"))
+                        self.assertTrue(hasattr(dataset_inst, "processes"))
+                        self.assertTrue(hasattr(dataset_inst, "keys"))
+                        self.assertTrue(hasattr(dataset_inst, "n_files"))
+                        self.assertTrue(hasattr(dataset_inst, "n_events"))
 
+                        # check that the name is lowercase, but take into account known exceptions
+                        if not dataset_inst.x("allow_uppercase_name", False):
+                            self.assertEquals(dataset_inst.name, dataset_inst.name.lower())
 
-if __name__ == "__main__":
-    # Remove command line arguments before running unittest.main()
-    # to prevent unittest from trying to interpret them
-    # if cmsdb is not path of the sys path, add it
-    unittest.main()
+                        # check that there is at least one process linked
+                        self.assertTrue(len(dataset_inst.processes) > 0)

@@ -279,6 +279,7 @@ ggHH_kl_0_kt_1 = hh_ggf.add_process(
             "mtop": (0.06j, 0.12j),
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_1_kt_1 = hh_ggf.add_process(
@@ -296,6 +297,7 @@ ggHH_kl_1_kt_1 = hh_ggf.add_process(
             "mtop": (0.04j, 0.18j),
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_2p45_kt_1 = hh_ggf.add_process(
@@ -308,6 +310,7 @@ ggHH_kl_2p45_kt_1 = hh_ggf.add_process(
             "mtop": (0.04j, 0.22j),
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 ggHH_kl_5_kt_1 = hh_ggf.add_process(
@@ -320,6 +323,7 @@ ggHH_kl_5_kt_1 = hh_ggf.add_process(
             "mtop": (0.13j, 0.04j),
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 # Source: xsecs were given in fb but are converted to pb,
@@ -347,6 +351,7 @@ qqHH_CV_1_C2V_1_kl_1 = hh_vbf.add_process(
             "pdf": 0.021j,
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_0 = hh_vbf.add_process(
@@ -358,6 +363,7 @@ qqHH_CV_1_C2V_1_kl_0 = hh_vbf.add_process(
             "pdf": 0.021j,
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_1_kl_2 = hh_vbf.add_process(
@@ -369,6 +375,7 @@ qqHH_CV_1_C2V_1_kl_2 = hh_vbf.add_process(
             "pdf": 0.021j,
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_0_kl_1 = hh_vbf.add_process(
@@ -380,6 +387,7 @@ qqHH_CV_1_C2V_0_kl_1 = hh_vbf.add_process(
             "pdf": 0.021j,
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1_C2V_2_kl_1 = hh_vbf.add_process(
@@ -391,6 +399,7 @@ qqHH_CV_1_C2V_2_kl_1 = hh_vbf.add_process(
             "pdf": 0.021j,
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_0p5_C2V_1_kl_1 = hh_vbf.add_process(
@@ -402,6 +411,7 @@ qqHH_CV_0p5_C2V_1_kl_1 = hh_vbf.add_process(
             "pdf": 0.021j,
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 qqHH_CV_1p5_C2V_1_kl_1 = hh_vbf.add_process(
@@ -413,6 +423,7 @@ qqHH_CV_1p5_C2V_1_kl_1 = hh_vbf.add_process(
             "pdf": 0.021j,
         }),
     },
+    aux={"allow_uppercase_name": True},
 )
 
 #
