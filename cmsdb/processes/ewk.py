@@ -23,18 +23,29 @@ __all__ = [
     "z_qq",
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800",
     "w",
+    "w_taunu", "w_munu",
     "w_lnu",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500",
     "ewk",
     "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
     "vv",
-    "zz", "zz_qqll_m4", "zz_llnunu_m4", "zz_llll_m4", "zz_qqqq", "zz_nunuqq",
+    "zz",
+    "zz_qqll_m4", "zz_llnunu_m4", "zz_llll_m4", "zz_qqqq", "zz_nunuqq",
     "wz", "wz_lllnu_m4", "wz_qqll_m4", "wz_lnuqq",
-    "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
+    "ww",
+    "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
     "zzz", "wzz", "wwz", "www",
+
 ]
+
+# , dy_lep_m50_1j, dy_lep_m50_2j, dy_lep_m50_3j, dy_lep_m50_4j
+# "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400", "dy_lep_m50_ht200to400",
+# "dy_lep_m50_ht600to800", dy_lep_m50_ht800to1200, "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500",
+# , , , "zz_llnunu", "zz_qqnunu", "zz_qqqq", "zz_llll", "wz_lllnu", "wz_qqll"
+# "wz_lnuqq", "ww_lnuaq", "ww_lnulnu", "ww_qqqq",
+
 
 from order import Process
 from scinum import Number
@@ -486,6 +497,25 @@ w = Process(
     xsecs={13: Number(0.1)},  # TODO, or use w.set_xsec(13, w_lnu.get_xsec(13) / const.br_w["lep"]) below?
 )
 
+
+#TODO - B
+w_taunu = w.add_process(
+    name="w_taunu",
+    id=6010,
+    label=rf"{w.label} ($W \rightarrow tau\nu$)",
+    xsecs={
+        13: Number(0.1)},
+)
+
+w_munu = w.add_process(
+    name="w_munu",
+    id=6020,
+    label=rf"{w.label} ($W \rightarrow mu\nu$)",
+    xsecs={
+        13: Number(0.1)},
+)
+
+
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=27
 # and for 13.6 TeV, based on:
@@ -659,6 +689,15 @@ zz = vv.add_process(
     label="ZZ",
     xsecs={
         13: Number(15.99, {"scale": (0.037j, 0.026j)}),
+    },
+)
+
+
+zz_qqll_m4 = zz.add_process(
+    name="zz_qqll_m4",
+    id=8110,
+    xsecs={
+        13: Number(3.697, {"tot": 0.002713}),
     },
 )
 

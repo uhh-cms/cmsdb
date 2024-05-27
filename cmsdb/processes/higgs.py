@@ -130,6 +130,7 @@ zh_llbb = zh.add_process(
     xsecs=multiply_xsecs(zh, const.br_h.bb * const.br_z.clep),
 )
 
+
 zh_qqbb = zh.add_process(
     name="zh_qqbb",
     id=13121,
@@ -193,6 +194,7 @@ ggzh = vh.add_process(
 ggzh_llbb = ggzh.add_process(
     name="ggzh_llbb",
     id=14100,
+    label=rf"{zh.label}, $gg -> H \rightarrow bb$, $Z \rightarrow ll$",
     xsecs={
         13: ggzh.get_xsec(13) * const.br_h.bb * const.br_z.clep,
     },  # TODO

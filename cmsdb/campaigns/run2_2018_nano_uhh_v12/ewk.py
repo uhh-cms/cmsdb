@@ -177,7 +177,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_m50_ht400to600_madgraph",
     id=14234754,
-    processes=[procs.c],
+    processes=[procs.dy_lep_m50_ht400to600],
     keys=[
         "/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -271,7 +271,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_pt250to400_amcatnlo",
     id=14349402,
-    processes=[procs.dy_lep_pt250To400],
+    processes=[procs.dy_lep_pt250to400],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -407,7 +407,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="w_lnu_ht70to100_madgraph",
     id=14196361,
-    processes=[procs.w_lnu_ht70To100],
+    processes=[procs.w_lnu_ht70to100],
     keys=[
         "/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -572,9 +572,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_qqll_pythia",
+    name="zz_qqll_m4_pythia",
     id=14284213,
-    processes=[procs.zz_qqll],
+    processes=[procs.zz_qqll_m4],
     keys=[
         "/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -583,9 +583,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_llnunu_pythia",
+    name="zz_llnunu_m4_pythia",
     id=14196326,
-    processes=[procs.zz_llnunu],
+    processes=[procs.zz_llnunu_m4],
     keys=[
         "/ZZTo2LnuNu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -593,10 +593,11 @@ cpn.add_dataset(
     n_events=56886000,
 )
 
+# particle is F5 (even if this is not within the name), used process from 2016HIPM
 cpn.add_dataset(
-    name="zz_qqnunu_pythia",
+    name="zz_nunuqq_pythia",
     id=14245915,
-    processes=[procs.zz_qqnunu],
+    processes=[procs.zz_nunuqq],
     keys=[
         "/ZZTo2QnuNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -616,9 +617,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_llll_powheg",
+    name="zz_llll_m4_powheg",
     id=14241106,
-    processes=[procs.zz_llll],
+    processes=[procs.zz_llll_m4],
     keys=[
         "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -651,9 +652,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_qqll_pythia",
+    name="wz_qqll_m4_pythia",
     id=14284121,
-    processes=[procs.wz_qqll],
+    processes=[procs.wz_qqll_m4],
     keys=[
         "/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
