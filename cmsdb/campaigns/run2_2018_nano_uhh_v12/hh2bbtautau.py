@@ -9,11 +9,11 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v12 as cpn
 
 
-# #
-# # ggF -> H -> HH
-# #
 
-# # SM
+# ggF -> H -> HH
+
+
+# SM
 
 cpn.add_dataset(
     name="hh_ggf_bbtautau_madgraph",
@@ -26,7 +26,7 @@ cpn.add_dataset(
     n_events=400000,
 )
 
-# # # BSM scenarios
+# BSM scenarios
 
 cpn.add_dataset(
     name="hh_ggf_bbtautau_node1_madgraph",
@@ -163,10 +163,10 @@ cpn.add_dataset(
     n_files=1,
     n_events=400000,
 )
-# #
-# # #
-# # # ggF -> radion -> HH
-# # #
+
+
+# ggF -> radion -> HH
+
 
 cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m250_madgraph",
@@ -444,9 +444,9 @@ cpn.add_dataset(
 )
 
 
-# #
-# # ggF -> bulk graviton -> HH
-# #
+
+# ggF -> bulk graviton -> HH
+
 
 
 cpn.add_dataset(
@@ -729,9 +729,9 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-# #
-# # vbf -> radion -> HH
-# #
+
+# vbf -> radion -> HH
+
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m250_madgraph",
     id=14311235,
@@ -1013,9 +1013,9 @@ cpn.add_dataset(
     n_events=97000,
 )
 
-# #
-# # vbf -> bulk graviton -> HH
-# #
+
+# vbf -> bulk graviton -> HH
+
 
 
 cpn.add_dataset(

@@ -9,9 +9,8 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v12 as cpn
 
 
-#
+
 # Single Higgs
-#
 
 # ggf
 

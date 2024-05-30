@@ -9,9 +9,7 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v12 as cpn
 
 
-# #
-# # Drell-Yan
-# #
+# DY
 
 cpn.add_dataset(
     name="dy_lep_m10to50_madgraph",
@@ -138,7 +136,7 @@ cpn.add_dataset(
 )
 
 
-# # ht binned
+# ht binned
 
 cpn.add_dataset(
     name="dy_lep_m50_ht70to100_madgraph",
@@ -385,11 +383,9 @@ cpn.add_dataset(
     n_events=28876062,
 )
 
-# #
-# # W boson production
-# #
 
-# # inclusive
+# W boson production
+# inclusive
 
 cpn.add_dataset(
     name="w_lnu_madgraph",
@@ -402,7 +398,7 @@ cpn.add_dataset(
     n_events=82442496,
 )
 
-# # ht binned
+# ht binned
 
 cpn.add_dataset(
     name="w_lnu_ht70to100_madgraph",
@@ -458,7 +454,6 @@ cpn.add_dataset(
     n_files=9,
     n_events=7718765,
 )
-
 
 cpn.add_dataset(
     name="w_lnu_ht800to1200_madgraph",
@@ -587,19 +582,18 @@ cpn.add_dataset(
     id=14196326,
     processes=[procs.zz_llnunu_m4],
     keys=[
-        "/ZZTo2LnuNu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+        "/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
     n_files=35,
     n_events=56886000,
 )
 
-# particle is F5 (even if this is not within the name), used process from 2016HIPM
 cpn.add_dataset(
     name="zz_nunuqq_pythia",
     id=14245915,
     processes=[procs.zz_nunuqq],
     keys=[
-        "/ZZTo2QnuNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
+        "/ZZTo2Q2Nu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
     n_files=12,
     n_events=19813764,
@@ -641,9 +635,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_lllnu_pythia",
+    name="wz_lllnu_m4_pythia",
     id=14253723,
-    processes=[procs.wz_lllnu],
+    processes=[procs.wz_lllnu_m4],
     keys=[
         "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -688,7 +682,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ww_lnuqq_pythia",
     id=14372963,
-    processes=[procs.ww_lnuaq],
+    processes=[procs.ww_lnuqq],
     keys=[
         "/WWTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -701,7 +695,7 @@ cpn.add_dataset(
     id=14241325,
     processes=[procs.ww_lnulnu],
     keys=[
-        "/WWTo2LnuNu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
+        "/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=9994000,
@@ -759,7 +753,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="wzz_ext_amcatnlo",
     id=14241005,
-    processes=[procs.wzz_ext],
+    processes=[procs.wzz],
     keys=[
         "/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1_ext1-v2/NANOAODSIM",  # noqa
     ],

@@ -9,9 +9,9 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v12 as cpn
 from order import DatasetInfo
 
-#
+
 # ttbar
-#
+
 # semi leptonic
 cpn.add_dataset(
     name="tt_sl_powheg",
@@ -74,7 +74,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tt_llnunu_powheg",
     id=14197224,
-    processes=[procs.tt_llnunu],
+    processes=[procs.tt_dl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -188,14 +188,14 @@ cpn.add_dataset(
 )
 
 
-#
+
 # ttbar + 1 vector boson
-#
+
 
 cpn.add_dataset(
     name="ttz_llnunu_amcatnlo",
     id=14241155,
-    processes=[procs.ttz_llnunu],
+    processes=[procs.ttz_llnunu_m10],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -263,9 +263,9 @@ cpn.add_dataset(
     n_events=970179,
 )
 
-#
+
 # ttbar + 2 vector bosons
-#
+
 cpn.add_dataset(
     name="ttzz_madgraph",
     id=14211818,
@@ -300,10 +300,8 @@ cpn.add_dataset(
     n_events=944000,
 )
 
-#
-# single top
-#
 
+# single top
 
 cpn.add_dataset(
     name="st_tchannel_t_powheg",
