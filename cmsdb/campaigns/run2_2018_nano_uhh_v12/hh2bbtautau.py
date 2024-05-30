@@ -9,7 +9,6 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v12 as cpn
 
 
-
 # ggF -> H -> HH
 
 
@@ -444,9 +443,7 @@ cpn.add_dataset(
 )
 
 
-
 # ggF -> bulk graviton -> HH
-
 
 
 cpn.add_dataset(
@@ -1015,7 +1012,6 @@ cpn.add_dataset(
 
 
 # vbf -> bulk graviton -> HH
-
 
 
 cpn.add_dataset(

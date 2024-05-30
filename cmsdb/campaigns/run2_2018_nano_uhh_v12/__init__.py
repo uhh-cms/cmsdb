@@ -40,9 +40,9 @@ campaign_run2_2018_nano_uhh_v12 = Campaign(
 
 
 # trailing imports to load datasets
-# import cmsdb.campaigns.run2_2018_nano_uhh_v12.data  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v12.top  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.data  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.top  # noqa
 import cmsdb.campaigns.run2_2018_nano_uhh_v12.ewk  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v12.qcd  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v12.higgs  # noqa
-# import cmsdb.campaigns.run2_2018_nano_uhh_v12.hh2bbtautau  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.qcd  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.higgs  # noqa
+import cmsdb.campaigns.run2_2018_nano_uhh_v12.hh2bbtautau  # noqa

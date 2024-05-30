@@ -498,13 +498,12 @@ w = Process(
 )
 
 
-#TODO - B
 w_taunu = w.add_process(
     name="w_taunu",
     id=6010,
     label=rf"{w.label} ($W \rightarrow tau\nu$)",
     xsecs={
-        13: Number(0.1)},
+        13: Number(0.1)},  # TODO
 )
 
 w_munu = w.add_process(
@@ -692,14 +691,6 @@ zz = vv.add_process(
     },
 )
 
-
-zz_qqll_m4 = zz.add_process(
-    name="zz_qqll_m4",
-    id=8110,
-    xsecs={
-        13: Number(3.697, {"tot": 0.002713}),
-    },
-)
 
 # based on GenXSecAnalyzer
 # for ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)

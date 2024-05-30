@@ -32,8 +32,6 @@ import cmsdb.constants as const
 from cmsdb.util import multiply_xsecs
 
 
-
-
 #
 # ttbar
 # (ids up to 1999)
@@ -191,6 +189,7 @@ st_twchannel = st.add_process(
         )),
     },
 )
+
 
 st_twchannel_t = st_twchannel.add_process(
     name="st_twchannel_t",
