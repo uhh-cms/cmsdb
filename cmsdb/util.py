@@ -4,7 +4,9 @@
 Helpful utilities.
 """
 
-__all__ = ["DotDict"]
+__all__ = ["DotDict", "multiply_xsecs", "add_xsecs"]
+
+from scinum import Number
 
 from order import Process
 from collections import OrderedDict
@@ -66,7 +68,7 @@ class DotDict(OrderedDict):
         return wrap(OrderedDict(*args, **kwargs))
 
 
-def multiply_xsecs(base_proc: Process, factor: float):
+def multiply_xsecs(base_proc: Process, factor: float) -> dict[float, Number]:
     """
     Helper to multiply all cross sections of a base process *base_proc*
     with some value *factor*
@@ -74,5 +76,18 @@ def multiply_xsecs(base_proc: Process, factor: float):
     xsecs = {
         ecm: base_proc.get_xsec(ecm) * factor
         for ecm in base_proc.xsecs.keys()
+    }
+    return xsecs
+
+
+def add_xsecs(*processes: tuple[Process]) -> dict[float, Number]:
+    """
+    Helper to add all cross sections of multiple processes *processes*. Only the
+    cross sections from center of mass energies that are available for all processes are added.
+    """
+    valid_ecms = set.intersection(*[set(proc.xsecs.keys()) for proc in processes])
+    xsecs = {
+        ecm: sum([proc.get_xsec(ecm) for proc in processes])
+        for ecm in valid_ecms
     }
     return xsecs
