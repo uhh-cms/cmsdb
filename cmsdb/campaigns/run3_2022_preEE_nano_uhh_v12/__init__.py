@@ -16,8 +16,8 @@ from order import Campaign
 # campaign
 #
 
-campaign_run3_2022_postEE_nano_uhh_v12 = Campaign(
-    name="run3_2022_postEE_nano_uhh_v12",
+campaign_run3_2022_preEE_nano_uhh_v12 = Campaign(
+    name="run3_2022_preEE_nano_uhh_v12",
     id=320221203,
     ecm=13.6,
     bx=25,
@@ -26,7 +26,7 @@ campaign_run3_2022_postEE_nano_uhh_v12 = Campaign(
         "year": 2022,
         "version": 12,
         "custom": {
-            "name": "run3_2022_postEE_nano_uhh_v12",
+            "name": "run3_2022_preEE_nano_uhh_v12",
             "creator": "uhh",
             "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/nprouvos/nanogen_store/MergeNano/config_22pre_v12/prod3",  # noqa
         },
@@ -35,6 +35,6 @@ campaign_run3_2022_postEE_nano_uhh_v12 = Campaign(
 
 
 # trailing imports to load datasets
-import cmsdb.campaigns.run3_2022_postEE_nano_uhh_v12.data  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_uhh_v12.top  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_uhh_v12.hhh4b2tau  # noqa
+import cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12.data  # noqa
+import cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12.top  # noqa
+import cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12.hhh4b2tau  # noqa
