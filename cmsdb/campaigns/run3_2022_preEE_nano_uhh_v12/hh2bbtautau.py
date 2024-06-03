@@ -15,7 +15,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12 import campaign_run3_2022_preE
 
 # SM
 cpn.add_dataset(
-    name="hh_ggf_hbb_htt_kl1_kt1_c20",
+    name="hh_ggf_hbb_htt_kl1_kt1_c20_powheg",
     id=14875846,
     processes=[procs.hh_ggf_bbtautau],
     # TODO: to be updated to this one once it is available

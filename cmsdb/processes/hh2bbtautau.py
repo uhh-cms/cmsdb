@@ -79,7 +79,10 @@ hh_ggf_bbtautau = hh_ggf.add_process(
     name="hh_ggf_bbtautau",
     id=21100,
     label=r"$HH_{ggf} \rightarrow bb\tau\tau$",
-    xsecs={13: hh_ggf.get_xsec(13) * const.br_hh.bbtt},  # TODO
+    xsecs={
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 hh_ggf_bbtautau_node1 = hh_ggf.add_process(

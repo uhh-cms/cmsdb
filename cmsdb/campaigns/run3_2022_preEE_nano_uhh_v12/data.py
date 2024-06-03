@@ -40,5 +40,6 @@ cpn.add_dataset(
     aux={
         "nominal_merging_factor": 9,
         "era": "D",
+        "jec_era": "RunCD",
     },
 )

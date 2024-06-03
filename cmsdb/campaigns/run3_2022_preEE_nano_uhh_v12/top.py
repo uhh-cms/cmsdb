@@ -14,7 +14,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12 import campaign_run3_2022_preE
 #
 
 cpn.add_dataset(
-    name="tt_sl",
+    name="tt_sl_powheg",
     id=14791247,
     processes=[procs.tt_sl],
     keys=[
