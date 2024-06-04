@@ -14,15 +14,30 @@ from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v
 #
 
 cpn.add_dataset(
-    name="data_e_b",
-    id=14172939,
+    name="data_e_a",
+    id=14369804,
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2017B-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/EGamma/Run2018A-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=21,
-    n_events=60537490,
+    n_files=157,
+    n_events=339013231,
+    aux={
+        "era": "A",
+    },
+)
+
+cpn.add_dataset(
+    name="data_e_b",
+    id=14425116,
+    is_data=True,
+    processes=[procs.data_e],
+    keys=[
+        "/EGamma/Run2018B-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
+    ],
+    n_files=71,
+    n_events=153822427,
     aux={
         "era": "B",
     },
@@ -30,18 +45,19 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_e_c",
-    id=14172612,
+    id=14400993,
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2017C-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/EGamma/Run2018C-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=56,
-    n_events=136637888,
+    n_files=70,
+    n_events=147827904,
     aux={
         "era": "C",
     },
 )
+
 
 cpn.add_dataset(
     name="data_e_d",
@@ -49,42 +65,12 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2017D-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/EGamma/Run2018D-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=22,
-    n_events=51526521,
+    n_files=348,
+    n_events=734264684,
     aux={
         "era": "D",
-    },
-)
-
-cpn.add_dataset(
-    name="data_e_e",
-    id=14173005,
-    is_data=True,
-    processes=[procs.data_e],
-    keys=[
-        "/SingleElectron/Run2017E-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=46,
-    n_events=102122055,
-    aux={
-        "era": "E",
-    },
-)
-
-cpn.add_dataset(
-    name="data_e_f",
-    id=14173745,
-    is_data=True,
-    processes=[procs.data_e],
-    keys=[
-        "/SingleElectron/Run2017F-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=57,
-    n_events=128467223,
-    aux={
-        "era": "F",
     },
 )
 
@@ -92,17 +78,31 @@ cpn.add_dataset(
 #
 # SingleMuon
 #
-
 cpn.add_dataset(
-    name="data_mu_b",
-    id=14175335,
+    name="data_mu_a",
+    id=14668759,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2017B-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/SingleMuon/Run2018A-UL2018_NanoAODv12_GT36-v2/NANOAOD",  # noqa
     ],
-    n_files=51,
-    n_events=136300266,
+    n_files=88,
+    n_events=241605557,
+    aux={
+        "era": "A",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_b",
+    id=14668968,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/SingleMuon/Run2018B-UL2018_NanoAODv12_GT36-v2/NANOAOD",  # noqa
+    ],
+    n_files=43,
+    n_events=119918017,
     aux={
         "era": "B",
     },
@@ -110,63 +110,35 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_mu_c",
-    id=14175349,
+    id=14668849,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2017C-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/SingleMuon/Run2018C-UL2018_NanoAODv12_GT36-v3/NANOAOD",  # noqa
     ],
-    n_files=65,
-    n_events=165652756,
+    n_files=41,
+    n_events=110032072,
     aux={
         "era": "C",
     },
 )
 
+
 cpn.add_dataset(
     name="data_mu_d",
-    id=14173875,
+    id=14668961,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2017D-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/SingleMuon/Run2018D-UL2018_NanoAODv12_GT36-v2/NANOAOD",  # noqa
     ],
-    n_files=28,
-    n_events=70361660,
+    n_files=181,
+    n_events=513884680,
     aux={
         "era": "D",
     },
 )
 
-cpn.add_dataset(
-    name="data_mu_e",
-    id=14172567,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
-        "/SingleMuon/Run2017E-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=62,
-    n_events=154618774,
-    aux={
-        "era": "E",
-    },
-)
-
-cpn.add_dataset(
-    name="data_mu_f",
-    id=14172671,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
-        "/SingleMuon/Run2017F-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=101,
-    n_events=242140980,
-    aux={
-        "era": "F",
-    },
-)
 
 
 #
@@ -174,15 +146,31 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_tau_b",
-    id=14173749,
+    name="data_tau_a",
+    id=14501798,
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-    "/Tau/Run2017B-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/Tau/Run2018A-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=21,
-    n_events=38158216,
+    n_files=32,
+    n_events=63214407,
+    aux={
+        "era": "A",
+    },
+)
+
+
+cpn.add_dataset(
+    name="data_tau_b",
+    id=14386351,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2018B-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
+    ],
+    n_files=17,
+    n_events=32678961,
     aux={
         "era": "B",
     },
@@ -190,14 +178,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_tau_c",
-    id=14173679,
+    id=14380679,
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2017C-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/Tau/Run2018C-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=29,
-    n_events=55416425,
+    n_files=16,
+    n_events=31974422,
     aux={
         "era": "C",
     },
@@ -205,46 +193,16 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_tau_d",
-    id=14173084,
+    id=14443704,
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2017D-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/Tau/Run2018D-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=10,
-    n_events=20530776,
+    n_files=80,
+    n_events=167852084,
     aux={
         "era": "D",
-    },
-)
-
-cpn.add_dataset(
-    name="data_tau_e",
-    id=14173632,
-    is_data=True,
-    processes=[procs.data_tau],
-    keys=[
-        "/Tau/Run2017E-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=22,
-    n_events=44316628,
-    aux={
-        "era": "E",
-    },
-)
-
-cpn.add_dataset(
-    name="data_tau_f",
-    id=14173624,
-    is_data=True,
-    processes=[procs.data_tau],
-    keys=[
-        "/Tau/Run2017F-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=46,
-    n_events=88502118,
-    aux={
-        "era": "F",
     },
 )
 
@@ -252,6 +210,21 @@ cpn.add_dataset(
 #
 # MET
 #
+
+cpn.add_dataset(
+    name="data_met_a",
+    id=14351169,
+    is_data=True,
+    processes=[procs.data_met],
+    keys=[
+        "/MET/Run2018A-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
+    ],
+    n_files=24,
+    n_events=52759851,
+    aux={
+        "era": "A",
+    },
+)
 
 cpn.add_dataset(
     name="data_met_b",
@@ -270,61 +243,32 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_met_c",
-    id=14173597,
+    id=14364332,
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2017C-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/MET/Run2018C-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=36,
-    n_events=115906496,
+    n_files=15,
+    n_events=31144738,
     aux={
         "era": "C",
     },
 )
 
+
 cpn.add_dataset(
     name="data_met_d",
-    id=14173623,
+    id=14380811,
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2017D-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
+        "/MET/Run2018D-UL2018_NanoAODv12_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=9,
-    n_events=20075033,
+    n_files=93,
+    n_events=160411782,
     aux={
         "era": "D",
     },
 )
 
-cpn.add_dataset(
-    name="data_met_e",
-    id=14173654,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/MET/Run2017E-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=38,
-    n_events=71418865,
-    aux={
-        "era": "E",
-    },
-)
-
-
-cpn.add_dataset(
-    name="data_met_f",
-    id=14174316,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/MET/Run2017F-UL2017_NanoAODv11-v1/NANOAOD",  # noqa
-    ],
-    n_files=88,
-    n_events=177521562,
-    aux={
-        "era": "F",
-    },
-)

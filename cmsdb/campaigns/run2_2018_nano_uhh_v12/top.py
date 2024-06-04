@@ -15,15 +15,15 @@ from order import DatasetInfo
 # semi leptonic
 cpn.add_dataset(
     name="tt_sl_powheg",
-    id=-1,
+    id=-14202873,
     processes=[procs.tt_sl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                # TODO
+                "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=-1,
-            n_events=-1,
+            n_files=455,
+            n_events=478454000,
         ),
         tune_up=DatasetInfo(
             keys=[
@@ -132,15 +132,15 @@ cpn.add_dataset(
 # Fully hadronic
 cpn.add_dataset(
     name="tt_fh_powheg",
-    id=14222447,
+    id=14197333,
     processes=[procs.tt_fh],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "-1",    # TODO
+                "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
             ],
-            n_files=-1,
-            n_events=-1,
+            n_files=343,
+            n_events=343248000,
         ),
         tune_up=DatasetInfo(
             keys=[
