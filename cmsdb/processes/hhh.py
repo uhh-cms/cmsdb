@@ -99,7 +99,7 @@ for i, (c3, d4) in enumerate(coupling_combinations, 1):
         name: hhh_ggf.add_process(
             name=name,
             id=hhh_ggf.id + i,
-            label=f"${hhh_ggf.label} (c_{{3}}={c3}, d_{{4}}={d4})$",
+            label=f"{hhh_ggf.label} $(c_{{3}}={c3}, d_{{4}}={d4})$",
             xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)), # TODO
         )
     })
@@ -110,7 +110,7 @@ for i, (c3, d4) in enumerate(coupling_combinations, 1):
         f"{name}_4b2tau": locals().get(name).add_process(
             name=f"{name}_4b2tau",
             id=tmp.id + 100,
-            label=f"${tmp.label} \\rightarrow 4b2\\tau$",
+            label=f"{tmp.label} $\\rightarrow 4b2\\tau$",
             xsecs=multiply_xsecs(tmp, 3*const.br_h.tt*const.br_h.bb**2)
         )})
     __all__.append(f"{name}_4b2tau")
