@@ -12,16 +12,17 @@ from cmsdb.campaigns.run3_2022_postEE_nano_v12 import campaign_run3_2022_postEE_
 # ggf, HH -> bbVV inclusive
 #
 
-cpn.add_dataset(
-    name="ggHH_kl_1_kt_1_hbbhww_powheg",
-    id=14857512,
-    # processes=[procs.ggHH_kl_1_kt_1_hbbhww],
-    keys=[
-        "/GluGlutoHHto2B2V_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=40,
-    n_events=769320,
-)
+# commented out since the corresponding process is missing
+# cpn.add_dataset(
+#     name="ggHH_kl_1_kt_1_hbbhww_powheg",
+#     id=14857512,
+#     processes=[procs.ggHH_kl_1_kt_1_hbbhww],
+#     keys=[
+#         "/GluGlutoHHto2B2V_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+#     ],
+#     n_files=40,
+#     n_events=769320,
+# )
 
 #
 # ggf, HH -> bbVV single lepton
