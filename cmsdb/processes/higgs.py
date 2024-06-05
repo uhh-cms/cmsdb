@@ -234,7 +234,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
-from cmsdb.util import multiply_xsecs, add_xsecs, DotDict
+from cmsdb.util import add_xsecs, DotDict, add_decay_process, add_sub_decay_process
 
 ####################################################################################################
 #
@@ -425,89 +425,11 @@ w_decay_map = DotDict.wrap({
     },
 })
 
-
-def add_decay_process(
-    parent: Process,
-    decay_map: DotDict,
-    custom_id: int | None = None,
-    add_production_mode_parent: bool = True,
-) -> Process:
-    """
-    Add a subprocess to the *parent* Process for a certain decay channel encoded via the *decay_map*.
-
-    :param parent: Parent process.
-    :param decay_map: Dictionary with decay channel information. Needs to include the keys
-    *name*, *id*, *br*, and *label*.
-    :param custom_id: Optional custom ID to be used for the subprocess.
-    :param add_production_mode_parent: Whether to add the process with the same final state but different
-    production mode as parent. Als adds the *production_mode_parent* attribute to the subprocess.
-    :return: The resulting child process.
-    """
-    _id = custom_id if custom_id else parent.id + decay_map["id"]
-    label = rf"{parent.label}, {decay_map['label']}"
-
-    child = parent.add_process(
-        name=f"{parent.name}_{decay_map.name}",
-        id=_id,
-        label=label,
-        xsecs=multiply_xsecs(parent, decay_map["br"]),
-    )
-    if add_production_mode_parent:
-        if parent.has_aux("production_mode_parent"):
-            grandparent = parent.get_parent_process(parent.aux["production_mode_parent"])
-        elif len(parent.parent_processes) == 1:
-            grandparent = parent.parent_processes.get_first()
-        else:
-            raise ValueError(
-                f"Parent process {parent.name} either needs the *production_mode_parent* aux or it "
-                "must have exactly one parent process, but has "
-                f"{parent.parent_processes.names()} ({len(parent.parent_processes)}).",
-            )
-        production_mode_parent = grandparent.get_process(f"{grandparent.name}_{decay_map.name}")
-        production_mode_parent.add_process(child)
-        child.x.production_mode_parent = production_mode_parent.name
-
-    return child
-
-
-def add_sub_decay_process(
-    parent: Process,
-    decay_map: DotDict,
-    custom_id: int | None = None,
-    add_production_mode_parent: bool = True,
-    skip_parent_label: bool = False,
-) -> Process:
-    """
-    Add a subprocess to the *parent* Process for a certain decay channel encoded via the *decay_map*.
-
-    :param parent: Parent process.
-    :param decay_map: Dictionary with decay channel information. Needs to include the keys
-    *name*, *id*, *br*, and *label*.
-    :param custom_id: Optional custom ID to be used for the subprocess.
-    :return: The resulting child process.
-    """
-    child = parent.add_process(
-        name=f"{parent.name}{decay_map.name}",
-        id=custom_id if custom_id else parent.id + decay_map["id"],
-        label=rf"{parent.label}{decay_map['label']}",
-        xsecs=multiply_xsecs(parent, decay_map["br"]),
-    )
-    if add_production_mode_parent:
-        if parent.has_aux("production_mode_parent"):
-            grandparent = parent.get_parent_process(parent.aux["production_mode_parent"])
-        elif len(parent.parent_processes) == 1:
-            grandparent = parent.parent_processes.get_first()
-        else:
-            raise ValueError(
-                f"Parent process {parent.name} must have exactly one parent process, but has "
-                f"{parent.parent_processes.names()} ({len(parent.parent_processes)}).",
-            )
-        production_mode_parent = grandparent.get_process(f"{grandparent.name}{decay_map.name}")
-        production_mode_parent.add_process(child)
-        child.x.production_mode_parent = production_mode_parent.name
-
-    return child
-
+####################################################################################################
+#
+# Single H (inclusive)
+#
+####################################################################################################
 
 h = Process(
     name="h",
@@ -1343,7 +1265,7 @@ hh_ggf = hh.add_process(
         }),
         14: Number(34.43, {
             "pdf": 0.03j,
-            "scale": (0.06j, 0.23j)
+            "scale": (0.06j, 0.23j),
         })},  # fb
 )
 
