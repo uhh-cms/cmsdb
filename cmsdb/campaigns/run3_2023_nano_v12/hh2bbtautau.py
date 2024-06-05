@@ -36,7 +36,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_1_kt_1_c2_0_powheg",
     id=14931248,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
@@ -47,7 +47,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_1_kt_1_c2_0p10_powheg",
     id=14931140,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
@@ -58,7 +58,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_1_kt_1_c2_0p35_powheg",
     id=14931233,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
@@ -69,7 +69,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_1_kt_1_c2_3_powheg",
     id=14930778,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
@@ -80,7 +80,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_1_kt_1_c2_m2_powheg",
     id=14931022,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
@@ -91,7 +91,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_2p45_kt_1_c2_0__LHEweights_powheg",
     id=14940620,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
@@ -102,7 +102,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_2p45_kt_1_c2_0_powheg",
     id=14931153,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
@@ -113,7 +113,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="ggf_hh_bbtautau_kl_5_kt_1_c2_0_powheg",
     id=14930961,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
