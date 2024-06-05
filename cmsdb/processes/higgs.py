@@ -175,6 +175,21 @@ __all__ = [
     "zh_zqq_hzz4l", "zh_zqq_hzz2l2nu", "zh_zqq_hzz2l2q", "zh_zqq_hzz2q2nu", "zh_zqq_hzz4nu", "zh_zqq_hzz4q",
     "zh_zqq_hzg_zll", "zh_zqq_hzg_zqq", "zh_zqq_hzg_znunu",
     "zh_gg",
+    "zh_gg", "zh_gg_htt", "zh_gg_hww", "zh_gg_hzz", "zh_gg_hbb", "zh_gg_hnonbb", "zh_gg_hcc",
+    "zh_gg_hzg", "zh_gg_hgg", "zh_gg_hmm",
+    "zh_gg_hwwqqlnu", "zh_gg_hww2l2nu", "zh_gg_hww4q",
+    "zh_gg_hzz4l", "zh_gg_hzz2l2nu", "zh_gg_hzz2l2q", "zh_gg_hzz2q2nu", "zh_gg_hzz4nu", "zh_gg_hzz4q",
+    "zh_gg_hzg", "zh_gg_hzg_zqq", "zh_gg_hzg_znunu",
+    "zh_gg_zll", "zh_gg_zll_htt", "zh_gg_zll_hww", "zh_gg_zll_hzz", "zh_gg_zll_hbb", "zh_gg_zll_hnonbb", "zh_gg_zll_hcc",
+    "zh_gg_zll_hzg", "zh_gg_zll_hgg", "zh_gg_zll_hmm",
+    "zh_gg_zll_hwwqqlnu", "zh_gg_zll_hww2l2nu", "zh_gg_zll_hww4q",
+    "zh_gg_zll_hzz4l", "zh_gg_zll_hzz2l2nu", "zh_gg_zll_hzz2l2q", "zh_gg_zll_hzz2q2nu", "zh_gg_zll_hzz4nu", "zh_gg_zll_hzz4q",
+    "zh_gg_zll_hzg_zll", "zh_gg_zll_hzg_zqq", "zh_gg_zll_hzg_znunu",
+    "zh_gg_zqq", "zh_gg_zqq_htt", "zh_gg_zqq_hww", "zh_gg_zqq_hzz", "zh_gg_zqq_hbb", "zh_gg_zqq_hnonbb", "zh_gg_zqq_hcc",
+    "zh_gg_zqq_hzg", "zh_gg_zqq_hgg", "zh_gg_zqq_hmm",
+    "zh_gg_zqq_hwwqqlnu", "zh_gg_zqq_hww2l2nu", "zh_gg_zqq_hww4q",
+    "zh_gg_zqq_hzz4l", "zh_gg_zqq_hzz2l2nu", "zh_gg_zqq_hzz2l2q", "zh_gg_zqq_hzz2q2nu", "zh_gg_zqq_hzz4nu", "zh_gg_zqq_hzz4q",
+    "zh_gg_zqq_hzg_zll", "zh_gg_zqq_hzg_zqq", "zh_gg_zqq_hzg_znunu",
     "wh", "wph", "wmh",
     "wh_htt", "wh_hww", "wh_hzz", "wh_hbb", "wh_hnonbb", "wh_hcc",
     "wh_hzg", "wh_hgg", "wh_hmm",
@@ -430,6 +445,8 @@ w_decay_map = DotDict.wrap({
 # Single H (inclusive)
 #
 ####################################################################################################
+
+AAAAA = Process("A", 12452513)
 
 h = Process(
     name="h",
@@ -886,6 +903,112 @@ zh_gg = vh.add_process(
     },
     aux={"production_mode_parent": vh},
 )
+
+# Higgs decay channels
+zh_gg_htt = add_decay_process(zh_gg, h_decay_map.htt)
+zh_gg_hww = add_decay_process(zh_gg, h_decay_map.hww)
+zh_gg_hzz = add_decay_process(zh_gg, h_decay_map.hzz)
+zh_gg_hbb = add_decay_process(zh_gg, h_decay_map.hbb)
+zh_gg_hnonbb = add_decay_process(zh_gg, h_decay_map.hnonbb)
+zh_gg_hcc = add_decay_process(zh_gg, h_decay_map.hcc)
+zh_gg_hzg = add_decay_process(zh_gg, h_decay_map.hzg)
+zh_gg_hgg = add_decay_process(zh_gg, h_decay_map.hgg)
+zh_gg_hmm = add_decay_process(zh_gg, h_decay_map.hmm)
+
+# Higgs sub-decay channels
+zh_gg_hwwqqlnu = add_sub_decay_process(zh_gg_hww, ww_decay_map["qqlnu"])
+zh_gg_hww2l2nu = add_sub_decay_process(zh_gg_hww, ww_decay_map["2l2nu"])
+zh_gg_hww4q = add_sub_decay_process(zh_gg_hww, ww_decay_map["4q"])
+zh_gg_hzz4l = add_sub_decay_process(zh_gg_hzz, zz_decay_map["4l"])
+zh_gg_hzz2l2nu = add_sub_decay_process(zh_gg_hzz, zz_decay_map["2l2nu"])
+zh_gg_hzz2l2q = add_sub_decay_process(zh_gg_hzz, zz_decay_map["2l2q"])
+zh_gg_hzz2q2nu = add_sub_decay_process(zh_gg_hzz, zz_decay_map["2q2nu"])
+zh_gg_hzz4nu = add_sub_decay_process(zh_gg_hzz, zz_decay_map["4nu"])
+zh_gg_hzz4q = add_sub_decay_process(zh_gg_hzz, zz_decay_map["4q"])
+zh_gg_hzg_zll = add_decay_process(zh_gg_hzg, hzg_decay_map["zll"])
+zh_gg_hzg_zqq = add_decay_process(zh_gg_hzg, hzg_decay_map["zqq"])
+zh_gg_hzg_znunu = add_decay_process(zh_gg_hzg, hzg_decay_map["znunu"])
+
+zh_gg_zll = add_decay_process(zh_gg, z_decay_map.zll)
+
+# Higgs decay channels
+zh_gg_zll_htt = add_decay_process(zh_gg_zll, h_decay_map.htt)
+zh_gg_zll_hww = add_decay_process(zh_gg_zll, h_decay_map.hww)
+zh_gg_zll_hzz = add_decay_process(zh_gg_zll, h_decay_map.hzz)
+zh_gg_zll_hbb = add_decay_process(zh_gg_zll, h_decay_map.hbb)
+zh_gg_zll_hnonbb = add_decay_process(zh_gg_zll, h_decay_map.hnonbb)
+zh_gg_zll_hcc = add_decay_process(zh_gg_zll, h_decay_map.hcc)
+zh_gg_zll_hzg = add_decay_process(zh_gg_zll, h_decay_map.hzg)
+zh_gg_zll_hgg = add_decay_process(zh_gg_zll, h_decay_map.hgg)
+zh_gg_zll_hmm = add_decay_process(zh_gg_zll, h_decay_map.hmm)
+
+# Higgs sub-decay channels
+zh_gg_zll_hwwqqlnu = add_sub_decay_process(zh_gg_zll_hww, ww_decay_map["qqlnu"])
+zh_gg_zll_hww2l2nu = add_sub_decay_process(zh_gg_zll_hww, ww_decay_map["2l2nu"])
+zh_gg_zll_hww4q = add_sub_decay_process(zh_gg_zll_hww, ww_decay_map["4q"])
+zh_gg_zll_hzz4l = add_sub_decay_process(zh_gg_zll_hzz, zz_decay_map["4l"])
+zh_gg_zll_hzz2l2nu = add_sub_decay_process(zh_gg_zll_hzz, zz_decay_map["2l2nu"])
+zh_gg_zll_hzz2l2q = add_sub_decay_process(zh_gg_zll_hzz, zz_decay_map["2l2q"])
+zh_gg_zll_hzz2q2nu = add_sub_decay_process(zh_gg_zll_hzz, zz_decay_map["2q2nu"])
+zh_gg_zll_hzz4nu = add_sub_decay_process(zh_gg_zll_hzz, zz_decay_map["4nu"])
+zh_gg_zll_hzz4q = add_sub_decay_process(zh_gg_zll_hzz, zz_decay_map["4q"])
+zh_gg_zll_hzg_zll = add_decay_process(zh_gg_zll_hzg, hzg_decay_map["zll"])
+zh_gg_zll_hzg_zqq = add_decay_process(zh_gg_zll_hzg, hzg_decay_map["zqq"])
+zh_gg_zll_hzg_znunu = add_decay_process(zh_gg_zll_hzg, hzg_decay_map["znunu"])
+
+zh_gg_zqq = add_decay_process(zh_gg, z_decay_map.zqq)
+
+# Higgs decay channels
+zh_gg_zqq_htt = add_decay_process(zh_gg_zqq, h_decay_map.htt)
+zh_gg_zqq_hww = add_decay_process(zh_gg_zqq, h_decay_map.hww)
+zh_gg_zqq_hzz = add_decay_process(zh_gg_zqq, h_decay_map.hzz)
+zh_gg_zqq_hbb = add_decay_process(zh_gg_zqq, h_decay_map.hbb)
+zh_gg_zqq_hnonbb = add_decay_process(zh_gg_zqq, h_decay_map.hnonbb)
+zh_gg_zqq_hcc = add_decay_process(zh_gg_zqq, h_decay_map.hcc)
+zh_gg_zqq_hzg = add_decay_process(zh_gg_zqq, h_decay_map.hzg)
+zh_gg_zqq_hgg = add_decay_process(zh_gg_zqq, h_decay_map.hgg)
+zh_gg_zqq_hmm = add_decay_process(zh_gg_zqq, h_decay_map.hmm)
+
+# Higgs sub-decay channels
+zh_gg_zqq_hwwqqlnu = add_sub_decay_process(zh_gg_zqq_hww, ww_decay_map["qqlnu"])
+zh_gg_zqq_hww2l2nu = add_sub_decay_process(zh_gg_zqq_hww, ww_decay_map["2l2nu"])
+zh_gg_zqq_hww4q = add_sub_decay_process(zh_gg_zqq_hww, ww_decay_map["4q"])
+zh_gg_zqq_hzz4l = add_sub_decay_process(zh_gg_zqq_hzz, zz_decay_map["4l"])
+zh_gg_zqq_hzz2l2nu = add_sub_decay_process(zh_gg_zqq_hzz, zz_decay_map["2l2nu"])
+zh_gg_zqq_hzz2l2q = add_sub_decay_process(zh_gg_zqq_hzz, zz_decay_map["2l2q"])
+zh_gg_zqq_hzz2q2nu = add_sub_decay_process(zh_gg_zqq_hzz, zz_decay_map["2q2nu"])
+zh_gg_zqq_hzz4nu = add_sub_decay_process(zh_gg_zqq_hzz, zz_decay_map["4nu"])
+zh_gg_zqq_hzz4q = add_sub_decay_process(zh_gg_zqq_hzz, zz_decay_map["4q"])
+zh_gg_zqq_hzg_zll = add_decay_process(zh_gg_zqq_hzg, hzg_decay_map["zll"])
+zh_gg_zqq_hzg_zqq = add_decay_process(zh_gg_zqq_hzg, hzg_decay_map["zqq"])
+zh_gg_zqq_hzg_znunu = add_decay_process(zh_gg_zqq_hzg, hzg_decay_map["znunu"])
+
+zh_gg_znunu = add_decay_process(zh_gg, z_decay_map.znunu)
+
+# Higgs decay channels
+zh_gg_znunu_htt = add_decay_process(zh_gg_znunu, h_decay_map.htt)
+zh_gg_znunu_hww = add_decay_process(zh_gg_znunu, h_decay_map.hww)
+zh_gg_znunu_hzz = add_decay_process(zh_gg_znunu, h_decay_map.hzz)
+zh_gg_znunu_hbb = add_decay_process(zh_gg_znunu, h_decay_map.hbb)
+zh_gg_znunu_hnonbb = add_decay_process(zh_gg_znunu, h_decay_map.hnonbb)
+zh_gg_znunu_hcc = add_decay_process(zh_gg_znunu, h_decay_map.hcc)
+zh_gg_znunu_hzg = add_decay_process(zh_gg_znunu, h_decay_map.hzg)
+zh_gg_znunu_hgg = add_decay_process(zh_gg_znunu, h_decay_map.hgg)
+zh_gg_znunu_hmm = add_decay_process(zh_gg_znunu, h_decay_map.hmm)
+
+# Higgs sub-decay channels
+zh_gg_znunu_hwwqqlnu = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["qqlnu"])
+zh_gg_znunu_hww2l2nu = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["2l2nu"])
+zh_gg_znunu_hww4q = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["4q"])
+zh_gg_znunu_hzz4l = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["4l"])
+zh_gg_znunu_hzz2l2nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2l2nu"])
+zh_gg_znunu_hzz2l2q = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2l2q"])
+zh_gg_znunu_hzz2q2nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2q2nu"])
+zh_gg_znunu_hzz4nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["4nu"])
+zh_gg_znunu_hzz4q = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["4q"])
+zh_gg_znunu_hzg_zll = add_decay_process(zh_gg_znunu_hzg, hzg_decay_map["zll"])
+zh_gg_znunu_hzg_zqq = add_decay_process(zh_gg_znunu_hzg, hzg_decay_map["zqq"])
+zh_gg_znunu_hzg_znunu = add_decay_process(zh_gg_znunu_hzg, hzg_decay_map["znunu"])
 
 ####################################################################################################
 #
