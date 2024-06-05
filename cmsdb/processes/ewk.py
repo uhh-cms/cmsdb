@@ -40,12 +40,6 @@ __all__ = [
 
 ]
 
-# , dy_lep_m50_1j, dy_lep_m50_2j, dy_lep_m50_3j, dy_lep_m50_4j
-# "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400", "dy_lep_m50_ht200to400",
-# "dy_lep_m50_ht600to800", dy_lep_m50_ht800to1200, "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500",
-# , , , "zz_llnunu", "zz_qqnunu", "zz_qqqq", "zz_llll", "wz_lllnu", "wz_qqll"
-# "wz_lnuqq", "ww_lnuaq", "ww_lnulnu", "ww_qqqq",
-
 
 from order import Process
 from scinum import Number
@@ -511,7 +505,7 @@ w_munu = w.add_process(
     id=6020,
     label=rf"{w.label} ($W \rightarrow mu\nu$)",
     xsecs={
-        13: Number(0.1)},
+        13: Number(0.1)},  # TODO
 )
 
 
@@ -690,7 +684,6 @@ zz = vv.add_process(
         13: Number(15.99, {"scale": (0.037j, 0.026j)}),
     },
 )
-
 
 # based on GenXSecAnalyzer
 # for ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)

@@ -24,7 +24,6 @@ __all__ = [
 ]
 
 
-# tt_llnunu, ttz_llnunu
 from order import Process
 from scinum import Number
 
@@ -189,7 +188,6 @@ st_twchannel = st.add_process(
         )),
     },
 )
-
 
 st_twchannel_t = st_twchannel.add_process(
     name="st_twchannel_t",
