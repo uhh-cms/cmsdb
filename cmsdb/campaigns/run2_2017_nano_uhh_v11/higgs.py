@@ -15,9 +15,9 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 
 # ggf
 cpn.add_dataset(
-    name="h_ggf_tautau_powheg",
+    name="h_ggf_htt_powheg",
     id=14198289,
-    processes=[procs.h_ggf_tautau],
+    processes=[procs.h_ggf_htt],
     keys=[
         "/GluGluHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v3/NANOAODSIM",  # noqa
     ],
@@ -27,9 +27,9 @@ cpn.add_dataset(
 
 # vbf
 cpn.add_dataset(
-    name="h_vbf_tautau_powheg",
+    name="h_vbf_htt_powheg",
     id=14198046,
-    processes=[procs.h_vbf_tautau],
+    processes=[procs.h_vbf_htt],
     keys=[
         "/VBFHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -39,9 +39,9 @@ cpn.add_dataset(
 
 # H radiation
 cpn.add_dataset(
-    name="zh_llbb_powheg",
+    name="zh_zll_hbb_powheg",
     id=14336755,
-    processes=[procs.zh_llbb],
+    processes=[procs.zh_zll_hbb],
     keys=[
         "/ZH_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -50,9 +50,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zh_qqbb_powheg",
+    name="zh_zqq_hbb_powheg",
     id=14354874,
-    processes=[procs.zh_qqbb],
+    processes=[procs.zh_zqq_hbb],
     keys=[
         "/ZH_HToBB_ZToQQ_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -61,9 +61,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zh_tautau_powheg",
+    name="zh_htt_powheg",
     id=14275937,
-    processes=[procs.zh_tautau],
+    processes=[procs.zh_htt],
     keys=[
         "/ZHToTauTau_M125_CP5_13TeV-powheg-pythia8_ext1/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -72,9 +72,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wph_tautau_powheg",
+    name="wph_htt_powheg",
     id=14198100,
-    processes=[procs.wph_tautau],
+    processes=[procs.wph_htt],
     keys=[
         "/WplusHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -83,9 +83,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wmh_tautau_powheg",
+    name="wmh_htt_powheg",
     id=14198107,
-    processes=[procs.wmh_tautau],
+    processes=[procs.wmh_htt],
     keys=[
         "/WminusHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -94,11 +94,11 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ggzh_llbb_powheg",
+    name="zh_gg_zll_hbb_powheg",
     id=14336238,
-    processes=[procs.ggzh_llbb],
+    processes=[procs.zh_gg_zll_hbb],
     keys=[
-        "/ggZH_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+        "/zh_gg_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
     n_files=6,
     n_events=4833000,
@@ -106,9 +106,9 @@ cpn.add_dataset(
 
 # ttH
 cpn.add_dataset(
-    name="tth_tautau_powheg",
+    name="tth_htt_powheg",
     id=14198429,
-    processes=[procs.tth_tautau],
+    processes=[procs.tth_htt],
     keys=[
         "/ttHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v3/NANOAODSIM",  # noqa
     ],
@@ -117,9 +117,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tth_bb_powheg",
+    name="tth_hbb_powheg",
     id=14260234,
-    processes=[procs.tth_bb],
+    processes=[procs.tth_hbb],
     keys=[
         "/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -128,9 +128,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tth_nonbb_powheg",
+    name="tth_hnonbb_powheg",
     id=14261680,
-    processes=[procs.tth_nonbb],
+    processes=[procs.tth_hnonbb],
     keys=[
         "/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
