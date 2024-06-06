@@ -5,6 +5,7 @@ azh resonance search signal process definitions
 """
 
 __all__ = [
+    "azh",
     "azh_ttll_a1000_h330",
     "azh_ttll_a1000_h350",
     "azh_ttll_a1000_h400",
@@ -274,7 +275,7 @@ from order import Process
 from scinum import Number
 
 #
-# Z prime
+# A->ZH
 #
 
 azh = Process(
