@@ -289,7 +289,7 @@ azh = Process(
 
 azh_htt_zll = azh.add_process(
     name="azh_htt_zll",
-    label=azh.labe,
+    label=azh.label,
     id=1000001,
     xsecs={13: Number(0.1)},  # TODO
 )
