@@ -12,6 +12,13 @@ Production channel abbreviatons:
 - zh_gg: associated production with a Z boson via gluon-gluon box diagram
 - wh: associated production with a W boson
 - tth: associated production with a top quark pair
+- bbh: associated production with a bottom quark pair
+- ttvh: associated production with a top quark pair and a vector boson
+- ttzh: associated production with a top quark pair and a Z boson
+- ttwh: associated production with a top quark pair and a W boson
+- thw: associated production with a top quark and a W boson
+- thq: associated production with a top quark and a light quark (also named tH t-channel)
+- thb: associated production with a top quark and a bottom quark (also named tH s-channel)
 - hh: inclusive di-Higgs production
 - ggHH: di-Higgs production via gluon-gluon fusion
 - qqHH: di-Higgs production via vector boson fusion
@@ -59,6 +66,7 @@ ID scheme:
 - 2xxxx: double Higgs processes
 
 Single Higgs production channels:
+- 10xxx: h
 - 11xxx: h_ggf
 - 12xxx: h_vbf
 - 13xxx: vh
@@ -68,6 +76,13 @@ Single Higgs production channels:
 - 17xxx: wph
 - 18xxx: wmh
 - 19xxx: tth
+- 110xxx: bbh
+- 111xxx: ttvh
+- 112xxx: ttzh
+- 113xxx: ttwh
+- 114xxx: thw
+- 115xxx: thq
+- 116xxx: thb
 
 Single Higgs decay channels:
 - 1x100: H->tau tau
@@ -240,6 +255,8 @@ __all__ = [
     "tth_hwwqqlnu", "tth_hww2l2nu", "tth_hww4q",
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
+    # TODO: the following processes are not yet implemented in full combination
+    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb",
     # Di-Higgs
     "hh",
     "hh_ggf", "ggHH_kl_0_kt_1", "ggHH_kl_1_kt_1", "ggHH_kl_2p45_kt_1", "ggHH_kl_5_kt_1",
@@ -1324,7 +1341,7 @@ wh.xsecs = add_xsecs(wph, wmh)
 
 tth = h.add_process(
     name="tth",
-    id=15000,
+    id=19000,
     label=r"$t\bar{t}H$",
     xsecs={
         13: Number(5.071E-01, {
@@ -1363,6 +1380,98 @@ tth_hzz4q = add_sub_decay_process(tth_hzz, zz_decay_map["4q"])
 tth_hzg_zll = add_decay_process(tth_hzg, hzg_decay_map["zll"])
 tth_hzg_zqq = add_decay_process(tth_hzg, hzg_decay_map["zqq"])
 tth_hzg_znunu = add_decay_process(tth_hzg, hzg_decay_map["znunu"])
+
+####################################################################################################
+#
+# bbH, ttVH, tHq, tHW, tH
+#
+####################################################################################################
+
+# TODO: in full combination and with correct xsecs
+
+bbh = h.add_process(
+    name="bbh",
+    id=100000,
+    label=r"$b\bar{b}H$",
+    xsecs={
+        13: Number(4.880E-01, {
+            "scale_pdf": (0.202j, 0.239j),
+        }),
+        13.6: Number(0.5269, {  # value for mH=125 GeV
+            "scale_pdf": (0.201j, 0.240),
+        }),  # TODO: only preliminary
+    },
+    aux={"production_mode_parent": h},
+)
+
+ttvh = h.add_process(
+    name="ttvh",
+    id=110000,
+    label=r"$t\bar{t}VH$",
+    aux={"production_mode_parent": h},
+)
+ttzh = ttvh.add_process(
+    name="ttzh",
+    id=120000,
+    label=r"$t\bar{t}ZH$",
+    aux={"production_mode_parent": ttvh},
+)
+ttwh = ttvh.add_process(
+    name="ttwh",
+    id=130000,
+    label=r"$t\bar{t}WH$",
+    aux={"production_mode_parent": ttvh},
+)
+thw = h.add_process(
+    name="thw",
+    id=140000,
+    label=r"$tHW$",
+    xsecs={
+        13: Number(1.517E-02, {
+            "scale": (4.9j, 6.7j),
+            "pdf": 6.3j,
+        }),
+        13.6: Number(1.720E-02, {
+            "scale": (2.4j, 1.7j),
+            "pdf": 2.2j,
+        }),  # TODO: only preliminary
+    },
+    aux={"production_mode_parent": h},
+)
+# also named tH t-channel
+thq = h.add_process(
+    name="thq",
+    id=150000,
+    label=r"$tHq$",
+    xsecs={
+        13: Number(7.425E-02, {
+            "scale": (0.065j, 0.149j),
+            "pdf": 3.7j,
+        }),
+        13.6: Number(8.362E-02, {  # value for mH=125 GeV
+            "scale": (0.065j, 0.148),
+            "pdf": 3.7j,
+        }),  # TODO: only preliminary
+    },
+    aux={"production_mode_parent": h},
+)
+# also named tH s-channel
+thb = h.add_process(
+    name="thb",
+    id=160000,
+    label=r"$tHb$",
+    xsecs={
+        13: Number(2.879E-03, {
+            "scale": (0.024j, 0.018j),
+            "pdf": 2.2j,
+        }),
+        13.6: Number(3.068E-03, {  # value for mH=125 GeV
+            "scale": (0.024j, 0.017),
+            "pdf": 2.2j,
+        }),  # TODO: only preliminary
+    },
+    aux={"production_mode_parent": h},
+)
 
 ####################################################################################################
 #
