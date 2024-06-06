@@ -12,7 +12,6 @@ from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v
 # Single Higgs
 
 # ggf
-
 cpn.add_dataset(
     name="h_ggf_tautau_powheg",
     id=14198264,
@@ -23,7 +22,6 @@ cpn.add_dataset(
     n_files=8,
     n_events=12966000,
 )
-
 
 # vbf
 cpn.add_dataset(
@@ -38,7 +36,6 @@ cpn.add_dataset(
 )
 
 # H radiation
-
 cpn.add_dataset(
     name="zh_llbb_powheg",
     id=14336743,
@@ -84,7 +81,6 @@ cpn.add_dataset(
     n_events=4900155,
 )
 
-
 cpn.add_dataset(
     name="wph_tautau_powheg",
     id=14198104,
@@ -107,7 +103,6 @@ cpn.add_dataset(
     n_events=3831952,
 )
 
-
 # ttH
 cpn.add_dataset(
     name="tth_tautau_powheg",
@@ -120,7 +115,6 @@ cpn.add_dataset(
     n_events=21621000,
 )
 
-
 cpn.add_dataset(
     name="tth_bb_powheg",
     id=14196265,
@@ -131,7 +125,6 @@ cpn.add_dataset(
     n_files=14,
     n_events=10020658,
 )
-
 
 cpn.add_dataset(
     name="tth_nonbb_powheg",

@@ -70,7 +70,6 @@ cpn.add_dataset(
     ),
 )
 
-
 cpn.add_dataset(
     name="tt_llnunu_powheg",
     id=14197224,
@@ -190,7 +189,6 @@ cpn.add_dataset(
 
 # ttbar + 1 vector boson
 
-
 cpn.add_dataset(
     name="ttz_llnunu_amcatnlo",
     id=14241155,
@@ -220,7 +218,6 @@ cpn.add_dataset(
     ),
 )
 
-
 cpn.add_dataset(
     name="ttw_lnu_amcatnlo",
     id=14197046,
@@ -249,7 +246,6 @@ cpn.add_dataset(
         ),
     ),
 )
-
 
 cpn.add_dataset(
     name="ttw_qq_amcatnlo",
@@ -286,7 +282,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=498000,
 )
-
 
 cpn.add_dataset(
     name="ttww_madgraph",
@@ -345,7 +340,6 @@ cpn.add_dataset(
     ),
 )
 
-
 cpn.add_dataset(
     name="st_tchannel_tbar_powheg",
     id=14294704,
@@ -388,7 +382,6 @@ cpn.add_dataset(
         ),
     ),
 )
-
 
 cpn.add_dataset(
     name="st_twchannel_t_powheg",

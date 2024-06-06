@@ -13,7 +13,6 @@ from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v
 
 
 # SM
-
 cpn.add_dataset(
     name="hh_ggf_bbtautau_madgraph",
     id=14356126,
@@ -26,7 +25,6 @@ cpn.add_dataset(
 )
 
 # BSM scenarios
-
 cpn.add_dataset(
     name="hh_ggf_bbtautau_node1_madgraph",
     id=14347001,
@@ -60,7 +58,6 @@ cpn.add_dataset(
     n_events=400000,
 )
 
-
 cpn.add_dataset(
     name="hh_ggf_bbtautau_node4_madgraph",
     id=14361307,
@@ -71,7 +68,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=400000,
 )
-
 
 cpn.add_dataset(
     name="hh_ggf_bbtautau_node5_madgraph",
@@ -105,7 +101,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=400000,
 )
-
 
 cpn.add_dataset(
     name="hh_ggf_bbtautau_node8_madgraph",
@@ -151,7 +146,6 @@ cpn.add_dataset(
     n_events=400000,
 )
 
-
 cpn.add_dataset(
     name="hh_ggf_bbtautau_node12_madgraph",
     id=14349211,
@@ -163,10 +157,7 @@ cpn.add_dataset(
     n_events=400000,
 )
 
-
 # ggF -> radion -> HH
-
-
 cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m250_madgraph",
     id=14304477,
@@ -231,7 +222,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=289000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_ggf_bbtautau_m350_madgraph",
@@ -442,10 +432,7 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 # ggF -> bulk graviton -> HH
-
-
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m250_madgraph",
     id=14315749,
@@ -456,7 +443,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=384000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m260_madgraph",
@@ -491,7 +477,6 @@ cpn.add_dataset(
     n_events=400000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m300",
     id=14346590,
@@ -524,7 +509,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=295000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m400_madgraph",
@@ -602,7 +586,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=200000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m750_madgraph",
@@ -703,7 +686,6 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_ggf_bbtautau_m2500_madgraph",
     id=14327217,
@@ -726,9 +708,7 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 # vbf -> radion -> HH
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m250_madgraph",
     id=14311235,
@@ -894,7 +874,6 @@ cpn.add_dataset(
     n_events=194000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m800_madgraph",
     id=14310297,
@@ -916,7 +895,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=200000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m900_madgraph",
@@ -940,7 +918,6 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1250_madgraph",
     id=14310805,
@@ -951,7 +928,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=100000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m1500_madgraph",
@@ -975,7 +951,6 @@ cpn.add_dataset(
     n_events=100000,
 )
 
-
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m2000_madgraph",
     id=14310579,
@@ -986,7 +961,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=97000,
 )
-
 
 cpn.add_dataset(
     name="radion_hh_vbf_bbtautau_m2500_madgraph",
@@ -1010,10 +984,7 @@ cpn.add_dataset(
     n_events=97000,
 )
 
-
 # vbf -> bulk graviton -> HH
-
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m250_madgraph",
     id=14310533,
@@ -1068,7 +1039,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=300000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m320_madgraph",
@@ -1125,7 +1095,6 @@ cpn.add_dataset(
     n_events=300000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m550_madgraph",
     id=14311264,
@@ -1136,7 +1105,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=200000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m600_madgraph",
@@ -1182,7 +1150,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m800_madgraph",
     id=14310500,
@@ -1194,7 +1161,6 @@ cpn.add_dataset(
     n_events=200000,
 )
 
-
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m850_madgraph",
     id=14310560,
@@ -1205,7 +1171,6 @@ cpn.add_dataset(
     n_files=1,
     n_events=200000,
 )
-
 
 cpn.add_dataset(
     name="graviton_hh_vbf_bbtautau_m900_madgraph",

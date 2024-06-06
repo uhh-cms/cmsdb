@@ -58,7 +58,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="data_e_d",
     id=14173006,
@@ -78,6 +77,7 @@ cpn.add_dataset(
 #
 # SingleMuon
 #
+
 cpn.add_dataset(
     name="data_mu_a",
     id=14668759,
@@ -123,7 +123,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="data_mu_d",
     id=14668961,
@@ -158,7 +157,6 @@ cpn.add_dataset(
         "era": "A",
     },
 )
-
 
 cpn.add_dataset(
     name="data_tau_b",
@@ -254,7 +252,6 @@ cpn.add_dataset(
         "era": "C",
     },
 )
-
 
 cpn.add_dataset(
     name="data_met_d",
