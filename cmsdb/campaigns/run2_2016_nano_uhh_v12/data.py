@@ -25,6 +25,7 @@ cpn.add_dataset(
     n_events=8858206,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -40,6 +41,7 @@ cpn.add_dataset(
     n_events=153363109,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -55,6 +57,7 @@ cpn.add_dataset(
     n_events=129021893,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -75,6 +78,7 @@ cpn.add_dataset(
     n_events=8024195,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -90,6 +94,7 @@ cpn.add_dataset(
     n_events=149916849,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -105,6 +110,7 @@ cpn.add_dataset(
     n_events=174035164,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -124,6 +130,7 @@ cpn.add_dataset(
     n_events=4360106,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -139,6 +146,7 @@ cpn.add_dataset(
     n_events=79578661,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -154,6 +162,7 @@ cpn.add_dataset(
     n_events=76758754,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -174,6 +183,7 @@ cpn.add_dataset(
     n_events=1383250,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -189,6 +199,7 @@ cpn.add_dataset(
     n_events=26974131,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -204,5 +215,6 @@ cpn.add_dataset(
     n_events=39773485,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )
