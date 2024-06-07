@@ -11,9 +11,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # ggf
 
 # cpn.add_dataset(
-#     name="h_ggf_tautau_powheg",
+#     name="h_ggf_htt_powheg",
 #     id=14314017,
-#     processes=[procs.h_ggf_tautau],
+#     processes=[procs.h_ggf_htt],
 #     keys=[
 #         "/GluGluHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
@@ -24,9 +24,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # vbf
 
 # cpn.add_dataset(
-#     name="h_vbf_tautau_powheg",
+#     name="h_vbf_htt_powheg",
 #     id=14346935,
-#     processes=[procs.h_vbf_tautau],
+#     processes=[procs.h_vbf_htt],
 #     keys=[
 #         "/VBFHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
@@ -37,9 +37,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # H radiation
 
 # cpn.add_dataset(
-#     name="zh_tautau_powheg",
+#     name="zh_htt_powheg",
 #     id=14284521,
-#     processes=[procs.zh_tautau],
+#     processes=[procs.zh_htt],
 #     keys=[
 #         "/ZHToTauTau_M125_CP5_13TeV-powheg-pythia8_ext1/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
@@ -48,9 +48,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # )
 
 # cpn.add_dataset(
-#     name="wph_tautau_powheg",
+#     name="wph_htt_powheg",
 #     id=14337370,
-#     processes=[procs.wph_tautau],
+#     processes=[procs.wph_htt],
 #     keys=[
 #         "/WplusHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
@@ -59,9 +59,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # )
 
 # cpn.add_dataset(
-#     name="wmh_tautau_powheg",
+#     name="wmh_htt_powheg",
 #     id=14335155,
-#     processes=[procs.wmh_tautau],
+#     processes=[procs.wmh_htt],
 #     keys=[
 #         "/WminusHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
@@ -73,9 +73,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # ttH
 
 # cpn.add_dataset(
-#     name="tth_tautau_powheg",
+#     name="tth_htt_powheg",
 #     id=14340599,
-#     processes=[procs.tth_tautau],
+#     processes=[procs.tth_htt],
 #     keys=[
 #         "/ttHToTauTau_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
@@ -84,9 +84,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # )
 
 # cpn.add_dataset(
-#     name="tth_nonbb_powheg",
+#     name="tth_hnonbb_powheg",
 #     id=14278195,
-#     processes=[procs.tth_nonbb],
+#     processes=[procs.tth_hnonbb],
 #     keys=[
 #         "/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
@@ -95,9 +95,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # )
 
 # cpn.add_dataset(
-#     name="tth_bb_powheg",
+#     name="tth_hbb_powheg",
 #     id=14284890,
-#     processes=[procs.tth_bb],
+#     processes=[procs.tth_hbb],
 #     keys=[
 #         "/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
 #     ],
