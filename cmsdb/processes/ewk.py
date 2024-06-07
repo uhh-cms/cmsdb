@@ -7,8 +7,9 @@ EWK-related process definitions.
 __all__ = [
     "dy",
     "dy_lep",
+    "dy_lep_m4to10",
     "dy_lep_m10to50",
-    "dy_lep_m50", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
+    "dy_lep_m50", "dy_lep_m50_0j", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
     "dy_lep_0j", "dy_lep_1j", "dy_lep_2j",
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
     "dy_lep_m50_ht400to600", "dy_lep_m50_ht600to800", "dy_lep_m50_ht800to1200",
@@ -70,11 +71,29 @@ dy_lep = dy.add_process(
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
-dy_lep_m10to50 = dy_lep.add_process(
-    name="dy_lep_m10to50",
-    id=51001,
-    xsecs={13: Number(0.1)},  # TODO
-)
+# if needed for scaling from NLO to NNLO:
+# NLO cross section, based on GenXSecAnalyzer for
+# DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+dy_lep_m50_nlo_13TeV_xsec = Number(6421.0, {"tot": 11.25})
+
+# if needed for scaling from LO to NNLO:
+# LO cross section, based on GenXSecAnalyzer for DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+dy_lep_m50_lo_13TeV_xsec = Number(5395.0, {"tot": 1.858})
+
+# 13.6 TeV LO and NLO cross sections are based on the XSDB
+# https://xsdb-temp.app.cern.ch/xsdb/?columns=39911424&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-4to10_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+dy_lep_m4to10_nlo_13p6TeV_xsec = Number(141500, {"tot": 301.9})
+# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+dy_lep_m10to50_nlo_13p6TeV_xsec = Number(20950.0, {"tot": 183.5})
+# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+dy_lep_m50_nlo_13p6TeV_xsec = Number(6688.0, {"tot": 83.99})
+
+# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+dy_lep_m10to50_lo_13p6TeV_xsec = Number(17380, {"tot": 26.57})
+# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+dy_lep_m50_lo_13p6TeV_xsec = Number(5467, {"tot": 13.22})
 
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
@@ -92,30 +111,59 @@ dy_lep_m50 = dy_lep.add_process(
     },
 )
 
+dy_lep_k_factor_LO_to_NNLO = {
+    13: dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+    13.6: dy_lep_m50.get_xsec(13.6) / dy_lep_m50_lo_13p6TeV_xsec,
+}
+dy_lep_k_factor_NLO_to_NNLO = {
+    13: dy_lep_m50.get_xsec(13) / dy_lep_m50_nlo_13TeV_xsec,
+    13.6: dy_lep_m50.get_xsec(13.6) / dy_lep_m50_nlo_13p6TeV_xsec,
+}
 
-# if needed for scaling from NLO to NNLO:
-# NLO cross section, based on GenXSecAnalyzer for
-# DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+dy_lep_m4to10 = dy_lep.add_process(
+    name="dy_lep_m4to10",
+    id=51002,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: dy_lep_m4to10_nlo_13p6TeV_xsec * dy_lep_k_factor_NLO_to_NNLO[13.6],
+    },
+)
+dy_lep_m10to50 = dy_lep.add_process(
+    name="dy_lep_m10to50",
+    id=51001,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: dy_lep_m10to50_nlo_13p6TeV_xsec * dy_lep_k_factor_NLO_to_NNLO[13.6],
+    },
+)
 
-dy_lep_m50_nlo_13TeV_xsec = Number(6421.0, {"tot": 11.25})
+#
+# N-jet binned Drell-Yan (scaled to NNLO)
+#
 
-# if needed for scaling from LO to NNLO:
-# LO cross section, based on GenXSecAnalyzer for DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-
-dy_lep_m50_lo_13TeV_xsec = Number(5395.0, {"tot": 1.858})
-
-# based on GenXSecAnalyzer
+# 13.6 TeV xsecs based on XSDB for datasets DYto2L-4Jets_MLL-50_{i}J_TuneCP5_13p6TeV_madgraphMLM-pythia8
+# e.g. https://xsdb-temp.app.cern.ch/xsdb/?columns=39911424&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+# 13 TeV: based on GenXSecAnalyzer
 # for datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+dy_lep_m50_0j = dy_lep_m50.add_process(
+    name="dy_lep_m50_0j",
+    id=51110,
+    xsecs={
+        # NLO xsec taken from https://xsdb-temp.app.cern.ch/xsdb/?columns=39911424&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+        13.6: Number(5378, {"tot": 8.007}) * dy_lep_k_factor_NLO_to_NNLO[13.6],
+    },
+)
+
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
     xsecs={
         13: Number(926.8, {
             "tot": 0.3597,
-        }),
+        }) * dy_lep_k_factor_LO_to_NNLO[13],
+        # 13.6: Number(1017, {"tot": 6.264}) * dy_lep_k_factor_NLO_to_NNLO[13.6],
+        13.6: Number(973.1, {"tot": 2.613}) * dy_lep_k_factor_LO_to_NNLO[13.6],
     },
 )
 
@@ -125,7 +173,9 @@ dy_lep_m50_2j = dy_lep_m50.add_process(
     xsecs={
         13: Number(294.5, {
             "tot": 0.1223,
-        }),
+        }) * dy_lep_k_factor_LO_to_NNLO[13],
+        # 13.6: Number(385.5, {"tot": 3.858}) * dy_lep_k_factor_NLO_to_NNLO[13.6],
+        13.6: Number(312.4, {"tot": 0.915}) * dy_lep_k_factor_LO_to_NNLO[13.6],
     },
 )
 
@@ -135,7 +185,8 @@ dy_lep_m50_3j = dy_lep_m50.add_process(
     xsecs={
         13: Number(86.53, {
             "tot": 0.03853,
-        }),
+        }) * dy_lep_k_factor_LO_to_NNLO[13],
+        13.6: Number(93.93, {"tot": 0.2858}) * dy_lep_k_factor_LO_to_NNLO[13.6],
     },
 )
 
@@ -145,7 +196,8 @@ dy_lep_m50_4j = dy_lep_m50.add_process(
     xsecs={
         13: Number(41.21, {
             "tot": 0.02392,
-        }),
+        }) * dy_lep_k_factor_LO_to_NNLO[13],
+        13.6: Number(45.43, {"tot": 0.1393}) * dy_lep_k_factor_LO_to_NNLO[13.6],
     },
 )
 
@@ -191,7 +243,7 @@ dy_lep_m50_ht70to100 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht70to100",
     id=51121,
     xsecs={
-        13: Number(139.9, {"tot": 0.5747}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(139.9, {"tot": 0.5747}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
@@ -199,7 +251,7 @@ dy_lep_m50_ht100to200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht100to200",
     id=51122,
     xsecs={
-        13: Number(140.1, {"tot": 0.5875}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(140.1, {"tot": 0.5875}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
@@ -207,7 +259,7 @@ dy_lep_m50_ht200to400 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht200to400",
     id=51123,
     xsecs={
-        13: Number(38.38, {"tot": 0.01628}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(38.38, {"tot": 0.01628}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
@@ -215,7 +267,7 @@ dy_lep_m50_ht400to600 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht400to600",
     id=51124,
     xsecs={
-        13: Number(5.212, {"tot": 0.003149}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(5.212, {"tot": 0.003149}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
@@ -223,7 +275,7 @@ dy_lep_m50_ht600to800 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht600to800",
     id=51125,
     xsecs={
-        13: Number(1.266, {"tot": 0.0007976}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(1.266, {"tot": 0.0007976}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
@@ -231,7 +283,7 @@ dy_lep_m50_ht800to1200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht800to1200",
     id=51126,
     xsecs={
-        13: Number(0.5684, {"tot": 0.0003515}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(0.5684, {"tot": 0.0003515}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
@@ -239,7 +291,7 @@ dy_lep_m50_ht1200to2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht1200to2500",
     id=51127,
     xsecs={
-        13: Number(0.1332, {"tot": 0.00009084}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(0.1332, {"tot": 0.00009084}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
@@ -247,7 +299,7 @@ dy_lep_m50_ht2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht2500",
     id=51128,
     xsecs={
-        13: Number(0.002977, {"tot": 0.000003412}) * dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13TeV_xsec,
+        13: Number(0.002977, {"tot": 0.000003412}) * dy_lep_k_factor_LO_to_NNLO[13],
     },
 )
 
