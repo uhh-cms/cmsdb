@@ -31,4 +31,4 @@ class TestProcesses(unittest.TestCase):
 
                 # check that the name is lowercase, but take into account known exceptions
                 if not process_inst.x("allow_uppercase_name", False):
-                    self.assertEquals(process_inst.name, process_inst.name.lower())
+                    self.assertEqual(process_inst.name, process_inst.name.lower())
