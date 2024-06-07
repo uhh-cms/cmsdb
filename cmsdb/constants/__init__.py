@@ -55,8 +55,15 @@ br_zz = DotDict(
 br_h_ww_full = Number(0.2137, {"theo": (0.0099j, 0.0099j), "m_q": (0.0099j, 0.0098j), "alpha_s": (0.0066j, 0.0063j)})
 br_h_zz_full = Number(0.02619, {"theo": (0.0099j, 0.0099j), "m_q": (0.0099j, 0.0098j), "alpha_s": (0.0066j, 0.0063j)})
 br_h_gg_full = Number(0.002270, {"theo": (0.0173j, 0.0172j), "m_q": (0.0093j, 0.0099j), "alpha_s": (0.0061j, 0.0062j)})
+br_h_zg_full = Number(0.001533, {"theo": (0.571j, 0.571j), "m_q": (0.0098j, 0.0101j), "alpha_s": (0.0058j, 0.0065j)})
+br_h_gluglu_full = Number(0.08187, {"theo": (0.0340j, 0.0341j), "m_q": (0.0112j, 0.0113j), "alpha_s": (0.0369j, 0.0361j)})  # noqa
 br_h_bb_full = Number(0.5824, {"theo": (0.0065j, 0.0065j), "m_q": (0.0072j, 0.0074j), "alpha_s": (0.0078j, 0.0080j)})
+br_h_cc_full = Number(0.02891, {"theo": (0.0120j, 0.0120j), "m_q": (0.0526j, 0.0098j), "alpha_s": (0.0125j, 0.0125j)})
 br_h_tt_full = Number(0.06272, {"theo": (0.0117j, 0.0116j), "m_q": (0.0098j, 0.0099j), "alpha_s": (0.0062j, 0.0062j)})
+br_h_mm_full = Number(0.0002176, {"theo": (0.0123j, 0.0123j), "m_q": (0.0097j, 0.0099j), "alpha_s": (0.0059j, 0.0064j)})
+
+# TODO: H -> ee BR is not available in the YellowReport, so I'm using the muon BR scaled to electron mass instead
+br_h_ee_full = br_h_mm_full / 200 ** 2
 
 
 def combine_uncertainties_higgs_br(number: Number):
@@ -74,8 +81,13 @@ br_h = DotDict(
     ww=Number(br_h_ww_full.n, {"br_h_ww": tuple(combine_uncertainties_higgs_br(br_h_ww_full))}),
     zz=Number(br_h_zz_full.n, {"br_h_zz": tuple(combine_uncertainties_higgs_br(br_h_zz_full))}),
     gg=Number(br_h_gg_full.n, {"br_h_gg": tuple(combine_uncertainties_higgs_br(br_h_gg_full))}),
+    zg=Number(br_h_zg_full.n, {"br_h_zg": tuple(combine_uncertainties_higgs_br(br_h_zg_full))}),
+    gluglu=Number(br_h_gluglu_full.n, {"br_h_gluglu": tuple(combine_uncertainties_higgs_br(br_h_gluglu_full))}),
     bb=Number(br_h_bb_full.n, {"br_h_bb": tuple(combine_uncertainties_higgs_br(br_h_bb_full))}),
+    cc=Number(br_h_cc_full.n, {"br_h_cc": tuple(combine_uncertainties_higgs_br(br_h_cc_full))}),
     tt=Number(br_h_tt_full.n, {"br_h_tt": tuple(combine_uncertainties_higgs_br(br_h_tt_full))}),
+    mm=Number(br_h_mm_full.n, {"br_h_mm": tuple(combine_uncertainties_higgs_br(br_h_mm_full))}),
+    ee=Number(br_h_ee_full.n, {"br_h_ee": tuple(combine_uncertainties_higgs_br(br_h_ee_full))}),
 )
 
 

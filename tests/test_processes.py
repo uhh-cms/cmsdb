@@ -21,10 +21,13 @@ class TestProcesses(unittest.TestCase):
         }
 
     def test_process_properties(self):
-        for process_inst in self.processes.values():
+        for process_name, process_inst in self.processes.items():
             with self.subTest(f"testing {process_inst.name}"):
                 self.assertTrue(hasattr(process_inst, "name"))
                 self.assertTrue(hasattr(process_inst, "id"))
+
+                # process name should be equivalent to the process instance's name
+                self.assertEqual(process_name, process_inst.name)
 
                 # check that the name is lowercase, but take into account known exceptions
                 if not process_inst.x("allow_uppercase_name", False):
