@@ -109,7 +109,7 @@ cpn.add_dataset(
     id=14336166,
     processes=[procs.zh_gg_zll_hbb],
     keys=[
-        "/zh_gg_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+        "/ggZH_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=2189000,
