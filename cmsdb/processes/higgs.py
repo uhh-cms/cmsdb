@@ -1494,11 +1494,11 @@ hh_ggf = hh.add_process(
     id=21000,
     label=r"$HH_{ggf}$",
     xsecs={
-        13: Number(31.05, {
+        13: 0.001 * Number(31.05, {
             "pdf": 0.03j,
             "scale": (0.06j, 0.23j),
         }),
-        14: Number(34.43, {
+        13.6: 0.001 * Number(34.43, {
             "pdf": 0.03j,
             "scale": (0.06j, 0.23j),
         })},  # fb
@@ -1575,7 +1575,7 @@ hh_vbf = hh.add_process(
     id=22000,
     label=r"$HH_{vbf}$",
     xsecs={
-        13: Number(1.726, {
+        13: 0.001 * Number(1.726, {
             "scale": (0.0003j, 0.0004j),
             "pdf": 0.021j,
         }),
