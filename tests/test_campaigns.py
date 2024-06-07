@@ -59,8 +59,8 @@ class TestCampaigns(unittest.TestCase):
                         self.assertTrue(hasattr(dataset_inst, "n_events"))
 
                         # check that the generator is encoded in the dataset name
-                        if "data" not in dataset_inst.name:
-                            self.assertTrue(any(f"_{name}" in dataset_inst.name for name in self.generator_names))
+                        if dataset_inst.is_mc:
+                            self.assertIn(dataset_inst.name.rsplit("_", 1)[-1], self.generator_names)
 
                         # check that the name is lowercase, but take into account known exceptions
                         if not dataset_inst.x("allow_uppercase_name", False):
