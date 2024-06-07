@@ -288,7 +288,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttww_madgrap",
+    name="ttww_madgraph",
     id=14215222,
     processes=[procs.ttww],
     keys=[

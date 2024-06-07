@@ -11,6 +11,9 @@ import cmsdb
 
 
 class TestCampaigns(unittest.TestCase):
+    generator_names = ("powheg", "madgraph", "amcatnlo", "pythia")
+
+    check_proc_name: bool = False
 
     @classmethod
     def setUpClass(cls):
@@ -55,9 +58,28 @@ class TestCampaigns(unittest.TestCase):
                         self.assertTrue(hasattr(dataset_inst, "n_files"))
                         self.assertTrue(hasattr(dataset_inst, "n_events"))
 
+                        # check that the generator is encoded in the dataset name
+                        if "data" not in dataset_inst.name:
+                            self.assertTrue(any(f"_{name}" in dataset_inst.name for name in self.generator_names))
+
                         # check that the name is lowercase, but take into account known exceptions
                         if not dataset_inst.x("allow_uppercase_name", False):
                             self.assertEquals(dataset_inst.name, dataset_inst.name.lower())
 
                         # check that there is at least one process linked
                         self.assertTrue(len(dataset_inst.processes) > 0)
+
+                        # optionally check that namings between dataset and process are consistent
+                        if (
+                            self.check_proc_name and
+                            "data" not in dataset_inst.name and
+                            len(dataset_inst.processes) == 1
+                        ):
+                            proc_name = dataset_inst.processes.get_first().name
+
+                            if "data" not in dataset_inst.name:
+                                dataset_name_wo_generator = dataset_inst.name
+                                for name in self.generator_names:
+                                    dataset_name_wo_generator = dataset_name_wo_generator.replace(f"_{name}", "")
+
+                                self.assertEqual(dataset_name_wo_generator, proc_name)
