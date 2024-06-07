@@ -9,9 +9,6 @@ import subprocess
 import json
 from argparse import ArgumentParser
 
-import law
-
-
 def get_generator_name(name: str) -> str:
     """
     Function that returns the generator name of a dataset
@@ -185,9 +182,11 @@ convert_functions = {
 def get_das_info(
     dataset: str,
 ) -> dict:
+    from law.util import interruptable_popen
+
     # call dasgoclient command
     cmd = f"dasgoclient -query='dataset={dataset}' -json"
-    code, out, _ = law.util.interruptable_popen(
+    code, out, _ = interruptable_popen(
         cmd,
         shell=True,
         stdout=subprocess.PIPE,
@@ -215,6 +214,8 @@ def print_das_info(
     keys_of_interest: tuple | None = None,
     convert_function_str: str | None = None,
 ):
+    from law.util import interruptable_popen
+
     # get the requested convert function
     convert_function = convert_functions[convert_function_str]
 
@@ -233,7 +234,7 @@ def print_das_info(
         else:
             # using a wildcard leads to a different structer in json format
             cmd = f"dasgoclient -query='dataset={das_string}' -json"
-            code, out, _ = law.util.interruptable_popen(
+            code, out, _ = interruptable_popen(
                 cmd,
                 shell=True,
                 stdout=subprocess.PIPE,
