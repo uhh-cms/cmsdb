@@ -1022,3 +1022,53 @@ cpn.add_dataset(
         # ),
     ),
 )
+
+####################################################################################################
+#
+# ttV, ttVV
+#
+####################################################################################################
+
+# TODO: add corresponding process
+# cpn.add_dataset(
+#     name="ttz_zqq_1j_amcatnlo",
+#     id=14795953,
+#     processes=[procs.ttz_zqq_1j],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+#             ],
+#             n_files=52,
+#             n_events=1334574,
+#         ),
+#     ),
+# )
+cpn.add_dataset(
+    name="ttzz_madgraph",
+    id=14826688,
+    processes=[procs.ttzz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTZZ_TuneCP5_13p6TeV_madgraph-madspin-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=17,
+            n_events=1054000,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="ttww_madgraph",
+    id=14800877,
+    processes=[procs.ttww],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTWW_TuneCP5_13p6TeV_madgraph-madspin-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=52,
+            n_events=1536000,
+        ),
+    ),
+)
