@@ -30,6 +30,7 @@ class TestCampaigns(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+
         if not cls.campaign_names:
             # if not provided, find and test all campaigns
             campaign_dir = os.path.join(os.path.dirname(cmsdb.__file__), "campaigns")
@@ -93,20 +94,18 @@ class TestCampaigns(unittest.TestCase):
         if self.check_das_info and not campaign_inst.has_aux("custom"):
             # check that all dataset keys exist and that the DAS info (id, n_events, n_files) is correct
             # optional, since this needs a Grid Proxy and takes a long time
-            for key in dataset_inst.keys:
-                key_info = f"{campaign_inst.name}/{dataset_inst.name}, key: {key}"
-                # print(f"checking DAS info from dataset {campaign_inst.name}/{dataset_inst.name}, key {key}")
-                das_info = get_das_info(key)
-                with self.subTest(f"checking DAS info from {key_info}"):
-                    das_info = get_das_info(key)
-                    self.assertTrue(
-                        das_info.get("dataset_id", None) is not None,
-                        msg=f"did not find DAS key from {key_info}",
-                    )
+            for dataset_info_key, dataset_info in dataset_inst.info.items():
+                dataset_string = f"{campaign_inst.name}/{dataset_inst.name}/{dataset_info_key}, keys: {dataset_info}"
+                das_infos = [get_das_info(key) for key in dataset_info.keys]
+                for das_info in das_infos:
+                    with self.subTest(f"checking existence of DAS key {das_info['name']} from {dataset_string}"):
+                        self.assertTrue(das_info.get("dataset_id", None) is not None)
 
-                    das_info = {
-                        key: value for key, value in das_info.items()
-                        if key in ("dataset_id", "nevents", "nfiles")
+                with self.subTest(f"checking DAS infos from {dataset_string}"):
+                    combined_das_info = {
+                        "dataset_id": das_infos[0]["dataset_id"],
+                        "nevents": sum(info["nevents"] for info in das_infos),
+                        "nfiles": sum(info["nfiles"] for info in das_infos),
                     }
 
                     dataset_info = {
@@ -114,7 +113,7 @@ class TestCampaigns(unittest.TestCase):
                         "nevents": dataset_inst.n_events,
                         "nfiles": dataset_inst.n_files,
                     }
-                    self.assertEqual(dataset_info, das_info, msg=f"mismatch in DAS info from {key_info}")
+                    self.assertEqual(dataset_info, combined_das_info, msg=f"mismatch in DAS info from {dataset_string}")
 
     def test_campaign_datasets(self):
         for campaign_inst in self.campaigns.values():
