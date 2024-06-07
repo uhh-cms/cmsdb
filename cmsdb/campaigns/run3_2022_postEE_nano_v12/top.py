@@ -22,7 +22,6 @@ cpn.add_dataset(
         nominal=DatasetInfo(
             keys=[
                 "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
-
             ],
             n_files=523,
             n_events=267007920,
@@ -30,7 +29,6 @@ cpn.add_dataset(
         extension=DatasetInfo(
             keys=[
                 "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
-
             ],
             n_files=1786,
             n_events=275339453,
@@ -701,7 +699,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_twchannel_tbar_dl_powheg",
     id=14791494,
-    processes=[procs.st_twchannel_t_dl],
+    processes=[procs.st_twchannel_tbar_dl],
     info=dict(
         nominal=DatasetInfo(
             keys=[

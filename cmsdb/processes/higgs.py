@@ -723,7 +723,6 @@ vh_znunu_hzg_zll = add_decay_process(vh_znunu_hzg, hzg_decay_map["zll"])
 vh_znunu_hzg_zqq = add_decay_process(vh_znunu_hzg, hzg_decay_map["zqq"])
 vh_znunu_hzg_znunu = add_decay_process(vh_znunu_hzg, hzg_decay_map["znunu"])
 
-
 vh_wlnu = add_decay_process(vh, w_decay_map.wlnu, add_production_mode_parent=False)
 
 # Higgs decay channels
