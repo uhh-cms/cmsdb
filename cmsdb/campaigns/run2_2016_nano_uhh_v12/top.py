@@ -303,7 +303,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="st_tchannel_t_powheg_5f",
+    name="st_tchannel_t_5f_powheg",
     id=14211875,
     processes=[procs.st_tchannel_t],
     keys=[
@@ -314,7 +314,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_tchannel_t_powheg",
+    name="st_tchannel_t_4f_powheg",
     id=14223742,
     processes=[procs.st_tchannel_t],
     info=dict(
@@ -371,7 +371,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg_5f",
+    name="st_tchannel_tbar_5f_powheg",
     id=14212314,
     processes=[procs.st_tchannel_tbar],
     keys=[
@@ -382,7 +382,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg",
+    name="st_tchannel_tbar_4f_powheg",
     id=14225640,
     processes=[procs.st_tchannel_tbar],
     info=dict(
@@ -439,7 +439,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_t_powheg",
+    name="st_twchannel_t_5f_powheg",
     id=14238196,
     processes=[procs.st_twchannel_t],
     keys=[
@@ -450,7 +450,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_tbar_powheg",
+    name="st_twchannel_tbar_5f_powheg",
     id=14238473,
     processes=[procs.st_twchannel_tbar],
     keys=[
