@@ -9,6 +9,7 @@ import subprocess
 import json
 from argparse import ArgumentParser
 
+
 def get_generator_name(name: str) -> str:
     """
     Function that returns the generator name of a dataset
