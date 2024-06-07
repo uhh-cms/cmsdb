@@ -221,7 +221,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttw_nlu_amcatnlo",
+    name="ttw_lnu_amcatnlo",
     id=14228083,
     processes=[procs.ttw_lnu],
     info=dict(

@@ -64,7 +64,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="ttw_nlu_amcatnlo",
+    name="ttw_lnu_amcatnlo",
     id=14197077,
     processes=[procs.ttw_lnu],
     keys=[

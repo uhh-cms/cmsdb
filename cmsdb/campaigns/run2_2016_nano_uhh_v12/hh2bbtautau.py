@@ -1245,7 +1245,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="graviton_hh_vbf_bbtautau_m2000_madgrap",
+    name="graviton_hh_vbf_bbtautau_m2000_madgraph",
     id=14309506,
     processes=[procs.graviton_hh_vbf_bbtautau_m2000],
     keys=[

@@ -49,7 +49,7 @@ cpn.add_dataset(
 
 # TTWJetsToLNu
 cpn.add_dataset(
-    name="ttw_nlu_amcatnlo",
+    name="ttw_lnu_amcatnlo",
     id=14251563,
     processes=[procs.ttw_lnu],
     keys=[
