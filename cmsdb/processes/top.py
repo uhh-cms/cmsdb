@@ -17,8 +17,8 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
-    "ttz", "ttz_llnunu_m10",
-    "ttw", "ttw_lnu", "ttw_qq",
+    "ttz", "ttz_zlep_m10toinf",
+    "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
 ]
@@ -362,8 +362,10 @@ ttz = ttv.add_process(
 # based on GenXSecAnalyzer
 # for TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-ttz_llnunu_m10 = ttz.add_process(
-    name="ttz_llnunu_m10",  # non-hadronically decaying Z
+
+# zlep = zll or znunu, both decays present in samples
+ttz_zlep_m10toinf = ttz.add_process(
+    name="ttz_zlep_m10toinf",  # non-hadronically decaying Z
     id=3110,
     xsecs={
         13: Number(0.2439, {
@@ -395,14 +397,14 @@ ttw = ttv.add_process(
 for ecm in (13, 14):
     ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
 
-ttw_lnu = ttw.add_process(
-    name="ttw_lnu",
+ttw_wlnu = ttw.add_process(
+    name="ttw_wlnu",
     id=3210,
     xsecs=multiply_xsecs(ttw, const.br_w.lep),
 )
 
-ttw_qq = ttw.add_process(
-    name="ttw_qq",
+ttw_wqq = ttw.add_process(
+    name="ttw_wqq",
     id=3220,
     xsecs=multiply_xsecs(ttw, const.br_w.had),
 )
