@@ -67,7 +67,7 @@ __all__ = [
 from scinum import Number
 import cmsdb.constants as const
 
-from cmsdb.processes.higgs import (
+from cmsdb.processes.hh import (
     hh_ggf, radion_hh_ggf, graviton_hh_ggf, radion_hh_vbf, graviton_hh_vbf,
 )
 from cmsdb.xsec_bsm_nodes import calculate_xsec_node
