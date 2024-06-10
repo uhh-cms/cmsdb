@@ -104,7 +104,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ww_pythia",
     id=14800066,
-    processes=[procs.ww_pythia],
+    processes=[procs.ww],
     keys=[
         "/WW_TuneCP5_13p6TeV_pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -120,7 +120,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="wz_pythia",
     id=14803893,
-    processes=[procs.wz_pythia],
+    processes=[procs.wz],
     keys=[
         "/WZ_TuneCP5_13p6TeV_pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -136,7 +136,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="zz_pythia",
     id=14807788,
-    processes=[procs.zz_pythia],
+    processes=[procs.zz],
     keys=[
         "/ZZ_TuneCP5_13p6TeV_pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],

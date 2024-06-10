@@ -6,8 +6,9 @@ HH -> bbtautau process definitions.
 
 __all__ = [
     "hh_ggf_hbb_htt",
-    "hh_ggf_hbb_htt_kl1_kt1_c20", "hh_ggf_hbb_htt_kl0_kt1_c20", "hh_ggf_hbb_htt_kl2p45_kt1_c20",
-    "hh_ggf_hbb_htt_kl5_kt1_c20",
+    "hh_ggf_hbb_htt_kl1_kt1_c20", "hh_ggf_hbb_htt_kl0_kt1_c20", "hh_ggf_hbb_htt_kl0_kt1_c21",
+    "hh_ggf_hbb_htt_kl1_kt1_c20p10", "hh_ggf_hbb_htt_kl1_kt1_c20p35", "hh_ggf_hbb_htt_kl1_kt1_c23",
+    "hh_ggf_hbb_htt_kl1_kt1_c2m2", "hh_ggf_hbb_htt_kl2p45_kt1_c20", "hh_ggf_hbb_htt_kl5_kt1_c20",
     "hh_ggf_hbb_htt_node1", "hh_ggf_hbb_htt_node2", "hh_ggf_hbb_htt_node3",
     "hh_ggf_hbb_htt_node4", "hh_ggf_hbb_htt_node5", "hh_ggf_hbb_htt_node6",
     "hh_ggf_hbb_htt_node7", "hh_ggf_hbb_htt_node8", "hh_ggf_hbb_htt_node9",
@@ -40,6 +41,13 @@ __all__ = [
     "graviton_hh_ggf_hbb_htt_m1500", "graviton_hh_ggf_hbb_htt_m1750",
     "graviton_hh_ggf_hbb_htt_m2000", "graviton_hh_ggf_hbb_htt_m2500",
     "graviton_hh_ggf_hbb_htt_m3000",
+    "hh_vbf_hbb_htt",
+    "hh_vbf_hbb_htt_kv1_k2v1_kl1",# "hh_vbf_hbb_htt_kv1_k2v0_kl1", "hh_vbf_hbb_htt_kv1_k2v1_kl2",
+    #"hh_vbf_hbb_htt_kv1_k2v2_kl1", "hh_vbf_hbb_htt_kv1p74_k2v1p37_kl14p4",
+    #"hh_vbf_hbb_htt_kvm0p012_k2v0p030_kl10p2", "hh_vbf_hbb_htt_kvm0p758_k2v1p44_klm19p3",
+    #"hh_vbf_hbb_htt_kvm0p962_k2v0p959_klm1p43", "hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94",
+    #"hh_vbf_hbb_htt_kvm1p60_k2v2p72_klm1p36", "hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39",
+    #"hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96",
     "radion_hh_vbf_hbb_htt",
     "radion_hh_vbf_hbb_htt_m250", "radion_hh_vbf_hbb_htt_m260", "radion_hh_vbf_hbb_htt_m270",
     "radion_hh_vbf_hbb_htt_m280", "radion_hh_vbf_hbb_htt_m300", "radion_hh_vbf_hbb_htt_m320",
@@ -71,56 +79,110 @@ import cmsdb.constants as const
 
 from cmsdb.processes.higgs import (
     hh_ggf, radion_hh_ggf, graviton_hh_ggf, radion_hh_vbf, graviton_hh_vbf,
+    hh_ggf_kl1_kt1_c20, hh_ggf_kl0_kt1_c20, hh_ggf_kl0_kt1_c21,
 )
 from cmsdb.xsec_bsm_nodes import calculate_xsec_node
 #
 # ggF -> H -> HH
 #
 
-hh_ggf_hbb_htt = hh_ggf.add_process(
-    name="hh_ggf_hbb_htt",
-    id=21100,
-    label=r"$HH_{ggf} \rightarrow bb\tau\tau$",
-    xsecs={
-        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
-        13.6: Number(0.1),
-    },  # TODO
-)
+# hh_ggf_hbb_htt = hh_ggf.add_process(
+#     name="hh_ggf_hbb_htt",
+#     id=21100,
+#     label=r"$HH_{ggf} \rightarrow bb\tau\tau$",
+#     xsecs={
+#         13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+#         13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
+#     },
+# )
 
-hh_ggf_hbb_htt_kl1_kt1_c20 = hh_ggf_hbb_htt.add_process(
+hh_ggf_hbb_htt_kl1_kt1_c20 = hh_ggf_kl1_kt1_c20.add_process(
     name="hh_ggf_hbb_htt_kl1_kt1_c20",
     id=21200,
-    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ (SM)",
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda}=1$, $\kappa_{t}=1$)",
     xsecs={
-        13: hh_ggf_hbb_htt.get_xsec(13),
-        13.6: hh_ggf_hbb_htt.get_xsec(13.6),
+        13: hh_ggf_kl1_kt1_c20.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf_kl1_kt1_c20.get_xsec(13.6)* const.br_hh.bbtt,
     },
 )
 
-hh_ggf_hbb_htt_kl0_kt1_c20 = hh_ggf_hbb_htt.add_process(
+hh_ggf_hbb_htt_kl0_kt1_c20 = hh_ggf_kl0_kt1_c20.add_process(
     name="hh_ggf_hbb_htt_kl0_kt1_c20",
     id=21201,
     label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda}=0$, $\kappa_{t}=1$)",
     xsecs={
-        13.6: Number(0.1),  # TODO
+        13: hh_ggf_kl0_kt1_c20.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf_kl0_kt1_c20.get_xsec(13.6) * const.br_hh.bbtt,
+    },
+)
+
+hh_ggf_hbb_htt_kl0_kt1_c21 = hh_ggf_kl0_kt1_c21.add_process(
+    name="hh_ggf_hbb_htt_kl0_kt1_c21",
+    id=21202,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 0$, $\kappa_t = 1, C_2 = 1$)",
+    xsecs={
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
+    },
+)
+
+hh_ggf_hbb_htt_kl1_kt1_c20p10 = hh_ggf_hbb_htt.add_process(
+    name="hh_ggf_hbb_htt_kl1_kt1_c20p10",
+    id=21203,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 1$, $\kappa_t = 1, C_2 = 0.1$)",
+    xsecs={
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
+    },
+)
+
+hh_ggf_hbb_htt_kl1_kt1_c20p35 = hh_ggf_hbb_htt.add_process(
+    name="hh_ggf_hbb_htt_kl1_kt1_c20p35",
+    id=21204,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 1$, $\kappa_t = 1, C_2 = 0.35$)",
+    xsecs={
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
+    },
+)
+
+hh_ggf_hbb_htt_kl1_kt1_c23 = hh_ggf_hbb_htt.add_process(
+    name="hh_ggf_hbb_htt_kl1_kt1_c23",
+    id=21205,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 1$, $\kappa_t = 1, C_2 = 3$)",
+    xsecs={
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
+    },
+)
+
+hh_ggf_hbb_htt_kl1_kt1_c2m2 = hh_ggf_hbb_htt.add_process(
+    name="hh_ggf_hbb_htt_kl1_kt1_c2m2",
+    id=21206,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 1$, $\kappa_t = 1, C_2 = -2$)",
+    xsecs={
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
     },
 )
 
 hh_ggf_hbb_htt_kl2p45_kt1_c20 = hh_ggf_hbb_htt.add_process(
     name="hh_ggf_hbb_htt_kl2p45_kt1_c20",
-    id=21202,
-    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda}=2.45$, $\kappa_{t}=1$)",
+    id=21207,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 2.45$, $\kappa_t = 1, C_2 = 0$)",
     xsecs={
-        13.6: Number(0.1),  # TODO
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
     },
 )
 
 hh_ggf_hbb_htt_kl5_kt1_c20 = hh_ggf_hbb_htt.add_process(
     name="hh_ggf_hbb_htt_kl5_kt1_c20",
-    id=21203,
-    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda}=5$, $\kappa_{t}=1$)",
+    id=21208,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 5$, $\kappa_t = 1, C_2 = 0$)",
     xsecs={
-        13.6: Number(0.1),  # TODO
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: hh_ggf.get_xsec(13.6) * const.br_hh.bbtt,
     },
 )
 
@@ -626,6 +688,30 @@ graviton_hh_ggf_hbb_htt_m3000 = graviton_hh_ggf_hbb_htt.add_process(
     name="graviton_hh_ggf_hbb_htt_m3000",
     id=24125,
     xsecs={13: Number(0.1)},  # TODO
+)
+
+#
+# vbf -> H -> HH
+#
+
+hh_vbf_hbb_htt = hh_ggf.add_process(
+    name="hh_vbf_hbb_htt",
+    id=25000,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$",
+    xsecs={
+        13: hh_ggf.get_xsec(13) * const.br_hh.bbtt,
+        13.6: Number(0.1),
+    },  # TODO
+)
+
+hh_vbf_hbb_htt_kv1_k2v1_kl1 = hh_vbf_hbb_htt.add_process(
+    name="hh_vbf_hbb_htt_kv1_k2v1_kl1",
+    id=25010,
+    label=r"$HH_{vbf} \rightarrow bb\tau\tau$ (SM)",
+    xsecs={
+        13: hh_vbf_hbb_htt.get_xsec(13),
+        13.6: hh_vbf_hbb_htt.get_xsec(13.6),
+    },
 )
 
 
