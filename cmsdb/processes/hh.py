@@ -31,9 +31,9 @@ from cmsdb.util import add_xsecs
 __all__ = [
     # Di-Higgs
     "hh",
-    "hh_ggf", "hh_ggf_kl_0_kt_1", "hh_ggf_kl_1_kt_1", "hh_ggf_kl_2p45_kt_1", "hh_ggf_kl_5_kt_1",
-    "hh_vbf", "hh_vbf_kv_1_k2v_1_kl_1", "hh_vbf_kv_1_k2v_1_kl_0", "hh_vbf_kv_1_k2v_1_kl_2",
-    "hh_vbf_kv_1_k2v_0_kl_1", "hh_vbf_kv_1_k2v_2_kl_1", "hh_vbf_kv_0p5_k2v_1_kl_1", "hh_vbf_kv_1p5_k2v_1_kl_1",
+    "hh_ggf", "hh_ggf_kl0_kt1", "hh_ggf_kl1_kt1", "hh_ggf_kl2p45_kt1", "hh_ggf_kl5_kt1",
+    "hh_vbf", "hh_vbf_kv1_k2v1_kl1", "hh_vbf_kv1_k2v1_kl0", "hh_vbf_kv1_k2v1_kl2",
+    "hh_vbf_kv1_k2v0_kl1", "hh_vbf_kv1_k2v2_kl1", "hh_vbf_kv0p5_k2v1_kl1", "hh_vbf_kv1p5_k2v1_kl1",
     "radion_hh_ggf", "graviton_hh_ggf", "radion_hh_vbf", "graviton_hh_vbf",
 ]
 
@@ -76,8 +76,8 @@ hh_ggf = hh.add_process(
 # Missing uncertainties are based on:
 # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?rev=89
 
-hh_ggf_kl_0_kt_1 = hh_ggf.add_process(
-    name="hh_ggf_kl_0_kt_1",
+hh_ggf_kl0_kt1 = hh_ggf.add_process(
+    name="hh_ggf_kl0_kt1",
     id=21001,
     xsecs={
         13: Number(0.069725, {
@@ -89,8 +89,8 @@ hh_ggf_kl_0_kt_1 = hh_ggf.add_process(
     aux={"production_mode_parent": hh_ggf},
 )
 
-hh_ggf_kl_1_kt_1 = hh_ggf.add_process(
-    name="hh_ggf_kl_1_kt_1",
+hh_ggf_kl1_kt1 = hh_ggf.add_process(
+    name="hh_ggf_kl1_kt1",
     id=21002,
     xsecs={
         13: Number(0.031047, {
@@ -107,8 +107,8 @@ hh_ggf_kl_1_kt_1 = hh_ggf.add_process(
     aux={"production_mode_parent": hh_ggf},
 )
 
-hh_ggf_kl_2p45_kt_1 = hh_ggf.add_process(
-    name="hh_ggf_kl_2p45_kt_1",
+hh_ggf_kl2p45_kt1 = hh_ggf.add_process(
+    name="hh_ggf_kl2p45_kt1",
     id=21003,
     xsecs={
         13: Number(0.013124, {
@@ -120,8 +120,8 @@ hh_ggf_kl_2p45_kt_1 = hh_ggf.add_process(
     aux={"production_mode_parent": hh_ggf},
 )
 
-hh_ggf_kl_5_kt_1 = hh_ggf.add_process(
-    name="hh_ggf_kl_5_kt_1",
+hh_ggf_kl5_kt1 = hh_ggf.add_process(
+    name="hh_ggf_kl5_kt1",
     id=21004,
     xsecs={
         13: Number(0.091172, {
@@ -150,8 +150,8 @@ hh_vbf = hh.add_process(
     aux={"production_mode_parent": hh},
 )
 
-hh_vbf_kv_1_k2v_1_kl_1 = hh_vbf.add_process(
-    name="hh_vbf_kv_1_k2v_1_kl_1",
+hh_vbf_kv1_k2v1_kl1 = hh_vbf.add_process(
+    name="hh_vbf_kv1_k2v1_kl1",
     id=22001,
     xsecs={
         13: Number(0.0017260, {
@@ -162,8 +162,8 @@ hh_vbf_kv_1_k2v_1_kl_1 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kv_1_k2v_1_kl_0 = hh_vbf.add_process(
-    name="hh_vbf_kv_1_k2v_1_kl_0",
+hh_vbf_kv1_k2v1_kl0 = hh_vbf.add_process(
+    name="hh_vbf_kv1_k2v1_kl0",
     id=22002,
     xsecs={
         13: Number(0.0046089, {
@@ -174,8 +174,8 @@ hh_vbf_kv_1_k2v_1_kl_0 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kv_1_k2v_1_kl_2 = hh_vbf.add_process(
-    name="hh_vbf_kv_1_k2v_1_kl_2",
+hh_vbf_kv1_k2v1_kl2 = hh_vbf.add_process(
+    name="hh_vbf_kv1_k2v1_kl2",
     id=22003,
     xsecs={
         13: Number(0.0014228, {
@@ -186,8 +186,8 @@ hh_vbf_kv_1_k2v_1_kl_2 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kv_1_k2v_0_kl_1 = hh_vbf.add_process(
-    name="hh_vbf_kv_1_k2v_0_kl_1",
+hh_vbf_kv1_k2v0_kl1 = hh_vbf.add_process(
+    name="hh_vbf_kv1_k2v0_kl1",
     id=22004,
     xsecs={
         13: Number(0.0270800, {
@@ -198,8 +198,8 @@ hh_vbf_kv_1_k2v_0_kl_1 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kv_1_k2v_2_kl_1 = hh_vbf.add_process(
-    name="hh_vbf_kv_1_k2v_2_kl_1",
+hh_vbf_kv1_k2v2_kl1 = hh_vbf.add_process(
+    name="hh_vbf_kv1_k2v2_kl1",
     id=22005,
     xsecs={
         13: Number(0.00142178, {
@@ -210,8 +210,8 @@ hh_vbf_kv_1_k2v_2_kl_1 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kv_0p5_k2v_1_kl_1 = hh_vbf.add_process(
-    name="hh_vbf_kv_0p5_k2v_1_kl_1",
+hh_vbf_kv0p5_k2v1_kl1 = hh_vbf.add_process(
+    name="hh_vbf_kv0p5_k2v1_kl1",
     id=22006,
     xsecs={
         13: Number(0.0108237, {
@@ -222,8 +222,8 @@ hh_vbf_kv_0p5_k2v_1_kl_1 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kv_1p5_k2v_1_kl_1 = hh_vbf.add_process(
-    name="hh_vbf_kv_1p5_k2v_1_kl_1",
+hh_vbf_kv1p5_k2v1_kl1 = hh_vbf.add_process(
+    name="hh_vbf_kv1p5_k2v1_kl1",
     id=22007,
     xsecs={
         13: Number(0.0660185, {
