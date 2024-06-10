@@ -6,7 +6,8 @@ HH -> bbtautau process definitions.
 
 __all__ = [
     "hh_ggf_hbb_htt",
-    "hh_ggf_hbb_htt_kl1_kt1_c20", "hh_ggf_hbb_htt_kl0_kt1_c20",
+    "hh_ggf_hbb_htt_kl1_kt1_c20", "hh_ggf_hbb_htt_kl0_kt1_c20", "hh_ggf_hbb_htt_kl2p45_kt1_c20",
+    "hh_ggf_hbb_htt_kl5_kt1_c20",
     "hh_ggf_hbb_htt_node1", "hh_ggf_hbb_htt_node2", "hh_ggf_hbb_htt_node3",
     "hh_ggf_hbb_htt_node4", "hh_ggf_hbb_htt_node5", "hh_ggf_hbb_htt_node6",
     "hh_ggf_hbb_htt_node7", "hh_ggf_hbb_htt_node8", "hh_ggf_hbb_htt_node9",
@@ -99,7 +100,25 @@ hh_ggf_hbb_htt_kl1_kt1_c20 = hh_ggf_hbb_htt.add_process(
 hh_ggf_hbb_htt_kl0_kt1_c20 = hh_ggf_hbb_htt.add_process(
     name="hh_ggf_hbb_htt_kl0_kt1_c20",
     id=21201,
-    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 0$, $\kappa_t = 1, C_2 = 0$)",
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda}=0$, $\kappa_{t}=1$)",
+    xsecs={
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+hh_ggf_hbb_htt_kl2p45_kt1_c20 = hh_ggf_hbb_htt.add_process(
+    name="hh_ggf_hbb_htt_kl2p45_kt1_c20",
+    id=21202,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda}=2.45$, $\kappa_{t}=1$)",
+    xsecs={
+        13.6: Number(0.1),  # TODO
+    },
+)
+
+hh_ggf_hbb_htt_kl5_kt1_c20 = hh_ggf_hbb_htt.add_process(
+    name="hh_ggf_hbb_htt_kl5_kt1_c20",
+    id=21203,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda}=5$, $\kappa_{t}=1$)",
     xsecs={
         13.6: Number(0.1),  # TODO
     },

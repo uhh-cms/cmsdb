@@ -21,10 +21,12 @@ cpn.add_dataset(
     keys=[
         "/Muon/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=177,
+    n_files=94,
     n_events=138_329_693,
     aux={
-        "nominal_merging_factor": 10,
+        "merging_factors": {
+            "nominal": 19,
+        },
         "era": "C",
     },
 )
@@ -37,10 +39,12 @@ cpn.add_dataset(
     keys=[
         "/Muon/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=101,
+    n_files=51,
     n_events=75_440_027,
     aux={
-        "nominal_merging_factor": 10,
+        "merging_factors": {
+            "nominal": 20,
+        },
         "era": "D",
     },
 )
@@ -58,10 +62,12 @@ cpn.add_dataset(
     keys=[
         "/EGamma/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=373,
+    n_files=198,
     n_events=263_549_470,
     aux={
-        "nominal_merging_factor": 9,
+        "merging_factors": {
+            "nominal": 17,
+        },
         "era": "C",
     },
 )
@@ -74,10 +80,12 @@ cpn.add_dataset(
     keys=[
         "/EGamma/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=136,
+    n_files=72,
     n_events=89_134_996,
     aux={
-        "nominal_merging_factor": 9,
+        "merging_factors": {
+            "nominal": 17,
+        },
         "era": "D",
     },
 )
@@ -96,10 +104,12 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=46,
+    n_files=23,
     n_events=25_903_135,
     aux={
-        "nominal_merging_factor": 8,
+        "merging_factors": {
+            "nominal": 16,
+        },
         "era": "C",
     },
 )
@@ -112,10 +122,12 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=28,
+    n_files=16,
     n_events=16_686_692,
     aux={
-        "nominal_merging_factor": 9,
+        "merging_factors": {
+            "nominal": 16,
+        },
         "era": "D",
         "jec_era": "RunCD",
     },
@@ -134,10 +146,12 @@ cpn.add_dataset(
     keys=[
         "/JetMET/Run2022C-19Dec2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=359,
+    n_files=193,
     n_events=169_968_073,
     aux={
-        "nominal_merging_factor": 7,
+        "merging_factors": {
+            "nominal": 13,
+        },
         "era": "C",
     },
 )
@@ -150,10 +164,12 @@ cpn.add_dataset(
     keys=[
         "/JetMET/Run2022D-19Dec2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
     ],
-    n_files=224,
+    n_files=121,
     n_events=101_270_969,
     aux={
-        "nominal_merging_factor": 7,
+        "merging_factors": {
+            "nominal": 13,
+        },
         "era": "D",
     },
 )
