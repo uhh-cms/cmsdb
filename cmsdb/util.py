@@ -101,7 +101,7 @@ def add_decay_process(
     parent: Process,
     decay_map: DotDict,
     custom_id: int | None = None,
-    add_production_mode_parent: bool = True,
+    add_production_mode_parent: bool = False,
     name_separator: str = "_",
     label_separator: str = ", ",
 ) -> Process:
