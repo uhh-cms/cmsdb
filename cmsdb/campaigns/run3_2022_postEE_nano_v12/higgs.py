@@ -152,20 +152,20 @@ cpn.add_dataset(
         ),
     ),
 )
-cpn.add_dataset(
-    name="h_ggf_hzz4nu_pt150toinf_powheg",
-    id=14849364,
-    processes=[procs.h_ggf_hzz4nu_pt150toinf],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/GluGluHto2Zto4Nu_PT-150_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
-            ],
-            n_files=90,
-            n_events=3734036,
-        ),
-    ),
-)
+# cpn.add_dataset(
+#     name="h_ggf_hzz4nu_pt150toinf_powheg",
+#     id=14849364,
+#     processes=[procs.h_ggf_hzz4nu_pt150toinf],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/GluGluHto2Zto4Nu_PT-150_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+#             ],
+#             n_files=90,
+#             n_events=3734036,
+#         ),
+#     ),
+# )
 cpn.add_dataset(
     name="h_ggf_hcc_powheg",
     id=14872560,
@@ -465,9 +465,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="zh_zqq_hll4nu_powheg",
+    name="zh_zqq_hzz4nu_powheg",
     id=14849385,
-    processes=[procs.zh_zqq_hll4nu],
+    processes=[procs.zh_zqq_hzz4nu],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -721,9 +721,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="wph_zqq_hbb_powheg",
+    name="wph_wqq_hbb_powheg",
     id=14810685,
-    processes=[procs.wph_zqq_hbb],
+    processes=[procs.wph_wqq_hbb],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -903,9 +903,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="wmh_wlnhbb_u_powheg",
+    name="wmh_wlnu_hbb_powheg",
     id=14799662,
-    processes=[procs.wmh_wlnhbb_u],
+    processes=[procs.wmh_wlnu_hbb],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -941,20 +941,6 @@ cpn.add_dataset(
             ],
             n_files=309,
             n_events=11304506,
-        ),
-    ),
-)
-cpn.add_dataset(
-    name="wmh_hzz4l_powheg",
-    id=14799041,
-    processes=[procs.wmh_hzz4l],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/WminusH_Hto2Zto4L_M-125p5_TuneCP5_13p6TeV_powheg2-minlo-HWJ-JHUGenV752-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
-            ],
-            n_files=37,
-            n_events=1730541,
         ),
     ),
 )
