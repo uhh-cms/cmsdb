@@ -67,7 +67,7 @@ Single Higgs production channels:
 - 12xxx: h_vbf
 - 13xxx: vh
 - 14xxx: zh
-- 15xxx: ggzh
+- 15xxx: zh_gg
 - 16xxx: wh
 - 17xxx: wph
 - 18xxx: wmh

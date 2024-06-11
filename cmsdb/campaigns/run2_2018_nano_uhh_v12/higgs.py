@@ -49,9 +49,9 @@ cpn.add_dataset(
 
 # z -> ll , h -> bb
 cpn.add_dataset(
-    name="gg_zh_zll_hbb_powheg",
+    name="zh_gg_zll_hbb_powheg",
     id=14340023,
-    processes=[procs.ggzh_llbb],
+    processes=[procs.zh_gg_zll_hbb],
     keys=[
         "/ggZH_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
