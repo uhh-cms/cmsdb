@@ -15,9 +15,9 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_uhh_v12 import campaign_run2_2016_HIPM_
 # ggF -> H -> HH
 
 cpn.add_dataset(
-    name="hh_ggf_hbb_htt_kl1_kt1_c20_madgraph",
+    name="hh_ggf_hbb_htt_kl1_kt1_madgraph",
     id=14335916,
-    processes=[procs.hh_ggf_hbb_htt_kl1_kt1_c20],
+    processes=[procs.hh_ggf_hbb_htt_kl1_kt1],
     keys=[
         "/GluGluToHHTo2B2Tau_TuneCP5_PSWeights_node_SM_13TeV-madgraph-pythia8/RunIISummer20UL16MiniAODAPVv2_NanoAODv12UHH-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
     ],

@@ -14,9 +14,9 @@ from cmsdb.campaigns.run2_2018_nano_uhh_v12 import campaign_run2_2018_nano_uhh_v
 
 # SM
 cpn.add_dataset(
-    name="hh_ggf_hbb_htt_kl1_kt1_c20_madgraph",
+    name="hh_ggf_hbb_htt_kl1_kt1_madgraph",
     id=14356126,
-    processes=[procs.hh_ggf_hbb_htt_kl1_kt1_c20],
+    processes=[procs.hh_ggf_hbb_htt_kl1_kt1],
     keys=[
         "/GluGluToHHTo2B2Tau_TuneCP5_PSWeights_node_SM_13TeV-madgraph-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
