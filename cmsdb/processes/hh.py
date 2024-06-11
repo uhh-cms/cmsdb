@@ -32,9 +32,16 @@ __all__ = [
     # Di-Higgs
     "hh",
     "hh_ggf", "hh_ggf_kl0_kt1", "hh_ggf_kl1_kt1", "hh_ggf_kl2p45_kt1", "hh_ggf_kl5_kt1",
+    "hh_ggf_kl0_kt1_c21", "hh_ggf_kl1_kt1_c20p10", "hh_ggf_kl1_kt1_c20p35",
+    "hh_ggf_kl1_kt1_c23", "hh_ggf_kl1_kt1_c2m2",
     "hh_vbf", "hh_vbf_kv1_k2v1_kl1", "hh_vbf_kv1_k2v1_kl0", "hh_vbf_kv1_k2v1_kl2",
     "hh_vbf_kv1_k2v0_kl1", "hh_vbf_kv1_k2v2_kl1", "hh_vbf_kv0p5_k2v1_kl1", "hh_vbf_kv1p5_k2v1_kl1",
-    "radion_hh_ggf", "graviton_hh_ggf", "radion_hh_vbf", "graviton_hh_vbf",
+    "hh_vbf_kv1p74_k2v1p37_kl14p4", "hh_vbf_kvm0p012_k2v0p030_kl10p2",
+    "hh_vbf_kvm0p758_k2v1p44_klm19p3", "hh_vbf_kvm0p962_k2v0p959_klm1p43",
+    "hh_vbf_kvm1p21_k2v1p94_klm0p94", "hh_vbf_kvm1p60_k2v2p72_klm1p36",
+    "hh_vbf_kvm1p83_k2v3p57_klm3p39", "hh_vbf_kvm2p12_k2v3p87_klm5p96",
+    "radion_hh_ggf", "graviton_hh_ggf",
+    "radion_hh_vbf", "graviton_hh_vbf",
 ]
 
 ####################################################################################################
@@ -116,6 +123,7 @@ hh_ggf_kl2p45_kt1 = hh_ggf.add_process(
             "pdf": 0.03j,
             "mtop": (0.04j, 0.22j),
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_ggf},
 )
@@ -129,6 +137,57 @@ hh_ggf_kl5_kt1 = hh_ggf.add_process(
             "pdf": 0.03j,
             "mtop": (0.13j, 0.04j),
         }),
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_ggf},
+)
+
+hh_ggf_kl0_kt1_c21 = hh_ggf.add_process(
+    name="hh_ggf_kl0_kt1_c21",
+    id=21005,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_ggf},
+)
+
+hh_ggf_kl1_kt1_c20p10 = hh_ggf.add_process(
+    name="hh_ggf_kl1_kt1_c20p10",
+    id=21006,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_ggf},
+)
+
+hh_ggf_kl1_kt1_c20p35 = hh_ggf.add_process(
+    name="hh_ggf_kl1_kt1_c20p35",
+    id=21007,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_ggf},
+)
+
+hh_ggf_kl1_kt1_c23 = hh_ggf.add_process(
+    name="hh_ggf_kl1_kt1_c23",
+    id=21008,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_ggf},
+)
+
+hh_ggf_kl1_kt1_c2m2 = hh_ggf.add_process(
+    name="hh_ggf_kl1_kt1_c2m2",
+    id=21009,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_ggf},
 )
@@ -233,6 +292,87 @@ hh_vbf_kv1p5_k2v1_kl1 = hh_vbf.add_process(
     },
     aux={"production_mode_parent": hh_vbf},
 )
+
+hh_vbf_kv1p74_k2v1p37_kl14p4 = hh_vbf.add_process(
+    name="hh_vbf_kv1p74_k2v1p37_kl14p4",
+    id=22008,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
+hh_vbf_kvm0p012_k2v0p030_kl10p2 = hh_vbf.add_process(
+    name="hh_vbf_kvm0p012_k2v0p030_kl10p2",
+    id=22009,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
+hh_vbf_kvm0p758_k2v1p44_klm19p3 = hh_vbf.add_process(
+    name="hh_vbf_kvm0p758_k2v1p44_klm19p3",
+    id=22010,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
+hh_vbf_kvm0p962_k2v0p959_klm1p43 = hh_vbf.add_process(
+    name="hh_vbf_kvm0p962_k2v0p959_klm1p43",
+    id=22011,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
+hh_vbf_kvm1p21_k2v1p94_klm0p94 = hh_vbf.add_process(
+    name="hh_vbf_kvm1p21_k2v1p94_klm0p94",
+    id=22012,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
+hh_vbf_kvm1p60_k2v2p72_klm1p36 = hh_vbf.add_process(
+    name="hh_vbf_kvm1p60_k2v2p72_klm1p36",
+    id=22013,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
+hh_vbf_kvm1p83_k2v3p57_klm3p39 = hh_vbf.add_process(
+    name="hh_vbf_kvm1p83_k2v3p57_klm3p39",
+    id=22014,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
+hh_vbf_kvm2p12_k2v3p87_klm5p96 = hh_vbf.add_process(
+    name="hh_vbf_kvm2p12_k2v3p87_klm5p96",
+    id=22015,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.1),  # TODO
+    },
+    aux={"production_mode_parent": hh_vbf},
+)
+
 
 hh.xsecs = add_xsecs(hh_ggf, hh_vbf)
 
