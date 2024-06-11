@@ -141,7 +141,7 @@ dy_m10to50 = dy.add_process(
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 
 dy_m50toinf_0j = dy_m50toinf.add_process(
-    name="dy_m50_0j",
+    name="dy_m50toinf_0j",
     id=51110,
     xsecs={
         # NLO xsec taken from https://xsdb-temp.app.cern.ch/xsdb/?columns=39911424&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
@@ -826,7 +826,7 @@ wz = vv.add_process(
 # for WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 wz_wlnu_zll_m4toinf = wz.add_process(
-    name="wz_wlnun_zll_m4toinf",
+    name="wz_wlnu_zll_m4toinf",
     id=8210,
     xsecs={
         13: Number(5.218, {"tot": 0.00525}),
