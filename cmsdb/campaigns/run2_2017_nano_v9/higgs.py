@@ -39,24 +39,24 @@ cpn.add_dataset(
 # H radiation
 cpn.add_dataset(
     name="zh_htt_powheg",
-    id=14363472,
+    id=14275939,
     processes=[procs.zh_htt],
     keys=[
         "/ZHToTauTau_M125_CP5_13TeV-powheg-pythia8_ext1/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
-    n_files=45,
-    n_events=4614054,
+    n_files=5,
+    n_events=4958035,
 )
 
 cpn.add_dataset(
     name="zh_zll_hbb_powheg",
-    id=14275939,
+    id=14363472,
     processes=[procs.zh_zll_hbb],
     keys=[
         "/ZH_HToBB_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
-    n_files=5,
-    n_events=4958035,
+    n_files=45,
+    n_events=4614054,
 )
 
 cpn.add_dataset(
