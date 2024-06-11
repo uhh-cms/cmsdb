@@ -120,7 +120,7 @@ hh_ggf_hbb_htt_node1 = hh_ggf.add_process(
     id=21102,
     label=f"{hh_ggf_hbb_htt.label} (node 1)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=1),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=1),
     },
 )
 
@@ -129,7 +129,7 @@ hh_ggf_hbb_htt_node2 = hh_ggf.add_process(
     id=21103,
     label=f"{hh_ggf_hbb_htt.label} (node 2)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=2),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=2),
     },
 )
 
@@ -138,7 +138,7 @@ hh_ggf_hbb_htt_node3 = hh_ggf.add_process(
     id=21104,
     label=f"{hh_ggf_hbb_htt.label} (node 3)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=3),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=3),
     },
 )
 
@@ -147,7 +147,7 @@ hh_ggf_hbb_htt_node4 = hh_ggf.add_process(
     id=21105,
     label=f"{hh_ggf_hbb_htt.label} (node 4)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=4),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=4),
     },
 )
 
@@ -156,7 +156,7 @@ hh_ggf_hbb_htt_node5 = hh_ggf.add_process(
     id=21106,
     label=f"{hh_ggf_hbb_htt.label} (node 5)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=5),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=5),
     },
 )
 
@@ -165,7 +165,7 @@ hh_ggf_hbb_htt_node6 = hh_ggf.add_process(
     id=21107,
     label=f"{hh_ggf_hbb_htt.label} (node 6)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=6),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=6),
     },
 )
 
@@ -174,7 +174,7 @@ hh_ggf_hbb_htt_node7 = hh_ggf.add_process(
     id=21108,
     label=f"{hh_ggf_hbb_htt.label} (node 7)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=7),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=7),
     },
 )
 
@@ -183,7 +183,7 @@ hh_ggf_hbb_htt_node8 = hh_ggf.add_process(
     id=21109,
     label=f"{hh_ggf_hbb_htt.label} (node 8)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=8),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=8),
     },
 )
 
@@ -192,7 +192,7 @@ hh_ggf_hbb_htt_node9 = hh_ggf.add_process(
     id=21110,
     label=f"{hh_ggf_hbb_htt.label} (node 9)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=9),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=9),
     },
 )
 
@@ -201,7 +201,7 @@ hh_ggf_hbb_htt_node10 = hh_ggf.add_process(
     id=21111,
     label=f"{hh_ggf_hbb_htt.label} (node 10)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=10),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=10),
     },
 )
 
@@ -210,7 +210,7 @@ hh_ggf_hbb_htt_node11 = hh_ggf.add_process(
     id=21112,
     label=f"{hh_ggf_hbb_htt.label} (node 11)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=11),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=11),
     },
 )
 
@@ -219,7 +219,7 @@ hh_ggf_hbb_htt_node12 = hh_ggf.add_process(
     id=21113,
     label=f"{hh_ggf_hbb_htt.label} (node 12)",
     xsecs={
-        13: calculate_xsec_node(13, hh_ggf_hbb_htt.get_xsec(13), node_number=12),
+        13: calculate_xsec_node(13, hh_ggf_hbb_htt_kl1_kt1.get_xsec(13), node_number=12),
     },
 )
 
