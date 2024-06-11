@@ -92,6 +92,7 @@ hh_ggf_kl0_kt1 = hh_ggf.add_process(
             "pdf": 0.03j,
             "mtop": (0.06j, 0.12j),
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_ggf},
 )
@@ -205,6 +206,7 @@ hh_vbf = hh.add_process(
             "scale": (0.0003j, 0.0004j),
             "pdf": 0.021j,
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh},
 )
@@ -217,6 +219,7 @@ hh_vbf_kv1_k2v1_kl1 = hh_vbf.add_process(
             "scale": (0.0003j, 0.0004j),
             "pdf": 0.021j,
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_vbf},
 )
@@ -229,6 +232,7 @@ hh_vbf_kv1_k2v1_kl0 = hh_vbf.add_process(
             "scale": (0.0003j, 0.0004j),
             "pdf": 0.021j,
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_vbf},
 )
@@ -241,6 +245,7 @@ hh_vbf_kv1_k2v1_kl2 = hh_vbf.add_process(
             "scale": (0.0003j, 0.0004j),
             "pdf": 0.021j,
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_vbf},
 )
@@ -253,6 +258,7 @@ hh_vbf_kv1_k2v0_kl1 = hh_vbf.add_process(
             "scale": (0.0003j, 0.0004j),
             "pdf": 0.021j,
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_vbf},
 )
@@ -265,6 +271,7 @@ hh_vbf_kv1_k2v2_kl1 = hh_vbf.add_process(
             "scale": (0.0003j, 0.0004j),
             "pdf": 0.021j,
         }),
+        13.6: Number(0.1),  # TODO
     },
     aux={"production_mode_parent": hh_vbf},
 )
