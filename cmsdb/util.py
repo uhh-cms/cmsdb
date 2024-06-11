@@ -97,13 +97,34 @@ def add_xsecs(*processes: tuple[Process]) -> dict[float, Number]:
     return xsecs
 
 
+def add_the_production_mode_parent(child: Process, parent: Process) -> Process:
+    """
+    Add the *parent* process as the *production_mode_parent* attribute to the *child* process.
+    """
+    if parent.has_aux("production_mode_parent"):
+        grandparent = parent.get_parent_process(parent.aux["production_mode_parent"])
+    elif len(parent.parent_processes) == 1:
+        grandparent = parent.parent_processes.get_first()
+    else:
+        raise ValueError(
+            f"Parent process {parent.name} either needs the *production_mode_parent* aux or it "
+            "must have exactly one parent process, but has "
+            f"{parent.parent_processes.names()} ({len(parent.parent_processes)}).",
+        )
+    production_mode_parent = grandparent.get_process(child.name.replace(parent.name, grandparent.name))
+    production_mode_parent.add_process(child)
+    child.x.production_mode_parent = production_mode_parent.name
+
+    return child
+
+
 def add_decay_process(
     parent: Process,
     decay_map: DotDict,
-    custom_id: int | None = None,
     add_production_mode_parent: bool = False,
     name_separator: str = "_",
     label_separator: str = ", ",
+    **kwargs,
 ) -> Process:
     """
     Add a subprocess to the *parent* Process for a certain decay channel encoded via the *decay_map*.
@@ -111,22 +132,26 @@ def add_decay_process(
     :param parent: Parent process.
     :param decay_map: Dictionary with decay channel information. Needs to include the keys
     *name*, *id*, *br*, and *label*. When passing the *custom_id* parameter, the *id* key is ignored.
-    :param custom_id: Optional custom ID to be used for the subprocess.
     :param add_production_mode_parent: Whether to add the process with the same final state but different
     production mode as parent. Als adds the *production_mode_parent* attribute to the subprocess.
     :param name_separator: Separator to be used for the subprocess name.
     :param label_separator: Separator to be used for the subprocess label.
     :return: The resulting child process.
     """
-    _id = custom_id if custom_id else parent.id + decay_map["id"]
-    label = rf"{parent.label}{label_separator}{decay_map['label']}"
 
-    child = parent.add_process(
-        name=f"{parent.name}{name_separator}{decay_map.name}",
-        id=_id,
-        label=label,
-        xsecs=multiply_xsecs(parent, decay_map["br"]),
-    )
+    # get default kwargs from parent + decay map
+    child_kwargs = {
+        "name": f"{parent.name}{name_separator}{decay_map.name}",
+        "id": parent.id + decay_map["id"],
+        "label": rf"{parent.label}{label_separator}{decay_map['label']}",
+        "xsecs": multiply_xsecs(parent, decay_map["br"]),
+    }
+
+    # overwrite kwargs with custom kwargs
+    child_kwargs.update(kwargs)
+
+    # add process
+    child = parent.add_process(**child_kwargs)
     if add_production_mode_parent:
         if parent.has_aux("production_mode_parent"):
             grandparent = parent.get_parent_process(parent.aux["production_mode_parent"])
@@ -138,7 +163,7 @@ def add_decay_process(
                 "must have exactly one parent process, but has "
                 f"{parent.parent_processes.names()} ({len(parent.parent_processes)}).",
             )
-        production_mode_parent = grandparent.get_process(f"{grandparent.name}{name_separator}{decay_map.name}")
+        production_mode_parent = grandparent.get_process(child.name.replace(parent.name, grandparent.name))
         production_mode_parent.add_process(child)
         child.x.production_mode_parent = production_mode_parent.name
 
