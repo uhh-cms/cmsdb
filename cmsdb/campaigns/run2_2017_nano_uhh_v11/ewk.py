@@ -14,9 +14,9 @@ from cmsdb.campaigns.run2_2017_nano_uhh_v11 import campaign_run2_2017_nano_uhh_v
 #
 cpn.add_dataset(
 
-    name="dy_lep_m50_amcatnlo",
+    name="dy_m50toinf_amcatnlo",
     id=14262131,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -26,9 +26,9 @@ cpn.add_dataset(
 
 # jet binned, madgraph
 # cpn.add_dataset(
-#     name="dy_lep_m50_1j_madgraph",
+#     name="dy_m50toinf_1j_madgraph",
 #     id=14242968,
-#     processes=[procs.dy_lep_m50_1j],
+#     processes=[procs.dy_m50toinf_1j],
 #     keys=[
 #         "/DY1JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -37,9 +37,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_2j_madgraph",
+#     name="dy_m50toinf_2j_madgraph",
 #     id=14235404,
-#     processes=[procs.dy_lep_m50_2j],
+#     processes=[procs.dy_m50toinf_2j],
 #     keys=[
 #         "/DY2JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -48,9 +48,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_3j_madgraph",
+#     name="dy_m50toinf_3j_madgraph",
 #     id=14235548,
-#     processes=[procs.dy_lep_m50_3j],
+#     processes=[procs.dy_m50toinf_3j],
 #     keys=[
 #         "/DY3JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -59,9 +59,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_4j_madgraph",
+#     name="dy_m50toinf_4j_madgraph",
 #     id=14235551,
-#     processes=[procs.dy_lep_m50_4j],
+#     processes=[procs.dy_m50toinf_4j],
 #     keys=[
 #         "/DY4JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -72,9 +72,9 @@ cpn.add_dataset(
 
 # jet binned, amcatnlo
 cpn.add_dataset(
-    name="dy_lep_0j_amcatnlo",
+    name="dy_0j_amcatnlo",
     id=14222486,
-    processes=[procs.dy_lep_0j],
+    processes=[procs.dy_0j],
     keys=[
         "/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -83,9 +83,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_1j_amcatnlo",
+    name="dy_1j_amcatnlo",
     id=14241548,
-    processes=[procs.dy_lep_1j],
+    processes=[procs.dy_1j],
     keys=[
         "/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -94,9 +94,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_2j_amcatnlo",
+    name="dy_2j_amcatnlo",
     id=14196906,
-    processes=[procs.dy_lep_2j],
+    processes=[procs.dy_2j],
     keys=[
         "/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -106,9 +106,9 @@ cpn.add_dataset(
 
 # ht binned
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht70to100_madgraph",
+#     name="dy_m50toinf_ht70to100_madgraph",
 #     id=14235248,
-#     processes=[procs.dy_lep_m50_ht70to100],
+#     processes=[procs.dy_m50toinf_ht70to100],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -117,9 +117,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht100to200_madgraph",
+#     name="dy_m50toinf_ht100to200_madgraph",
 #     id=14235412,
-#     processes=[procs.dy_lep_m50_ht100to200],
+#     processes=[procs.dy_m50toinf_ht100to200],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -128,9 +128,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht200to400_madgraph",
+#     name="dy_m50toinf_ht200to400_madgraph",
 #     id=14235285,
-#     processes=[procs.dy_lep_m50_ht200to400],
+#     processes=[procs.dy_m50toinf_ht200to400],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -139,9 +139,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht400to600_madgraph",
+#     name="dy_m50toinf_ht400to600_madgraph",
 #     id=14234754,
-#     processes=[procs.dy_lep_m50_ht400to600],
+#     processes=[procs.dy_m50toinf_ht400to600],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -150,9 +150,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht600to800_madgraph",
+#     name="dy_m50toinf_ht600to800_madgraph",
 #     id=14234976,
-#     processes=[procs.dy_lep_m50_ht600to800],
+#     processes=[procs.dy_m50toinf_ht600to800],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -161,9 +161,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht800to1200_madgraph",
+#     name="dy_m50toinf_ht800to1200_madgraph",
 #     id=14234833,
-#     processes=[procs.dy_lep_m50_ht800to1200],
+#     processes=[procs.dy_m50toinf_ht800to1200],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -172,9 +172,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht1200to2500_madgraph",
+#     name="dy_m50toinf_ht1200to2500_madgraph",
 #     id=14243239,
-#     processes=[procs.dy_lep_m50_ht1200to2500],
+#     processes=[procs.dy_m50toinf_ht1200to2500],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -183,9 +183,9 @@ cpn.add_dataset(
 # )
 #
 # cpn.add_dataset(
-#     name="dy_lep_m50_ht2500_madgraph",
+#     name="dy_m50toinf_ht2500toinf_madgraph",
 #     id=14244972,
-#     processes=[procs.dy_lep_m50_ht2500],
+#     processes=[procs.dy_m50toinf_ht2500toinf],
 #     keys=[
 #         "/DYJetsToLL_M-50_HT-2500toInf_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -196,9 +196,9 @@ cpn.add_dataset(
 
 # pt binned
 cpn.add_dataset(
-    name="dy_lep_pt0to50_amcatnlo",
+    name="dy_pt0to50_amcatnlo",
     id=14349689,
-    processes=[procs.dy_lep_pt0to50],
+    processes=[procs.dy_pt0to50],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-0To50_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -207,9 +207,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt50to100_amcatnlo",
+    name="dy_pt50to100_amcatnlo",
     id=14350659,
-    processes=[procs.dy_lep_pt50to100],
+    processes=[procs.dy_pt50to100],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-50To100_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -218,9 +218,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt100to250_amcatnlo",
+    name="dy_pt100to250_amcatnlo",
     id=14353573,
-    processes=[procs.dy_lep_pt100to250],
+    processes=[procs.dy_pt100to250],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -229,9 +229,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt250to400_amcatnlo",
+    name="dy_pt250to400_amcatnlo",
     id=14353503,
-    processes=[procs.dy_lep_pt250to400],
+    processes=[procs.dy_pt250to400],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -240,9 +240,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt400to650_amcatnlo",
+    name="dy_pt400to650_amcatnlo",
     id=14335843,
-    processes=[procs.dy_lep_pt400to650],
+    processes=[procs.dy_pt400to650],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-400To650_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v4/NANOAODSIM",  # noqa
     ],
@@ -251,9 +251,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt650_amcatnlo",
+    name="dy_pt650toinf_amcatnlo",
     id=14349880,
-    processes=[procs.dy_lep_pt650],
+    processes=[procs.dy_pt650toinf],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -357,9 +357,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht2500_madgraph",
+    name="w_lnu_ht2500toinf_madgraph",
     id=14267026,
-    processes=[procs.w_lnu_ht2500],
+    processes=[procs.w_lnu_ht2500toinf],
     keys=[
         "/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -374,9 +374,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ewk_wm_lnu_m50_madgraph",
+    name="ewk_wm_lnu_m50toinf_madgraph",
     id=14301802,
-    processes=[procs.ewk_wm_lnu_m50],
+    processes=[procs.ewk_wm_lnu_m50toinf],
     keys=[
         "/EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -385,9 +385,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ewk_w_lnu_m50_madgraph",
+    name="ewk_w_lnu_m50toinf_madgraph",
     id=14300809,
-    processes=[procs.ewk_wp_lnu_m50],
+    processes=[procs.ewk_wp_lnu_m50toinf],
     keys=[
         "/EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -396,9 +396,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ewk_z_ll_m50_madgraph",
+    name="ewk_z_ll_m50toinf_madgraph",
     id=14300868,
-    processes=[procs.ewk_z_ll_m50],
+    processes=[procs.ewk_z_ll_m50toinf],
     keys=[
         "/EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -424,9 +424,9 @@ cpn.add_dataset(
 )
 
 # cpn.add_dataset(
-#     name="zz_qqll_m4_amcatnlo",
+#     name="zz_zqq_zll_m4toinf_amcatnlo",
 #     id=14298864,
-#     processes=[procs.zz_qqll_m4],
+#     processes=[procs.zz_zqq_zll_m4toinf],
 #     keys=[
 #         "/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -439,9 +439,9 @@ cpn.add_dataset(
 # # it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
 # # therefore the corresponding process is with the "_m4" suffix
 # cpn.add_dataset(
-#     name="zz_llnunu_powheg",
+#     name="zz_zll_znunu_m4toinf_powheg",
 #     id=14237024,
-#     processes=[procs.zz_llnunu_m4],
+#     processes=[procs.zz_zll_znunu_m4toinf],
 #     keys=[
 #         "/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
@@ -454,9 +454,9 @@ cpn.add_dataset(
 # # it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
 # # therefore the corresponding process is with the "_m4" suffix
 # cpn.add_dataset(
-#     name="zz_llll_powheg",
+#     name="zz_zll_zll_m4toinf_powheg",
 #     id=14243658,
-#     processes=[procs.zz_llll_m4],
+#     processes=[procs.zz_zll_zll_m4toinf],
 #     keys=[
 #         "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
 #     ],
@@ -481,9 +481,9 @@ cpn.add_dataset(
 # # it seems that there is a lepton mass cut of 4 GeV for leptons from Z, like in the ZZTo2Q2L channel
 # # therefore the corresponding process is with the "_m4" suffix
 # cpn.add_dataset(
-#     name="wz_lllnu_amcatnlo",
+#     name="wz_wlnu_zll_m4toinf_amcatnlo",
 #     id=14253602,
-#     processes=[procs.wz_lllnu_m4],
+#     processes=[procs.wz_wlnu_zll_m4toinf],
 #     keys=[
 #         "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
 #     ],
@@ -492,9 +492,9 @@ cpn.add_dataset(
 # )
 
 # cpn.add_dataset(
-#     name="wz_qqll_m4_amcatnlo",
+#     name="wz_wqq_zll_m4toinf_amcatnlo",
 #     id=14328000,
-#     processes=[procs.wz_qqll_m4],
+#     processes=[procs.wz_wqq_zll_m4toinf],
 #     keys=[
 #         "/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
 #     ],
@@ -515,9 +515,9 @@ cpn.add_dataset(
 )
 
 # cpn.add_dataset(
-#     name="ww_lnulnu_powheg",
+#     name="ww_dl_powheg",
 #     id=14241651,
-#     processes=[procs.ww_lnulnu],
+#     processes=[procs.ww_dl],
 #     keys=[
 #         "/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
 #     ],

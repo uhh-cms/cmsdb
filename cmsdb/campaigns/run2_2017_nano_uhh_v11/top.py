@@ -52,9 +52,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_llnunu_m10_amcatnlo",
+    name="ttz_zlep_m10toinf_amcatnlo",
     id=14196941,
-    processes=[procs.ttz_llnunu_m10],
+    processes=[procs.ttz_zlep_m10toinf],
     keys=[
         "/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -64,9 +64,9 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="ttw_lnu_amcatnlo",
+    name="ttw_wlnu_amcatnlo",
     id=14197077,
-    processes=[procs.ttw_lnu],
+    processes=[procs.ttw_wlnu],
     keys=[
         "/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -75,9 +75,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttw_qq_amcatnlo",
+    name="ttw_wqq_amcatnlo",
     id=14208089,
-    processes=[procs.ttw_qq],
+    processes=[procs.ttw_wqq],
     keys=[
         "/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL17NanoAODv11-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],

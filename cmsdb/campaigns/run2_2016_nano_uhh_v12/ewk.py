@@ -13,9 +13,9 @@ from cmsdb.campaigns.run2_2016_nano_uhh_v12 import campaign_run2_2016_nano_uhh_v
 # Drell-Yan
 #
 cpn.add_dataset(
-    name="dy_lep_m50_amcatnlo",
+    name="dy_m50toinf_amcatnlo",
     id=14284445,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -25,9 +25,9 @@ cpn.add_dataset(
 
 # jet binned, amcatnlo
 cpn.add_dataset(
-    name="dy_lep_0j_amcatnlo",
+    name="dy_0j_amcatnlo",
     id=14300634,
-    processes=[procs.dy_lep_0j],
+    processes=[procs.dy_0j],
     keys=[
         "/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -36,9 +36,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_1j_amcatnlo",
+    name="dy_1j_amcatnlo",
     id=14300598,
-    processes=[procs.dy_lep_1j],
+    processes=[procs.dy_1j],
     keys=[
         "/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -47,9 +47,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_2j_amcatnlo",
+    name="dy_2j_amcatnlo",
     id=14212537,
-    processes=[procs.dy_lep_2j],
+    processes=[procs.dy_2j],
     keys=[
         "/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -60,9 +60,9 @@ cpn.add_dataset(
 # pt binned
 
 cpn.add_dataset(
-    name="dy_lep_pt0to50_amcatnlo",
+    name="dy_pt0to50_amcatnlo",
     id=14338354,
-    processes=[procs.dy_lep_pt0to50],
+    processes=[procs.dy_pt0to50],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-0To50_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -71,9 +71,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt50to100_amcatnlo",
+    name="dy_pt50to100_amcatnlo",
     id=14336830,
-    processes=[procs.dy_lep_pt50to100],
+    processes=[procs.dy_pt50to100],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-50To100_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -82,9 +82,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt100to250_amcatnlo",
+    name="dy_pt100to250_amcatnlo",
     id=14337510,
-    processes=[procs.dy_lep_pt100to250],
+    processes=[procs.dy_pt100to250],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -93,9 +93,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt250to400_amcatnlo",
+    name="dy_pt250to400_amcatnlo",
     id=14337403,
-    processes=[procs.dy_lep_pt250to400],
+    processes=[procs.dy_pt250to400],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -104,9 +104,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt400to650_amcatnlo",
+    name="dy_pt400to650_amcatnlo",
     id=14338401,
-    processes=[procs.dy_lep_pt400to650],
+    processes=[procs.dy_pt400to650],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-400To650_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -115,9 +115,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt650_amcatnlo",
+    name="dy_pt650toinf_amcatnlo",
     id=14338815,
-    processes=[procs.dy_lep_pt650],
+    processes=[procs.dy_pt650toinf],
     keys=[
         "/DYJetsToLL_LHEFilterPtZ-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -220,9 +220,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht2500_madgraph",
+    name="w_lnu_ht2500toinf_madgraph",
     id=14237764,
-    processes=[procs.w_lnu_ht2500],
+    processes=[procs.w_lnu_ht2500toinf],
     keys=[
         "/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -301,9 +301,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="z_nunu_ht2500_madgraph",
+    name="z_nunu_ht2500toinf_madgraph",
     id=14241375,
-    processes=[procs.z_nunu_ht2500],
+    processes=[procs.z_nunu_ht2500toinf],
     keys=[
         "/ZJetsToNuNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -345,9 +345,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="z_qq_ht800_madgraph",
+    name="z_qq_ht800toinf_madgraph",
     id=14275730,
-    processes=[procs.z_qq_ht800],
+    processes=[procs.z_qq_ht800toinf],
     keys=[
         "/ZJetsToQQ_HT-800toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -362,9 +362,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ewk_wm_lnu_m50_madgraph",
+    name="ewk_wm_lnu_m50toinf_madgraph",
     id=14215052,
-    processes=[procs.ewk_wm_lnu_m50],
+    processes=[procs.ewk_wm_lnu_m50toinf],
     keys=[
         "/EWKWMinus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -373,9 +373,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ewk_w_lnu_m50_madgraph",
+    name="ewk_w_lnu_m50toinf_madgraph",
     id=14216740,
-    processes=[procs.ewk_wp_lnu_m50],
+    processes=[procs.ewk_wp_lnu_m50toinf],
     keys=[
         "/EWKWPlus2Jets_WToLNu_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -384,9 +384,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ewk_z_ll_m50_madgraph",
+    name="ewk_z_ll_m50toinf_madgraph",
     id=14216471,
-    processes=[procs.ewk_z_ll_m50],
+    processes=[procs.ewk_z_ll_m50toinf],
     keys=[
         "/EWKZ2Jets_ZToLL_M-50_TuneCP5_withDipoleRecoil_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -412,9 +412,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_qqll_m4_amcatnlo",
+    name="zz_zqq_zll_m4toinf_amcatnlo",
     id=14284244,
-    processes=[procs.zz_qqll_m4],
+    processes=[procs.zz_zqq_zll_m4toinf],
     keys=[
         "/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -427,9 +427,9 @@ cpn.add_dataset(
 # it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
 # therefore the corresponding process is with the "_m4" suffix
 cpn.add_dataset(
-    name="zz_llnunu_powheg",
+    name="zz_zll_znunu_m4toinf_powheg",
     id=14212205,
-    processes=[procs.zz_llnunu_m4],
+    processes=[procs.zz_zll_znunu_m4toinf],
     keys=[
         "/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -442,9 +442,9 @@ cpn.add_dataset(
 # it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
 # therefore the corresponding process is with the "_m4" suffix
 cpn.add_dataset(
-    name="zz_llll_powheg",
+    name="zz_zll_zll_m4toinf_powheg",
     id=14344450,
-    processes=[procs.zz_llll_m4],
+    processes=[procs.zz_zll_zll_m4toinf],
     keys=[
         "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -453,9 +453,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_qqqq_amcatnlo",
+    name="zz_zqq_zqq_amcatnlo",
     id=14373200,
-    processes=[procs.zz_qqqq],
+    processes=[procs.zz_zqq_zqq],
     keys=[
         "/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -464,9 +464,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_nunuqq_amcatnlo",
+    name="zz_znunu_zqq_amcatnlo",
     id=14373276,
-    processes=[procs.zz_nunuqq],
+    processes=[procs.zz_znunu_zqq],
     keys=[
         "/ZZTo2Nu2Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -492,9 +492,9 @@ cpn.add_dataset(
 # it seems that there is a lepton mass cut of 4 GeV for leptons from Z, like in the ZZTo2Q2L channel
 # therefore the corresponding process is with the "_m4" suffix
 cpn.add_dataset(
-    name="wz_lllnu_amcatnlo",
+    name="wz_wlnu_zll_m4toinf_amcatnlo",
     id=14212844,
-    processes=[procs.wz_lllnu_m4],
+    processes=[procs.wz_wlnu_zll_m4toinf],
     keys=[
         "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -503,9 +503,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_qqll_m4_amcatnlo",
+    name="wz_wqq_zll_m4toinf_amcatnlo",
     id=14283305,
-    processes=[procs.wz_qqll_m4],
+    processes=[procs.wz_wqq_zll_m4toinf],
     keys=[
         "/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -514,9 +514,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_lnuqq_amcatnlo",
+    name="wz_wlnu_zqq_amcatnlo",
     id=14373428,
-    processes=[procs.wz_lnuqq],
+    processes=[procs.wz_wlnu_zqq],
     keys=[
         "/WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -537,9 +537,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_lnuqq_amcatnlo",
+    name="ww_sl_amcatnlo",
     id=14373365,
-    processes=[procs.ww_lnuqq],
+    processes=[procs.ww_sl],
     keys=[
         "/WWTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -548,9 +548,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_lnulnu_powheg",
+    name="ww_dl_powheg",
     id=14215099,
-    processes=[procs.ww_lnulnu],
+    processes=[procs.ww_dl],
     keys=[
         "/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -559,9 +559,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_qqqq_amcatnlo",
+    name="ww_fh_amcatnlo",
     id=14373147,
-    processes=[procs.ww_qqqq],
+    processes=[procs.ww_fh],
     keys=[
         "/WWTo4Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v3/NANOAODSIM",  # noqa
     ],
