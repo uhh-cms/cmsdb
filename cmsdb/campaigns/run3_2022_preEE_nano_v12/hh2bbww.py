@@ -12,9 +12,9 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 #
 
 cpn.add_dataset(
-    name="ggHH_kl_1_kt_1_hbbhvv_powheg",
+    name="hh_ggf_kl1_kt1_hbb_hvv_powheg",
     id=14863914,
-    processes=[procs.ggHH_kl_1_kt_1_hbbhvv],
+    processes=[procs.hh_ggf_kl1_kt1_hbb_hvv],
     keys=[
         "/GluGlutoHHto2B2V_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
     ],
@@ -28,9 +28,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ggHH_kl_1_kt_1_qqlnu_hbbhvv_powheg",
+    name="hh_ggf_kl1_kt1_hbb_hvvqqlnu_powheg",
     id=14868316,
-    processes=[procs.ggHH_kl_1_kt_1_qqlnu_hbbhvv],
+    processes=[procs.hh_ggf_kl1_kt1_hbb_hvvqqlnu],
     keys=[
         "/GluGlutoHHto2B2WtoLNu2Q_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -44,9 +44,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ggHH_kl_1_kt_1_2l2nu_hbbhvv_powheg",
+    name="hh_ggf_kl1_kt1_hbb_hvv2l2nu_powheg",
     id=14847284,
-    processes=[procs.ggHH_kl_1_kt_1_2l2nu_hbbhvv],
+    processes=[procs.hh_ggf_kl1_kt1_hbb_hvv2l2nu],
     keys=[
         "/GluGlutoHHto2B2Vto2L2Nu_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
