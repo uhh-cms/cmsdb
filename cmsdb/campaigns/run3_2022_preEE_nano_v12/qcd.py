@@ -241,7 +241,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_doubleem_pt40toinf_mgg80toinf_pythia",
     id=14803826,
-    processes=[procs.qcd_doubleem_pt40_mgg80],
+    processes=[procs.qcd_doubleem_pt40toinf_mgg80toinf],
     keys=[
         "/QCD_PT-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
