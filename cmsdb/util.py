@@ -121,7 +121,7 @@ def add_the_production_mode_parent(child: Process, parent: Process) -> Process:
 def add_decay_process(
     parent: Process,
     decay_map: DotDict,
-    add_production_mode_parent: bool = False,
+    add_production_mode_parent: bool = True,
     name_separator: str = "_",
     label_separator: str = ", ",
     **kwargs,
