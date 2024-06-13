@@ -59,14 +59,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_jetht_d",
-    id=14324490,
+    id=14260457,
     is_data=True,
     processes=[procs.data_jetht],
     keys=[
-        "/JetHT/Run2018D-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD",
+        "/JetHT/Run2018D-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD",  # noqa
     ],
-    n_files=538,
-    n_events=356967606,
+    n_files=564,
+    n_events=356281315,
     aux={
         "era": "D",
     },
