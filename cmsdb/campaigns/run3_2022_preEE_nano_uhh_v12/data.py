@@ -28,6 +28,7 @@ cpn.add_dataset(
             "nominal": 19,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -46,6 +47,7 @@ cpn.add_dataset(
             "nominal": 20,
         },
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -69,6 +71,7 @@ cpn.add_dataset(
             "nominal": 17,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -87,6 +90,7 @@ cpn.add_dataset(
             "nominal": 17,
         },
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -111,6 +115,7 @@ cpn.add_dataset(
             "nominal": 16,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -153,6 +158,7 @@ cpn.add_dataset(
             "nominal": 13,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -171,5 +177,6 @@ cpn.add_dataset(
             "nominal": 13,
         },
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
