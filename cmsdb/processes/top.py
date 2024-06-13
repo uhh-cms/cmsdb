@@ -254,7 +254,14 @@ st_schannel = st.add_process(
             "mtop": (0.23, 0.22),
             "E_beam": 0.01,
         }),
-        # TODO: 13.6 TeV xsecs
+        13.6: Number(7.246, {
+            "scale": (0.059, 0.043),
+        }),
+        # only scale uncertainty is given in the twiki
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+        # TODO: update after final calculations
+        # no value for 13.6 in NLO twiki
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36
     },
 )
 
@@ -281,6 +288,8 @@ st_schannel_t = st_schannel.add_process(
             "E_beam": 0.01,
         }),
         # TODO: 13.6 TeV xsecs
+        # not available yet in
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
     },
 )
 
@@ -307,6 +316,8 @@ st_schannel_tbar = st_schannel.add_process(
             "E_beam": 0.01,
         }),
         # TODO: 13.6 TeV xsecs
+        # not available yet in
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
     },
 )
 
@@ -326,6 +337,11 @@ st_schannel_tbar_had = st_schannel_tbar.add_process(
 st.set_xsec(
     13,
     st_tchannel.get_xsec(13) + st_twchannel.get_xsec(13) + st_schannel.get_xsec(13),
+)
+
+st.set_xsec(
+    13.6,
+    st_tchannel.get_xsec(13.6) + st_twchannel.get_xsec(13.6) + st_schannel.get_xsec(13.6),
 )
 
 
@@ -430,6 +446,13 @@ ttzz = ttvv.add_process(
             "scale": (0.052j, 0.090j),
             "pdf": 0.026j,
         }),
+        # 13.6 from GenXSecAnalyzer: TODO
+        # in the meantime, from xsdb:
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DTTZZ_TuneCP5_13p6TeV_madgraph-madspin-pythia8  # noqa
+        # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        13.6: Number(0.001579, {
+            "tot": 0.000003248,
+        }),
     },
 )
 
@@ -451,6 +474,13 @@ ttww = ttvv.add_process(
         13: Number(8380E-6, {  # Calculation performed in 5FS
             "scale": (0.332j, 0.231j),
             "pdf": 0.030j,
+        }),
+        # 13.6 from GenXSecAnalyzer: TODO
+        # in the meantime, from xsdb:
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DTTWW_TuneCP5_13p6TeV_madgraph-madspin-pythia8  # noqa
+        # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        13.6: Number(0.008203, {
+            "tot": 0.00001404,
         }),
     },
 )
