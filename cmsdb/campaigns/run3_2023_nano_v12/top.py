@@ -14,37 +14,91 @@ from cmsdb.campaigns.run3_2023_nano_v12 import campaign_run3_2023_nano_v12 as cp
 
 # ------------------------------Semileptonic ttbar decay---------------------------------------------------------------------
 cpn.add_dataset(
-    name="PLACEHOLDER",
+    name="tt_sl_powheg",
     id=14836028,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-JMENano12p5_132X_mcRun3_2023_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=236,
-    n_events=152653000,
+    processes=[procs.tt_sl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-JMENano12p5_132X_mcRun3_2023_realistic_v5-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=236,
+            n_events=152653000,
+        ),
+        hdamp_down=DatasetInfo(
+            keys=[
+                "/TTtoLNu2Q_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=462,
+            n_events=65514000,
+        ),
+        hdamp_up=DatasetInfo(
+            keys=[
+                "/TTtoLNu2Q_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=463,
+            n_events=63714000,
+        ),
+        mtop_down=DatasetInfo(
+            keys=[
+                "/TTtoLNu2Q_MT-171p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=345,
+            n_events=65751000,
+        ),
+        mtop_up=DatasetInfo(
+            keys=[
+                "/TTtoLNu2Q_MT-173p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=333,
+            n_events=65670000,
+        ),
+        # xxx=DatasetInfo(
+        #     keys=[
+        #         "/TTtoLNu2Q_MT-166p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+        #     ],
+        #     n_files=388,
+        #     n_events=64958999,
+        # ),
+        # xxx=DatasetInfo(
+        #     keys=[
+        #         "/TTtoLNu2Q_MT-169p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+        #     ],
+        #     n_files=267,
+        #     n_events=62063999, 
+        # ),
+        # xxx=DatasetInfo(
+        #     keys=[
+        #         "/TTtoLNu2Q_MT-175p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+        #     ],
+        #     n_files=375,
+        #     n_events=65907000,            
+        # ),
+        # xxx=DatasetInfo(
+        #     keys=[
+        #         "/TTtoLNu2Q_MT-178p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+        #     ],
+        #     n_files=435,
+        #     n_events=65694000,            
+        # ),
+        cr_1=DatasetInfo(
+            keys=[
+                "/TTtoLNu2Q_TuneCP5CR1_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=285,
+            n_events=63486000,
+        ),
+        cr_2=DatasetInfo(
+            keys=[
+                "/TTtoLNu2Q_TuneCP5CR2_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=359,
+            n_events=65766000,
+        ),
+
+    ),
 )
 
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14809250,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=463,
-    n_events=63714000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14809441,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-166p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=388,
-    n_events=64958999,
-)
 
 cpn.add_dataset(
     name="PLACEHOLDER",
@@ -55,61 +109,6 @@ cpn.add_dataset(
     ],
     n_files=172,
     n_events=4378186,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14808388,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=462,
-    n_events=65514000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810512,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-175p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=375,
-    n_events=65907000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14814729,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-171p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=345,
-    n_events=65751000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14811910,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5CR2_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=359,
-    n_events=65766000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810121,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5CR1_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=285,
-    n_events=63486000,
 )
 
 cpn.add_dataset(
@@ -134,27 +133,9 @@ cpn.add_dataset(
     n_events=152797000,
 )
 
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810550,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-169p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=267,
-    n_events=62063999,
-)
 
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810659,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-178p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=435,
-    n_events=65694000,
-)
+
+
 
 cpn.add_dataset(
     name="PLACEHOLDER",
@@ -167,16 +148,7 @@ cpn.add_dataset(
     n_events=64026000,
 )
 
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810532,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-173p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=333,
-    n_events=65670000,
-)
+
 
 cpn.add_dataset(
     name="PLACEHOLDER",
@@ -236,227 +208,6 @@ cpn.add_dataset(
 
 # ----------------------------------------------------dileptonic ttbar decay-------------------------------------------------------------
 
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14836028,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-JMENano12p5_132X_mcRun3_2023_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=236,
-    n_events=152653000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14809250,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=463,
-    n_events=63714000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14809441,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-166p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=388,
-    n_events=64958999,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14909865,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=172,
-    n_events=4378186,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14808388,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=462,
-    n_events=65514000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810512,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-175p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=375,
-    n_events=65907000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14814729,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-171p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=345,
-    n_events=65751000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14811910,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5CR2_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=359,
-    n_events=65766000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810121,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5CR1_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=285,
-    n_events=63486000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14809409,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=425,
-    n_events=64152000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14808378,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=798,
-    n_events=152797000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810550,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-169p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=267,
-    n_events=62063999,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810659,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-178p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=435,
-    n_events=65694000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14809511,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5_ERDOn_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=365,
-    n_events=64026000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14810532,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_MT-173p5_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=333,
-    n_events=65670000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14808410,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_TuneCP5Up_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=536,
-    n_events=65655000,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14917043,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=125,
-    n_events=1946830,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14916985,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=62,
-    n_events=1977499,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14916952,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_HT-500_NJet-9_TuneCP5Up_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=114,
-    n_events=1970848,
-)
-
-cpn.add_dataset(
-    name="PLACEHOLDER",
-    id=14916781,
-    processes=[procs.PLACEHOLDER],
-    keys=[
-        "/TTtoLNu2Q_HT-500_NJet-9_TuneCP5Down_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=97,
-    n_events=1898284,
-)
-
-[naseeba@lxplus717 scripts]$ python3 get_das_info.py -d /TTto2L2Nu*/Run3Summer23NanoAODv12*/NANOAODSIM
 cpn.add_dataset(
     name="PLACEHOLDER",
     id=14835892,
