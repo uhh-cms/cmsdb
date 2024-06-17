@@ -185,6 +185,7 @@ def add_hvv_decay(base_process, hvv_parent, decay_map: DotDict, add_production_m
         "id": base_process.id + decay_map.id,
         "label": f"{base_process.label}{decay_map.label}",
         "xsecs": multiply_xsecs(base_process, decay_map.br),
+        "aux": {"production_mode_parent": [hvv_parent.name]},
     }
 
     child = hvv_parent.add_process(**kwargs)
@@ -331,7 +332,6 @@ hh_vbf_kv1_k2v0_kl1_hbb_hvv2l2q = add_sub_decay_process(hh_vbf_kv1_k2v0_kl1_hbb_
 hh_vbf_kv1_k2v2_kl1_hbb_hvv2l2q = add_sub_decay_process(hh_vbf_kv1_k2v2_kl1_hbb_hvv, vv_decay_map["2l2q"])
 hh_vbf_kv0p5_k2v1_kl1_hbb_hvv2l2q = add_sub_decay_process(hh_vbf_kv0p5_k2v1_kl1_hbb_hvv, vv_decay_map["2l2q"])
 hh_vbf_kv1p5_k2v1_kl1_hbb_hvv2l2q = add_sub_decay_process(hh_vbf_kv1p5_k2v1_kl1_hbb_hvv, vv_decay_map["2l2q"])
-
 
 ####################################################################################################
 #
