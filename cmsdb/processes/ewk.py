@@ -74,19 +74,15 @@ dy_m50toinf_nlo_13TeV_xsec = Number(6421.0, {"tot": 11.25})
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 dy_m50toinf_lo_13TeV_xsec = Number(5395.0, {"tot": 1.858})
 
-# 13.6 TeV LO and NLO cross sections are based on the XSDB
-# TODO: recalculate in genxsecanalyzer
-# https://xsdb-temp.app.cern.ch/xsdb/?columns=39911424&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-4to10_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
-dy_m4to10_nlo_13p6TeV_xsec = Number(141500, {"tot": 301.9})
-# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
-dy_m10to50_nlo_13p6TeV_xsec = Number(20950.0, {"tot": 183.5})
-# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
-dy_m50toinf_nlo_13p6TeV_xsec = Number(6688.0, {"tot": 83.99})
+# 13.6 TeV LO and NLO cross sections are based on GenXSecAnalyzer with CMSSW_13_0_13
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
+# or -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v1 when needed
+dy_m4to10_nlo_13p6TeV_xsec = Number(141600, {"tot": 79.81})  # xsdb: Number(141500, {"tot": 301.9})
+dy_m10to50_nlo_13p6TeV_xsec = Number(21170.0, {"tot": 18.38})  # xsdb: Number(20950.0, {"tot": 183.5})
+dy_m50toinf_nlo_13p6TeV_xsec = Number(6728.0, {"tot": 6.981})  # xsdb: Number(6688.0, {"tot": 83.99})
 
-# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
-dy_m10to50_lo_13p6TeV_xsec = Number(17380, {"tot": 26.57})
-# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
-dy_m50toinf_lo_13p6TeV_xsec = Number(5467, {"tot": 13.22})
+dy_m10to50_lo_13p6TeV_xsec = Number(17410, {"tot": 2.393})
+dy_m50toinf_lo_13p6TeV_xsec = Number(5450, {"tot": 1.872})
 
 dy_m50toinf = dy.add_process(
     name="dy_m50toinf",
@@ -729,11 +725,9 @@ zz = vv.add_process(
     label="ZZ",
     xsecs={
         13: Number(15.99, {"scale": (0.037j, 0.026j)}),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DZZ_TuneCP5_13p6TeV_pythia8  # noqa
-        13.6: Number(12.75, {
-            "tot": 0.0649,
+        # 13.6 from GenXSecAnalyzer:
+        13.6: Number(12.84, {
+            "tot": 0.006035,  # xsdb: Number(12.75, {"tot": 0.0649})
         }),
     },
 )
@@ -822,11 +816,9 @@ wz = vv.add_process(
         # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=28
         # shows a permille difference in the values calculated directly and the ones added from w+ and w-
         13: wp_z_xsec[13] + wm_z_xsec[13],
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DWZ_TuneCP5_13p6TeV_pythia8 # noqa
-        13.6: Number(29.1, {
-            "tot": 0.1318,
+        # 13.6 from GenXSecAnalyzer:
+        13.6: Number(29.17, {
+            "tot": 0.005941,  # xsdb: Number(29.1, {"tot": 0.1318}),
         }),
     },
 )
@@ -882,11 +874,9 @@ ww = vv.add_process(
     label="WW",
     xsecs={
         13: Number(118.7, {"scale": (0.025j, 0.022j)}),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DWW_TuneCP5_13p6TeV_pythia8  # noqa
-        13.6: Number(80.23, {
-            "tot": 0.3733,
+        # 13.6 from GenXSecAnalyzer:
+        13.6: Number(80.22, {
+            "tot": 0.01677,  # xsdb: Number(80.23, {"tot": 0.3733})
         }),
     },
 )
@@ -959,10 +949,9 @@ zzz = vvv.add_process(
     id=9100,
     xsecs={
         13: Number(0.01476, {"tot": 2.347 * 10**(-6)}),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8  # noqa
+        # 13.6 from GenXSecAnalyzer:
         # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        # same value as xsdb obtained
         13.6: Number(0.01591, {
             "tot": 0.000007828,
         }),
@@ -978,10 +967,9 @@ wzz = vvv.add_process(
     id=9200,
     xsecs={
         13: Number(0.05709, {"tot": 6.213 * 10**(-5)}),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DWZZ_TuneCP5_13p6TeV_amcatnlo-pythia8  # noqa
+        # 13.6 from GenXSecAnalyzer:
         # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        # same value as xsdb obtained
         13.6: Number(0.06206, {
             "tot": 0.00003689,
         }),
@@ -997,10 +985,9 @@ wwz = vvv.add_process(
     id=9300,
     xsecs={
         13: Number(0.1707, {"tot": 0.0001757}),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DWWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8  # noqa
+        # 13.6 from GenXSecAnalyzer:
         # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        # same value as xsdb obtained
         13.6: Number(0.1851, {
             "tot": 0.00009482,
         }),
@@ -1016,10 +1003,9 @@ www = vvv.add_process(
     id=9400,
     xsecs={
         13: Number(0.2158, {"tot": 0.0002479}),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DWWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8  # noqa
+        # 13.6 from GenXSecAnalyzer:
         # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        # same value as xsdb obtained
         13.6: Number(0.2328, {
             "tot": 0.0001247,
         }),

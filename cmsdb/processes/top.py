@@ -446,12 +446,10 @@ ttzz = ttvv.add_process(
             "scale": (0.052j, 0.090j),
             "pdf": 0.026j,
         }),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DTTZZ_TuneCP5_13p6TeV_madgraph-madspin-pythia8  # noqa
+        # 13.6 from GenXSecAnalyzer:
         # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
-        13.6: Number(0.001579, {
-            "tot": 0.000003248,
+        13.6: Number(0.001562, {
+            "tot": 0.0000003675,  # xsdb Number(0.001579, {"tot": 0.000003248})
         }),
     },
 )
@@ -475,12 +473,10 @@ ttww = ttvv.add_process(
             "scale": (0.332j, 0.231j),
             "pdf": 0.030j,
         }),
-        # 13.6 from GenXSecAnalyzer: TODO
-        # in the meantime, from xsdb:
-        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DTTWW_TuneCP5_13p6TeV_madgraph-madspin-pythia8  # noqa
+        # 13.6 from GenXSecAnalyzer:
         # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
-        13.6: Number(0.008203, {
-            "tot": 0.00001404,
+        13.6: Number(0.008165, {
+            "tot": 0.000002113,  # xsdb Number(0.008203, {"tot": 0.00001404})
         }),
     },
 )
