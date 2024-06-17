@@ -389,31 +389,45 @@ hh.xsecs = add_xsecs(hh_ggf, hh_vbf)
 #
 ####################################################################################################
 
+# cross sections values chosen for inference tools, 1pb for inclusive process as documented in:
+# https://cms-hh.web.cern.ch/cms-hh/tools/inference/tasks/resonant.html#resonant-limits
+
 radion_hh_ggf = hh_ggf.add_process(
     name="radion_hh_ggf",
     id=23000,
     label=r"Radion $\rightarrow HH_{ggf}$",
     xsecs={
-        13: Number(0.1)},  # TODO
+        13: Number(1.0),  # value for inference tools
+        13.6: Number(1.0),  # value for inference tools
+    },
 )
 
 graviton_hh_ggf = hh_ggf.add_process(
     name="graviton_hh_ggf",
     id=24000,
     label=r"Graviton $\rightarrow HH_{ggf}$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(1.0),  # value for inference tools
+        13.6: Number(1.0),  # value for inference tools
+    },
 )
 
 radion_hh_vbf = hh_vbf.add_process(
     name="radion_hh_vbf",
     id=25000,
     label=r"Radion $\rightarrow HH_{vbf}$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(1.0),  # value for inference tools
+        13.6: Number(1.0),  # value for inference tools
+    },
 )
 
 graviton_hh_vbf = hh_vbf.add_process(
     name="graviton_hh_vbf",
     id=26000,
     label=r"Graviton $\rightarrow HH_{vbf}$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(1.0),  # value for inference tools
+        13.6: Number(1.0),  # value for inference tools
+    },
 )
