@@ -1122,7 +1122,7 @@ wh_wqq_hzg_znunu = add_decay_process(wh_wqq_hzg, hzg_decay_map["znunu"])
 #
 ####################################################################################################
 
-wph = vh.add_process(
+wph = wh.add_process(
     name="wph",
     id=17000,
     label=r"$W^+H$",
@@ -1136,7 +1136,7 @@ wph = vh.add_process(
             "pdf": 0.018j,
         }),  # TODO: only preliminary
     },
-    aux={"production_mode_parent": vh},
+    aux={"production_mode_parent": wh},
 )
 
 # Higgs decay channels
@@ -1224,7 +1224,7 @@ wph_wqq_hzg_znunu = add_decay_process(wph_wqq_hzg, hzg_decay_map["znunu"])
 #
 ####################################################################################################
 
-wmh = vh.add_process(
+wmh = wh.add_process(
     name="wmh",
     id=18000,
     label=r"$W^-H$",
@@ -1238,7 +1238,7 @@ wmh = vh.add_process(
             "pdf": 0.018j,
         }),  # TODO: only preliminary
     },
-    aux={"production_mode_parent": vh},
+    aux={"production_mode_parent": wh},
 )
 
 # Higgs decay channels
