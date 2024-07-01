@@ -165,7 +165,7 @@ __all__ = [
     "zh_hzg", "zh_hgg", "zh_hmm",
     "zh_hwwqqlnu", "zh_hww2l2nu", "zh_hww4q",
     "zh_hzz4l", "zh_hzz2l2nu", "zh_hzz2l2q", "zh_hzz2q2nu", "zh_hzz4nu", "zh_hzz4q",
-    "zh_hzg", "zh_hzg_zqq", "zh_hzg_znunu",
+    "zh_hzg", "zh_hzg_zll", "zh_hzg_zqq", "zh_hzg_znunu",
     "zh_zll", "zh_zll_htt", "zh_zll_hww", "zh_zll_hzz", "zh_zll_hbb", "zh_zll_hnonbb", "zh_zll_hcc",
     "zh_zll_hzg", "zh_zll_hgg", "zh_zll_hmm",
     "zh_zll_hwwqqlnu", "zh_zll_hww2l2nu", "zh_zll_hww4q",
@@ -176,12 +176,17 @@ __all__ = [
     "zh_zqq_hwwqqlnu", "zh_zqq_hww2l2nu", "zh_zqq_hww4q",
     "zh_zqq_hzz4l", "zh_zqq_hzz2l2nu", "zh_zqq_hzz2l2q", "zh_zqq_hzz2q2nu", "zh_zqq_hzz4nu", "zh_zqq_hzz4q",
     "zh_zqq_hzg_zll", "zh_zqq_hzg_zqq", "zh_zqq_hzg_znunu",
+    "zh_znunu", "zh_znunu_htt", "zh_znunu_hww", "zh_znunu_hzz", "zh_znunu_hbb", "zh_znunu_hnonbb", "zh_znunu_hcc",
+    "zh_znunu_hzg", "zh_znunu_hgg", "zh_znunu_hmm",
+    "zh_znunu_hwwqqlnu", "zh_znunu_hww2l2nu", "zh_znunu_hww4q",
+    "zh_znunu_hzz4l", "zh_znunu_hzz2l2nu", "zh_znunu_hzz2l2q", "zh_znunu_hzz2q2nu", "zh_znunu_hzz4nu", "zh_znunu_hzz4q",
+    "zh_znunu_hzg_zll", "zh_znunu_hzg_zqq", "zh_znunu_hzg_znunu",
     "zh_gg",
     "zh_gg", "zh_gg_htt", "zh_gg_hww", "zh_gg_hzz", "zh_gg_hbb", "zh_gg_hnonbb", "zh_gg_hcc",
     "zh_gg_hzg", "zh_gg_hgg", "zh_gg_hmm",
     "zh_gg_hwwqqlnu", "zh_gg_hww2l2nu", "zh_gg_hww4q",
     "zh_gg_hzz4l", "zh_gg_hzz2l2nu", "zh_gg_hzz2l2q", "zh_gg_hzz2q2nu", "zh_gg_hzz4nu", "zh_gg_hzz4q",
-    "zh_gg_hzg", "zh_gg_hzg_zqq", "zh_gg_hzg_znunu",
+    "zh_gg_hzg", "zh_gg_hzg_zll", "zh_gg_hzg_zqq", "zh_gg_hzg_znunu",
     "zh_gg_zll", "zh_gg_zll_htt", "zh_gg_zll_hww", "zh_gg_zll_hzz",
     "zh_gg_zll_hbb", "zh_gg_zll_hnonbb", "zh_gg_zll_hcc",
     "zh_gg_zll_hzg", "zh_gg_zll_hgg", "zh_gg_zll_hmm",
@@ -196,6 +201,13 @@ __all__ = [
     "zh_gg_zqq_hzz4l", "zh_gg_zqq_hzz2l2nu", "zh_gg_zqq_hzz2l2q",
     "zh_gg_zqq_hzz2q2nu", "zh_gg_zqq_hzz4nu", "zh_gg_zqq_hzz4q",
     "zh_gg_zqq_hzg_zll", "zh_gg_zqq_hzg_zqq", "zh_gg_zqq_hzg_znunu",
+    "zh_gg_znunu", "zh_gg_znunu_htt", "zh_gg_znunu_hww", "zh_gg_znunu_hzz",
+    "zh_gg_znunu_hbb", "zh_gg_znunu_hnonbb", "zh_gg_znunu_hcc",
+    "zh_gg_znunu_hzg", "zh_gg_znunu_hgg", "zh_gg_znunu_hmm",
+    "zh_gg_znunu_hwwqqlnu", "zh_gg_znunu_hww2l2nu", "zh_gg_znunu_hww4q",
+    "zh_gg_znunu_hzz4l", "zh_gg_znunu_hzz2l2nu", "zh_gg_znunu_hzz2l2q",
+    "zh_gg_znunu_hzz2q2nu", "zh_gg_znunu_hzz4nu", "zh_gg_znunu_hzz4q",
+    "zh_gg_znunu_hzg_zll", "zh_gg_znunu_hzg_zqq", "zh_gg_znunu_hzg_znunu",
     "wh", "wph", "wmh",
     "wh_htt", "wh_hww", "wh_hzz", "wh_hbb", "wh_hnonbb", "wh_hcc",
     "wh_hzg", "wh_hgg", "wh_hmm",
@@ -1115,7 +1127,7 @@ wh_wqq_hzg_znunu = add_decay_process(wh_wqq_hzg, hzg_decay_map["znunu"])
 #
 ####################################################################################################
 
-wph = vh.add_process(
+wph = wh.add_process(
     name="wph",
     id=17000,
     label=r"$W^+H$",
@@ -1131,7 +1143,7 @@ wph = vh.add_process(
         # only in original presentation:
         # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
     },
-    aux={"production_mode_parent": vh},
+    aux={"production_mode_parent": wh},
 )
 
 # Higgs decay channels
@@ -1219,7 +1231,7 @@ wph_wqq_hzg_znunu = add_decay_process(wph_wqq_hzg, hzg_decay_map["znunu"])
 #
 ####################################################################################################
 
-wmh = vh.add_process(
+wmh = wh.add_process(
     name="wmh",
     id=18000,
     label=r"$W^-H$",
@@ -1235,7 +1247,7 @@ wmh = vh.add_process(
         # only in original presentation:
         # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
     },
-    aux={"production_mode_parent": vh},
+    aux={"production_mode_parent": wh},
 )
 
 # Higgs decay channels

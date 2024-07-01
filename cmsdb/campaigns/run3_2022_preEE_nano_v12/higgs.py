@@ -20,41 +20,41 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 #
 ####################################################################################################
 
-cpn.add_dataset(
-    name="h_ggf_hbb_pt200toinf_powheg",
-    id=14801316,
-    processes=[procs.h_ggf_hbb_pt200toinf],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/GluGluHto2B_PT-200_M-125_TuneCP5_13p6TeV_powheg-minlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-            ],
-            n_files=29,
-            n_events=59480,
-        ),
-        extension=DatasetInfo(
-            keys=[
-                "/GluGluHto2B_PT-200_M-125_TuneCP5_13p6TeV_powheg-minlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
-            ],
-            n_files=291,
-            n_events=4324232,
-        ),
-    ),
-)
-cpn.add_dataset(
-    name="h_ggf_hcc_pt200toinf_powheg",
-    id=14797543,
-    processes=[procs.h_ggf_hcc_pt200toinf],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/GluGluHtoCC_PT-200_M-125_TuneCP5_13p6TeV_powheg-minlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-            ],
-            n_files=20,
-            n_events=122144,
-        ),
-    ),
-)
+# cpn.add_dataset(
+#     name="h_ggf_hbb_pt200toinf_powheg",
+#     id=14801316,
+#     processes=[procs.h_ggf_hbb_pt200toinf],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/GluGluHto2B_PT-200_M-125_TuneCP5_13p6TeV_powheg-minlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+#             ],
+#             n_files=29,
+#             n_events=59480,
+#         ),
+#         extension=DatasetInfo(
+#             keys=[
+#                 "/GluGluHto2B_PT-200_M-125_TuneCP5_13p6TeV_powheg-minlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
+#             ],
+#             n_files=291,
+#             n_events=4324232,
+#         ),
+#     ),
+# )
+# cpn.add_dataset(
+#     name="h_ggf_hcc_pt200toinf_powheg",
+#     id=14797543,
+#     processes=[procs.h_ggf_hcc_pt200toinf],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/GluGluHtoCC_PT-200_M-125_TuneCP5_13p6TeV_powheg-minlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+#             ],
+#             n_files=20,
+#             n_events=122144,
+#         ),
+#     ),
+# )
 cpn.add_dataset(
     name="h_ggf_hgg_amcatnlo",
     id=14805985,
@@ -801,9 +801,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="wmh_wln_hccu_powheg",
+    name="wmh_wlnu_hcc_powheg",
     id=14804815,
-    processes=[procs.wmh_wln_hccu],
+    processes=[procs.wmh_wlnu_hcc],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -928,9 +928,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="wph_zqq_hbb_powheg",
+    name="wph_wqq_hbb_powheg",
     id=14810156,
-    processes=[procs.wph_zqq_hbb],
+    processes=[procs.wph_wqq_hbb],
     info=dict(
         nominal=DatasetInfo(
             keys=[

@@ -95,7 +95,10 @@ class TestCampaigns(unittest.TestCase):
             # check that all dataset keys exist and that the DAS info (id, n_events, n_files) is correct
             # optional, since this needs a Grid Proxy and takes a long time
             for dataset_info_key, dataset_info in dataset_inst.info.items():
-                dataset_string = f"{campaign_inst.name}/{dataset_inst.name}/{dataset_info_key}, keys: {dataset_info}"
+
+                dataset_string = (
+                    f"{campaign_inst.name}/{dataset_inst.name}/{dataset_info_key}, keys: {dataset_info.keys}"
+                )
                 das_infos = [get_das_info(key) for key in dataset_info.keys]
                 for das_info in das_infos:
                     with self.subTest(f"checking existence of DAS key {das_info['name']} from {dataset_string}"):
@@ -107,13 +110,21 @@ class TestCampaigns(unittest.TestCase):
                         "nevents": sum(info["nevents"] for info in das_infos),
                         "nfiles": sum(info["nfiles"] for info in das_infos),
                     }
-
-                    dataset_info = {
+                    combined_dataset_info = {
                         "dataset_id": dataset_inst.id,
-                        "nevents": dataset_inst.n_events,
-                        "nfiles": dataset_inst.n_files,
+                        "nevents": dataset_info.n_events,
+                        "nfiles": dataset_info.n_files,
                     }
-                    self.assertEqual(dataset_info, combined_das_info, msg=f"mismatch in DAS info from {dataset_string}")
+                    if dataset_info_key != "nominal":
+                        # compare IDs only when checking the nominal dataset
+                        combined_das_info.pop("dataset_id")
+                        combined_dataset_info.pop("dataset_id")
+
+                    self.assertEqual(
+                        combined_dataset_info,
+                        combined_das_info,
+                        msg=f"mismatch in DAS info from {dataset_string}",
+                    )
 
     def test_campaign_datasets(self):
         for campaign_inst in self.campaigns.values():
