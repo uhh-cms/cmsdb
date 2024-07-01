@@ -23,6 +23,7 @@ campaign_run2_2017_nano_v9 = Campaign(
     aux={
         "tier": "NanoAOD",
         "year": 2017,
+        "run": 2,
         "version": 9,
     },
 )

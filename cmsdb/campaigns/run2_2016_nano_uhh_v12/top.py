@@ -192,9 +192,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_llnunu_m10_amcatnlo",
+    name="ttz_zlep_m10toinf_amcatnlo",
     id=14213407,
-    processes=[procs.ttz_llnunu_m10],
+    processes=[procs.ttz_zlep_m10toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -221,9 +221,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttw_lnu_amcatnlo",
+    name="ttw_wlnu_amcatnlo",
     id=14212801,
-    processes=[procs.ttw_lnu],
+    processes=[procs.ttw_wlnu],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -250,9 +250,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttw_qq_amcatnlo",
+    name="ttw_wqq_amcatnlo",
     id=14213083,
-    processes=[procs.ttw_qq],
+    processes=[procs.ttw_wqq],
     keys=[
         "/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -439,7 +439,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_t_5f_powheg",
+    name="st_twchannel_t_powheg",
     id=14238196,
     processes=[procs.st_twchannel_t],
     keys=[
@@ -450,7 +450,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_tbar_5f_powheg",
+    name="st_twchannel_tbar_powheg",
     id=14238473,
     processes=[procs.st_twchannel_tbar],
     keys=[

@@ -99,9 +99,9 @@ version 11, created with custom content at UHH.
 # )
 #
 # cpn.add_dataset(
-#     name="qcd_ht2000_madgraph",
+#     name="qcd_ht2000toinf_madgraph",
 #     id=14165502,
-#     processes=[procs.qcd_ht2000],
+#     processes=[procs.qcd_ht2000toinf],
 #     keys=[
 #         "/QCD_HT2000toInf_TuneCP5_PSWeights_13TeV-madgraphMLM-pythia8/RunIISummer19UL17NanoAODv2-106X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
 #     ],

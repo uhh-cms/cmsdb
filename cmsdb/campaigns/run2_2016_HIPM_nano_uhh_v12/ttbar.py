@@ -25,9 +25,9 @@ cpn.add_dataset(
 
 # TTZToLLNuNu
 cpn.add_dataset(
-    name="ttz_llnunu_m10_amcatnlo",
+    name="ttz_zlep_m10toinf_amcatnlo",
     id=14213080,
-    processes=[procs.ttz_llnunu_m10],
+    processes=[procs.ttz_zlep_m10toinf],
     keys=[
         "/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16MiniAODAPVv2_NanoAODv12UHH-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],
@@ -37,9 +37,9 @@ cpn.add_dataset(
 
 # TTWJetsToQQ
 cpn.add_dataset(
-    name="ttw_qq_amcatnlo",
+    name="ttw_wqq_amcatnlo",
     id=14286376,
-    processes=[procs.ttw_qq],
+    processes=[procs.ttw_wqq],
     keys=[
         "/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL16MiniAODAPVv2_NanoAODv12UHH-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
     ],
@@ -49,9 +49,9 @@ cpn.add_dataset(
 
 # TTWJetsToLNu
 cpn.add_dataset(
-    name="ttw_lnu_amcatnlo",
+    name="ttw_wlnu_amcatnlo",
     id=14251563,
-    processes=[procs.ttw_lnu],
+    processes=[procs.ttw_wlnu],
     keys=[
         "/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL16MiniAODAPVv2_NanoAODv12UHH-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
     ],

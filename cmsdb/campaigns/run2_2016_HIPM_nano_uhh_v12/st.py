@@ -38,7 +38,7 @@ cpn.add_dataset(
 
 # ST_t-channel_antitop
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg",
+    name="st_tchannel_tbar_4f_powheg",
     id=14225486,
     processes=[procs.st_tchannel_tbar],
     info=dict(
@@ -83,7 +83,7 @@ cpn.add_dataset(
 
 # ST_t-channel_top
 cpn.add_dataset(
-    name="st_tchannel_t_powheg",
+    name="st_tchannel_t_4f_powheg",
     id=14224840,
     processes=[procs.st_tchannel_t],
     info=dict(
