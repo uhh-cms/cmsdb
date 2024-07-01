@@ -99,21 +99,41 @@ def add_xsecs(*processes: tuple[Process]) -> dict[float, Number]:
 
 def add_the_production_mode_parent(child: Process, parent: Process) -> Process:
     """
-    Add the *parent* process as the *production_mode_parent* attribute to the *child* process.
+    Takes all processes from the *production_mode_parent* aux of the *parent* process and adds their
+    child processes with the same final state to the *child* process, both as parent and as aux.
+    If the *parent* process has no *production_mode_parent* aux, it is assumed that the *parent*
+    process only has a single parent process, which is then used as the production mode parent.
+
+    Example:
+
+    .. code-block:: python
+        h_ggf_hzz = h_ggf.add_process(name="h_hzz", id=1, production_mode_parent="h_hzz")
+        h_ggf_hzz4l = h_ggf_hzz.add_process(name="h_ggf_hzz4l", id=2)
+        add_the_production_mode_parent(h_ggf_hzz4l, h_ggf_hzz)
+
+        h_ggf_hzz4l.parent_processes.names() # => ["h_ggf_hzz", "h_hzz4l"]
+
+    :param child: Child process to which the production mode parent should be added.
+    :param parent: Parent process from which the production mode parents parent should be taken.
+    :return: The child process with production mode parents added.
     """
     if parent.has_aux("production_mode_parent"):
-        grandparent = parent.get_parent_process(parent.aux["production_mode_parent"])
+        grandparents = parent.aux["production_mode_parent"]
+        if isinstance(grandparents, str) or isinstance(grandparents, Process):
+            grandparents = [grandparents]
+        grandparents = [parent.get_parent_process(gp) for gp in grandparents]
     elif len(parent.parent_processes) == 1:
-        grandparent = parent.parent_processes.get_first()
+        grandparents = parent.parent_processes
     else:
         raise ValueError(
             f"Parent process {parent.name} either needs the *production_mode_parent* aux or it "
             "must have exactly one parent process, but has "
             f"{parent.parent_processes.names()} ({len(parent.parent_processes)}).",
         )
-    production_mode_parent = grandparent.get_process(child.name.replace(parent.name, grandparent.name))
-    production_mode_parent.add_process(child)
-    child.x.production_mode_parent = production_mode_parent.name
+    for grandparent in grandparents:
+        production_mode_parent = grandparent.get_process(child.name.replace(parent.name, grandparent.name))
+        production_mode_parent.add_process(child)
+        child.x.production_mode_parent = child.x("production_mode_parent", []) + [production_mode_parent.name]
 
     return child
 
@@ -133,7 +153,7 @@ def add_decay_process(
     :param decay_map: Dictionary with decay channel information. Needs to include the keys
     *name*, *id*, *br*, and *label*. When passing the *custom_id* parameter, the *id* key is ignored.
     :param add_production_mode_parent: Whether to add the process with the same final state but different
-    production mode as parent. Als adds the *production_mode_parent* attribute to the subprocess.
+    production mode as parent. Also adds the *production_mode_parent* attribute to the subprocess.
     :param name_separator: Separator to be used for the subprocess name.
     :param label_separator: Separator to be used for the subprocess label.
     :return: The resulting child process.
@@ -153,19 +173,7 @@ def add_decay_process(
     # add process
     child = parent.add_process(**child_kwargs)
     if add_production_mode_parent:
-        if parent.has_aux("production_mode_parent"):
-            grandparent = parent.get_parent_process(parent.aux["production_mode_parent"])
-        elif len(parent.parent_processes) == 1:
-            grandparent = parent.parent_processes.get_first()
-        else:
-            raise ValueError(
-                f"Parent process {parent.name} either needs the *production_mode_parent* aux or it "
-                "must have exactly one parent process, but has "
-                f"{parent.parent_processes.names()} ({len(parent.parent_processes)}).",
-            )
-        production_mode_parent = grandparent.get_process(child.name.replace(parent.name, grandparent.name))
-        production_mode_parent.add_process(child)
-        child.x.production_mode_parent = production_mode_parent.name
+        add_the_production_mode_parent(child, parent)
 
     return child
 
