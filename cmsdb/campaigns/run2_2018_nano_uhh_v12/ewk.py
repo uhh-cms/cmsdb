@@ -639,7 +639,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zqq_amcatnlo",
+    name="wz_wlnu_zqq_4f_amcatnlo",
     id=14373352,
     processes=[procs.wz_wlnu_zqq],
     keys=[
@@ -662,7 +662,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_sl_pythia",
+    name="ww_sl_4f_pythia",
     id=14372963,
     processes=[procs.ww_sl],
     keys=[
@@ -684,7 +684,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_fh_amcatnlo",
+    name="ww_fh_4f_amcatnlo",
     id=14373134,
     processes=[procs.ww_fh],
     keys=[
@@ -743,7 +743,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wwz_amcatnlo",
+    name="wwz_4f_amcatnlo",
     id=14195619,
     processes=[procs.wwz],
     keys=[
@@ -754,7 +754,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wwz_ext_amcatnlo",
+    name="wwz_4f_ext_amcatnlo",
     id=14266674,
     processes=[procs.wwz],
     keys=[
@@ -765,7 +765,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="www_amcatnlo",
+    name="www_4f_amcatnlo",
     id=14195624,
     processes=[procs.www],
     keys=[
@@ -776,7 +776,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="www_ext_amcatnlo",
+    name="www_4f_ext_amcatnlo",
     id=14266489,
     processes=[procs.www],
     keys=[

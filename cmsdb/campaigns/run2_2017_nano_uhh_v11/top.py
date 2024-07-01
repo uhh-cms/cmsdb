@@ -129,7 +129,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="st_tchannel_t_powheg",
+    name="st_tchannel_t_4f_powheg",
     id=14294738,
     processes=[procs.st_tchannel_t],
     keys=[
@@ -140,7 +140,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg",
+    name="st_tchannel_tbar_4f_powheg",
     id=14296512,
     processes=[procs.st_tchannel_tbar],
     keys=[

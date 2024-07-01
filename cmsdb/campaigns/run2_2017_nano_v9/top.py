@@ -304,7 +304,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="st_tchannel_t_powheg",
+    name="st_tchannel_t_4f_powheg",
     id=14296960,
     processes=[procs.st_tchannel_t],
     info=dict(
@@ -361,7 +361,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg",
+    name="st_tchannel_tbar_4f_powheg",
     id=14296742,
     processes=[procs.st_tchannel_tbar],
     info=dict(
@@ -462,7 +462,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_schannel_lep_amcatnlo",
+    name="st_schannel_lep_4f_amcatnlo",
     id=14235125,
     processes=[procs.st_schannel_lep],
     info=dict(
@@ -491,7 +491,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_schannel_had_amcatnlo",
+    name="st_schannel_had_4f_amcatnlo",
     id=14378997,
     processes=[procs.st_schannel_had],
     keys=[

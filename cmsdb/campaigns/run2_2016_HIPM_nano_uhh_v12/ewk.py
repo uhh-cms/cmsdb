@@ -213,7 +213,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="www_amcatnlo",
+    name="www_4f_amcatnlo",
     id=14215136,
     processes=[procs.www],
     keys=[
@@ -224,7 +224,7 @@ cpn.add_dataset(
 )
 
 # cpn.add_dataset(
-#     name="www_ext_amcatnlo",
+#     name="www_4f_ext_amcatnlo",
 #     id=14215136,
 #     processes=[procs.www],
 #     keys=[
@@ -247,7 +247,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wwz_amcatnlo",
+    name="wwz_4f_amcatnlo",
     id=14214960,
     processes=[procs.wwz],
     keys=[
