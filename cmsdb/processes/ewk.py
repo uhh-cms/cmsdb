@@ -67,22 +67,22 @@ dy = Process(
 # NLO cross section, based on GenXSecAnalyzer for
 # DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-dy_m50toinf_nlo_13TeV_xsec = Number(6421.0, {"tot": 11.25})
+dy_m50toinf_nlo_13tev_xsec = Number(6421.0, {"tot": 11.25})
 
 # if needed for scaling from LO to NNLO:
 # LO cross section, based on GenXSecAnalyzer for DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-dy_m50toinf_lo_13TeV_xsec = Number(5395.0, {"tot": 1.858})
+dy_m50toinf_lo_13tev_xsec = Number(5395.0, {"tot": 1.858})
 
 # 13.6 TeV LO and NLO cross sections are based on GenXSecAnalyzer with CMSSW_13_0_13
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
 # or -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v1 when needed
-dy_m4to10_nlo_13p6TeV_xsec = Number(141600, {"tot": 79.81})  # xsdb: Number(141500, {"tot": 301.9})
-dy_m10to50_nlo_13p6TeV_xsec = Number(21170.0, {"tot": 18.38})  # xsdb: Number(20950.0, {"tot": 183.5})
-dy_m50toinf_nlo_13p6TeV_xsec = Number(6728.0, {"tot": 6.981})  # xsdb: Number(6688.0, {"tot": 83.99})
+dy_m4to10_nlo_13p6tev_xsec = Number(141600, {"tot": 79.81})  # xsdb: Number(141500, {"tot": 301.9})
+dy_m10to50_nlo_13p6tev_xsec = Number(21170.0, {"tot": 18.38})  # xsdb: Number(20950.0, {"tot": 183.5})
+dy_m50toinf_nlo_13p6tev_xsec = Number(6728.0, {"tot": 6.981})  # xsdb: Number(6688.0, {"tot": 83.99})
 
-dy_m10to50_lo_13p6TeV_xsec = Number(17410, {"tot": 2.393})
-dy_m50toinf_lo_13p6TeV_xsec = Number(5450, {"tot": 1.872})
+dy_m10to50_lo_13p6tev_xsec = Number(17410, {"tot": 2.393})
+dy_m50toinf_lo_13p6tev_xsec = Number(5450, {"tot": 1.872})
 
 dy_m50toinf = dy.add_process(
     name="dy_m50toinf",
@@ -100,13 +100,13 @@ dy_m50toinf = dy.add_process(
     },
 )
 
-dy_k_factor_LO_to_NNLO = {
-    13: dy_m50toinf.get_xsec(13) / dy_m50toinf_lo_13TeV_xsec,
-    13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_lo_13p6TeV_xsec,
+dy_k_factor_lo_to_nnlo = {
+    13: dy_m50toinf.get_xsec(13) / dy_m50toinf_lo_13tev_xsec,
+    13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_lo_13p6tev_xsec,
 }
-dy_k_factor_NLO_to_NNLO = {
-    13: dy_m50toinf.get_xsec(13) / dy_m50toinf_nlo_13TeV_xsec,
-    13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_nlo_13p6TeV_xsec,
+dy_k_factor_nlo_to_nnlo = {
+    13: dy_m50toinf.get_xsec(13) / dy_m50toinf_nlo_13tev_xsec,
+    13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_nlo_13p6tev_xsec,
 }
 
 
@@ -115,7 +115,7 @@ dy_m4to10 = dy.add_process(
     id=51002,
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: dy_m4to10_nlo_13p6TeV_xsec * dy_k_factor_NLO_to_NNLO[13.6],
+        13.6: dy_m4to10_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
 )
 dy_m10to50 = dy.add_process(
@@ -123,7 +123,7 @@ dy_m10to50 = dy.add_process(
     id=51001,
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: dy_m10to50_nlo_13p6TeV_xsec * dy_k_factor_NLO_to_NNLO[13.6],
+        13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
 )
 
@@ -142,7 +142,7 @@ dy_m50toinf_0j = dy_m50toinf.add_process(
     id=51110,
     xsecs={
         # NLO xsec taken from https://xsdb-temp.app.cern.ch/xsdb/?columns=39911424&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
-        13.6: Number(5378, {"tot": 8.007}) * dy_k_factor_NLO_to_NNLO[13.6],
+        13.6: Number(5378, {"tot": 8.007}) * dy_k_factor_nlo_to_nnlo[13.6],
     },
 )
 
@@ -152,9 +152,9 @@ dy_m50toinf_1j = dy_m50toinf.add_process(
     xsecs={
         13: Number(926.8, {
             "tot": 0.3597,
-        }) * dy_k_factor_LO_to_NNLO[13],
-        # 13.6: Number(1017, {"tot": 6.264}) * dy_k_factor_NLO_to_NNLO[13.6],
-        13.6: Number(973.1, {"tot": 2.613}) * dy_k_factor_LO_to_NNLO[13.6],
+        }) * dy_k_factor_lo_to_nnlo[13],
+        # 13.6: Number(1017, {"tot": 6.264}) * dy_k_factor_nlo_to_nnlo[13.6],
+        13.6: Number(973.1, {"tot": 2.613}) * dy_k_factor_lo_to_nnlo[13.6],
     },
 )
 
@@ -164,9 +164,9 @@ dy_m50toinf_2j = dy_m50toinf.add_process(
     xsecs={
         13: Number(294.5, {
             "tot": 0.1223,
-        }) * dy_k_factor_LO_to_NNLO[13],
-        # 13.6: Number(385.5, {"tot": 3.858}) * dy_k_factor_NLO_to_NNLO[13.6],
-        13.6: Number(312.4, {"tot": 0.915}) * dy_k_factor_LO_to_NNLO[13.6],
+        }) * dy_k_factor_lo_to_nnlo[13],
+        # 13.6: Number(385.5, {"tot": 3.858}) * dy_k_factor_nlo_to_nnlo[13.6],
+        13.6: Number(312.4, {"tot": 0.915}) * dy_k_factor_lo_to_nnlo[13.6],
     },
 )
 
@@ -176,8 +176,8 @@ dy_m50toinf_3j = dy_m50toinf.add_process(
     xsecs={
         13: Number(86.53, {
             "tot": 0.03853,
-        }) * dy_k_factor_LO_to_NNLO[13],
-        13.6: Number(93.93, {"tot": 0.2858}) * dy_k_factor_LO_to_NNLO[13.6],
+        }) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(93.93, {"tot": 0.2858}) * dy_k_factor_lo_to_nnlo[13.6],
     },
 )
 
@@ -187,8 +187,8 @@ dy_m50toinf_4j = dy_m50toinf.add_process(
     xsecs={
         13: Number(41.21, {
             "tot": 0.02392,
-        }) * dy_k_factor_LO_to_NNLO[13],
-        13.6: Number(45.43, {"tot": 0.1393}) * dy_k_factor_LO_to_NNLO[13.6],
+        }) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(45.43, {"tot": 0.1393}) * dy_k_factor_lo_to_nnlo[13.6],
     },
 )
 
@@ -234,7 +234,7 @@ dy_m50toinf_ht70to100 = dy_m50toinf.add_process(
     name="dy_m50toinf_ht70to100",
     id=51121,
     xsecs={
-        13: Number(139.9, {"tot": 0.5747}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(139.9, {"tot": 0.5747}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -242,7 +242,7 @@ dy_m50toinf_ht100to200 = dy_m50toinf.add_process(
     name="dy_m50toinf_ht100to200",
     id=51122,
     xsecs={
-        13: Number(140.1, {"tot": 0.5875}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(140.1, {"tot": 0.5875}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -250,7 +250,7 @@ dy_m50toinf_ht200to400 = dy_m50toinf.add_process(
     name="dy_m50toinf_ht200to400",
     id=51123,
     xsecs={
-        13: Number(38.38, {"tot": 0.01628}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(38.38, {"tot": 0.01628}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -258,7 +258,7 @@ dy_m50toinf_ht400to600 = dy_m50toinf.add_process(
     name="dy_m50toinf_ht400to600",
     id=51124,
     xsecs={
-        13: Number(5.212, {"tot": 0.003149}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(5.212, {"tot": 0.003149}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -266,7 +266,7 @@ dy_m50toinf_ht600to800 = dy_m50toinf.add_process(
     name="dy_m50toinf_ht600to800",
     id=51125,
     xsecs={
-        13: Number(1.266, {"tot": 0.0007976}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(1.266, {"tot": 0.0007976}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -274,7 +274,7 @@ dy_m50toinf_ht800to1200 = dy_m50toinf.add_process(
     name="dy_m50toinf_ht800to1200",
     id=51126,
     xsecs={
-        13: Number(0.5684, {"tot": 0.0003515}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(0.5684, {"tot": 0.0003515}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -282,7 +282,7 @@ dy_m50toinf_ht1200to2500 = dy_m50toinf.add_process(
     name="dy_m50toinf_ht1200to2500",
     id=51127,
     xsecs={
-        13: Number(0.1332, {"tot": 0.00009084}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(0.1332, {"tot": 0.00009084}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -290,7 +290,7 @@ dy_m50toinf_ht2500toinf = dy_m50toinf.add_process(
     name="dy_m50toinf_ht2500toinf",
     id=51128,
     xsecs={
-        13: Number(0.002977, {"tot": 0.000003412}) * dy_k_factor_LO_to_NNLO[13],
+        13: Number(0.002977, {"tot": 0.000003412}) * dy_k_factor_lo_to_nnlo[13],
     },
 )
 
@@ -586,7 +586,7 @@ w_lnu = w.add_process(
 # for WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 
-w_lnu_lo_13TeV_xsec = Number(54070.0, {"tot": 18.32})
+w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
 
 # LO cross sections, scaled to NNLO
 
@@ -597,7 +597,7 @@ w_lnu_ht70to100 = w_lnu.add_process(
     name="w_lnu_ht70to100",
     id=6110,
     xsecs={
-        13: Number(1270.0, {"tot": 0.5259}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(1270.0, {"tot": 0.5259}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -605,7 +605,7 @@ w_lnu_ht100to200 = w_lnu.add_process(
     name="w_lnu_ht100to200",
     id=6120,
     xsecs={
-        13: Number(1254.0, {"tot": 0.5274}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(1254.0, {"tot": 0.5274}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -613,7 +613,7 @@ w_lnu_ht200to400 = w_lnu.add_process(
     name="w_lnu_ht200to400",
     id=6130,
     xsecs={
-        13: Number(336.6, {"tot": 0.1528}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(336.6, {"tot": 0.1528}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -621,7 +621,7 @@ w_lnu_ht400to600 = w_lnu.add_process(
     name="w_lnu_ht400to600",
     id=6140,
     xsecs={
-        13: Number(45.21, {"tot": 0.02966}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(45.21, {"tot": 0.02966}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -629,7 +629,7 @@ w_lnu_ht600to800 = w_lnu.add_process(
     name="w_lnu_ht600to800",
     id=6150,
     xsecs={
-        13: Number(10.98, {"tot": 0.006997}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(10.98, {"tot": 0.006997}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -637,7 +637,7 @@ w_lnu_ht800to1200 = w_lnu.add_process(
     name="w_lnu_ht800to1200",
     id=6160,
     xsecs={
-        13: Number(4.927, {"tot": 0.003229}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(4.927, {"tot": 0.003229}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -645,7 +645,7 @@ w_lnu_ht1200to2500 = w_lnu.add_process(
     name="w_lnu_ht1200to2500",
     id=6170,
     xsecs={
-        13: Number(1.157, {"tot": 0.0007663}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(1.157, {"tot": 0.0007663}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -655,7 +655,7 @@ w_lnu_ht2500toinf = w_lnu.add_process(
     name="w_lnu_ht2500toinf",
     id=6180,
     xsecs={
-        13: Number(0.02624, {"tot": 0.00002981}) * w_lnu.get_xsec(13) / w_lnu_lo_13TeV_xsec,
+        13: Number(0.02624, {"tot": 0.00002981}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
