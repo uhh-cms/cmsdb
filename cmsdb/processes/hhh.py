@@ -18,21 +18,26 @@ from cmsdb.util import multiply_xsecs
 hhh = Process(
     name="hhh",
     id=40000,
-    label="HHH",
+    # label="HHH",
+    label="",
     xsecs={13.6: Number(0.1)},  # TODO
 )
 
-# source: HHH->6b analysis file:///home/nguyenth/Downloads/AN2023_028_v4.pdf
+# source: HHH->6b analysis https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/028
 # original paper: https://link.springer.com/content/pdf/10.1007/JHEP03(2020)155.pdf
 hhh_ggf = hhh.add_process(
     name="hhh_ggf",
     id=41000,
-    label=f"${hhh.label}^{{ggf}}$",
+    # label=f"${hhh.label}^{{ggf}}$",
+    label="",
     xsecs={
         13: Number(
-            0.45255713867289865e-3,  # might be NLO, need k-factor of 1.55?
+            0.0894e-3 # at NNLO value taken from HHH->6b analysis
+            # 0.45255713867289865e-3,  # might be NLO, need k-factor of 1.55?
         ),
-        13.6: Number(0.1),
+        13.6: Number(
+            0.0976e-3 # estimate only TODO
+        ),
         14: Number(
                 0.103e-3, # NNLO value
                 {
@@ -110,7 +115,8 @@ for i, (c3, d4) in enumerate(coupling_combinations, 1):
         f"{name}_4b2tau": locals().get(name).add_process(
             name=f"{name}_4b2tau",
             id=tmp.id + 100,
-            label=f"{tmp.label} $\\rightarrow 4b2\\tau$",
+            # label=f"{tmp.label} $\\rightarrow 4b2\\tau$",
+            label=f"{tmp.label}",
             xsecs=multiply_xsecs(tmp, 3*const.br_h.tt*const.br_h.bb**2)
         )})
     __all__.append(f"{name}_4b2tau")
