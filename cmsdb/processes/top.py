@@ -393,7 +393,7 @@ ttz_zlep_m10toinf = ttz.add_process(
 ttz_zqq = ttz.add_process(
     name="ttz_zqq",  # non-hadronically decaying Z
     id=3120,
-    xsecs=multiply_xsecs(ttz, const.br_z.qq)
+    xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
 
 ttw = ttv.add_process(
