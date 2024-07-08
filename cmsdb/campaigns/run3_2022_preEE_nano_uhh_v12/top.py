@@ -226,8 +226,27 @@ cpn.add_dataset(
 )
 
 #
-# ttbar + 1 vector boson -> not available
+# ttbar + 1 vector boson
 #
+
+# ttW not available
+
+cpn.add_dataset(
+    name="ttz_zqq_amcatnlo",
+    id=14796231,
+    processes=[procs.ttz],
+    keys=[
+        "/TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=376_687,
+    aux={
+        "merging_factors": {
+            "nominal": 26,
+        },
+    },
+)
+
 
 #
 # ttbar + 2 vector boson
