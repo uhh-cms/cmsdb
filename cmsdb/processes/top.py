@@ -17,7 +17,7 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
-    "ttz", "ttz_zlep_m10toinf",
+    "ttz", "ttz_zqq", "ttz_zlep_m10toinf",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
@@ -388,6 +388,12 @@ ttz_zlep_m10toinf = ttz.add_process(
             "total": 0.0002995,
         }),
     },
+)
+
+ttz_zqq = ttz.add_process(
+    name="ttz_zqq",
+    id=3120,
+    xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
 
 ttw = ttv.add_process(
