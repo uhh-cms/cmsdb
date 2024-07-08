@@ -234,7 +234,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ttz_zqq_amcatnlo",
     id=14796231,
-    processes=[procs.ttz],
+    processes=[procs.ttz_zqq],
     keys=[
         "/TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
