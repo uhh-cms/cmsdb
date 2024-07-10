@@ -8,7 +8,12 @@ __all__ = [
     "dy",
     "dy_m4to10",
     "dy_m10to50",
-    "dy_m50toinf", "dy_m50toinf_0j", "dy_m50toinf_1j", "dy_m50toinf_2j", "dy_m50toinf_3j", "dy_m50toinf_4j",
+    "dy_m50toinf", "dy_m50toinf_0j", "dy_m50toinf_1j", "dy_m50toinf_2j", "dy_m50toinf_ge3j",
+    "dy_m50toinf_3j", "dy_m50toinf_4j",
+    "dy_m50toinf_1j_pt0to40", "dy_m50toinf_1j_pt40to100", "dy_m50toinf_1j_pt100to200", "dy_m50toinf_1j_pt200to400",
+    "dy_m50toinf_1j_pt400to600", "dy_m50toinf_1j_pt600toinf",
+    "dy_m50toinf_2j_pt0to40", "dy_m50toinf_2j_pt40to100", "dy_m50toinf_2j_pt100to200", "dy_m50toinf_2j_pt200to400",
+    "dy_m50toinf_2j_pt400to600", "dy_m50toinf_2j_pt600toinf",
     "dy_0j", "dy_1j", "dy_2j",
     "dy_m50toinf_ht70to100", "dy_m50toinf_ht100to200", "dy_m50toinf_ht200to400",
     "dy_m50toinf_ht400to600", "dy_m50toinf_ht600to800", "dy_m50toinf_ht800to1200",
@@ -192,6 +197,11 @@ dy_m50toinf_4j = dy_m50toinf.add_process(
     },
 )
 
+dy_m50toinf_ge3j = dy_m50toinf.add_process(
+    name="dy_m50toinf_ge3j",
+    id=51115,
+)
+
 # based on GenXSecAnalyzer
 # for DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
@@ -223,6 +233,66 @@ dy_2j = dy.add_process(
             "tot": 1.533,
         }),
     },
+)
+
+dy_m50toinf_1j_pt0to40 = dy_m50toinf_1j.add_process(
+    name="dy_m50toinf_1j_pt0to40",
+    id=511110,
+)
+
+dy_m50toinf_1j_pt40to100 = dy_m50toinf_1j.add_process(
+    name="dy_m50toinf_1j_pt40to100",
+    id=511111,
+)
+
+dy_m50toinf_1j_pt100to200 = dy_m50toinf_1j.add_process(
+    name="dy_m50toinf_1j_pt100to200",
+    id=511112,
+)
+
+dy_m50toinf_1j_pt200to400 = dy_m50toinf_1j.add_process(
+    name="dy_m50toinf_1j_pt200to400",
+    id=511113,
+)
+
+dy_m50toinf_1j_pt400to600 = dy_m50toinf_1j.add_process(
+    name="dy_m50toinf_1j_pt400to600",
+    id=511114,
+)
+
+dy_m50toinf_1j_pt600toinf = dy_m50toinf_1j.add_process(
+    name="dy_m50toinf_1j_pt600toinf",
+    id=511115,
+)
+
+dy_m50toinf_2j_pt0to40 = dy_m50toinf_2j.add_process(
+    name="dy_m50toinf_2j_pt0to40",
+    id=511120,
+)
+
+dy_m50toinf_2j_pt40to100 = dy_m50toinf_2j.add_process(
+    name="dy_m50toinf_2j_pt40to100",
+    id=511121,
+)
+
+dy_m50toinf_2j_pt100to200 = dy_m50toinf_2j.add_process(
+    name="dy_m50toinf_2j_pt100to200",
+    id=511122,
+)
+
+dy_m50toinf_2j_pt200to400 = dy_m50toinf_2j.add_process(
+    name="dy_m50toinf_2j_pt200to400",
+    id=511123,
+)
+
+dy_m50toinf_2j_pt400to600 = dy_m50toinf_2j.add_process(
+    name="dy_m50toinf_2j_pt400to600",
+    id=511124,
+)
+
+dy_m50toinf_2j_pt600toinf = dy_m50toinf_2j.add_process(
+    name="dy_m50toinf_2j_pt600toinf",
+    id=511125,
 )
 
 # LO cross sections, scaled to NNLO
