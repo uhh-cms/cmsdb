@@ -26,6 +26,7 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 38,
         },
+        "mll": [4, 10],
     },
 )
 
@@ -44,6 +45,7 @@ cpn.add_dataset(
             "nominal": 22,
             "nominal_ext1": 23,
         },
+        "mll": [10, 50],
     },
 )
 
@@ -64,6 +66,7 @@ cpn.add_dataset(
             "nominal_ext1": 18,
             "nominal_ext2": 25,
         },
+        "mll": [50, float("inf")],
     },
 )
 
@@ -82,6 +85,8 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 19,
         },
+        "mll": [50, float("inf")],
+        "njets": 0,
     },
 )
 
@@ -98,6 +103,8 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 15,
         },
+        "mll": [50, float("inf")],
+        "njets": 1,
     },
 )
 
@@ -114,6 +121,8 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 13,
         },
+        "mll": [50, float("inf")],
+        "njets": 2,
     },
 )
 
@@ -132,6 +141,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 18,
         },
+        "mll": [50, float("inf")],
+        "njets": 1,
+        "ptll": [40, 100],
     },
 )
 
@@ -148,6 +160,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 18,
         },
+        "mll": [50, float("inf")],
+        "njets": 1,
+        "ptll": [100, 200],
     },
 )
 
@@ -164,6 +179,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 16,
         },
+        "mll": [50, float("inf")],
+        "njets": 1,
+        "ptll": [200, 400],
     },
 )
 
@@ -180,6 +198,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 28,
         },
+        "mll": [50, float("inf")],
+        "njets": 1,
+        "ptll": [400, 600],
     },
 )
 
@@ -196,6 +217,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 28,
         },
+        "mll": [50, float("inf")],
+        "njets": 1,
+        "ptll": [600, float("inf")],
     },
 )
 
@@ -212,6 +236,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 15,
         },
+        "mll": [50, float("inf")],
+        "njets": 2,
+        "ptll": [40, 100],
     },
 )
 
@@ -228,6 +255,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 15,
         },
+        "mll": [50, float("inf")],
+        "njets": 2,
+        "ptll": [100, 200],
     },
 )
 
@@ -244,6 +274,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 15,
         },
+        "mll": [50, float("inf")],
+        "njets": 2,
+        "ptll": [200, 400],
     },
 )
 
@@ -260,6 +293,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 35,
         },
+        "mll": [50, float("inf")],
+        "njets": 2,
+        "ptll": [400, 600],
     },
 )
 
@@ -276,6 +312,9 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 39,
         },
+        "mll": [50, float("inf")],
+        "njets": 2,
+        "ptll": [600, float("inf")],
     },
 )
 
