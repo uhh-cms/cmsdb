@@ -8,7 +8,8 @@ __all__ = [
     "dy",
     "dy_m4to10",
     "dy_m10to50",
-    "dy_m50toinf", "dy_m50toinf_0j", "dy_m50toinf_1j", "dy_m50toinf_2j", "dy_m50toinf_3j", "dy_m50toinf_4j",
+    "dy_m50toinf", "dy_m50toinf_0j", "dy_m50toinf_1j", "dy_m50toinf_2j", "dy_m50toinf_ge3j",
+    "dy_m50toinf_3j", "dy_m50toinf_4j",
     "dy_m50toinf_1j_pt0to40", "dy_m50toinf_1j_pt40to100", "dy_m50toinf_1j_pt100to200", "dy_m50toinf_1j_pt200to400",
     "dy_m50toinf_1j_pt400to600", "dy_m50toinf_1j_pt600toinf",
     "dy_m50toinf_2j_pt0to40", "dy_m50toinf_2j_pt40to100", "dy_m50toinf_2j_pt100to200", "dy_m50toinf_2j_pt200to400",
@@ -196,6 +197,11 @@ dy_m50toinf_4j = dy_m50toinf.add_process(
     },
 )
 
+dy_m50toinf_ge3j = dy_m50toinf.add_process(
+    name="dy_m50toinf_ge3j",
+    id=51115,
+)
+
 # based on GenXSecAnalyzer
 # for DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
@@ -232,97 +238,61 @@ dy_2j = dy.add_process(
 dy_m50toinf_1j_pt0to40 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt0to40",
     id=511110,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_1j_pt40to100 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt40to100",
     id=511111,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_1j_pt100to200 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt100to200",
     id=511112,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_1j_pt200to400 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt200to400",
     id=511113,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_1j_pt400to600 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt400to600",
     id=511114,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_1j_pt600toinf = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt600toinf",
     id=511115,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_2j_pt0to40 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt0to40",
     id=511120,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_2j_pt40to100 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt40to100",
     id=511121,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_2j_pt100to200 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt100to200",
     id=511122,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_2j_pt200to400 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt200to400",
     id=511123,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_2j_pt400to600 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt400to600",
     id=511124,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 dy_m50toinf_2j_pt600toinf = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt600toinf",
     id=511125,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 # LO cross sections, scaled to NNLO
