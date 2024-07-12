@@ -2,6 +2,13 @@
 
 """
 EWK-related process definitions.
+
+Some DY processes contain phasespace ranges in auxiliary fields. Each each is inclusive in the lower
+bound and exclusive in the upper bound, i.e. (a, b) means a <= x < b:
+
+- mll: dilepton invariant mass range
+- ptll: dilepton pt range
+- njets: number of extra jets on generator level (mostly NLO)
 """
 
 __all__ = [
@@ -104,7 +111,7 @@ dy_m50toinf = dy.add_process(
         }),
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
     },
 )
 
@@ -126,7 +133,7 @@ dy_m4to10 = dy.add_process(
         13.6: dy_m4to10_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
-        "mll": [4.0, 10.0],
+        "mll": (4.0, 10.0),
     },
 )
 dy_m10to50 = dy.add_process(
@@ -137,7 +144,7 @@ dy_m10to50 = dy.add_process(
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
-        "mll": [10.0, 50.0],
+        "mll": (10.0, 50.0),
     },
 )
 
@@ -159,8 +166,8 @@ dy_m50toinf_0j = dy_m50toinf.add_process(
         13.6: Number(5378, {"tot": 8.007}) * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 0,
+        "mll": (50.0, const.inf),
+        "njets": (0, 1),
     },
 )
 
@@ -175,8 +182,8 @@ dy_m50toinf_1j = dy_m50toinf.add_process(
         13.6: Number(973.1, {"tot": 2.613}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 1,
+        "mll": (50.0, const.inf),
+        "njets": (1, 2),
     },
 )
 
@@ -191,8 +198,8 @@ dy_m50toinf_2j = dy_m50toinf.add_process(
         13.6: Number(312.4, {"tot": 0.915}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 2,
+        "mll": (50.0, const.inf),
+        "njets": (2, 3),
     },
 )
 
@@ -206,8 +213,8 @@ dy_m50toinf_3j = dy_m50toinf.add_process(
         13.6: Number(93.93, {"tot": 0.2858}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 3,
+        "mll": (50.0, const.inf),
+        "njets": (3, 4),
     },
 )
 
@@ -221,8 +228,8 @@ dy_m50toinf_4j = dy_m50toinf.add_process(
         13.6: Number(45.43, {"tot": 0.1393}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 4,
+        "mll": (50.0, const.inf),
+        "njets": (4, 5),
     },
 )
 
@@ -230,8 +237,8 @@ dy_m50toinf_ge3j = dy_m50toinf.add_process(
     name="dy_m50toinf_ge3j",
     id=51115,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": [3, const.inf],
+        "mll": (50.0, const.inf),
+        "njets": (3, const.inf),
     },
 )
 
@@ -247,7 +254,7 @@ dy_0j = dy.add_process(
         }),
     },
     aux={
-        "njets": 0,
+        "njets": (0, 1),
     },
 )
 
@@ -260,7 +267,7 @@ dy_1j = dy.add_process(
         }),
     },
     aux={
-        "njets": 1,
+        "njets": (1, 2),
     },
 )
 
@@ -273,7 +280,7 @@ dy_2j = dy.add_process(
         }),
     },
     aux={
-        "njets": 2,
+        "njets": (2, 3),
     },
 )
 
@@ -281,9 +288,9 @@ dy_m50toinf_1j_pt0to40 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt0to40",
     id=511110,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 1,
-        "ptll": [0.0, 40.0],
+        "mll": (50.0, const.inf),
+        "njets": (1, 2),
+        "ptll": (0.0, 40.0),
     },
 )
 
@@ -291,9 +298,9 @@ dy_m50toinf_1j_pt40to100 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt40to100",
     id=511111,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 1,
-        "ptll": [40.0, 100.0],
+        "mll": (50.0, const.inf),
+        "njets": (1, 2),
+        "ptll": (40.0, 100.0),
     },
 )
 
@@ -301,9 +308,9 @@ dy_m50toinf_1j_pt100to200 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt100to200",
     id=511112,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 1,
-        "ptll": [100.0, 200.0],
+        "mll": (50.0, const.inf),
+        "njets": (1, 2),
+        "ptll": (100.0, 200.0),
     },
 )
 
@@ -311,9 +318,9 @@ dy_m50toinf_1j_pt200to400 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt200to400",
     id=511113,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 1,
-        "ptll": [200.0, 400.0],
+        "mll": (50.0, const.inf),
+        "njets": (1, 2),
+        "ptll": (200.0, 400.0),
     },
 )
 
@@ -321,9 +328,9 @@ dy_m50toinf_1j_pt400to600 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt400to600",
     id=511114,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 1,
-        "ptll": [400.0, 600.0],
+        "mll": (50.0, const.inf),
+        "njets": (1, 2),
+        "ptll": (400.0, 600.0),
     },
 )
 
@@ -331,9 +338,9 @@ dy_m50toinf_1j_pt600toinf = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt600toinf",
     id=511115,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 1,
-        "ptll": [600.0, const.inf],
+        "mll": (50.0, const.inf),
+        "njets": (1, 2),
+        "ptll": (600.0, const.inf),
     },
 )
 
@@ -341,9 +348,9 @@ dy_m50toinf_2j_pt0to40 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt0to40",
     id=511120,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 2,
-        "ptll": [0.0, 40.0],
+        "mll": (50.0, const.inf),
+        "njets": (2, 3),
+        "ptll": (0.0, 40.0),
     },
 )
 
@@ -351,9 +358,9 @@ dy_m50toinf_2j_pt40to100 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt40to100",
     id=511121,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 2,
-        "ptll": [40.0, 100.0],
+        "mll": (50.0, const.inf),
+        "njets": (2, 3),
+        "ptll": (40.0, 100.0),
     },
 )
 
@@ -361,9 +368,9 @@ dy_m50toinf_2j_pt100to200 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt100to200",
     id=511122,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 2,
-        "ptll": [100.0, 200.0],
+        "mll": (50.0, const.inf),
+        "njets": (2, 3),
+        "ptll": (100.0, 200.0),
     },
 )
 
@@ -371,9 +378,9 @@ dy_m50toinf_2j_pt200to400 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt200to400",
     id=511123,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 2,
-        "ptll": [200.0, 400.0],
+        "mll": (50.0, const.inf),
+        "njets": (2, 3),
+        "ptll": (200.0, 400.0),
     },
 )
 
@@ -381,9 +388,9 @@ dy_m50toinf_2j_pt400to600 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt400to600",
     id=511124,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 2,
-        "ptll": [400.0, 600.0],
+        "mll": (50.0, const.inf),
+        "njets": (2, 3),
+        "ptll": (400.0, 600.0),
     },
 )
 
@@ -391,9 +398,9 @@ dy_m50toinf_2j_pt600toinf = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt600toinf",
     id=511125,
     aux={
-        "mll": [50.0, const.inf],
-        "njets": 2,
-        "ptll": [600.0, const.inf],
+        "mll": (50.0, const.inf),
+        "njets": (2, 3),
+        "ptll": (600.0, const.inf),
     },
 )
 
@@ -409,7 +416,7 @@ dy_m50toinf_ht70to100 = dy_m50toinf.add_process(
         13: Number(139.9, {"tot": 0.5747}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [70.0, 100.0],
     },
 )
@@ -421,7 +428,7 @@ dy_m50toinf_ht100to200 = dy_m50toinf.add_process(
         13: Number(140.1, {"tot": 0.5875}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [100.0, 200.0],
     },
 )
@@ -433,7 +440,7 @@ dy_m50toinf_ht200to400 = dy_m50toinf.add_process(
         13: Number(38.38, {"tot": 0.01628}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [200.0, 400.0],
     },
 )
@@ -445,7 +452,7 @@ dy_m50toinf_ht400to600 = dy_m50toinf.add_process(
         13: Number(5.212, {"tot": 0.003149}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [400.0, 600.0],
     },
 )
@@ -457,7 +464,7 @@ dy_m50toinf_ht600to800 = dy_m50toinf.add_process(
         13: Number(1.266, {"tot": 0.0007976}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [600.0, 800.0],
     },
 )
@@ -469,7 +476,7 @@ dy_m50toinf_ht800to1200 = dy_m50toinf.add_process(
         13: Number(0.5684, {"tot": 0.0003515}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [800.0, 1200.0],
     },
 )
@@ -481,7 +488,7 @@ dy_m50toinf_ht1200to2500 = dy_m50toinf.add_process(
         13: Number(0.1332, {"tot": 0.00009084}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [1200.0, 2500.0],
     },
 )
@@ -493,7 +500,7 @@ dy_m50toinf_ht2500toinf = dy_m50toinf.add_process(
         13: Number(0.002977, {"tot": 0.000003412}) * dy_k_factor_lo_to_nnlo[13],
     },
     aux={
-        "mll": [50.0, const.inf],
+        "mll": (50.0, const.inf),
         "htt": [2500.0, const.inf],
     },
 )
@@ -510,7 +517,7 @@ dy_pt0to50 = dy.add_process(
         }),
     },
     aux={
-        "ptll": [0.0, 50.0],
+        "ptll": (0.0, 50.0),
     },
 )
 
@@ -523,7 +530,7 @@ dy_pt50to100 = dy.add_process(
         }),
     },
     aux={
-        "ptll": [50.0, 100.0],
+        "ptll": (50.0, 100.0),
     },
 )
 
@@ -536,7 +543,7 @@ dy_pt100to250 = dy.add_process(
         }),
     },
     aux={
-        "ptll": [100.0, 250.0],
+        "ptll": (100.0, 250.0),
     },
 )
 
@@ -549,7 +556,7 @@ dy_pt250to400 = dy.add_process(
         }),
     },
     aux={
-        "ptll": [250.0, 400.0],
+        "ptll": (250.0, 400.0),
     },
 )
 
@@ -562,7 +569,7 @@ dy_pt400to650 = dy.add_process(
         }),
     },
     aux={
-        "ptll": [400.0, 650.0],
+        "ptll": (400.0, 650.0),
     },
 )
 
@@ -575,7 +582,7 @@ dy_pt650toinf = dy.add_process(
         }),
     },
     aux={
-        "ptll": [650.0, const.inf],
+        "ptll": (650.0, const.inf),
     },
 )
 
