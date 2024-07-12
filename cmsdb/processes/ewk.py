@@ -103,6 +103,9 @@ dy_m50toinf = dy.add_process(
             "pdf": 0.01j,
         }),
     },
+    aux={
+        "mll": [50.0, const.inf],
+    },
 )
 
 dy_k_factor_lo_to_nnlo = {
@@ -122,6 +125,9 @@ dy_m4to10 = dy.add_process(
         13: Number(0.1),  # TODO
         13.6: dy_m4to10_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
+    aux={
+        "mll": [4.0, 10.0],
+    },
 )
 dy_m10to50 = dy.add_process(
     name="dy_m10to50",
@@ -129,6 +135,9 @@ dy_m10to50 = dy.add_process(
     xsecs={
         13: Number(0.1),  # TODO
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": [10.0, 50.0],
     },
 )
 
@@ -149,6 +158,10 @@ dy_m50toinf_0j = dy_m50toinf.add_process(
         # NLO xsec taken from https://xsdb-temp.app.cern.ch/xsdb/?columns=39911424&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
         13.6: Number(5378, {"tot": 8.007}) * dy_k_factor_nlo_to_nnlo[13.6],
     },
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 0,
+    },
 )
 
 dy_m50toinf_1j = dy_m50toinf.add_process(
@@ -160,6 +173,10 @@ dy_m50toinf_1j = dy_m50toinf.add_process(
         }) * dy_k_factor_lo_to_nnlo[13],
         # 13.6: Number(1017, {"tot": 6.264}) * dy_k_factor_nlo_to_nnlo[13.6],
         13.6: Number(973.1, {"tot": 2.613}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 1,
     },
 )
 
@@ -173,6 +190,10 @@ dy_m50toinf_2j = dy_m50toinf.add_process(
         # 13.6: Number(385.5, {"tot": 3.858}) * dy_k_factor_nlo_to_nnlo[13.6],
         13.6: Number(312.4, {"tot": 0.915}) * dy_k_factor_lo_to_nnlo[13.6],
     },
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 2,
+    },
 )
 
 dy_m50toinf_3j = dy_m50toinf.add_process(
@@ -183,6 +204,10 @@ dy_m50toinf_3j = dy_m50toinf.add_process(
             "tot": 0.03853,
         }) * dy_k_factor_lo_to_nnlo[13],
         13.6: Number(93.93, {"tot": 0.2858}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 3,
     },
 )
 
@@ -195,11 +220,19 @@ dy_m50toinf_4j = dy_m50toinf.add_process(
         }) * dy_k_factor_lo_to_nnlo[13],
         13.6: Number(45.43, {"tot": 0.1393}) * dy_k_factor_lo_to_nnlo[13.6],
     },
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 4,
+    },
 )
 
 dy_m50toinf_ge3j = dy_m50toinf.add_process(
     name="dy_m50toinf_ge3j",
     id=51115,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": [3, const.inf],
+    },
 )
 
 # based on GenXSecAnalyzer
@@ -213,6 +246,9 @@ dy_0j = dy.add_process(
             "tot": 5.365,
         }),
     },
+    aux={
+        "njets": 0,
+    },
 )
 
 dy_1j = dy.add_process(
@@ -222,6 +258,9 @@ dy_1j = dy.add_process(
         13: Number(952.7, {
             "tot": 2.174,
         }),
+    },
+    aux={
+        "njets": 1,
     },
 )
 
@@ -233,66 +272,129 @@ dy_2j = dy.add_process(
             "tot": 1.533,
         }),
     },
+    aux={
+        "njets": 2,
+    },
 )
 
 dy_m50toinf_1j_pt0to40 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt0to40",
     id=511110,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 1,
+        "ptll": [0.0, 40.0],
+    },
 )
 
 dy_m50toinf_1j_pt40to100 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt40to100",
     id=511111,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 1,
+        "ptll": [40.0, 100.0],
+    },
 )
 
 dy_m50toinf_1j_pt100to200 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt100to200",
     id=511112,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 1,
+        "ptll": [100.0, 200.0],
+    },
 )
 
 dy_m50toinf_1j_pt200to400 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt200to400",
     id=511113,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 1,
+        "ptll": [200.0, 400.0],
+    },
 )
 
 dy_m50toinf_1j_pt400to600 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt400to600",
     id=511114,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 1,
+        "ptll": [400.0, 600.0],
+    },
 )
 
 dy_m50toinf_1j_pt600toinf = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt600toinf",
     id=511115,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 1,
+        "ptll": [600.0, const.inf],
+    },
 )
 
 dy_m50toinf_2j_pt0to40 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt0to40",
     id=511120,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 2,
+        "ptll": [0.0, 40.0],
+    },
 )
 
 dy_m50toinf_2j_pt40to100 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt40to100",
     id=511121,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 2,
+        "ptll": [40.0, 100.0],
+    },
 )
 
 dy_m50toinf_2j_pt100to200 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt100to200",
     id=511122,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 2,
+        "ptll": [100.0, 200.0],
+    },
 )
 
 dy_m50toinf_2j_pt200to400 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt200to400",
     id=511123,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 2,
+        "ptll": [200.0, 400.0],
+    },
 )
 
 dy_m50toinf_2j_pt400to600 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt400to600",
     id=511124,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 2,
+        "ptll": [400.0, 600.0],
+    },
 )
 
 dy_m50toinf_2j_pt600toinf = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt600toinf",
     id=511125,
+    aux={
+        "mll": [50.0, const.inf],
+        "njets": 2,
+        "ptll": [600.0, const.inf],
+    },
 )
 
 # LO cross sections, scaled to NNLO
@@ -306,6 +408,10 @@ dy_m50toinf_ht70to100 = dy_m50toinf.add_process(
     xsecs={
         13: Number(139.9, {"tot": 0.5747}) * dy_k_factor_lo_to_nnlo[13],
     },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [70.0, 100.0],
+    },
 )
 
 dy_m50toinf_ht100to200 = dy_m50toinf.add_process(
@@ -313,6 +419,10 @@ dy_m50toinf_ht100to200 = dy_m50toinf.add_process(
     id=51122,
     xsecs={
         13: Number(140.1, {"tot": 0.5875}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [100.0, 200.0],
     },
 )
 
@@ -322,6 +432,10 @@ dy_m50toinf_ht200to400 = dy_m50toinf.add_process(
     xsecs={
         13: Number(38.38, {"tot": 0.01628}) * dy_k_factor_lo_to_nnlo[13],
     },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [200.0, 400.0],
+    },
 )
 
 dy_m50toinf_ht400to600 = dy_m50toinf.add_process(
@@ -329,6 +443,10 @@ dy_m50toinf_ht400to600 = dy_m50toinf.add_process(
     id=51124,
     xsecs={
         13: Number(5.212, {"tot": 0.003149}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [400.0, 600.0],
     },
 )
 
@@ -338,6 +456,10 @@ dy_m50toinf_ht600to800 = dy_m50toinf.add_process(
     xsecs={
         13: Number(1.266, {"tot": 0.0007976}) * dy_k_factor_lo_to_nnlo[13],
     },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [600.0, 800.0],
+    },
 )
 
 dy_m50toinf_ht800to1200 = dy_m50toinf.add_process(
@@ -345,6 +467,10 @@ dy_m50toinf_ht800to1200 = dy_m50toinf.add_process(
     id=51126,
     xsecs={
         13: Number(0.5684, {"tot": 0.0003515}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [800.0, 1200.0],
     },
 )
 
@@ -354,6 +480,10 @@ dy_m50toinf_ht1200to2500 = dy_m50toinf.add_process(
     xsecs={
         13: Number(0.1332, {"tot": 0.00009084}) * dy_k_factor_lo_to_nnlo[13],
     },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [1200.0, 2500.0],
+    },
 )
 
 dy_m50toinf_ht2500toinf = dy_m50toinf.add_process(
@@ -361,6 +491,10 @@ dy_m50toinf_ht2500toinf = dy_m50toinf.add_process(
     id=51128,
     xsecs={
         13: Number(0.002977, {"tot": 0.000003412}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": [50.0, const.inf],
+        "htt": [2500.0, const.inf],
     },
 )
 
@@ -375,6 +509,9 @@ dy_pt0to50 = dy.add_process(
             "tot": 1.751,
         }),
     },
+    aux={
+        "ptll": [0.0, 50.0],
+    },
 )
 
 dy_pt50to100 = dy.add_process(
@@ -384,6 +521,9 @@ dy_pt50to100 = dy.add_process(
         13: Number(398.3, {
             "tot": 0.5600,
         }),
+    },
+    aux={
+        "ptll": [50.0, 100.0],
     },
 )
 
@@ -395,6 +535,9 @@ dy_pt100to250 = dy.add_process(
             "tot": 0.1370,
         }),
     },
+    aux={
+        "ptll": [100.0, 250.0],
+    },
 )
 
 dy_pt250to400 = dy.add_process(
@@ -404,6 +547,9 @@ dy_pt250to400 = dy.add_process(
         13: Number(3.738, {
             "tot": 0.005305,
         }),
+    },
+    aux={
+        "ptll": [250.0, 400.0],
     },
 )
 
@@ -415,6 +561,9 @@ dy_pt400to650 = dy.add_process(
             "tot": 0.0008169,
         }),
     },
+    aux={
+        "ptll": [400.0, 650.0],
+    },
 )
 
 dy_pt650toinf = dy.add_process(
@@ -424,6 +573,9 @@ dy_pt650toinf = dy.add_process(
         13: Number(0.04763, {
             "tot": 0.00007206,
         }),
+    },
+    aux={
+        "ptll": [650.0, const.inf],
     },
 )
 
@@ -435,10 +587,6 @@ z = Process(
     name="z",
     id=55000,
     label="Z + jets",
-    xsecs={
-        13: Number(0.1),  # TODO
-        13.6: Number(0.1),  # TODO
-    },
 )
 
 # Z -> neutrinos
@@ -447,10 +595,6 @@ z_nunu = z.add_process(
     name="z_nunu",
     id=55100,
     label=rf"{z.label} (Z $\rightarrow$ $\nu\nu$)",
-    xsecs={
-        13: Number(0.1),  # TODO
-        13.6: Number(0.1),  # TODO
-    },
 )
 
 # 13 TeV Xsecs based on GenXSecAnalyzer
@@ -463,7 +607,6 @@ z_nunu_ht100to200 = z_nunu.add_process(
         13: Number(266.1, {
             "tot": 0.1117,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -474,7 +617,6 @@ z_nunu_ht200to400 = z_nunu.add_process(
         13: Number(73.00, {
             "tot": 0.04408,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -485,7 +627,6 @@ z_nunu_ht400to600 = z_nunu.add_process(
         13: Number(9.915, {
             "tot": 0.004229,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -496,7 +637,6 @@ z_nunu_ht600to800 = z_nunu.add_process(
         13: Number(2.409, {
             "tot": 0.001678,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -507,7 +647,6 @@ z_nunu_ht800to1200 = z_nunu.add_process(
         13: Number(1.077, {
             "tot": 0.001295,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -518,7 +657,6 @@ z_nunu_ht1200to2500 = z_nunu.add_process(
         13: Number(0.2495, {
             "tot": 0.0007030,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -529,7 +667,6 @@ z_nunu_ht2500toinf = z_nunu.add_process(
         13: Number(0.005614, {
             "tot": 0.00001616,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -544,7 +681,6 @@ z_qq = z.add_process(
     label=rf"{z.label} (Z $\rightarrow$ $\text{{q}}\overline{{\text{{q}}}}$)",
     xsecs={
         13: Number(0.1),  # TODO
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -555,7 +691,6 @@ z_qq_ht200to400 = z_qq.add_process(
         13: Number(1012.0, {
             "tot": 0.4260,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -566,7 +701,6 @@ z_qq_ht400to600 = z_qq.add_process(
         13: Number(114.5, {
             "tot": 0.04884,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -577,7 +711,6 @@ z_qq_ht600to800 = z_qq.add_process(
         13: Number(25.38, {
             "tot": 0.01088,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -588,7 +721,6 @@ z_qq_ht800toinf = z_qq.add_process(
         13: Number(12.92, {
             "tot": 0.005923,
         }),
-        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -601,7 +733,7 @@ w = Process(
     name="w",
     id=6000,
     label="W + jets",
-    xsecs={13: Number(0.1)},  # TODO, or use w.set_xsec(13, w_lnu.get_xsec(13) / const.br_w["lep"]) below?
+    # TODO, or use w.set_xsec(13, w_lnu.get_xsec(13) / const.br_w["lep"]) below?
 )
 
 
@@ -609,16 +741,12 @@ w_taunu = w.add_process(
     name="w_taunu",
     id=6010,
     label=rf"{w.label} ($W \rightarrow tau\nu$)",
-    xsecs={
-        13: Number(0.1)},  # TODO
 )
 
 w_munu = w.add_process(
     name="w_munu",
     id=6020,
     label=rf"{w.label} ($W \rightarrow mu\nu$)",
-    xsecs={
-        13: Number(0.1)},  # TODO
 )
 
 
@@ -737,7 +865,7 @@ ewk = Process(
     name="ewk",
     id=7000,
     label="EWK",
-    xsecs={13: Number(0.1)},  # TODO? Sum over the other? maybe with scaled w xsec to inclusive?
+    # TODO: Sum over the other? maybe with scaled w xsec to inclusive?
 )
 
 # based on GenXSecAnalyzer
@@ -1006,7 +1134,7 @@ vvv = Process(
     name="vvv",
     id=9000,
     label="Triple-Boson",
-    xsecs={13: Number(0.1)},  # updated below as sum over individual processes
+    # xsecs set below as sum over individual processes
 )
 
 # based on GenXSecAnalyzer
