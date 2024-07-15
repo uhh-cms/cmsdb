@@ -740,7 +740,7 @@ w = Process(
     name="w",
     id=6000,
     label="W + jets",
-    # TODO, or use w.set_xsec(13, w_lnu.get_xsec(13) / const.br_w["lep"]) below?
+    # TODO, or use w.set_xsec(13, w_lnu.get_xsec(13) / const.br_w.lep) below?
 )
 
 
@@ -920,20 +920,19 @@ vv = Process(
     xsecs={13: Number(0.1)},  # updated below as the sum over WW, WZ, ZZ
 )
 
-# ZZ 13 TeV xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
-# old value before update:
-# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(12.13) (LO)
+# ZZ 13 TeV xsec values at nNNLO from
+# https://link.springer.com/article/10.1007/JHEP03(2019)070#preview, table 3
 
 zz = vv.add_process(
     name="zz",
     id=8100,
     label="ZZ",
     xsecs={
-        13: Number(15.99, {"scale": (0.037j, 0.026j)}),
-        # 13.6 from GenXSecAnalyzer:
-        13.6: Number(12.84, {
-            "tot": 0.006035,  # xsdb: Number(12.75, {"tot": 0.0649})
-        }),
+        13: Number(24.97, {"scale": (0.029j, 0.027j)}),
+        # 13.6 from GenXSecAnalyzer, but this value is way off and should not be used
+        # 13.6: Number(12.84, {
+        #     "tot": 0.006035,  # xsdb: Number(12.75, {"tot": 0.0649})
+        # }),
     },
 )
 
@@ -986,7 +985,7 @@ zz_zqq_zqq = zz.add_process(
     name="zz_zqq_zqq",
     id=8140,
     xsecs={
-        13: zz.get_xsec(13) * const.br_z["qq"] * const.br_z["qq"],  # value around 7.8
+        13: zz.get_xsec(13) * const.br_zz.qqqq,  # value around 7.8
     },
 )
 
@@ -1064,7 +1063,7 @@ wz_wlnu_zqq = wz.add_process(
     name="wz_wlnu_zqq",
     id=8230,
     xsecs={
-        13: wz.get_xsec(13) * const.br_w["lep"] * const.br_z["qq"],  # value around 10.65
+        13: wz.get_xsec(13) * const.br_w.lep * const.br_z.qq,  # value around 10.65
     },
 )
 
