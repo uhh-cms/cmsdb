@@ -15,10 +15,10 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v11 import campaign_run3_2022_preEE_na
 # inclusive (MadGraph)
 # GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22wmLHEGS&dataset=DYJetsToLL_M-50&nanoaod_version=v11  # noqa  # noqa
 cpn.add_dataset(
-    name="dy_lep_m50_madgraph",
+    name="dy_m50toinf_madgraph",
     id=14679260,
     is_data=False,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/DYJetsToLL_M-50_TuneCP5_13p6TeV-madgraphMLM-pythia8/Run3Summer22NanoAODv11-forPOG_126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
     ],
@@ -29,10 +29,10 @@ cpn.add_dataset(
 # inclusive (aMC@NLO)
 # GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22wmLHEGS&dataset=DYto2L-2Jets_MLL-50&nanoaod_version=v11  # noqa  # noqa
 cpn.add_dataset(
-    name="dy_lep_m50_amcatnlo",
+    name="dy_m50toinf_amcatnlo",
     id=14637757,
     is_data=False,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
     ],

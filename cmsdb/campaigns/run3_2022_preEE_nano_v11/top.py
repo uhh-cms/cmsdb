@@ -247,7 +247,7 @@ cpn.add_dataset(
 
 # t-channel (top)
 cpn.add_dataset(
-    name="st_tchannel_t_powheg",
+    name="st_tchannel_t_4f_powheg",
     id=14635077,
     is_data=False,
     processes=[procs.st_tchannel_t],
@@ -264,7 +264,7 @@ cpn.add_dataset(
 
 # t-channel (anti-top)
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg",
+    name="st_tchannel_tbar_4f_powheg",
     id=14619151,
     is_data=False,
     processes=[procs.st_tchannel_tbar],

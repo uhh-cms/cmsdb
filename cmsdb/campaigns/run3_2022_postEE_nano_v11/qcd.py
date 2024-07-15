@@ -224,10 +224,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_pt3200_pythia",
+    name="qcd_pt3200toinf_pythia",
     id=14645371,
     is_data=False,
-    processes=[procs.qcd_pt3200],
+    processes=[procs.qcd_pt3200toinf],
     keys=[
         "/QCD_PT-3200_TuneCP5_13p6TeV_pythia8/Run3Summer22EENanoAODv11-126X_mcRun3_2022_realistic_postEE_v1_ext1-v1/NANOAODSIM",  # noqa
     ],
@@ -377,10 +377,10 @@ cpn.add_dataset(
 # )
 
 cpn.add_dataset(
-    name="qcd_mu_pt1000_pythia",
+    name="qcd_mu_pt1000toinf_pythia",
     id=14687958,
     is_data=False,
-    processes=[procs.qcd_mu_pt1000],
+    processes=[procs.qcd_mu_pt1000toinf],
     keys=[
         "/QCD_PT-1000_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22EENanoAODv11-126X_mcRun3_2022_realistic_postEE_v1-v1/NANOAODSIM",  # noqa
     ],

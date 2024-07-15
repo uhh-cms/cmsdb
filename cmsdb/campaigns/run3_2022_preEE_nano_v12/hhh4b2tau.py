@@ -4,7 +4,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 
 # SM sample
 cpn.add_dataset(
-    name="hhh4b2tau_c3_0_d4_0_madgraph",
+    name="hhh4b2tau_c3_0_d4_0_amcatnlo",
     id=14791536,
     processes=[procs.hhh_ggf_4b2tau],
     keys=[
