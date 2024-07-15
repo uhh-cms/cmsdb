@@ -65,11 +65,11 @@ class TestCampaigns(unittest.TestCase):
                 self.assertTrue(campaign_inst.has_aux("version"))
                 self.assertTrue(campaign_inst.has_aux("postfix"))
                 # field types
-                self.assertIsInstance(campaign_inst.tier, str)
-                self.assertIsInstance(campaign_inst.run, int)
-                self.assertIsInstance(campaign_inst.year, int)
-                self.assertIsInstance(campaign_inst.version, int)
-                self.assertIsInstance(campaign_inst.postfix, str)
+                self.assertIsInstance(campaign_inst.x.tier, str)
+                self.assertIsInstance(campaign_inst.x.run, int)
+                self.assertIsInstance(campaign_inst.x.year, int)
+                self.assertIsInstance(campaign_inst.x.version, int)
+                self.assertIsInstance(campaign_inst.x.postfix, str)
 
     def single_dataset_test(self, campaign_inst, dataset_inst):
         # check existence of attributes
