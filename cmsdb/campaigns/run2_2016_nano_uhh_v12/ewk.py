@@ -412,9 +412,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_zqq_zll_m4toinf_amcatnlo",
+    name="zz_zqq_zll_amcatnlo",
     id=14284244,
-    processes=[procs.zz_zqq_zll_m4toinf],
+    processes=[procs.zz_zqq_zll],
     keys=[
         "/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
@@ -422,14 +422,11 @@ cpn.add_dataset(
     n_events=13740600,
 )
 
-# looking at the generator config:
-# https://raw.githubusercontent.com/cms-sw/genproductions/ce68f8a7ab05f530e0a99124088c08d1cc2bf355/bin/Powheg/production/2017/13TeV/ZZ/ZZ_2L2NU_NNPDF31_13TeV.input  # noqa
-# it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
-# therefore the corresponding process is with the "_m4" suffix
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zll_znunu_m4toinf_powheg",
+    name="zz_zll_znunu_powheg",
     id=14212205,
-    processes=[procs.zz_zll_znunu_m4toinf],
+    processes=[procs.zz_zll_znunu],
     keys=[
         "/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -437,14 +434,11 @@ cpn.add_dataset(
     n_events=15928000,
 )
 
-# looking at the generator config:
-# https://raw.githubusercontent.com/cms-sw/genproductions/ce68f8a7ab05f530e0a99124088c08d1cc2bf355/bin/Powheg/production/2017/13TeV/ZZ/ZZ_4L_NNPDF31_13TeV.input  # noqa
-# it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
-# therefore the corresponding process is with the "_m4" suffix
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zll_zll_m4toinf_powheg",
+    name="zz_zll_zll_powheg",
     id=14344450,
-    processes=[procs.zz_zll_zll_m4toinf],
+    processes=[procs.zz_zll_zll],
     keys=[
         "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -487,14 +481,11 @@ cpn.add_dataset(
     n_events=7584000,
 )
 
-# looking at the generator config:
-# https://github.com/cms-sw/genproductions/blob/2422e1837f93f875c54f8ace0f02d3dc962eca41/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/WZTo3LNu01j_5f_NLO_FXFX/WZTo3LNu01j_5f_NLO_FXFX_run_card.dat  # noqa
-# it seems that there is a lepton mass cut of 4 GeV for leptons from Z, like in the ZZTo2Q2L channel
-# therefore the corresponding process is with the "_m4" suffix
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="wz_wlnu_zll_m4toinf_amcatnlo",
+    name="wz_wlnu_zll_amcatnlo",
     id=14212844,
-    processes=[procs.wz_wlnu_zll_m4toinf],
+    processes=[procs.wz_wlnu_zll],
     keys=[
         "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
     ],
@@ -502,10 +493,11 @@ cpn.add_dataset(
     n_events=10441724,
 )
 
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="wz_wqq_zll_m4toinf_amcatnlo",
+    name="wz_wqq_zll_amcatnlo",
     id=14283305,
-    processes=[procs.wz_wqq_zll_m4toinf],
+    processes=[procs.wz_wqq_zll],
     keys=[
         "/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv12-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],

@@ -43,13 +43,12 @@ __all__ = [
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
     "zz",
-    "zz_zqq_zll_m4toinf", "zz_zll_znunu_m4toinf", "zz_zll_zll_m4toinf", "zz_zqq_zqq", "zz_znunu_zqq",
-    "wz", "wz_wlnu_zll_m4toinf", "wz_wqq_zll_m4toinf", "wz_wlnu_zqq",
+    "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
+    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
     "vvv",
     "zzz", "wzz", "wwz", "www",
-
 ]
 
 
@@ -57,6 +56,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
+from cmsdb.util import multiply_xsecs
 
 
 #
@@ -922,7 +922,6 @@ vv = Process(
 
 # ZZ 13 TeV xsec values at nNNLO from
 # https://link.springer.com/article/10.1007/JHEP03(2019)070#preview, table 3
-
 zz = vv.add_process(
     name="zz",
     id=8100,
@@ -936,68 +935,34 @@ zz = vv.add_process(
     },
 )
 
-# based on GenXSecAnalyzer
-# for ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000  # noqa
-zz_zqq_zll_m4toinf = zz.add_process(
-    name="zz_zqq_zll_m4toinf",
+zz_zqq_zll = zz.add_process(
+    name="zz_zqq_zll",
     id=8110,
-    xsecs={
-        13: Number(3.697, {"tot": 0.002713}),
-    },
+    xsecs=multiply_xsecs(zz, const.br_zz.llqq),
 )
 
-# looking at the generator config:
-# https://raw.githubusercontent.com/cms-sw/genproductions/ce68f8a7ab05f530e0a99124088c08d1cc2bf355/bin/Powheg/production/2017/13TeV/ZZ/ZZ_2L2NU_NNPDF31_13TeV.input  # noqa
-# it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
-# therefore values from GenXSecAnalyzer
-# for ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-zz_zll_znunu_m4toinf = zz.add_process(
-    name="zz_zll_znunu_m4toinf",
+zz_zll_znunu = zz.add_process(
+    name="zz_zll_znunu",
     id=8120,
-    xsecs={
-        13: Number(0.9738, {"tot": 0.0009971}),
-    },
+    xsecs=multiply_xsecs(zz, const.br_zz.llnunu),
 )
 
-# looking at the generator config:
-# https://raw.githubusercontent.com/cms-sw/genproductions/ce68f8a7ab05f530e0a99124088c08d1cc2bf355/bin/Powheg/production/2017/13TeV/ZZ/ZZ_4L_NNPDF31_13TeV.input  # noqa
-# it seems that there is a lepton mass cut of 4 GeV, like in the ZZTo2Q2L channel
-# therefore values from GenXSecAnalyzer
-# from ZZTo4L_TuneCP5_13TeV_powheg_pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-zz_zll_zll_m4toinf = zz.add_process(
-    name="zz_zll_zll_m4toinf",
+zz_zll_zll = zz.add_process(
+    name="zz_zll_zll",
     id=8130,
-    xsecs={
-        13: Number(1.325, {"tot": 0.00122}),
-    },
+    xsecs=multiply_xsecs(zz, const.br_zz.llll),
 )
 
-# no additional cut found in generator card in MCM:
-# dataset: /ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2/MINIAODSIM  # noqa
-# therefore, value obtained from branching ratio.
-# Log for GenXSecAnalyzer of
-# for ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) -> value : Number(3.287, {"tot": 0.006298})
-# also available, but not used here
 zz_zqq_zqq = zz.add_process(
     name="zz_zqq_zqq",
     id=8140,
-    xsecs={
-        13: zz.get_xsec(13) * const.br_zz.qqqq,  # value around 7.8
-    },
+    xsecs=multiply_xsecs(zz, const.br_zz.qqqq),
 )
 
-# no branching ratio Z->nunu available, so taking values from GenXSecAnalyzer
-# for ZZTo2Nu2Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000  # noqa
 zz_znunu_zqq = zz.add_process(
     name="zz_znunu_zqq",
     id=8150,
-    xsecs={
-        13: Number(4.557, {"tot": 0.004843}),
-    },
+    xsecs=multiply_xsecs(zz, const.br_zz.qqnunu),
 )
 
 # WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
@@ -1027,29 +992,16 @@ wz = vv.add_process(
     },
 )
 
-# looking at the generator config:
-# https://github.com/cms-sw/genproductions/blob/2422e1837f93f875c54f8ace0f02d3dc962eca41/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/WZTo3LNu01j_5f_NLO_FXFX/WZTo3LNu01j_5f_NLO_FXFX_run_card.dat  # noqa
-# it seems that there is a lepton mass cut of 4 GeV for leptons from Z, like in the ZZTo2Q2L channel
-# therefore values from GenXSecAnalyzer
-# for WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-wz_wlnu_zll_m4toinf = wz.add_process(
-    name="wz_wlnu_zll_m4toinf",
+wz_wlnu_zll = wz.add_process(
+    name="wz_wlnu_zll",
     id=8210,
-    xsecs={
-        13: Number(5.218, {"tot": 0.00525}),
-    },
+    xsecs=multiply_xsecs(zz, const.br_w.lep * const.br_z.clep),
 )
 
-# based on GenXSecAnalyzer
-# for WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000  # noqa
-wz_wqq_zll_m4toinf = wz.add_process(
-    name="wz_wqq_zll_m4toinf",
+wz_wqq_zll = wz.add_process(
+    name="wz_wqq_zll",
     id=8220,
-    xsecs={
-        13: Number(6.431, {"tot": 0.007851}),
-    },
+    xsecs=multiply_xsecs(zz, const.br_w.had * const.br_z.clep),
 )
 
 

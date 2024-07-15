@@ -538,6 +538,7 @@ cpn.add_dataset(
 #
 
 # ZZ
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
     name="zz_pythia",
     id=14241945,
@@ -549,10 +550,11 @@ cpn.add_dataset(
     n_events=3526000,
 )
 
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zqq_zll_m4toinf_pythia",
+    name="zz_zqq_zll_pythia",
     id=14284213,
-    processes=[procs.zz_zqq_zll_m4toinf],
+    processes=[procs.zz_zqq_zll],
     keys=[
         "/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -560,10 +562,11 @@ cpn.add_dataset(
     n_events=29357938,
 )
 
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zll_znunu_m4toinf_pythia",
+    name="zz_zll_znunu_pythia",
     id=14196326,
-    processes=[procs.zz_zll_znunu_m4toinf],
+    processes=[procs.zz_zll_znunu],
     keys=[
         "/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -571,6 +574,7 @@ cpn.add_dataset(
     n_events=56886000,
 )
 
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
     name="zz_znunu_zqq_pythia",
     id=14245915,
@@ -582,6 +586,7 @@ cpn.add_dataset(
     n_events=19813764,
 )
 
+# there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
     name="zz_zqq_zqq_pythia",
     id=14373150,
@@ -594,9 +599,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_zll_zll_m4toinf_powheg",
+    name="zz_zll_zll_powheg",
     id=14241106,
-    processes=[procs.zz_zll_zll_m4toinf],
+    processes=[procs.zz_zll_zll],
     keys=[
         "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -617,9 +622,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zll_m4toinf_pythia",
+    name="wz_wlnu_zll_pythia",
     id=14253723,
-    processes=[procs.wz_wlnu_zll_m4toinf],
+    processes=[procs.wz_wlnu_zll],
     keys=[
         "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -628,9 +633,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wqq_zll_m4toinf_pythia",
+    name="wz_wqq_zll_pythia",
     id=14284121,
-    processes=[procs.wz_wqq_zll_m4toinf],
+    processes=[procs.wz_wqq_zll],
     keys=[
         "/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
