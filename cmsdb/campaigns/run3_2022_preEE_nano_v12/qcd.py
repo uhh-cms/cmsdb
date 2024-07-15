@@ -248,3 +248,163 @@ cpn.add_dataset(
     n_files=26,
     n_events=2947774,
 )
+
+
+#
+# QCD (madgraph, HT-binned, 4 jets)
+#
+
+cpn.add_dataset(
+    name="qcd_ht40to70_madgraph",
+    id=14790741,
+    processes=[procs.qcd_ht40to70],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=36,
+            n_events=19200453,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht70to100_madgraph",
+    id=14796537,
+    processes=[procs.qcd_ht70to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=122,
+            n_events=18852962,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht100to200_madgraph",
+    id=14791746,
+    processes=[procs.qcd_ht100to200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-100to200_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=84,
+            n_events=19039024,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht200to400_madgraph",
+    id=14791211,
+    processes=[procs.qcd_ht200to400],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=113,
+            n_events=20642715,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht400to600_madgraph",
+    id=14791899,
+    processes=[procs.qcd_ht400to600],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-400to600_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=99,
+            n_events=19602817,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht600to800_madgraph",
+    id=14792475,
+    processes=[procs.qcd_ht600to800],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-600to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=118,
+            n_events=19028458,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht800to1000_madgraph",
+    id=14791019,
+    processes=[procs.qcd_ht800to1000],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-800to1000_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=105,
+            n_events=21602068,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht1000to1200_madgraph",
+    id=14791276,
+    processes=[procs.qcd_ht1000to1200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-1000to1200_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=67,
+            n_events=20642169,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht1200to1500_madgraph",
+    id=14792140,
+    processes=[procs.qcd_ht1200to1500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-1200to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=135,
+            n_events=21112774,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht1500to2000_madgraph",
+    id=14791093,
+    processes=[procs.qcd_ht1500to2000],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-1500to2000_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=88,
+            n_events=21191630,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="qcd_ht2000_madgraph",
+    id=14792291,
+    processes=[procs.qcd_ht2000],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD-4Jets_HT-2000_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=110,
+            n_events=18132719,
+        ),
+    ),
+)

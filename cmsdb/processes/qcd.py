@@ -198,9 +198,18 @@ qcd_ht2000toinf = qcd.add_process(
 # QCD HT-binned (Run 3)
 #
 
+qcd_ht40to70 = qcd.add_process(
+    name="qcd_ht40to70",
+    id=31010,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13.6: Number(311400000, {"tot": 843600}),
+    },
+)
+
 qcd_ht70to100 = qcd.add_process(
     name="qcd_ht70to100",
-    id=31010,
+    id=31011,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8
         13.6: Number(58500000, {"tot": 167400}),
@@ -211,7 +220,7 @@ qcd_ht70to100 = qcd.add_process(
 
 qcd_ht200to400 = qcd.add_process(
     name="qcd_ht200to400",
-    id=31011,
+    id=31012,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8
         13.6: Number(1961000, {"tot": 5862}),
@@ -220,7 +229,7 @@ qcd_ht200to400 = qcd.add_process(
 
 qcd_ht400to600 = qcd.add_process(
     name="qcd_ht400to600",
-    id=31012,
+    id=31013,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-400to600_TuneCP5_13p6TeV_madgraphMLM-pythia8
         13.6: Number(95620, {"tot": 289.3}),
@@ -229,7 +238,7 @@ qcd_ht400to600 = qcd.add_process(
 
 qcd_ht600to800 = qcd.add_process(
     name="qcd_ht600to800",
-    id=31013,
+    id=31014,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-600to800_TuneCP5_13p6TeV_madgraphMLM-pythia8
         13.6: Number(13540, {"tot": 41.11}),
@@ -238,7 +247,7 @@ qcd_ht600to800 = qcd.add_process(
 
 qcd_ht800to1000 = qcd.add_process(
     name="qcd_ht800to1000",
-    id=31014,
+    id=31015,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-800to1000_TuneCP5_13p6TeV_madgraphMLM-pythia8
         13.6: Number(3033, {"tot": 9.206}),
@@ -247,7 +256,7 @@ qcd_ht800to1000 = qcd.add_process(
 
 qcd_ht1000to1200 = qcd.add_process(
     name="qcd_ht1000to1200",
-    id=31015,
+    id=31016,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-1000to1200_TuneCP5_13p6TeV_madgraphMLM-pythia8
         13.6: Number(883.7, {"tot": 2.69}),
@@ -256,7 +265,7 @@ qcd_ht1000to1200 = qcd.add_process(
 
 qcd_ht1200to1500 = qcd.add_process(
     name="qcd_ht1200to1500",
-    id=31016,
+    id=31017,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=QCD-4Jets_HT-1200to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8
         13.6: Number(383.5	, {"tot": 1.168	}),
