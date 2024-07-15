@@ -28,16 +28,17 @@ campaign_run2_2016_nano_uhh_v12 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
-        "year": 2016,
         "run": 2,
+        "year": 2016,
         "version": 12,
-        "vfp": "post",
+        "postfix": "",
         "custom": {
             "name": "run2_2016_nano_uhh_v12",
             "creator": "uhh",
             "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/nprouvos/nano_uhh_v12/merged_2048.0MB",  # noqa
         },
     },
+    tags={"postVFP"},
 )
 
 

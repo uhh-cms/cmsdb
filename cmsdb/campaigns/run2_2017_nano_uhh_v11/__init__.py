@@ -28,9 +28,10 @@ campaign_run2_2017_nano_uhh_v11 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
-        "year": 2017,
         "run": 2,
+        "year": 2017,
         "version": 11,
+        "postfix": "",
         "custom": {
             "name": "run2_2017_nano_uhh_v11",
             "creator": "uhh",

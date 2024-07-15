@@ -28,16 +28,17 @@ campaign_run2_2016_HIPM_nano_uhh_v12 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
-        "year": 2016,
         "run": 2,
-        "vfp": "pre",
+        "year": 2016,
         "version": 12,
+        "postfix": "APV",
         "custom": {
             "name": "run2_2016_HIPM_nano_uhh_v12",
             "creator": "uhh",
             "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/mrieger/nanogen_store/CreateNano/config_16pre/prod2",  # noqa
         },
     },
+    tags={"preVFP", "APV", "HIPM"},
 )
 
 # trailing imports to load datasets

@@ -23,10 +23,11 @@ cpn = campaign_run2_2018_nano_v9 = Campaign(
     ecm=13,
     bx=25,
     aux={
-        "year": 2018,
         "tier": "NanoAOD",
         "run": 2,
-        "version": "9",
+        "year": 2018,
+        "version": 9,
+        "postfix": "",
     },
 )
 

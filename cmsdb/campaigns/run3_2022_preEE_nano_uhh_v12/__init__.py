@@ -25,14 +25,15 @@ campaign_run3_2022_preEE_nano_uhh_v12 = Campaign(
         "tier": "NanoAOD",
         "run": 3,
         "year": 2022,
-        "postfix": "pre",
         "version": 12,
+        "postfix": "",
         "custom": {
             "name": "run3_2022_preEE_nano_uhh_v12",
             "creator": "uhh",
             "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/nprouvos/nanogen_store/MergeNano/config_22pre_v12/prod3",  # noqa
         },
     },
+    tags={"preEE"},
 )
 
 
