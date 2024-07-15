@@ -17,8 +17,8 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
-    "ttz", "ttz_llnunu_m10",
-    "ttw", "ttw_lnu", "ttw_qq",
+    "ttz", "ttz_zqq", "ttz_zlep_m10toinf",
+    "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
 ]
@@ -254,7 +254,14 @@ st_schannel = st.add_process(
             "mtop": (0.23, 0.22),
             "E_beam": 0.01,
         }),
-        # TODO: 13.6 TeV xsecs
+        13.6: Number(7.246, {
+            "scale": (0.059, 0.043),
+        }),
+        # only scale uncertainty is given in the twiki
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+        # TODO: update after final calculations
+        # no value for 13.6 in NLO twiki
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36
     },
 )
 
@@ -281,6 +288,8 @@ st_schannel_t = st_schannel.add_process(
             "E_beam": 0.01,
         }),
         # TODO: 13.6 TeV xsecs
+        # not available yet in
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
     },
 )
 
@@ -307,6 +316,8 @@ st_schannel_tbar = st_schannel.add_process(
             "E_beam": 0.01,
         }),
         # TODO: 13.6 TeV xsecs
+        # not available yet in
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
     },
 )
 
@@ -326,6 +337,11 @@ st_schannel_tbar_had = st_schannel_tbar.add_process(
 st.set_xsec(
     13,
     st_tchannel.get_xsec(13) + st_twchannel.get_xsec(13) + st_schannel.get_xsec(13),
+)
+
+st.set_xsec(
+    13.6,
+    st_tchannel.get_xsec(13.6) + st_twchannel.get_xsec(13.6) + st_schannel.get_xsec(13.6),
 )
 
 
@@ -362,14 +378,22 @@ ttz = ttv.add_process(
 # based on GenXSecAnalyzer
 # for TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-ttz_llnunu_m10 = ttz.add_process(
-    name="ttz_llnunu_m10",  # non-hadronically decaying Z
+
+# zlep = zll or znunu, both decays present in samples
+ttz_zlep_m10toinf = ttz.add_process(
+    name="ttz_zlep_m10toinf",  # non-hadronically decaying Z
     id=3110,
     xsecs={
         13: Number(0.2439, {
             "total": 0.0002995,
         }),
     },
+)
+
+ttz_zqq = ttz.add_process(
+    name="ttz_zqq",
+    id=3120,
+    xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
 
 ttw = ttv.add_process(
@@ -395,14 +419,14 @@ ttw = ttv.add_process(
 for ecm in (13, 14):
     ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
 
-ttw_lnu = ttw.add_process(
-    name="ttw_lnu",
+ttw_wlnu = ttw.add_process(
+    name="ttw_wlnu",
     id=3210,
     xsecs=multiply_xsecs(ttw, const.br_w.lep),
 )
 
-ttw_qq = ttw.add_process(
-    name="ttw_qq",
+ttw_wqq = ttw.add_process(
+    name="ttw_wqq",
     id=3220,
     xsecs=multiply_xsecs(ttw, const.br_w.had),
 )
@@ -428,6 +452,11 @@ ttzz = ttvv.add_process(
             "scale": (0.052j, 0.090j),
             "pdf": 0.026j,
         }),
+        # 13.6 from GenXSecAnalyzer:
+        # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        13.6: Number(0.001562, {
+            "tot": 0.0000003675,  # xsdb Number(0.001579, {"tot": 0.000003248})
+        }),
     },
 )
 
@@ -449,6 +478,11 @@ ttww = ttvv.add_process(
         13: Number(8380E-6, {  # Calculation performed in 5FS
             "scale": (0.332j, 0.231j),
             "pdf": 0.030j,
+        }),
+        # 13.6 from GenXSecAnalyzer:
+        # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        13.6: Number(0.008165, {
+            "tot": 0.000002113,  # xsdb Number(0.008203, {"tot": 0.00001404})
         }),
     },
 )

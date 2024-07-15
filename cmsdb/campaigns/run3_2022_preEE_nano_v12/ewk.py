@@ -17,9 +17,9 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 
 # inclusive, LO, forPog
 cpn.add_dataset(
-    name="dy_lep_m50_for_pog_madgraph",
+    name="dy_m50toinf_for_pog_madgraph",
     id=14802794,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/DYJetsToLL_M-50_TuneCP5_13p6TeV-madgraphMLM-pythia8/Run3Summer22NanoAODv12-forPOG_130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -29,9 +29,9 @@ cpn.add_dataset(
 
 # inclusive, LO
 cpn.add_dataset(
-    name="dy_lep_m10to50_madgraph",
+    name="dy_m10to50_madgraph",
     id=14873228,
-    processes=[procs.dy_lep_m10to50],
+    processes=[procs.dy_m10to50],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -43,9 +43,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50_madgraph",
+    name="dy_m50toinf_madgraph",
     id=14810676,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -66,9 +66,9 @@ cpn.add_dataset(
 
 # jet-binned, LO
 cpn.add_dataset(
-    name="dy_lep_m50_1j_madgraph",
+    name="dy_m50toinf_1j_madgraph",
     id=14790810,
-    processes=[procs.dy_lep_m50_1j],
+    processes=[procs.dy_m50toinf_1j],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -80,9 +80,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50_2j_madgraph",
+    name="dy_m50toinf_2j_madgraph",
     id=14794042,
-    processes=[procs.dy_lep_m50_2j],
+    processes=[procs.dy_m50toinf_2j],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -94,9 +94,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50_3j_madgraph",
+    name="dy_m50toinf_3j_madgraph",
     id=14791238,
-    processes=[procs.dy_lep_m50_3j],
+    processes=[procs.dy_m50toinf_3j],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -108,9 +108,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50_4j_madgraph",
+    name="dy_m50toinf_4j_madgraph",
     id=14794840,
-    processes=[procs.dy_lep_m50_4j],
+    processes=[procs.dy_m50toinf_4j],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -125,9 +125,9 @@ cpn.add_dataset(
 # TODO: implement corresponding processes + xsecs
 # # ptll-binned, LO
 # cpn.add_dataset(
-#     name="dy_lep_m50_ptll100to200_madgraph",
+#     name="dy_m50toinf_ptll100to200_madgraph",
 #     id=14948737,
-#     processes=[procs.dy_lep_m50_ptll100to200],
+#     processes=[procs.dy_m50toinf_ptll100to200],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -139,9 +139,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_ptll200to400_madgraph",
+#     name="dy_m50toinf_ptll200to400_madgraph",
 #     id=14949443,
-#     processes=[procs.dy_lep_m50_ptll200to400],
+#     processes=[procs.dy_m50toinf_ptll200to400],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -153,9 +153,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_ptll400to600_madgraph",
+#     name="dy_m50toinf_ptll400to600_madgraph",
 #     id=14949288,
-#     processes=[procs.dy_lep_m50_ptll400to600],
+#     processes=[procs.dy_m50toinf_ptll400to600],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -167,9 +167,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_ptll600toinf_madgraph",
+#     name="dy_m50toinf_ptll600toinf_madgraph",
 #     id=14948747,
-#     processes=[procs.dy_lep_m50_ptll600toinf],
+#     processes=[procs.dy_m50toinf_ptll600toinf],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -183,9 +183,9 @@ cpn.add_dataset(
 
 # # ht-binned, LO
 # cpn.add_dataset(
-#     name="dy_lep_m4to50_ht40to70_madgraph",
+#     name="dy_m4to50_ht40to70_madgraph",
 #     id=14950532,
-#     processes=[procs.dy_lep_m4to50_ht40to70],
+#     processes=[procs.dy_m4to50_ht40to70],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -197,9 +197,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m4to50_ht70to100_madgraph",
+#     name="dy_m4to50_ht70to100_madgraph",
 #     id=14949534,
-#     processes=[procs.dy_lep_m4to50_ht70to100],
+#     processes=[procs.dy_m4to50_ht70to100],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -211,9 +211,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m4to50_ht400to800_madgraph",
+#     name="dy_m4to50_ht400to800_madgraph",
 #     id=14949799,
-#     processes=[procs.dy_lep_m4to50_ht400to800],
+#     processes=[procs.dy_m4to50_ht400to800],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -225,9 +225,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m4to50_ht800to1500_madgraph",
+#     name="dy_m4to50_ht800to1500_madgraph",
 #     id=14948706,
-#     processes=[procs.dy_lep_m4to50_ht800to1500],
+#     processes=[procs.dy_m4to50_ht800to1500],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -239,9 +239,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m4to50_ht1500to2500_madgraph",
+#     name="dy_m4to50_ht1500to2500_madgraph",
 #     id=14951014,
-#     processes=[procs.dy_lep_m4to50_ht1500to2500],
+#     processes=[procs.dy_m4to50_ht1500to2500],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -253,9 +253,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m4to50_ht2500toinf_madgraph",
+#     name="dy_m4to50_ht2500toinf_madgraph",
 #     id=14952243,
-#     processes=[procs.dy_lep_m4to50_ht2500toinf],
+#     processes=[procs.dy_m4to50_ht2500toinf],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -267,9 +267,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50to120_ht40to70_madgraph",
+#     name="dy_m50to120_ht40to70_madgraph",
 #     id=14817089,
-#     processes=[procs.dy_lep_m50to120_ht40to70],
+#     processes=[procs.dy_m50to120_ht40to70],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -281,9 +281,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50to120_ht70to100_madgraph",
+#     name="dy_m50to120_ht70to100_madgraph",
 #     id=14847021,
-#     processes=[procs.dy_lep_m50to120_ht70to100],
+#     processes=[procs.dy_m50to120_ht70to100],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -295,9 +295,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50to120_ht100to400_madgraph",
+#     name="dy_m50to120_ht100to400_madgraph",
 #     id=14813464,
-#     processes=[procs.dy_lep_m50to120_ht100to400],
+#     processes=[procs.dy_m50to120_ht100to400],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -311,9 +311,9 @@ cpn.add_dataset(
 
 # inclusive, NLO
 cpn.add_dataset(
-    name="dy_lep_m4to10_amcatnlo",
+    name="dy_m4to10_amcatnlo",
     id=14940403,
-    processes=[procs.dy_lep_m4to10],
+    processes=[procs.dy_m4to10],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -332,9 +332,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m10to50_amcatnlo",
+    name="dy_m10to50_amcatnlo",
     id=14803206,
-    processes=[procs.dy_lep_m10to50],
+    processes=[procs.dy_m10to50],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -353,9 +353,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50_amcatnlo",
+    name="dy_m50toinf_amcatnlo",
     id=14791972,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -376,9 +376,9 @@ cpn.add_dataset(
 
 # jet-binned, NLO
 cpn.add_dataset(
-    name="dy_lep_m50_0j_amcatnlo",
+    name="dy_m50toinf_0j_amcatnlo",
     id=14791116,
-    processes=[procs.dy_lep_m50_0j],
+    processes=[procs.dy_m50toinf_0j],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -390,9 +390,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50_1j_amcatnlo",
+    name="dy_m50toinf_1j_amcatnlo",
     id=14790681,
-    processes=[procs.dy_lep_m50_1j],
+    processes=[procs.dy_m50toinf_1j],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -404,9 +404,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50_2j_amcatnlo",
+    name="dy_m50toinf_2j_amcatnlo",
     id=14801013,
-    processes=[procs.dy_lep_m50_2j],
+    processes=[procs.dy_m50toinf_2j],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -421,9 +421,9 @@ cpn.add_dataset(
 # TODO: implement corresponding processes + xsecs
 # # ptll and jet-binned, NLO
 # cpn.add_dataset(
-#     name="dy_lep_m50_1j_ptll40to100_amcatnlo",
+#     name="dy_m50toinf_1j_ptll40to100_amcatnlo",
 #     id=14825993,
-#     processes=[procs.dy_lep_m50_1j_ptll40to100],
+#     processes=[procs.dy_m50toinf_1j_ptll40to100],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -435,9 +435,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_1j_ptll100to200_amcatnlo",
+#     name="dy_m50toinf_1j_ptll100to200_amcatnlo",
 #     id=14826169,
-#     processes=[procs.dy_lep_m50_1j_ptll100to200],
+#     processes=[procs.dy_m50toinf_1j_ptll100to200],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -449,9 +449,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_1j_ptll200to400_amcatnlo",
+#     name="dy_m50toinf_1j_ptll200to400_amcatnlo",
 #     id=14824736,
-#     processes=[procs.dy_lep_m50_1j_ptll200to400],
+#     processes=[procs.dy_m50toinf_1j_ptll200to400],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -463,9 +463,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_1j_ptll400to600_amcatnlo",
+#     name="dy_m50toinf_1j_ptll400to600_amcatnlo",
 #     id=14826052,
-#     processes=[procs.dy_lep_m50_1j_ptll400to600],
+#     processes=[procs.dy_m50toinf_1j_ptll400to600],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -477,9 +477,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_1j_ptll600toinf_amcatnlo",
+#     name="dy_m50toinf_1j_ptll600toinf_amcatnlo",
 #     id=14870369,
-#     processes=[procs.dy_lep_m50_1j_ptll600toinf],
+#     processes=[procs.dy_m50toinf_1j_ptll600toinf],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -491,9 +491,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_2j_ptll40to100_amcatnlo",
+#     name="dy_m50toinf_2j_ptll40to100_amcatnlo",
 #     id=14868304,
-#     processes=[procs.dy_lep_m50_2j_ptll40to100],
+#     processes=[procs.dy_m50toinf_2j_ptll40to100],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -505,9 +505,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_2j_ptll100to200_amcatnlo",
+#     name="dy_m50toinf_2j_ptll100to200_amcatnlo",
 #     id=14870830,
-#     processes=[procs.dy_lep_m50_2j_ptll100to200],
+#     processes=[procs.dy_m50toinf_2j_ptll100to200],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -519,9 +519,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_2j_ptll200to400_amcatnlo",
+#     name="dy_m50toinf_2j_ptll200to400_amcatnlo",
 #     id=14853119,
-#     processes=[procs.dy_lep_m50_2j_ptll200to400],
+#     processes=[procs.dy_m50toinf_2j_ptll200to400],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -533,9 +533,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_2j_ptll400to600_amcatnlo",
+#     name="dy_m50toinf_2j_ptll400to600_amcatnlo",
 #     id=14827368,
-#     processes=[procs.dy_lep_m50_2j_ptll400to600],
+#     processes=[procs.dy_m50toinf_2j_ptll400to600],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[
@@ -547,9 +547,9 @@ cpn.add_dataset(
 #     ),
 # )
 # cpn.add_dataset(
-#     name="dy_lep_m50_2j_ptll600toinf_amcatnlo",
+#     name="dy_m50toinf_2j_ptll600toinf_amcatnlo",
 #     id=14824689,
-#     processes=[procs.dy_lep_m50_2j_ptll600toinf],
+#     processes=[procs.dy_m50toinf_2j_ptll600toinf],
 #     info=dict(
 #         nominal=DatasetInfo(
 #             keys=[

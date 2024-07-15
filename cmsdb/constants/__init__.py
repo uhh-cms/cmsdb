@@ -9,6 +9,7 @@ from scinum import Number, Correlation, combine_uncertainties
 from cmsdb.util import DotDict
 
 # misc
+inf = float("inf")
 n_leps = Number(3)
 
 # Z and W branching ratios and masses from

@@ -103,9 +103,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_ht2000_madgraph",
+    name="qcd_ht2000toinf_madgraph",
     id=14299583,
-    processes=[procs.qcd_ht2000],
+    processes=[procs.qcd_ht2000toinf],
     keys=[
         "/QCD_HT2000toInf_TuneCP5_PSWeights_13TeV-madgraph-pythia8/RunIISummer20UL18NanoAODv9-20UL18JMENano_106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],

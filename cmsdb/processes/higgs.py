@@ -67,7 +67,7 @@ Single Higgs production channels:
 - 12xxx: h_vbf
 - 13xxx: vh
 - 14xxx: zh
-- 15xxx: ggzh
+- 15xxx: zh_gg
 - 16xxx: wh
 - 17xxx: wph
 - 18xxx: wmh
@@ -459,8 +459,6 @@ w_decay_map = DotDict.wrap({
 # Single H (inclusive)
 #
 ####################################################################################################
-
-AAAAA = Process("A", 12452513)
 
 h = Process(
     name="h",
@@ -913,6 +911,13 @@ zh_gg = vh.add_process(
             "scale": (0.251j, 0.189j),
             "pdf": 0.019j,
         }),
+        13.6: Number(0.1360, {  # value for mH=125 GeV
+            "scale": (0.037j, 0.032j),
+            "pdf": 0.016j,
+        }),  # TODO: only preliminary
+        # unclear if error (originally for ZH) is also applicable here.
+        # only in original presentation:
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
     },
     aux={"production_mode_parent": vh},
 )
@@ -1135,6 +1140,8 @@ wph = wh.add_process(
             "scale": (0.004j, 0.007j),
             "pdf": 0.018j,
         }),  # TODO: only preliminary
+        # only in original presentation:
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
     },
     aux={"production_mode_parent": wh},
 )
@@ -1237,6 +1244,8 @@ wmh = wh.add_process(
             "scale": (0.004j, 0.007j),
             "pdf": 0.018j,
         }),  # TODO: only preliminary
+        # only in original presentation:
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
     },
     aux={"production_mode_parent": wh},
 )
@@ -1390,7 +1399,7 @@ bbh = h.add_process(
             "scale_pdf": (0.202j, 0.239j),
         }),
         13.6: Number(0.5269, {  # value for mH=125 GeV
-            "scale_pdf": (0.201j, 0.240),
+            "scale_pdf": (0.201j, 0.240j),
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
@@ -1441,7 +1450,7 @@ thq = h.add_process(
             "pdf": 3.7j,
         }),
         13.6: Number(8.362E-02, {  # value for mH=125 GeV
-            "scale": (0.065j, 0.148),
+            "scale": (0.065j, 0.148j),
             "pdf": 3.7j,
         }),  # TODO: only preliminary
     },
@@ -1458,7 +1467,7 @@ thb = h.add_process(
             "pdf": 2.2j,
         }),
         13.6: Number(3.068E-03, {  # value for mH=125 GeV
-            "scale": (0.024j, 0.017),
+            "scale": (0.024j, 0.017j),
             "pdf": 2.2j,
         }),  # TODO: only preliminary
     },
