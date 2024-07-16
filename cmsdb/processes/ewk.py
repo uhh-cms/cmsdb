@@ -38,6 +38,11 @@ __all__ = [
     "w_taunu", "w_munu",
     "w_lnu",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
+    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500",
+    "w_lnu_mlnu0to120_ht40to100", "w_lnu_mlnu0to120_ht100to400", "w_lnu_mlnu0to120_ht400to800",
+    "w_lnu_mlnu0to120_ht800to1500", "w_lnu_mlnu0to120_ht1500to2500", "w_lnu_mlnu0to120_ht2500",
+    "w_lnu_mlnu120_ht40to100", "w_lnu_mlnu120_ht100to400", "w_lnu_mlnu120_ht400to800",
+    "w_lnu_mlnu120_ht800to1500", "w_lnu_mlnu120_ht1500to2500", "w_lnu_mlnu120_ht2500",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
@@ -861,6 +866,118 @@ w_lnu_ht2500toinf = w_lnu.add_process(
     id=6180,
     xsecs={
         13: Number(0.02624, {"tot": 0.00002981}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+)
+
+# Run 3 m_lnu 0-120 GeV, Ht binned, LO xs
+
+w_lnu_mlnu0to120_ht40to100 = w_lnu.add_process(
+    name="w_lnu_mlnu0to120_ht40to100",
+    id=6190,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(4254, {"tot": 12.08}),
+    },
+)
+
+w_lnu_mlnu0to120_ht100to400 = w_lnu.add_process(
+    name="w_lnu_mlnu0to120_ht100to400",
+    id=6200,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(1626, {"tot": 4.823	}),
+    },
+)
+
+w_lnu_mlnu0to120_ht400to800 = w_lnu.add_process(
+    name="w_lnu_mlnu0to120_ht400to800",
+    id=6210,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(59.99, {"tot": 0.1803}),
+    },
+)
+
+w_lnu_mlnu0to120_ht800to1500 = w_lnu.add_process(
+    name="w_lnu_mlnu0to120_ht800to1500",
+    id=6220,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(6.23, {"tot": 0.01876}),
+    },
+)
+
+w_lnu_mlnu0to120_ht1500to2500 = w_lnu.add_process(
+    name="w_lnu_mlnu0to120_ht1500to2500",
+    id=6230,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(0.4477, {"tot": 0.00135}),
+    },
+)
+
+w_lnu_mlnu0to120_ht2500 = w_lnu.add_process(
+    name="w_lnu_mlnu0to120_ht2500",
+    id=6240,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(0.03075, {"tot": 0.00009258}),
+    },
+)
+
+# Run 3 m_lnu 120 GeV, Ht binned, LO xs
+
+w_lnu_mlnu120_ht40to100 = w_lnu.add_process(
+    name="w_lnu_mlnu120_ht40to100",
+    id=6250,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(20.56, {"tot": 0.05885}),
+    },
+)
+
+w_lnu_mlnu120_ht100to400 = w_lnu.add_process(
+    name="w_lnu_mlnu120_ht100to400",
+    id=6260,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(10.19, {"tot": 0.03042}),
+    },
+)
+
+w_lnu_mlnu120_ht400to800 = w_lnu.add_process(
+    name="w_lnu_mlnu120_ht400to800",
+    id=6270,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(0.5239, {"tot": 0.001584}),
+    },
+)
+
+w_lnu_mlnu120_ht800to1500 = w_lnu.add_process(
+    name="w_lnu_mlnu120_ht800to1500",
+    id=6280,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(0.06255, {"tot": 0.0001893}),
+    },
+)
+
+w_lnu_mlnu120_ht1500to2500 = w_lnu.add_process(
+    name="w_lnu_mlnu120_ht1500to2500",
+    id=6290,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(0.005066, {"tot": 0.0000153}),
+    },
+)
+
+w_lnu_mlnu120_ht2500 = w_lnu.add_process(
+    name="w_lnu_mlnu120_ht2500",
+    id=6300,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
+        13: Number(0.0003788, {"tot": 0.000001143}),
     },
 )
 

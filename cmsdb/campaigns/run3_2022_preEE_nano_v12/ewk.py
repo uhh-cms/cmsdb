@@ -579,6 +579,180 @@ cpn.add_dataset(
     n_events=84739011,
 )
 
+# m_lnu 0-120 GeV, Ht binned
+
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht40to100_madgraph",
+    id=14848710,
+    processes=[procs.w_lnu_mlnu0to120_ht40to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-0to120_HT-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=1429,
+            n_events=146630714,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht100to400_madgraph",
+    id=14846457,
+    processes=[procs.w_lnu_mlnu0to120_ht100to400],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-0to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=606,
+            n_events=100572216,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht400to800_madgraph",
+    id=14814846,
+    processes=[procs.w_lnu_mlnu0to120_ht400to800],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-0to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=111,
+            n_events=13533118,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht800to1500_madgraph",
+    id=14892501,
+    processes=[procs.w_lnu_mlnu0to120_ht800to1500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-0to120_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=41,
+            n_events=1432995,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht1500to2500_madgraph",
+    id=14892061,
+    processes=[procs.w_lnu_mlnu0to120_ht1500to2500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-0to120_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=31,
+            n_events=477881,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht2500_madgraph",
+    id=14892471,
+    processes=[procs.w_lnu_mlnu0to120_ht2500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-0to120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=31,
+            n_events=514983,
+        ),
+    ),
+)
+
+# m_lnu 120 GeV, Ht binned
+
+cpn.add_dataset(
+    name="w_lnu_mlnu120_ht40to100_madgraph",
+    id=14881688,
+    processes=[procs.w_lnu_mlnu120_ht40to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-120_HT-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=48,
+            n_events=4532184,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu120_ht100to400_madgraph",
+    id=14881523,
+    processes=[procs.w_lnu_mlnu120_ht100to400],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=39,
+            n_events=2132100,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu120_ht400to800_madgraph",
+    id=14881746,
+    processes=[procs.w_lnu_mlnu120_ht400to800],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=11,
+            n_events=506334,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu120_ht800to1500_madgraph",
+    id=14881792,
+    processes=[procs.w_lnu_mlnu120_ht800to1500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-120_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=22,
+            n_events=483978,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu120_ht1500to2500_madgraph",
+    id=14881353,
+    processes=[procs.w_lnu_mlnu120_ht1500to2500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-120_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=19,
+            n_events=486619,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="w_lnu_mlnu120_ht2500_madgraph",
+    id=14881829,
+    processes=[procs.w_lnu_mlnu120_ht2500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_MLNu-120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=29,
+            n_events=489635,
+        ),
+    ),
+)
+
 #
 # Diboson
 #
