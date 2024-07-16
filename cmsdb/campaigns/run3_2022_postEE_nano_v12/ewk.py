@@ -432,6 +432,152 @@ cpn.add_dataset(
     ),
 )
 
+# DY m_ll 4-50 GeV, Ht binned
+
+cpn.add_dataset(
+    name="dy_lep_m4to50_ht40to70_madgraph",
+    id=14950532,
+    processes=[procs.dy_lep_m4to50_ht40to70],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-4to50_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=1706,
+            n_events=332696345,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m4to50_ht70to100_madgraph",
+    id=14949534,
+    processes=[procs.dy_lep_m4to50_ht70to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-4to50_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=1099,
+            n_events=201751012,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m4to50_ht400to800_madgraph",
+    id=14949799,
+    processes=[procs.dy_lep_m4to50_ht400to800],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-4to50_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=77,
+            n_events=4520981,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m4to50_ht800to1500_madgraph",
+    id=14948706,
+    processes=[procs.dy_lep_m4to50_ht800to1500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-4to50_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=189,
+            n_events=3901947,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m4to50_ht1500to2500_madgraph",
+    id=14951014,
+    processes=[procs.dy_lep_m4to50_ht1500to2500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-4to50_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=54,
+            n_events=3203979,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m4to50_ht2500_madgraph",
+    id=14952243,
+    processes=[procs.dy_lep_m4to50_ht2500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-4to50_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=147,
+            n_events=3660177,
+        ),
+    ),
+)
+
+# DY m_ll 50-120 GeV, Ht binned
+
+cpn.add_dataset(
+    name="dy_lep_m50to120_ht40to70_madgraph",
+    id=14817089,
+    processes=[procs.dy_lep_m50to120_ht40to70],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50to120_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=422,
+            n_events=133980512,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m50to120_ht70to100_madgraph",
+    id=14847021,
+    processes=[procs.dy_lep_m50to120_ht70to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50to120_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=648,
+            n_events=98847366,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m50to120_ht100to400_madgraph",
+    id=14813464,
+    processes=[procs.dy_lep_m50to120_ht100to400],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=307,
+            n_events=142936007,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_lep_m50to120_ht400to800_madgraph",
+    id=14878614,
+    processes=[procs.dy_lep_m50to120_ht400to800],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=52,
+            n_events=3935310,
+        ),
+    ),
+)
+
 # TODO: implement corresponding processes + xsecs
 # # jet-binned, ptll-binned, NLO
 # cpn.add_dataset(
