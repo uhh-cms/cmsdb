@@ -6,6 +6,7 @@ QCD datasets for the 2022 pre-EE data-taking campaign
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
+from order import DatasetInfo
 
 
 #
@@ -254,20 +255,20 @@ cpn.add_dataset(
 # QCD (madgraph, HT-binned, 4 jets)
 #
 
-cpn.add_dataset(
-    name="qcd_ht40to70_madgraph",
-    id=14790741,
-    processes=[procs.qcd_ht40to70],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/QCD-4Jets_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-            ],
-            n_files=36,
-            n_events=19200453,
-        ),
-    ),
-)
+# cpn.add_dataset(
+#     name="qcd_ht40to70_madgraph",
+#     id=14790741,
+#     processes=[procs.qcd_ht40to70],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/QCD-4Jets_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+#             ],
+#             n_files=36,
+#             n_events=19200453,
+#         ),
+#     ),
+# )
 cpn.add_dataset(
     name="qcd_ht70to100_madgraph",
     id=14796537,
@@ -397,7 +398,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_ht2000_madgraph",
     id=14792291,
-    processes=[procs.qcd_ht2000],
+    processes=[procs.qcd_ht2000toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[

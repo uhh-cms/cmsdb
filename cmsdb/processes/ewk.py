@@ -29,7 +29,7 @@ __all__ = [
     "dy_pt400to650", "dy_pt650toinf",
     "dy_lep_m4to50_ht40to70", "dy_lep_m4to50_ht70to100", "dy_lep_m4to50_ht100to400",
     "dy_lep_m4to50_ht400to800", "dy_lep_m4to50_ht800to1500", "dy_lep_m4to50_ht1500to2500",
-    "dy_lep_m4to50_ht2500",
+    "dy_lep_m4to50_ht2500toinf",
     "dy_lep_m50to120_ht40to70", "dy_lep_m50to120_ht70to100",
     "dy_lep_m50to120_ht100to400", "dy_lep_m50to120_ht400to800",
     "z",
@@ -43,11 +43,11 @@ __all__ = [
     "w_taunu", "w_munu",
     "w_lnu",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
-    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500",
+    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "w_lnu_mlnu0to120_ht40to100", "w_lnu_mlnu0to120_ht100to400", "w_lnu_mlnu0to120_ht400to800",
     "w_lnu_mlnu0to120_ht800to1500", "w_lnu_mlnu0to120_ht1500to2500", "w_lnu_mlnu0to120_ht2500",
     "w_lnu_mlnu120_ht40to100", "w_lnu_mlnu120_ht100to400", "w_lnu_mlnu120_ht400to800",
-    "w_lnu_mlnu120_ht800to1500", "w_lnu_mlnu120_ht1500to2500", "w_lnu_mlnu120_ht2500",
+    "w_lnu_mlnu120_ht800to1500", "w_lnu_mlnu120_ht1500to2500", "w_lnu_mlnu120_ht2500toinf",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
@@ -596,6 +596,153 @@ dy_pt650toinf = dy.add_process(
     },
 )
 
+# DY m_ll in [4, 50] GeV, binned in Ht, LO xs
+
+dy_lep_m4to50_ht40to70 = dy.add_process(
+    name="dy_lep_m4to50_ht40to70",
+    id=51610,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(911.4, {"tot": 2.547}),
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": [40.0, 70.0],
+    },
+)
+
+dy_lep_m4to50_ht70to100 = dy.add_process(
+    name="dy_lep_m4to50_ht70to100",
+    id=51611,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(346.6, {"tot": 0.9889}),
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": [70.0, 100.0],
+    },
+)
+
+dy_lep_m4to50_ht100to400 = dy.add_process(
+    name="dy_lep_m4to50_ht100to400",
+    id=51612,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(316.8, {"tot": 0.9199}),
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": [100.0, 400.0],
+    },
+)
+
+dy_lep_m4to50_ht400to800 = dy.add_process(
+    name="dy_lep_m4to50_ht400to800",
+    id=51613,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(5.649, {"tot": 0.01686}),
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": [400.0, 800.0],
+    },
+)
+
+dy_lep_m4to50_ht800to1500 = dy.add_process(
+    name="dy_lep_m4to50_ht800to1500",
+    id=51614,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(0.4204, {"tot": 0.001262}),
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": [800.0, 1500.0],
+    },
+)
+
+dy_lep_m4to50_ht1500to2500 = dy.add_process(
+    name="dy_lep_m4to50_ht1500to2500",
+    id=51615,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(0.02079, {"tot": 0.00006233}),
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": [1500.0, 2500.0],
+    },
+)
+
+dy_lep_m4to50_ht2500toinf = dy.add_process(
+    name="dy_lep_m4to50_ht2500toinf",
+    id=51616,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(0.00107, {"tot": 0.000003204}),
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": [2500.0, const.inf],
+    },
+)
+
+# DY m_ll in [50, 120] GeV, binned in Ht, LO xs
+
+dy_lep_m50to120_ht40to70 = dy.add_process(
+    name="dy_lep_m50to120_ht40to70",
+    id=51620,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(316.7, {"tot": 0.5909}),
+    },
+    aux={
+        "mll": (50.0, 120.0),
+        "htt": [40.0, 70.0],
+    },
+)
+
+dy_lep_m50to120_ht70to100 = dy.add_process(
+    name="dy_lep_m50to120_ht70to100",
+    id=51621,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(140.1, {"tot": 0.4065}),
+    },
+    aux={
+        "mll": (50.0, 120.0),
+        "htt": [70.0, 100.0],
+    },
+)
+
+dy_lep_m50to120_ht100to400 = dy.add_process(
+    name="dy_lep_m50to120_ht100to400",
+    id=51622,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(179.6, {"tot": 0.4544}),
+    },
+    aux={
+        "mll": (50.0, 120.0),
+        "htt": [100.0, 400.0],
+    },
+)
+
+dy_lep_m50to120_ht400to800 = dy.add_process(
+    name="dy_lep_m50to120_ht400to800",
+    id=51623,
+    xsecs={
+        # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
+        13.6: Number(6.742, {"tot": 0.02029}),
+    },
+    aux={
+        "mll": (50.0, 120.0),
+        "htt": [400.0, 800.0],
+    },
+)
+
 #
 # Z boson (no photon/DY)
 #
@@ -881,7 +1028,7 @@ w_lnu_mlnu0to120_ht40to100 = w_lnu.add_process(
     id=6190,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(4254, {"tot": 12.08}),
+        13.6: Number(4254, {"tot": 12.08}),
     },
 )
 
@@ -890,7 +1037,7 @@ w_lnu_mlnu0to120_ht100to400 = w_lnu.add_process(
     id=6200,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(1626, {"tot": 4.823	}),
+        13.6: Number(1626, {"tot": 4.823}),
     },
 )
 
@@ -899,7 +1046,7 @@ w_lnu_mlnu0to120_ht400to800 = w_lnu.add_process(
     id=6210,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(59.99, {"tot": 0.1803}),
+        13.6: Number(59.99, {"tot": 0.1803}),
     },
 )
 
@@ -908,7 +1055,7 @@ w_lnu_mlnu0to120_ht800to1500 = w_lnu.add_process(
     id=6220,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(6.23, {"tot": 0.01876}),
+        13.6: Number(6.23, {"tot": 0.01876}),
     },
 )
 
@@ -917,7 +1064,7 @@ w_lnu_mlnu0to120_ht1500to2500 = w_lnu.add_process(
     id=6230,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(0.4477, {"tot": 0.00135}),
+        13.6: Number(0.4477, {"tot": 0.00135}),
     },
 )
 
@@ -926,7 +1073,7 @@ w_lnu_mlnu0to120_ht2500 = w_lnu.add_process(
     id=6240,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(0.03075, {"tot": 0.00009258}),
+        13.6: Number(0.03075, {"tot": 0.00009258}),
     },
 )
 
@@ -937,7 +1084,7 @@ w_lnu_mlnu120_ht40to100 = w_lnu.add_process(
     id=6250,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(20.56, {"tot": 0.05885}),
+        13.6: Number(20.56, {"tot": 0.05885}),
     },
 )
 
@@ -946,7 +1093,7 @@ w_lnu_mlnu120_ht100to400 = w_lnu.add_process(
     id=6260,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(10.19, {"tot": 0.03042}),
+        13.6: Number(10.19, {"tot": 0.03042}),
     },
 )
 
@@ -955,7 +1102,7 @@ w_lnu_mlnu120_ht400to800 = w_lnu.add_process(
     id=6270,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(0.5239, {"tot": 0.001584}),
+        13.6: Number(0.5239, {"tot": 0.001584}),
     },
 )
 
@@ -964,7 +1111,7 @@ w_lnu_mlnu120_ht800to1500 = w_lnu.add_process(
     id=6280,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(0.06255, {"tot": 0.0001893}),
+        13.6: Number(0.06255, {"tot": 0.0001893}),
     },
 )
 
@@ -973,16 +1120,16 @@ w_lnu_mlnu120_ht1500to2500 = w_lnu.add_process(
     id=6290,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(0.005066, {"tot": 0.0000153}),
+        13.6: Number(0.005066, {"tot": 0.0000153}),
     },
 )
 
-w_lnu_mlnu120_ht2500 = w_lnu.add_process(
-    name="w_lnu_mlnu120_ht2500",
+w_lnu_mlnu120_ht2500toinf = w_lnu.add_process(
+    name="w_lnu_mlnu120_ht2500toinf",
     id=6300,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8
-        13: Number(0.0003788, {"tot": 0.000001143}),
+        13.6: Number(0.0003788, {"tot": 0.000001143}),
     },
 )
 

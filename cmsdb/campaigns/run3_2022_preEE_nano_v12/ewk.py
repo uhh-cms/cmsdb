@@ -505,9 +505,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht2500_madgraph",
+    name="dy_lep_m4to50_ht2500toinf_madgraph",
     id=14953120,
-    processes=[procs.dy_lep_m4to50_ht2500],
+    processes=[procs.dy_lep_m4to50_ht2500toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -899,9 +899,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="w_lnu_mlnu120_ht2500_madgraph",
+    name="w_lnu_mlnu120_ht2500toinf_madgraph",
     id=14881829,
-    processes=[procs.w_lnu_mlnu120_ht2500],
+    processes=[procs.w_lnu_mlnu120_ht2500toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
