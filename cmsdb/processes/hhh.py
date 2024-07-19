@@ -36,7 +36,7 @@ hhh_ggf = hhh.add_process(
             # 0.45255713867289865e-3,  # might be NLO, need k-factor of 1.55?
         ),
         13.6: Number(
-            0.0976e-3 # estimate only TODO
+            0.0976e-3 # linear approximation only TODO
         ),
         14: Number(
                 0.103e-3, # NNLO value
@@ -104,7 +104,7 @@ for i, (c3, d4) in enumerate(coupling_combinations, 1):
         name: hhh_ggf.add_process(
             name=name,
             id=hhh_ggf.id + i,
-            label=f"{hhh_ggf.label} $(c_{{3}}={c3}, d_{{4}}={d4})$",
+            label=f"{hhh_ggf.label} $(\kappa_{{3}}={c3+1}, \kappa_{{4}}={d4+1})$",
             xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)), # TODO
         )
     })
