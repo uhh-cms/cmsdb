@@ -368,6 +368,10 @@ ttz = ttv.add_process(
             "scale": (0.086j, 0.095j),
             "pdf": 0.023j,
         }),
+        # from xsdb for ttz_zqq: https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3D%5ETTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8%24  # noqa
+        13.6: Number(0.660300, {
+            "total": 0.003767,
+        }) / const.br_z.qq,
         14: Number(1.045, {
             "scale": (0.088j, 0.099j),
             "pdf": 0.031j,
