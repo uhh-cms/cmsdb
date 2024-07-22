@@ -38,6 +38,9 @@ _a_fit_parameter = {
     },
 }
 
+# TODO: plain copy of 13 TeV values for now as there are no 13.6 TeV values
+_a_fit_parameter[13.6] = _a_fit_parameter[13]
+
 # chosen EFT parameter according to "https://arxiv.org/pdf/1610.07922.pdf" S.202
 _coefficient_EFT_benchmarks = {
     1: {
