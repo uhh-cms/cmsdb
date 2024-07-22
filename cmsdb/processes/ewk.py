@@ -34,6 +34,8 @@ __all__ = [
     "z_nunu_ht2500toinf",
     "z_qq",
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
+    "z_qq_pt100to200_1j", "z_qq_pt100to200_2j", "z_qq_pt200to400_1j", "z_qq_pt200to400_2j",
+    "z_qq_pt400to600_1j", "z_qq_pt400to600_2j", "z_qq_pt600toinf_1j", "z_qq_pt600toinf_2j",
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
@@ -684,20 +686,15 @@ z_nunu_ht2500toinf = z_nunu.add_process(
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000  # noqa
 z_qq = z.add_process(
     name="z_qq",
-    id=55210,
+    id=55200,
     label=rf"{z.label} (Z $\rightarrow$ $\text{{q}}\overline{{\text{{q}}}}$)",
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 z_qq_ht200to400 = z_qq.add_process(
     name="z_qq_ht200to400",
     id=55210,
     xsecs={
-        13: Number(1012.0, {
-            "tot": 0.4260,
-        }),
+        13: Number(1012.0, {"total": 0.4260}),
     },
 )
 
@@ -705,9 +702,7 @@ z_qq_ht400to600 = z_qq.add_process(
     name="z_qq_ht400to600",
     id=55220,
     xsecs={
-        13: Number(114.5, {
-            "tot": 0.04884,
-        }),
+        13: Number(114.5, {"total": 0.04884}),
     },
 )
 
@@ -715,9 +710,7 @@ z_qq_ht600to800 = z_qq.add_process(
     name="z_qq_ht600to800",
     id=55230,
     xsecs={
-        13: Number(25.38, {
-            "tot": 0.01088,
-        }),
+        13: Number(25.38, {"total": 0.01088}),
     },
 )
 
@@ -725,12 +718,81 @@ z_qq_ht800toinf = z_qq.add_process(
     name="z_qq_ht800toinf",
     id=55240,
     xsecs={
-        13: Number(12.92, {
-            "tot": 0.005923,
-        }),
+        13: Number(12.92, {"total": 0.005923}),
     },
 )
 
+z_qq_pt100to200_1j = z_qq.add_process(
+    name="z_qq_pt100to200_1j",
+    id=55261,
+    xsecs={
+        # XSDB
+        13.6: Number(302.0, {"total": 1.493}),
+    },
+)
+
+z_qq_pt100to200_2j = z_qq.add_process(
+    name="z_qq_pt100to200_2j",
+    id=55262,
+    xsecs={
+        # XSDB
+        13.6: Number(343.9, {"total": 2.979}),
+    },
+)
+
+z_qq_pt200to400_1j = z_qq.add_process(
+    name="z_qq_pt200to400_1j",
+    id=55263,
+    xsecs={
+        # XSDB
+        13.6: Number(21.64, {"total": 0.1029}),
+    },
+)
+
+z_qq_pt200to400_2j = z_qq.add_process(
+    name="z_qq_pt200to400_2j",
+    id=55264,
+    xsecs={
+        # XSDB
+        13.6: Number(48.36, {"total": 0.375}),
+    },
+)
+
+z_qq_pt400to600_1j = z_qq.add_process(
+    name="z_qq_pt400to600_1j",
+    id=55265,
+    xsecs={
+        # XSDB
+        13.6: Number(0.7376, {"total": 0.003183}),
+    },
+)
+
+z_qq_pt400to600_2j = z_qq.add_process(
+    name="z_qq_pt400to600_2j",
+    id=55266,
+    xsecs={
+        # XSDB
+        13.6: Number(2.683, {"total": 0.01553}),
+    },
+)
+
+z_qq_pt600toinf_1j = z_qq.add_process(
+    name="z_qq_pt600toinf_1j",
+    id=55267,
+    xsecs={
+        # XSDB
+        13.6: Number(0.08717, {"total": 0.0003566}),
+    },
+)
+
+z_qq_pt600toinf_2j = z_qq.add_process(
+    name="z_qq_pt600toinf_2j",
+    id=55268,
+    xsecs={
+        # XSDB
+        13.6: Number(0.4459, {"total": 0.002084}),
+    },
+)
 
 #
 # W boson
@@ -921,17 +983,16 @@ vv = Process(
 )
 
 # ZZ 13 TeV xsec values at nNNLO from
-# https://link.springer.com/article/10.1007/JHEP03(2019)070#preview, table 3
 zz = vv.add_process(
     name="zz",
     id=8100,
     label="ZZ",
     xsecs={
+        # https://link.springer.com/article/10.1007/JHEP03(2019)070#preview, table 3, nNNLO
         13: Number(24.97, {"scale": (0.029j, 0.027j)}),
-        # 13.6 from GenXSecAnalyzer, but this value is way off and should not be used
-        # 13.6: Number(12.84, {
-        #     "tot": 0.006035,  # xsdb: Number(12.75, {"tot": 0.0649})
-        # }),
+        # no theory prediction found yet, so take accurate value at 13 TeV and scale by the ratio
+        # of XSDB values at https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=40&searchQuery=process_name%3D%5EZZ_TuneCP5_13.%2Bpythia8%24  # noqa
+        13.6: Number(24.97, {"scale": (0.029j, 0.027j)}) * (12.75 / 12.14),
     },
 )
 

@@ -17,7 +17,7 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
-    "ttz", "ttz_zqq", "ttz_zlep_m10toinf",
+    "ttz", "ttz_zqq", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
@@ -368,6 +368,10 @@ ttz = ttv.add_process(
             "scale": (0.086j, 0.095j),
             "pdf": 0.023j,
         }),
+        # from xsdb for ttz_zqq: https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3D%5ETTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8%24  # noqa
+        13.6: Number(0.660300, {
+            "total": 0.003767,
+        }) / const.br_z.qq,
         14: Number(1.045, {
             "scale": (0.088j, 0.099j),
             "pdf": 0.031j,
@@ -390,6 +394,39 @@ ttz_zlep_m10toinf = ttz.add_process(
     },
 )
 
+ttz_zll_m4to50 = ttz.add_process(
+    name="ttz_zll_m4to50",
+    id=3115,
+    xsecs={
+        # XSDB
+        13.6: Number(0.03949, {
+            "total": 0.00002728,
+        }),
+    },
+)
+
+ttz_zll_m50toinf = ttz.add_process(
+    name="ttz_zll_m50toinf",
+    id=3116,
+    xsecs={
+        # XSDB
+        13.6: Number(0.08646, {
+            "total": 0.0000552,
+        }),
+    },
+)
+
+ttz_znunu = ttz.add_process(
+    name="ttz_znunu",
+    id=3118,
+    xsecs={
+        # XSDB
+        13.6: Number(0.1638, {
+            "total": 0.00007274,
+        }),
+    },
+)
+
 ttz_zqq = ttz.add_process(
     name="ttz_zqq",
     id=3120,
@@ -401,7 +438,13 @@ ttw = ttv.add_process(
     id=3200,
     label=f"{tt.label} + W",
     xsecs={
-        13: Number(592, {
+        13: Number(0.592, {
+            "scale": (0.261j, 0.162j),
+            "pdf": 0.021j,
+        }),
+        # XSDB: only LO in database, estimate an energy scaling factor from LO samples and multiply
+        # to 13 TeV value for now, TODO
+        13.6: 0.2505 / 0.2149 * Number(0.592, {
             "scale": (0.261j, 0.162j),
             "pdf": 0.021j,
         }),

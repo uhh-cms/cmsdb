@@ -596,7 +596,7 @@ h_vbf_hzg_znunu = add_decay_process(h_vbf_hzg, hzg_decay_map["znunu"])
 
 ####################################################################################################
 #
-# VH
+# VH base process
 #
 ####################################################################################################
 
@@ -605,8 +605,98 @@ vh = h.add_process(
     name="vh",
     id=13000,
     label="VH",
-    xsecs={13: Number(0.1)},  # TODO
 )
+
+zh = vh.add_process(
+    name="zh",
+    id=14000,
+    label="ZH",
+    xsecs={
+        13: Number(8.839E-01, {
+            "scale": (0.038j, 0.031j),
+            "pdf": 0.016j,
+        }),
+        13.6: Number(0.9439, {  # value for mH=125 GeV
+            "scale": (0.037j, 0.032j),
+            "pdf": 0.016j,
+        }),  # TODO: only preliminary
+    },
+    aux={"production_mode_parent": vh},
+)
+
+zh_gg = vh.add_process(
+    name="zh_gg",
+    id=15000,
+    xsecs={
+        13: Number(0.1227, {
+            "scale": (0.251j, 0.189j),
+            "pdf": 0.019j,
+        }),
+        13.6: Number(0.1360, {  # value for mH=125 GeV
+            "scale": (0.037j, 0.032j),
+            "pdf": 0.016j,
+        }),  # TODO: only preliminary
+        # unclear if error (originally for ZH) is also applicable here.
+        # only in original presentation:
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
+    },
+    aux={"production_mode_parent": vh},
+)
+
+wh = vh.add_process(
+    name="wh",
+    label="WH",
+    id=16000,
+    aux={"production_mode_parent": vh},
+)
+
+wph = wh.add_process(
+    name="wph",
+    id=17000,
+    label=r"$W^+H$",
+    xsecs={
+        13: Number(8.400E-01, {
+            "pdf": 0.019j,
+            "scale": (0.005j, 0.007j),
+        }),
+        13.6: Number(0.8889, {  # value for mH=125 GeV
+            "scale": (0.004j, 0.007j),
+            "pdf": 0.018j,
+        }),  # TODO: only preliminary
+        # only in original presentation:
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
+    },
+    aux={"production_mode_parent": wh},
+)
+
+wmh = wh.add_process(
+    name="wmh",
+    id=18000,
+    label=r"$W^-H$",
+    xsecs={
+        13: Number(5.328E-01, {
+            "pdf": 0.019j,
+            "scale": (0.005j, 0.007j),
+        }),
+        13.6: Number(0.5677, {  # value for mH=125 GeV
+            "scale": (0.004j, 0.007j),
+            "pdf": 0.018j,
+        }),  # TODO: only preliminary
+        # only in original presentation:
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
+    },
+    aux={"production_mode_parent": wh},
+)
+
+vh.xsecs = add_xsecs(zh, wph, wmh)
+
+
+####################################################################################################
+#
+# VH subprocesses
+#
+####################################################################################################
+
 
 # Higgs decay channels
 vh_htt = add_decay_process(vh, h_decay_map.htt)
@@ -768,28 +858,12 @@ vh_wqq_hzg_zll = add_decay_process(vh_wqq_hzg, hzg_decay_map["zll"])
 vh_wqq_hzg_zqq = add_decay_process(vh_wqq_hzg, hzg_decay_map["zqq"])
 vh_wqq_hzg_znunu = add_decay_process(vh_wqq_hzg, hzg_decay_map["znunu"])
 
-####################################################################################################
-#
-# ZH
-#
-####################################################################################################
 
-zh = vh.add_process(
-    name="zh",
-    id=14000,
-    label="ZH",
-    xsecs={
-        13: Number(8.839E-01, {
-            "scale": (0.038j, 0.031j),
-            "pdf": 0.016j,
-        }),
-        13.6: Number(0.9439, {  # value for mH=125 GeV
-            "scale": (0.037j, 0.032j),
-            "pdf": 0.016j,
-        }),  # TODO: only preliminary
-    },
-    aux={"production_mode_parent": vh},
-)
+####################################################################################################
+#
+# ZH subprocesses
+#
+####################################################################################################
 
 # Higgs decay channels
 zh_htt = add_decay_process(zh, h_decay_map.htt)
@@ -899,28 +973,9 @@ zh_znunu_hzg_znunu = add_decay_process(zh_znunu_hzg, hzg_decay_map["znunu"])
 
 ####################################################################################################
 #
-# ggZH
+# ggZH subprocesses
 #
 ####################################################################################################
-
-zh_gg = vh.add_process(
-    name="zh_gg",
-    id=15000,
-    xsecs={
-        13: Number(0.1227, {
-            "scale": (0.251j, 0.189j),
-            "pdf": 0.019j,
-        }),
-        13.6: Number(0.1360, {  # value for mH=125 GeV
-            "scale": (0.037j, 0.032j),
-            "pdf": 0.016j,
-        }),  # TODO: only preliminary
-        # unclear if error (originally for ZH) is also applicable here.
-        # only in original presentation:
-        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
-    },
-    aux={"production_mode_parent": vh},
-)
 
 # Higgs decay channels
 zh_gg_htt = add_decay_process(zh_gg, h_decay_map.htt)
@@ -1030,16 +1085,9 @@ zh_gg_znunu_hzg_znunu = add_decay_process(zh_gg_znunu_hzg, hzg_decay_map["znunu"
 
 ####################################################################################################
 #
-# WH
+# WH subprocesses
 #
 ####################################################################################################
-
-wh = vh.add_process(
-    name="wh",
-    label="WH",
-    id=16000,
-    aux={"production_mode_parent": vh},
-)
 
 # Higgs decay channels
 wh_htt = add_decay_process(wh, h_decay_map.htt)
@@ -1123,28 +1171,9 @@ wh_wqq_hzg_znunu = add_decay_process(wh_wqq_hzg, hzg_decay_map["znunu"])
 
 ####################################################################################################
 #
-# W+ H
+# W+ H subprocesses
 #
 ####################################################################################################
-
-wph = wh.add_process(
-    name="wph",
-    id=17000,
-    label=r"$W^+H$",
-    xsecs={
-        13: Number(8.400E-01, {
-            "pdf": 0.019j,
-            "scale": (0.005j, 0.007j),
-        }),
-        13.6: Number(0.8889, {  # value for mH=125 GeV
-            "scale": (0.004j, 0.007j),
-            "pdf": 0.018j,
-        }),  # TODO: only preliminary
-        # only in original presentation:
-        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
-    },
-    aux={"production_mode_parent": wh},
-)
 
 # Higgs decay channels
 wph_htt = add_decay_process(wph, h_decay_map.htt)
@@ -1227,28 +1256,9 @@ wph_wqq_hzg_znunu = add_decay_process(wph_wqq_hzg, hzg_decay_map["znunu"])
 
 ####################################################################################################
 #
-# W- H
+# W- H subprocesses
 #
 ####################################################################################################
-
-wmh = wh.add_process(
-    name="wmh",
-    id=18000,
-    label=r"$W^-H$",
-    xsecs={
-        13: Number(5.328E-01, {
-            "pdf": 0.019j,
-            "scale": (0.005j, 0.007j),
-        }),
-        13.6: Number(0.5677, {  # value for mH=125 GeV
-            "scale": (0.004j, 0.007j),
-            "pdf": 0.018j,
-        }),  # TODO: only preliminary
-        # only in original presentation:
-        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
-    },
-    aux={"production_mode_parent": wh},
-)
 
 # Higgs decay channels
 wmh_htt = add_decay_process(wmh, h_decay_map.htt)

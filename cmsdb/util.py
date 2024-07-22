@@ -72,7 +72,7 @@ class DotDict(OrderedDict):
         return wrap(OrderedDict(*args, **kwargs))
 
 
-def multiply_xsecs(base_proc: Process, factor: float) -> dict[float, Number]:
+def multiply_xsecs(base_proc: Process, factor: float | int | Number) -> dict[float, Number]:
     """
     Helper to multiply all cross sections of a base process *base_proc*
     with some value *factor*
