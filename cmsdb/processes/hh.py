@@ -218,6 +218,8 @@ hh_vbf_kv1_k2v1_kl1 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
+# the kappa values are defined as the N3LO cross section divided by the LO cross section as taken
+# from XSDB (see link above), with all kappas at 1 (SM configuration)
 hh_vbf_k_13p0 = hh_vbf_kv1_k2v1_kl1.get_xsec(13).nominal / 1.626
 hh_vbf_k_13p6 = hh_vbf_kv1_k2v1_kl1.get_xsec(13.6).nominal / 1.912
 
