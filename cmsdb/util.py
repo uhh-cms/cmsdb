@@ -8,7 +8,7 @@ from __future__ import annotations
 
 __all__ = ["DotDict", "multiply_xsecs", "add_xsecs", "add_decay_process", "add_sub_decay_process"]
 
-
+from typing import Callable
 from functools import partial
 from scinum import Number
 
@@ -97,7 +97,12 @@ def add_xsecs(*processes: tuple[Process]) -> dict[float, Number]:
     return xsecs
 
 
-def add_the_production_mode_parent(child: Process, parent: Process) -> Process:
+def add_the_production_mode_parent(
+    child: Process,
+    parent: Process,
+    decay_map: DotDict,
+    name_func: Callable,
+) -> Process:
     """
     Takes all processes from the *production_mode_parent* aux of the *parent* process and adds their
     child processes with the same final state to the *child* process, both as parent and as aux.
@@ -131,7 +136,7 @@ def add_the_production_mode_parent(child: Process, parent: Process) -> Process:
             f"{parent.parent_processes.names()} ({len(parent.parent_processes)}).",
         )
     for grandparent in grandparents:
-        production_mode_parent = grandparent.get_process(child.name.replace(parent.name, grandparent.name))
+        production_mode_parent = grandparent.get_process(name_func(grandparent.name, decay_map["name"]))
         production_mode_parent.add_process(child)
         child.x.production_mode_parent = child.x("production_mode_parent", []) + [production_mode_parent.name]
 
@@ -142,8 +147,8 @@ def add_decay_process(
     parent: Process,
     decay_map: DotDict,
     add_production_mode_parent: bool = True,
-    name_separator: str = "_",
-    label_separator: str = ", ",
+    name_func: Callable = lambda parent_name, decay_name: f"{parent_name}_{decay_name}",
+    label_func: Callable = lambda parent_label, decay_label: f"{parent_label}, {decay_label}",
     **kwargs,
 ) -> Process:
     """
@@ -154,16 +159,16 @@ def add_decay_process(
     *name*, *id*, *br*, and *label*. When passing the *custom_id* parameter, the *id* key is ignored.
     :param add_production_mode_parent: Whether to add the process with the same final state but different
     production mode as parent. Also adds the *production_mode_parent* attribute to the subprocess.
-    :param name_separator: Separator to be used for the subprocess name.
-    :param label_separator: Separator to be used for the subprocess label.
+    :param name_func: Function to generate the name of the subprocess from the parent name and the decay name.
+    :param label_func: Function to generate the label of the subprocess from the parent label and the decay label.
     :return: The resulting child process.
     """
 
     # get default kwargs from parent + decay map
     child_kwargs = {
-        "name": f"{parent.name}{name_separator}{decay_map.name}",
+        "name": name_func(parent.name, decay_map["name"]),
         "id": parent.id + decay_map["id"],
-        "label": rf"{parent.label}{label_separator}{decay_map['label']}",
+        "label": label_func(parent.label, decay_map["label"]),
         "xsecs": multiply_xsecs(parent, decay_map["br"]),
     }
 
@@ -173,9 +178,13 @@ def add_decay_process(
     # add process
     child = parent.add_process(**child_kwargs)
     if add_production_mode_parent:
-        add_the_production_mode_parent(child, parent)
+        add_the_production_mode_parent(child, parent, decay_map, name_func)
 
     return child
 
 
-add_sub_decay_process = partial(add_decay_process, name_separator="", label_separator="")
+add_sub_decay_process = partial(
+    add_decay_process,
+    name_func=lambda parent_name, decay_name: f"{parent_name}{decay_name}",
+    label_func=lambda parent_label, decay_label: f"{parent_label}{decay_label}",
+)

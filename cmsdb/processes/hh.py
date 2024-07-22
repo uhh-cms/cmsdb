@@ -86,6 +86,7 @@ hh_ggf = hh.add_process(
 hh_ggf_kl0_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl0_kt1",
     id=21001,
+    label=r"$HH_{ggf}^{\kappa_\lambda=0}$",
     xsecs={
         13: Number(0.069725, {
             "scale": (0.024j, 0.061j),
@@ -100,6 +101,7 @@ hh_ggf_kl0_kt1 = hh_ggf.add_process(
 hh_ggf_kl1_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl1_kt1",
     id=21002,
+    label=r"$HH_{ggf}^{\kappa_\lambda=1}$",
     xsecs={
         13: Number(0.031047, {
             "scale": (0.022j, 0.050j),
@@ -118,6 +120,7 @@ hh_ggf_kl1_kt1 = hh_ggf.add_process(
 hh_ggf_kl2p45_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl2p45_kt1",
     id=21003,
+    label=r"$HH_{ggf}^{\kappa_\lambda=2.45}$",
     xsecs={
         13: Number(0.013124, {
             "scale": (0.023j, 0.051j),
@@ -132,6 +135,7 @@ hh_ggf_kl2p45_kt1 = hh_ggf.add_process(
 hh_ggf_kl5_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl5_kt1",
     id=21004,
+    label=r"$HH_{ggf}^{\kappa_\lambda=5}$",
     xsecs={
         13: Number(0.091172, {
             "scale": (0.049j, 0.088j),
