@@ -242,7 +242,7 @@ def add_hvv_decay(parent, decay_map, add_production_mode_parent=True):
         add_production_mode_parent=add_production_mode_parent,
         name_func=lambda parent_name, decay_name: parent_name.replace(hh_decay_map.hbb_hvv.name, decay_name),
         label_func=lambda parent_label, decay_label: parent_label.replace(hh_decay_map.hbb_hvv.label, decay_label),
-        aux={"production_mode_parent": [parent.name]}
+        aux={"production_mode_parent": [parent.name]},
     )
     return child
 
@@ -320,7 +320,7 @@ for proc in (
     hh_ggf_hbb_hvv, hh_ggf_hbb_hvv_kl0_kt1, hh_ggf_hbb_hvv_kl1_kt1, hh_ggf_hbb_hvv_kl2p45_kt1, hh_ggf_hbb_hvv_kl5_kt1,
     hh_vbf_hbb_hvv, hh_vbf_hbb_hvv_kv1_k2v1_kl1, hh_vbf_hbb_hvv_kv1_k2v1_kl0, hh_vbf_hbb_hvv_kv1_k2v1_kl2,
     hh_vbf_hbb_hvv_kv1_k2v0_kl1, hh_vbf_hbb_hvv_kv1_k2v2_kl1,
-    hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, hh_vbf_hbb_hvv_kv1p5_k2v1_kl1
+    hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, hh_vbf_hbb_hvv_kv1p5_k2v1_kl1,
 ):
     proc.xsecs = add_xsecs(
         proc.get_process(proc.name.replace("hvv", "hww")),
