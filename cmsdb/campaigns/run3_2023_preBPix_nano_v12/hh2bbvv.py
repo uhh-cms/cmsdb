@@ -11,9 +11,9 @@ from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPi
 
 
 cpn.add_dataset(
-    name="hh_ggf_kl2p45_kt1_hbb_hvv2l2nu_powheg",
+    name="hh_ggf_hbb_hvv2l2nu_kl2p45_kt1_powheg",
     id=14932681,
-    processes=[procs.hh_ggf_kl2p45_kt1_hbb_hvv2l2nu],
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl2p45_kt1],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -25,9 +25,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="hh_ggf_kl2p45_kt1_hbb_hvv_powheg",
+    name="hh_ggf_hbb_hvv_kl2p45_kt1_powheg",
     id=14940655,
-    processes=[procs.hh_ggf_kl2p45_kt1_hbb_hvv],
+    processes=[procs.hh_ggf_hbb_hvv_kl2p45_kt1],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -39,9 +39,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="hh_ggf_kl2p45_kt1_hbb_hvvqqlnu_powheg",
+    name="hh_ggf_hbb_hvvqqlnu_kl2p45_kt1_powheg",
     id=14940898,
-    processes=[procs.hh_ggf_kl2p45_kt1_hbb_hvvqqlnu],
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl2p45_kt1],
     info=dict(
         nominal=DatasetInfo(
             keys=[
