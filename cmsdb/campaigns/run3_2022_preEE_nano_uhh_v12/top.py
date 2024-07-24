@@ -229,7 +229,21 @@ cpn.add_dataset(
 # ttbar + 1 vector boson
 #
 
-# ttW not available
+cpn.add_dataset(
+    name="ttw_wlnu_amcatnlo",
+    id=14836091,
+    processes=[procs.ttw_wlnu],
+    keys=[
+        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=111_308,
+    aux={
+        "merging_factors": {
+            "nominal": 3,
+        },
+    },
+)
 
 cpn.add_dataset(
     name="ttz_zqq_amcatnlo",
@@ -247,6 +261,53 @@ cpn.add_dataset(
     },
 )
 
+cpn.add_dataset(
+    name="ttz_zll_m4to50_amcatnlo",
+    id=14790832,
+    processes=[procs.ttz_zll_m4to50],
+    keys=[
+        "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=300_000,
+    aux={
+        "merging_factors": {
+            "nominal": 25,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="ttz_zll_m50toinf_amcatnlo",
+    id=14791117,
+    processes=[procs.ttz_zll_m50toinf],
+    keys=[
+        "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=400_000,
+    aux={
+        "merging_factors": {
+            "nominal": 30,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="ttz_znunu_amcatnlo",
+    id=14881328,
+    processes=[procs.ttz_znunu],
+    keys=[
+        "/TTNuNu_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=498_544,
+    aux={
+        "merging_factors": {
+            "nominal": 36,
+        },
+    },
+)
 
 #
 # ttbar + 2 vector boson
@@ -734,6 +795,38 @@ cpn.add_dataset(
             "mtop_up": 15,
             "tune_down": 13,
             "tune_up": 14,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="st_schannel_t_lep_4f_amcatnlo",
+    id=14791065,
+    processes=[procs.st_schannel_t_lep],
+    keys=[
+        "/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=1_271_280,
+    aux={
+        "merging_factors": {
+            "nominal": 20,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="st_schannel_tbar_lep_4f_amcatnlo",
+    id=14791008,
+    processes=[procs.st_schannel_tbar_lep],
+    keys=[
+        "/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=785_520,
+    aux={
+        "merging_factors": {
+            "nominal": 34,
         },
     },
 )
