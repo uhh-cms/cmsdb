@@ -4,11 +4,11 @@ from __future__ import annotations
 
 __all__ = ["TestCampaigns"]
 
-
 import os
 import re
 import importlib
 import unittest
+import collections
 
 import cmsdb
 
@@ -151,3 +151,14 @@ class TestCampaigns(unittest.TestCase):
                 for dataset_inst in campaign_inst.datasets.values():
                     with self.subTest(f"testing dataset {campaign_inst.name}/{dataset_inst.name}"):
                         self.single_dataset_test(campaign_inst, dataset_inst)
+
+                # check uniqueness of names and ids
+                name_counts = collections.Counter(campaign_inst.datasets.names())
+                dup_names = {name: count for name, count in name_counts.items() if count > 1}
+                if dup_names:
+                    self.fail(f"duplicate dataset names found in {campaign_inst.name}: {dup_names}")
+
+                id_counts = collections.Counter(campaign_inst.datasets.ids())
+                dup_ids = {id_: count for id_, count in id_counts.items() if count > 1}
+                if dup_ids:
+                    self.fail(f"duplicate dataset ids found in {campaign_inst.name}: {dup_ids}")
