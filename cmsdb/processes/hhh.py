@@ -101,7 +101,7 @@ for i, (c3, d4) in enumerate(coupling_combinations, 1):
     subdecay_name = subdecay_template.format(
         c3=str(c3).replace("-", "minus").replace(".", "p"),
         d4=str(d4).replace("-", "minus").replace(".", "p"),
-        subdecay="4b_2tau",
+        subdecay="4b2tau",
     )
     locals().update({
         name: hhh_ggf.add_process(
