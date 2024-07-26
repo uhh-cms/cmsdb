@@ -51,9 +51,9 @@ __all__ = [
     "graviton_hh_ggf_hbb_htt_m5000",
     "hh_vbf_hbb_htt_kv1_k2v1_kl1", "hh_vbf_hbb_htt_kv1_k2v0_kl1", "hh_vbf_hbb_htt_kv1_k2v1_kl2",
     "hh_vbf_hbb_htt_kv1_k2v2_kl1", "hh_vbf_hbb_htt_kv1p74_k2v1p37_kl14p4",
-    "hh_vbf_hbb_htt_kvm0p012_k2v0p030_kl10p2", "hh_vbf_hbb_htt_kvm0p758_k2v1p44_klm19p3",
+    "hh_vbf_hbb_htt_kvm0p012_k2v0p03_kl10p2", "hh_vbf_hbb_htt_kvm0p758_k2v1p44_klm19p3",
     "hh_vbf_hbb_htt_kvm0p962_k2v0p959_klm1p43", "hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94",
-    "hh_vbf_hbb_htt_kvm1p60_k2v2p72_klm1p36", "hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39",
+    "hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36", "hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39",
     "hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96",
     "radion_hh_vbf_hbb_htt",
     "radion_hh_vbf_hbb_htt_m250", "radion_hh_vbf_hbb_htt_m260", "radion_hh_vbf_hbb_htt_m270",
@@ -90,9 +90,9 @@ from cmsdb.processes.hh import (
     hh_ggf_kl1_kt1_c2m2, hh_ggf_kl2p45_kt1, hh_ggf_kl5_kt1,
     hh_vbf_kv1_k2v1_kl1, hh_vbf_kv1_k2v0_kl1, hh_vbf_kv1_k2v1_kl2,
     hh_vbf_kv1_k2v2_kl1, hh_vbf_kv1p74_k2v1p37_kl14p4,
-    hh_vbf_kvm0p012_k2v0p030_kl10p2, hh_vbf_kvm0p758_k2v1p44_klm19p3,
+    hh_vbf_kvm0p012_k2v0p03_kl10p2, hh_vbf_kvm0p758_k2v1p44_klm19p3,
     hh_vbf_kvm0p962_k2v0p959_klm1p43, hh_vbf_kvm1p21_k2v1p94_klm0p94,
-    hh_vbf_kvm1p60_k2v2p72_klm1p36, hh_vbf_kvm1p83_k2v3p57_klm3p39,
+    hh_vbf_kvm1p6_k2v2p72_klm1p36, hh_vbf_kvm1p83_k2v3p57_klm3p39,
     hh_vbf_kvm2p12_k2v3p87_klm5p96,
 )
 from cmsdb.xsec_bsm_nodes import calculate_xsec_node
@@ -782,11 +782,11 @@ hh_vbf_hbb_htt_kv1p74_k2v1p37_kl14p4 = hh_vbf_kv1p74_k2v1p37_kl14p4.add_process(
     xsecs=multiply_xsecs(hh_vbf_kv1p74_k2v1p37_kl14p4, const.br_hh.bbtt),
 )
 
-hh_vbf_hbb_htt_kvm0p012_k2v0p030_kl10p2 = hh_vbf_kvm0p012_k2v0p030_kl10p2.add_process(
-    name="hh_vbf_hbb_htt_kvm0p012_k2v0p030_kl10p2",
+hh_vbf_hbb_htt_kvm0p012_k2v0p03_kl10p2 = hh_vbf_kvm0p012_k2v0p03_kl10p2.add_process(
+    name="hh_vbf_hbb_htt_kvm0p012_k2v0p03_kl10p2",
     id=22106,
-    label=r"$HH_{vbf} \rightarrow bb\tau\tau$ ($\kappa_{V}=-0.012$, $\kappa_{2V}=0.030$, $\kappa_{\lambda}=10.2$)",
-    xsecs=multiply_xsecs(hh_vbf_kvm0p012_k2v0p030_kl10p2, const.br_hh.bbtt),
+    label=r"$HH_{vbf} \rightarrow bb\tau\tau$ ($\kappa_{V}=-0.012$, $\kappa_{2V}=0.03$, $\kappa_{\lambda}=10.2$)",
+    xsecs=multiply_xsecs(hh_vbf_kvm0p012_k2v0p03_kl10p2, const.br_hh.bbtt),
 )
 
 hh_vbf_hbb_htt_kvm0p758_k2v1p44_klm19p3 = hh_vbf_kvm0p758_k2v1p44_klm19p3.add_process(
@@ -810,11 +810,11 @@ hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94 = hh_vbf_kvm1p21_k2v1p94_klm0p94.add_proc
     xsecs=multiply_xsecs(hh_vbf_kvm1p21_k2v1p94_klm0p94, const.br_hh.bbtt),
 )
 
-hh_vbf_hbb_htt_kvm1p60_k2v2p72_klm1p36 = hh_vbf_kvm1p60_k2v2p72_klm1p36.add_process(
-    name="hh_vbf_hbb_htt_kvm1p60_k2v2p72_klm1p36",
+hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36 = hh_vbf_kvm1p6_k2v2p72_klm1p36.add_process(
+    name="hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36",
     id=22110,
-    label=r"$HH_{vbf} \rightarrow bb\tau\tau$ ($\kappa_{V}=-1.60$, $\kappa_{2V}=2.72$, $\kappa_{\lambda}=-1.36$)",
-    xsecs=multiply_xsecs(hh_vbf_kvm1p60_k2v2p72_klm1p36, const.br_hh.bbtt),
+    label=r"$HH_{vbf} \rightarrow bb\tau\tau$ ($\kappa_{V}=-1.6$, $\kappa_{2V}=2.72$, $\kappa_{\lambda}=-1.36$)",
+    xsecs=multiply_xsecs(hh_vbf_kvm1p6_k2v2p72_klm1p36, const.br_hh.bbtt),
 )
 
 hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39 = hh_vbf_kvm1p83_k2v3p57_klm3p39.add_process(
