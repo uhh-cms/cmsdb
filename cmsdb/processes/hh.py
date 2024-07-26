@@ -36,9 +36,9 @@ __all__ = [
     "hh_ggf_kl1_kt1_c23", "hh_ggf_kl1_kt1_c2m2",
     "hh_vbf", "hh_vbf_kv1_k2v1_kl1", "hh_vbf_kv1_k2v1_kl0", "hh_vbf_kv1_k2v1_kl2",
     "hh_vbf_kv1_k2v0_kl1", "hh_vbf_kv1_k2v2_kl1", "hh_vbf_kv0p5_k2v1_kl1", "hh_vbf_kv1p5_k2v1_kl1",
-    "hh_vbf_kv1p74_k2v1p37_kl14p4", "hh_vbf_kvm0p012_k2v0p030_kl10p2",
+    "hh_vbf_kv1p74_k2v1p37_kl14p4", "hh_vbf_kvm0p012_k2v0p03_kl10p2",
     "hh_vbf_kvm0p758_k2v1p44_klm19p3", "hh_vbf_kvm0p962_k2v0p959_klm1p43",
-    "hh_vbf_kvm1p21_k2v1p94_klm0p94", "hh_vbf_kvm1p60_k2v2p72_klm1p36",
+    "hh_vbf_kvm1p21_k2v1p94_klm0p94", "hh_vbf_kvm1p6_k2v2p72_klm1p36",
     "hh_vbf_kvm1p83_k2v3p57_klm3p39", "hh_vbf_kvm2p12_k2v3p87_klm5p96",
     "radion_hh_ggf", "graviton_hh_ggf",
     "radion_hh_vbf", "graviton_hh_vbf",
@@ -301,8 +301,8 @@ hh_vbf_kv1p74_k2v1p37_kl14p4 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kvm0p012_k2v0p030_kl10p2 = hh_vbf.add_process(
-    name="hh_vbf_kvm0p012_k2v0p030_kl10p2",
+hh_vbf_kvm0p012_k2v0p03_kl10p2 = hh_vbf.add_process(
+    name="hh_vbf_kvm0p012_k2v0p03_kl10p2",
     id=22009,
     xsecs={
         # no 13p0TeV sample generated, but we could use the scaling formula in the hh tools
@@ -345,8 +345,8 @@ hh_vbf_kvm1p21_k2v1p94_klm0p94 = hh_vbf.add_process(
     aux={"production_mode_parent": hh_vbf},
 )
 
-hh_vbf_kvm1p60_k2v2p72_klm1p36 = hh_vbf.add_process(
-    name="hh_vbf_kvm1p60_k2v2p72_klm1p36",
+hh_vbf_kvm1p6_k2v2p72_klm1p36 = hh_vbf.add_process(
+    name="hh_vbf_kvm1p6_k2v2p72_klm1p36",
     id=22013,
     xsecs={
         # no 13p0TeV sample generated, but we could use the scaling formula in the hh tools

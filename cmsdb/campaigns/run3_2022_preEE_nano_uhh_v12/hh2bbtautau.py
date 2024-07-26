@@ -246,9 +246,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_vbf_hbb_htt_kvm0p012_k2v0p030_kl10p2_madgraph",
+    name="hh_vbf_hbb_htt_kvm0p012_k2v0p03_kl10p2_madgraph",
     id=14874480,
-    processes=[procs.hh_vbf_hbb_htt_kvm0p012_k2v0p030_kl10p2],
+    processes=[procs.hh_vbf_hbb_htt_kvm0p012_k2v0p03_kl10p2],
     keys=[
         "/VBFHHto2B2Tau_CV-m0p012_C2V-0p030_C3-10p2_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -310,9 +310,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_vbf_hbb_htt_kvm1p60_k2v2p72_klm1p36_madgraph",
+    name="hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36_madgraph",
     id=14870882,
-    processes=[procs.hh_vbf_hbb_htt_kvm1p60_k2v2p72_klm1p36],
+    processes=[procs.hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36],
     keys=[
         "/VBFHHto2B2Tau_CV-m1p60_C2V-2p72_C3-m1p36_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
