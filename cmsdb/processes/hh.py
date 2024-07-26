@@ -88,6 +88,7 @@ hh_ggf = hh.add_process(
 hh_ggf_kl1_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl1_kt1",
     id=21002,
+    label=r"$HH_{ggf}^{\kappa_\lambda=1}$",
     xsecs={
         # sm values taken from summary table on twiki
         13: 0.001 * Number(30.77, {
@@ -105,6 +106,7 @@ hh_ggf_kl1_kt1 = hh_ggf.add_process(
 hh_ggf_kl0_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl0_kt1",
     id=21001,
+    label=r"$HH_{ggf}^{\kappa_\lambda=0}$",
     xsecs={
         13: 0.001 * Number(hh_xsec_13p0(0), {
             "pdf": 0.023j,
@@ -121,6 +123,7 @@ hh_ggf_kl0_kt1 = hh_ggf.add_process(
 hh_ggf_kl2p45_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl2p45_kt1",
     id=21003,
+    label=r"$HH_{ggf}^{\kappa_\lambda=2.45}$",
     xsecs={
         13: 0.001 * Number(hh_xsec_13p0(2.45), {
             "pdf": 0.023j,
@@ -137,6 +140,7 @@ hh_ggf_kl2p45_kt1 = hh_ggf.add_process(
 hh_ggf_kl5_kt1 = hh_ggf.add_process(
     name="hh_ggf_kl5_kt1",
     id=21004,
+    label=r"$HH_{ggf}^{\kappa_\lambda=5}$",
     xsecs={
         13: 0.001 * Number(hh_xsec_13p0(5), {
             "pdf": 0.023j,
