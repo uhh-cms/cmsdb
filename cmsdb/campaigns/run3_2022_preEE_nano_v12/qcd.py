@@ -396,7 +396,7 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="qcd_ht2000_madgraph",
+    name="qcd_ht2000toinf_madgraph",
     id=14792291,
     processes=[procs.qcd_ht2000toinf],
     info=dict(

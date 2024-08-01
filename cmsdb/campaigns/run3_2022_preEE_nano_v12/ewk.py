@@ -421,9 +421,9 @@ cpn.add_dataset(
 # DY m_ll 4-50 GeV, HT-binned,
 
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht40to70_madgraph",
+    name="dy_m4to50_ht40to70_madgraph",
     id=14949230,
-    processes=[procs.dy_lep_m4to50_ht40to70],
+    processes=[procs.dy_m4to50_ht40to70],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -435,9 +435,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht70to100_madgraph",
+    name="dy_m4to50_ht70to100_madgraph",
     id=14952860,
-    processes=[procs.dy_lep_m4to50_ht70to100],
+    processes=[procs.dy_m4to50_ht70to100],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -449,9 +449,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht100to400_madgraph",
+    name="dy_m4to50_ht100to400_madgraph",
     id=14950528,
-    processes=[procs.dy_lep_m4to50_ht100to400],
+    processes=[procs.dy_m4to50_ht100to400],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -463,9 +463,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht400to800_madgraph",
+    name="dy_m4to50_ht400to800_madgraph",
     id=14950277,
-    processes=[procs.dy_lep_m4to50_ht400to800],
+    processes=[procs.dy_m4to50_ht400to800],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -477,9 +477,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht800to1500_madgraph",
+    name="dy_m4to50_ht800to1500_madgraph",
     id=14949446,
-    processes=[procs.dy_lep_m4to50_ht800to1500],
+    processes=[procs.dy_m4to50_ht800to1500],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -491,9 +491,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht1500to2500_madgraph",
+    name="dy_m4to50_ht1500to2500_madgraph",
     id=14947931,
-    processes=[procs.dy_lep_m4to50_ht1500to2500],
+    processes=[procs.dy_m4to50_ht1500to2500],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -505,9 +505,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m4to50_ht2500toinf_madgraph",
+    name="dy_m4to50_ht2500toinf_madgraph",
     id=14953120,
-    processes=[procs.dy_lep_m4to50_ht2500toinf],
+    processes=[procs.dy_m4to50_ht2500toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -522,9 +522,9 @@ cpn.add_dataset(
 # DY m_ll 50-120 GeV, HT-binned,
 
 cpn.add_dataset(
-    name="dy_lep_m50to120_ht40to70_madgraph",
+    name="dy_m50to120_ht40to70_madgraph",
     id=14815946,
-    processes=[procs.dy_lep_m50to120_ht40to70],
+    processes=[procs.dy_m50to120_ht40to70],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -536,9 +536,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50to120_ht70to100_madgraph",
+    name="dy_m50to120_ht70to100_madgraph",
     id=14813985,
-    processes=[procs.dy_lep_m50to120_ht70to100],
+    processes=[procs.dy_m50to120_ht70to100],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -550,9 +550,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50to120_ht100to400_madgraph",
+    name="dy_m50to120_ht100to400_madgraph",
     id=14821740,
-    processes=[procs.dy_lep_m50to120_ht100to400],
+    processes=[procs.dy_m50to120_ht100to400],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -564,9 +564,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="dy_lep_m50to120_ht400to800_madgraph",
+    name="dy_m50to120_ht400to800_madgraph",
     id=14815864,
-    processes=[procs.dy_lep_m50to120_ht400to800],
+    processes=[procs.dy_m50to120_ht400to800],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -812,7 +812,7 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="w_lnu_mlnu0to120_ht2500_madgraph",
+    name="w_lnu_mlnu0to120_ht2500toinf_madgraph",
     id=14892471,
     processes=[procs.w_lnu_mlnu0to120_ht2500],
     info=dict(

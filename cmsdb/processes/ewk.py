@@ -27,11 +27,11 @@ __all__ = [
     "dy_m50toinf_ht1200to2500", "dy_m50toinf_ht2500toinf",
     "dy_pt0to50", "dy_pt50to100", "dy_pt100to250", "dy_pt250to400",
     "dy_pt400to650", "dy_pt650toinf",
-    "dy_lep_m4to50_ht40to70", "dy_lep_m4to50_ht70to100", "dy_lep_m4to50_ht100to400",
-    "dy_lep_m4to50_ht400to800", "dy_lep_m4to50_ht800to1500", "dy_lep_m4to50_ht1500to2500",
-    "dy_lep_m4to50_ht2500toinf",
-    "dy_lep_m50to120_ht40to70", "dy_lep_m50to120_ht70to100",
-    "dy_lep_m50to120_ht100to400", "dy_lep_m50to120_ht400to800",
+    "dy_m4to50_ht40to70", "dy_m4to50_ht70to100", "dy_m4to50_ht100to400",
+    "dy_m4to50_ht400to800", "dy_m4to50_ht800to1500", "dy_m4to50_ht1500to2500",
+    "dy_m4to50_ht2500toinf",
+    "dy_m50to120_ht40to70", "dy_m50to120_ht70to100",
+    "dy_m50to120_ht100to400", "dy_m50to120_ht400to800",
     "z",
     "z_nunu",
     "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
@@ -598,8 +598,8 @@ dy_pt650toinf = dy.add_process(
 
 # DY m_ll in [4, 50] GeV, binned in Ht, LO xs
 
-dy_lep_m4to50_ht40to70 = dy.add_process(
-    name="dy_lep_m4to50_ht40to70",
+dy_m4to50_ht40to70 = dy.add_process(
+    name="dy_m4to50_ht40to70",
     id=51610,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -611,8 +611,8 @@ dy_lep_m4to50_ht40to70 = dy.add_process(
     },
 )
 
-dy_lep_m4to50_ht70to100 = dy.add_process(
-    name="dy_lep_m4to50_ht70to100",
+dy_m4to50_ht70to100 = dy.add_process(
+    name="dy_m4to50_ht70to100",
     id=51611,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -624,8 +624,8 @@ dy_lep_m4to50_ht70to100 = dy.add_process(
     },
 )
 
-dy_lep_m4to50_ht100to400 = dy.add_process(
-    name="dy_lep_m4to50_ht100to400",
+dy_m4to50_ht100to400 = dy.add_process(
+    name="dy_m4to50_ht100to400",
     id=51612,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -637,8 +637,8 @@ dy_lep_m4to50_ht100to400 = dy.add_process(
     },
 )
 
-dy_lep_m4to50_ht400to800 = dy.add_process(
-    name="dy_lep_m4to50_ht400to800",
+dy_m4to50_ht400to800 = dy.add_process(
+    name="dy_m4to50_ht400to800",
     id=51613,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -650,8 +650,8 @@ dy_lep_m4to50_ht400to800 = dy.add_process(
     },
 )
 
-dy_lep_m4to50_ht800to1500 = dy.add_process(
-    name="dy_lep_m4to50_ht800to1500",
+dy_m4to50_ht800to1500 = dy.add_process(
+    name="dy_m4to50_ht800to1500",
     id=51614,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -663,8 +663,8 @@ dy_lep_m4to50_ht800to1500 = dy.add_process(
     },
 )
 
-dy_lep_m4to50_ht1500to2500 = dy.add_process(
-    name="dy_lep_m4to50_ht1500to2500",
+dy_m4to50_ht1500to2500 = dy.add_process(
+    name="dy_m4to50_ht1500to2500",
     id=51615,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -676,8 +676,8 @@ dy_lep_m4to50_ht1500to2500 = dy.add_process(
     },
 )
 
-dy_lep_m4to50_ht2500toinf = dy.add_process(
-    name="dy_lep_m4to50_ht2500toinf",
+dy_m4to50_ht2500toinf = dy.add_process(
+    name="dy_m4to50_ht2500toinf",
     id=51616,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-4to50_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -691,8 +691,8 @@ dy_lep_m4to50_ht2500toinf = dy.add_process(
 
 # DY m_ll in [50, 120] GeV, binned in Ht, LO xs
 
-dy_lep_m50to120_ht40to70 = dy.add_process(
-    name="dy_lep_m50to120_ht40to70",
+dy_m50to120_ht40to70 = dy.add_process(
+    name="dy_m50to120_ht40to70",
     id=51620,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -704,8 +704,8 @@ dy_lep_m50to120_ht40to70 = dy.add_process(
     },
 )
 
-dy_lep_m50to120_ht70to100 = dy.add_process(
-    name="dy_lep_m50to120_ht70to100",
+dy_m50to120_ht70to100 = dy.add_process(
+    name="dy_m50to120_ht70to100",
     id=51621,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -717,8 +717,8 @@ dy_lep_m50to120_ht70to100 = dy.add_process(
     },
 )
 
-dy_lep_m50to120_ht100to400 = dy.add_process(
-    name="dy_lep_m50to120_ht100to400",
+dy_m50to120_ht100to400 = dy.add_process(
+    name="dy_m50to120_ht100to400",
     id=51622,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
@@ -730,8 +730,8 @@ dy_lep_m50to120_ht100to400 = dy.add_process(
     },
 )
 
-dy_lep_m50to120_ht400to800 = dy.add_process(
-    name="dy_lep_m50to120_ht400to800",
+dy_m50to120_ht400to800 = dy.add_process(
+    name="dy_m50to120_ht400to800",
     id=51623,
     xsecs={
         # https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
