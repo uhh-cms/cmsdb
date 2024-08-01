@@ -45,7 +45,7 @@ __all__ = [
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "w_lnu_mlnu0to120_ht40to100", "w_lnu_mlnu0to120_ht100to400", "w_lnu_mlnu0to120_ht400to800",
-    "w_lnu_mlnu0to120_ht800to1500", "w_lnu_mlnu0to120_ht1500to2500", "w_lnu_mlnu0to120_ht2500",
+    "w_lnu_mlnu0to120_ht800to1500", "w_lnu_mlnu0to120_ht1500to2500", "w_lnu_mlnu0to120_ht2500toinf",
     "w_lnu_mlnu120_ht40to100", "w_lnu_mlnu120_ht100to400", "w_lnu_mlnu120_ht400to800",
     "w_lnu_mlnu120_ht800to1500", "w_lnu_mlnu120_ht1500to2500", "w_lnu_mlnu120_ht2500toinf",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
@@ -1068,8 +1068,8 @@ w_lnu_mlnu0to120_ht1500to2500 = w_lnu.add_process(
     },
 )
 
-w_lnu_mlnu0to120_ht2500 = w_lnu.add_process(
-    name="w_lnu_mlnu0to120_ht2500",
+w_lnu_mlnu0to120_ht2500toinf = w_lnu.add_process(
+    name="w_lnu_mlnu0to120_ht2500toinf",
     id=6240,
     xsecs={
         # https://xsdb-temp.app.cern.ch/?searchQuery=DAS=WtoLNu-4Jets_MLNu-0to120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8

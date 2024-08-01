@@ -814,7 +814,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="w_lnu_mlnu0to120_ht2500toinf_madgraph",
     id=14892471,
-    processes=[procs.w_lnu_mlnu0to120_ht2500],
+    processes=[procs.w_lnu_mlnu0to120_ht2500toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
