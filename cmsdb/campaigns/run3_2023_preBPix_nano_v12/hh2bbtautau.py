@@ -6,13 +6,27 @@ version 12, created with custom content at UHH.
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2023_nano_v12 import campaign_run3_2023_nano_v12 as cpn
+from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPix_nano_v12 as cpn
 
 
 #
 # ggF -> H -> HH
 #
 
+# SM
+cpn.add_dataset(
+    name="ggf_hh_bbtautau_kl_1_kt_1_c2_0_powheg",
+    id=14931248,
+    processes=[procs.hh_ggf_bbtautau],
+    keys=[
+        "/GluGlutoHHto2B2Tau_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-tsg_130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=36,
+    n_events=985000,
+)
+
+
+# BSM
 cpn.add_dataset(
     name="ggf_hh_bbtautau_kl_0_kt_1_c2_0_powheg",
     id=14931313,
@@ -33,17 +47,6 @@ cpn.add_dataset(
     ],
     n_files=48,
     n_events=994000,
-)
-
-cpn.add_dataset(
-    name="ggf_hh_bbtautau_kl_1_kt_1_c2_0_powheg",
-    id=14931248,
-    processes=[procs.hh_ggf_bbtautau],
-    keys=[
-        "/GluGlutoHHto2B2Tau_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-tsg_130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=36,
-    n_events=985000,
 )
 
 cpn.add_dataset(
