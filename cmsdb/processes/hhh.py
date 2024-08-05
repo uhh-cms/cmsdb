@@ -4,8 +4,17 @@
 HHH process definitions.
 """
 
-__all__ = [
+__all__ = [  # noqa: F822
     "hhh", "hhh_ggf", "coupling_combinations",
+    # general coupling hypotheses for hhh
+    "hhh_c30_d40", "hhh_c30_d499", "hhh_c30_d4m1", "hhh_c319_d419",
+    "hhh_c31_d40", "hhh_c31_d42", "hhh_c32_d4m1", "hhh_c34_d49",
+    "hhh_c3m1_d40", "hhh_c3m1_d4m1", "hhh_c3m1p5_d4m0p5",
+    # hypotheses for subdecay channels
+    "hhh_4b2tau_c30_d40", "hhh_4b2tau_c30_d499", "hhh_4b2tau_c30_d4m1",
+    "hhh_4b2tau_c319_d419", "hhh_4b2tau_c31_d40", "hhh_4b2tau_c31_d42",
+    "hhh_4b2tau_c32_d4m1", "hhh_4b2tau_c34_d49", "hhh_4b2tau_c3m1_d40",
+    "hhh_4b2tau_c3m1_d4m1", "hhh_4b2tau_c3m1p5_d4m0p5",
 ]
 
 
@@ -13,7 +22,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
-from cmsdb.util import multiply_xsecs
+from cmsdb.util import multiply_xsecs, DotDict
 
 hhh = Process(
     name="hhh",
@@ -53,13 +62,16 @@ def xs_scaler(process_name=None, c3=None, d4=None):
     """
 
     if not any([x for x in [c3, d4]]) and isinstance(process_name, str):
+
+        # preprocess process name to better identfy parameter values
+        tmp_process_name = process_name.replace("_c3", "_c3_").replace("_d4", "_d4_")
         # parse coupling values from process name
-        parts = process_name.split("_")
+        parts = tmp_process_name.split("_")
         c3_idx = parts.index("c3") + 1
         d4_idx = parts.index("d4") + 1
 
         def convert_to_float(input):
-            tmp = input.replace("minus", "-")
+            tmp = input.replace("m", "-")
             try:
                 converted = float(tmp)
 
@@ -75,53 +87,108 @@ def xs_scaler(process_name=None, c3=None, d4=None):
     )  # noqa
 
 
-template = "hhh_c3_{c3}_d4_{d4}"
-subdecay_template = "hhh_{subdecay}_c3_{c3}_d4_{d4}"
+subdecay_dict = DotDict.wrap({
+    "4b2tau": {
+        "name": "4b2tau",
+        "br": 3 * const.br_h.tt * const.br_h.bb**2,
+        "id": 100,
+        "label": r"$\rightarrow 4b2\tau$",
+    },
+})
 
-coupling_combinations = (
-    # (c3, d4)
-    (0, 0),
-    (0, 99),
-    (0, -1),
-    (19, 19),
-    (1, 0),
-    (1, 2),
-    (2, -1),
-    (4, 9),
-    (-1, 0),
-    (-1, -1),
-    (-1.5, -0.5),
-)
+coupling_combinations = DotDict.wrap({
+    "c30_d40": {
+        "id": 1,
+        "c3": 0,
+        "d4": 0,
+        "name": "c30_d40",
+    },
+    "c30_d499": {
+        "id": 2,
+        "c3": 0,
+        "d4": 99,
+        "name": "c30_d499",
+    },
+    "c30_d4m1": {
+        "id": 3,
+        "c3": 0,
+        "d4": -1,
+        "name": "c30_d4m1",
+    },
+    "c319_d419": {
+        "id": 4,
+        "c3": 19,
+        "d4": 19,
+        "name": "c319_d419",
+    },
+    "c31_d40": {
+        "id": 5,
+        "c3": 1,
+        "d4": 0,
+        "name": "c31_d40",
+    },
+    "c31_d42": {
+        "id": 6,
+        "c3": 1,
+        "d4": 2,
+        "name": "c31_d42",
+    },
+    "c32_d4m1": {
+        "id": 7,
+        "c3": 2,
+        "d4": -1,
+        "name": "c32_d4m1",
+    },
+    "c34_d49": {
+        "id": 8,
+        "c3": 4,
+        "d4": 9,
+        "name": "c34_d49",
+    },
+    "c3m1_d40": {
+        "id": 9,
+        "c3": -1,
+        "d4": 0,
+        "name": "c3m1_d40",
+    },
+    "c3m1_d4m1": {
+        "id": 10,
+        "c3": -1,
+        "d4": -1,
+        "name": "c3m1_d4m1",
+    },
+    "c3m1p5_d4m0p5": {
+        "id": 11,
+        "c3": -1.5,
+        "d4": -0.5,
+        "name": "c3m1p5_d4m0p5",
+    },
+})
 
-for i, (c3, d4) in enumerate(coupling_combinations, 1):
-    name = template.format(
-        c3=str(c3).replace("-", "minus").replace(".", "p"),
-        d4=str(d4).replace("-", "minus").replace(".", "p"),
-    )
-    subdecay_name = subdecay_template.format(
-        c3=str(c3).replace("-", "minus").replace(".", "p"),
-        d4=str(d4).replace("-", "minus").replace(".", "p"),
-        subdecay="4b2tau",
-    )
-    locals().update({
-        name: hhh_ggf.add_process(
-            name=name,
-            id=hhh_ggf.id + i,
-            label=f"{hhh_ggf.label} $(c_{{3}}={c3}, d_{{4}}={d4})$",
-            xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)),  # TODO
-        ),
-    })
-    __all__.append(name)
+for decay_name, decay_dict in subdecay_dict.items():
+    for coupling_comb, coupling_dict in coupling_combinations.items():
+        name = f"hhh_{coupling_dict.name}"
+        subdecay_name = f"hhh_{decay_dict.name}_{coupling_dict.name}"
+        c3 = coupling_dict.c3
+        d4 = coupling_dict.d4
 
-    tmp = locals().get(name)
-    locals().update({
-        subdecay_name: locals().get(name).add_process(
-            name=subdecay_name,
-            id=tmp.id + 100,
-            label=f"{tmp.label} $\\rightarrow 4b2\\tau$",
-            xsecs=multiply_xsecs(tmp, 3 * const.br_h.tt * const.br_h.bb**2),
-        )})
-    __all__.append(subdecay_name)
+        locals().update({
+            name: hhh_ggf.add_process(
+                name=name,
+                id=hhh_ggf.id + coupling_dict.id,
+                label=f"{hhh_ggf.label} $(c_{{3}}={c3}, d_{{4}}={d4})$",
+                xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)),  # TODO
+            ),
+        })
+
+        tmp = locals().get(name)
+        locals().update({
+            subdecay_name: locals().get(name).add_process(
+                name=subdecay_name,
+                id=tmp.id + decay_dict.id,
+                label=f"{tmp.label} {decay_dict.label}",
+                xsecs=multiply_xsecs(tmp, decay_dict.br),
+            )})
 
 # BSM hypotheses
 # XS \propto \kappa_{\lambda}*(1 + c3) * \kappa_{\lambda}*(1 + d4)
