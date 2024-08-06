@@ -4,7 +4,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12 import campaign_run3_2022_preE
 
 # SM sample
 cpn.add_dataset(
-    name="hhh_4b2tau_c30_d40_madgraph",
+    name="hhh_4b2tau_c30_d40_amcatnlo",
     id=14791313,
     processes=[procs.hhh_4b2tau_c30_d40],
     keys=[
@@ -20,7 +20,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c30_d499_madgraph",
+    name="hhh_4b2tau_c30_d499_amcatnlo",
     id=14802797,
     processes=[procs.hhh_4b2tau_c30_d499],
     keys=[
@@ -36,7 +36,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c30_d4m1_madgraph",
+    name="hhh_4b2tau_c30_d4m1_amcatnlo",
     id=14796290,
     processes=[procs.hhh_4b2tau_c30_d4m1],
     keys=[
@@ -52,7 +52,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c319_d419_madgraph",
+    name="hhh_4b2tau_c319_d419_amcatnlo",
     id=14805828,
     processes=[procs.hhh_4b2tau_c319_d419],
     keys=[
@@ -68,7 +68,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c31_d40_madgraph",
+    name="hhh_4b2tau_c31_d40_amcatnlo",
     id=14805288,
     processes=[procs.hhh_4b2tau_c31_d40],
     keys=[
@@ -84,7 +84,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c31_d42_madgraph",
+    name="hhh_4b2tau_c31_d42_amcatnlo",
     id=14797469,
     processes=[procs.hhh_4b2tau_c31_d42],
     keys=[
@@ -100,7 +100,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c32_d4m1_madgraph",
+    name="hhh_4b2tau_c32_d4m1_amcatnlo",
     id=14794613,
     processes=[procs.hhh_4b2tau_c32_d4m1],
     keys=[
@@ -116,7 +116,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c34_d49_madgraph",
+    name="hhh_4b2tau_c34_d49_amcatnlo",
     id=14885953,
     processes=[procs.hhh_4b2tau_c34_d49],
     keys=[
@@ -132,7 +132,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c3m1_d40_madgraph",
+    name="hhh_4b2tau_c3m1_d40_amcatnlo",
     id=14795194,
     processes=[procs.hhh_4b2tau_c3m1_d40],
     keys=[
@@ -148,7 +148,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c3m1_d4m1_madgraph",
+    name="hhh_4b2tau_c3m1_d4m1_amcatnlo",
     id=14791288,
     processes=[procs.hhh_4b2tau_c3m1_d4m1],
     keys=[
@@ -164,7 +164,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hhh_4b2tau_c3m1p5_d4m0p5_madgraph",
+    name="hhh_4b2tau_c3m1p5_d4m0p5_amcatnlo",
     id=14792134,
     processes=[procs.hhh_4b2tau_c3m1p5_d4m0p5],
     keys=[
