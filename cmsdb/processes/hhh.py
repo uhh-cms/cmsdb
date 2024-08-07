@@ -27,8 +27,7 @@ from cmsdb.util import multiply_xsecs, DotDict
 hhh = Process(
     name="hhh",
     id=40000,
-    # label="HHH",
-    label="",
+    label="HHH",
     xsecs={13.6: Number(0.1)},  # TODO
 )
 
