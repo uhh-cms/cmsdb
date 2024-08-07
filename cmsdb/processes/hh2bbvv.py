@@ -3,18 +3,18 @@
 """
 HH -> bbVV process definitions.
 
-IDs are assigned in the range 21200-21499 for hh_ggf and 22200-22499 for hh_vbf.
-bbWW processes are assigned IDs in the range 21200-21299 and 22200-22299.
-bbZZ processes are assigned IDs in the range 21300-21399 and 22300-22399.
-bbVV processes are assigned IDs in the range 21400-21499 and 22400-22499.
+IDs are assigned in the range 21200-21799 for hh_ggf and 22200-22799 for hh_vbf.
+bbVV processes are assigned IDs in the range 21200-21399 and 22200-22399.
+bbWW processes are assigned IDs in the range 21400-21599 and 22400-22599.
+bbZZ processes are assigned IDs in the range 21600-21799 and 22600-22799.
 For bbVV, the VV decay mode IDs correspond to:
-- xxx10: qqlnu
-- xxx20: 2l2nu
-- xxx30: 4q
-- xxx40: 2q2nu
-- xxx50: 4nu
-- xxx60: 4l
-- xxx70: 2l2q
+- xxx20: qqlnu
+- xxx40: 2l2nu
+- xxx60: 4q
+- xxx80: 2q2nu
+- xx(x+1)00: 4nu
+- xx(x+1)20: 4l
+- xx(x+1)40: 2l2q
 
 The code structure is designed to allow maintainance via a single source of truth for the decay maps,
 using a handful of helper functions to add the processes to the main HH -> bbVV processes.
@@ -28,39 +28,42 @@ Then we define all the VV sub-decay processes for the bbVV, bbWW, and bbZZ proce
 Lastly, we define the resonant (radion and graviton) HH -> bbWW processes.
 """
 
+ggf_params = ["", "_kl0_kt1", "_kl1_kt1", "_kl2p45_kt1", "_kl5_kt1"]
+vbf_params = [
+    "", "_kv1_k2v1_kl1", "_kv1_k2v1_kl0", "_kv1_k2v1_kl2", "_kv1_k2v0_kl1",
+    "_kv1_k2v2_kl1", "_kv0p5_k2v1_kl1", "_kv1p5_k2v1_kl1",
+    "_kv1p74_k2v1p37_kl14p4", "_kvm0p012_k2v0p03_kl10p2", "_kvm0p758_k2v1p44_klm19p3",
+    "_kvm0p962_k2v0p959_klm1p43", "_kvm1p21_k2v1p94_klm0p94", "_kvm1p6_k2v2p72_klm1p36",
+    "_kvm1p83_k2v3p57_klm3p39", "_kvm2p12_k2v3p87_klm5p96",
+]
+vv_decay_modes = ["", "qqlnu", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
+ww_decay_modes = ["", "qqlnu", "2l2nu", "4q"]
+zz_decay_modes = ["", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
+
 __all__ = [
     f"hh_ggf_hbb_hvv{vv}{params}"
-    for params in ["", "_kl0_kt1", "_kl1_kt1", "_kl2p45_kt1", "_kl5_kt1"]
-    for vv in ["", "qqlnu", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
+    for params in ggf_params
+    for vv in vv_decay_modes
 ] + [
     f"hh_vbf_hbb_hvv{vv}{params}"
-    for params in [
-        "", "_kv1_k2v1_kl1", "_kv1_k2v1_kl0", "_kv1_k2v1_kl2", "_kv1_k2v0_kl1",
-        "_kv1_k2v2_kl1", "_kv0p5_k2v1_kl1", "_kv1p5_k2v1_kl1",
-    ]
-    for vv in ["", "qqlnu", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
+    for params in vbf_params
+    for vv in vv_decay_modes
 ] + [
     f"hh_ggf_hbb_hww{ww}{params}"
-    for params in ["", "_kl0_kt1", "_kl1_kt1", "_kl2p45_kt1", "_kl5_kt1"]
-    for ww in ["", "qqlnu", "2l2nu", "4q"]
+    for params in ggf_params
+    for ww in ww_decay_modes
 ] + [
     f"hh_vbf_hbb_hww{ww}{params}"
-    for params in [
-        "", "_kv1_k2v1_kl1", "_kv1_k2v1_kl0", "_kv1_k2v1_kl2", "_kv1_k2v0_kl1",
-        "_kv1_k2v2_kl1", "_kv0p5_k2v1_kl1", "_kv1p5_k2v1_kl1",
-    ]
-    for ww in ["", "qqlnu", "2l2nu", "4q"]
+    for params in vbf_params
+    for ww in ww_decay_modes
 ] + [
     f"hh_ggf_hbb_hzz{zz}{params}"
-    for params in ["", "_kl0_kt1", "_kl1_kt1", "_kl2p45_kt1", "_kl5_kt1"]
-    for zz in ["", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
+    for params in ggf_params
+    for zz in zz_decay_modes
 ] + [
     f"hh_vbf_hbb_hzz{zz}{params}"
-    for params in [
-        "", "_kv1_k2v1_kl1", "_kv1_k2v1_kl0", "_kv1_k2v1_kl2", "_kv1_k2v0_kl1",
-        "_kv1_k2v2_kl1", "_kv0p5_k2v1_kl1", "_kv1p5_k2v1_kl1",
-    ]
-    for zz in ["", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
+    for params in vbf_params
+    for zz in zz_decay_modes
 ] + [
     # Resonant HH -> bbWW: radion
     "radion_hh_ggf_bbww",
@@ -100,6 +103,9 @@ from cmsdb.processes.hh import (
     hh_ggf, hh_ggf_kl0_kt1, hh_ggf_kl1_kt1, hh_ggf_kl2p45_kt1, hh_ggf_kl5_kt1,
     hh_vbf, hh_vbf_kv1_k2v1_kl1, hh_vbf_kv1_k2v1_kl0, hh_vbf_kv1_k2v1_kl2,
     hh_vbf_kv1_k2v0_kl1, hh_vbf_kv1_k2v2_kl1, hh_vbf_kv0p5_k2v1_kl1, hh_vbf_kv1p5_k2v1_kl1,
+    hh_vbf_kv1p74_k2v1p37_kl14p4, hh_vbf_kvm0p012_k2v0p03_kl10p2, hh_vbf_kvm0p758_k2v1p44_klm19p3,
+    hh_vbf_kvm0p962_k2v0p959_klm1p43, hh_vbf_kvm1p21_k2v1p94_klm0p94, hh_vbf_kvm1p6_k2v2p72_klm1p36,
+    hh_vbf_kvm1p83_k2v3p57_klm3p39, hh_vbf_kvm2p12_k2v3p87_klm5p96,
     radion_hh_ggf, graviton_hh_ggf,
 )
 
@@ -107,25 +113,25 @@ from cmsdb.processes.hh import (
 # Helper
 #
 
-# NOTE: The IDs of the hh_ggf_hbb_hvv processes are set to 400 + ID of the VV decay mode
+# NOTE: The IDs of the hh_ggf_hbb_hvv processes are set to 200 + ID of the VV decay mode
 # NOTE: The BR of the hbb_hvv process is set to 1. The hbb_hvv process xsecs are later set the
 # sum of the xsecs of the hbb_hww and hbb_hzz processes
 hh_decay_map = DotDict.wrap({
     "hbb_hvv": {
         "name": "hbb_hvv",
-        "id": 400,
+        "id": 200,
         "br": 1,
         "label": r"$\rightarrow bbVV$",
     },
     "hbb_hww": {
         "name": "hbb_hww",
-        "id": -200,  # corresponds to 400 - 200 = 200
+        "id": 200,  # corresponds to 200 + 200 = 400
         "br": const.br_hh.bbww,
         "label": r"$\rightarrow bbWW$",
     },
     "hbb_hzz": {
         "name": "hbb_hzz",
-        "id": -100,  # corresponds to 400 - 100 = 300
+        "id": 400,  # corresponds to 200 + 400 = 600
         "br": const.br_hh.bbzz,
         "label": r"$\rightarrow bbZZ$",
     },
@@ -137,43 +143,43 @@ hh_decay_map = DotDict.wrap({
 vv_decay_map = DotDict.wrap({
     "qqlnu": {
         "name": "qqlnu",
-        "id": 10,
+        "id": 20,
         "label": r"$(qq\ell\nu)$",
         "br": -1,
     },
     "2l2nu": {
         "name": "2l2nu",
-        "id": 20,
+        "id": 40,
         "label": r"$(2\ell 2\nu)$",
         "br": -1,
     },
     "4q": {
         "name": "4q",
-        "id": 30,
+        "id": 60,
         "label": r"$(4q)$",
         "br": -1,
     },
     "2q2nu": {
         "name": "2q2nu",
-        "id": 40,
+        "id": 80,
         "label": r"$(2q2\nu)$",
         "br": -1,
     },
     "4nu": {
         "name": "4nu",
-        "id": 50,
+        "id": 100,
         "label": r"$(4\nu)$",
         "br": -1,
     },
     "4l": {
         "name": "4l",
-        "id": 60,
+        "id": 120,
         "label": r"$(4\ell)$",
         "br": -1,
     },
     "2l2q": {
         "name": "2l2q",
-        "id": 70,
+        "id": 140,
         "label": r"$(2\ell 2q)$",
         "br": -1,
     },
@@ -195,11 +201,9 @@ ww_decay_map = DotDict.wrap({
     final_state: vv_decay_map[final_state].copy()
     for final_state in ("2l2nu", "4q", "qqlnu")
 })
-ww_decay_map["2l2nu"] = const.br_ww.dl
-ww_decay_map["4q"] = const.br_ww.fh
+ww_decay_map["2l2nu"]["br"] = const.br_ww.dl
+ww_decay_map["4q"]["br"] = const.br_ww.fh
 ww_decay_map["qqlnu"]["br"] = const.br_ww.sl
-
-from cmsdb.processes.higgs import ww_decay_map, zz_decay_map
 
 """
 This function is used to add the main hbb_hvv processes to the hh_ggf and hh_vbf processes and
@@ -269,6 +273,14 @@ hh_vbf_hbb_hvv_kv1_k2v0_kl1 = add_bbvv_decay_process(hh_vbf_kv1_k2v0_kl1, hh_dec
 hh_vbf_hbb_hvv_kv1_k2v2_kl1 = add_bbvv_decay_process(hh_vbf_kv1_k2v2_kl1, hh_decay_map.hbb_hvv)
 hh_vbf_hbb_hvv_kv0p5_k2v1_kl1 = add_bbvv_decay_process(hh_vbf_kv0p5_k2v1_kl1, hh_decay_map.hbb_hvv)
 hh_vbf_hbb_hvv_kv1p5_k2v1_kl1 = add_bbvv_decay_process(hh_vbf_kv1p5_k2v1_kl1, hh_decay_map.hbb_hvv)
+hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4 = add_bbvv_decay_process(hh_vbf_kv1p74_k2v1p37_kl14p4, hh_decay_map.hbb_hvv)
+hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2 = add_bbvv_decay_process(hh_vbf_kvm0p012_k2v0p03_kl10p2, hh_decay_map.hbb_hvv)
+hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3 = add_bbvv_decay_process(hh_vbf_kvm0p758_k2v1p44_klm19p3, hh_decay_map.hbb_hvv)
+hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43 = add_bbvv_decay_process(hh_vbf_kvm0p962_k2v0p959_klm1p43, hh_decay_map.hbb_hvv)  # noqa
+hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94 = add_bbvv_decay_process(hh_vbf_kvm1p21_k2v1p94_klm0p94, hh_decay_map.hbb_hvv)
+hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36 = add_bbvv_decay_process(hh_vbf_kvm1p6_k2v2p72_klm1p36, hh_decay_map.hbb_hvv)
+hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39 = add_bbvv_decay_process(hh_vbf_kvm1p83_k2v3p57_klm3p39, hh_decay_map.hbb_hvv)
+hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96 = add_bbvv_decay_process(hh_vbf_kvm2p12_k2v3p87_klm5p96, hh_decay_map.hbb_hvv)
 
 ####################################################################################################
 #
@@ -290,6 +302,14 @@ hh_vbf_hbb_hww_kv1_k2v0_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl1, hh_deca
 hh_vbf_hbb_hww_kv1_k2v2_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, hh_decay_map.hbb_hww)
 hh_vbf_hbb_hww_kv0p5_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, hh_decay_map.hbb_hww)
 hh_vbf_hbb_hww_kv1p5_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kv1p74_k2v1p37_kl14p4 = add_hvv_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kvm0p012_k2v0p03_kl10p2 = add_hvv_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kvm0p758_k2v1p44_klm19p3 = add_hvv_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kvm0p962_k2v0p959_klm1p43 = add_hvv_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kvm1p21_k2v1p94_klm0p94 = add_hvv_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kvm1p6_k2v2p72_klm1p36 = add_hvv_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kvm1p83_k2v3p57_klm3p39 = add_hvv_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, hh_decay_map.hbb_hww)
+hh_vbf_hbb_hww_kvm2p12_k2v3p87_klm5p96 = add_hvv_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, hh_decay_map.hbb_hww)
 
 ####################################################################################################
 #
@@ -304,29 +324,38 @@ hh_ggf_hbb_hzz_kl2p45_kt1 = add_hvv_decay(hh_ggf_hbb_hvv_kl2p45_kt1, hh_decay_ma
 hh_ggf_hbb_hzz_kl5_kt1 = add_hvv_decay(hh_ggf_hbb_hvv_kl5_kt1, hh_decay_map.hbb_hzz)
 
 hh_vbf_hbb_hzz = add_hvv_decay(hh_vbf_hbb_hvv, hh_decay_map.hbb_hzz, add_production_mode_parent=False)
-hh_vbf_hbb_hzz_kv1_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v1_kl1, hh_decay_map.hbb_hzz)  # noqa
-hh_vbf_hbb_hzz_kv1_k2v1_kl0 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v1_kl0, hh_decay_map.hbb_hzz)  # noqa
-hh_vbf_hbb_hzz_kv1_k2v1_kl2 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v1_kl2, hh_decay_map.hbb_hzz)  # noqa
-hh_vbf_hbb_hzz_kv1_k2v0_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl1, hh_decay_map.hbb_hzz)  # noqa
-hh_vbf_hbb_hzz_kv1_k2v2_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, hh_decay_map.hbb_hzz)  # noqa
-hh_vbf_hbb_hzz_kv0p5_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, hh_decay_map.hbb_hzz)  # noqa
-hh_vbf_hbb_hzz_kv1p5_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, hh_decay_map.hbb_hzz)  # noqa
+hh_vbf_hbb_hzz_kv1_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v1_kl1, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kv1_k2v1_kl0 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v1_kl0, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kv1_k2v1_kl2 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v1_kl2, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kv1_k2v0_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl1, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kv1_k2v2_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kv0p5_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kv1p5_k2v1_kl1 = add_hvv_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kv1p74_k2v1p37_kl14p4 = add_hvv_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kvm0p012_k2v0p03_kl10p2 = add_hvv_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kvm0p758_k2v1p44_klm19p3 = add_hvv_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kvm0p962_k2v0p959_klm1p43 = add_hvv_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kvm1p21_k2v1p94_klm0p94 = add_hvv_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kvm1p6_k2v2p72_klm1p36 = add_hvv_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kvm1p83_k2v3p57_klm3p39 = add_hvv_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, hh_decay_map.hbb_hzz)
+hh_vbf_hbb_hzz_kvm2p12_k2v3p87_klm5p96 = add_hvv_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, hh_decay_map.hbb_hzz)
 
 #
 # assign cross sections to HH -> bbVV processes
 #
 
-for proc in (
-    hh_ggf_hbb_hvv, hh_ggf_hbb_hvv_kl0_kt1, hh_ggf_hbb_hvv_kl1_kt1, hh_ggf_hbb_hvv_kl2p45_kt1, hh_ggf_hbb_hvv_kl5_kt1,
-    hh_vbf_hbb_hvv, hh_vbf_hbb_hvv_kv1_k2v1_kl1, hh_vbf_hbb_hvv_kv1_k2v1_kl0, hh_vbf_hbb_hvv_kv1_k2v1_kl2,
-    hh_vbf_hbb_hvv_kv1_k2v0_kl1, hh_vbf_hbb_hvv_kv1_k2v2_kl1,
-    hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, hh_vbf_hbb_hvv_kv1p5_k2v1_kl1,
-):
+for proc_name in [
+    f"hh_ggf_hbb_hvv{params}"
+    for params in ggf_params
+] + [
+    f"hh_vbf_hbb_hvv{params}"
+    for params in vbf_params
+]:
+    proc = locals()[proc_name]
     proc.xsecs = add_xsecs(
         proc.get_process(proc.name.replace("hvv", "hww")),
         proc.get_process(proc.name.replace("hvv", "hzz")),
     )
-    # proc.xsecs = add_xsecs(locals()[proc.name.replace("hvv", "hww")], locals()[proc.name.replace("hvv", "hzz")])
 
 ####################################################################################################
 #
@@ -348,6 +377,14 @@ hh_vbf_hbb_hvvqqlnu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl
 hh_vbf_hbb_hvvqqlnu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, vv_decay_map["qqlnu"])
 hh_vbf_hbb_hvvqqlnu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, vv_decay_map["qqlnu"])
 hh_vbf_hbb_hvvqqlnu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, vv_decay_map["qqlnu"])
+hh_vbf_hbb_hvvqqlnu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, vv_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hvvqqlnu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, vv_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hvvqqlnu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, vv_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hvvqqlnu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, vv_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hvvqqlnu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, vv_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hvvqqlnu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, vv_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hvvqqlnu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, vv_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hvvqqlnu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, vv_decay_map["qqlnu"])  # noqa
 
 hh_ggf_hbb_hvv2l2nu = add_bbvv_sub_decay(hh_ggf_hbb_hvv, vv_decay_map["2l2nu"], add_production_mode_parent=False)
 hh_ggf_hbb_hvv2l2nu_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hvv_kl0_kt1, vv_decay_map["2l2nu"])
@@ -363,6 +400,15 @@ hh_vbf_hbb_hvv2l2nu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl
 hh_vbf_hbb_hvv2l2nu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, vv_decay_map["2l2nu"])
 hh_vbf_hbb_hvv2l2nu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, vv_decay_map["2l2nu"])
 hh_vbf_hbb_hvv2l2nu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, vv_decay_map["2l2nu"])
+hh_vbf_hbb_hvv2l2nu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, vv_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hvv2l2nu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, vv_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hvv2l2nu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, vv_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hvv2l2nu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, vv_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hvv2l2nu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, vv_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hvv2l2nu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, vv_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hvv2l2nu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, vv_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hvv2l2nu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, vv_decay_map["2l2nu"])  # noqa
+
 
 hh_ggf_hbb_hvv4q = add_bbvv_sub_decay(hh_ggf_hbb_hvv, vv_decay_map["4q"], add_production_mode_parent=False)
 hh_ggf_hbb_hvv4q_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hvv_kl0_kt1, vv_decay_map["4q"])
@@ -378,6 +424,14 @@ hh_vbf_hbb_hvv4q_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl1, 
 hh_vbf_hbb_hvv4q_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, vv_decay_map["4q"])
 hh_vbf_hbb_hvv4q_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, vv_decay_map["4q"])
 hh_vbf_hbb_hvv4q_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, vv_decay_map["4q"])
+hh_vbf_hbb_hvv4q_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, vv_decay_map["4q"])  # noqa
+hh_vbf_hbb_hvv4q_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, vv_decay_map["4q"])  # noqa
+hh_vbf_hbb_hvv4q_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, vv_decay_map["4q"])  # noqa
+hh_vbf_hbb_hvv4q_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, vv_decay_map["4q"])  # noqa
+hh_vbf_hbb_hvv4q_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, vv_decay_map["4q"])  # noqa
+hh_vbf_hbb_hvv4q_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, vv_decay_map["4q"])  # noqa
+hh_vbf_hbb_hvv4q_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, vv_decay_map["4q"])  # noqa
+hh_vbf_hbb_hvv4q_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, vv_decay_map["4q"])  # noqa
 
 hh_ggf_hbb_hvv2q2nu = add_bbvv_sub_decay(hh_ggf_hbb_hvv, vv_decay_map["2q2nu"], add_production_mode_parent=False)
 hh_ggf_hbb_hvv2q2nu_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hvv_kl0_kt1, vv_decay_map["2q2nu"])
@@ -393,6 +447,14 @@ hh_vbf_hbb_hvv2q2nu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl
 hh_vbf_hbb_hvv2q2nu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, vv_decay_map["2q2nu"])
 hh_vbf_hbb_hvv2q2nu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, vv_decay_map["2q2nu"])
 hh_vbf_hbb_hvv2q2nu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, vv_decay_map["2q2nu"])
+hh_vbf_hbb_hvv2q2nu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, vv_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hvv2q2nu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, vv_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hvv2q2nu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, vv_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hvv2q2nu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, vv_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hvv2q2nu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, vv_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hvv2q2nu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, vv_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hvv2q2nu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, vv_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hvv2q2nu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, vv_decay_map["2q2nu"])  # noqa
 
 hh_ggf_hbb_hvv4nu = add_bbvv_sub_decay(hh_ggf_hbb_hvv, vv_decay_map["4nu"], add_production_mode_parent=False)
 hh_ggf_hbb_hvv4nu_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hvv_kl0_kt1, vv_decay_map["4nu"])
@@ -408,6 +470,14 @@ hh_vbf_hbb_hvv4nu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl1,
 hh_vbf_hbb_hvv4nu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, vv_decay_map["4nu"])
 hh_vbf_hbb_hvv4nu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, vv_decay_map["4nu"])
 hh_vbf_hbb_hvv4nu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, vv_decay_map["4nu"])
+hh_vbf_hbb_hvv4nu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, vv_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hvv4nu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, vv_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hvv4nu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, vv_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hvv4nu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, vv_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hvv4nu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, vv_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hvv4nu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, vv_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hvv4nu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, vv_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hvv4nu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, vv_decay_map["4nu"])  # noqa
 
 hh_ggf_hbb_hvv4l = add_bbvv_sub_decay(hh_ggf_hbb_hvv, vv_decay_map["4l"], add_production_mode_parent=False)
 hh_ggf_hbb_hvv4l_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hvv_kl0_kt1, vv_decay_map["4l"])
@@ -423,6 +493,14 @@ hh_vbf_hbb_hvv4l_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl1, 
 hh_vbf_hbb_hvv4l_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, vv_decay_map["4l"])
 hh_vbf_hbb_hvv4l_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, vv_decay_map["4l"])
 hh_vbf_hbb_hvv4l_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, vv_decay_map["4l"])
+hh_vbf_hbb_hvv4l_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, vv_decay_map["4l"])  # noqa
+hh_vbf_hbb_hvv4l_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, vv_decay_map["4l"])  # noqa
+hh_vbf_hbb_hvv4l_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, vv_decay_map["4l"])  # noqa
+hh_vbf_hbb_hvv4l_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, vv_decay_map["4l"])  # noqa
+hh_vbf_hbb_hvv4l_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, vv_decay_map["4l"])  # noqa
+hh_vbf_hbb_hvv4l_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, vv_decay_map["4l"])  # noqa
+hh_vbf_hbb_hvv4l_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, vv_decay_map["4l"])  # noqa
+hh_vbf_hbb_hvv4l_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, vv_decay_map["4l"])  # noqa
 
 hh_ggf_hbb_hvv2l2q = add_bbvv_sub_decay(hh_ggf_hbb_hvv, vv_decay_map["2l2q"], add_production_mode_parent=False)
 hh_ggf_hbb_hvv2l2q_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hvv_kl0_kt1, vv_decay_map["2l2q"])
@@ -438,6 +516,14 @@ hh_vbf_hbb_hvv2l2q_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v0_kl1
 hh_vbf_hbb_hvv2l2q_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1_k2v2_kl1, vv_decay_map["2l2q"])
 hh_vbf_hbb_hvv2l2q_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv0p5_k2v1_kl1, vv_decay_map["2l2q"])
 hh_vbf_hbb_hvv2l2q_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p5_k2v1_kl1, vv_decay_map["2l2q"])
+hh_vbf_hbb_hvv2l2q_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4, vv_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hvv2l2q_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2, vv_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hvv2l2q_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3, vv_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hvv2l2q_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43, vv_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hvv2l2q_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94, vv_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hvv2l2q_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36, vv_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hvv2l2q_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39, vv_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hvv2l2q_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96, vv_decay_map["2l2q"])  # noqa
 
 ####################################################################################################
 #
@@ -459,14 +545,22 @@ hh_vbf_hbb_hww2l2nu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v0_kl
 hh_vbf_hbb_hww2l2nu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v2_kl1, ww_decay_map["2l2nu"])
 hh_vbf_hbb_hww2l2nu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv0p5_k2v1_kl1, ww_decay_map["2l2nu"])
 hh_vbf_hbb_hww2l2nu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1p5_k2v1_kl1, ww_decay_map["2l2nu"])
+hh_vbf_hbb_hww2l2nu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1p74_k2v1p37_kl14p4, ww_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hww2l2nu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p012_k2v0p03_kl10p2, ww_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hww2l2nu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p758_k2v1p44_klm19p3, ww_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hww2l2nu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p962_k2v0p959_klm1p43, ww_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hww2l2nu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p21_k2v1p94_klm0p94, ww_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hww2l2nu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p6_k2v2p72_klm1p36, ww_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hww2l2nu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p83_k2v3p57_klm3p39, ww_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hww2l2nu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm2p12_k2v3p87_klm5p96, ww_decay_map["2l2nu"])  # noqa
 
 hh_ggf_hbb_hwwqqlnu = add_bbvv_sub_decay(hh_ggf_hbb_hww, ww_decay_map["qqlnu"])
 hh_ggf_hbb_hwwqqlnu_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hww_kl0_kt1, ww_decay_map["qqlnu"])
 hh_ggf_hbb_hwwqqlnu_kl1_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hww_kl1_kt1, ww_decay_map["qqlnu"])
 hh_ggf_hbb_hwwqqlnu_kl2p45_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hww_kl2p45_kt1, ww_decay_map["qqlnu"])
 hh_ggf_hbb_hwwqqlnu_kl5_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hww_kl5_kt1, ww_decay_map["qqlnu"])
-
 hh_vbf_hbb_hwwqqlnu = add_bbvv_sub_decay(hh_vbf_hbb_hww, ww_decay_map["qqlnu"])
+
 hh_vbf_hbb_hwwqqlnu_kv1_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v1_kl1, ww_decay_map["qqlnu"])
 hh_vbf_hbb_hwwqqlnu_kv1_k2v1_kl0 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v1_kl0, ww_decay_map["qqlnu"])
 hh_vbf_hbb_hwwqqlnu_kv1_k2v1_kl2 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v1_kl2, ww_decay_map["qqlnu"])
@@ -474,6 +568,14 @@ hh_vbf_hbb_hwwqqlnu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v0_kl
 hh_vbf_hbb_hwwqqlnu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v2_kl1, ww_decay_map["qqlnu"])
 hh_vbf_hbb_hwwqqlnu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv0p5_k2v1_kl1, ww_decay_map["qqlnu"])
 hh_vbf_hbb_hwwqqlnu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1p5_k2v1_kl1, ww_decay_map["qqlnu"])
+hh_vbf_hbb_hwwqqlnu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1p74_k2v1p37_kl14p4, ww_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hwwqqlnu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p012_k2v0p03_kl10p2, ww_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hwwqqlnu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p758_k2v1p44_klm19p3, ww_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hwwqqlnu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p962_k2v0p959_klm1p43, ww_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hwwqqlnu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p21_k2v1p94_klm0p94, ww_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hwwqqlnu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p6_k2v2p72_klm1p36, ww_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hwwqqlnu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p83_k2v3p57_klm3p39, ww_decay_map["qqlnu"])  # noqa
+hh_vbf_hbb_hwwqqlnu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm2p12_k2v3p87_klm5p96, ww_decay_map["qqlnu"])  # noqa
 
 hh_ggf_hbb_hww4q = add_bbvv_sub_decay(hh_ggf_hbb_hww, ww_decay_map["4q"])
 hh_ggf_hbb_hww4q_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hww_kl0_kt1, ww_decay_map["4q"])
@@ -489,6 +591,14 @@ hh_vbf_hbb_hww4q_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v0_kl1, 
 hh_vbf_hbb_hww4q_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1_k2v2_kl1, ww_decay_map["4q"])
 hh_vbf_hbb_hww4q_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv0p5_k2v1_kl1, ww_decay_map["4q"])
 hh_vbf_hbb_hww4q_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1p5_k2v1_kl1, ww_decay_map["4q"])
+hh_vbf_hbb_hww4q_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kv1p74_k2v1p37_kl14p4, ww_decay_map["4q"])  # noqa
+hh_vbf_hbb_hww4q_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p012_k2v0p03_kl10p2, ww_decay_map["4q"])  # noqa
+hh_vbf_hbb_hww4q_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p758_k2v1p44_klm19p3, ww_decay_map["4q"])  # noqa
+hh_vbf_hbb_hww4q_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm0p962_k2v0p959_klm1p43, ww_decay_map["4q"])  # noqa
+hh_vbf_hbb_hww4q_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p21_k2v1p94_klm0p94, ww_decay_map["4q"])  # noqa
+hh_vbf_hbb_hww4q_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p6_k2v2p72_klm1p36, ww_decay_map["4q"])  # noqa
+hh_vbf_hbb_hww4q_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm1p83_k2v3p57_klm3p39, ww_decay_map["4q"])  # noqa
+hh_vbf_hbb_hww4q_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hww_kvm2p12_k2v3p87_klm5p96, ww_decay_map["4q"])  # noqa
 
 ####################################################################################################
 #
@@ -510,6 +620,14 @@ hh_vbf_hbb_hzz2l2nu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v0_kl
 hh_vbf_hbb_hzz2l2nu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v2_kl1, zz_decay_map["2l2nu"])
 hh_vbf_hbb_hzz2l2nu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv0p5_k2v1_kl1, zz_decay_map["2l2nu"])
 hh_vbf_hbb_hzz2l2nu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p5_k2v1_kl1, zz_decay_map["2l2nu"])
+hh_vbf_hbb_hzz2l2nu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p74_k2v1p37_kl14p4, zz_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hzz2l2nu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p012_k2v0p03_kl10p2, zz_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hzz2l2nu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p758_k2v1p44_klm19p3, zz_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hzz2l2nu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p962_k2v0p959_klm1p43, zz_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hzz2l2nu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p21_k2v1p94_klm0p94, zz_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hzz2l2nu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p6_k2v2p72_klm1p36, zz_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hzz2l2nu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p83_k2v3p57_klm3p39, zz_decay_map["2l2nu"])  # noqa
+hh_vbf_hbb_hzz2l2nu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm2p12_k2v3p87_klm5p96, zz_decay_map["2l2nu"])  # noqa
 
 hh_ggf_hbb_hzz4q = add_bbvv_sub_decay(hh_ggf_hbb_hzz, zz_decay_map["4q"])
 hh_ggf_hbb_hzz4q_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hzz_kl0_kt1, zz_decay_map["4q"])
@@ -525,6 +643,14 @@ hh_vbf_hbb_hzz4q_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v0_kl1, 
 hh_vbf_hbb_hzz4q_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v2_kl1, zz_decay_map["4q"])
 hh_vbf_hbb_hzz4q_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv0p5_k2v1_kl1, zz_decay_map["4q"])
 hh_vbf_hbb_hzz4q_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p5_k2v1_kl1, zz_decay_map["4q"])
+hh_vbf_hbb_hzz4q_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p74_k2v1p37_kl14p4, zz_decay_map["4q"])  # noqa
+hh_vbf_hbb_hzz4q_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p012_k2v0p03_kl10p2, zz_decay_map["4q"])  # noqa
+hh_vbf_hbb_hzz4q_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p758_k2v1p44_klm19p3, zz_decay_map["4q"])  # noqa
+hh_vbf_hbb_hzz4q_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p962_k2v0p959_klm1p43, zz_decay_map["4q"])  # noqa
+hh_vbf_hbb_hzz4q_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p21_k2v1p94_klm0p94, zz_decay_map["4q"])  # noqa
+hh_vbf_hbb_hzz4q_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p6_k2v2p72_klm1p36, zz_decay_map["4q"])  # noqa
+hh_vbf_hbb_hzz4q_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p83_k2v3p57_klm3p39, zz_decay_map["4q"])  # noqa
+hh_vbf_hbb_hzz4q_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm2p12_k2v3p87_klm5p96, zz_decay_map["4q"])  # noqa
 
 hh_ggf_hbb_hzz2q2nu = add_bbvv_sub_decay(hh_ggf_hbb_hzz, zz_decay_map["2q2nu"])
 hh_ggf_hbb_hzz2q2nu_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hzz_kl0_kt1, zz_decay_map["2q2nu"])
@@ -540,6 +666,14 @@ hh_vbf_hbb_hzz2q2nu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v0_kl
 hh_vbf_hbb_hzz2q2nu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v2_kl1, zz_decay_map["2q2nu"])
 hh_vbf_hbb_hzz2q2nu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv0p5_k2v1_kl1, zz_decay_map["2q2nu"])
 hh_vbf_hbb_hzz2q2nu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p5_k2v1_kl1, zz_decay_map["2q2nu"])
+hh_vbf_hbb_hzz2q2nu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p74_k2v1p37_kl14p4, zz_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hzz2q2nu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p012_k2v0p03_kl10p2, zz_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hzz2q2nu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p758_k2v1p44_klm19p3, zz_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hzz2q2nu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p962_k2v0p959_klm1p43, zz_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hzz2q2nu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p21_k2v1p94_klm0p94, zz_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hzz2q2nu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p6_k2v2p72_klm1p36, zz_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hzz2q2nu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p83_k2v3p57_klm3p39, zz_decay_map["2q2nu"])  # noqa
+hh_vbf_hbb_hzz2q2nu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm2p12_k2v3p87_klm5p96, zz_decay_map["2q2nu"])  # noqa
 
 hh_ggf_hbb_hzz4nu = add_bbvv_sub_decay(hh_ggf_hbb_hzz, zz_decay_map["4nu"])
 hh_ggf_hbb_hzz4nu_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hzz_kl0_kt1, zz_decay_map["4nu"])
@@ -555,6 +689,14 @@ hh_vbf_hbb_hzz4nu_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v0_kl1,
 hh_vbf_hbb_hzz4nu_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v2_kl1, zz_decay_map["4nu"])
 hh_vbf_hbb_hzz4nu_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv0p5_k2v1_kl1, zz_decay_map["4nu"])
 hh_vbf_hbb_hzz4nu_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p5_k2v1_kl1, zz_decay_map["4nu"])
+hh_vbf_hbb_hzz4nu_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p74_k2v1p37_kl14p4, zz_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hzz4nu_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p012_k2v0p03_kl10p2, zz_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hzz4nu_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p758_k2v1p44_klm19p3, zz_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hzz4nu_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p962_k2v0p959_klm1p43, zz_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hzz4nu_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p21_k2v1p94_klm0p94, zz_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hzz4nu_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p6_k2v2p72_klm1p36, zz_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hzz4nu_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p83_k2v3p57_klm3p39, zz_decay_map["4nu"])  # noqa
+hh_vbf_hbb_hzz4nu_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm2p12_k2v3p87_klm5p96, zz_decay_map["4nu"])  # noqa
 
 hh_ggf_hbb_hzz4l = add_bbvv_sub_decay(hh_ggf_hbb_hzz, zz_decay_map["4l"])
 hh_ggf_hbb_hzz4l_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hzz_kl0_kt1, zz_decay_map["4l"])
@@ -570,6 +712,14 @@ hh_vbf_hbb_hzz4l_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v0_kl1, 
 hh_vbf_hbb_hzz4l_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v2_kl1, zz_decay_map["4l"])
 hh_vbf_hbb_hzz4l_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv0p5_k2v1_kl1, zz_decay_map["4l"])
 hh_vbf_hbb_hzz4l_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p5_k2v1_kl1, zz_decay_map["4l"])
+hh_vbf_hbb_hzz4l_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p74_k2v1p37_kl14p4, zz_decay_map["4l"])  # noqa
+hh_vbf_hbb_hzz4l_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p012_k2v0p03_kl10p2, zz_decay_map["4l"])  # noqa
+hh_vbf_hbb_hzz4l_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p758_k2v1p44_klm19p3, zz_decay_map["4l"])  # noqa
+hh_vbf_hbb_hzz4l_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p962_k2v0p959_klm1p43, zz_decay_map["4l"])  # noqa
+hh_vbf_hbb_hzz4l_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p21_k2v1p94_klm0p94, zz_decay_map["4l"])  # noqa
+hh_vbf_hbb_hzz4l_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p6_k2v2p72_klm1p36, zz_decay_map["4l"])  # noqa
+hh_vbf_hbb_hzz4l_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p83_k2v3p57_klm3p39, zz_decay_map["4l"])  # noqa
+hh_vbf_hbb_hzz4l_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm2p12_k2v3p87_klm5p96, zz_decay_map["4l"])  # noqa
 
 hh_ggf_hbb_hzz2l2q = add_bbvv_sub_decay(hh_ggf_hbb_hzz, zz_decay_map["2l2q"])
 hh_ggf_hbb_hzz2l2q_kl0_kt1 = add_bbvv_sub_decay(hh_ggf_hbb_hzz_kl0_kt1, zz_decay_map["2l2q"])
@@ -585,6 +735,14 @@ hh_vbf_hbb_hzz2l2q_kv1_k2v0_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v0_kl1
 hh_vbf_hbb_hzz2l2q_kv1_k2v2_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1_k2v2_kl1, zz_decay_map["2l2q"])
 hh_vbf_hbb_hzz2l2q_kv0p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv0p5_k2v1_kl1, zz_decay_map["2l2q"])
 hh_vbf_hbb_hzz2l2q_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p5_k2v1_kl1, zz_decay_map["2l2q"])
+hh_vbf_hbb_hzz2l2q_kv1p74_k2v1p37_kl14p4 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p74_k2v1p37_kl14p4, zz_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hzz2l2q_kvm0p012_k2v0p03_kl10p2 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p012_k2v0p03_kl10p2, zz_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hzz2l2q_kvm0p758_k2v1p44_klm19p3 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p758_k2v1p44_klm19p3, zz_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hzz2l2q_kvm0p962_k2v0p959_klm1p43 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm0p962_k2v0p959_klm1p43, zz_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hzz2l2q_kvm1p21_k2v1p94_klm0p94 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p21_k2v1p94_klm0p94, zz_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hzz2l2q_kvm1p6_k2v2p72_klm1p36 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p6_k2v2p72_klm1p36, zz_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hzz2l2q_kvm1p83_k2v3p57_klm3p39 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm1p83_k2v3p57_klm3p39, zz_decay_map["2l2q"])  # noqa
+hh_vbf_hbb_hzz2l2q_kvm2p12_k2v3p87_klm5p96 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kvm2p12_k2v3p87_klm5p96, zz_decay_map["2l2q"])  # noqa
 
 #
 # Assign cross sections to hbb_hvv sub-processes by adding the hbb_hww and hbb_hzz sub-process cross sections
@@ -592,14 +750,11 @@ hh_vbf_hbb_hzz2l2q_kv1p5_k2v1_kl1 = add_bbvv_sub_decay(hh_vbf_hbb_hzz_kv1p5_k2v1
 
 for proc_name in [
     f"hh_ggf_hbb_hvv{vv}{params}"
-    for params in ["", "_kl0_kt1", "_kl1_kt1", "_kl2p45_kt1", "_kl5_kt1"]
+    for params in ggf_params
     for vv in ["qqlnu", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
 ] + [
     f"hh_vbf_hbb_hvv{vv}{params}"
-    for params in [
-        "", "_kv1_k2v1_kl1", "_kv1_k2v1_kl0", "_kv1_k2v1_kl2", "_kv1_k2v0_kl1",
-        "_kv1_k2v2_kl1", "_kv0p5_k2v1_kl1", "_kv1p5_k2v1_kl1",
-    ]
+    for params in vbf_params
     for vv in ["qqlnu", "2l2nu", "4q", "2q2nu", "4nu", "4l", "2l2q"]
 ]:
     proc = locals()[proc_name]
