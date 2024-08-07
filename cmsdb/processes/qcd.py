@@ -15,7 +15,7 @@ __all__ = [
     "qcd_ht700to1000",
     "qcd_ht1000to1500",
     "qcd_ht1500to2000",
-    "qcd_ht2000",
+    "qcd_ht2000toinf",
     "qcd_pt15to30",
     "qcd_pt30to50",
     "qcd_pt50to80",
@@ -30,7 +30,7 @@ __all__ = [
     "qcd_pt1400to1800",
     "qcd_pt1800to2400",
     "qcd_pt2400to3200",
-    "qcd_pt3200",
+    "qcd_pt3200toinf",
     "qcd_mu",
     "qcd_mu_pt15to20",
     "qcd_mu_pt20to30",
@@ -43,7 +43,7 @@ __all__ = [
     "qcd_mu_pt470to600",
     "qcd_mu_pt600to800",
     "qcd_mu_pt800to1000",
-    "qcd_mu_pt1000",
+    "qcd_mu_pt1000toinf",
     "qcd_em",
     "qcd_em_pt15to20",
     "qcd_em_pt20to30",
@@ -52,7 +52,7 @@ __all__ = [
     "qcd_em_pt80to120",
     "qcd_em_pt120to170",
     "qcd_em_pt170to300",
-    "qcd_em_pt300toInf",
+    "qcd_em_pt300toinf",
     "qcd_em_pt10to30",
     "qcd_bctoe",
     "qcd_bctoe_pt15to20",
@@ -60,11 +60,11 @@ __all__ = [
     "qcd_bctoe_pt30to80",
     "qcd_bctoe_pt80to170",
     "qcd_bctoe_pt170to250",
-    "qcd_bctoe_pt250toInf",
+    "qcd_bctoe_pt250toinf",
     "qcd_doubleem",
-    "qcd_doubleem_pt30to40_mgg80",
-    "qcd_doubleem_pt40_mgg80",
-    "qcd_doubleem_pt30_mgg40to80",
+    "qcd_doubleem_pt30to40_mgg80toinf",
+    "qcd_doubleem_pt40toinf_mgg80toinf",
+    "qcd_doubleem_pt30toinf_mgg40to80",
 ]
 
 from order import Process
@@ -171,8 +171,8 @@ qcd_ht1500to2000 = qcd.add_process(
     },
 )
 
-qcd_ht2000 = qcd.add_process(
-    name="qcd_ht2000",
+qcd_ht2000toinf = qcd.add_process(
+    name="qcd_ht2000toinf",
     id=31009,
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
@@ -299,8 +299,8 @@ qcd_pt2400to3200 = qcd.add_process(
     },
 )
 
-qcd_pt3200 = qcd.add_process(
-    name="qcd_pt3200",
+qcd_pt3200toinf = qcd.add_process(
+    name="qcd_pt3200toinf",
     id=31915,
     xsecs={
         13: Number(0.0001623),
@@ -419,8 +419,8 @@ qcd_mu_pt800to1000 = qcd_mu.add_process(
     },
 )
 
-qcd_mu_pt1000 = qcd_mu.add_process(
-    name="qcd_mu_pt1000",
+qcd_mu_pt1000toinf = qcd_mu.add_process(
+    name="qcd_mu_pt1000toinf",
     id=31112,
     xsecs={
         13: Number(1.08),  # NOTE: not found via XSDB, taken from an old reference
@@ -495,8 +495,8 @@ qcd_em_pt170to300 = qcd_em.add_process(
     },
 )
 
-qcd_em_pt300toInf = qcd_em.add_process(
-    name="qcd_em_pt300toInf",
+qcd_em_pt300toinf = qcd_em.add_process(
+    name="qcd_em_pt300toinf",
     id=31208,
     xsecs={
         13: Number(1104.0),
@@ -562,8 +562,8 @@ qcd_bctoe_pt170to250 = qcd_bctoe.add_process(
     },
 )
 
-qcd_bctoe_pt250toInf = qcd_bctoe.add_process(
-    name="qcd_bctoe_pt250toInf",
+qcd_bctoe_pt250toinf = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt250toinf",
     id=31306,
     xsecs={
         13: Number(562.5),
@@ -580,24 +580,24 @@ qcd_doubleem = qcd.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-qcd_doubleem_pt30to40_mgg80 = qcd_doubleem.add_process(
-    name="qcd_doubleem_pt30to40_mgg80",
+qcd_doubleem_pt30to40_mgg80toinf = qcd_doubleem.add_process(
+    name="qcd_doubleem_pt30to40_mgg80toinf",
     id=31401,
     xsecs={
         13: Number(0.1),  # TODO
     },
 )
 
-qcd_doubleem_pt40_mgg80 = qcd_doubleem.add_process(
-    name="qcd_doubleem_pt40_mgg80",
+qcd_doubleem_pt40toinf_mgg80toinf = qcd_doubleem.add_process(
+    name="qcd_doubleem_pt40toinf_mgg80toinf",
     id=31402,
     xsecs={
         13: Number(0.1),  # TODO
     },
 )
 
-qcd_doubleem_pt30_mgg40to80 = qcd_doubleem.add_process(
-    name="qcd_doubleem_pt30_mgg40to80",
+qcd_doubleem_pt30toinf_mgg40to80 = qcd_doubleem.add_process(
+    name="qcd_doubleem_pt30toinf_mgg40to80",
     id=31403,
     xsecs={
         13: Number(0.1),  # TODO

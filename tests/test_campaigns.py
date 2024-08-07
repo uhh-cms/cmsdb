@@ -1,76 +1,164 @@
-# test_module.py
+# coding: utf-8
+
+from __future__ import annotations
+
+__all__ = ["TestCampaigns"]
+
 import os
+import re
+import importlib
 import unittest
-import sys
-from glob import glob
-import importlib as imp
+import collections
+
+import cmsdb
+
+from scripts.get_das_info import get_das_info
 
 
-class TestCampaign(unittest.TestCase):
-    @unittest.skipIf("TESTMODULE" not in os.environ, "TESTMODULE not set")
-    @unittest.skipIf(
-        os.environ["TESTMODULE"].strip("/").endswith("run2_2016_nano_v9"),
-        "Tests for module 'run2_2016_nano_v9' are not implemented yet.",
-    )
-    @unittest.skipIf(
-        os.environ["TESTMODULE"].strip("/").endswith("__pycache__"),
-        "'__pycache__' is not a valid module.",
-    )
+class TestCampaigns(unittest.TestCase):
+    # list of generator names to check for in dataset names
+    generator_names = ("powheg", "madgraph", "amcatnlo", "pythia")
+
+    # boolean flag whether to check consistency between dataset and process names
+    check_proc_name: bool = False
+
+    # boolean flag whether to check correctness of DAS info for each dataset
+    check_das_info: bool = False
+
+    # list of campaign names to test, if None, all campaigns are tested
+    campaign_names: list | None = None
+
     @classmethod
     def setUpClass(cls):
-        modpath = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
-        if modpath not in sys.path:
-            sys.path.append(modpath)
-        mod = os.environ["TESTMODULE"]
-        to_import = os.path.relpath(mod, modpath).replace("/", ".")
-        # Load the module to test
-        cls.module = imp.import_module(to_import)
+        if not cls.campaign_names:
+            # if not provided, find and test all campaigns
+            campaign_dir = os.path.join(os.path.dirname(cmsdb.__file__), "campaigns")
+            cls.campaign_names = [
+                name
+                for name in os.listdir(campaign_dir)
+                if os.path.isdir(os.path.join(campaign_dir, name)) and re.match(r"^run\d.*v\d.*$", name)
+            ]
 
-        # get all submodules
-        all_objects = getattr(cls.module, "__all__", None)
-        cls.submodules = list()
-        if not isinstance(all_objects, list):
-            basename = cls.module.__name__.split(".")[-1]
-            object_name = f"campaign_{basename}"
-            cls.submodules = {object_name: getattr(cls.module, object_name)}
-        else:
-            cls.submodules = {x: getattr(cls.module, x) for x in all_objects}
+        # import modules and store campaign objects if present
+        cls.campaigns = {}
+        for name in cls.campaign_names:
+            module = importlib.import_module(f"cmsdb.campaigns.{name}")
+            for attr in dir(module):
+                if attr.startswith("campaign_"):
+                    cls.campaigns[name] = getattr(module, attr)
 
     def test_campaign_properties(self):
-        # loop through the different campaign objects in the current module
-        for name, submodule in self.submodules.items():
-            # run the test for each submodule
-            with self.subTest(f"testing object {name}"):
-                # make sure the campaign defines a basic set of properties
-                self.assertTrue(hasattr(submodule, "name"))
-                self.assertTrue(hasattr(submodule, "id"))
-                self.assertTrue(hasattr(submodule, "ecm"))
-                self.assertTrue(hasattr(submodule, "bx"))
+        for campaign_inst in self.campaigns.values():
+            with self.subTest(f"testing {campaign_inst.name}"):
+                self.assertTrue(hasattr(campaign_inst, "name"))
+                self.assertTrue(hasattr(campaign_inst, "id"))
+                self.assertTrue(hasattr(campaign_inst, "ecm"))
+                self.assertTrue(hasattr(campaign_inst, "bx"))
+
+    def test_campaign_aux(self):
+        for campaign_inst in self.campaigns.values():
+            with self.subTest(f"testing {campaign_inst.name}"):
+                # field existence
+                self.assertTrue(campaign_inst.has_aux("tier"))
+                self.assertTrue(campaign_inst.has_aux("run"))
+                self.assertTrue(campaign_inst.has_aux("year"))
+                self.assertTrue(campaign_inst.has_aux("version"))
+                self.assertTrue(campaign_inst.has_aux("postfix"))
+                # field types
+                self.assertIsInstance(campaign_inst.x.tier, str)
+                self.assertIsInstance(campaign_inst.x.run, int)
+                self.assertIsInstance(campaign_inst.x.year, int)
+                self.assertIsInstance(campaign_inst.x.version, int)
+                self.assertIsInstance(campaign_inst.x.postfix, str)
+
+    def single_dataset_test(self, campaign_inst, dataset_inst):
+        # check existence of attributes
+        self.assertTrue(hasattr(dataset_inst, "name"))
+        self.assertTrue(hasattr(dataset_inst, "id"))
+        self.assertTrue(hasattr(dataset_inst, "processes"))
+        self.assertTrue(hasattr(dataset_inst, "keys"))
+        self.assertTrue(hasattr(dataset_inst, "n_files"))
+        self.assertTrue(hasattr(dataset_inst, "n_events"))
+
+        # check that the generator is encoded in the dataset name
+        if dataset_inst.is_mc:
+            self.assertIn(dataset_inst.name.rsplit("_", 1)[-1], self.generator_names)
+
+        # check that the name is lowercase, but take into account known exceptions
+        if not dataset_inst.x("allow_uppercase_name", False):
+            self.assertEquals(dataset_inst.name, dataset_inst.name.lower())
+
+        # check that there is at least one process linked
+        self.assertTrue(len(dataset_inst.processes) > 0)
+
+        # optionally check that namings between dataset and process are consistent
+        if (
+            self.check_proc_name and
+            "data" not in dataset_inst.name and
+            len(dataset_inst.processes) == 1
+        ):
+            proc_name = dataset_inst.processes.get_first().name
+
+            if "data" not in dataset_inst.name:
+                dataset_name_wo_generator = dataset_inst.name
+                for name in self.generator_names:
+                    dataset_name_wo_generator = dataset_name_wo_generator.replace(f"_{name}", "")
+
+                self.assertEqual(dataset_name_wo_generator, proc_name)
+
+        if self.check_das_info and not campaign_inst.has_aux("custom"):
+            # check that all dataset keys exist and that the DAS info (id, n_events, n_files) is correct
+            # optional, since this needs a Grid Proxy and takes a long time
+            for dataset_info_key, dataset_info in dataset_inst.info.items():
+
+                dataset_string = (
+                    f"{campaign_inst.name}/{dataset_inst.name}/{dataset_info_key}, keys: {dataset_info.keys}"
+                )
+                das_infos = [get_das_info(key) for key in dataset_info.keys]
+                for das_info in das_infos:
+                    with self.subTest(f"checking existence of DAS key {das_info['name']} from {dataset_string}"):
+                        self.assertTrue(das_info.get("dataset_id", None) is not None)
+
+                with self.subTest(f"checking DAS infos from {dataset_string}"):
+                    combined_das_info = {
+                        "dataset_id": das_infos[0]["dataset_id"],
+                        "nevents": sum(info["nevents"] for info in das_infos),
+                        "nfiles": sum(info["nfiles"] for info in das_infos),
+                    }
+                    combined_dataset_info = {
+                        "dataset_id": dataset_inst.id,
+                        "nevents": dataset_info.n_events,
+                        "nfiles": dataset_info.n_files,
+                    }
+                    if dataset_info_key != "nominal":
+                        # compare IDs only when checking the nominal dataset
+                        combined_das_info.pop("dataset_id")
+                        combined_dataset_info.pop("dataset_id")
+
+                    self.assertEqual(
+                        combined_dataset_info,
+                        combined_das_info,
+                        msg=f"mismatch in DAS info from {dataset_string}",
+                    )
 
     def test_campaign_datasets(self):
-        # loop through the different campaign objects in the current module
-        for campaign_name, submodule in self.submodules.items():
-            # run the test for each submodule
-            with self.subTest(f"testing dataset of object '{campaign_name}'"):
+        for campaign_inst in self.campaigns.values():
+            with self.subTest(f"testing datasets {campaign_inst.name}"):
                 # make sure the campaign defines datasets in the first place
-                self.assertTrue(hasattr(submodule, "datasets"))
-                datasets = submodule.datasets
+                self.assertTrue(hasattr(campaign_inst, "datasets"))
+
                 # loop through the datasets and test their properties
-                for dataset_name, _, dataset in datasets.items():
-                    with self.subTest(f"testing dataset {campaign_name}/{dataset_name}"):
-                        # might want to implement naming conventions here,
-                        # e.g. the name of the dataset is the process name + suffix
-                        self.assertTrue(hasattr(dataset, "name"))
-                        self.assertTrue(hasattr(dataset, "id"))
-                        self.assertTrue(hasattr(dataset, "processes"))
-                        self.assertTrue(len(dataset.processes) > 0)
-                        self.assertTrue(hasattr(dataset, "keys"))
-                        self.assertTrue(hasattr(dataset, "n_files"))
-                        self.assertTrue(hasattr(dataset, "n_events"))
+                for dataset_inst in campaign_inst.datasets.values():
+                    with self.subTest(f"testing dataset {campaign_inst.name}/{dataset_inst.name}"):
+                        self.single_dataset_test(campaign_inst, dataset_inst)
 
+                # check uniqueness of names and ids
+                name_counts = collections.Counter(campaign_inst.datasets.names())
+                dup_names = {name: count for name, count in name_counts.items() if count > 1}
+                if dup_names:
+                    self.fail(f"duplicate dataset names found in {campaign_inst.name}: {dup_names}")
 
-if __name__ == "__main__":
-    # Remove command line arguments before running unittest.main()
-    # to prevent unittest from trying to interpret them
-    # if cmsdb is not path of the sys path, add it
-    unittest.main()
+                id_counts = collections.Counter(campaign_inst.datasets.ids())
+                dup_ids = {id_: count for id_, count in id_counts.items() if count > 1}
+                if dup_ids:
+                    self.fail(f"duplicate dataset ids found in {campaign_inst.name}: {dup_ids}")

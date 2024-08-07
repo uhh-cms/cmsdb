@@ -28,9 +28,12 @@ campaign_run3_2022_preEE_nano_v12 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
+        "run": 3,
         "year": 2022,
         "version": 12,
+        "postfix": "",
     },
+    tags={"preEE"},
 )
 
 
@@ -39,5 +42,5 @@ import cmsdb.campaigns.run3_2022_preEE_nano_v12.data  # noqa
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.top  # noqa
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.ewk  # noqa
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.qcd  # noqa
+import cmsdb.campaigns.run3_2022_preEE_nano_v12.higgs  # noqa
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.hh2bbww  # noqa
-import cmsdb.campaigns.run3_2022_preEE_nano_v12.hhh4b2tau  # noqa

@@ -110,9 +110,9 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="qcd_ht2000_madgraph",
+    name="qcd_ht2000toinf_madgraph",
     id=14380548,
-    processes=[procs.qcd_ht2000],
+    processes=[procs.qcd_ht2000toinf],
     keys=[
         "/QCD_HT2000toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -213,9 +213,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_ht2000_psweights_madgraph",
+    name="qcd_ht2000toinf_psweights_madgraph",
     id=14165502,
-    processes=[procs.qcd_ht2000],
+    processes=[procs.qcd_ht2000toinf],
     keys=[
         "/QCD_HT2000toInf_TuneCP5_PSWeights_13TeV-madgraphMLM-pythia8/RunIISummer19UL17NanoAODv2-106X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
@@ -349,9 +349,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt1000_pythia",
+    name="qcd_mu_pt1000toinf_pythia",
     id=14288345,
-    processes=[procs.qcd_mu_pt1000],
+    processes=[procs.qcd_mu_pt1000toinf],
     keys=[
         "/QCD_Pt-1000_MuEnrichedPt5_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -441,9 +441,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_em_pt300toInf_pythia",
+    name="qcd_em_pt300toinf_pythia",
     id=14275722,
-    processes=[procs.qcd_em_pt300toInf],
+    processes=[procs.qcd_em_pt300toinf],
     keys=[
         "/QCD_Pt-300toInf_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -513,9 +513,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_bctoe_pt250toInf_pythia",
+    name="qcd_bctoe_pt250toinf_pythia",
     id=14306070,
-    processes=[procs.qcd_bctoe_pt250toInf],
+    processes=[procs.qcd_bctoe_pt250toinf],
     keys=[
         "/QCD_Pt_250toInf_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM"  # NOQA
     ],

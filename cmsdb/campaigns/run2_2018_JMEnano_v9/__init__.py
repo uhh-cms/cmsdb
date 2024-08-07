@@ -21,9 +21,11 @@ campaign_run2_2018_JMEnano_v9 = Campaign(
     ecm=13,
     bx=25,
     aux={
-        "year": 2018,
         "tier": "NanoAOD",
-        "version": "9",
+        "run": 2,
+        "year": 2018,
+        "version": 9,
+        "postfix": "",
     },
 )
 

@@ -19,12 +19,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016F-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/SingleElectron/Run2016F-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=4,
     n_events=8858206,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -34,12 +35,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016G-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/SingleElectron/Run2016G-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=64,
     n_events=153363109,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -49,12 +51,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/SingleElectron/Run2016H-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/SingleElectron/Run2016H-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=56,
     n_events=129021893,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -69,12 +72,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016F-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016F-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=3,
     n_events=8024195,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -84,12 +88,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016G-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016G-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=52,
     n_events=149916849,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -99,12 +104,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2016H-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/SingleMuon/Run2016H-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=62,
     n_events=174035164,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -118,12 +124,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016F-UL2016_NanoAODv12-v1/NANOAOD",  # noqa
+        "/Tau/Run2016F-UL2016_MiniAODv2-v1/NANOAOD",  # noqa
     ],
     n_files=3,
     n_events=4360106,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -133,12 +140,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016G-UL2016_NanoAODv12-v1/NANOAOD",  # noqa
+        "/Tau/Run2016G-UL2016_MiniAODv2-v1/NANOAOD",  # noqa
     ],
     n_files=39,
     n_events=79578661,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -148,12 +156,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2016H-UL2016_NanoAODv12-v1/NANOAOD",  # noqa
+        "/Tau/Run2016H-UL2016_MiniAODv2-v1/NANOAOD",  # noqa
     ],
     n_files=39,
     n_events=76758754,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -168,12 +177,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016F-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/MET/Run2016F-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=1,
     n_events=1383250,
     aux={
         "era": "F",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -183,12 +193,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016G-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/MET/Run2016G-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=13,
     n_events=26974131,
     aux={
         "era": "G",
+        "jec_era": "RunFGH",
     },
 )
 
@@ -198,11 +209,12 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/MET/Run2016H-UL2016_NanoAODv12-v2/NANOAOD",  # noqa
+        "/MET/Run2016H-UL2016_MiniAODv2-v2/NANOAOD",  # noqa
     ],
     n_files=18,
     n_events=39773485,
     aux={
         "era": "H",
+        "jec_era": "RunFGH",
     },
 )

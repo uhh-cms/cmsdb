@@ -22,14 +22,17 @@ campaign_run2_2017_nano_v9 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
+        "run": 2,
         "year": 2017,
         "version": 9,
+        "postfix": "",
     },
 )
 
 
 # trailing imports to load datasets
 import cmsdb.campaigns.run2_2017_nano_v9.data  # noqa
+import cmsdb.campaigns.run2_2017_nano_v9.azh  # noqa
 import cmsdb.campaigns.run2_2017_nano_v9.top  # noqa
 import cmsdb.campaigns.run2_2017_nano_v9.ewk  # noqa
 import cmsdb.campaigns.run2_2017_nano_v9.qcd  # noqa

@@ -12,47 +12,51 @@ from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 #
 
 cpn.add_dataset(
-    name="ggHH_kl_0_kt_1_sl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvvqqlnu_kl0_kt1_powheg",
     id=14057341,
-    processes=[procs.ggHH_kl_0_kt_1_sl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl0_kt1],
     keys=[
         "/GluGluToHHTo2B2VLNu2J_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=26,
     n_events=392598,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="ggHH_kl_1_kt_1_sl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvvqqlnu_kl1_kt1_powheg",
     id=14065482,
-    processes=[procs.ggHH_kl_1_kt_1_sl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl1_kt1],
     keys=[
         "/GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM", # noqa
     ],
     n_files=24,
     n_events=399994,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="ggHH_kl_2p45_kt_1_sl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvvqqlnu_kl2p45_kt1_powheg",
     id=14066581,
-    processes=[procs.ggHH_kl_2p45_kt_1_sl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl2p45_kt1],
     keys=[
         "/GluGluToHHTo2B2VLNu2J_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=40,
     n_events=399996,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="ggHH_kl_5_kt_1_sl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvvqqlnu_kl5_kt1_powheg",
     id=14058363,
-    processes=[procs.ggHH_kl_5_kt_1_sl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl5_kt1],
     keys=[
         "/GluGluToHHTo2B2VLNu2J_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=28,
     n_events=395996,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -60,47 +64,51 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ggHH_kl_0_kt_1_dl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvv2l2nu_kl0_kt1_powheg",
     id=14062942,
-    processes=[procs.ggHH_kl_0_kt_1_dl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl0_kt1],
     keys=[
         "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH0_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=15,
     n_events=400000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="ggHH_kl_1_kt_1_dl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvv2l2nu_kl1_kt1_powheg",
     id=14057872,
-    processes=[procs.ggHH_kl_1_kt_1_dl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl1_kt1],
     keys=[
         "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=23,
     n_events=395000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="ggHH_kl_2p45_kt_1_dl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvv2l2nu_kl2p45_kt1_powheg",
     id=14057488,
-    processes=[procs.ggHH_kl_2p45_kt_1_dl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl2p45_kt1],
     keys=[
         "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH2p45_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=26,
     n_events=397398,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="ggHH_kl_5_kt_1_dl_hbbhww_powheg",
+    name="hh_ggf_hbb_hvv2l2nu_kl5_kt1_powheg",
     id=14067172,
-    processes=[procs.ggHH_kl_5_kt_1_dl_hbbhww],
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl5_kt1],
     keys=[
         "/GluGluToHHTo2B2VTo2L2Nu_node_cHHH5_TuneCP5_PSWeights_13TeV-powheg-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=22,
     n_events=399999,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -108,80 +116,87 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_1_sl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl1_madgraph",
     id=14152276,
-    processes=[procs.qqHH_CV_1_C2V_1_kl_1_sl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl1],
     keys=[
         "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=4,
     n_events=396993,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_0_sl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl0_madgraph",
     id=14153107,
-    processes=[procs.qqHH_CV_1_C2V_1_kl_0_sl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl0],
     keys=[
         "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=14,
     n_events=389995,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_2_sl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl2_madgraph",
     id=14152113,
-    processes=[procs.qqHH_CV_1_C2V_1_kl_2_sl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl2],
     keys=[
         "/VBFHHTo2B2WToLNu2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=399997,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_0_kl_1_sl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv1_k2v0_kl1_madgraph",
     id=14154259,
-    processes=[procs.qqHH_CV_1_C2V_0_kl_1_sl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1_k2v0_kl1],
     keys=[
         "/VBFHHTo2B2WToLNu2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=18,
     n_events=399993,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_2_kl_1_sl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv1_k2v2_kl1_madgraph",
     id=14149758,
-    processes=[procs.qqHH_CV_1_C2V_2_kl_1_sl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1_k2v2_kl1],
     keys=[
         "/VBFHHTo2B2WToLNu2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=2,
     n_events=399997,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv0p5_k2v1_kl1_madgraph",
     id=14151042,
-    processes=[procs.qqHH_CV_0p5_C2V_1_kl_1_sl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv0p5_k2v1_kl1],
     keys=[
         "/VBFHHTo2B2WToLNu2J_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=399998,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv1p5_k2v1_kl1_madgraph",
     id=14149171,
-    processes=[procs.qqHH_CV_1p5_C2V_1_kl_1_sl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1p5_k2v1_kl1],
     keys=[
         "/VBFHHTo2B2WToLNu2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=1,
     n_events=399998,
+    aux={"allow_uppercase_name": True},
 )
 
 #
@@ -189,80 +204,87 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="qqHH_CV_0p5_C2V_1_kl_1_dl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv0p5_k2v1_kl1_madgraph",
     id=14154110,
-    processes=[procs.qqHH_CV_0p5_C2V_1_kl_1_dl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv0p5_k2v1_kl1],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_0_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=20,
     n_events=396000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1p5_C2V_1_kl_1_dl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv1p5_k2v1_kl1_madgraph",
     id=14151539,
-    processes=[procs.qqHH_CV_1p5_C2V_1_kl_1_dl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1p5_k2v1_kl1],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=2,
     n_events=399999,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_0_kl_1_dl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv1_k2v0_kl1_madgraph",
     id=14153811,
-    processes=[procs.qqHH_CV_1_C2V_0_kl_1_dl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1_k2v0_kl1],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=10,
     n_events=395998,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_0_dl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl0_madgraph",
     id=14151850,
-    processes=[procs.qqHH_CV_1_C2V_1_kl_0_dl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl0],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=2,
     n_events=400000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_1_dl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl1_madgraph",
     id=14159390,
-    processes=[procs.qqHH_CV_1_C2V_1_kl_1_dl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl1],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=7,
     n_events=395998,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_1_kl_2_dl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl2_madgraph",
     id=14149920,
-    processes=[procs.qqHH_CV_1_C2V_1_kl_2_dl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl2],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=1,
     n_events=400000,
+    aux={"allow_uppercase_name": True},
 )
 
 cpn.add_dataset(
-    name="qqHH_CV_1_C2V_2_kl_1_dl_hbbhww_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv1_k2v2_kl1_madgraph",
     id=14153964,
-    processes=[procs.qqHH_CV_1_C2V_2_kl_1_dl_hbbhww],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1_k2v2_kl1],
     keys=[
         "/VBFHHTo2B2VTo2L2Nu_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17NanoAODv7-PU2017_12Apr2018_Nano02Apr2020_102X_mc2017_realistic_v8-v1/NANOAODSIM",  # noqa
     ],
     n_files=18,
     n_events=397998,
+    aux={"allow_uppercase_name": True},
 )
 
 #
