@@ -16,7 +16,7 @@ from order import Campaign
 # campaign
 #
 
-run3_2023_postBPix_nano_v12 = Campaign(
+campaign_run3_2023_postBPix_nano_v12 = Campaign(
     name="run3_2023_postBPix_nano_v12",
     id=320231202,  # 3 2023 12 02(u)
     ecm=13.6,

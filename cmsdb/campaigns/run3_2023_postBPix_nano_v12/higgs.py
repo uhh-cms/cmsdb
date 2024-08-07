@@ -8,7 +8,7 @@ Higgs boson datasets for the run3_2023_postBPix_nano_v12 campaign.
 from order import DatasetInfo
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2023_postBPix_nano_v12 import run3_2023_postBPix_nano_v12 as cpn
+from cmsdb.campaigns.run3_2023_postBPix_nano_v12 import campaign_run3_2023_postBPix_nano_v12 as cpn
 
 #
 # h_ggf
