@@ -31,7 +31,7 @@ hhh = Process(
     xsecs={13.6: Number(0.1)},  # TODO
 )
 
-# source: HHH->6b analysis file:///home/nguyenth/Downloads/AN2023_028_v4.pdf
+# source: HHH->6b analysis https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/028
 # original paper: https://link.springer.com/content/pdf/10.1007/JHEP03(2020)155.pdf
 hhh_ggf = hhh.add_process(
     name="hhh_ggf",
