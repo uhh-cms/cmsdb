@@ -299,20 +299,6 @@ cpn.add_dataset(
         ),
     ),
 )
-# cpn.add_dataset(
-#     name="qcd_em_pt300toinf_pythia",
-#     id=14790517,
-#     processes=[procs.qcd_em_pt300toinf],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/QCD_PT-300toInf_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=5,
-#             n_events=842285,
-#         ),
-#     ),
-# )
 
 #
 # qcd_bctoe
@@ -402,17 +388,3 @@ cpn.add_dataset(
         ),
     ),
 )
-# cpn.add_dataset(
-#     name="qcd_bctoe_pt250toinf_pythia",
-#     id=14791904,
-#     processes=[procs.qcd_bctoe_pt250toinf],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/QCD_PT-250toInf_bcToE_TuneCP5_13p6TeV_pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=6,
-#             n_events=879679,
-#         ),
-#     ),
-# )
