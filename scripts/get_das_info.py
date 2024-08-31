@@ -26,11 +26,33 @@ def get_generator_name(name: str) -> str:
         return ""
 
 
+def get_broken_files_str(data: dict, n_spaces: int = 12) -> str:
+    """
+    Function that returns a string represenatation of broken files
+    """
+
+    broken_files_list = [
+        f'"{d}",  # broken' for d in data["broken_files"]
+    ] + [
+        f'"{d}",  # empty' for d in data["empty_files"] if d not in data["broken_files"]
+    ]
+
+    if not broken_files_list:
+        return ""
+    else:
+        return (
+            f"\n{' '* n_spaces}" +
+            f"\n{' '* n_spaces}".join(broken_files_list) +
+            f"\n{' '* (n_spaces - 4)}"
+        )
+
+
 def convert_default(data: dict, placeholder="PLACEHOLDER") -> str:
     """
     Function that converts dataset info into one order Dataset per query
     """
     generator = get_generator_name(data["name"])
+
     return f"""cpn.add_dataset(
     name="{placeholder}{generator}",
     id={data['dataset_id']},
@@ -39,10 +61,9 @@ def convert_default(data: dict, placeholder="PLACEHOLDER") -> str:
         "{data['name']}",  # noqa
     ],
     aux={{
-        "broken_files": {data['broken_files']},
-        "empty_files": {data['empty_files']},
-    }}
-    n_files={data['nfiles']},
+        "broken_files": [{get_broken_files_str(data)}],
+    }},
+    n_files={data['nfiles_good']},  # {data["nfiles"]}-{data["nfiles_bad"]}
     n_events={data['nevents']},
 )
 """
@@ -262,7 +283,8 @@ def new_get_das_info(dataset: str) -> dict:
     else:
         raise ValueError(f"Multiple dataset IDs ({dataset_id}) found for dataset {dataset}")
 
-    info_of_interest["nfiles"] = len(good_files)
+    info_of_interest["nfiles"] = len(file_infos)
+    info_of_interest["nfiles_good"] = len(good_files)
     info_of_interest["nevents"] = sum(info["file"][0]["nevents"] for info in good_files)
 
     empty_files = [
@@ -275,6 +297,8 @@ def new_get_das_info(dataset: str) -> dict:
     ]
     info_of_interest["empty_files"] = empty_files
     info_of_interest["broken_files"] = broken_files
+
+    info_of_interest["nfiles_bad"] = len(set(empty_files + broken_files))
 
     return info_of_interest
 
