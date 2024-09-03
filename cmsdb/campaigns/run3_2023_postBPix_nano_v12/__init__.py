@@ -38,3 +38,4 @@ import cmsdb.campaigns.run3_2023_postBPix_nano_v12.ewk  # noqa
 import cmsdb.campaigns.run3_2023_postBPix_nano_v12.qcd  # noqa
 import cmsdb.campaigns.run3_2023_postBPix_nano_v12.higgs  # noqa
 import cmsdb.campaigns.run3_2023_postBPix_nano_v12.hh2bbvv  # noqa
+import cmsdb.campaigns.run3_2023_postBPix_nano_v12.hh2bbtautau  # noqa
