@@ -32,7 +32,7 @@ campaign_run3_2023_postBPix_nano_v12 = Campaign(
 )
 
 # trailing imports to load datasets
-# import cmsdb.campaigns.run3_2023_postBPix_nano_v12.data  # noqa
+import cmsdb.campaigns.run3_2023_postBPix_nano_v12.data  # noqa
 import cmsdb.campaigns.run3_2023_postBPix_nano_v12.top  # noqa
 import cmsdb.campaigns.run3_2023_postBPix_nano_v12.ewk  # noqa
 import cmsdb.campaigns.run3_2023_postBPix_nano_v12.qcd  # noqa
