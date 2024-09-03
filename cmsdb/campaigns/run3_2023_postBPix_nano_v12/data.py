@@ -11,7 +11,6 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_v12 import campaign_run3_2023_postB
 
 # Add era E also?
 
-
 #
 # Muon
 #
@@ -45,7 +44,6 @@ cpn.add_dataset(
         "era": "D",
     },
 )
-
 
 #
 # E/Gamma
@@ -81,8 +79,6 @@ cpn.add_dataset(
     },
 )
 
-
-
 #
 # Tau
 #
@@ -101,10 +97,6 @@ cpn.add_dataset(
         "era": "D",
     },
 )
-
-
-
-
 
 #
 # MuonEG

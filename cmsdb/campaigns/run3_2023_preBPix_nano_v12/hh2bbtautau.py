@@ -10,7 +10,6 @@ version 12, created with custom content at UHH.
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPix_nano_v12 as cpn
 
-
 #
 # ggF -> H -> HH
 #
@@ -26,7 +25,6 @@ cpn.add_dataset(
     n_files=36,
     n_events=985000,
 )
-
 
 # BSM
 cpn.add_dataset(

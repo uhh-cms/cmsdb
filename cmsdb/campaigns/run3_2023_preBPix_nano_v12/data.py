@@ -9,9 +9,7 @@ CMS datasets from the 2023 preBPix data-taking campaign
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPix_nano_v12 as cpn
 
-
 # Add eras A and B also?
-
 
 #
 # Muon
@@ -62,8 +60,6 @@ cpn.add_dataset(
     },
 )
 
-
-
 #
 # E/Gamma
 #
@@ -98,8 +94,6 @@ cpn.add_dataset(
     },
 )
 
-
-
 #
 # Tau
 #
@@ -118,7 +112,6 @@ cpn.add_dataset(
         "era": "C",
     },
 )
-
 
 #
 # MuonEG
