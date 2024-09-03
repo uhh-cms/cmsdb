@@ -4,8 +4,6 @@
 HH -> bbtautau datasets for the 2023 pre-BPix data-taking campaign
 """
 
-from order import DatasetInfo
-
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2023_preBPix_nano_v13 import campaign_run3_2023_preBPix_nano_v13 as cpn
 
