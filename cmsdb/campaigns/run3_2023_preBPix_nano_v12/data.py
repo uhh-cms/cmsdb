@@ -1,7 +1,5 @@
 # coding: utf-8
 
-# Find information from here: https://docs.google.com/presentation/d/1TjPem5jX0fzqvTGl271_nQFoVBabsrdrO0i8Qo1uD5E/edit#slide=id.g289f499aa6b_2_58 
-
 """
 CMS datasets from the 2023 preBPix data-taking campaign
 """
@@ -14,7 +12,6 @@ from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPi
 #
 # Muon
 #
-
 cpn.add_dataset(
     name="data_mu_c_1",
     id=14786982,
@@ -29,7 +26,6 @@ cpn.add_dataset(
         "era": "C",
     },
 )
-
 cpn.add_dataset(
     name="data_mu_c_2",
     id=14787027,
@@ -44,7 +40,6 @@ cpn.add_dataset(
         "era": "C",
     },
 )
-
 cpn.add_dataset(
     name="data_mu_c_2_v2",
     id=14953406,
@@ -63,7 +58,6 @@ cpn.add_dataset(
 #
 # E/Gamma
 #
-
 cpn.add_dataset(
     name="data_egamma_c_1",
     id=14786977,
@@ -78,7 +72,6 @@ cpn.add_dataset(
         "era": "C",
     },
 )
-
 cpn.add_dataset(
     name="data_egamma_c_2",
     id=14786782,
@@ -97,7 +90,6 @@ cpn.add_dataset(
 #
 # Tau
 #
-
 cpn.add_dataset(
     name="data_tau_c",
     id=14786972,
@@ -116,7 +108,6 @@ cpn.add_dataset(
 #
 # MuonEG
 #
-
 cpn.add_dataset(
     name="data_muoneg_c",
     id=14784848,
@@ -131,4 +122,3 @@ cpn.add_dataset(
         "era": "C",
     },
 )
-

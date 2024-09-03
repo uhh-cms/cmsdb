@@ -1,7 +1,5 @@
 # coding: utf-8
 
-# Find information from here: https://docs.google.com/presentation/d/1TjPem5jX0fzqvTGl271_nQFoVBabsrdrO0i8Qo1uD5E/edit#slide=id.g289f499aa6b_2_58 
-
 """
 CMS datasets from the 2023 postBPix data-taking campaign
 """
@@ -14,7 +12,6 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_v12 import campaign_run3_2023_postB
 #
 # Muon
 #
-
 cpn.add_dataset(
     name="data_mu_d_1",
     id=14787686,
@@ -29,7 +26,6 @@ cpn.add_dataset(
         "era": "D",
     },
 )
-
 cpn.add_dataset(
     name="data_mu_d_2",
     id=14786997,
@@ -48,7 +44,6 @@ cpn.add_dataset(
 #
 # E/Gamma
 #
-
 cpn.add_dataset(
     name="data_egamma_d_1",
     id=14787876,
@@ -63,7 +58,6 @@ cpn.add_dataset(
         "era": "D",
     },
 )
-
 cpn.add_dataset(
     name="data_egamma_d_2",
     id=14785166,
@@ -82,7 +76,6 @@ cpn.add_dataset(
 #
 # Tau
 #
-
 cpn.add_dataset(
     name="data_tau_d",
     id=14786907,
@@ -101,7 +94,6 @@ cpn.add_dataset(
 #
 # MuonEG
 #
-
 cpn.add_dataset(
     name="data_muoneg_d",
     id=14787200,

@@ -1,7 +1,5 @@
 # coding: utf-8
 
-# Find information from here: https://docs.google.com/presentation/d/1TjPem5jX0fzqvTGl271_nQFoVBabsrdrO0i8Qo1uD5E/edit#slide=id.g289f499aa6b_2_58 
-
 """
 HH -> bbtautau datasets for the 2023 data-taking campaign with datasets at NanoAOD tier in
 version 12, created with custom content at UHH.
@@ -37,7 +35,6 @@ cpn.add_dataset(
     n_files=47,
     n_events=959000,
 )
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl0_kt1_c21_powheg",
     id=14931215,
@@ -48,7 +45,6 @@ cpn.add_dataset(
     n_files=48,
     n_events=994000,
 )
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c20p10_powheg",
     id=14931140,
@@ -59,7 +55,6 @@ cpn.add_dataset(
     n_files=37,
     n_events=990960,
 )
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c20p35_powheg",
     id=14931233,
@@ -70,7 +65,6 @@ cpn.add_dataset(
     n_files=42,
     n_events=998174,
 )
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c23_powheg",
     id=14930778,
@@ -81,7 +75,6 @@ cpn.add_dataset(
     n_files=25,
     n_events=992000,
 )
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c2m2_powheg",
     id=14931022,
@@ -92,7 +85,6 @@ cpn.add_dataset(
     n_files=22,
     n_events=990000,
 )
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl2p45_kt1_powheg",
     id=14931153,
@@ -103,7 +95,6 @@ cpn.add_dataset(
     n_files=58,
     n_events=995107,
 )
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl5_kt1_powheg",
     id=14930961,
@@ -114,9 +105,8 @@ cpn.add_dataset(
     n_files=33,
     n_events=991000,
 )
-
 cpn.add_dataset(
-    name="hh_ggf_hbb_htt_kl2p45_kt1_LHEweights_powheg",
+    name="hh_ggf_hbb_htt_kl2p45_kt1_lheweights_powheg",
     id=14940620,
     processes=[procs.hh_ggf_hbb_htt_kl2p45_kt1],
     keys=[
