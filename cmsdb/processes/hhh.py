@@ -31,17 +31,22 @@ hhh = Process(
     xsecs={13.6: Number(0.1)},  # TODO
 )
 
-# source: HHH->6b analysis file:///home/nguyenth/Downloads/AN2023_028_v4.pdf
+# source: HHH->6b analysis https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/028
 # original paper: https://link.springer.com/content/pdf/10.1007/JHEP03(2020)155.pdf
+hhh_13tev_xs = Number(
+    # 0.45255713867289865e-3,  # might be NLO, need k-factor of 1.55?
+    0.0894e-3,
+    {
+        "total": 0.2j,
+    },
+)
 hhh_ggf = hhh.add_process(
     name="hhh_ggf",
     id=41000,
     label=f"${hhh.label}^{{ggf}}$",
     xsecs={
-        13: Number(
-            0.45255713867289865e-3,  # might be NLO, need k-factor of 1.55?
-        ),
-        13.6: Number(0.1),
+        13: hhh_13tev_xs,
+        13.6: hhh_13tev_xs + (0.103e-3 - 0.0894e-3) * 0.6,
         14: Number(
             0.103e-3,  # NNLO value
             {
