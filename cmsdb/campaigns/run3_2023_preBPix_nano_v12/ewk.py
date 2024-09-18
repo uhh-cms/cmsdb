@@ -580,8 +580,8 @@ cpn.add_dataset(
             keys=[
                 "/WtoLNu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
             ],
-            n_files=439,
-            n_events=193207285,
+            n_files=438,
+            n_events=192893909,
         ),
     ),
 )
