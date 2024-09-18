@@ -18,7 +18,7 @@ from order import Campaign
 
 campaign_run3_2023_postBPix_nano_v13 = Campaign(
     name="run3_2023_postBPix_nano_v13",
-    id=320231301,  # 3 2023 13 01(u)
+    id=320231302,  # 3 2023 13 02(u)
     ecm=13.6,
     bx=25,
     aux={
