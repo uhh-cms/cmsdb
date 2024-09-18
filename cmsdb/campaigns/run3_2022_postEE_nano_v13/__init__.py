@@ -2,7 +2,7 @@
 
 """
 Common, analysis independent definition of the 2022 post-EE data-taking campaign
-with datasets at NanoAOD tier in version 12. The 'post-EE' refers to data taken
+with datasets at NanoAOD tier in version 13. The 'post-EE' refers to data taken
 after part of the positive ECAL endcap (EE+) had to be shut down because of a water
 leak inside the detector in late 2022 (more details can be found at
 https://cms.cern/news/problems-and-solutions-ecal-leak-story).
@@ -21,16 +21,16 @@ from order import Campaign
 # campaign
 #
 
-campaign_run3_2022_postEE_nano_v12 = Campaign(
-    name="run3_2022_postEE_nano_v12",
-    id=320221202,  # 3 2022 12 02(u)
+campaign_run3_2022_postEE_nano_v13 = Campaign(
+    name="run3_2022_postEE_nano_v13",
+    id=320221302,  # 3 2022 13 02(u)
     ecm=13.6,
     bx=25,
     aux={
         "tier": "NanoAOD",
         "run": 3,
         "year": 2022,
-        "version": 12,
+        "version": 13,
         "postfix": "EE",
     },
     tags={"EE", "postEE"},
@@ -38,9 +38,10 @@ campaign_run3_2022_postEE_nano_v12 = Campaign(
 
 
 # trailing imports to load datasets
-import cmsdb.campaigns.run3_2022_postEE_nano_v12.data  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v12.top  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v12.ewk  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v12.qcd  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v12.higgs  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v12.hh2bbvv  # noqa
+# import cmsdb.campaigns.run3_2022_postEE_nano_v13.data  # noqa
+# import cmsdb.campaigns.run3_2022_postEE_nano_v13.top  # noqa
+# import cmsdb.campaigns.run3_2022_postEE_nano_v13.ewk  # noqa
+# import cmsdb.campaigns.run3_2022_postEE_nano_v13.qcd  # noqa
+# import cmsdb.campaigns.run3_2022_postEE_nano_v13.higgs  # noqa
+import cmsdb.campaigns.run3_2022_postEE_nano_v13.hh2bbvv  # noqa
+# import cmsdb.campaigns.run3_2022_postEE_nano_v13.hhh4b2tau  # noqa
