@@ -640,6 +640,7 @@ zh_gg = vh.add_process(
         # only in original presentation:
         # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
     },
+    label=r"$ZH_{gg}$",
     aux={"production_mode_parent": vh},
 )
 
