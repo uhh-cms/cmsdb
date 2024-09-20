@@ -13,43 +13,17 @@ from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPi
 # Muon
 #
 cpn.add_dataset(
-    name="data_mu_c_1",
+    name="data_mu_c",
     id=14786982,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
         "/Muon0/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
-    ],
-    n_files=165,
-    n_events=138943783,
-    aux={
-        "era": "C",
-    },
-)
-cpn.add_dataset(
-    name="data_mu_c_2",
-    id=14787027,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
         "/Muon1/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
-    ],
-    n_files=131,
-    n_events=101615754,
-    aux={
-        "era": "C",
-    },
-)
-cpn.add_dataset(
-    name="data_mu_c_2_v2",
-    id=14953406,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
         "/Muon1/Run2023C-22Sep2023_v4-v2/NANOAOD",  # noqa
     ],
-    n_files=108,
-    n_events=138912262,
+    n_files=165 + 131 + 108,
+    n_events=138943783 + 101615754 + 138912262,
     aux={
         "era": "C",
     },
@@ -59,29 +33,16 @@ cpn.add_dataset(
 # E/Gamma
 #
 cpn.add_dataset(
-    name="data_egamma_c_1",
+    name="data_egamma_c",
     id=14786977,
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
-    ],
-    n_files=168,
-    n_events=160108119,
-    aux={
-        "era": "C",
-    },
-)
-cpn.add_dataset(
-    name="data_egamma_c_2",
-    id=14786782,
-    is_data=True,
-    processes=[procs.data_egamma],
-    keys=[
         "/EGamma1/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
     ],
-    n_files=177,
-    n_events=160049621,
+    n_files=168 + 177,
+    n_events=160108119 + 160049621,
     aux={
         "era": "C",
     },
