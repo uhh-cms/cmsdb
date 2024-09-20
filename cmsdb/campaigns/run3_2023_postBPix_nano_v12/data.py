@@ -33,7 +33,7 @@ cpn.add_dataset(
 #
 cpn.add_dataset(
     name="data_egamma_d",
-    id=14787876, # id from EGamma0 dataset
+    id=14787876,  # id from EGamma0 dataset
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
