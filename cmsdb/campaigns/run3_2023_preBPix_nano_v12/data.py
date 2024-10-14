@@ -19,14 +19,10 @@ cpn.add_dataset(
     processes=[procs.data_mu],
     keys=[
         "/Muon0/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
-        "/Muon1/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
         "/Muon1/Run2023C-22Sep2023_v4-v2/NANOAOD",  # noqa
     ],
-    n_files=165 + 131 + 108,
-    n_events=138943783 + 101615754 + 138912262,
-    aux={
-        "era": "C",
-    },
+    n_files=165 + 108,
+    n_events=138943783 + 138912262,
 )
 
 #
