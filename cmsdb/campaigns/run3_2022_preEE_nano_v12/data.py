@@ -4,6 +4,8 @@
 CMS datasets from the 2022 pre-EE data-taking campaign
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
 
@@ -118,59 +120,75 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_muoneg_a",
     id=14783289,
-    is_data=True,
     processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=5,
-    n_events=12,
-    aux={
-        "era": "A",
-    },
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2022A-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                    "/store/data/Run2022A/MuonEG/NANOAOD/22Sep2023-v1/50000/9a127bdb-9522-4f49-b754-67bb9152c0b3.root",  # empty  # noqa: E501
+                ],
+            },
+            n_files=4,  # 5-1
+            n_events=12,
+        ),
+    ),
 )
 
 cpn.add_dataset(
     name="data_muoneg_b",
     id=14784076,
-    is_data=True,
     processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022B-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=7,
-    n_events=254803,
-    aux={
-        "era": "B",
-    },
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2022B-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                    "/store/data/Run2022B/MuonEG/NANOAOD/22Sep2023-v1/50000/947809ff-822e-4a3a-84a2-d3fe84fc2573.root",  # empty  # noqa: E501
+                ],
+            },
+            n_files=6,  # 7-1
+            n_events=254803,
+        ),
+    ),
 )
 
 cpn.add_dataset(
     name="data_muoneg_c",
     id=14784125,
-    is_data=True,
     processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=28,
-    n_events=15768439,
-    aux={
-        "era": "C",
-    },
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2022C-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=28,  # 28-0
+            n_events=15768439,
+        ),
+    ),
 )
 
 cpn.add_dataset(
     name="data_muoneg_d",
     id=14784209,
-    is_data=True,
     processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022D-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=16,
-    n_events=8007031,
-    aux={
-        "era": "D",
-    },
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2022D-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=16,  # 16-0
+            n_events=8007031,
+        ),
+    ),
 )
