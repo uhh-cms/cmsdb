@@ -7,8 +7,6 @@ CMS datasets from the 2023 preBPix data-taking campaign
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPix_nano_v12 as cpn
 
-# Add eras A and B also?
-
 #
 # Muon
 #
@@ -23,6 +21,9 @@ cpn.add_dataset(
     ],
     n_files=165 + 108,
     n_events=138943783 + 138912262,
+    aux={
+        "era": "C",
+    },
 )
 
 #
