@@ -212,49 +212,7 @@ def load_das_info(dataset: str, add_file_info: bool = False) -> dict:
     return infos
 
 
-def get_das_info(
-    dataset: str,
-    add_file_info: bool = False,
-) -> dict:
-    infos = load_das_info(dataset, add_file_info=False)
-
-    info_of_interest = {"name": dataset}
-    for info in infos:
-        dataset_info = info["dataset"][0]
-        if "files_via_dataset" in info["das"]["services"][0]:
-            print("should not be called")
-            empty_files = list(filter(lambda x: x["file"][0]["nevents"] == 0, info))
-            broken_files = list(filter(lambda x: x["file"][0]["is_file_valid"] == 0, info))
-
-        # Get json format of single das_string gives multiple dictornaries with different info
-        # Avoid to print multiple infos twice and ask specificly for the kew of interest
-        if "dataset_info" in info["das"]["services"][0]:
-            info_of_interest["dataset_id"] = dataset_info.get("dataset_id", "")
-        elif "filesummaries" in info["das"]["services"][0]:
-            info_of_interest["nfiles"] = dataset_info.get("nfiles", "")
-            info_of_interest["nevents"] = dataset_info.get("nevents", "")
-
-    if add_file_info:
-        file_infos = load_das_info(dataset, add_file_info=True)
-
-        empty_files = [
-            info["file"][0]["name"]
-            for info in filter(lambda info: info["file"][0]["nevents"] == 0, file_infos)
-        ]
-        broken_files = [
-            info["file"][0]["name"]
-            for info in filter(lambda info: info["file"][0]["is_file_valid"] == 0, file_infos)
-        ]
-        info_of_interest["empty_files"] = empty_files
-        info_of_interest["broken_files"] = broken_files
-    else:
-        info_of_interest["empty_files"] = "UNKNOWN"
-        info_of_interest["broken_files"] = "UNKNOWN"
-
-    return info_of_interest
-
-
-def new_get_das_info(dataset: str) -> dict:
+def get_das_info(dataset: str) -> dict:
     info_of_interest = {"name": dataset}
 
     file_infos = load_das_info(dataset, add_file_info=True)
@@ -320,7 +278,7 @@ def print_das_info(
                 datasets.append(dataset_name)
 
         for dataset in datasets:
-            info_of_interest = new_get_das_info(dataset)
+            info_of_interest = get_das_info(dataset)
             desired_output = convert_function(info_of_interest)
             print(desired_output)
 
