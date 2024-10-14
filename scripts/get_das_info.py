@@ -26,15 +26,15 @@ def get_generator_name(name: str) -> str:
         return ""
 
 
-def get_broken_files_str(data: dict, n_spaces: int = 12) -> str:
+def get_broken_files_str(data: dict, n_spaces: int = 20) -> str:
     """
     Function that returns a string represenatation of broken files
     """
 
     broken_files_list = [
-        f'"{d}",  # broken' for d in data["broken_files"]
+        f'"{d}",  # broken  # noqa: E501' for d in data["broken_files"]
     ] + [
-        f'"{d}",  # empty' for d in data["empty_files"] if d not in data["broken_files"]
+        f'"{d}",  # empty  # noqa: E501' for d in data["empty_files"] if d not in data["broken_files"]
     ]
 
     if not broken_files_list:
@@ -57,34 +57,15 @@ def convert_default(data: dict, placeholder="PLACEHOLDER") -> str:
     name="{placeholder}{generator}",
     id={data['dataset_id']},
     processes=[procs.{placeholder}],
-    keys=[
-        "{data['name']}",  # noqa
-    ],
-    aux={{
-        "broken_files": [{get_broken_files_str(data)}],
-    }},
-    n_files={data['nfiles_good']},  # {data["nfiles"]}-{data["nfiles_bad"]}
-    n_events={data['nevents']},
-)
-"""
-
-
-def convert_variation(data: dict, placeholder="PLACEHOLDER") -> str:
-    """
-    Function that converts dataset info into one order Dataset per query. Stores the dataset info
-    in a dict with the dataset type as key.
-    """
-    generator = get_generator_name(data["name"])
-    return f"""cpn.add_dataset(
-    name="{placeholder}{generator}",
-    id={data['dataset_id']},
-    processes=[procs.{placeholder}],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "{data['name']}",  # noqa
+                "{data['name']}",  # noqa: E501
             ],
-            n_files={data['nfiles']},
+            aux={{
+                "broken_files": [{get_broken_files_str(data)}],
+            }},
+            n_files={data['nfiles_good']},  # {data["nfiles"]}-{data["nfiles_bad"]}
             n_events={data['nevents']},
         ),
     ),
@@ -153,9 +134,12 @@ def convert_top(data: dict, placeholder="PLACEHOLDER") -> str:
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "{data['name']}",  # noqa
+                "{data['name']}",  # noqa: E501
             ],
-            n_files={data['nfiles']},
+            aux={{
+                "broken_files": [{get_broken_files_str(data)}],
+            }},
+            n_files={data['nfiles_good']},  # {data["nfiles"]}-{data["nfiles_bad"]}
             n_events={data['nevents']},
         ),
     ),
@@ -164,9 +148,12 @@ def convert_top(data: dict, placeholder="PLACEHOLDER") -> str:
         # comment out this dataset
         return f"""        # {identifier}=DatasetInfo(
         #     keys=[
-        #         "{data['name']}",  # noqa
+        #         "{data['name']}",  # noqa: E501
         #     ],
-        #     n_files={data['nfiles']},
+        #     aux={{
+        #         "broken_files": [{get_broken_files_str(data)}],
+        #     }},
+        #     n_files={data['nfiles_good']},  # {data["nfiles"]}-{data["nfiles_bad"]}
         #     n_events={data['nevents']},
         # ),"""
     elif dataset_type == "ignore":
@@ -175,9 +162,12 @@ def convert_top(data: dict, placeholder="PLACEHOLDER") -> str:
         # some known variation of the dataset
         return f"""        {dataset_type}=DatasetInfo(
             keys=[
-                "{data['name']}",  # noqa
+                "{data['name']}",  # noqa: E501
             ],
-            n_files={data['nfiles']},
+            aux={{
+                "broken_files": [{get_broken_files_str(data)}],
+            }},
+            n_files={data['nfiles_good']},  # {data["nfiles"]}-{data["nfiles_bad"]}
             n_events={data['nevents']},
         ),"""
 
@@ -193,12 +183,11 @@ def convert_minimal(data: dict) -> str:
     """
     Function that only returns the dataset key + number of events.
     """
-    return f"""{data['name']}\nFiles: {data['nfiles']}\nEvents: {data['nevents']}\n"""
+    return f"""{data['name']}\nFiles: {data['nfiles_good']}\nEvents: {data['nevents']}\n"""
 
 
 convert_functions = {
     "default": convert_default,
-    "variation": convert_variation,
     "keys": convert_keys,
     "top": convert_top,
     "minimal": convert_minimal,
