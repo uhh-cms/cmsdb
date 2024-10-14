@@ -120,6 +120,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_muoneg_a",
     id=14783289,
+    is_data=True,
     processes=[procs.data_muoneg],
     info=dict(
         nominal=DatasetInfo(
@@ -135,11 +136,15 @@ cpn.add_dataset(
             n_events=12,
         ),
     ),
+    aux={
+        "era": "A",
+    },
 )
 
 cpn.add_dataset(
     name="data_muoneg_b",
     id=14784076,
+    is_data=True,
     processes=[procs.data_muoneg],
     info=dict(
         nominal=DatasetInfo(
@@ -155,11 +160,15 @@ cpn.add_dataset(
             n_events=254803,
         ),
     ),
+    aux={
+        "era": "B",
+    },
 )
 
 cpn.add_dataset(
     name="data_muoneg_c",
     id=14784125,
+    is_data=True,
     processes=[procs.data_muoneg],
     info=dict(
         nominal=DatasetInfo(
@@ -173,11 +182,15 @@ cpn.add_dataset(
             n_events=15768439,
         ),
     ),
+    aux={
+        "era": "C",
+    },
 )
 
 cpn.add_dataset(
     name="data_muoneg_d",
     id=14784209,
+    is_data=True,
     processes=[procs.data_muoneg],
     info=dict(
         nominal=DatasetInfo(
@@ -191,4 +204,7 @@ cpn.add_dataset(
             n_events=8007031,
         ),
     ),
+    aux={
+        "era": "D",
+    },
 )
