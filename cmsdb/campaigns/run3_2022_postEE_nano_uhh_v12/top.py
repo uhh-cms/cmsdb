@@ -368,7 +368,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_tchannel_t_4f_powheg",
     id=14798465,
-    processes=[procs.st_tchannel_t_4f],
+    processes=[procs.st_tchannel_t],
     keys=[
         "/TBbarQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer22EEMiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
@@ -384,7 +384,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_tchannel_tbar_4f_powheg",
     id=14805210,
-    processes=[procs.st_tchannel_tbar_4f],
+    processes=[procs.st_tchannel_tbar],
     keys=[
         "/TbarBQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer22EEMiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
