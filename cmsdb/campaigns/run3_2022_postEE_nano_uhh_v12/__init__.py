@@ -21,7 +21,7 @@ from order import Campaign
 # campaign
 #
 
-campaign_run3_2022_postEE_nano_v12 = Campaign(
+campaign_run3_2022_postEE_nano_uhh_v12 = Campaign(
     name="run3_2022_postEE_nano_uhh_v12",
     id=320221203,  # 3 2022 12 03(u)
     ecm=13.6,
