@@ -31,6 +31,7 @@ cpn.add_dataset(
     },
 )
 
+# TODO: might need re-merging as one lfn was broken
 cpn.add_dataset(
     name="data_e_f",
     id=14783516,
@@ -205,6 +206,7 @@ cpn.add_dataset(
     },
 )
 
+# TODO: might need re-merging as five lfns were broken
 cpn.add_dataset(
     name="data_met_f",
     id=14825994,
