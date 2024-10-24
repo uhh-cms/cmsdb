@@ -32,10 +32,10 @@ cpn.add_dataset(
 
 # different couplings, keeping c2 = 0
 
-cpn.add_dataset(
-    name="hh_ggf_hbb_htt_kl0_kt1_powheg",
-    # MISSING
-)
+#cpn.add_dataset(
+#    name="hh_ggf_hbb_htt_kl0_kt1_powheg",
+#    # MISSING
+#)
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl2p45_kt1_powheg",
