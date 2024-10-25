@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-CMS datasets from the 2022 post-EE data-taking campaign
+CMS datasets from the 2022 post-EE data-taking campaign.
 """
 
 import cmsdb.processes as procs
