@@ -288,8 +288,10 @@ st_schannel_t = st_schannel.add_process(
             ),
         }),
         13.6: Number(7.244, {
-            tot * 7.244 / st_schannel.get_xsec(13.6).n
-            for tot in st_schannel.get_xsec(13.6).u("scale")
+            "scale": tuple(
+                tot * 7.244 / st_schannel.get_xsec(13.6).n
+                for tot in st_schannel.get_xsec(13.6).u("scale")
+            ),
         }),
     },
 )
@@ -320,8 +322,10 @@ st_schannel_tbar = st_schannel.add_process(
             ),
         }),
         13.6: Number(4.534, {
-            tot * 4.534 / st_schannel.get_xsec(13.6).n
-            for tot in st_schannel.get_xsec(13.6).u("scale")
+            "scale": tuple(
+                tot * 4.534 / st_schannel.get_xsec(13.6).n
+                for tot in st_schannel.get_xsec(13.6).u("scale")
+            ),
         }),
     },
 )
