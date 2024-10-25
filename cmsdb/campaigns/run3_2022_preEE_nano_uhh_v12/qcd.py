@@ -31,8 +31,13 @@ cpn.add_dataset(
     keys=[
         "/QCD_PT-20to30_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=71,
-    n_events=30200859,
+    aux={
+        "broken_files": [
+        "/store/mc/Run3Summer22NanoAODv12/QCD_PT-20to30_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_v5-v2/2550000/2eb4aca8-8d9b-4c57-a43b-d643aa4a326a.root",  # noqa
+        ],
+    },
+    n_files=70,
+    n_events=30196956,
 )
 cpn.add_dataset(
     name="qcd_mu_pt30to50_pythia",
