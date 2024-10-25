@@ -190,7 +190,6 @@ st_twchannel = st.add_process(
     },
 )
 
-# TODO: dividing by half as there is no recommended value yet
 st_twchannel_t = st_twchannel.add_process(
     name="st_twchannel_t",
     id=2210,
@@ -218,7 +217,6 @@ st_twchannel_t_fh = st_twchannel_t.add_process(
     xsecs=multiply_xsecs(st_twchannel_t, const.br_ww.fh),
 )
 
-# TODO: dividing by half as there is no recommended value yet
 st_twchannel_tbar = st_twchannel.add_process(
     name="st_twchannel_tbar",
     id=2220,
