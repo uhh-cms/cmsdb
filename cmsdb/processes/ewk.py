@@ -17,10 +17,10 @@ __all__ = [
     "dy_m10to50",
     "dy_m50toinf", "dy_m50toinf_0j", "dy_m50toinf_1j", "dy_m50toinf_2j", "dy_m50toinf_ge3j",
     "dy_m50toinf_3j", "dy_m50toinf_4j",
-    "dy_m50toinf_1j_pt0to40", "dy_m50toinf_1j_pt40to100", "dy_m50toinf_1j_pt100to200", "dy_m50toinf_1j_pt200to400",
-    "dy_m50toinf_1j_pt400to600", "dy_m50toinf_1j_pt600toinf",
-    "dy_m50toinf_2j_pt0to40", "dy_m50toinf_2j_pt40to100", "dy_m50toinf_2j_pt100to200", "dy_m50toinf_2j_pt200to400",
-    "dy_m50toinf_2j_pt400to600", "dy_m50toinf_2j_pt600toinf",
+    "dy_m50toinf_1j_pt0to40", "dy_m50toinf_1j_pt40to100", "dy_m50toinf_1j_pt100to200",
+    "dy_m50toinf_1j_pt200to400", "dy_m50toinf_1j_pt400to600", "dy_m50toinf_1j_pt600toinf",
+    "dy_m50toinf_2j_pt0to40", "dy_m50toinf_2j_pt40to100", "dy_m50toinf_2j_pt100to200",
+    "dy_m50toinf_2j_pt200to400", "dy_m50toinf_2j_pt400to600", "dy_m50toinf_2j_pt600toinf",
     "dy_0j", "dy_1j", "dy_2j",
     "dy_m50toinf_ht70to100", "dy_m50toinf_ht100to200", "dy_m50toinf_ht200to400",
     "dy_m50toinf_ht400to600", "dy_m50toinf_ht600to800", "dy_m50toinf_ht800to1200",
@@ -34,8 +34,8 @@ __all__ = [
     "z_nunu_ht2500toinf",
     "z_qq",
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
-    "z_qq_pt100to200_1j", "z_qq_pt100to200_2j", "z_qq_pt200to400_1j", "z_qq_pt200to400_2j",
-    "z_qq_pt400to600_1j", "z_qq_pt400to600_2j", "z_qq_pt600toinf_1j", "z_qq_pt600toinf_2j",
+    "z_qq_1j_pt100to200", "z_qq_2j_pt100to200", "z_qq_1j_pt200to400", "z_qq_2j_pt200to400",
+    "z_qq_1j_pt400to600", "z_qq_2j_pt400to600", "z_qq_1j_pt600toinf", "z_qq_2j_pt600toinf",
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
@@ -727,8 +727,8 @@ z_qq_ht800toinf = z_qq.add_process(
     },
 )
 
-z_qq_pt100to200_1j = z_qq.add_process(
-    name="z_qq_pt100to200_1j",
+z_qq_1j_pt100to200 = z_qq.add_process(
+    name="z_qq_1j_pt100to200",
     id=55261,
     xsecs={
         # XSDB
@@ -736,8 +736,8 @@ z_qq_pt100to200_1j = z_qq.add_process(
     },
 )
 
-z_qq_pt100to200_2j = z_qq.add_process(
-    name="z_qq_pt100to200_2j",
+z_qq_2j_pt100to200 = z_qq.add_process(
+    name="z_qq_2j_pt100to200",
     id=55262,
     xsecs={
         # XSDB
@@ -745,8 +745,8 @@ z_qq_pt100to200_2j = z_qq.add_process(
     },
 )
 
-z_qq_pt200to400_1j = z_qq.add_process(
-    name="z_qq_pt200to400_1j",
+z_qq_1j_pt200to400 = z_qq.add_process(
+    name="z_qq_1j_pt200to400",
     id=55263,
     xsecs={
         # XSDB
@@ -754,8 +754,8 @@ z_qq_pt200to400_1j = z_qq.add_process(
     },
 )
 
-z_qq_pt200to400_2j = z_qq.add_process(
-    name="z_qq_pt200to400_2j",
+z_qq_2j_pt200to400 = z_qq.add_process(
+    name="z_qq_2j_pt200to400",
     id=55264,
     xsecs={
         # XSDB
@@ -763,8 +763,8 @@ z_qq_pt200to400_2j = z_qq.add_process(
     },
 )
 
-z_qq_pt400to600_1j = z_qq.add_process(
-    name="z_qq_pt400to600_1j",
+z_qq_1j_pt400to600 = z_qq.add_process(
+    name="z_qq_1j_pt400to600",
     id=55265,
     xsecs={
         # XSDB
@@ -772,8 +772,8 @@ z_qq_pt400to600_1j = z_qq.add_process(
     },
 )
 
-z_qq_pt400to600_2j = z_qq.add_process(
-    name="z_qq_pt400to600_2j",
+z_qq_2j_pt400to600 = z_qq.add_process(
+    name="z_qq_2j_pt400to600",
     id=55266,
     xsecs={
         # XSDB
@@ -781,8 +781,8 @@ z_qq_pt400to600_2j = z_qq.add_process(
     },
 )
 
-z_qq_pt600toinf_1j = z_qq.add_process(
-    name="z_qq_pt600toinf_1j",
+z_qq_1j_pt600toinf = z_qq.add_process(
+    name="z_qq_1j_pt600toinf",
     id=55267,
     xsecs={
         # XSDB
@@ -790,8 +790,8 @@ z_qq_pt600toinf_1j = z_qq.add_process(
     },
 )
 
-z_qq_pt600toinf_2j = z_qq.add_process(
-    name="z_qq_pt600toinf_2j",
+z_qq_2j_pt600toinf = z_qq.add_process(
+    name="z_qq_2j_pt600toinf",
     id=55268,
     xsecs={
         # XSDB
