@@ -39,8 +39,13 @@ __all__ = [
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
+    "w_lnu_0j",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
+    "w_lnu_1j", "w_lnu_1j_pt40to100", "w_lnu_1j_pt100to200", "w_lnu_1j_pt200to400",
+    "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
+    "w_lnu_2j", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
+    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
@@ -847,24 +852,24 @@ w_lnu = w.add_process(
     },
 )
 
-
 # LO cross section, needed for scaling to NNLO:
 # based on GenXSecAnalyzer
 # for WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
-
 w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
-
-# LO cross sections, scaled to NNLO
 
 # ht bins based on GenXSecAnalyzer
 # for WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+# LO cross sections, scaled to NNLO
 w_lnu_ht70to100 = w_lnu.add_process(
     name="w_lnu_ht70to100",
     id=6110,
     xsecs={
         13: Number(1270.0, {"tot": 0.5259}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+    aux={
+        "ht": (70.0, 100.0),
     },
 )
 
@@ -874,6 +879,9 @@ w_lnu_ht100to200 = w_lnu.add_process(
     xsecs={
         13: Number(1254.0, {"tot": 0.5274}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
+    aux={
+        "ht": (100.0, 200.0),
+    },
 )
 
 w_lnu_ht200to400 = w_lnu.add_process(
@@ -881,6 +889,9 @@ w_lnu_ht200to400 = w_lnu.add_process(
     id=6130,
     xsecs={
         13: Number(336.6, {"tot": 0.1528}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+    aux={
+        "ht": (200.0, 400.0),
     },
 )
 
@@ -890,6 +901,9 @@ w_lnu_ht400to600 = w_lnu.add_process(
     xsecs={
         13: Number(45.21, {"tot": 0.02966}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
+    aux={
+        "ht": (400.0, 600.0),
+    },
 )
 
 w_lnu_ht600to800 = w_lnu.add_process(
@@ -897,6 +911,9 @@ w_lnu_ht600to800 = w_lnu.add_process(
     id=6150,
     xsecs={
         13: Number(10.98, {"tot": 0.006997}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+    aux={
+        "ht": (600.0, 800.0),
     },
 )
 
@@ -906,6 +923,9 @@ w_lnu_ht800to1200 = w_lnu.add_process(
     xsecs={
         13: Number(4.927, {"tot": 0.003229}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
+    aux={
+        "ht": (800.0, 1200.0),
+    },
 )
 
 w_lnu_ht1200to2500 = w_lnu.add_process(
@@ -913,6 +933,9 @@ w_lnu_ht1200to2500 = w_lnu.add_process(
     id=6170,
     xsecs={
         13: Number(1.157, {"tot": 0.0007663}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+    aux={
+        "ht": (1200.0, 2500.0),
     },
 )
 
@@ -923,6 +946,126 @@ w_lnu_ht2500toinf = w_lnu.add_process(
     id=6180,
     xsecs={
         13: Number(0.02624, {"tot": 0.00002981}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+    aux={
+        "ht": (2500.0, const.inf),
+    },
+)
+
+w_lnu_0j = w_lnu.add_process(
+    name="w_lnu_0j",
+    id=610000,
+    label=rf"{w_lnu.label[:-1]}, 0j)",
+    aux={
+        "njets": (0, 1),
+    },
+)
+
+w_lnu_1j = w_lnu.add_process(
+    name="w_lnu_1j",
+    id=610010,
+    label=rf"{w_lnu.label[:-1]}, 1j)",
+    aux={
+        "njets": (1, 2),
+    },
+)
+
+w_lnu_2j = w_lnu.add_process(
+    name="w_lnu_2j",
+    id=610020,
+    label=rf"{w_lnu.label[:-1]}, 2j)",
+    aux={
+        "njets": (2, 3),
+    },
+)
+
+w_lnu_1j_pt40to100 = w_lnu_1j.add_process(
+    name="w_lnu_1j_pt40to100",
+    id=610011,
+    label=w_lnu_1j.label,
+    aux={
+        "ptll": (40.0, 100.0),
+    },
+)
+
+w_lnu_1j_pt100to200 = w_lnu_1j.add_process(
+    name="w_lnu_1j_pt100to200",
+    id=610012,
+    label=w_lnu_1j.label,
+    aux={
+        "ptll": (100.0, 200.0),
+    },
+)
+
+w_lnu_1j_pt200to400 = w_lnu_1j.add_process(
+    name="w_lnu_1j_pt200to400",
+    id=610013,
+    label=w_lnu_1j.label,
+    aux={
+        "ptll": (200.0, 400.0),
+    },
+)
+
+w_lnu_1j_pt400to600 = w_lnu_1j.add_process(
+    name="w_lnu_1j_pt400to600",
+    id=610014,
+    label=w_lnu_1j.label,
+    aux={
+        "ptll": (400.0, 600.0),
+    },
+)
+
+w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
+    name="w_lnu_1j_pt600toinf",
+    id=610015,
+    label=w_lnu_1j.label,
+    aux={
+        "ptll": (600.0, const.inf),
+    },
+)
+
+w_lnu_2j_pt40to100 = w_lnu_2j.add_process(
+    name="w_lnu_2j_pt40to100",
+    id=610021,
+    label=w_lnu_2j.label,
+    aux={
+        "ptll": (40.0, 100.0),
+    },
+)
+
+w_lnu_2j_pt100to200 = w_lnu_2j.add_process(
+    name="w_lnu_2j_pt100to200",
+    id=610022,
+    label=w_lnu_2j.label,
+    aux={
+        "ptll": (100.0, 200.0),
+    },
+)
+
+w_lnu_2j_pt200to400 = w_lnu_2j.add_process(
+    name="w_lnu_2j_pt200to400",
+    id=610023,
+    label=w_lnu_2j.label,
+    aux={
+        "ptll": (200.0, 400.0),
+    },
+)
+
+w_lnu_2j_pt400to600 = w_lnu_2j.add_process(
+    name="w_lnu_2j_pt400to600",
+    id=610024,
+    label=w_lnu_2j.label,
+    aux={
+        "ptll": (400.0, 600.0),
+    },
+)
+
+w_lnu_2j_pt600toinf = w_lnu_2j.add_process(
+    name="w_lnu_2j_pt600toinf",
+    id=610025,
+    label=w_lnu_2j.label,
+    aux={
+        "ptll": (600.0, const.inf),
     },
 )
 
