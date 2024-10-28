@@ -800,3 +800,35 @@ cpn.add_dataset(
         },
     },
 )
+
+cpn.add_dataset(
+    name="st_schannel_t_lep_4f_amcatnlo",
+    id=14791300,
+    processes=[procs.st_schannel_t_lep],
+    keys=[
+        "/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EEMiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=6,
+    n_events=4_363_850,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="st_schannel_tbar_lep_4f_amcatnlo",
+    id=14791805,
+    processes=[procs.st_schannel_tbar_lep],
+    keys=[
+        "/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EEMiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=2_762_668,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
