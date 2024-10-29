@@ -33,6 +33,7 @@ cpn = campaign_run2_2018_nano_v9 = Campaign(
 
 # trailing imports to load datasets
 import cmsdb.campaigns.run2_2018_nano_v9.data #noqa
+import cmsdb.campaigns.run2_2018_nano_v9.qcd #noqa
 
 #
 # datasets
@@ -291,6 +292,48 @@ cpn.add_dataset(
             ],
             n_files=113,
             n_events=139490000,
+        ),
+        mtop_up=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=117,
+            n_events=136984000,
+        ),
+        mtop_down=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop171p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=124,
+            n_events=134390000,
+        ),
+        mtop_up2=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop175p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=118,
+            n_events=137976000,
+        ),
+        mtop_down2=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop169p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=109,
+            n_events=128654000,
+        ),
+        mtop_up3=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop178p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=121,
+            n_events=130056000,
+        ),
+        mtop_down3=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop166p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=116,
+            n_events=132629000,
         ),
     ),
 )

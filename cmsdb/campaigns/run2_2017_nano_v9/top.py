@@ -183,6 +183,34 @@ cpn.add_dataset(
             n_files=108,
             n_events=96894000,
         ),
+        mtop_up2=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop175p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=117,
+            n_events=98568000,
+        ),
+        mtop_down2=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop169p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=76,
+            n_events=90427000,
+        ),
+        mtop_up3=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop178p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=101,
+            n_events=95963000,
+        ),
+        mtop_down3=DatasetInfo(
+            keys=[
+                "/TTToHadronic_mtop166p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=104,
+            n_events=94184000,
+        ),
     ),
 )
 
