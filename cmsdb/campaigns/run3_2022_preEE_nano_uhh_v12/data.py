@@ -51,7 +51,6 @@ cpn.add_dataset(
     },
 )
 
-
 #
 # E/Gamma
 #
@@ -144,14 +143,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_met_c",
-    id=14853683,
+    id=14784128,
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/JetMET/Run2022C-19Dec2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
+        "/JetMET/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
     ],
-    n_files=193,
-    n_events=169_968_073,
+    n_files=187,
+    n_events=169_113_266,
     aux={
         "merging_factors": {
             "nominal": 13,
@@ -163,17 +162,17 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_met_d",
-    id=14853651,
+    id=14809044,
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/JetMET/Run2022D-19Dec2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
+        "/JetMET/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
     ],
-    n_files=121,
-    n_events=101_270_969,
+    n_files=122,
+    n_events=100_853_361,
     aux={
         "merging_factors": {
-            "nominal": 13,
+            "nominal": 12,
         },
         "era": "D",
         "jec_era": "RunCD",
