@@ -379,7 +379,7 @@ qcd_mu_pt170to300 = qcd_mu.add_process(
     id=31107,
     xsecs={
         13: Number(7019.0),
-        # 13.6: missing in XSDB
+        13.6: Number(7763),  # PLACEHOLDER! this is for postEE only! preEE missing in XSDB
     },
 )
 
@@ -397,7 +397,7 @@ qcd_mu_pt470to600 = qcd_mu.add_process(
     id=31109,
     xsecs={
         13: Number(58.86),
-        # 13.6: missing in XSDB
+        13.6: Number(68.24),  # PLACEHOLDER! this is for postEE only! preEE missing in XSDB
     },
 )
 
@@ -424,7 +424,7 @@ qcd_mu_pt1000toinf = qcd_mu.add_process(
     id=31112,
     xsecs={
         13: Number(1.08),  # NOTE: not found via XSDB, taken from an old reference
-        # 13.6: missing in XSDB
+        13.6: Number(1.2),  # PLACEHOLDER! missing in XSDB
     },
 )
 
