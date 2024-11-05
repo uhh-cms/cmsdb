@@ -438,28 +438,21 @@ qcd_em = qcd.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-# based on datasets QCD_Pt-{i}to{j}_EMEnriched_TuneCP5_13TeV-pythia8 (Summer20UL16)
-# https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt-15to20_EMEnriched_TuneCP5_13TeV-pythia8  # noqa
-qcd_em_pt15to20 = qcd_em.add_process(
-    name="qcd_em_pt15to20",
+# based on datasets QCD_Pt-{i}to{j}_EMEnriched_TuneCP5_13TeV-pythia8 (Run3Summer22EE)
+# https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&ordDirection=-1&ordFieldName=energy&pageSize=50&searchQuery=DAS%3DQCD_PT-10to30_EMEnriched_TuneCP5_13p6TeV_pythia8%20  # noqa
+qcd_em_pt10to30 = qcd_em.add_process(
+    name="qcd_em_pt10to30",
     id=31201,
     xsecs={
-        13: Number(1324000.0),
+        13.6: Number(6854000.0),
     },
 )
 
-qcd_em_pt20to30 = qcd_em.add_process(
-    name="qcd_em_pt20to30",
-    id=31202,
-    xsecs={
-        13: Number(4896000.0),
-    },
-)
 qcd_em_pt30to50 = qcd_em.add_process(
     name="qcd_em_pt30to50",
-    id=31203,
+    id=31202,
     xsecs={
-        13: Number(6447000.0),
+        13.6: Number(6686000.0),
     },
 )
 
@@ -467,7 +460,7 @@ qcd_em_pt50to80 = qcd_em.add_process(
     name="qcd_em_pt50to80",
     id=31204,
     xsecs={
-        13: Number(1988000.0),
+        13.6: Number(2118000.0),
     },
 )
 
@@ -475,7 +468,7 @@ qcd_em_pt80to120 = qcd_em.add_process(
     name="qcd_em_pt80to120",
     id=31205,
     xsecs={
-        13: Number(367500.0),
+        13.6: Number(409400.0),
     },
 )
 
@@ -483,7 +476,7 @@ qcd_em_pt120to170 = qcd_em.add_process(
     name="qcd_em_pt120to170",
     id=31206,
     xsecs={
-        13: Number(66590.0),
+        13.6: Number(72170.0),
     },
 )
 
@@ -491,7 +484,7 @@ qcd_em_pt170to300 = qcd_em.add_process(
     name="qcd_em_pt170to300",
     id=31207,
     xsecs={
-        13: Number(16620.0),
+        13.6: Number(17920.0),
     },
 )
 
@@ -499,15 +492,7 @@ qcd_em_pt300toinf = qcd_em.add_process(
     name="qcd_em_pt300toinf",
     id=31208,
     xsecs={
-        13: Number(1104.0),
-    },
-)
-
-qcd_em_pt10to30 = qcd_em.add_process(
-    name="qcd_em_pt10to30",
-    id=31209,
-    xsecs={
-        13: Number(0.1),  # TODO
+        13.6: Number(1224.0),
     },
 )
 
