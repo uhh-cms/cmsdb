@@ -22,6 +22,7 @@ campaign_run2_2016_nano_v9 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
+        "run": 2,
         "year": 2016,
         "version": 9,
         "postfix": "",

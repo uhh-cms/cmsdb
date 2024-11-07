@@ -15,16 +15,17 @@ from order import Campaign
 # campaign
 #
 
-campaign_run2_2016_nano_v9 = Campaign(
-    name="run2_HIPM_2016_nano_v9",
+campaign_run2_2016_HIPM_nano_v9 = Campaign(
+    name="run2_2016_HIPM_nano_v9",
     id=2201601, # change ID
     ecm=13,
     bx=25,
     aux={
         "tier": "NanoAOD",
+        "run": 2,
         "year": 2016,
         "version": 9,
-        "postfix": "",
+        "postfix": "APV",
     },
     tags={"preVFP", "APV", "HIPM"},
 )
