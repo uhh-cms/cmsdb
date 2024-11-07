@@ -25,11 +25,12 @@ campaign_run2_2016_nano_v9 = Campaign(
         "year": 2016,
         "version": 9,
     },
+    tags={"postVFP"},
 )
 
 
 # trailing imports to load datasets
-import cmsdb.campaigns.run2_2017_nano_v9.data  # noqa
-import cmsdb.campaigns.run2_2017_nano_v9.top  # noqa
-import cmsdb.campaigns.run2_2017_nano_v9.qcd  # noqa
+import cmsdb.campaigns.run2_2016_nano_v9.data  # noqa
+import cmsdb.campaigns.run2_2016_nano_v9.top  # noqa
+import cmsdb.campaigns.run2_2016_nano_v9.qcd  # noqa
 
