@@ -24,6 +24,7 @@ campaign_run2_2016_nano_v9 = Campaign(
         "tier": "NanoAOD",
         "year": 2016,
         "version": 9,
+        "postfix": "",
     },
     tags={"postVFP"},
 )

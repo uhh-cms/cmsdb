@@ -13,30 +13,16 @@ from cmsdb.campaigns.run2_2016_nano_v9 import campaign_run2_2016_nano_v9 as cpn
 
 
 cpn.add_dataset(
-    name="data_jetht_b1",
-    id=14345758,
+    name="data_jetht_b",
+    id=14345758, # other id of second dataset 14345191
     is_data=True,
     processes=[procs.data_jetht],
     keys=[
         "/JetHT/Run2016B-ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
-    ],
-    n_files=11,
-    n_events=9726665,
-    aux={
-        "era": "B",
-    },
-)
-
-cpn.add_dataset(
-    name="data_jetht_b2",
-    id=14345191,
-    is_data=True,
-    processes=[procs.data_jetht],
-    keys=[
         "/JetHT/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
-    n_files=74,
-    n_events=133752091,
+    n_files=85, # 11 + 74  
+    n_events=143478756, # 9726665 + 133752091
     aux={
         "era": "B",
     },
@@ -88,7 +74,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_jetht_f1",
+    name="data_jetht_f",
     id=14345749,
     is_data=True,
     processes=[procs.data_jetht],
