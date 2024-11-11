@@ -18,7 +18,7 @@ from order import Campaign
 
 campaign_run3_2022_preEE_nano_uhh_v12 = Campaign(
     name="run3_2022_preEE_nano_uhh_v12",
-    id=320221203,
+    id=320221123,  # (run)3(year)2022(part)1(version)12(prod)3
     ecm=13.6,
     bx=25,
     aux={
