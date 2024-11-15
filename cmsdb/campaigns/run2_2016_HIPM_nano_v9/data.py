@@ -14,15 +14,15 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_v9 import campaign_run2_2016_HIPM_nano_
 
 cpn.add_dataset(
     name="data_jetht_b",
-    id=14345758, # other id of second dataset 14345191
+    id=14345758,  # other id of second dataset 14345191
     is_data=True,
     processes=[procs.data_jetht],
     keys=[
         "/JetHT/Run2016B-ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
         "/JetHT/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
-    n_files=85, # 11 + 74  
-    n_events=143478756, # 9726665 + 133752091
+    n_files=85,  # 11 + 74
+    n_events=143478756,  # 9726665 + 133752091
     aux={
         "era": "B",
     },

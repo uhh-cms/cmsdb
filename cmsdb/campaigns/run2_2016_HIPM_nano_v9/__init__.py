@@ -17,7 +17,7 @@ from order import Campaign
 
 campaign_run2_2016_HIPM_nano_v9 = Campaign(
     name="run2_2016_HIPM_nano_v9",
-    id=2201601, # change ID
+    id=2201601,
     ecm=13,
     bx=25,
     aux={

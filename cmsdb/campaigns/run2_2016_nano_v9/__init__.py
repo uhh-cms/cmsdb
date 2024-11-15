@@ -35,4 +35,3 @@ campaign_run2_2016_nano_v9 = Campaign(
 import cmsdb.campaigns.run2_2016_nano_v9.data  # noqa
 import cmsdb.campaigns.run2_2016_nano_v9.top  # noqa
 import cmsdb.campaigns.run2_2016_nano_v9.qcd  # noqa
-
