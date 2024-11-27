@@ -19,15 +19,15 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
         "/SingleMuon/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
+        "/Muon/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
     ],
-    n_files=94 + 15,
-    n_events=138_329_693 + 20_162_441,
+    n_files=15 + 94,
+    n_events=20_162_441 + 138_329_693,
     aux={
         "merging_factors": {
-            "nominal": 19,
-            "nominal_ext1": 17,
+            "nominal": 17,
+            "nominal_ext1": 19,
         },
         "era": "C",
         "jec_era": "RunCD",
