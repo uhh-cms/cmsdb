@@ -463,6 +463,16 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
+    name="dy_m4to50_ht100to400_madgraph",
+    id=14948858,
+    processes=[procs.dy_m4to50_ht100to400],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=1265,
+    n_events=208318559,
+)
+cpn.add_dataset(
     name="dy_m4to50_ht400to800_madgraph",
     id=14949799,
     processes=[procs.dy_m4to50_ht400to800],
