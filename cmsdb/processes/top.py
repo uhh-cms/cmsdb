@@ -17,7 +17,7 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
-    "ttz", "ttz_zqq", "ttz_zlep_m10toinf",
+    "ttz", "ttz_zqq", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
@@ -89,13 +89,14 @@ tt_fh = tt.add_process(
 # single-top
 #
 # using updated tables from 2022
-# t- and tw-channel: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20#Predictions_for_top_quark_produc  # noqa
-# s-channel: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_s_channel_cross_secti
-# for the tW-channel, the t and tbar channels contribute equally as stated in
-# Ref https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_Wt_channel_cross_sect
-#
-# 13 TeV s-channel cross sections from here:
-# https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopSigma?rev=12#Single_Top_Cross_sections_at_13?rev=12
+# t- and tw-channel:
+#   - https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20#Predictions_for_top_quark_produc  # noqa
+# s-channel:
+#   - https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=21 (NNLO)
+#   - we used NLO before from https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_s_channel_cross_secti  # noqa
+# tW-channel:
+#   - the t and tbar channels contribute equally as stated in
+#   - https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_Wt_channel_cross_sect
 
 st = Process(
     name="st",
@@ -248,20 +249,14 @@ st_schannel = st.add_process(
     id=2300,
     label=f"{st.label}, s-channel",
     xsecs={
-        13: Number(10.32, {
-            "scale": (0.29, 0.24),
-            "pdf": 0.27,
-            "mtop": (0.23, 0.22),
-            "E_beam": 0.01,
+        # only scale uncertainty is given in the twiki
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=21
+        13: Number(11.073, {
+            "scale": (0.058, 0.034),
         }),
-        13.6: Number(7.246, {
+        13.6: Number(11.778, {
             "scale": (0.059, 0.043),
         }),
-        # only scale uncertainty is given in the twiki
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
-        # TODO: update after final calculations
-        # no value for 13.6 in NLO twiki
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36
     },
 )
 
@@ -281,15 +276,21 @@ st_schannel_t = st_schannel.add_process(
     name="st_schannel_t",
     id=2310,
     xsecs={
-        13: Number(6.35, {
-            "scale": (0.18, 0.15),
-            "pdf": 0.14,
-            "mtop": (0.14, 0.13),
-            "E_beam": 0.01,
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=21
+        # no scale uncertainties given for t/tbar subchannels, so assume 100% correlation and split
+        # scale uncertainty on sum of t + tbar accordingly
+        13: Number(6.828, {
+            "scale": tuple(
+                tot * 6.828 / st_schannel.get_xsec(13).n
+                for tot in st_schannel.get_xsec(13).u("scale")
+            ),
         }),
-        # TODO: 13.6 TeV xsecs
-        # not available yet in
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+        13.6: Number(7.244, {
+            "scale": tuple(
+                tot * 7.244 / st_schannel.get_xsec(13.6).n
+                for tot in st_schannel.get_xsec(13.6).u("scale")
+            ),
+        }),
     },
 )
 
@@ -309,15 +310,21 @@ st_schannel_tbar = st_schannel.add_process(
     name="st_schannel_tbar",
     id=2320,
     xsecs={
-        13: Number(3.97, {
-            "scale": (0.11, 0.09),
-            "pdf": 0.15,
-            "mtop": 0.09,
-            "E_beam": 0.01,
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=21
+        # no scale uncertainties given for t/tbar subchannels, so assume 100% correlation and split
+        # scale uncertainty on sum of t + tbar accordingly
+        13: Number(4.245, {
+            "scale": tuple(
+                tot * 4.245 / st_schannel.get_xsec(13).n
+                for tot in st_schannel.get_xsec(13).u("scale")
+            ),
         }),
-        # TODO: 13.6 TeV xsecs
-        # not available yet in
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+        13.6: Number(4.534, {
+            "scale": tuple(
+                tot * 4.534 / st_schannel.get_xsec(13.6).n
+                for tot in st_schannel.get_xsec(13.6).u("scale")
+            ),
+        }),
     },
 )
 
@@ -368,6 +375,10 @@ ttz = ttv.add_process(
             "scale": (0.086j, 0.095j),
             "pdf": 0.023j,
         }),
+        # from xsdb for ttz_zqq: https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3D%5ETTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8%24  # noqa
+        13.6: Number(0.660300, {
+            "total": 0.003767,
+        }) / const.br_z.qq,
         14: Number(1.045, {
             "scale": (0.088j, 0.099j),
             "pdf": 0.031j,
@@ -390,6 +401,39 @@ ttz_zlep_m10toinf = ttz.add_process(
     },
 )
 
+ttz_zll_m4to50 = ttz.add_process(
+    name="ttz_zll_m4to50",
+    id=3115,
+    xsecs={
+        # XSDB
+        13.6: Number(0.03949, {
+            "total": 0.00002728,
+        }),
+    },
+)
+
+ttz_zll_m50toinf = ttz.add_process(
+    name="ttz_zll_m50toinf",
+    id=3116,
+    xsecs={
+        # XSDB
+        13.6: Number(0.08646, {
+            "total": 0.0000552,
+        }),
+    },
+)
+
+ttz_znunu = ttz.add_process(
+    name="ttz_znunu",
+    id=3118,
+    xsecs={
+        # XSDB
+        13.6: Number(0.1638, {
+            "total": 0.00007274,
+        }),
+    },
+)
+
 ttz_zqq = ttz.add_process(
     name="ttz_zqq",
     id=3120,
@@ -401,7 +445,13 @@ ttw = ttv.add_process(
     id=3200,
     label=f"{tt.label} + W",
     xsecs={
-        13: Number(592, {
+        13: Number(0.592, {
+            "scale": (0.261j, 0.162j),
+            "pdf": 0.021j,
+        }),
+        # XSDB: only LO in database, estimate an energy scaling factor from LO samples and multiply
+        # to 13 TeV value for now, TODO
+        13.6: 0.2505 / 0.2149 * Number(0.592, {
             "scale": (0.261j, 0.162j),
             "pdf": 0.021j,
         }),
