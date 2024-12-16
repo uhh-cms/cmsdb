@@ -29,7 +29,6 @@ campaign_run3_2023_postBPix_nano_v13 = Campaign(
         "postfix": "BPix",
     },
     tags={"postBPix"},
-    tags={"postBPix", "BPix"},
 )
 
 
