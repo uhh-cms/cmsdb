@@ -24,6 +24,8 @@ Database of physics processes, cross sections and scientific constants as well a
 | [`run3_2022_postEE_nano_v11`](./cmsdb/campaigns/run3_2022_postEE_nano_v11)             | `"EE"`   | `{"postEE", "EE"}`          |
 | [`run3_2022_postEE_nano_v12`](./cmsdb/campaigns/run3_2022_postEE_nano_v12)             | `"EE"`   | `{"postEE", "EE"}`          |
 | [`run3_2022_postEE_nano_uhh_v12`](./cmsdb/campaigns/run3_2022_postEE_nano_uhh_v12)     | `"EE"`   | `{"postEE", "EE"}`          |
+| [`run3_2023_preBPix_nano_v13`](./cmsdb/campaigns/run3_2023_preBPix_nano_v13)           | `""`     | `{"preBPix"}`               |
+| [`run3_2023_postBPix_nano_v13`](./cmsdb/campaigns/run3_2023_postBPix_nano_v13)         | `"BPix"` | `{"postBPix", "BPix"}`      |
 | [`run3_2023_preBPix_nano_uhh_v14`](./cmsdb/campaigns/run3_2023_preBPix_nano_uhh_v14)   | `""`     | `{"preBPix"}`               |
 | [`run3_2023_postBPix_nano_uhh_v14`](./cmsdb/campaigns/run3_2023_postBPix_nano_uhh_v14) | `"BPix"` | `{"postBPix", "BPix"}`      |
 
