@@ -38,7 +38,134 @@ from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14 import campaign_run3_2023_pr
 # Z boson production
 #
 
-# tba
+cpn.add_dataset(
+    name="z_qq_1j_pt100to200_amcatnlo",
+    id=14888821,
+    processes=[procs.z_qq_1j_pt100to200],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=27,
+    n_events=18_967_324,
+    aux={
+        "merging_factors": {
+            "nominal": 19,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="z_qq_1j_pt200to400_amcatnlo",
+    id=14888424,
+    processes=[procs.z_qq_1j_pt200to400],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=17,
+    n_events=8_982_365,
+    aux={
+        "merging_factors": {
+            "nominal": 19,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="z_qq_1j_pt400to600_amcatnlo",
+    id=14888766,
+    processes=[procs.z_qq_1j_pt400to600],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=971_914,
+    aux={
+        "merging_factors": {
+            "nominal": 25,
+        },
+    },
+)
+
+
+cpn.add_dataset(
+    name="z_qq_1j_pt600toinf_amcatnlo",
+    id=14888969,
+    processes=[procs.z_qq_1j_pt600toinf],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=1_043_033,
+    aux={
+        "merging_factors": {
+            "nominal": 28,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="z_qq_2j_pt100to200_amcatnlo",
+    id=14888631,
+    processes=[procs.z_qq_2j_pt100to200],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=34,
+    n_events=19_135_701,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="z_qq_2j_pt200to400_amcatnlo",
+    id=14888772,
+    processes=[procs.z_qq_2j_pt200to400],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=44,
+    n_events=20_014_746,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="z_qq_2j_pt400to600_amcatnlo",
+    id=14889107,
+    processes=[procs.z_qq_2j_pt400to600],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=1_345_579,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="z_qq_2j_pt600toinf_amcatnlo",
+    id=14888791,
+    processes=[procs.z_qq_2j_pt600toinf],
+    keys=[
+        "/Zto2Q-2Jets_PTQQ-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1_023_252,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
 
 #
 # Di-boson
