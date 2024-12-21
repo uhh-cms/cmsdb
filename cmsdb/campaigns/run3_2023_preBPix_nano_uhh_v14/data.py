@@ -29,7 +29,7 @@ cpn.add_dataset(
             "nominal": 18,
             "nominal_ext1": 18,
         },
-        "era": "1",
+        "era": "C",
     },
 )
 
@@ -49,7 +49,7 @@ cpn.add_dataset(
             "nominal": 18,
             "nominal_ext1": 18,
         },
-        "era": "2",
+        "era": "C",
     },
 )
 
@@ -69,7 +69,7 @@ cpn.add_dataset(
             "nominal": 19,
             "nominal_ext1": 19,
         },
-        "era": "3",
+        "era": "C",
     },
 )
 
@@ -89,7 +89,7 @@ cpn.add_dataset(
             "nominal": 18,
             "nominal_ext1": 18,
         },
-        "era": "4",
+        "era": "C",
     },
 )
 
@@ -113,7 +113,7 @@ cpn.add_dataset(
             "nominal": 15,
             "nominal_ext1": 15,
         },
-        "era": "1",
+        "era": "C",
     },
 )
 
@@ -133,7 +133,7 @@ cpn.add_dataset(
             "nominal": 15,
             "nominal_ext1": 15,
         },
-        "era": "2",
+        "era": "C",
     },
 )
 
@@ -153,7 +153,7 @@ cpn.add_dataset(
             "nominal": 15,
             "nominal_ext1": 15,
         },
-        "era": "3",
+        "era": "C",
     },
 )
 
@@ -173,7 +173,7 @@ cpn.add_dataset(
             "nominal": 16,
             "nominal_ext1": 16,
         },
-        "era": "4",
+        "era": "C",
     },
 )
 
@@ -195,7 +195,7 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 13,
         },
-        "era": "1",
+        "era": "C",
     },
 )
 
@@ -213,7 +213,7 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 13,
         },
-        "era": "2",
+        "era": "C",
     },
 )
 
@@ -231,7 +231,7 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 15,
         },
-        "era": "3",
+        "era": "C",
     },
 )
 
@@ -249,7 +249,7 @@ cpn.add_dataset(
         "merging_factors": {
             "nominal": 14,
         },
-        "era": "4",
+        "era": "C",
     },
 )
 
@@ -273,7 +273,7 @@ cpn.add_dataset(
             "nominal": 13,
             "nominal_ext1": 13,
         },
-        "era": "1",
+        "era": "C",
     },
 )
 
@@ -293,7 +293,7 @@ cpn.add_dataset(
             "nominal": 14,
             "nominal_ext1": 13,
         },
-        "era": "2",
+        "era": "C",
     },
 )
 
@@ -313,7 +313,7 @@ cpn.add_dataset(
             "nominal": 14,
             "nominal_ext1": 14,
         },
-        "era": "3",
+        "era": "C",
     },
 )
 
@@ -333,6 +333,6 @@ cpn.add_dataset(
             "nominal": 14,
             "nominal_ext1": 14,
         },
-        "era": "4",
+        "era": "C",
     },
 )
