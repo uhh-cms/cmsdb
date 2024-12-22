@@ -80,7 +80,7 @@ cpn.add_dataset(
     processes=[procs.data_mu],
     keys=[
         "/Muon0/Run2023C-22Sep2023_v4_NanoAODv14UHH-v1/NANOAOD",
-        "/Muon1/Run2023C-22Sep2023_v4_NanoAODv14UHH-v2/NANOAOD",
+        "/Muon1/Run2023C-22Sep2023_v4_NanoAODv14UHH-v2/NANOAOD",  # misses 258 due to lzma errors
     ],
     n_files=123 + 120,
     n_events=138_943_783 + 138_912_262,
