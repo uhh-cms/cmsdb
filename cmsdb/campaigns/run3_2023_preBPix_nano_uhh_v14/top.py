@@ -693,7 +693,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_tchannel_t_4f_powheg",
     id=15017144,
-    processes=[procs.st_tchannel_t_4f],
+    processes=[procs.st_tchannel_t],
     keys=[
         "/TBbarQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
@@ -710,7 +710,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_tchannel_tbar_4f_powheg",
     id=15017107,
-    processes=[procs.st_tchannel_tbar_4f],
+    processes=[procs.st_tchannel_tbar],
     keys=[
         "/TbarBQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
@@ -727,7 +727,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_schannel_t_lep_4f_amcatnlo",
     id=14980849,
-    processes=[procs.st_schannel_t_lep_4f],
+    processes=[procs.st_schannel_t_lep],
     keys=[
         "/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
@@ -743,7 +743,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_schannel_tbar_lep_4f_amcatnlo",
     id=14982343,
-    processes=[procs.st_schannel_tbar_lep_4f],
+    processes=[procs.st_schannel_tbar_lep],
     keys=[
         "/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
