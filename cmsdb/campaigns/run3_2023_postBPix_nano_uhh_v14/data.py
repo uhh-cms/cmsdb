@@ -14,7 +14,7 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_uhh_v14 import campaign_run3_2023_p
 #
 
 cpn.add_dataset(
-    name="data_mu_d_1",
+    name="data_mu_d1",
     id=14787753,
     is_data=True,
     processes=[procs.data_mu],
@@ -34,7 +34,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mu_d_2",
+    name="data_mu_d2",
     id=14787624,
     is_data=True,
     processes=[procs.data_mu],
@@ -58,7 +58,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_e_d_1",
+    name="data_e_d1",
     id=14786983,
     is_data=True,
     processes=[procs.data_e],
@@ -78,7 +78,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_d_2",
+    name="data_e_d2",
     id=14787826,
     is_data=True,
     processes=[procs.data_e],
@@ -102,7 +102,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_tau_d_1",
+    name="data_tau_d1",
     id=14787583,
     is_data=True,
     processes=[procs.data_tau],
@@ -120,7 +120,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_tau_d_2",
+    name="data_tau_d2",
     id=14786909,
     is_data=True,
     processes=[procs.data_tau],
@@ -142,7 +142,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_met_d_1",
+    name="data_met_d1",
     id=14787275,
     is_data=True,
     processes=[procs.data_met],
@@ -162,7 +162,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_met_d_2",
+    name="data_met_d2",
     id=14787322,
     is_data=True,
     processes=[procs.data_met],

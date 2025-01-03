@@ -14,7 +14,7 @@ from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14 import campaign_run3_2023_pr
 #
 
 cpn.add_dataset(
-    name="data_mu_c_1",
+    name="data_mu_c1",
     id=14787007,
     is_data=True,
     processes=[procs.data_mu],
@@ -34,7 +34,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mu_c_2",
+    name="data_mu_c2",
     id=14786981,
     is_data=True,
     processes=[procs.data_mu],
@@ -54,7 +54,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mu_c_3",
+    name="data_mu_c3",
     id=14787042,
     is_data=True,
     processes=[procs.data_mu],
@@ -74,7 +74,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mu_c_4",
+    name="data_mu_c4",
     id=14786114,
     is_data=True,
     processes=[procs.data_mu],
@@ -98,7 +98,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_e_c_1",
+    name="data_e_c1",
     id=14786979,
     is_data=True,
     processes=[procs.data_e],
@@ -118,7 +118,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_c_2",
+    name="data_e_c2",
     id=14787632,
     is_data=True,
     processes=[procs.data_e],
@@ -138,7 +138,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_c_3",
+    name="data_e_c3",
     id=14787547,
     is_data=True,
     processes=[procs.data_e],
@@ -158,7 +158,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_c_4",
+    name="data_e_c4",
     id=14786976,
     is_data=True,
     processes=[procs.data_e],
@@ -182,7 +182,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_tau_c_1",
+    name="data_tau_c1",
     id=14826260,
     is_data=True,
     processes=[procs.data_tau],
@@ -200,7 +200,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_tau_c_2",
+    name="data_tau_c2",
     id=14787194,
     is_data=True,
     processes=[procs.data_tau],
@@ -218,7 +218,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_tau_c_3",
+    name="data_tau_c3",
     id=14787784,
     is_data=True,
     processes=[procs.data_tau],
@@ -236,7 +236,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_tau_c_4",
+    name="data_tau_c4",
     id=14786973,
     is_data=True,
     processes=[procs.data_tau],
@@ -258,7 +258,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_met_c_1",
+    name="data_met_c1",
     id=14784874,
     is_data=True,
     processes=[procs.data_met],
@@ -278,7 +278,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_met_c_2",
+    name="data_met_c2",
     id=14784866,
     is_data=True,
     processes=[procs.data_met],
@@ -298,7 +298,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_met_c_3",
+    name="data_met_c3",
     id=14784908,
     is_data=True,
     processes=[procs.data_met],
@@ -318,7 +318,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_met_c_4",
+    name="data_met_c4",
     id=14785389,
     is_data=True,
     processes=[procs.data_met],
