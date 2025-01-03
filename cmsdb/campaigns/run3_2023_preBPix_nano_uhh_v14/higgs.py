@@ -6,14 +6,13 @@ version 14, created with custom content at UHH.
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14 import campaign_run3_2023_preBPix_nano_uhh_v14 as cpn  # noqa
+from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14 import campaign_run3_2023_preBPix_nano_uhh_v14 as cpn
 
 
 #
 # Single Higgs
 #
 
-# ggF
 cpn.add_dataset(
     name="h_ggf_htt_powheg",
     id=15020867,
@@ -30,7 +29,6 @@ cpn.add_dataset(
     },
 )
 
-# vbf
 cpn.add_dataset(
     name="h_vbf_htt_powheg",
     id=15022656,
@@ -47,7 +45,6 @@ cpn.add_dataset(
     },
 )
 
-# vh
 cpn.add_dataset(
     name="zh_gg_zll_hbb_powheg",
     id=14900025,
@@ -256,7 +253,6 @@ cpn.add_dataset(
     },
 )
 
-# ttH
 cpn.add_dataset(
     name="tth_hbb_powheg",
     id=14901065,

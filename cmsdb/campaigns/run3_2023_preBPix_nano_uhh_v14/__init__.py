@@ -39,4 +39,4 @@ import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.top  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.ewk  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.higgs  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.hh2bbtautau  # noqa
-# import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.hhh4b2tau  # noqa
+import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.hhh4b2tau  # noqa

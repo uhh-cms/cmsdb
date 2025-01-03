@@ -6,14 +6,12 @@ version 14, created with custom content at UHH.
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14 import campaign_run3_2023_preBPix_nano_uhh_v14 as cpn  # noqa
+from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14 import campaign_run3_2023_preBPix_nano_uhh_v14 as cpn
 
 
 #
 # ggF -> H -> HH
 #
-
-# SM
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_powheg",
@@ -31,9 +29,6 @@ cpn.add_dataset(
     },
 )
 
-
-# different couplings, keeping c2 = 0
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl0_kt1_powheg",
     id=14966800,
@@ -49,7 +44,6 @@ cpn.add_dataset(
         },
     },
 )
-
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl2p45_kt1_powheg",
@@ -67,7 +61,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl5_kt1_powheg",
     id=14966812,
@@ -83,25 +76,6 @@ cpn.add_dataset(
         },
     },
 )
-
-# different bsm couplings, with c2 != 0
-
-cpn.add_dataset(
-    name="hh_ggf_hbb_htt_kl0_kt1_c21_powheg",
-    id=14931201,
-    processes=[procs.hh_ggf_hbb_htt_kl0_kt1_c21],
-    keys=[
-        "/GluGlutoHHto2B2Tau_kl-0p00_kt-1p00_c2-1p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=3,
-    n_events=994_000,
-    aux={
-        "merging_factors": {
-            "nominal": 24,
-        },
-    },
-)
-
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c20p10_powheg",
@@ -119,7 +93,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c20p35_powheg",
     id=14931211,
@@ -135,7 +108,6 @@ cpn.add_dataset(
         },
     },
 )
-
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c23_powheg",
@@ -153,7 +125,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl1_kt1_c2m2_powheg",
     id=14930972,
@@ -170,26 +141,25 @@ cpn.add_dataset(
     },
 )
 
-#
-# vbf -> H -> HH
-#
-
 cpn.add_dataset(
-    name="hh_vbf_hbb_htt_kv1_k2v0_kl1_madgraph",
-    id=14961632,
-    processes=[procs.hh_vbf_hbb_htt_kv1_k2v0_kl1],
+    name="hh_ggf_hbb_htt_kl0_kt1_c21_powheg",
+    id=14931201,
+    processes=[procs.hh_ggf_hbb_htt_kl0_kt1_c21],
     keys=[
-        "/VBFHHto2B2Tau_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        "/GluGlutoHHto2B2Tau_kl-0p00_kt-1p00_c2-1p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v3/NANOAODSIM",  # noqa
     ],
-    n_files=7,
-    n_events=2_666_667,
+    n_files=3,
+    n_events=994_000,
     aux={
         "merging_factors": {
-            "nominal": 9,
+            "nominal": 24,
         },
     },
 )
 
+#
+# vbf -> H -> HH
+#
 
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kv1_k2v1_kl1_madgraph",
@@ -207,6 +177,21 @@ cpn.add_dataset(
     },
 )
 
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kv1_k2v0_kl1_madgraph",
+    id=14961632,
+    processes=[procs.hh_vbf_hbb_htt_kv1_k2v0_kl1],
+    keys=[
+        "/VBFHHto2B2Tau_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=7,
+    n_events=2_666_667,
+    aux={
+        "merging_factors": {
+            "nominal": 9,
+        },
+    },
+)
 
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kv1p74_k2v1p37_kl14p4_madgraph",
@@ -224,7 +209,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kvm0p012_k2v0p03_kl10p2_madgraph",
     id=14964529,
@@ -240,7 +224,6 @@ cpn.add_dataset(
         },
     },
 )
-
 
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kvm0p758_k2v1p44_klm19p3_madgraph",
@@ -258,7 +241,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kvm0p962_k2v0p959_klm1p43_madgraph",
     id=14964862,
@@ -274,7 +256,6 @@ cpn.add_dataset(
         },
     },
 )
-
 
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94_madgraph",
@@ -292,7 +273,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36_madgraph",
     id=14964920,
@@ -309,7 +289,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39_madgraph",
     id=14964498,
@@ -325,7 +304,6 @@ cpn.add_dataset(
         },
     },
 )
-
 
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96_madgraph",
