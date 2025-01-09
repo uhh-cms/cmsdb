@@ -1,0 +1,566 @@
+# coding: utf-8
+
+"""
+HH -> bbWW datasets for the 2023 post-BPix data-taking campaign
+"""
+
+from order import DatasetInfo
+
+import cmsdb.processes as procs
+from cmsdb.campaigns.run3_2023_postBPix_nano_v13 import campaign_run3_2023_postBPix_nano_v13 as cpn
+
+#
+# ggf, HH -> bbVV
+#
+
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvv_kl1_kt1_powheg",
+    id=14959450,
+    processes=[procs.hh_ggf_hbb_hvv_kl1_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2V_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=38,
+            n_events=332657,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvv_kl0_kt1_powheg",
+    id=14961394,
+    processes=[procs.hh_ggf_hbb_hvv_kl0_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2V_kl-0p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=76,
+            n_events=332449,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvv_kl5_kt1_powheg",
+    id=14960889,
+    processes=[procs.hh_ggf_hbb_hvv_kl5_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2V_kl-5p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=74,
+            n_events=331595,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvv2l2nu_kl1_kt1_powheg",
+    id=14960916,
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl1_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2Vto2L2Nu_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=21,
+            n_events=133195,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvv2l2nu_kl0_kt1_powheg",
+    id=14961723,
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl0_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2Vto2L2Nu_kl-0p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=20,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvv2l2nu_kl5_kt1_powheg",
+    id=14965530,
+    processes=[procs.hh_ggf_hbb_hvv2l2nu_kl5_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2Vto2L2Nu_kl-5p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=25,
+            n_events=132740,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvvqqlnu_kl1_kt1_powheg",
+    id=14960761,
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl1_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2WtoLNu2Q_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=23,
+            n_events=133053,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvvqqlnu_kl0_kt1_powheg",
+    id=14961531,
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl0_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2WtoLNu2Q_kl-0p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=4,
+            n_events=133332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_ggf_hbb_hvvqqlnu_kl5_kt1_powheg",
+    id=14964064,
+    processes=[procs.hh_ggf_hbb_hvvqqlnu_kl5_kt1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlutoHHto2B2WtoLNu2Q_kl-5p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=57,
+            n_events=132570,
+        ),
+    ),
+)
+
+#
+# vbf, HH -> bbVV
+#
+
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kv1_k2v1_kl1_madgraph",
+    id=14964540,
+    processes=[procs.hh_vbf_hbb_hvv_kv1_k2v1_kl1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_1_C2V_1_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=8,
+            n_events=333328,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kv1_k2v0_kl1_madgraph",
+    id=14961673,
+    processes=[procs.hh_vbf_hbb_hvv_kv1_k2v0_kl1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=5,
+            n_events=333331,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4_madgraph",
+    id=14960969,
+    processes=[procs.hh_vbf_hbb_hvv_kv1p74_k2v1p37_kl14p4],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_1p74_C2V_1p37_C3_14p4_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=4,
+            n_events=330331,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3_madgraph",
+    id=14961053,
+    processes=[procs.hh_vbf_hbb_hvv_kvm0p758_k2v1p44_klm19p3],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_m0p758_C2V_1p44_C3_m19p3_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=4,
+            n_events=333331,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36_madgraph",
+    id=14963850,
+    processes=[procs.hh_vbf_hbb_hvv_kvm1p6_k2v2p72_klm1p36],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_m1p60_C2V_2p72_C3_m1p36_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=330331,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2_madgraph",
+    id=14964894,
+    processes=[procs.hh_vbf_hbb_hvv_kvm0p012_k2v0p03_kl10p2],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_m0p012_C2V_0p030_C3_10p2_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=5,
+            n_events=333330,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39_madgraph",
+    id=14964813,
+    processes=[procs.hh_vbf_hbb_hvv_kvm1p83_k2v3p57_klm3p39],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_m1p83_C2V_3p57_C3_m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=3,
+            n_events=333333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96_madgraph",
+    id=14965637,
+    processes=[procs.hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_m2p12_C2V_3p87_C3_m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=21,
+            n_events=330329,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43_madgraph",
+    id=14963894,
+    processes=[procs.hh_vbf_hbb_hvv_kvm0p962_k2v0p959_klm1p43],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_m0p962_C2V_0p959_C3_m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=333333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94_madgraph",
+    id=14964895,
+    processes=[procs.hh_vbf_hbb_hvv_kvm1p21_k2v1p94_klm0p94],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2V_CV_m1p21_C2V_1p94_C3_m0p94_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=3,
+            n_events=327332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl1_madgraph",
+    id=14961575,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1_k2v1_kl1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_1_C2V_1_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=1,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kv1_k2v0_kl1_madgraph",
+    id=14965558,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1_k2v0_kl1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kvm0p962_k2v0p959_klm1p43_madgraph",
+    id=15026759,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm0p962_k2v0p959_klm1p43],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_m0p962_C2V_0p959_C3_m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=1,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kvm1p21_k2v1p94_klm0p94_madgraph",
+    id=14960795,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm1p21_k2v1p94_klm0p94],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_m1p21_C2V_1p94_C3_m0p94_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kvm0p758_k2v1p44_klm19p3_madgraph",
+    id=14965549,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm0p758_k2v1p44_klm19p3],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_m0p758_C2V_1p44_C3_m19p3_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=4,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kvm1p83_k2v3p57_klm3p39_madgraph",
+    id=14965621,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm1p83_k2v3p57_klm3p39],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_m1p83_C2V_3p57_C3_m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=10,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kvm1p6_k2v2p72_klm1p36_madgraph",
+    id=14964025,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm1p6_k2v2p72_klm1p36],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_m1p60_C2V_2p72_C3_m1p36_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=6,
+            n_events=130333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kvm0p012_k2v0p03_kl10p2_madgraph",
+    id=14961191,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm0p012_k2v0p03_kl10p2],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_m0p012_C2V_0p030_C3_10p2_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=133332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kvm2p12_k2v3p87_klm5p96_madgraph",
+    id=14965571,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm2p12_k2v3p87_klm5p96],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_m2p12_C2V_3p87_C3_m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=10,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvv2l2nu_kv1p74_k2v1p37_kl14p4_madgraph",
+    id=14965659,
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv1p74_k2v1p37_kl14p4],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2Vto2L2Nu_CV_1p74_C2V_1p37_C3_14p4_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=10,
+            n_events=133332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl1_madgraph",
+    id=14964753,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1_k2v1_kl1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_1_C2V_1_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=133332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kv1_k2v0_kl1_madgraph",
+    id=14964572,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1_k2v0_kl1],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=4,
+            n_events=133332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kvm2p12_k2v3p87_klm5p96_madgraph",
+    id=14960962,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm2p12_k2v3p87_klm5p96],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_m2p12_C2V_3p87_C3_m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=133331,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kvm1p6_k2v2p72_klm1p36_madgraph",
+    id=14961666,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm1p6_k2v2p72_klm1p36],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_m1p60_C2V_2p72_C3_m1p36_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=1,
+            n_events=133473,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kvm1p21_k2v1p94_klm0p94_madgraph",
+    id=14962401,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm1p21_k2v1p94_klm0p94],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_m1p21_C2V_1p94_C3_m0p94_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=11,
+            n_events=133332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kvm0p962_k2v0p959_klm1p43_madgraph",
+    id=14964566,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm0p962_k2v0p959_klm1p43],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_m0p962_C2V_0p959_C3_m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=14,
+            n_events=133333,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kv1p74_k2v1p37_kl14p4_madgraph",
+    id=14961083,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv1p74_k2v1p37_kl14p4],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_1p74_C2V_1p37_C3_14p4_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=133332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kvm1p83_k2v3p57_klm3p39_madgraph",
+    id=14964560,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm1p83_k2v3p57_klm3p39],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_m1p83_C2V_3p57_C3_m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=5,
+            n_events=130332,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kvm0p012_k2v0p03_kl10p2_madgraph",
+    id=14965540,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm0p012_k2v0p03_kl10p2],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_m0p012_C2V_0p030_C3_10p2_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=2,
+            n_events=133328,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="hh_vbf_hbb_hvvqqlnu_kvm0p758_k2v1p44_klm19p3_madgraph",
+    id=14964673,
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm0p758_k2v1p44_klm19p3],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFHHto2B2WtoLNu2Q_CV_m0p758_C2V_1p44_C3_m19p3_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=4,
+            n_events=133332,
+        ),
+    ),
+)

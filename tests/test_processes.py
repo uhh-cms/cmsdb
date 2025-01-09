@@ -1,8 +1,11 @@
 # coding: utf-8
 
+from __future__ import annotations
+
 __all__ = ["TestProcesses"]
 
 import unittest
+import collections
 
 import order as od
 
@@ -32,3 +35,20 @@ class TestProcesses(unittest.TestCase):
                 # check that the name is lowercase, but take into account known exceptions
                 if not process_inst.x("allow_uppercase_name", False):
                     self.assertEqual(process_inst.name, process_inst.name.lower())
+
+    def test_unique_names_and_ids(self):
+        name_counts = collections.Counter(
+            process_inst.name
+            for process_inst in self.processes.values()
+        )
+        dup_names = {name: count for name, count in name_counts.items() if count > 1}
+        if dup_names:
+            self.fail(f"duplicate process names found: {dup_names}")
+
+        id_counts = collections.Counter(
+            process_inst.id
+            for process_inst in self.processes.values()
+        )
+        dup_ids = {id_: count for id_, count in id_counts.items() if count > 1}
+        if dup_ids:
+            self.fail(f"duplicate process ids found: {dup_ids}")
