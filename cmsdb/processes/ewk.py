@@ -954,7 +954,7 @@ w_lnu_ht2500toinf = w_lnu.add_process(
 
 w_lnu_0j = w_lnu.add_process(
     name="w_lnu_0j",
-    id=61000,
+    id=610000,
     label=rf"{w_lnu.label[:-1]}, 0j)",
     aux={
         "njets": (0, 1),
@@ -963,7 +963,7 @@ w_lnu_0j = w_lnu.add_process(
 
 w_lnu_1j = w_lnu.add_process(
     name="w_lnu_1j",
-    id=61001,
+    id=610010,
     label=rf"{w_lnu.label[:-1]}, 1j)",
     aux={
         "njets": (1, 2),
@@ -972,7 +972,7 @@ w_lnu_1j = w_lnu.add_process(
 
 w_lnu_2j = w_lnu.add_process(
     name="w_lnu_2j",
-    id=61002,
+    id=610020,
     label=rf"{w_lnu.label[:-1]}, 2j)",
     aux={
         "njets": (2, 3),
@@ -981,7 +981,7 @@ w_lnu_2j = w_lnu.add_process(
 
 w_lnu_1j_pt0to40 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt0to40",
-    id=610010,
+    id=6100100,  # FIXME: come up with better id
     label=w_lnu_1j.label,
     aux={
         "njets": (1, 2),
@@ -1041,7 +1041,7 @@ w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
 
 w_lnu_2j_pt0to40 = w_lnu_2j.add_process(
     name="w_lnu_2j_pt0to40",
-    id=610020,
+    id=6100200,  # FIXME: come up with better id
     label=w_lnu_2j.label,
     aux={
         "njets": (2, 3),
