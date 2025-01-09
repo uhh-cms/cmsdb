@@ -984,6 +984,7 @@ w_lnu_1j_pt0to40 = w_lnu_1j.add_process(
     id=610010,
     label=w_lnu_1j.label,
     aux={
+        "njets": (1, 2),
         "ptll": (0.0, 40.0),
     },
 )
@@ -1043,6 +1044,7 @@ w_lnu_2j_pt0to40 = w_lnu_2j.add_process(
     id=610020,
     label=w_lnu_2j.label,
     aux={
+        "njets": (2, 3),
         "ptll": (0.0, 40.0),
     },
 )
