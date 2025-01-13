@@ -30,6 +30,7 @@ cpn.add_dataset(
             "nominal_ext1": 20,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -48,6 +49,7 @@ cpn.add_dataset(
             "nominal": 18,
         },
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -70,6 +72,7 @@ cpn.add_dataset(
             "nominal": 18,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -88,6 +91,7 @@ cpn.add_dataset(
             "nominal": 15,
         },
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -110,6 +114,7 @@ cpn.add_dataset(
             "nominal": 15,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -128,6 +133,7 @@ cpn.add_dataset(
             "nominal": 15,
         },
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -150,6 +156,7 @@ cpn.add_dataset(
             "nominal": 15,
         },
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -168,5 +175,6 @@ cpn.add_dataset(
             "nominal": 12,
         },
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
