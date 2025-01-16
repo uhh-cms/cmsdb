@@ -10,7 +10,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v14 import campaign_run3_2022_preE
 
 
 #
-# ggF -> H -> HH
+# ggf -> HH
 #
 
 cpn.add_dataset(
@@ -31,48 +31,48 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl0_kt1_powheg",
-    id=14796367,
+    id=15006763,
     processes=[procs.hh_ggf_hbb_htt_kl0_kt1],
     keys=[
-        "/GluGlutoHHto2B2Tau_kl-0p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/GluGlutoHHto2B2Tau_kl-0p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-ggHH_powheg_bugfix_130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=1,
-    n_events=98_380,
+    n_files=2,
+    n_events=870_340,
     aux={
         "merging_factors": {
-            "nominal": 3,
+            "nominal": 62,
         },
     },
 )
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl2p45_kt1_powheg",
-    id=14805257,
+    id=14953035,
     processes=[procs.hh_ggf_hbb_htt_kl2p45_kt1],
     keys=[
-        "/GluGlutoHHto2B2Tau_kl-2p45_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/GluGlutoHHto2B2Tau_kl-2p45_kt-1p00_c2-0p00_LHEweights_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=1,
-    n_events=97_635,
+    n_files=2,
+    n_events=891_890,
     aux={
         "merging_factors": {
-            "nominal": 2,
+            "nominal": 36,
         },
     },
 )
 
 cpn.add_dataset(
     name="hh_ggf_hbb_htt_kl5_kt1_powheg",
-    id=14803776,
+    id=15004257,
     processes=[procs.hh_ggf_hbb_htt_kl5_kt1],
     keys=[
-        "/GluGlutoHHto2B2Tau_kl-5p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/GluGlutoHHto2B2Tau_kl-5p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-ggHH_powheg_bugfix_130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=1,
-    n_events=99_647,
+    n_files=2,
+    n_events=877_968,
     aux={
         "merging_factors": {
-            "nominal": 2,
+            "nominal": 43,
         },
     },
 )

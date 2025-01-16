@@ -10,7 +10,7 @@ from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14 import campaign_run3_2023_pr
 
 
 #
-# ggF -> H -> HH
+# ggf -> HH
 #
 
 cpn.add_dataset(
@@ -158,7 +158,7 @@ cpn.add_dataset(
 )
 
 #
-# vbf -> H -> HH
+# vbf -> HH
 #
 
 cpn.add_dataset(

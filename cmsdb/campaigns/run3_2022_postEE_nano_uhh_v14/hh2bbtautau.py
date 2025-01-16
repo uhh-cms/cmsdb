@@ -10,13 +10,13 @@ version 14, created with custom content at UHH.
 
 
 #
-# ggF -> HH
+# ggf -> HH
 #
 
 # tba
 
 #
-# VBF -> HH
+# vbf -> HH
 #
 
 # tba
