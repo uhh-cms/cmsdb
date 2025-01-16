@@ -16,7 +16,7 @@ __all__ = [
     "dy_m4to10",
     "dy_m10to50",
     "dy_m50toinf", "dy_m50toinf_0j", "dy_m50toinf_1j", "dy_m50toinf_2j", "dy_m50toinf_ge3j",
-    "dy_m50toinf_3j", "dy_m50toinf_4j",
+    "dy_m50toinf_3j", "dy_m50toinf_4j", "dy_m50toinf_ge3j",
     "dy_m50toinf_1j_pt0to40", "dy_m50toinf_1j_pt40to100", "dy_m50toinf_1j_pt100to200",
     "dy_m50toinf_1j_pt200to400", "dy_m50toinf_1j_pt400to600", "dy_m50toinf_1j_pt600toinf",
     "dy_m50toinf_2j_pt0to40", "dy_m50toinf_2j_pt40to100", "dy_m50toinf_2j_pt100to200",
@@ -42,10 +42,10 @@ __all__ = [
     "w_lnu_0j",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
-    "w_lnu_1j", "w_lnu_1j_pt40to100", "w_lnu_1j_pt100to200", "w_lnu_1j_pt200to400",
+    "w_lnu_1j", "w_lnu_1j_pt0to40", "w_lnu_1j_pt40to100", "w_lnu_1j_pt100to200", "w_lnu_1j_pt200to400",
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
-    "w_lnu_2j", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
-    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf",
+    "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
+    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
@@ -979,11 +979,22 @@ w_lnu_2j = w_lnu.add_process(
     },
 )
 
+w_lnu_1j_pt0to40 = w_lnu_1j.add_process(
+    name="w_lnu_1j_pt0to40",
+    id=6100100,  # FIXME: come up with better id
+    label=w_lnu_1j.label,
+    aux={
+        "njets": (1, 2),
+        "ptll": (0.0, 40.0),
+    },
+)
+
 w_lnu_1j_pt40to100 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt40to100",
     id=610011,
     label=w_lnu_1j.label,
     aux={
+        "njets": (1, 2),
         "ptll": (40.0, 100.0),
     },
 )
@@ -993,6 +1004,7 @@ w_lnu_1j_pt100to200 = w_lnu_1j.add_process(
     id=610012,
     label=w_lnu_1j.label,
     aux={
+        "njets": (1, 2),
         "ptll": (100.0, 200.0),
     },
 )
@@ -1002,6 +1014,7 @@ w_lnu_1j_pt200to400 = w_lnu_1j.add_process(
     id=610013,
     label=w_lnu_1j.label,
     aux={
+        "njets": (1, 2),
         "ptll": (200.0, 400.0),
     },
 )
@@ -1011,6 +1024,7 @@ w_lnu_1j_pt400to600 = w_lnu_1j.add_process(
     id=610014,
     label=w_lnu_1j.label,
     aux={
+        "njets": (1, 2),
         "ptll": (400.0, 600.0),
     },
 )
@@ -1020,7 +1034,18 @@ w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
     id=610015,
     label=w_lnu_1j.label,
     aux={
+        "njets": (1, 2),
         "ptll": (600.0, const.inf),
+    },
+)
+
+w_lnu_2j_pt0to40 = w_lnu_2j.add_process(
+    name="w_lnu_2j_pt0to40",
+    id=6100200,  # FIXME: come up with better id
+    label=w_lnu_2j.label,
+    aux={
+        "njets": (2, 3),
+        "ptll": (0.0, 40.0),
     },
 )
 
@@ -1029,6 +1054,7 @@ w_lnu_2j_pt40to100 = w_lnu_2j.add_process(
     id=610021,
     label=w_lnu_2j.label,
     aux={
+        "njets": (2, 3),
         "ptll": (40.0, 100.0),
     },
 )
@@ -1038,6 +1064,7 @@ w_lnu_2j_pt100to200 = w_lnu_2j.add_process(
     id=610022,
     label=w_lnu_2j.label,
     aux={
+        "njets": (2, 3),
         "ptll": (100.0, 200.0),
     },
 )
@@ -1047,6 +1074,7 @@ w_lnu_2j_pt200to400 = w_lnu_2j.add_process(
     id=610023,
     label=w_lnu_2j.label,
     aux={
+        "njets": (2, 3),
         "ptll": (200.0, 400.0),
     },
 )
@@ -1056,6 +1084,7 @@ w_lnu_2j_pt400to600 = w_lnu_2j.add_process(
     id=610024,
     label=w_lnu_2j.label,
     aux={
+        "njets": (2, 3),
         "ptll": (400.0, 600.0),
     },
 )
@@ -1065,7 +1094,16 @@ w_lnu_2j_pt600toinf = w_lnu_2j.add_process(
     id=610025,
     label=w_lnu_2j.label,
     aux={
+        "njets": (2, 3),
         "ptll": (600.0, const.inf),
+    },
+)
+
+w_lnu_ge3j = w_lnu.add_process(
+    name="w_lnu_ge3j",
+    id=610026,
+    aux={
+        "njets": (3, const.inf),
     },
 )
 
