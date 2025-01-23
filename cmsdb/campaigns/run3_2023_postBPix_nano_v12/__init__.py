@@ -28,7 +28,7 @@ campaign_run3_2023_postBPix_nano_v12 = Campaign(
         "version": 12,
         "postfix": "BPix",
     },
-    tags={"BPix, postBPix"},
+    tags={"BPix", "postBPix"},
 )
 
 # trailing imports to load datasets
