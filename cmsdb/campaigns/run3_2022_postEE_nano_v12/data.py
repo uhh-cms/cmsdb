@@ -187,3 +187,75 @@ cpn.add_dataset(
         "era": "G",
     },
 )
+
+
+#
+# MET
+#
+
+
+cpn.add_dataset(
+    name="data_jethtmet_e",
+    id=14853647,
+    is_data=True,
+    processes=[procs.data_jethtmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022E-19Dec2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=185,  # 185-0
+            n_events=140001854,
+        ),
+    ),
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jethtmet_f",
+    id=14853355,
+    is_data=True,
+    processes=[procs.data_jethtmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022F-19Dec2023-v2/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=722,  # 722-0
+            n_events=514342877,
+        ),
+    ),
+    aux={
+        "era": "F",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jethtmet_g",
+    id=14853371,
+    is_data=True,
+    processes=[procs.data_jethtmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022G-19Dec2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=139,  # 139-0
+            n_events=84795124,
+        ),
+    ),
+    aux={
+        "era": "G",
+    },
+)

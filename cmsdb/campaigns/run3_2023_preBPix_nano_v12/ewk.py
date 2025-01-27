@@ -836,6 +836,43 @@ cpn.add_dataset(
     ),
 )
 
+#
+# WZ
+#
+
+cpn.add_dataset(
+    name="wz_pythia",
+    id=14789850,
+    processes=[procs.wz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZ_TuneCP5_13p6TeV_pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=60,
+            n_events=16770000,
+        ),
+    ),
+)
+
+#
+# ZZ
+#
+
+cpn.add_dataset(
+    name="zz_pythia",
+    id=14788275,
+    processes=[procs.zz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZ_TuneCP5_13p6TeV_pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=11,
+            n_events=2517000,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
