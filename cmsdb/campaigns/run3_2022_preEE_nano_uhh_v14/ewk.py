@@ -279,6 +279,23 @@ cpn.add_dataset(
 # Drell-Yan LO
 #
 
+cpn.add_dataset(
+    name="dy_m50toinf_madgraph",
+    id=14791240,
+    processes=[procs.dy_m50toinf],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=86 + 83,
+    n_events=73_914_947 + 71_371_699,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+            "nominal_ext1": 24,
+        },
+    },
+)
 
 #
 # Drell-Yan NNLO, splitted in leptons
