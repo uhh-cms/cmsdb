@@ -10,7 +10,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v14 import campaign_run3_2022_preE
 
 
 #
-# Drell-Yan NLO
+# Drell-Yan
 #
 
 cpn.add_dataset(
