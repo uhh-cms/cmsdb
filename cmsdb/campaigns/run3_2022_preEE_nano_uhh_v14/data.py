@@ -2,11 +2,11 @@
 
 """
 Recorded datasets for the 2022 preEE data-taking campaign with datasets at NanoAOD tier in
-version 12, created with custom content at UHH.
+version 14, created with custom content at UHH.
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12 import campaign_run3_2022_preEE_nano_uhh_v12 as cpn  # noqa
+from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v14 import campaign_run3_2022_preEE_nano_uhh_v14 as cpn
 
 
 #
@@ -15,19 +15,19 @@ from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12 import campaign_run3_2022_preE
 
 cpn.add_dataset(
     name="data_mu_c",
-    id=14784126,
+    id=14784103,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
-        "/Muon/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
+        "/SingleMuon/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
+        "/Muon/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=15 + 94,
+    n_files=16 + 89,
     n_events=20_162_441 + 138_329_693,
     aux={
         "merging_factors": {
-            "nominal": 17,
-            "nominal_ext1": 19,
+            "nominal": 16,
+            "nominal_ext1": 20,
         },
         "era": "C",
         "jec_era": "RunCD",
@@ -40,13 +40,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
+        "/Muon/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=51,
+    n_files=56,
     n_events=75_440_027,
     aux={
         "merging_factors": {
-            "nominal": 20,
+            "nominal": 18,
         },
         "era": "D",
         "jec_era": "RunCD",
@@ -63,13 +63,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/EGamma/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
+        "/EGamma/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=198,
+    n_files=187,
     n_events=263_549_470,
     aux={
         "merging_factors": {
-            "nominal": 17,
+            "nominal": 18,
         },
         "era": "C",
         "jec_era": "RunCD",
@@ -82,19 +82,18 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_e],
     keys=[
-        "/EGamma/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
+        "/EGamma/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=72,
+    n_files=82,
     n_events=89_134_996,
     aux={
         "merging_factors": {
-            "nominal": 17,
+            "nominal": 15,
         },
         "era": "D",
         "jec_era": "RunCD",
     },
 )
-
 
 #
 # Tau
@@ -106,13 +105,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
+        "/Tau/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=23,
+    n_files=25,
     n_events=25_903_135,
     aux={
         "merging_factors": {
-            "nominal": 16,
+            "nominal": 15,
         },
         "era": "C",
         "jec_era": "RunCD",
@@ -125,19 +124,18 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",  # noqa
+        "/Tau/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=16,
+    n_files=17,
     n_events=16_686_692,
     aux={
         "merging_factors": {
-            "nominal": 16,
+            "nominal": 15,
         },
         "era": "D",
         "jec_era": "RunCD",
     },
 )
-
 
 #
 # Jet/MET
@@ -149,13 +147,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/JetMET/Run2022C-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
+        "/JetMET/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=187,
+    n_files=162,
     n_events=169_113_266,
     aux={
         "merging_factors": {
-            "nominal": 13,
+            "nominal": 15,
         },
         "era": "C",
         "jec_era": "RunCD",
@@ -168,7 +166,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_met],
     keys=[
-        "/JetMET/Run2022D-22Sep2023_NanoAODv12UHH-v1/NANOAOD",
+        "/JetMET/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
     n_files=122,
     n_events=100_853_361,
