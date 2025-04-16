@@ -174,7 +174,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="tt_fh_166p5_powheg",
+    name="tt_fh_mt166p5_powheg",
     id=14242959,
     processes=[procs.tt_fh],
     info=dict(
@@ -189,7 +189,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_fh_169p5_powheg",
+    name="tt_fh_mt169p5_powheg",
     id=14235980,
     processes=[procs.tt_fh],
     info=dict(
@@ -204,7 +204,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_fh_171p5_powheg",
+    name="tt_fh_mt171p5_powheg",
     id=14243327,
     processes=[procs.tt_fh],
     info=dict(
@@ -219,7 +219,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_fh_173p5_powheg",
+    name="tt_fh_mt173p5_powheg",
     id=14235630,
     processes=[procs.tt_fh],
     info=dict(
@@ -234,7 +234,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_fh_175p5_powheg",
+    name="tt_fh_mt175p5_powheg",
     id=14242924,
     processes=[procs.tt_fh],
     info=dict(
@@ -249,7 +249,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_fh_178p5_powheg",
+    name="tt_fh_mt178p5_powheg",
     id=14242958,
     processes=[procs.tt_fh],
     info=dict(
