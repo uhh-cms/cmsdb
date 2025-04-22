@@ -298,15 +298,15 @@ cpn.add_dataset(
 )
 
 #
-# Drell-Yan NNLO, splitted in leptons
+# Drell-Yan NNLO, split in leptons
 #
 
 # 2 electron
 
 cpn.add_dataset(
-    name="dy_2e_m50toinf_powheg",
+    name="dy_ee_m50toinf_powheg",
     id=14803284,
-    processes=[procs.dy_2e_m50toinf],
+    processes=[procs.dy_ee_m50toinf],
     keys=[
         "/DYto2E_M-50_NNPDF31_TuneCP5_13p6TeV-powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -320,9 +320,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m10to50_powheg",
+    name="dy_ee_m10to50_powheg",
     id=14791753,
-    processes=[procs.dy_2e_m10to50],
+    processes=[procs.dy_ee_m10to50],
     keys=[
         "/DYto2E_MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -336,9 +336,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m50to120_powheg",
+    name="dy_ee_m50to120_powheg",
     id=14790666,
-    processes=[procs.dy_2e_m50to120],
+    processes=[procs.dy_ee_m50to120],
     keys=[
         "/DYto2E_MLL-50to120_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -352,9 +352,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m120to200_powheg",
+    name="dy_ee_m120to200_powheg",
     id=14791377,
-    processes=[procs.dy_2e_m120to200],
+    processes=[procs.dy_ee_m120to200],
     keys=[
         "/DYto2E_MLL-120to200_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -368,9 +368,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m200to400_powheg",
+    name="dy_ee_m200to400_powheg",
     id=14790807,
-    processes=[procs.dy_2e_m200to400],
+    processes=[procs.dy_ee_m200to400],
     keys=[
         "/DYto2E_MLL-200to400_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -385,9 +385,9 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="dy_2e_m400to800_powheg",
+    name="dy_ee_m400to800_powheg",
     id=14791330,
-    processes=[procs.dy_2e_m400to800],
+    processes=[procs.dy_ee_m400to800],
     keys=[
         "/DYto2E_MLL-400to800_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -402,9 +402,9 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="dy_2e_m800to1500_powheg",
+    name="dy_ee_m800to1500_powheg",
     id=14796569,
-    processes=[procs.dy_2e_m800to1500],
+    processes=[procs.dy_ee_m800to1500],
     keys=[
         "/DYto2E_MLL-800to1500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -418,9 +418,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m1500to2500_powheg",
+    name="dy_ee_m1500to2500_powheg",
     id=14793557,
-    processes=[procs.dy_2e_m1500to2500],
+    processes=[procs.dy_ee_m1500to2500],
     keys=[
         "/DYto2E_MLL-1500to2500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -434,9 +434,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m2500to4000_powheg",
+    name="dy_ee_m2500to4000_powheg",
     id=14792031,
-    processes=[procs.dy_2e_m2500to4000],
+    processes=[procs.dy_ee_m2500to4000],
     keys=[
         "/DYto2E_MLL-2500to4000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -450,9 +450,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m4000to6000_powheg",
+    name="dy_ee_m4000to6000_powheg",
     id=14791815,
-    processes=[procs.dy_2e_m4000to6000],
+    processes=[procs.dy_ee_m4000to6000],
     keys=[
         "/DYto2E_MLL-4000to6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -466,9 +466,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2e_m6000toinf_powheg",
+    name="dy_ee_m6000toinf_powheg",
     id=14792557,
-    processes=[procs.dy_2e_m6000toinf],
+    processes=[procs.dy_ee_m6000toinf],
     keys=[
         "/DYto2E_MLL-6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -484,9 +484,9 @@ cpn.add_dataset(
 # 2 muon
 
 cpn.add_dataset(
-    name="dy_2mu_m10to50_powheg",
+    name="dy_mumu_m10to50_powheg",
     id=14801977,
-    processes=[procs.dy_2mu_m10to50],
+    processes=[procs.dy_mumu_m10to50],
     keys=[
         "/DYto2Mu_MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -500,9 +500,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m50to120_powheg",
+    name="dy_mumu_m50to120_powheg",
     id=14793847,
-    processes=[procs.dy_2mu_m50to120],
+    processes=[procs.dy_mumu_m50to120],
     keys=[
         "/DYto2Mu_MLL-50to120_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -516,9 +516,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m120to200_powheg",
+    name="dy_mumu_m120to200_powheg",
     id=14792102,
-    processes=[procs.dy_2mu_m120to200],
+    processes=[procs.dy_mumu_m120to200],
     keys=[
         "/DYto2Mu_MLL-120to200_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -532,9 +532,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m200to400_powheg",
+    name="dy_mumu_m200to400_powheg",
     id=14791925,
-    processes=[procs.dy_2mu_m200to400],
+    processes=[procs.dy_mumu_m200to400],
     keys=[
         "/DYto2Mu_MLL-200to400_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -548,9 +548,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m400to800_powheg",
+    name="dy_mumu_m400to800_powheg",
     id=14791635,
-    processes=[procs.dy_2mu_m400to800],
+    processes=[procs.dy_mumu_m400to800],
     keys=[
         "/DYto2Mu_MLL-400to800_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -564,9 +564,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m800to1500_powheg",
+    name="dy_mumu_m800to1500_powheg",
     id=14791846,
-    processes=[procs.dy_2mu_m800to1500],
+    processes=[procs.dy_mumu_m800to1500],
     keys=[
         "/DYto2Mu_MLL-800to1500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -580,9 +580,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m1500to2500_powheg",
+    name="dy_mumu_m1500to2500_powheg",
     id=14796020,
-    processes=[procs.dy_2mu_m1500to2500],
+    processes=[procs.dy_mumu_m1500to2500],
     keys=[
         "/DYto2Mu_MLL-1500to2500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -596,9 +596,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m2500to4000_powheg",
+    name="dy_mumu_m2500to4000_powheg",
     id=14807763,
-    processes=[procs.dy_2mu_m2500to4000],
+    processes=[procs.dy_mumu_m2500to4000],
     keys=[
         "/DYto2Mu_MLL-2500to4000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -612,9 +612,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m4000to6000_powheg",
+    name="dy_mumu_m4000to6000_powheg",
     id=14796000,
-    processes=[procs.dy_2mu_m4000to6000],
+    processes=[procs.dy_mumu_m4000to6000],
     keys=[
         "/DYto2Mu_MLL-4000to6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -628,9 +628,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2mu_m6000toinf_powheg",
+    name="dy_mumu_m6000toinf_powheg",
     id=14799633,
-    processes=[procs.dy_2mu_m6000toinf],
+    processes=[procs.dy_mumu_m6000toinf],
     keys=[
         "/DYto2Mu_MLL-6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -646,9 +646,9 @@ cpn.add_dataset(
 # 2 tau
 
 cpn.add_dataset(
-    name="dy_2tau_m10to50_powheg",
+    name="dy_tautau_m10to50_powheg",
     id=14791054,
-    processes=[procs.dy_2tau_m10to50],
+    processes=[procs.dy_tautau_m10to50],
     keys=[
         "/DYto2Tau_MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -662,9 +662,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m50to120_powheg",
+    name="dy_tautau_m50to120_powheg",
     id=14791264,
-    processes=[procs.dy_2tau_m50to120],
+    processes=[procs.dy_tautau_m50to120],
     keys=[
         "/DYto2Tau_MLL-50to120_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -678,9 +678,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m120to200_powheg",
+    name="dy_tautau_m120to200_powheg",
     id=14791400,
-    processes=[procs.dy_2tau_m120to200],
+    processes=[procs.dy_tautau_m120to200],
     keys=[
         "/DYto2Tau_MLL-120to200_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -694,9 +694,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m200to400_powheg",
+    name="dy_tautau_m200to400_powheg",
     id=14791733,
-    processes=[procs.dy_2tau_m200to400],
+    processes=[procs.dy_tautau_m200to400],
     keys=[
         "/DYto2Tau_MLL-200to400_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -710,9 +710,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m400to800_powheg",
+    name="dy_tautau_m400to800_powheg",
     id=14793980,
-    processes=[procs.dy_2tau_m400to800],
+    processes=[procs.dy_tautau_m400to800],
     keys=[
         "/DYto2Tau_MLL-400to800_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -726,9 +726,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m800to1500_powheg",
+    name="dy_tautau_m800to1500_powheg",
     id=14791761,
-    processes=[procs.dy_2tau_m800to1500],
+    processes=[procs.dy_tautau_m800to1500],
     keys=[
         "/DYto2Tau_MLL-800to1500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -742,9 +742,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m1500to2500_powheg",
+    name="dy_tautau_m1500to2500_powheg",
     id=14791308,
-    processes=[procs.dy_2tau_m1500to2500],
+    processes=[procs.dy_tautau_m1500to2500],
     keys=[
         "/DYto2Tau_MLL-1500to2500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -758,9 +758,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m2500to4000_powheg",
+    name="dy_tautau_m2500to4000_powheg",
     id=14792161,
-    processes=[procs.dy_2tau_m2500to4000],
+    processes=[procs.dy_tautau_m2500to4000],
     keys=[
         "/DYto2Tau_MLL-2500to4000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -774,9 +774,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m4000to6000_powheg",
+    name="dy_tautau_m4000to6000_powheg",
     id=14792034,
-    processes=[procs.dy_2tau_m4000to6000],
+    processes=[procs.dy_tautau_m4000to6000],
     keys=[
         "/DYto2Tau_MLL-4000to6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -790,9 +790,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_2tau_m6000toinf_powheg",
+    name="dy_tautau_m6000toinf_powheg",
     id=14793352,
-    processes=[procs.dy_2tau_m6000toinf],
+    processes=[procs.dy_tautau_m6000toinf],
     keys=[
         "/DYto2Tau_MLL-6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
