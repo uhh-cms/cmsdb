@@ -610,9 +610,7 @@ dy_ee_m50toinf = dy.add_process(
     name="dy_ee_m50toinf",
     id=51800,
     xsecs={
-        13.6: Number(2244.0, {
-            "tot": 0.533,
-        }),
+        13.6: Number(dy_m50toinf.xsecs / const.n_leps),
     },
     aux={
         "mll": (50.0, const.inf),
@@ -623,9 +621,7 @@ dy_ee_m10to50 = dy.add_process(
     name="dy_ee_m10to50",
     id=51810,
     xsecs={
-        13.6: Number(6744, {
-            "tot": 1.132,
-        }),
+        13.6: Number(dy_m10to50.xsecs / const.n_leps),
     },
     aux={
         "mll": (10.0, 50.),
@@ -755,9 +751,7 @@ dy_mumu_m10to50 = dy.add_process(
     name="dy_mumu_m10to50",
     id=51620,
     xsecs={
-        13.6: Number(6744, {
-            "tot": 1.132,
-        }),
+        13.6: Number(dy_m10to50.xsecs / const.n_leps),
     },
     aux={
         "mll": (10.0, 50.0),
@@ -887,9 +881,7 @@ dy_tautau_m10to50 = dy.add_process(
     name="dy_tautau_m10to50",
     id=51630,
     xsecs={
-        13.6: Number(6744, {
-            "tot": 1.132,
-        }),
+        13.6: Number(dy_m10to50.xsecs / const.n_leps),
     },
     aux={
         "mll": (10.0, 50.0),
