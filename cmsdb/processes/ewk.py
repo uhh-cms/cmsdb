@@ -103,7 +103,7 @@ dy_m50toinf_nlo_13tev_xsec = Number(6421.0, {"tot": 11.25})
 dy_m50toinf_lo_13tev_xsec = Number(5395.0, {"tot": 1.858})
 
 # 13.6 TeV LO and NLO cross sections are based on GenXSecAnalyzer with CMSSW_13_0_13
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
+# using command ./calculateXSsectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
 # or -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v1 when needed
 dy_m4to10_nlo_13p6tev_xsec = Number(141600, {"tot": 79.81})  # xsdb: Number(141500, {"tot": 301.9})
 dy_m10to50_nlo_13p6tev_xsec = Number(21170.0, {"tot": 18.38})  # xsdb: Number(20950.0, {"tot": 183.5})
@@ -603,14 +603,14 @@ dy_pt650toinf = dy.add_process(
 )
 
 #
-# NNLO xsec
+# decays split into specific leptons
 #
 
 dy_ee_m50toinf = dy.add_process(
     name="dy_ee_m50toinf",
     id=51800,
     xsecs={
-        13.6: Number(dy_m50toinf.xsecs / const.n_leps),
+        13.6: dy_m50toinf.get_xsec(13.6) / const.n_leps,
     },
     aux={
         "mll": (50.0, const.inf),
@@ -621,7 +621,7 @@ dy_ee_m10to50 = dy.add_process(
     name="dy_ee_m10to50",
     id=51810,
     xsecs={
-        13.6: Number(dy_m10to50.xsecs / const.n_leps),
+        13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
     },
     aux={
         "mll": (10.0, 50.),
@@ -751,7 +751,7 @@ dy_mumu_m10to50 = dy.add_process(
     name="dy_mumu_m10to50",
     id=51620,
     xsecs={
-        13.6: Number(dy_m10to50.xsecs / const.n_leps),
+        13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
     },
     aux={
         "mll": (10.0, 50.0),
@@ -881,7 +881,7 @@ dy_tautau_m10to50 = dy.add_process(
     name="dy_tautau_m10to50",
     id=51630,
     xsecs={
-        13.6: Number(dy_m10to50.xsecs / const.n_leps),
+        13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
     },
     aux={
         "mll": (10.0, 50.0),
