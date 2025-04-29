@@ -297,6 +297,266 @@ cpn.add_dataset(
     },
 )
 
+cpn.add_dataset(
+    name="dy_m4to50_ht40to70_madgraph",
+    id=14949199,
+    processes=[procs.dy_m4to50_ht40to70],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=98,
+    n_events=97_875_285,
+    aux={
+        "merging_factors": {
+            "nominal": 24,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht70to100_madgraph",
+    id=14952855,
+    processes=[procs.dy_m4to50_ht70to100],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=68,
+    n_events=59_961_718,
+    aux={
+        "merging_factors": {
+            "nominal": 25,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht100to400_madgraph",
+    id=14950438,
+    processes=[procs.dy_m4to50_ht100to400],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=83,
+    n_events=62_130_125,
+    aux={
+        "merging_factors": {
+            "nominal": 20,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht400to800_madgraph",
+    id=14950276,
+    processes=[procs.dy_m4to50_ht400to800],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1_223_162,
+    aux={
+        "merging_factors": {
+            "nominal": 21,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht800to1500_madgraph",
+    id=14949445,
+    processes=[procs.dy_m4to50_ht800to1500],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=990_962,
+    aux={
+        "merging_factors": {
+            "nominal": 30,
+        },
+    },
+)
+
+
+cpn.add_dataset(
+    name="dy_m4to50_ht1500to2500_madgraph",
+    id=14947930,
+    processes=[procs.dy_m4to50_ht1500to2500],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=966_541,
+    aux={
+        "merging_factors": {
+            "nominal": 38,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht2500toinf_madgraph",
+    id=14952821,
+    processes=[procs.dy_m4to50_ht2500toinf],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=1_078_931,
+    aux={
+        "merging_factors": {
+            "nominal": 29,
+        },
+    },
+)
+
+# Drell-Yan LO pt binned
+
+cpn.add_dataset(
+    name="dy_m50toinf_pt40to100_madgraph",
+    id=14949079,
+    processes=[procs.dy_m50toinf_pt40to100],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_PTLL-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=75,
+    n_events=49_253_630,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
+cpn.add_dataset(
+    name="dy_m50toinf_pt100to200_madgraph",
+    id=14949830,
+    processes=[procs.dy_m50toinf_pt100to200],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_PTLL-100to200_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=37,
+    n_events=19_421_958,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_pt200to400_madgraph",
+    id=14948900,
+    processes=[procs.dy_m50toinf_pt200to400],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_PTLL-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=5,
+    n_events=2_047_215,
+    aux={
+        "merging_factors": {
+            "nominal": 19,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_pt400to600_madgraph",
+    id=14948826,
+    processes=[procs.dy_m50toinf_pt400to600],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_PTLL-400to600_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=916_376,
+    aux={
+        "merging_factors": {
+            "nominal": 25,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_pt600toinf_madgraph",
+    id=14949084,
+    processes=[procs.dy_m50toinf_pt600toinf],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_PTLL-600_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1_059_009,
+    aux={
+        "merging_factors": {
+            "nominal": 27,
+        },
+    },
+)
+
+# Drell-Yan LO jet binned
+
+cpn.add_dataset(
+    name="dy_m50toinf_1j_madgraph",
+    id=14801010,
+    processes=[procs.dy_m50toinf_1j],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=20,
+    n_events=14_855_860,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_2j_madgraph",
+    id=14790880,
+    processes=[procs.dy_m50toinf_2j],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=23,
+    n_events=14_654_880,
+    aux={
+        "merging_factors": {
+            "nominal": 13,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_3j_madgraph",
+    id=14791159,
+    processes=[procs.dy_m50toinf_3j],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=16,
+    n_events=8_672_888,
+    aux={
+        "merging_factors": {
+            "nominal": 12,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_4j_madgraph",
+    id=14790758,
+    processes=[procs.dy_m50toinf_4j],
+    keys=[
+        "/DYto2L-4Jets_MLL-50_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=7,
+    n_events=3_258_128,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
 #
 # Drell-Yan NNLO, split in leptons
 #
