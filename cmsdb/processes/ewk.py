@@ -506,7 +506,7 @@ dy_m4to50_ht40to70 = dy_m4to50.add_process(
     },
     aux={
         "mll": (4.0, 50),
-        "htt": [40.0, 70.0],
+        "htt": (40.0, 70.0),
     },
 )
 
@@ -518,7 +518,7 @@ dy_m4to50_ht70to100 = dy_m4to50.add_process(
     },
     aux={
         "mll": (4.0, 50),
-        "htt": [70.0, 100.0],
+        "htt": (70.0, 100.0),
     },
 )
 
@@ -530,7 +530,7 @@ dy_m4to50_ht100to400 = dy_m4to50.add_process(
     },
     aux={
         "mll": (4.0, 50),
-        "htt": [100.0, 400.0],
+        "htt": (100.0, 400.0),
     },
 )
 
@@ -542,7 +542,7 @@ dy_m4to50_ht400to800 = dy_m4to50.add_process(
     },
     aux={
         "mll": (4.0, 50),
-        "htt": [400.0, 800.0],
+        "htt": (400.0, 800.0),
     },
 )
 
@@ -554,7 +554,7 @@ dy_m4to50_ht800to1500 = dy_m4to50.add_process(
     },
     aux={
         "mll": (4.0, 50),
-        "htt": [800.0, 1500.0],
+        "htt": (800.0, 1500.0),
     },
 )
 
@@ -566,7 +566,7 @@ dy_m4to50_ht1500to2500 = dy_m4to50.add_process(
     },
     aux={
         "mll": (4.0, 50),
-        "htt": [1500.0, 2500.0],
+        "htt": (1500.0, 2500.0),
     },
 )
 
@@ -578,7 +578,7 @@ dy_m4to50_ht2500toinf = dy_m4to50.add_process(
     },
     aux={
         "mll": (4.0, 50),
-        "htt": [2500.0, const.inf],
+        "htt": (2500.0, const.inf),
     },
 )
 
@@ -593,7 +593,7 @@ dy_m50toinf_ht70to100 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [70.0, 100.0],
+        "htt": (70.0, 100.0),
     },
 )
 
@@ -605,7 +605,7 @@ dy_m50toinf_ht100to200 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [100.0, 200.0],
+        "htt": (100.0, 200.0),
     },
 )
 
@@ -617,7 +617,7 @@ dy_m50toinf_ht200to400 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [200.0, 400.0],
+        "htt": (200.0, 400.0),
     },
 )
 
@@ -629,7 +629,7 @@ dy_m50toinf_ht400to600 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [400.0, 600.0],
+        "htt": (400.0, 600.0),
     },
 )
 
@@ -641,7 +641,7 @@ dy_m50toinf_ht600to800 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [600.0, 800.0],
+        "htt": (600.0, 800.0),
     },
 )
 
@@ -653,7 +653,7 @@ dy_m50toinf_ht800to1200 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [800.0, 1200.0],
+        "htt": (800.0, 1200.0),
     },
 )
 
@@ -665,7 +665,7 @@ dy_m50toinf_ht1200to2500 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [1200.0, 2500.0],
+        "htt": (1200.0, 2500.0),
     },
 )
 
@@ -677,7 +677,7 @@ dy_m50toinf_ht2500toinf = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [2500.0, const.inf],
+        "htt": (2500.0, const.inf),
     },
 )
 
