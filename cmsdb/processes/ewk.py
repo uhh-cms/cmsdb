@@ -445,7 +445,7 @@ dy_m4to50_ht40to70 = dy_m4to50.add_process(
         13.6: Number(911.4, {"tot": 2.547}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": (4.0, 50),
+        "mll": (4.0, 50.0),
         "htt": (40.0, 70.0),
     },
 )
@@ -457,7 +457,7 @@ dy_m4to50_ht70to100 = dy_m4to50.add_process(
         13.6: Number(346.6, {"tot": 0.9889}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": (4.0, 50),
+        "mll": (4.0, 50.0),
         "htt": (70.0, 100.0),
     },
 )
@@ -469,7 +469,7 @@ dy_m4to50_ht100to400 = dy_m4to50.add_process(
         13.6: Number(316.8, {"tot": 0.9199}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": (4.0, 50),
+        "mll": (4.0, 50.0),
         "htt": (100.0, 400.0),
     },
 )
@@ -481,7 +481,7 @@ dy_m4to50_ht400to800 = dy_m4to50.add_process(
         13.6: Number(5.649, {"tot": 0.01686}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": (4.0, 50),
+        "mll": (4.0, 50.0),
         "htt": (400.0, 800.0),
     },
 )
@@ -493,7 +493,7 @@ dy_m4to50_ht800to1500 = dy_m4to50.add_process(
         13.6: Number(0.4204, {"tot": 0.001262}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": (4.0, 50),
+        "mll": (4.0, 50.0),
         "htt": (800.0, 1500.0),
     },
 )
@@ -505,7 +505,7 @@ dy_m4to50_ht1500to2500 = dy_m4to50.add_process(
         13.6: Number(0.02079, {"tot": 0.00006233}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": (4.0, 50),
+        "mll": (4.0, 50.0),
         "htt": (1500.0, 2500.0),
     },
 )
@@ -517,7 +517,7 @@ dy_m4to50_ht2500toinf = dy_m4to50.add_process(
         13.6: Number(0.00107, {"tot": 0.000003204}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
-        "mll": (4.0, 50),
+        "mll": (4.0, 50.0),
         "htt": (2500.0, const.inf),
     },
 )
@@ -784,7 +784,7 @@ dy_ee_m10to50 = dy.add_process(
         13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
     },
     aux={
-        "mll": (10.0, 50.),
+        "mll": (10.0, 50.0),
     },
 )
 
