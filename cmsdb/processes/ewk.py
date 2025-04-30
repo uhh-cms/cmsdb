@@ -27,6 +27,10 @@ __all__ = [
     "dy_m50toinf_ht1200to2500", "dy_m50toinf_ht2500toinf",
     "dy_pt0to50", "dy_pt50to100", "dy_pt100to250", "dy_pt250to400",
     "dy_pt400to650", "dy_pt650toinf",
+    "dy_m4to50_ht40to70", "dy_m4to50_ht70to100", "dy_m4to50_ht100to400", "dy_m4to50_ht400to800",
+    "dy_m4to50_ht800to1500", "dy_m4to50_ht1500to2500", "dy_m4to50_ht2500toinf",
+    "dy_m50toinf_pt40to100", "dy_m50toinf_pt100to200", "dy_m50toinf_pt200to400",
+    "dy_m50toinf_pt400to600", "dy_m50toinf_pt600toinf",
     "dy_ee_m50toinf", "dy_ee_m10to50", "dy_ee_m50to120", "dy_ee_m120to200", "dy_ee_m200to400",
     "dy_ee_m400to800", "dy_ee_m800to1500", "dy_ee_m1500to2500", "dy_ee_m2500to4000",
     "dy_ee_m4000to6000", "dy_ee_m6000toinf",
@@ -103,7 +107,7 @@ dy_m50toinf_nlo_13tev_xsec = Number(6421.0, {"tot": 11.25})
 dy_m50toinf_lo_13tev_xsec = Number(5395.0, {"tot": 1.858})
 
 # 13.6 TeV LO and NLO cross sections are based on GenXSecAnalyzer with CMSSW_13_0_13
-# using command ./calculateXSsectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
+# using command ./calculateXsectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
 # or -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v1 when needed
 dy_m4to10_nlo_13p6tev_xsec = Number(141600, {"tot": 79.81})  # xsdb: Number(141500, {"tot": 301.9})
 dy_m10to50_nlo_13p6tev_xsec = Number(21170.0, {"tot": 18.38})  # xsdb: Number(20950.0, {"tot": 183.5})
@@ -422,6 +426,176 @@ dy_m50toinf_2j_pt600toinf = dy_m50toinf_2j.add_process(
 
 # LO cross sections, scaled to NNLO
 
+# based on xsecdb:
+# https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=58393344&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2L-4Jets_MLL-50_PT.%2A
+
+dy_m50toinf_pt40to100 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt40to100",
+    id=511110, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(403.7, {"tot": 1.143}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (40.0, 100.0),
+    },
+)
+
+dy_m50toinf_pt100to200 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt100to200",
+    id=511110, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(58.46, {"tot": 0.173}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (100.0, 200.0),
+    },
+)
+
+dy_m50toinf_pt200to400 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt200to400",
+    id=511110, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(6.678, {"tot": 0.02018}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (200.0, 400.0),
+    },
+)
+
+dy_m50toinf_pt400to600 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt400to600",
+    id=511110, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.3833, {"tot": 0.00117}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (400.0, 600.0),
+    },
+)
+
+dy_m50toinf_pt600toinf = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt600toinf",
+    id=511110, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.06843, {"tot": 0.0002102}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (600.0, const.inf),
+    },
+)
+
+dy_m4to50 = dy.add_process(
+    name="dy_m4to50",
+    id=51004,
+    aux={
+        "mll": (4.0, 50.0),
+    },
+)
+
+# based on xsecdb:
+# https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=58393344&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2L-4Jets_MLL-4to50.%2A
+
+dy_m4to50_ht40to70 = dy_m4to50.add_process(
+    name="dy_m4to50_ht40to70",
+    id=51004, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(911.4, {"tot": 2.547}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (4.0, 50),
+        "htt": [40.0, 70.0],
+    },
+)
+
+dy_m4to50_ht70to100 = dy_m4to50.add_process(
+    name="dy_m4to50_ht70to100",
+    id=51004, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(346.6, {"tot": 0.9889}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (4.0, 50),
+        "htt": [70.0, 100.0],
+    },
+)
+
+dy_m4to50_ht100to400 = dy_m4to50.add_process(
+    name="dy_m4to50_ht100to400",
+    id=51004, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(316.8, {"tot": 0.9199}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (4.0, 50),
+        "htt": [100.0, 400.0],
+    },
+)
+
+dy_m4to50_ht400to800 = dy_m4to50.add_process(
+    name="dy_m4to50_ht400to800",
+    id=51004, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(5.649, {"tot": 0.01686}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (4.0, 50),
+        "htt": [400.0, 800.0],
+    },
+)
+
+dy_m4to50_ht800to1500 = dy_m4to50.add_process(
+    name="dy_m4to50_ht800to1500",
+    id=51004, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.4204, {"tot": 0.001262}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (4.0, 50),
+        "htt": [800.0, 1500.0],
+    },
+)
+
+dy_m4to50_ht1500to2500 = dy_m4to50.add_process(
+    name="dy_m4to50_ht1500to2500",
+    id=51004, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.02079, {"tot": 0.00006233}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (4.0, 50),
+        "htt": [1500.0, 2500.0],
+    },
+)
+
+dy_m4to50_ht2500toinf = dy_m4to50.add_process(
+    name="dy_m4to50_ht2500toinf",
+    id=51004, # Replace in Review
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(0.00107, {"tot": 0.000003204}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (4.0, 50),
+        "htt": [2500.0, const.inf],
+    },
+)
+
 # based on GenXSecAnalyzer
 # for DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000  # noqa
@@ -603,7 +777,7 @@ dy_pt650toinf = dy.add_process(
 )
 
 #
-# decays split into specific leptons
+# NNLO decays split into specific leptons
 #
 
 dy_ee_m50toinf = dy.add_process(
