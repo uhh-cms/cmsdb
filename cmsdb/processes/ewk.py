@@ -155,6 +155,15 @@ dy_m4to10 = dy.add_process(
         "mll": (4.0, 10.0),
     },
 )
+
+dy_m4to50 = dy.add_process(
+    name="dy_m4to50",
+    id=51004,
+    aux={
+        "mll": (4.0, 50.0),
+    },
+)
+
 dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
@@ -426,75 +435,6 @@ dy_m50toinf_2j_pt600toinf = dy_m50toinf_2j.add_process(
 
 # based on xsecdb:
 # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=58393344&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2L-4Jets_MLL-50_PT.%2A
-
-dy_m50toinf_pt40to100 = dy_m50toinf.add_process(
-    name="dy_m50toinf_pt40to100",
-    id=511110, # Replace in Review
-    xsecs={
-        13.6: Number(403.7, {"tot": 1.143}) * dy_k_factor_lo_to_nnlo[13],
-    },
-    aux={
-        "mll": (50.0, const.inf),
-        "ptll": (40.0, 100.0),
-    },
-)
-
-dy_m50toinf_pt100to200 = dy_m50toinf.add_process(
-    name="dy_m50toinf_pt100to200",
-    id=511110, # Replace in Review
-    xsecs={
-        13.6: Number(58.46, {"tot": 0.173}) * dy_k_factor_lo_to_nnlo[13],
-    },
-    aux={
-        "mll": (50.0, const.inf),
-        "ptll": (100.0, 200.0),
-    },
-)
-
-dy_m50toinf_pt200to400 = dy_m50toinf.add_process(
-    name="dy_m50toinf_pt200to400",
-    id=511110, # Replace in Review
-    xsecs={
-        13.6: Number(6.678, {"tot": 0.02018}) * dy_k_factor_lo_to_nnlo[13],
-    },
-    aux={
-        "mll": (50.0, const.inf),
-        "ptll": (200.0, 400.0),
-    },
-)
-
-dy_m50toinf_pt400to600 = dy_m50toinf.add_process(
-    name="dy_m50toinf_pt400to600",
-    id=511110, # Replace in Review
-    xsecs={
-        13.6: Number(0.3833, {"tot": 0.00117}) * dy_k_factor_lo_to_nnlo[13],
-    },
-    aux={
-        "mll": (50.0, const.inf),
-        "ptll": (400.0, 600.0),
-    },
-)
-
-dy_m50toinf_pt600toinf = dy_m50toinf.add_process(
-    name="dy_m50toinf_pt600toinf",
-    id=511110, # Replace in Review
-    xsecs={
-        13.6: Number(0.06843, {"tot": 0.0002102}) * dy_k_factor_lo_to_nnlo[13],
-    },
-    aux={
-        "mll": (50.0, const.inf),
-        "ptll": (600.0, const.inf),
-    },
-)
-
-dy_m4to50 = dy.add_process(
-    name="dy_m4to50",
-    id=51004,
-    aux={
-        "mll": (4.0, 50.0),
-    },
-)
-
 # based on xsecdb:
 # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=58393344&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2L-4Jets_MLL-4to50.%2A
 
@@ -579,6 +519,66 @@ dy_m4to50_ht2500toinf = dy_m4to50.add_process(
     aux={
         "mll": (4.0, 50),
         "htt": (2500.0, const.inf),
+    },
+)
+
+dy_m50toinf_pt40to100 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt40to100",
+    id=511110, # Replace in Review
+    xsecs={
+        13.6: Number(403.7, {"tot": 1.143}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (40.0, 100.0),
+    },
+)
+
+dy_m50toinf_pt100to200 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt100to200",
+    id=511110, # Replace in Review
+    xsecs={
+        13.6: Number(58.46, {"tot": 0.173}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (100.0, 200.0),
+    },
+)
+
+dy_m50toinf_pt200to400 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt200to400",
+    id=511110, # Replace in Review
+    xsecs={
+        13.6: Number(6.678, {"tot": 0.02018}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (200.0, 400.0),
+    },
+)
+
+dy_m50toinf_pt400to600 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt400to600",
+    id=511110, # Replace in Review
+    xsecs={
+        13.6: Number(0.3833, {"tot": 0.00117}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (400.0, 600.0),
+    },
+)
+
+dy_m50toinf_pt600toinf = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt600toinf",
+    id=511110, # Replace in Review
+    xsecs={
+        13.6: Number(0.06843, {"tot": 0.0002102}) * dy_k_factor_lo_to_nnlo[13],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (600.0, const.inf),
     },
 )
 
