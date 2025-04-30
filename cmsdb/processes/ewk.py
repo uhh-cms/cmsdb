@@ -49,6 +49,7 @@ __all__ = [
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
     "z_qq_1j_pt100to200", "z_qq_2j_pt100to200", "z_qq_1j_pt200to400", "z_qq_2j_pt200to400",
     "z_qq_1j_pt400to600", "z_qq_2j_pt400to600", "z_qq_1j_pt600toinf", "z_qq_2j_pt600toinf",
+    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf",
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
@@ -59,6 +60,7 @@ __all__ = [
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
     "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j",
+    "w_vbf", "w_vbf_wlnu",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
@@ -119,11 +121,13 @@ dy_m50toinf = dy.add_process(
     name="dy_m50toinf",
     id=51100,
     xsecs={
+        # nnlo
         13: Number(6077.22, {
             "integration": 1.49,
             "scale": 0.02j,
             "pdf": 14.78,
         }),
+        # nnlo
         13.6: const.n_leps * Number(2091.7, {
             "scale": (0.008j, 0.013j),
             "pdf": 0.01j,
@@ -134,6 +138,9 @@ dy_m50toinf = dy.add_process(
     },
 )
 
+# compute k-factors for scaling from LO and NLO to NNLO (which is used for the process cross section above)
+# ! NOTE: this assumes that the k-factor does not significantly depend on mll
+# ! NOTE: this was tested for 10to50 w.r.t. 50toinf
 dy_k_factor_lo_to_nnlo = {
     13: dy_m50toinf.get_xsec(13) / dy_m50toinf_lo_13tev_xsec,
     13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_lo_13p6tev_xsec,
@@ -1369,6 +1376,31 @@ z_qq_2j_pt600toinf = z_qq.add_process(
     },
 )
 
+# dedicated vbf production (pp -> z + qq)
+z_vbf = z.add_process(
+    name="z_vbf",
+    id=55300,
+    label=f"{z.label} (VBF)",
+)
+
+z_vbf_zll = z_vbf.add_process(
+    name="z_vbf_zll",
+    id=55310,
+    label=r"Z $\rightarrow ll$ (VBF)",
+)
+
+z_vbf_zll_m50toinf = z_vbf_zll.add_process(
+    name="z_vbf_zll_m50toinf",
+    id=55313,
+    xsecs={
+        # based on GenXSecAnalyzer
+        13.6: Number(7.769000, {"tot": 0.002434}),
+    },
+    aux={
+        "mll": (50.0, const.inf),
+    },
+)
+
 #
 # W boson
 #
@@ -1677,8 +1709,28 @@ w_lnu_ge3j = w_lnu.add_process(
     },
 )
 
+# dedicated vbf production (pp -> w + qq)
+w_vbf = w.add_process(
+    name="w_vbf",
+    id=6300,
+    label=f"{w.label} (VBF)",
+)
+
+w_vbf_wlnu = w_vbf.add_process(
+    name="w_vbf_wlnu",
+    id=6310,
+    label=r"W $\rightarrow l\nu$ (VBF)",
+    xsecs={
+        # based on GenXSecAnalyzer
+        13.6: Number(41.0400, {"tot": 0.1968}),
+    },
+)
+
+w_vbf.set_xsec(13.6, w_vbf_wlnu.get_xsec(13.6) / const.br_w.lep)
+
 #
 # EWK radiations
+# TODO: EWK is inaccurate, use dedicated z_vbf and w_vbf processes instead
 #
 
 ewk = Process(

@@ -1426,6 +1426,42 @@ cpn.add_dataset(
 )
 
 #
+# W/Z VBF production
+#
+
+cpn.add_dataset(
+    name="w_vbf_wlnu_madgraph",
+    id=15015923,
+    processes=[procs.w_vbf_wlnu],
+    keys=[
+        "/VBFtoLNu_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=15,
+    n_events=9_958_336,
+    aux={
+        "merging_factors": {
+            "nominal": 20,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="z_vbf_zll_m50toinf_madgraph",
+    id=15015907,
+    processes=[procs.z_vbf_zll_m50toinf],
+    keys=[
+        "/VBFto2L_MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=5,
+    n_events=3_492_580,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
+
+#
 # Di-boson
 #
 
