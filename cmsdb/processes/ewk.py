@@ -442,7 +442,7 @@ dy_m4to50_ht40to70 = dy_m4to50.add_process(
     name="dy_m4to50_ht40to70",
     id=51004, # Replace in Review
     xsecs={
-        13.6: Number(911.4, {"tot": 2.547}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(911.4, {"tot": 2.547}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 50),
@@ -454,7 +454,7 @@ dy_m4to50_ht70to100 = dy_m4to50.add_process(
     name="dy_m4to50_ht70to100",
     id=51004, # Replace in Review
     xsecs={
-        13.6: Number(346.6, {"tot": 0.9889}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(346.6, {"tot": 0.9889}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 50),
@@ -466,7 +466,7 @@ dy_m4to50_ht100to400 = dy_m4to50.add_process(
     name="dy_m4to50_ht100to400",
     id=51004, # Replace in Review
     xsecs={
-        13.6: Number(316.8, {"tot": 0.9199}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(316.8, {"tot": 0.9199}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 50),
@@ -478,7 +478,7 @@ dy_m4to50_ht400to800 = dy_m4to50.add_process(
     name="dy_m4to50_ht400to800",
     id=51004, # Replace in Review
     xsecs={
-        13.6: Number(5.649, {"tot": 0.01686}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(5.649, {"tot": 0.01686}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 50),
@@ -490,7 +490,7 @@ dy_m4to50_ht800to1500 = dy_m4to50.add_process(
     name="dy_m4to50_ht800to1500",
     id=51004, # Replace in Review
     xsecs={
-        13.6: Number(0.4204, {"tot": 0.001262}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(0.4204, {"tot": 0.001262}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 50),
@@ -502,7 +502,7 @@ dy_m4to50_ht1500to2500 = dy_m4to50.add_process(
     name="dy_m4to50_ht1500to2500",
     id=51004, # Replace in Review
     xsecs={
-        13.6: Number(0.02079, {"tot": 0.00006233}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(0.02079, {"tot": 0.00006233}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 50),
@@ -514,7 +514,7 @@ dy_m4to50_ht2500toinf = dy_m4to50.add_process(
     name="dy_m4to50_ht2500toinf",
     id=51004, # Replace in Review
     xsecs={
-        13.6: Number(0.00107, {"tot": 0.000003204}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(0.00107, {"tot": 0.000003204}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 50),
@@ -526,7 +526,7 @@ dy_m50toinf_pt40to100 = dy_m50toinf.add_process(
     name="dy_m50toinf_pt40to100",
     id=511110, # Replace in Review
     xsecs={
-        13.6: Number(403.7, {"tot": 1.143}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(403.7, {"tot": 1.143}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (50.0, const.inf),
@@ -538,7 +538,7 @@ dy_m50toinf_pt100to200 = dy_m50toinf.add_process(
     name="dy_m50toinf_pt100to200",
     id=511110, # Replace in Review
     xsecs={
-        13.6: Number(58.46, {"tot": 0.173}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(58.46, {"tot": 0.173}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (50.0, const.inf),
@@ -550,7 +550,7 @@ dy_m50toinf_pt200to400 = dy_m50toinf.add_process(
     name="dy_m50toinf_pt200to400",
     id=511110, # Replace in Review
     xsecs={
-        13.6: Number(6.678, {"tot": 0.02018}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(6.678, {"tot": 0.02018}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (50.0, const.inf),
@@ -562,7 +562,7 @@ dy_m50toinf_pt400to600 = dy_m50toinf.add_process(
     name="dy_m50toinf_pt400to600",
     id=511110, # Replace in Review
     xsecs={
-        13.6: Number(0.3833, {"tot": 0.00117}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(0.3833, {"tot": 0.00117}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (50.0, const.inf),
@@ -574,7 +574,7 @@ dy_m50toinf_pt600toinf = dy_m50toinf.add_process(
     name="dy_m50toinf_pt600toinf",
     id=511110, # Replace in Review
     xsecs={
-        13.6: Number(0.06843, {"tot": 0.0002102}) * dy_k_factor_lo_to_nnlo[13],
+        13.6: Number(0.06843, {"tot": 0.0002102}) * dy_k_factor_lo_to_nnlo[13.6],
     },
     aux={
         "mll": (50.0, const.inf),
