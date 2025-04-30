@@ -464,10 +464,6 @@ h = Process(
     name="h",
     id=10000,
     label=r"$H$",
-    xsecs={
-        13: Number(0.1),  # TODO
-        13.6: Number(0.1),  # TODO
-    },
 )
 
 # Higgs decay channels
