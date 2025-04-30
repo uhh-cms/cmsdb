@@ -194,6 +194,7 @@ dy_m50toinf_0j = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
+        "njets": (0, 1),
     },
 )
 
