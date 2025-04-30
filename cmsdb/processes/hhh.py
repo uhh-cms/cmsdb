@@ -28,7 +28,6 @@ hhh = Process(
     name="hhh",
     id=40000,
     label="HHH",
-    xsecs={13.6: Number(0.1)},  # TODO
 )
 
 # source: HHH->6b analysis https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/028
@@ -54,7 +53,7 @@ hhh_ggf = hhh.add_process(
                 "mtop": 0.15j,
             },
         ),
-    },  # TODO
+    },
 )
 
 
@@ -182,7 +181,7 @@ for decay_name, decay_dict in subdecay_dict.items():
                 name=name,
                 id=hhh_ggf.id + coupling_dict.id,
                 label=f"{hhh_ggf.label} $(c_{{3}}={c3}, d_{{4}}={d4})$",
-                xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)),  # TODO
+                xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)),
             ),
         })
 

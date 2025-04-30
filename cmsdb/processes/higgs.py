@@ -161,7 +161,7 @@ __all__ = [
     "vh_zqq_hzz4l", "vh_zqq_hzz2l2nu", "vh_zqq_hzz2l2q", "vh_zqq_hzz2q2nu", "vh_zqq_hzz4nu", "vh_zqq_hzz4q",
     "vh_zqq_hzg_zll", "vh_zqq_hzg_zqq", "vh_zqq_hzg_znunu",
     "zh",
-    "zh", "zh_htt", "zh_hww", "zh_hzz", "zh_hbb", "zh_hnonbb", "zh_hcc",
+    "zh_htt", "zh_hww", "zh_hzz", "zh_hbb", "zh_hnonbb", "zh_hcc",
     "zh_hzg", "zh_hgg", "zh_hmm",
     "zh_hwwqqlnu", "zh_hww2l2nu", "zh_hww4q",
     "zh_hzz4l", "zh_hzz2l2nu", "zh_hzz2l2q", "zh_hzz2q2nu", "zh_hzz4nu", "zh_hzz4q",
@@ -182,7 +182,7 @@ __all__ = [
     "zh_znunu_hzz4l", "zh_znunu_hzz2l2nu", "zh_znunu_hzz2l2q", "zh_znunu_hzz2q2nu", "zh_znunu_hzz4nu", "zh_znunu_hzz4q",
     "zh_znunu_hzg_zll", "zh_znunu_hzg_zqq", "zh_znunu_hzg_znunu",
     "zh_gg",
-    "zh_gg", "zh_gg_htt", "zh_gg_hww", "zh_gg_hzz", "zh_gg_hbb", "zh_gg_hnonbb", "zh_gg_hcc",
+    "zh_gg_htt", "zh_gg_hww", "zh_gg_hzz", "zh_gg_hbb", "zh_gg_hnonbb", "zh_gg_hcc",
     "zh_gg_hzg", "zh_gg_hgg", "zh_gg_hmm",
     "zh_gg_hwwqqlnu", "zh_gg_hww2l2nu", "zh_gg_hww4q",
     "zh_gg_hzz4l", "zh_gg_hzz2l2nu", "zh_gg_hzz2l2q", "zh_gg_hzz2q2nu", "zh_gg_hzz4nu", "zh_gg_hzz4q",
@@ -464,10 +464,6 @@ h = Process(
     name="h",
     id=10000,
     label=r"$H$",
-    xsecs={
-        13: Number(0.1),  # TODO
-        13.6: Number(0.1),  # TODO
-    },
 )
 
 # Higgs decay channels

@@ -87,7 +87,6 @@ dy = Process(
     name="dy",
     id=50000,
     label="Drell-Yan",
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 # NNLO cross section, based on:
@@ -143,7 +142,6 @@ dy_k_factor_nlo_to_nnlo = {
     13: dy_m50toinf.get_xsec(13) / dy_m50toinf_nlo_13tev_xsec,
     13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_nlo_13p6tev_xsec,
 }
-
 
 dy_m4to10 = dy.add_process(
     name="dy_m4to10",
@@ -1732,7 +1730,6 @@ vv = Process(
     name="vv",
     id=8000,
     label="Di-Boson",
-    xsecs={13: Number(0.1)},  # updated below as the sum over WW, WZ, ZZ
 )
 
 # ZZ 13 TeV xsec values at nNNLO from

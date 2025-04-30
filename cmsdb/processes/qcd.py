@@ -79,7 +79,6 @@ qcd = Process(
     name="qcd",
     id=30000,
     label="QCD",
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 
@@ -91,7 +90,6 @@ qcd_flat = Process(
     name="qcd_flat",
     id=30001,
     label="QCD",
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 
@@ -314,7 +312,6 @@ qcd_pt3200toinf = qcd.add_process(
 qcd_mu = qcd.add_process(
     name="qcd_mu",
     id=31100,
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 # 13 TeV xsecs based on datasets QCD_Pt-{i}To{j}_MuEnrichedPt5_TuneCP5_13TeV-pythia8 (Summer20UL16)
@@ -435,7 +432,6 @@ qcd_mu_pt1000toinf = qcd_mu.add_process(
 qcd_em = qcd.add_process(
     name="qcd_em",
     id=31200,
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 # based on datasets QCD_Pt-{i}to{j}_EMEnriched_TuneCP5_13TeV-pythia8 (Summer20UL16)
@@ -506,9 +502,6 @@ qcd_em_pt300toinf = qcd_em.add_process(
 qcd_em_pt10to30 = qcd_em.add_process(
     name="qcd_em_pt10to30",
     id=31209,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 #
@@ -518,7 +511,6 @@ qcd_em_pt10to30 = qcd_em.add_process(
 qcd_bctoe = qcd.add_process(
     name="qcd_bctoe",
     id=31300,
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 # based on datasets QCD_Pt_{i}to{j}_bcToE_TuneCP5_13TeV_pythia8 (Autumn18 (pt15to20) or Fall17 (all other))
@@ -577,29 +569,19 @@ qcd_bctoe_pt250toinf = qcd_bctoe.add_process(
 qcd_doubleem = qcd.add_process(
     name="qcd_doubleem",
     id=31400,
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 qcd_doubleem_pt30to40_mgg80toinf = qcd_doubleem.add_process(
     name="qcd_doubleem_pt30to40_mgg80toinf",
     id=31401,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 qcd_doubleem_pt40toinf_mgg80toinf = qcd_doubleem.add_process(
     name="qcd_doubleem_pt40toinf_mgg80toinf",
     id=31402,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
 
 qcd_doubleem_pt30toinf_mgg40to80 = qcd_doubleem.add_process(
     name="qcd_doubleem_pt30toinf_mgg40to80",
     id=31403,
-    xsecs={
-        13: Number(0.1),  # TODO
-    },
 )
