@@ -64,7 +64,7 @@ br_h_tt_full = Number(0.06272, {"theo": (0.0117j, 0.0116j), "m_q": (0.0098j, 0.0
 br_h_mm_full = Number(0.0002176, {"theo": (0.0123j, 0.0123j), "m_q": (0.0097j, 0.0099j), "alpha_s": (0.0059j, 0.0064j)})
 
 # TODO: H -> ee BR is not available in the YellowReport, so I'm using the muon BR scaled to electron mass instead
-br_h_ee_full = br_h_mm_full / 200 ** 2
+br_h_ee_full = br_h_mm_full / 200**2
 
 
 def combine_uncertainties_higgs_br(number: Number):
@@ -93,7 +93,7 @@ br_h = DotDict(
 
 
 br_hh = DotDict(
-    bbbb=br_h.bb ** 2,
+    bbbb=br_h.bb**2,
     bbvv=2 * br_h.bb * (br_h.ww + br_h.zz),
     bbww=2 * br_h.bb * br_h.ww,
     bbzz=2 * br_h.bb * br_h.zz,
@@ -101,9 +101,11 @@ br_hh = DotDict(
     bbgg=2 * br_h.bb * br_h.gg,
     ttww=2 * br_h.tt * br_h.ww,
     ttzz=2 * br_h.tt * br_h.zz,
-    tttt=br_h.tt ** 2,
-    wwww=br_h.ww ** 2,
-    zzzz=br_h.zz ** 2,
+    ttvv=2 * br_h.tt * (br_h.ww + br_h.zz),
+    tttt=br_h.tt**2,
+    wwww=br_h.ww**2,
+    zzzz=br_h.zz**2,
+    vvvv=(br_h.ww + br_h.zz)**2,
     wwzz=2 * br_h.ww * br_h.zz,
     wwgg=2 * br_h.ww * br_h.gg,
 )

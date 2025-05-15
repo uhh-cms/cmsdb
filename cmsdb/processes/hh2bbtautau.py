@@ -100,7 +100,7 @@ from cmsdb.util import multiply_xsecs
 
 
 #
-# ggF -> H -> HH
+# ggF -> HH
 #
 
 # placeholder for the general process, not used as parent process and should not have a cross section
@@ -737,7 +737,7 @@ graviton_hh_ggf_hbb_htt_m5000 = graviton_hh_ggf_hbb_htt.add_process(
 )
 
 #
-# vbf -> H -> HH
+# vbf -> HH
 #
 
 # placeholder for the general process, not used as parent process and should not have a cross section
