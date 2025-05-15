@@ -497,22 +497,21 @@ cpn.add_dataset(
     },
 )
 
-# TODO: 17 stuck missing lfns, branches 2,3,4,5,10,12,13,14,17,18,20,21,27,28,29,31,32
-# cpn.add_dataset(
-#     name="hh_vbf_htt_hvv_kv1_k2v0_kl1_madgraph",
-#     id=...,
-#     processes=[procs.hh_vbf_htt_hvv_kv1_k2v0_kl1],
-#     keys=[
-#         ...
-#     ],
-#     n_files=...,
-#     n_events=...,
-#     aux={
-#         "merging_factors": {
-#             "nominal": ...,
-#         },
-#     },
-# )
+cpn.add_dataset(
+    name="hh_vbf_htt_hvv_kv1_k2v0_kl1_madgraph",
+    id=14962117,
+    processes=[procs.hh_vbf_htt_hvv_kv1_k2v0_kl1],
+    keys=[
+        "/VBFHHto2Tau2V_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=996_989,
+    aux={
+        "merging_factors": {
+            "nominal": 12,
+        },
+    },
+)
 
 cpn.add_dataset(
     name="hh_vbf_htt_hvv_kv1p74_k2v1p37_kl14p4_madgraph",
