@@ -518,6 +518,9 @@ ttwz = ttvv.add_process(
             Number(2705E-6, {"scale": (0.099j, 0.106j), "pdf": 0.027j}) +
             Number(1179E-6, {"scale": 0.112j, "pdf": 0.037j})
         ),
+        # 13.6 from GenXSecAnalyzer:
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DTTWZ_TuneCP5_13p6TeV_madgraph-pythia8  # noqa
+        13.6: Number(0.002715, {"tot": 5.963e-7}),  # might need a k-factor of 1.13 here
     },
 )
 
@@ -538,7 +541,8 @@ ttww = ttvv.add_process(
 )
 
 # define the combined ttvv cross section as the sum of the three channels
-ttvv.set_xsec(
-    13,
-    ttzz.get_xsec(13) + ttwz.get_xsec(13) + ttww.get_xsec(13),
-)
+for xs in (13, 13.6):
+    ttvv.set_xsec(
+        xs,
+        ttzz.get_xsec(xs) + ttwz.get_xsec(xs) + ttww.get_xsec(xs),
+    )

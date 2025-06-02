@@ -27,6 +27,19 @@ __all__ = [
     "dy_m50toinf_ht1200to2500", "dy_m50toinf_ht2500toinf",
     "dy_pt0to50", "dy_pt50to100", "dy_pt100to250", "dy_pt250to400",
     "dy_pt400to650", "dy_pt650toinf",
+    "dy_m4to50_ht40to70", "dy_m4to50_ht70to100", "dy_m4to50_ht100to400", "dy_m4to50_ht400to800",
+    "dy_m4to50_ht800to1500", "dy_m4to50_ht1500to2500", "dy_m4to50_ht2500toinf",
+    "dy_m50toinf_pt40to100", "dy_m50toinf_pt100to200", "dy_m50toinf_pt200to400",
+    "dy_m50toinf_pt400to600", "dy_m50toinf_pt600toinf",
+    "dy_ee_m50toinf", "dy_ee_m10to50", "dy_ee_m50to120", "dy_ee_m120to200", "dy_ee_m200to400",
+    "dy_ee_m400to800", "dy_ee_m800to1500", "dy_ee_m1500to2500", "dy_ee_m2500to4000",
+    "dy_ee_m4000to6000", "dy_ee_m6000toinf",
+    "dy_mumu_m10to50", "dy_mumu_m50to120", "dy_mumu_m120to200", "dy_mumu_m200to400",
+    "dy_mumu_m400to800", "dy_mumu_m800to1500", "dy_mumu_m1500to2500", "dy_mumu_m2500to4000",
+    "dy_mumu_m4000to6000", "dy_mumu_m6000toinf",
+    "dy_tautau_m10to50", "dy_tautau_m50to120", "dy_tautau_m120to200", "dy_tautau_m200to400",
+    "dy_tautau_m400to800", "dy_tautau_m800to1500", "dy_tautau_m1500to2500", "dy_tautau_m2500to4000",
+    "dy_tautau_m4000to6000", "dy_tautau_m6000toinf",
     "z",
     "z_nunu",
     "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
@@ -36,6 +49,7 @@ __all__ = [
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
     "z_qq_1j_pt100to200", "z_qq_2j_pt100to200", "z_qq_1j_pt200to400", "z_qq_2j_pt200to400",
     "z_qq_1j_pt400to600", "z_qq_2j_pt400to600", "z_qq_1j_pt600toinf", "z_qq_2j_pt600toinf",
+    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf",
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
@@ -46,6 +60,7 @@ __all__ = [
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
     "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j",
+    "w_vbf", "w_vbf_wlnu",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
@@ -74,7 +89,6 @@ dy = Process(
     name="dy",
     id=50000,
     label="Drell-Yan",
-    xsecs={13: Number(0.1)},  # TODO
 )
 
 # NNLO cross section, based on:
@@ -94,7 +108,7 @@ dy_m50toinf_nlo_13tev_xsec = Number(6421.0, {"tot": 11.25})
 dy_m50toinf_lo_13tev_xsec = Number(5395.0, {"tot": 1.858})
 
 # 13.6 TeV LO and NLO cross sections are based on GenXSecAnalyzer with CMSSW_13_0_13
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
+# using command ./calculateXsectionAndFilterEfficiency.sh -f datasets.txt -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v2 -n 5000000  # noqa
 # or -c Run3Summer22MiniAODv4-130X_mcRun3_2022_realistic_v5-v1 when needed
 dy_m4to10_nlo_13p6tev_xsec = Number(141600, {"tot": 79.81})  # xsdb: Number(141500, {"tot": 301.9})
 dy_m10to50_nlo_13p6tev_xsec = Number(21170.0, {"tot": 18.38})  # xsdb: Number(20950.0, {"tot": 183.5})
@@ -107,11 +121,13 @@ dy_m50toinf = dy.add_process(
     name="dy_m50toinf",
     id=51100,
     xsecs={
+        # nnlo
         13: Number(6077.22, {
             "integration": 1.49,
             "scale": 0.02j,
             "pdf": 14.78,
         }),
+        # nnlo
         13.6: const.n_leps * Number(2091.7, {
             "scale": (0.008j, 0.013j),
             "pdf": 0.01j,
@@ -122,6 +138,9 @@ dy_m50toinf = dy.add_process(
     },
 )
 
+# compute k-factors for scaling from LO and NLO to NNLO (which is used for the process cross section above)
+# ! NOTE: this assumes that the k-factor does not significantly depend on mll
+# ! NOTE: this was tested for 10to50 w.r.t. 50toinf
 dy_k_factor_lo_to_nnlo = {
     13: dy_m50toinf.get_xsec(13) / dy_m50toinf_lo_13tev_xsec,
     13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_lo_13p6tev_xsec,
@@ -131,23 +150,29 @@ dy_k_factor_nlo_to_nnlo = {
     13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_nlo_13p6tev_xsec,
 }
 
-
 dy_m4to10 = dy.add_process(
     name="dy_m4to10",
     id=51002,
     xsecs={
-        13: Number(0.1),  # TODO
         13.6: dy_m4to10_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
         "mll": (4.0, 10.0),
     },
 )
+
+dy_m4to50 = dy.add_process(
+    name="dy_m4to50",
+    id=51004,
+    aux={
+        "mll": (4.0, 50.0),
+    },
+)
+
 dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
     xsecs={
-        13: Number(0.1),  # TODO
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
@@ -413,6 +438,155 @@ dy_m50toinf_2j_pt600toinf = dy_m50toinf_2j.add_process(
 
 # LO cross sections, scaled to NNLO
 
+# based on xsecdb:
+# https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=58393344&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2L-4Jets_MLL-50_PT.%2A
+# based on xsecdb:
+# https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=58393344&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2L-4Jets_MLL-4to50.%2A
+
+dy_m4to50_ht40to70 = dy_m4to50.add_process(
+    name="dy_m4to50_ht40to70",
+    id=510040,
+    xsecs={
+        13.6: Number(911.4, {"tot": 2.547}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": (40.0, 70.0),
+    },
+)
+
+dy_m4to50_ht70to100 = dy_m4to50.add_process(
+    name="dy_m4to50_ht70to100",
+    id=510041,
+    xsecs={
+        13.6: Number(346.6, {"tot": 0.9889}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": (70.0, 100.0),
+    },
+)
+
+dy_m4to50_ht100to400 = dy_m4to50.add_process(
+    name="dy_m4to50_ht100to400",
+    id=510042,
+    xsecs={
+        13.6: Number(316.8, {"tot": 0.9199}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": (100.0, 400.0),
+    },
+)
+
+dy_m4to50_ht400to800 = dy_m4to50.add_process(
+    name="dy_m4to50_ht400to800",
+    id=510043,
+    xsecs={
+        13.6: Number(5.649, {"tot": 0.01686}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": (400.0, 800.0),
+    },
+)
+
+dy_m4to50_ht800to1500 = dy_m4to50.add_process(
+    name="dy_m4to50_ht800to1500",
+    id=510044,
+    xsecs={
+        13.6: Number(0.4204, {"tot": 0.001262}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": (800.0, 1500.0),
+    },
+)
+
+dy_m4to50_ht1500to2500 = dy_m4to50.add_process(
+    name="dy_m4to50_ht1500to2500",
+    id=510045,
+    xsecs={
+        13.6: Number(0.02079, {"tot": 0.00006233}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": (1500.0, 2500.0),
+    },
+)
+
+dy_m4to50_ht2500toinf = dy_m4to50.add_process(
+    name="dy_m4to50_ht2500toinf",
+    id=510046,
+    xsecs={
+        13.6: Number(0.00107, {"tot": 0.000003204}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 50.0),
+        "htt": (2500.0, const.inf),
+    },
+)
+
+dy_m50toinf_pt40to100 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt40to100",
+    id=511001,
+    xsecs={
+        13.6: Number(403.7, {"tot": 1.143}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (40.0, 100.0),
+    },
+)
+
+dy_m50toinf_pt100to200 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt100to200",
+    id=511002,
+    xsecs={
+        13.6: Number(58.46, {"tot": 0.173}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (100.0, 200.0),
+    },
+)
+
+dy_m50toinf_pt200to400 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt200to400",
+    id=511003,
+    xsecs={
+        13.6: Number(6.678, {"tot": 0.02018}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (200.0, 400.0),
+    },
+)
+
+dy_m50toinf_pt400to600 = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt400to600",
+    id=511004,
+    xsecs={
+        13.6: Number(0.3833, {"tot": 0.00117}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (400.0, 600.0),
+    },
+)
+
+dy_m50toinf_pt600toinf = dy_m50toinf.add_process(
+    name="dy_m50toinf_pt600toinf",
+    id=511005,
+    xsecs={
+        13.6: Number(0.06843, {"tot": 0.0002102}) * dy_k_factor_lo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (50.0, const.inf),
+        "ptll": (600.0, const.inf),
+    },
+)
+
 # based on GenXSecAnalyzer
 # for DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000  # noqa
@@ -424,7 +598,7 @@ dy_m50toinf_ht70to100 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [70.0, 100.0],
+        "htt": (70.0, 100.0),
     },
 )
 
@@ -436,7 +610,7 @@ dy_m50toinf_ht100to200 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [100.0, 200.0],
+        "htt": (100.0, 200.0),
     },
 )
 
@@ -448,7 +622,7 @@ dy_m50toinf_ht200to400 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [200.0, 400.0],
+        "htt": (200.0, 400.0),
     },
 )
 
@@ -460,7 +634,7 @@ dy_m50toinf_ht400to600 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [400.0, 600.0],
+        "htt": (400.0, 600.0),
     },
 )
 
@@ -472,7 +646,7 @@ dy_m50toinf_ht600to800 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [600.0, 800.0],
+        "htt": (600.0, 800.0),
     },
 )
 
@@ -484,7 +658,7 @@ dy_m50toinf_ht800to1200 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [800.0, 1200.0],
+        "htt": (800.0, 1200.0),
     },
 )
 
@@ -496,7 +670,7 @@ dy_m50toinf_ht1200to2500 = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [1200.0, 2500.0],
+        "htt": (1200.0, 2500.0),
     },
 )
 
@@ -508,7 +682,7 @@ dy_m50toinf_ht2500toinf = dy_m50toinf.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
-        "htt": [2500.0, const.inf],
+        "htt": (2500.0, const.inf),
     },
 )
 
@@ -590,6 +764,409 @@ dy_pt650toinf = dy.add_process(
     },
     aux={
         "ptll": (650.0, const.inf),
+    },
+)
+
+#
+# NNLO decays split into specific leptons
+#
+
+dy_ee_m50toinf = dy.add_process(
+    name="dy_ee_m50toinf",
+    id=51800,
+    xsecs={
+        13.6: dy_m50toinf.get_xsec(13.6) / const.n_leps,
+    },
+    aux={
+        "mll": (50.0, const.inf),
+    },
+)
+
+dy_ee_m10to50 = dy.add_process(
+    name="dy_ee_m10to50",
+    id=51810,
+    xsecs={
+        13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
+    },
+    aux={
+        "mll": (10.0, 50.0),
+    },
+)
+
+dy_ee_m50to120 = dy.add_process(
+    name="dy_ee_m50to120",
+    id=51811,
+    xsecs={
+        13.6: Number(2219, {
+            "tot": 0.2327,
+        }),
+    },
+    aux={
+        "mll": (50.0, 120),
+    },
+)
+
+dy_ee_m120to200 = dy.add_process(
+    name="dy_ee_m120to200",
+    id=51812,
+    xsecs={
+        13.6: Number(21.65, {
+            "tot": 0.003184,
+        }),
+    },
+    aux={
+        "mll": (50.0, const.inf),
+    },
+)
+
+dy_ee_m200to400 = dy.add_process(
+    name="dy_ee_m200to400",
+    id=51813,
+    xsecs={
+        13.6: Number(3.058, {
+            "tot": 0.000465,
+        }),
+    },
+    aux={
+        "mll": (200.0, 400.0),
+    },
+)
+
+dy_ee_m400to800 = dy.add_process(
+    name="dy_ee_m400to800",
+    id=51814,
+    xsecs={
+        13.6: Number(0.2691, {
+            "tot": 0.00004215,
+        }),
+    },
+    aux={
+        "mll": (400.0, 800.0),
+    },
+)
+
+dy_ee_m800to1500 = dy.add_process(
+    name="dy_ee_m800to1500",
+    id=51815,
+    xsecs={
+        13.6: Number(0.01915, {
+            "tot": 0.000003085,
+        }),
+    },
+    aux={
+        "mll": (800.0, 1500.0),
+    },
+)
+
+dy_ee_m1500to2500 = dy.add_process(
+    name="dy_ee_m1500to2500",
+    id=51816,
+    xsecs={
+        13.6: Number(0.001111, {
+            "tot": 1.787e-7,
+        }),
+    },
+    aux={
+        "mll": (1500.0, 2500.0),
+    },
+)
+
+dy_ee_m2500to4000 = dy.add_process(
+    name="dy_ee_m2500to4000",
+    id=51817,
+    xsecs={
+        13.6: Number(0.00005949, {
+            "tot": 9.162e-9,
+        }),
+    },
+    aux={
+        "mll": (2500.0, 4000.0),
+    },
+)
+
+dy_ee_m4000to6000 = dy.add_process(
+    name="dy_ee_m4000to6000",
+    id=51818,
+    xsecs={
+        13.6: Number(0.000001558, {
+            "tot": 2.078e-10,
+        }),
+    },
+    aux={
+        "mll": (4000.0, 6000.0),
+    },
+)
+
+dy_ee_m6000toinf = dy.add_process(
+    name="dy_ee_m6000toinf",
+    id=51619,
+    xsecs={
+        13.6: Number(3.519e-8, {
+            "tot": 6.811e-12,
+        }),
+    },
+    aux={
+        "mll": (6000.0, const.inf),
+    },
+)
+
+# 2mu
+
+dy_mumu_m10to50 = dy.add_process(
+    name="dy_mumu_m10to50",
+    id=51620,
+    xsecs={
+        13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
+    },
+    aux={
+        "mll": (10.0, 50.0),
+    },
+)
+
+dy_mumu_m50to120 = dy.add_process(
+    name="dy_mumu_m50to120",
+    id=51621,
+    xsecs={
+        13.6: Number(2219, {
+            "tot": 0.2327,
+        }),
+    },
+    aux={
+        "mll": (50.0, 120.0),
+    },
+)
+
+dy_mumu_m120to200 = dy.add_process(
+    name="dy_mumu_m120to200",
+    id=51622,
+    xsecs={
+        13.6: Number(21.65, {
+            "tot": 0.003184,
+        }),
+    },
+    aux={
+        "mll": (120.0, 200.0),
+    },
+)
+
+dy_mumu_m200to400 = dy.add_process(
+    name="dy_mumu_m200to400",
+    id=51623,
+    xsecs={
+        13.6: Number(3.058, {
+            "tot": 0.000465,
+        }),
+    },
+    aux={
+        "mll": (200.0, 400.0),
+    },
+)
+
+dy_mumu_m400to800 = dy.add_process(
+    name="dy_mumu_m400to800",
+    id=51624,
+    xsecs={
+        13.6: Number(0.2691, {
+            "tot": 0.00004215,
+        }),
+    },
+    aux={
+        "mll": (400.0, 800.0),
+    },
+)
+
+dy_mumu_m800to1500 = dy.add_process(
+    name="dy_mumu_m800to1500",
+    id=51625,
+    xsecs={
+        13.6: Number(0.01915, {
+            "tot": 0.000003085,
+        }),
+    },
+    aux={
+        "mll": (800, 1500),
+    },
+)
+
+dy_mumu_m1500to2500 = dy.add_process(
+    name="dy_mumu_m1500to2500",
+    id=51626,
+    xsecs={
+        13.6: Number(0.001111, {
+            "tot": 1.787e-7,
+        }),
+    },
+    aux={
+        "mll": (1500.0, 2500.0),
+    },
+)
+
+dy_mumu_m2500to4000 = dy.add_process(
+    name="dy_mumu_m2500to4000",
+    id=51627,
+    xsecs={
+        13.6: Number(0.00005949, {
+            "tot": 9.162e-9,
+        }),
+    },
+    aux={
+        "mll": (2500.0, 4000.0),
+    },
+)
+
+dy_mumu_m4000to6000 = dy.add_process(
+    name="dy_mumu_m4000to6000",
+    id=51628,
+    xsecs={
+        13.6: Number(0.000001558, {
+            "tot": 2.078e-10,
+        }),
+    },
+    aux={
+        "mll": (4000.0, 6000.0),
+    },
+)
+
+dy_mumu_m6000toinf = dy.add_process(
+    name="dy_mumu_m6000toinf",
+    id=51629,
+    xsecs={
+        13.6: Number(3.519e-8, {
+            "tot": 6.811e-12,
+        }),
+    },
+    aux={
+        "mll": (6000.0, const.inf),
+    },
+)
+
+# 2 tau
+
+dy_tautau_m10to50 = dy.add_process(
+    name="dy_tautau_m10to50",
+    id=51630,
+    xsecs={
+        13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
+    },
+    aux={
+        "mll": (10.0, 50.0),
+    },
+)
+
+dy_tautau_m50to120 = dy.add_process(
+    name="dy_tautau_m50to120",
+    id=51631,
+    xsecs={
+        13.6: Number(2219, {
+            "tot": 0.2327,
+        }),
+    },
+    aux={
+        "mll": (50.0, 120.0),
+    },
+)
+
+dy_tautau_m120to200 = dy.add_process(
+    name="dy_tautau_m120to200",
+    id=51632,
+    xsecs={
+        13.6: Number(21.65, {
+            "tot": 0.003184,
+        }),
+    },
+    aux={
+        "mll": (120.0, 200.0),
+    },
+)
+
+dy_tautau_m200to400 = dy.add_process(
+    name="dy_tautau_m200to400",
+    id=51633,
+    xsecs={
+        13.6: Number(3.058, {
+            "tot": 0.000465,
+        }),
+    },
+    aux={
+        "mll": (200.0, 400.0),
+    },
+)
+
+dy_tautau_m400to800 = dy.add_process(
+    name="dy_tautau_m400to800",
+    id=51634,
+    xsecs={
+        13.6: Number(0.2691, {
+            "tot": 0.00004215,
+        }),
+    },
+    aux={
+        "mll": (400.0, 800.0),
+    },
+)
+
+dy_tautau_m800to1500 = dy.add_process(
+    name="dy_tautau_m800to1500",
+    id=51635,
+    xsecs={
+        13.6: Number(0.01915, {
+            "tot": 0.000003085,
+        }),
+    },
+    aux={
+        "mll": (800.0, 1500.0),
+    },
+)
+
+dy_tautau_m1500to2500 = dy.add_process(
+    name="dy_tautau_m1500to2500",
+    id=51636,
+    xsecs={
+        13.6: Number(0.001111, {
+            "tot": 1.787e-7,
+        }),
+    },
+    aux={
+        "mll": (1500.0, 2500.0),
+    },
+)
+
+dy_tautau_m2500to4000 = dy.add_process(
+    name="dy_tautau_m2500to4000",
+    id=51637,
+    xsecs={
+        13.6: Number(0.00005949, {
+            "tot": 9.162e-9,
+        }),
+    },
+    aux={
+        "mll": (2500.0, 4000.0),
+    },
+)
+
+dy_tautau_m4000to6000 = dy.add_process(
+    name="dy_tautau_m4000to6000",
+    id=51638,
+    xsecs={
+        13.6: Number(0.000001558, {
+            "tot": 2.078e-10,
+        }),
+    },
+    aux={
+        "mll": (4000.0, 6000.0),
+    },
+)
+
+dy_tautau_m6000toinf = dy.add_process(
+    name="dy_tautau_m6000toinf",
+    id=51639,
+    xsecs={
+        13.6: Number(3.519e-8, {
+            "tot": 6.811e-12,
+        }),
+    },
+    aux={
+        "mll": (6000.0, const.inf),
     },
 )
 
@@ -796,6 +1373,31 @@ z_qq_2j_pt600toinf = z_qq.add_process(
     xsecs={
         # XSDB
         13.6: Number(0.4459, {"total": 0.002084}),
+    },
+)
+
+# dedicated vbf production (pp -> z + qq)
+z_vbf = z.add_process(
+    name="z_vbf",
+    id=55300,
+    label=f"{z.label} (VBF)",
+)
+
+z_vbf_zll = z_vbf.add_process(
+    name="z_vbf_zll",
+    id=55310,
+    label=r"Z $\rightarrow ll$ (VBF)",
+)
+
+z_vbf_zll_m50toinf = z_vbf_zll.add_process(
+    name="z_vbf_zll_m50toinf",
+    id=55313,
+    xsecs={
+        # based on GenXSecAnalyzer
+        13.6: Number(7.769000, {"tot": 0.002434}),
+    },
+    aux={
+        "mll": (50.0, const.inf),
     },
 )
 
@@ -1107,8 +1709,28 @@ w_lnu_ge3j = w_lnu.add_process(
     },
 )
 
+# dedicated vbf production (pp -> w + qq)
+w_vbf = w.add_process(
+    name="w_vbf",
+    id=6300,
+    label=f"{w.label} (VBF)",
+)
+
+w_vbf_wlnu = w_vbf.add_process(
+    name="w_vbf_wlnu",
+    id=6310,
+    label=r"W $\rightarrow l\nu$ (VBF)",
+    xsecs={
+        # based on GenXSecAnalyzer
+        13.6: Number(41.0400, {"tot": 0.1968}),
+    },
+)
+
+w_vbf.set_xsec(13.6, w_vbf_wlnu.get_xsec(13.6) / const.br_w.lep)
+
 #
 # EWK radiations
+# TODO: EWK is inaccurate, use dedicated z_vbf and w_vbf processes instead
 #
 
 ewk = Process(
@@ -1160,7 +1782,6 @@ vv = Process(
     name="vv",
     id=8000,
     label="Di-Boson",
-    xsecs={13: Number(0.1)},  # updated below as the sum over WW, WZ, ZZ
 )
 
 # ZZ 13 TeV xsec values at nNNLO from

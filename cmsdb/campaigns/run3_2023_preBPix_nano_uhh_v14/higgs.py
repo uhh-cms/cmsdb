@@ -30,6 +30,22 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="h_ggf_hbb_powheg",
+    id=14920330,
+    processes=[procs.h_ggf_hbb],
+    keys=[
+        "/GluGluHto2B_M-125_TuneCP5_13p6TeV_powheg-minlo-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=15,
+    n_events=10_911_000,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
     name="h_vbf_htt_powheg",
     id=15022656,
     processes=[procs.h_vbf_htt],
@@ -41,6 +57,22 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="h_vbf_hbb_powheg",
+    id=14900090,
+    processes=[procs.h_vbf_hbb],
+    keys=[
+        "/VBFHto2B_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=17,
+    n_events=11_049_000,
+    aux={
+        "merging_factors": {
+            "nominal": 20,
         },
     },
 )

@@ -30,6 +30,7 @@ cpn.add_dataset(
             "nominal_ext1": 18,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -50,6 +51,7 @@ cpn.add_dataset(
             "nominal_ext1": 18,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -70,6 +72,7 @@ cpn.add_dataset(
             "nominal_ext1": 19,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -90,6 +93,7 @@ cpn.add_dataset(
             "nominal_ext1": 18,
         },
         "era": "C",
+        "jec_era": "RunCv4",
     },
 )
 
@@ -114,6 +118,7 @@ cpn.add_dataset(
             "nominal_ext1": 15,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -134,6 +139,7 @@ cpn.add_dataset(
             "nominal_ext1": 15,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -154,6 +160,7 @@ cpn.add_dataset(
             "nominal_ext1": 15,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -174,6 +181,7 @@ cpn.add_dataset(
             "nominal_ext1": 16,
         },
         "era": "C",
+        "jec_era": "RunCv4",
     },
 )
 
@@ -196,6 +204,7 @@ cpn.add_dataset(
             "nominal": 13,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -214,6 +223,7 @@ cpn.add_dataset(
             "nominal": 13,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -232,6 +242,7 @@ cpn.add_dataset(
             "nominal": 15,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -250,6 +261,7 @@ cpn.add_dataset(
             "nominal": 14,
         },
         "era": "C",
+        "jec_era": "RunCv4",
     },
 )
 
@@ -274,6 +286,7 @@ cpn.add_dataset(
             "nominal_ext1": 13,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -294,6 +307,7 @@ cpn.add_dataset(
             "nominal_ext1": 13,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -314,6 +328,7 @@ cpn.add_dataset(
             "nominal_ext1": 14,
         },
         "era": "C",
+        "jec_era": "RunCv123",
     },
 )
 
@@ -334,5 +349,6 @@ cpn.add_dataset(
             "nominal_ext1": 14,
         },
         "era": "C",
+        "jec_era": "RunCv4",
     },
 )
