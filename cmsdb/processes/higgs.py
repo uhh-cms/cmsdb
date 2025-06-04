@@ -1422,26 +1422,40 @@ ttzh = ttvh.add_process(
     name="ttzh",
     id=120000,
     label=r"$t\bar{t}ZH$",
+    xsecs={
+        # taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2022/122 (v25)
+        13: Number(1.535e-03, {
+            "scale": (0.019j, 0.068j),
+            "pdf": 0.030j,
+        }),
+    },
     aux={"production_mode_parent": ttvh},
 )
+# naive xsec scaling for 13.6 TeV using the ggF xsec
+ttzh.xsecs[13.6] = ttzh.xsecs[13] * h_ggf.xsecs[13.6] / h_ggf.xsecs[13]
 ttwh = ttvh.add_process(
     name="ttwh",
     id=130000,
     label=r"$t\bar{t}WH$",
+    xsecs={
+        13: Number(1.538e-03),
+    },
     aux={"production_mode_parent": ttvh},
 )
+# naive xsec scaling for 13.6 TeV using the ggF xsec
+ttwh.xsecs[13.6] = ttwh.xsecs[13] * h_ggf.xsecs[13.6] / h_ggf.xsecs[13]
 thw = h.add_process(
     name="thw",
     id=140000,
     label=r"$tHW$",
     xsecs={
         13: Number(1.517E-02, {
-            "scale": (4.9j, 6.7j),
-            "pdf": 6.3j,
+            "scale": (0.049j, 0.067j),
+            "pdf": 0.063j,
         }),
         13.6: Number(1.720E-02, {
-            "scale": (2.4j, 1.7j),
-            "pdf": 2.2j,
+            "scale": (0.024j, 0.017j),
+            "pdf": 0.022j,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
@@ -1454,11 +1468,11 @@ thq = h.add_process(
     xsecs={
         13: Number(7.425E-02, {
             "scale": (0.065j, 0.149j),
-            "pdf": 3.7j,
+            "pdf": 0.037j,
         }),
         13.6: Number(8.362E-02, {  # value for mH=125 GeV
             "scale": (0.065j, 0.148j),
-            "pdf": 3.7j,
+            "pdf": 0.037j,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
@@ -1471,11 +1485,11 @@ thb = h.add_process(
     xsecs={
         13: Number(2.879E-03, {
             "scale": (0.024j, 0.018j),
-            "pdf": 2.2j,
+            "pdf": 0.022j,
         }),
         13.6: Number(3.068E-03, {  # value for mH=125 GeV
             "scale": (0.024j, 0.017j),
-            "pdf": 2.2j,
+            "pdf": 0.022j,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
