@@ -1025,7 +1025,7 @@ cpn.add_dataset(
 
 ####################################################################################################
 #
-# ttV, ttVV
+# ttV, ttVV, tttt
 #
 ####################################################################################################
 
@@ -1069,6 +1069,102 @@ cpn.add_dataset(
             ],
             n_files=52,
             n_events=1536000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tttt_amcatnlo",
+    id=14811100,
+    processes=[procs.tttt],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTTT_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v1/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=34,  # 34-0
+            n_events=8571152,
+        ),
+    ),
+)
+
+####################################################################################################
+#
+# ttGamma
+#
+####################################################################################################
+
+cpn.add_dataset(
+    name="ttg_pt10to100_amcatnlo",
+    id=14850198,
+    processes=[procs.ttg_pt10to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v4/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=42,  # 42-0
+            n_events=3565533,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_pt100to200_amcatnlo",
+    id=14845797,
+    processes=[procs.ttg_pt100to200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=34,  # 34-0
+            n_events=997649,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_pt200toinf_amcatnlo",
+    id=14850493,
+    processes=[procs.ttg_pt200toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=28,  # 28-0
+            n_events=1041354,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tgqb_4f_amcatnlo",
+    id=14791321,
+    processes=[procs.tgqb],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TGQB-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=59,  # 59-0
+            n_events=7520676,
         ),
     ),
 )
