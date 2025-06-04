@@ -1244,3 +1244,38 @@ cpn.add_dataset(
         ),
     ),
 )
+
+####################################################################################################
+#
+# tH
+#
+####################################################################################################
+
+cpn.add_dataset(
+    name="thq_4f_madgraph",
+    id=15043260,
+    processes=[procs.thq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/THQ_ctcvcp_HIncl_M-125_4FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=67,
+            n_events=3976039,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="thw_madgraph",
+    id=15043139,
+    processes=[procs.thw],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/THW_ctcvcp_HIncl_M-125_5FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=33,
+            n_events=1985777,
+        ),
+    ),
+)
