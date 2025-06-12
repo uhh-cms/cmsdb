@@ -771,6 +771,7 @@ dy_pt650toinf = dy.add_process(
 # NNLO decays split into specific leptons
 #
 
+# 2 e
 dy_ee_m50toinf = dy.add_process(
     name="dy_ee_m50toinf",
     id=51800,
@@ -793,7 +794,7 @@ dy_ee_m10to50 = dy.add_process(
     },
 )
 
-dy_ee_m50to120 = dy.add_process(
+dy_ee_m50to120 = dy_ee_m50toinf.add_process(
     name="dy_ee_m50to120",
     id=51811,
     xsecs={
@@ -806,7 +807,7 @@ dy_ee_m50to120 = dy.add_process(
     },
 )
 
-dy_ee_m120to200 = dy.add_process(
+dy_ee_m120to200 = dy_ee_m50toinf.add_process(
     name="dy_ee_m120to200",
     id=51812,
     xsecs={
@@ -815,11 +816,11 @@ dy_ee_m120to200 = dy.add_process(
         }),
     },
     aux={
-        "mll": (50.0, const.inf),
+        "mll": (120.0, 200.0),
     },
 )
 
-dy_ee_m200to400 = dy.add_process(
+dy_ee_m200to400 = dy_ee_m50toinf.add_process(
     name="dy_ee_m200to400",
     id=51813,
     xsecs={
@@ -832,7 +833,7 @@ dy_ee_m200to400 = dy.add_process(
     },
 )
 
-dy_ee_m400to800 = dy.add_process(
+dy_ee_m400to800 = dy_ee_m50toinf.add_process(
     name="dy_ee_m400to800",
     id=51814,
     xsecs={
@@ -845,7 +846,7 @@ dy_ee_m400to800 = dy.add_process(
     },
 )
 
-dy_ee_m800to1500 = dy.add_process(
+dy_ee_m800to1500 = dy_ee_m50toinf.add_process(
     name="dy_ee_m800to1500",
     id=51815,
     xsecs={
@@ -858,7 +859,7 @@ dy_ee_m800to1500 = dy.add_process(
     },
 )
 
-dy_ee_m1500to2500 = dy.add_process(
+dy_ee_m1500to2500 = dy_ee_m50toinf.add_process(
     name="dy_ee_m1500to2500",
     id=51816,
     xsecs={
@@ -871,7 +872,7 @@ dy_ee_m1500to2500 = dy.add_process(
     },
 )
 
-dy_ee_m2500to4000 = dy.add_process(
+dy_ee_m2500to4000 = dy_ee_m50toinf.add_process(
     name="dy_ee_m2500to4000",
     id=51817,
     xsecs={
@@ -884,7 +885,7 @@ dy_ee_m2500to4000 = dy.add_process(
     },
 )
 
-dy_ee_m4000to6000 = dy.add_process(
+dy_ee_m4000to6000 = dy_ee_m50toinf.add_process(
     name="dy_ee_m4000to6000",
     id=51818,
     xsecs={
@@ -897,7 +898,7 @@ dy_ee_m4000to6000 = dy.add_process(
     },
 )
 
-dy_ee_m6000toinf = dy.add_process(
+dy_ee_m6000toinf = dy_ee_m50toinf.add_process(
     name="dy_ee_m6000toinf",
     id=51619,
     xsecs={
@@ -910,8 +911,7 @@ dy_ee_m6000toinf = dy.add_process(
     },
 )
 
-# 2mu
-
+# 2 mu
 dy_mumu_m10to50 = dy.add_process(
     name="dy_mumu_m10to50",
     id=51620,
@@ -984,7 +984,7 @@ dy_mumu_m800to1500 = dy.add_process(
         }),
     },
     aux={
-        "mll": (800, 1500),
+        "mll": (800.0, 1500.0),
     },
 )
 
