@@ -10,7 +10,7 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_uhh_v14 import campaign_run3_2023_p
 
 
 #
-# Drell-Yan
+# Drell-Yan, LO
 #
 
 cpn.add_dataset(
@@ -265,6 +265,493 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 20,
+        },
+    },
+)
+
+#
+# Drell-Yan, NLO
+#
+
+# 2 e
+cpn.add_dataset(
+    name="dy_ee_m10to50_powheg",
+    id=14811287,
+    processes=[procs.dy_ee_m10to50],
+    keys=[
+        "/DYto2E_MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=1_476_000,
+    aux={
+        "merging_factors": {
+            "nominal": 44,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m50to120_powheg",
+    id=14809373,
+    processes=[procs.dy_ee_m50to120],
+    keys=[
+        "/DYto2E_MLL-50to120_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=2_910_000,
+    aux={
+        "merging_factors": {
+            "nominal": 26,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m120to200_powheg",
+    id=14808963,
+    processes=[procs.dy_ee_m120to200],
+    keys=[
+        "/DYto2E_MLL-120to200_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1_476_000,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m200to400_powheg",
+    id=14808883,
+    processes=[procs.dy_ee_m200to400],
+    keys=[
+        "/DYto2E_MLL-200to400_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=867_000,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m400to800_powheg",
+    id=14809497,
+    processes=[procs.dy_ee_m400to800],
+    keys=[
+        "/DYto2E_MLL-400to800_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=894_000,
+    aux={
+        "merging_factors": {
+            "nominal": 28,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m800to1500_powheg",
+    id=14811299,
+    processes=[procs.dy_ee_m800to1500],
+    keys=[
+        "/DYto2E_MLL-800to1500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=591_000,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m1500to2500_powheg",
+    id=14809507,
+    processes=[procs.dy_ee_m1500to2500],
+    keys=[
+        "/DYto2E_MLL-1500to2500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=578_000,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m2500to4000_powheg",
+    id=14808646,
+    processes=[procs.dy_ee_m2500to4000],
+    keys=[
+        "/DYto2E_MLL-2500to4000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=278_000,
+    aux={
+        "merging_factors": {
+            "nominal": 22,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m4000to6000_powheg",
+    id=14808303,
+    processes=[procs.dy_ee_m4000to6000],
+    keys=[
+        "/DYto2E_MLL-4000to6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=300_000,
+    aux={
+        "merging_factors": {
+            "nominal": 28,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_ee_m6000toinf_powheg",
+    id=14807806,
+    processes=[procs.dy_ee_m6000toinf],
+    keys=[
+        "/DYto2E_MLL-6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=150_000,
+    aux={
+        "merging_factors": {
+            "nominal": 12,
+        },
+    },
+)
+
+# 2 mu
+cpn.add_dataset(
+    name="dy_mumu_m10to50_powheg",
+    id=14809405,
+    processes=[procs.dy_mumu_m10to50],
+    keys=[
+        "/DYto2Mu_MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=1_468_000,
+    aux={
+        "merging_factors": {
+            "nominal": 46,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m50to120_powheg",
+    id=14811432,
+    processes=[procs.dy_mumu_m50to120],
+    keys=[
+        "/DYto2Mu_MLL-50to120_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=2_852_000,
+    aux={
+        "merging_factors": {
+            "nominal": 22,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m120to200_powheg",
+    id=14811002,
+    processes=[procs.dy_mumu_m120to200],
+    keys=[
+        "/DYto2Mu_MLL-120to200_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=1_496_000,
+    aux={
+        "merging_factors": {
+            "nominal": 25,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m200to400_powheg",
+    id=14808258,
+    processes=[procs.dy_mumu_m200to400],
+    keys=[
+        "/DYto2Mu_MLL-200to400_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=891_000,
+    aux={
+        "merging_factors": {
+            "nominal": 20,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m400to800_powheg",
+    id=14810814,
+    processes=[procs.dy_mumu_m400to800],
+    keys=[
+        "/DYto2Mu_MLL-400to800_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=892_000,
+    aux={
+        "merging_factors": {
+            "nominal": 23,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m800to1500_powheg",
+    id=14809305,
+    processes=[procs.dy_mumu_m800to1500],
+    keys=[
+        "/DYto2Mu_MLL-800to1500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=584_000,
+    aux={
+        "merging_factors": {
+            "nominal": 30,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m1500to2500_powheg",
+    id=14801369,
+    processes=[procs.dy_mumu_m1500to2500],
+    keys=[
+        "/DYto2Mu_MLL-1500to2500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=600_000,
+    aux={
+        "merging_factors": {
+            "nominal": 26,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m2500to4000_powheg",
+    id=14808321,
+    processes=[procs.dy_mumu_m2500to4000],
+    keys=[
+        "/DYto2Mu_MLL-2500to4000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=291_000,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m4000to6000_powheg",
+    id=14808096,
+    processes=[procs.dy_mumu_m4000to6000],
+    keys=[
+        "/DYto2Mu_MLL-4000to6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=294_000,
+    aux={
+        "merging_factors": {
+            "nominal": 20,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m6000toinf_powheg",
+    id=14808312,
+    processes=[procs.dy_mumu_m6000toinf],
+    keys=[
+        "/DYto2Mu_MLL-6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=150_000,
+    aux={
+        "merging_factors": {
+            "nominal": 12,
+        },
+    },
+)
+
+# 2 tau
+cpn.add_dataset(
+    name="dy_tautau_m10to50_powheg",
+    id=14808689,
+    processes=[procs.dy_tautau_m10to50],
+    keys=[
+        "/DYto2Tau_MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=1_500_000,
+    aux={
+        "merging_factors": {
+            "nominal": 46,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50to120_powheg",
+    id=14810799,
+    processes=[procs.dy_tautau_m50to120],
+    keys=[
+        "/DYto2Tau_MLL-50to120_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=2_856_000,
+    aux={
+        "merging_factors": {
+            "nominal": 27,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m120to200_powheg",
+    id=14811310,
+    processes=[procs.dy_tautau_m120to200],
+    keys=[
+        "/DYto2Tau_MLL-120to200_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=1_500_000,
+    aux={
+        "merging_factors": {
+            "nominal": 29,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m200to400_powheg",
+    id=14808910,
+    processes=[procs.dy_tautau_m200to400],
+    keys=[
+        "/DYto2Tau_MLL-200to400_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=900_000,
+    aux={
+        "merging_factors": {
+            "nominal": 19,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m400to800_powheg",
+    id=14808457,
+    processes=[procs.dy_tautau_m400to800],
+    keys=[
+        "/DYto2Tau_MLL-400to800_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=882_000,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m800to1500_powheg",
+    id=14808384,
+    processes=[procs.dy_tautau_m800to1500],
+    keys=[
+        "/DYto2Tau_MLL-800to1500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=585_000,
+    aux={
+        "merging_factors": {
+            "nominal": 20,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m1500to2500_powheg",
+    id=14809458,
+    processes=[procs.dy_tautau_m1500to2500],
+    keys=[
+        "/DYto2Tau_MLL-1500to2500_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=588_000,
+    aux={
+        "merging_factors": {
+            "nominal": 13,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m2500to4000_powheg",
+    id=14809626,
+    processes=[procs.dy_tautau_m2500to4000],
+    keys=[
+        "/DYto2Tau_MLL-2500to4000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=291_000,
+    aux={
+        "merging_factors": {
+            "nominal": 22,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m4000to6000_powheg",
+    id=14808308,
+    processes=[procs.dy_tautau_m4000to6000],
+    keys=[
+        "/DYto2Tau_MLL-4000to6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=297_000,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m6000toinf_powheg",
+    id=14808291,
+    processes=[procs.dy_tautau_m6000toinf],
+    keys=[
+        "/DYto2Tau_MLL-6000_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1,
+    n_events=150_000,
+    aux={
+        "merging_factors": {
+            "nominal": 13,
         },
     },
 )
