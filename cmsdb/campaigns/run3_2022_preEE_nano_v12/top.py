@@ -1130,6 +1130,23 @@ cpn.add_dataset(
         ),
     ),
 )
+cpn.add_dataset(
+    name="ttwz_madgraph",
+    id=15006953,
+    processes=[procs.ttwz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTWZ_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=21,  # 21-0
+            n_events=272400,
+        ),
+    ),
+)
 
 #
 # tttt
