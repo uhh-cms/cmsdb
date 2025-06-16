@@ -832,3 +832,23 @@ cpn.add_dataset(
         },
     },
 )
+
+#
+# 4 top
+#
+
+cpn.add_dataset(
+    name="tttt_amcatnlo",
+    id=14791609,
+    processes=[procs.tttt],
+    keys=[
+        "/TTTT_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=11,
+    n_events=2_400_025,
+    aux={
+        "merging_factors": {
+            "nominal": 9,
+        },
+    },
+)
