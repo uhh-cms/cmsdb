@@ -769,6 +769,7 @@ dy_pt650toinf = dy.add_process(
 
 #
 # NNLO decays split into specific leptons
+# (cross sections from xsdb)
 #
 
 # 2 e
@@ -911,6 +912,25 @@ dy_ee_m6000toinf = dy_ee_m50toinf.add_process(
     },
 )
 
+# normalize ee mll bins to nnlo expectation from inclusive m50toinf / 3
+dy_ee_m_procs = [
+    dy_ee_m50to120,
+    dy_ee_m120to200,
+    dy_ee_m200to400,
+    dy_ee_m400to800,
+    dy_ee_m800to1500,
+    dy_ee_m1500to2500,
+    dy_ee_m2500to4000,
+    dy_ee_m4000to6000,
+    dy_ee_m6000toinf,
+]
+dy_ee_m_corr_13p6 = (
+    (dy_m50toinf.get_xsec(13.6) / const.n_leps) /
+    sum(proc.get_xsec(13.6) for proc in dy_ee_m_procs)
+)
+for proc in dy_ee_m_procs:
+    proc.xsecs[13.6] *= dy_ee_m_corr_13p6
+
 # 2 mu
 dy_mumu_m10to50 = dy.add_process(
     name="dy_mumu_m10to50",
@@ -1040,8 +1060,26 @@ dy_mumu_m6000toinf = dy.add_process(
     },
 )
 
-# 2 tau
+# normalize mumu mll bins to nnlo expectation from inclusive m50toinf / 3
+dy_mumu_m_procs = [
+    dy_mumu_m50to120,
+    dy_mumu_m120to200,
+    dy_mumu_m200to400,
+    dy_mumu_m400to800,
+    dy_mumu_m800to1500,
+    dy_mumu_m1500to2500,
+    dy_mumu_m2500to4000,
+    dy_mumu_m4000to6000,
+    dy_mumu_m6000toinf,
+]
+dy_mumu_m_corr_13p6 = (
+    (dy_m50toinf.get_xsec(13.6) / const.n_leps) /
+    sum(proc.get_xsec(13.6) for proc in dy_mumu_m_procs)
+)
+for proc in dy_mumu_m_procs:
+    proc.xsecs[13.6] *= dy_mumu_m_corr_13p6
 
+# 2 tau
 dy_tautau_m10to50 = dy.add_process(
     name="dy_tautau_m10to50",
     id=51630,
@@ -1169,6 +1207,25 @@ dy_tautau_m6000toinf = dy.add_process(
         "mll": (6000.0, const.inf),
     },
 )
+
+# normalize tautau mll bins to nnlo expectation from inclusive m50toinf / 3
+dy_tautau_m_procs = [
+    dy_tautau_m50to120,
+    dy_tautau_m120to200,
+    dy_tautau_m200to400,
+    dy_tautau_m400to800,
+    dy_tautau_m800to1500,
+    dy_tautau_m1500to2500,
+    dy_tautau_m2500to4000,
+    dy_tautau_m4000to6000,
+    dy_tautau_m6000toinf,
+]
+dy_tautau_m_corr_13p6 = (
+    (dy_m50toinf.get_xsec(13.6) / const.n_leps) /
+    sum(proc.get_xsec(13.6) for proc in dy_tautau_m_procs)
+)
+for proc in dy_tautau_m_procs:
+    proc.xsecs[13.6] *= dy_tautau_m_corr_13p6
 
 #
 # Z boson (no photon/DY)
