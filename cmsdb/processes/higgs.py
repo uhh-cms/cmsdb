@@ -1418,6 +1418,9 @@ ttvh = h.add_process(
     label=r"$t\bar{t}VH$",
     aux={"production_mode_parent": h},
 )
+
+# naive xsec scaling for 13.6 TeV using the ggF xsec
+k_factor_13p6_tev = h_ggf.xsecs[13.6] / h_ggf.xsecs[13]
 ttzh = ttvh.add_process(
     name="ttzh",
     id=120000,
@@ -1428,22 +1431,27 @@ ttzh = ttvh.add_process(
             "scale": (0.019j, 0.068j),
             "pdf": 0.030j,
         }),
+        # 13.6 TeV values obtained from naice xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
+        13.6: Number(1.535e-03, {
+            "scale": (0.019j, 0.068j),
+            "pdf": 0.030j,
+        }) * k_factor_13p6_tev,
     },
     aux={"production_mode_parent": ttvh},
 )
-# naive xsec scaling for 13.6 TeV using the ggF xsec
-ttzh.xsecs[13.6] = ttzh.xsecs[13] * h_ggf.xsecs[13.6] / h_ggf.xsecs[13]
+
 ttwh = ttvh.add_process(
     name="ttwh",
     id=130000,
     label=r"$t\bar{t}WH$",
     xsecs={
         13: Number(1.538e-03),
+        # 13.6 TeV values obtained from naice xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
+        13.6: Number(1.538e-03) * k_factor_13p6_tev,
     },
     aux={"production_mode_parent": ttvh},
 )
-# naive xsec scaling for 13.6 TeV using the ggF xsec
-ttwh.xsecs[13.6] = ttwh.xsecs[13] * h_ggf.xsecs[13.6] / h_ggf.xsecs[13]
+
 thw = h.add_process(
     name="thw",
     id=140000,
@@ -1460,6 +1468,7 @@ thw = h.add_process(
     },
     aux={"production_mode_parent": h},
 )
+
 # also named tH t-channel
 thq = h.add_process(
     name="thq",
@@ -1477,6 +1486,7 @@ thq = h.add_process(
     },
     aux={"production_mode_parent": h},
 )
+
 # also named tH s-channel
 thb = h.add_process(
     name="thb",

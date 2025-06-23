@@ -596,6 +596,7 @@ ttg_pt10to100 = ttg.add_process(
         13.6: Number(4.216, {"tot": 0.02245}) * k_factor_ttg,  # source: https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=39845888&currentPage=0&pageSize=10&searchQuery=DAS%3DTTG-1Jets_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8  # noqa: E501
     },
 )
+
 ttg_pt100to200 = ttg.add_process(
     name="ttg_pt100to200",
     id=4520,
@@ -604,6 +605,7 @@ ttg_pt100to200 = ttg.add_process(
         13.6: Number(0.4114, {"tot": 0.002858}) * k_factor_ttg,  # source: https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=39845888&currentPage=0&pageSize=10&searchQuery=DAS%3DTTG-1Jets_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8  # noqa: E501
     },
 )
+
 ttg_pt200toinf = ttg.add_process(
     name="ttg_pt200toinf",
     id=4530,
@@ -619,6 +621,7 @@ tg = Process(
     id=4600,
     label=r"$t + \gamma$",
 )
+
 tgqb = tg.add_process(
     name="tgqb",
     id=4610,
