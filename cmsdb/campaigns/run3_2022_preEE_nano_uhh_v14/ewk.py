@@ -558,11 +558,10 @@ cpn.add_dataset(
 )
 
 #
-# Drell-Yan NNLO, split in leptons
+# Drell-Yan NNLO
 #
 
-# 2 electron
-
+# 2 e
 cpn.add_dataset(
     name="dy_ee_m50toinf_powheg",
     id=14803284,
@@ -643,7 +642,6 @@ cpn.add_dataset(
     },
 )
 
-
 cpn.add_dataset(
     name="dy_ee_m400to800_powheg",
     id=14791330,
@@ -659,7 +657,6 @@ cpn.add_dataset(
         },
     },
 )
-
 
 cpn.add_dataset(
     name="dy_ee_m800to1500_powheg",
@@ -741,8 +738,7 @@ cpn.add_dataset(
     },
 )
 
-# 2 muon
-
+# 2 mu
 cpn.add_dataset(
     name="dy_mumu_m10to50_powheg",
     id=14801977,
@@ -904,7 +900,6 @@ cpn.add_dataset(
 )
 
 # 2 tau
-
 cpn.add_dataset(
     name="dy_tautau_m10to50_powheg",
     id=14791054,
