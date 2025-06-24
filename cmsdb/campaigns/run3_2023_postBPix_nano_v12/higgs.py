@@ -927,6 +927,42 @@ cpn.add_dataset(
     ),
 )
 
+cpn.add_dataset(
+    name="ttwh_madgraph",
+    id=14932716,
+    processes=[procs.ttwh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTWH_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=27,  # 27-0
+            n_events=969000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttzh_madgraph",
+    id=14943005,
+    processes=[procs.ttzh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTZH_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=29,  # 29-0
+            n_events=994000,
+        ),
+    ),
+)
+
 ####################################################################################################
 #
 # tH
