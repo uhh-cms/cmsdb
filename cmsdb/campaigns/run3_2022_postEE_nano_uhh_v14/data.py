@@ -66,6 +66,68 @@ cpn.add_dataset(
 )
 
 #
+# MuonEG
+#
+
+
+cpn.add_dataset(
+    name="data_muoneg_e",
+    id=14783434,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022E-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=16,
+    n_events=12_868_267,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+        },
+        "era": "E",
+    },
+)
+
+# NOTE: we had to veto rougly 900 events from this dataset due to one broken basket.
+cpn.add_dataset(
+    name="data_muoneg_f",
+    id=14784358,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022F-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=48,
+    n_events=38_215_918,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+        "era": "F",
+    },
+)
+
+
+cpn.add_dataset(
+    name="data_muoneg_g",
+    id=14784382,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022G-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=9,
+    n_events=6_238_527,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+        },
+        "era": "G",
+    },
+)
+
+
+#
 # Muon
 #
 
