@@ -8,6 +8,7 @@ Physics processes and cross sections.
 from cmsdb.processes.data import *  # noqa
 from cmsdb.processes.top import *  # noqa
 from cmsdb.processes.ewk import *  # noqa
+from cmsdb.processes.diboson import *  # noqa
 from cmsdb.processes.qcd import *  # noqa
 from cmsdb.processes.higgs import *  # noqa
 from cmsdb.processes.hh import *  # noqa

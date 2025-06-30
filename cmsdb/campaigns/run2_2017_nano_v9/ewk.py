@@ -343,9 +343,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zqq_zll_amcatnlo",
+    name="zz_2l2q_amcatnlo",
     id=14298864,
-    processes=[procs.zz_zqq_zll],
+    processes=[procs.zz_2l2q],
     keys=[
         "/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -355,9 +355,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zll_znunu_powheg",
+    name="zz_2l2nu_powheg",
     id=14237024,
-    processes=[procs.zz_zll_znunu],
+    processes=[procs.zz_2l2nu],
     keys=[
         "/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -367,9 +367,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zll_zll_powheg",
+    name="zz_4l_powheg",
     id=14243658,
-    processes=[procs.zz_zll_zll],
+    processes=[procs.zz_4l],
     keys=[
         "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -391,9 +391,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="wz_wlnu_zll_amcatnlo",
+    name="wz_3lnu_amcatnlo",
     id=14253602,
-    processes=[procs.wz_wlnu_zll],
+    processes=[procs.wz_3lnu],
     keys=[
         "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -403,9 +403,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="wz_wqq_zll_amcatnlo",
+    name="wz_2l2q_amcatnlo",
     id=14328000,
-    processes=[procs.wz_wqq_zll],
+    processes=[procs.wz_2l2q],
     keys=[
         "/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -426,9 +426,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_dl_powheg",
+    name="ww_2l2nu_powheg",
     id=14241651,
-    processes=[procs.ww_dl],
+    processes=[procs.ww_2l2nu],
     keys=[
         "/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
