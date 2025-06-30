@@ -9,6 +9,7 @@ __all__ = [
     "vv_4l", "vv_2l2nu", "vv_2l2q", "vv_2nu2q", "vv_4nu", "vv_4q", "vv_lnu2q", "vv_3lnu", "vv_l3nu",
     "zz_4l", "zz_2l2nu", "zz_2l2q", "zz_2nu2q", "zz_4nu", "zz_4q",
     "wz_3lnu", "wz_l3nu", "wz_lnu2q", "wz_2l2q", "wz_2nu2q", "wz_4q",
+    "ww_2l2nu", "ww_lnu2q", "ww_4q",
 ]
 
 from functools import partial
@@ -121,7 +122,6 @@ vv = Process(
     name="vv",
     id=8000,
     label="VV",
-    xsecs={13: Number(0.1)},  # updated below as the sum over WW, WZ, ZZ
 )
 
 vv_4l = add_vv_decay_process(vv, vv_decay_map["4l"], add_production_mode_parent=False)
@@ -134,16 +134,16 @@ vv_lnu2q = add_vv_decay_process(vv, vv_decay_map["lnu2q"], add_production_mode_p
 vv_3lnu = add_vv_decay_process(vv, vv_decay_map["3lnu"], add_production_mode_parent=False)
 vv_l3nu = add_vv_decay_process(vv, vv_decay_map["l3nu"], add_production_mode_parent=False)
 
-# ZZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
-# old value before update:
-# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(12.13) (LO)
-
 zz = vv.add_process(
     name="zz",
     id=8100,
     label="ZZ",
     xsecs={
-        13: Number(15.99, {"scale": (0.037j, 0.026j)}),
+        # https://link.springer.com/article/10.1007/JHEP03(2019)070#preview, table 3, nNNLO
+        13: Number(24.97, {"scale": (0.029j, 0.027j)}),
+        # no theory prediction found yet, so take accurate value at 13 TeV and scale by the ratio
+        # of XSDB values at https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=40&searchQuery=process_name%3D%5EZZ_TuneCP5_13.%2Bpythia8%24  # noqa
+        13.6: Number(24.97, {"scale": (0.029j, 0.027j)}) * (12.75 / 12.14),
     },
     aux={"production_mode_parent": "vv"},
 )
@@ -156,7 +156,6 @@ zz_4nu = add_vv_decay_process(zz, zz_decay_map["4nu"])
 zz_4q = add_vv_decay_process(zz, zz_decay_map["4q"])
 
 # WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
-# can this be used too? https://arxiv.org/pdf/2110.11231.pdf -> actual measurement, no theory prediction
 wp_z_xsec = {
     13: Number(28.55, {"scale": (0.041j, 0.032j)}),
 }
@@ -176,6 +175,10 @@ wz = vv.add_process(
         # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=28
         # shows a permille difference in the values calculated directly and the ones added from w+ and w-
         13: wp_z_xsec[13] + wm_z_xsec[13],
+        # no 13.6 theory prediction found yet, so take accurate value at 13 TeV and scale by the ratio of XSDB values
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=DAS%3DWZ_TuneCP5_13TeV-pythia
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=DAS%3DWZ_TuneCP5_13p6TeV-pythia
+        13.6: (wp_z_xsec[13] + wm_z_xsec[13]) * 29.12 / 27.59,
     },
     aux={"production_mode_parent": "vv"},
 )
@@ -187,14 +190,16 @@ wz_2l2q = add_vv_decay_process(wz, wz_decay_map["2l2q"])
 wz_2nu2q = add_vv_decay_process(wz, wz_decay_map["2nu2q"])
 wz_4q = add_vv_decay_process(wz, wz_decay_map["4q"])
 
-# old value before update:
-# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(75.91) (LO)
 ww = vv.add_process(
     name="ww",
     id=8300,
     label="WW",
     xsecs={
         13: Number(118.7, {"scale": (0.025j, 0.022j)}),
+        # no 13.6 theory prediction found yet, so take accurate value at 13 TeV and scale by the ratio of XSDB values
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=DAS=WW_TuneCP5_13TeV-pythia
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=DAS=WW_TuneCP5_13p6TeV-pythia
+        13.6: Number(118.7, {"scale": (0.025j, 0.022j)}) * 80.42 / 75.95,
     },
     aux={"production_mode_parent": "vv"},
 )
@@ -203,7 +208,7 @@ ww_2l2nu = add_vv_decay_process(ww, ww_decay_map["2l2nu"])
 ww_lnu2q = add_vv_decay_process(ww, ww_decay_map["lnu2q"])
 ww_4q = add_vv_decay_process(ww, ww_decay_map["4q"])
 
-# update vv cross section TODO use helper
+# update vv cross section
 vv.xsecs = add_xsecs(ww, wz, zz)
 vv_4l.xsecs = add_xsecs(zz_4l)
 vv_2l2nu.xsecs = add_xsecs(zz_2l2nu, ww_2l2nu)
