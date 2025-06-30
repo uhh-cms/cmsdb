@@ -1261,6 +1261,7 @@ cpn.add_dataset(
 # Di-boson
 #
 
+# LO
 cpn.add_dataset(
     name="zz_pythia",
     id=14788274,
@@ -1302,6 +1303,119 @@ cpn.add_dataset(
     ],
     n_files=20,
     n_events=16_770_000,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+# NLO
+cpn.add_dataset(
+    name="ww_2l2nu_powheg",
+    id=14888369,
+    processes=[procs.ww_2l2nu],
+    keys=[
+        "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=20,
+    n_events=12_951_000,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="ww_lnu2q_powheg",
+    id=14836275,
+    processes=[procs.ww_lnu2q],
+    keys=[
+        "/WWtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=79,
+    n_events=53_695_000,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="wz_3lnu_powheg",
+    id=14843525,
+    processes=[procs.wz_3lnu],
+    keys=[
+        "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=8,
+    n_events=5_519_000,
+    aux={
+        "merging_factors": {
+            "nominal": 19,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="wz_2l2q_powheg",
+    id=14888189,
+    processes=[procs.wz_2l2q],
+    keys=[
+        "/WZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=13,
+    n_events=8_366_000,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="wz_lnu2q_powheg",
+    id=14841024,
+    processes=[procs.wz_lnu2q],
+    keys=[
+        "/WZtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=25,
+    n_events=17_797_000,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="zz_2l2nu_powheg",
+    id=14888419,
+    processes=[procs.zz_2l2nu],
+    keys=[
+        "/ZZto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=39,
+    n_events=29_787_000,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="zz_2l2q_powheg",
+    id=14888214,
+    processes=[procs.zz_2l2q],
+    keys=[
+        "/ZZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=42,
+    n_events=29_757_000,
     aux={
         "merging_factors": {
             "nominal": 16,
