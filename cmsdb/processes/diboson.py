@@ -24,62 +24,62 @@ from cmsdb.util import DotDict, add_xsecs, add_decay_process
 add_vv_decay_process = partial(
     add_decay_process,
     name_func=lambda parent_name, decay_name: f"{parent_name}_{decay_name}",
-    label_func=lambda parent_label, decay_label: f"{parent_label} $\rightarrow$ {decay_label}",
+    label_func=lambda parent_label, decay_label: f"${parent_label} \rightarrow {decay_label}$",
 )
 
 vv_decay_map = DotDict.wrap({
     "4l": {  # ZZ
         "name": "4l",
         "id": 10,
-        "label": r"$4\ell$",
+        "label": r"4\ell",
         "br": -1,
     },
     "2l2nu": {  # ZZ, WW
         "name": "2l2nu",
         "id": 20,
-        "label": r"$2\ell 2\nu$",
+        "label": r"2\ell 2\nu",
         "br": -1,
     },
     "2l2q": {  # ZZ, WZ
         "name": "2l2q",
         "id": 30,
-        "label": r"$2\ell 2q$",
+        "label": r"2\ell 2q",
         "br": -1,
     },
     "2nu2q": {  # ZZ, WZ
         "name": "2nu2q",
         "id": 40,
-        "label": r"$2\nu 2q$",
+        "label": r"2\nu 2q",
         "br": -1,
     },
     "4nu": {  # ZZ
         "name": "4nu",
         "id": 50,
-        "label": r"$4\nu$",
+        "label": r"4\nu",
         "br": -1,
     },
     "4q": {  # ZZ, WW, WZ
         "name": "4q",
         "id": 60,
-        "label": r"$4q$",
+        "label": r"4q",
         "br": -1,
     },
     "lnu2q": {  # WW, WZ
         "name": "lnu2q",
         "id": 70,
-        "label": r"$\ell\nu 2q$",
+        "label": r"\ell\nu 2q",
         "br": -1,
     },
     "3lnu": {  # WZ
         "name": "3lnu",
         "id": 80,
-        "label": r"$3\ell\nu$",
+        "label": r"3\ell\nu",
         "br": -1,
     },
     "l3nu": {  # WZ
         "name": "l3nu",
         "id": 90,
-        "label": r"$\ell 3\nu$",
+        "label": r"\ell 3\nu",
         "br": -1,
     },
 })
