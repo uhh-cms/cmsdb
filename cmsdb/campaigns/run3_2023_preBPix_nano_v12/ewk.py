@@ -794,9 +794,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="ww_fh_powheg",
+    name="ww_4q_powheg",
     id=14888427,
-    processes=[procs.ww_fh],
+    processes=[procs.ww_4q],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -808,9 +808,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="ww_dl_powheg",
+    name="ww_2l2nu_powheg",
     id=14888370,
-    processes=[procs.ww_dl],
+    processes=[procs.ww_2l2nu],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -822,9 +822,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="ww_sl_powheg",
+    name="ww_lnu2q_powheg",
     id=14836299,
-    processes=[procs.ww_sl],
+    processes=[procs.ww_lnu2q],
     info=dict(
         nominal=DatasetInfo(
             keys=[

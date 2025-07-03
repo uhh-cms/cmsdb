@@ -63,12 +63,12 @@ __all__ = [
     "w_vbf", "w_vbf_wlnu",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
-    "vv",
-    "zz",
-    "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
-    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
-    "ww",
-    "ww_dl", "ww_sl", "ww_fh",
+    # "vv",
+    # "zz",
+    # "zz_2l2q", "zz_2l2nu", "zz_4l", "zz_4q", "zz_2nu2q",
+    # "wz", "wz_3lnu", "wz_2l2q", "wz_lnu2q",
+    # "ww",
+    # "ww_2l2nu", "ww_lnu2q", "ww_4q",
     "vvv",
     "zzz", "wzz", "wwz", "www",
 ]
@@ -78,7 +78,6 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
-from cmsdb.util import multiply_xsecs
 
 
 #
@@ -1829,180 +1828,6 @@ ewk_z_ll_m50toinf = ewk.add_process(
         13: Number(6.206, {"tot": 0.002081}),
     },
 )
-
-
-#
-# Di-boson
-#
-
-vv = Process(
-    name="vv",
-    id=8000,
-    label="Di-Boson",
-)
-
-# ZZ 13 TeV xsec values at nNNLO from
-zz = vv.add_process(
-    name="zz",
-    id=8100,
-    label="ZZ",
-    xsecs={
-        # https://link.springer.com/article/10.1007/JHEP03(2019)070#preview, table 3, nNNLO
-        13: Number(24.97, {"scale": (0.029j, 0.027j)}),
-        # no theory prediction found yet, so take accurate value at 13 TeV and scale by the ratio
-        # of XSDB values at https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=40&searchQuery=process_name%3D%5EZZ_TuneCP5_13.%2Bpythia8%24  # noqa
-        13.6: Number(24.97, {"scale": (0.029j, 0.027j)}) * (12.75 / 12.14),
-    },
-)
-
-zz_zqq_zll = zz.add_process(
-    name="zz_zqq_zll",
-    id=8110,
-    xsecs=multiply_xsecs(zz, const.br_zz.llqq),
-)
-
-zz_zll_znunu = zz.add_process(
-    name="zz_zll_znunu",
-    id=8120,
-    xsecs=multiply_xsecs(zz, const.br_zz.llnunu),
-)
-
-zz_zll_zll = zz.add_process(
-    name="zz_zll_zll",
-    id=8130,
-    xsecs=multiply_xsecs(zz, const.br_zz.llll),
-)
-
-zz_zqq_zqq = zz.add_process(
-    name="zz_zqq_zqq",
-    id=8140,
-    xsecs=multiply_xsecs(zz, const.br_zz.qqqq),
-)
-
-zz_znunu_zqq = zz.add_process(
-    name="zz_znunu_zqq",
-    id=8150,
-    xsecs=multiply_xsecs(zz, const.br_zz.qqnunu),
-)
-
-# WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
-wp_z_xsec = {
-    13: Number(28.55, {"scale": (0.041j, 0.032j)}),
-}
-
-wm_z_xsec = {
-    13: Number(18.19, {"scale": (0.041j, 0.033j)}),
-}
-
-# old value before update:
-# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(25.56) (LO)
-wz = vv.add_process(
-    name="wz",
-    id=8200,
-    label="WZ",
-    xsecs={
-        # as a remark, the W cross section calculation from
-        # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=28
-        # shows a permille difference in the values calculated directly and the ones added from w+ and w-
-        13: wp_z_xsec[13] + wm_z_xsec[13],
-        # 13.6 from GenXSecAnalyzer:
-        13.6: Number(29.17, {
-            "tot": 0.005941,  # xsdb: Number(29.1, {"tot": 0.1318}),
-        }),
-    },
-)
-
-wz_wlnu_zll = wz.add_process(
-    name="wz_wlnu_zll",
-    id=8210,
-    xsecs=multiply_xsecs(zz, const.br_w.lep * const.br_z.clep),
-)
-
-wz_wqq_zll = wz.add_process(
-    name="wz_wqq_zll",
-    id=8220,
-    xsecs=multiply_xsecs(zz, const.br_w.had * const.br_z.clep),
-)
-
-
-# no additional cut found in generator card in MCM:
-# dataset: /WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2/MINIAODSIM  # noqa
-# therefore, value obtained from branching ratio.
-# Log for GenXSecAnalyzer of
-# for WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) -> value : Number(9.159, {"tot": 0.008259})
-# also available, but not used here
-wz_wlnu_zqq = wz.add_process(
-    name="wz_wlnu_zqq",
-    id=8230,
-    xsecs={
-        13: wz.get_xsec(13) * const.br_w.lep * const.br_z.qq,  # value around 10.65
-    },
-)
-
-# NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
-# itself from https://arxiv.org/pdf/1408.5243.pdf v1
-
-# old value before update:
-# https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3) Number(75.91) (LO)
-ww = vv.add_process(
-    name="ww",
-    id=8300,
-    label="WW",
-    xsecs={
-        13: Number(118.7, {"scale": (0.025j, 0.022j)}),
-        # 13.6 from GenXSecAnalyzer:
-        13.6: Number(80.22, {
-            "tot": 0.01677,  # xsdb: Number(80.23, {"tot": 0.3733})
-        }),
-    },
-)
-
-# update vv cross section
-for cme in [13]:
-    vv.set_xsec(cme, ww.get_xsec(cme) + wz.get_xsec(cme) + zz.get_xsec(cme))
-
-# no additional cut found in generator card:
-# https://raw.githubusercontent.com/cms-sw/genproductions/master/bin/Powheg/production/2017/13TeV/WWTo2L2Nu_NNPDF31nnlo_13TeV/WWTo2L2Nu_NNPDF31nnlo_13TeV.input  # noqa
-# therefore, value obtained from branching ratio.
-# Log for GenXSecAnalyzer of
-# WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8 (Summer20UL16, NLO) with Number(11.09, {"tot": 0.00704})
-# also available, but not used here
-ww_dl = ww.add_process(
-    name="ww_dl",
-    id=8310,
-    xsecs={
-        13: ww.get_xsec(13) * const.br_ww.dl,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
-    },
-)
-
-# no additional cut found in generator card in MCM:
-# dataset: /WWTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2/MINIAODSIM  # noqa
-# therefore, value obtained from branching ratio.
-# Log for GenXSecAnalyzer of
-# for WWTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) -> value : Number(50.94, {"tot": 0.042})
-# also available, but not used here
-ww_sl = ww.add_process(
-    name="ww_sl",
-    id=8320,
-    xsecs={
-        13: ww.get_xsec(13) * const.br_ww.sl,  # value around 50.06 for comparison to GenXSecAnalyzer NLO result
-    },
-)
-
-# no additional cut found in generator card in MCM:
-# dataset: /WWTo4Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v3/MINIAODSIM  # noqa
-# therefore, value obtained from branching ratio.
-# Log for GenXSecAnalyzer of
-# for WWTo4Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) -> value : Number(51.53, {"tot": 0.04349})
-# also available, but not used here
-ww_fh = ww.add_process(
-    name="ww_fh",
-    id=8330,
-    xsecs={
-        13: ww.get_xsec(13) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
-    },
-)
-
 
 #
 # Triple-boson
