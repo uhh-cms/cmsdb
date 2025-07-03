@@ -62,6 +62,22 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="h_ggf_hzz2l2q_powheg",
+    id=15215994,
+    processes=[procs.h_ggf_hzz2l2q],
+    keys=[
+        "/GluGluHto2Zto2L2Q_M-125_TuneCP5_13p6TeV_powheg-jhugenv7520-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=2,
+    n_events=1_307_000,
+    aux={
+        "merging_factors": {
+            "nominal": 24,
+        },
+    },
+)
+
+cpn.add_dataset(
     name="h_vbf_hww2l2nu_powheg",
     id=14998529,
     processes=[procs.h_vbf_hww2l2nu],
