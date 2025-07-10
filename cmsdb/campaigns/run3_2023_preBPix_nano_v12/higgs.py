@@ -128,35 +128,34 @@ cpn.add_dataset(
 #     ),
 # )
 
-# # TODO: nominal dataset missing in DAS
-# cpn.add_dataset(
-#     name="h_ggf_hww2l2nu_powheg",
-#     id=-1,
-#     processes=[procs.h_ggf_hww2l2nu],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/GluGluHto2Wto2L2Nu_M-125_TuneCP5_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=-1,
-#             n_events=-1,
-#         ),
-#         tune_down=DatasetInfo(
-#             keys=[
-#                 "/GluGluHto2Wto2L2Nu_M-125_TuneCP5Down_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=68,
-#             n_events=3500000,
-#         ),
-#         tune_up=DatasetInfo(
-#             keys=[
-#                 "/GluGluHto2Wto2L2Nu_M-125_TuneCP5Up_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=59,
-#             n_events=3449000,
-#         ),
-#     ),
-# )
+cpn.add_dataset(
+    name="h_ggf_hww2l2nu_powheg",
+    id=14997439,
+    processes=[procs.h_ggf_hww2l2nu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGluHto2Wto2L2Nu_M-125_TuneCP5_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=40,
+            n_events=3500000,
+        ),
+        tune_down=DatasetInfo(
+            keys=[
+                "/GluGluHto2Wto2L2Nu_M-125_TuneCP5Down_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=68,
+            n_events=3500000,
+        ),
+        tune_up=DatasetInfo(
+            keys=[
+                "/GluGluHto2Wto2L2Nu_M-125_TuneCP5Up_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=59,
+            n_events=3449000,
+        ),
+    ),
+)
 cpn.add_dataset(
     name="h_ggf_hzg_zll_powheg",
     id=14932639,
@@ -1001,6 +1000,41 @@ cpn.add_dataset(
             ],
             n_files=58,
             n_events=1993000,
+        ),
+    ),
+)
+
+####################################################################################################
+#
+# tH
+#
+####################################################################################################
+
+cpn.add_dataset(
+    name="thq_4f_madgraph",
+    id=15041946,
+    processes=[procs.thq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/THQ_ctcvcp_HIncl_M-125_4FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v4/NANOAODSIM",  # noqa
+            ],
+            n_files=33,
+            n_events=3909998,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="thw_madgraph",
+    id=15041864,
+    processes=[procs.thw],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/THW_ctcvcp_HIncl_M-125_5FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v4/NANOAODSIM",  # noqa
+            ],
+            n_files=22,
+            n_events=1987999,
         ),
     ),
 )

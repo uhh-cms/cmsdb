@@ -161,7 +161,7 @@ __all__ = [
     "vh_zqq_hzz4l", "vh_zqq_hzz2l2nu", "vh_zqq_hzz2l2q", "vh_zqq_hzz2q2nu", "vh_zqq_hzz4nu", "vh_zqq_hzz4q",
     "vh_zqq_hzg_zll", "vh_zqq_hzg_zqq", "vh_zqq_hzg_znunu",
     "zh",
-    "zh", "zh_htt", "zh_hww", "zh_hzz", "zh_hbb", "zh_hnonbb", "zh_hcc",
+    "zh_htt", "zh_hww", "zh_hzz", "zh_hbb", "zh_hnonbb", "zh_hcc",
     "zh_hzg", "zh_hgg", "zh_hmm",
     "zh_hwwqqlnu", "zh_hww2l2nu", "zh_hww4q",
     "zh_hzz4l", "zh_hzz2l2nu", "zh_hzz2l2q", "zh_hzz2q2nu", "zh_hzz4nu", "zh_hzz4q",
@@ -182,7 +182,7 @@ __all__ = [
     "zh_znunu_hzz4l", "zh_znunu_hzz2l2nu", "zh_znunu_hzz2l2q", "zh_znunu_hzz2q2nu", "zh_znunu_hzz4nu", "zh_znunu_hzz4q",
     "zh_znunu_hzg_zll", "zh_znunu_hzg_zqq", "zh_znunu_hzg_znunu",
     "zh_gg",
-    "zh_gg", "zh_gg_htt", "zh_gg_hww", "zh_gg_hzz", "zh_gg_hbb", "zh_gg_hnonbb", "zh_gg_hcc",
+    "zh_gg_htt", "zh_gg_hww", "zh_gg_hzz", "zh_gg_hbb", "zh_gg_hnonbb", "zh_gg_hcc",
     "zh_gg_hzg", "zh_gg_hgg", "zh_gg_hmm",
     "zh_gg_hwwqqlnu", "zh_gg_hww2l2nu", "zh_gg_hww4q",
     "zh_gg_hzz4l", "zh_gg_hzz2l2nu", "zh_gg_hzz2l2q", "zh_gg_hzz2q2nu", "zh_gg_hzz4nu", "zh_gg_hzz4q",
@@ -464,10 +464,6 @@ h = Process(
     name="h",
     id=10000,
     label=r"$H$",
-    xsecs={
-        13: Number(0.1),  # TODO
-        13.6: Number(0.1),  # TODO
-    },
 )
 
 # Higgs decay channels
@@ -1422,34 +1418,57 @@ ttvh = h.add_process(
     label=r"$t\bar{t}VH$",
     aux={"production_mode_parent": h},
 )
+
+# naive xsec scaling for 13.6 TeV using the ggF xsec
+k_factor_13p6_tev = h_ggf.xsecs[13.6] / h_ggf.xsecs[13]
 ttzh = ttvh.add_process(
     name="ttzh",
     id=120000,
     label=r"$t\bar{t}ZH$",
+    xsecs={
+        # taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2022/122 (v25)
+        13: Number(1.535e-03, {
+            "scale": (0.019j, 0.068j),
+            "pdf": 0.030j,
+        }),
+        # 13.6 TeV values obtained from naice xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
+        13.6: Number(1.535e-03, {
+            "scale": (0.019j, 0.068j),
+            "pdf": 0.030j,
+        }) * k_factor_13p6_tev,
+    },
     aux={"production_mode_parent": ttvh},
 )
+
 ttwh = ttvh.add_process(
     name="ttwh",
     id=130000,
     label=r"$t\bar{t}WH$",
+    xsecs={
+        13: Number(1.538e-03),
+        # 13.6 TeV values obtained from naice xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
+        13.6: Number(1.538e-03) * k_factor_13p6_tev,
+    },
     aux={"production_mode_parent": ttvh},
 )
+
 thw = h.add_process(
     name="thw",
     id=140000,
     label=r"$tHW$",
     xsecs={
         13: Number(1.517E-02, {
-            "scale": (4.9j, 6.7j),
-            "pdf": 6.3j,
+            "scale": (0.049j, 0.067j),
+            "pdf": 0.063j,
         }),
         13.6: Number(1.720E-02, {
-            "scale": (2.4j, 1.7j),
-            "pdf": 2.2j,
+            "scale": (0.024j, 0.017j),
+            "pdf": 0.022j,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
 )
+
 # also named tH t-channel
 thq = h.add_process(
     name="thq",
@@ -1458,15 +1477,16 @@ thq = h.add_process(
     xsecs={
         13: Number(7.425E-02, {
             "scale": (0.065j, 0.149j),
-            "pdf": 3.7j,
+            "pdf": 0.037j,
         }),
         13.6: Number(8.362E-02, {  # value for mH=125 GeV
             "scale": (0.065j, 0.148j),
-            "pdf": 3.7j,
+            "pdf": 0.037j,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
 )
+
 # also named tH s-channel
 thb = h.add_process(
     name="thb",
@@ -1475,11 +1495,11 @@ thb = h.add_process(
     xsecs={
         13: Number(2.879E-03, {
             "scale": (0.024j, 0.018j),
-            "pdf": 2.2j,
+            "pdf": 0.022j,
         }),
         13.6: Number(3.068E-03, {  # value for mH=125 GeV
             "scale": (0.024j, 0.017j),
-            "pdf": 2.2j,
+            "pdf": 0.022j,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
