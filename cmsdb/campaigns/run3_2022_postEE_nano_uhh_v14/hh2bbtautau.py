@@ -353,6 +353,109 @@ cpn.add_dataset(
     },
 )
 
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kv1_k2v1_kl1_prv_madgraph",
+    id=22761101,
+    processes=[procs.hh_vbf_hbb_htt_kv1_k2v1_kl1],
+    keys=[
+        "/VBFHHto2B2Tau_CV_1_C2V_1_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=989_500,
+    aux={
+        "merging_factors": {
+            "nominal": 660,
+        },
+        "private": True,
+    },
+)
+
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kv1_k2v0_kl1_prv_madgraph",
+    id=22761102,
+    processes=[procs.hh_vbf_hbb_htt_kv1_k2v0_kl1],
+    keys=[
+        "/VBFHHto2B2Tau_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=993_500,
+    aux={
+        "merging_factors": {
+            "nominal": 663,
+        },
+        "private": True,
+    },
+)
+
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kvm0p962_k2v0p959_klm1p43_prv_madgraph",
+    id=22761103,
+    processes=[procs.hh_vbf_hbb_htt_kvm0p962_k2v0p959_klm1p43],
+    keys=[
+        "/VBFHHto2B2Tau_CV-m0p962_C2V-0p959_C3-m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=972_000,
+    aux={
+        "merging_factors": {
+            "nominal": 648,
+        },
+        "private": True,
+    },
+)
+
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94_prv_madgraph",
+    id=22761104,
+    processes=[procs.hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94],
+    keys=[
+        "/VBFHHto2B2Tau_CV-m1p21_C2V-1p94_C3-m0p94_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=997_500,
+    aux={
+        "merging_factors": {
+            "nominal": 665,
+        },
+        "private": True,
+    },
+)
+
+# privately produced datasets (note the "prv" flag)
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36_prv_madgraph",
+    id=22761105,
+    processes=[procs.hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36],
+    keys=[
+        "/VBFHHto2B2Tau_CV-m1p60_C2V-2p72_C3-m1p36_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=999_000,
+    aux={
+        "merging_factors": {
+            "nominal": 666,
+        },
+        "private": True,
+    },
+)
+
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39_prv_madgraph",
+    id=22761106,
+    processes=[procs.hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39],
+    keys=[
+        "/VBFHHto2B2Tau_CV-m1p83_C2V-3p57_C3-m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=999_000,
+    aux={
+        "merging_factors": {
+            "nominal": 666,
+        },
+        "private": True,
+    },
+)
+
 #
 # ggf -> graviton -> HH
 #
