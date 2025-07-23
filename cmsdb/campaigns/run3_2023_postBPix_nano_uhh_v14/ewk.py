@@ -10,7 +10,7 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_uhh_v14 import campaign_run3_2023_p
 
 
 #
-# Drell-Yan, LO
+# Drell-Yan, NLO
 #
 
 cpn.add_dataset(
@@ -270,7 +270,7 @@ cpn.add_dataset(
 )
 
 #
-# Drell-Yan, NLO
+# Drell-Yan powheg
 #
 
 # 2 e
@@ -752,6 +752,26 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 13,
+        },
+    },
+)
+
+#
+# Drell-Yan amcatnlo, tautau filtered
+#
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_0j_amcatnlo",
+    id=15364934,
+    processes=[procs.dy_tautau_m50toinf_0j],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_0J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=19,
+    n_events=14_535_094,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
         },
     },
 )

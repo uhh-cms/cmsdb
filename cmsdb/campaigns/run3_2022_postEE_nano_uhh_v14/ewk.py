@@ -278,7 +278,7 @@ cpn.add_dataset(
 )
 
 #
-# Drell-Yan NNLO
+# Drell-Yan powheg
 #
 
 # 2 e
@@ -776,6 +776,26 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 13,
+        },
+    },
+)
+
+#
+# Drell-Yan amcatnlo, tautau filtered
+#
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_0j_amcatnlo",
+    id=15368545,
+    processes=[procs.dy_tautau_m50toinf_0j],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_0J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EEMiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=55,
+    n_events=43_864_206,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
         },
     },
 )
