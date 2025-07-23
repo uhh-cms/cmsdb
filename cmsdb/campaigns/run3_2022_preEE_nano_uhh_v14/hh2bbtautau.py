@@ -393,7 +393,7 @@ cpn.add_dataset(
     id=22761003,
     processes=[procs.hh_vbf_hbb_htt_kvm0p962_k2v0p959_klm1p43],
     keys=[
-        "/VBFHHto2B2Tau_CV-m0p962_C2V-0p959_C3-m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/VBFHHto2B2Tau_CV_m0p962_C2V_0p959_C3_m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=1_040_500,
@@ -410,7 +410,7 @@ cpn.add_dataset(
     id=22761004,
     processes=[procs.hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94],
     keys=[
-        "/VBFHHto2B2Tau_CV-m1p21_C2V-1p94_C3-m0p94_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/VBFHHto2B2Tau_CV_m1p21_C2V_1p94_C3_m0p94_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=976_000,
@@ -427,7 +427,7 @@ cpn.add_dataset(
     id=22761005,
     processes=[procs.hh_vbf_hbb_htt_kvm1p6_k2v2p72_klm1p36],
     keys=[
-        "/VBFHHto2B2Tau_CV-m1p60_C2V-2p72_C3-m1p36_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/VBFHHto2B2Tau_CV_m1p60_C2V_2p72_C3_m1p36_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=986_500,
@@ -444,7 +444,7 @@ cpn.add_dataset(
     id=22761006,
     processes=[procs.hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39],
     keys=[
-        "/VBFHHto2B2Tau_CV-m1p83_C2V-3p57_C3-m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/VBFHHto2B2Tau_CV_m1p83_C2V_3p57_C3_m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
     n_files=3,
     n_events=980_000,

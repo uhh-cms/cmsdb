@@ -361,7 +361,7 @@ cpn.add_dataset(
     id=22761203,
     processes=[procs.hh_vbf_hbb_htt_kvm0p962_k2v0p959_klm1p43],
     keys=[
-        "/VBFHHto2B2Tau_CV-m0p962_C2V-0p959_C3-m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+        "/VBFHHto2B2Tau_CV_m0p962_C2V_0p959_C3_m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
     n_files=5,
     n_events=1_991_500,
@@ -378,7 +378,7 @@ cpn.add_dataset(
     id=22761204,
     processes=[procs.hh_vbf_hbb_htt_kvm1p21_k2v1p94_klm0p94],
     keys=[
-        "/VBFHHto2B2Tau_CV_m0p962_C2V_0p959_C3_m1p43_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        "/VBFHHto2B2Tau_CV_m1p21_C2V_1p94_C3_m0p94_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
     n_files=6,
     n_events=1_996_000,
@@ -412,7 +412,7 @@ cpn.add_dataset(
     id=22761206,
     processes=[procs.hh_vbf_hbb_htt_kvm1p83_k2v3p57_klm3p39],
     keys=[
-        "/VBFHHto2B2Tau_CV_m1p83_C2V_3p57_C3_m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        "/VBFHHto2B2Tau_CV_m1p83_C2V_3p57_C3_m3p39_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4UHH_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
     n_files=6,
     n_events=1_999_500,
