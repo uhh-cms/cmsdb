@@ -98,6 +98,86 @@ cpn.add_dataset(
 )
 
 #
+# MuonEG
+#
+
+cpn.add_dataset(
+    name="data_muoneg_c1",
+    id=14784845,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2023C-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=13,
+    n_events=9_772_655,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+        },
+        "era": "C",
+        "jec_era": "RunCv123",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_c2",
+    id=14786985,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2023C-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=4,
+    n_events=2_735_170,
+    aux={
+        "merging_factors": {
+            "nominal": 13,
+        },
+        "era": "C",
+        "jec_era": "RunCv123",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_c3",
+    id=14784882,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2023C-22Sep2023_v3_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=5,
+    n_events=3_502_967,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+        },
+        "era": "C",
+        "jec_era": "RunCv123",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_c4",
+    id=14784847,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2023C-22Sep2023_v4_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=31,
+    n_events=24_205_121,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+        },
+        "era": "C",
+        "jec_era": "RunCv4",
+    },
+)
+
+#
 # E/Gamma
 #
 
