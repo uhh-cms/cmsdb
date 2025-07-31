@@ -400,7 +400,41 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# TODO: not yet found in DAS
+cpn.add_dataset(
+    name="st_schannel_tbar_lep_4f_amcatnlo",
+    id=14982349,
+    processes=[procs.st_schannel_tbar_lep],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=41,  # 41-0
+            n_events=1600000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="st_schannel_t_lep_4f_amcatnlo",
+    id=14982076,
+    processes=[procs.st_schannel_t_lep],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=49,  # 49-0
+            n_events=2596000,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
