@@ -792,6 +792,22 @@ cpn.add_dataset(
     },
 )
 
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_2j_amcatnlo",
+    id=15363820,
+    processes=[procs.dy_tautau_m50toinf_2j],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_2J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=75,
+    n_events=38_512_089,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
 #
 # W boson production
 #

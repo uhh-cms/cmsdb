@@ -1080,6 +1080,38 @@ cpn.add_dataset(
     },
 )
 
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_1j_amcatnlo",
+    id=15363827,
+    processes=[procs.dy_tautau_m50toinf_1j],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_1J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=33,
+    n_events=20_230_695,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_2j_amcatnlo",
+    id=15363828,
+    processes=[procs.dy_tautau_m50toinf_2j],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_2J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=64,
+    n_events=32_440_564,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
 #
 # W boson production
 #
