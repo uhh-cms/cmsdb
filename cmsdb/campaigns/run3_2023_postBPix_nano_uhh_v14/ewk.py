@@ -757,13 +757,20 @@ cpn.add_dataset(
 )
 
 #
-# Drell-Yan amcatnlo, tautau filtered
+# Drell-Yan amcatnlo, tautau reprocessed in njet bins
+#
+
+# TODO
+
+#
+# Drell-Yan amcatnlo, tautau reprocessed in njet bins, filtered to some tautau kinematic phase space
+# (see fragment in https://cms-pdmv-prod.web.cern.ch/mcm/requests?prepid=HIG-Run3Summer22EEwmLHEGS-01476&page=0&shown=140737488355327)  # noqa
 #
 
 cpn.add_dataset(
-    name="dy_tautau_m50toinf_0j_amcatnlo",
+    name="dy_tautau_m50toinf_0j_filtered_amcatnlo",
     id=15364934,
-    processes=[procs.dy_tautau_m50toinf_0j],
+    processes=[procs.dy_tautau_m50toinf_0j_filtered],
     keys=[
         "/DYto2Tau-2Jets_M-50_0J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
     ],
@@ -777,9 +784,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_tautau_m50toinf_1j_amcatnlo",
+    name="dy_tautau_m50toinf_1j_filtered_amcatnlo",
     id=15368543,
-    processes=[procs.dy_tautau_m50toinf_1j],
+    processes=[procs.dy_tautau_m50toinf_1j_filtered],
     keys=[
         "/DYto2Tau-2Jets_M-50_1J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v4/NANOAODSIM",  # noqa
     ],
@@ -793,9 +800,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_tautau_m50toinf_2j_amcatnlo",
+    name="dy_tautau_m50toinf_2j_filtered_amcatnlo",
     id=15363820,
-    processes=[procs.dy_tautau_m50toinf_2j],
+    processes=[procs.dy_tautau_m50toinf_2j_filtered],
     keys=[
         "/DYto2Tau-2Jets_M-50_2J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
     ],

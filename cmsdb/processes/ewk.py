@@ -42,20 +42,28 @@ __all__ = [  # noqa: F822
     "dy_tautau_m400to800", "dy_tautau_m800to1500", "dy_tautau_m1500to2500", "dy_tautau_m2500to4000",
     "dy_tautau_m4000to6000", "dy_tautau_m6000toinf",
     "dy_ee_m50toinf_0j", "dy_ee_m50toinf_1j", "dy_ee_m50toinf_2j", "dy_ee_m50toinf_ge3j",
-    "dy_ee_m50toinf_1j_pt0to40", "dy_ee_m50toinf_1j_pt40to100", "dy_ee_m50toinf_1j_pt100to200",
-    "dy_ee_m50toinf_1j_pt200to400", "dy_ee_m50toinf_1j_pt400to600", "dy_ee_m50toinf_1j_pt600toinf",
-    "dy_ee_m50toinf_2j_pt0to40", "dy_ee_m50toinf_2j_pt40to100", "dy_ee_m50toinf_2j_pt100to200",
-    "dy_ee_m50toinf_2j_pt200to400", "dy_ee_m50toinf_2j_pt400to600", "dy_ee_m50toinf_2j_pt600toinf",
-    "dy_mumu_m50toinf_0j", "dy_mumu_m50toinf_1j", "dy_mumu_m50toinf_2j", "dy_mumu_m50toinf_ge3j",
-    "dy_mumu_m50toinf_1j_pt0to40", "dy_mumu_m50toinf_1j_pt40to100", "dy_mumu_m50toinf_1j_pt100to200",
-    "dy_mumu_m50toinf_1j_pt200to400", "dy_mumu_m50toinf_1j_pt400to600", "dy_mumu_m50toinf_1j_pt600toinf",
-    "dy_mumu_m50toinf_2j_pt0to40", "dy_mumu_m50toinf_2j_pt40to100", "dy_mumu_m50toinf_2j_pt100to200",
-    "dy_mumu_m50toinf_2j_pt200to400", "dy_mumu_m50toinf_2j_pt400to600", "dy_mumu_m50toinf_2j_pt600toinf",
-    "dy_tautau_m50toinf_0j", "dy_tautau_m50toinf_1j", "dy_tautau_m50toinf_2j", "dy_tautau_m50toinf_ge3j",
-    "dy_tautau_m50toinf_1j_pt0to40", "dy_tautau_m50toinf_1j_pt40to100", "dy_tautau_m50toinf_1j_pt100to200",
-    "dy_tautau_m50toinf_1j_pt200to400", "dy_tautau_m50toinf_1j_pt400to600", "dy_tautau_m50toinf_1j_pt600toinf",
-    "dy_tautau_m50toinf_2j_pt0to40", "dy_tautau_m50toinf_2j_pt40to100", "dy_tautau_m50toinf_2j_pt100to200",
-    "dy_tautau_m50toinf_2j_pt200to400", "dy_tautau_m50toinf_2j_pt400to600", "dy_tautau_m50toinf_2j_pt600toinf",
+    *[
+        f"dy_{ll}_m50toinf_{nj}j"
+        for ll in ["ee", "mumu", "tautau"]
+        for nj in ["0", "ge3"]
+    ],
+    *[
+        f"dy_{ll}_m50toinf_{nj}j_pt{pt}"
+        for ll in ["ee", "mumu", "tautau"]
+        for nj in ["1", "2"]
+        for pt in ["0to40", "40to100", "100to200", "200to400", "400to600", "600toinf"]
+    ],
+    *[
+        f"dy_tautau_m50toinf_{nj}j_{fname}"
+        for nj in ["0", "1", "2", "ge3"]
+        for fname in ["filtered", "nonfiltered"]
+    ],
+    *[
+        f"dy_tautau_m50toinf_{nj}j_pt{pt}_{fname}"
+        for nj in ["1", "2"]
+        for pt in ["0to40", "40to100", "100to200", "200to400", "400to600", "600toinf"]
+        for fname in ["filtered", "nonfiltered"]
+    ],
     "z",
     "z_nunu",
     "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
@@ -1320,8 +1328,8 @@ for proc in dy_tautau_m_procs:
     proc.xsecs[13.6] *= dy_tautau_m_corr_13p6
 
 # lepton decays, with jet multiplicity bins, and optionally also pt bins
-dy_ll_m_id = 51560
-for ll, lid in [("ee", 11), ("mumu", 13), ("tautau", 15)]:
+dy_ll_m_id = 51660
+for ll, lid, split_filtered in [("ee", 11, False), ("mumu", 13, False), ("tautau", 15, True)]:
     dy_ll_m = locals()[f"dy_{ll}_m50toinf"]
     # jet multiplicity bins
     for nj, nj_range, split_pt in [
@@ -1340,28 +1348,56 @@ for ll, lid in [("ee", 11), ("mumu", 13), ("tautau", 15)]:
             },
         )
         dy_ll_m_nj.add_parent_process(locals()[f"dy_m50toinf_{nj}"])
+        # split into filtered / nonfiltered
+        if split_filtered:
+            for fname in ["filtered", "nonfiltered"]:
+                locals()[f"dy_{ll}_m50toinf_{nj}_{fname}"] = dy_ll_m_nj.add_process(
+                    name=f"dy_{ll}_m50toinf_{nj}_{fname}",
+                    id=(dy_ll_m_id := dy_ll_m_id + 1),
+                    aux={
+                        "lep_id": lid,
+                        "mll": (50.0, const.inf),
+                        "njets": nj_range,
+                        "filtered": fname == "filtered",
+                    },
+                )
         # split into pt bins
-        if not split_pt:
-            continue
-        for pt, pt_range in [
-            ("0to40", (0.0, 40.0)),
-            ("40to100", (40.0, 100.0)),
-            ("100to200", (100.0, 200.0)),
-            ("200to400", (200.0, 400.0)),
-            ("400to600", (400.0, 600.0)),
-            ("600toinf", (600.0, const.inf)),
-        ]:
-            dy_ll_m_nj_pt = locals()[f"dy_{ll}_m50toinf_{nj}_pt{pt}"] = dy_ll_m_nj.add_process(
-                name=f"dy_{ll}_m50toinf_{nj}_pt{pt}",
-                id=(dy_ll_m_id := dy_ll_m_id + 1),
-                aux={
-                    "lep_id": lid,
-                    "mll": (50.0, const.inf),
-                    "njets": nj_range,
-                    "ptll": pt_range,
-                },
-            )
-            dy_ll_m_nj_pt.add_parent_process(locals()[f"dy_m50toinf_{nj}_pt{pt}"])
+        if split_pt:
+            for pt, pt_range in [
+                ("0to40", (0.0, 40.0)),
+                ("40to100", (40.0, 100.0)),
+                ("100to200", (100.0, 200.0)),
+                ("200to400", (200.0, 400.0)),
+                ("400to600", (400.0, 600.0)),
+                ("600toinf", (600.0, const.inf)),
+            ]:
+                dy_ll_m_nj_pt = locals()[f"dy_{ll}_m50toinf_{nj}_pt{pt}"] = dy_ll_m_nj.add_process(
+                    name=f"dy_{ll}_m50toinf_{nj}_pt{pt}",
+                    id=(dy_ll_m_id := dy_ll_m_id + 1),
+                    aux={
+                        "lep_id": lid,
+                        "mll": (50.0, const.inf),
+                        "njets": nj_range,
+                        "ptll": pt_range,
+                    },
+                )
+                dy_ll_m_nj_pt.add_parent_process(locals()[f"dy_m50toinf_{nj}_pt{pt}"])
+                # split into filtered / nonfiltered
+                # (see fragment in https://cms-pdmv-prod.web.cern.ch/mcm/requests?prepid=HIG-Run3Summer22EEwmLHEGS-01476&page=0&shown=140737488355327)  # noqa
+                if split_filtered:
+                    for fname in ["filtered", "nonfiltered"]:
+                        dy_ll_m_nj_pt_f = locals()[f"dy_{ll}_m50toinf_{nj}_pt{pt}_{fname}"] = dy_ll_m_nj_pt.add_process(
+                            name=f"dy_{ll}_m50toinf_{nj}_pt{pt}_{fname}",
+                            id=(dy_ll_m_id := dy_ll_m_id + 1),
+                            aux={
+                                "lep_id": lid,
+                                "mll": (50.0, const.inf),
+                                "njets": nj_range,
+                                "ptll": pt_range,
+                                "filtered": fname == "filtered",
+                            },
+                        )
+                        dy_ll_m_nj_pt_f.add_parent_process(locals()[f"dy_{ll}_m50toinf_{nj}_{fname}"])
 
 #
 # Z boson (no photon/DY)
