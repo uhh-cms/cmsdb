@@ -240,6 +240,131 @@ cpn.add_dataset(
     ),
 )
 
+# DY m_ll 4-50 GeV, HT-binned,
+
+cpn.add_dataset(
+    name="dy_m4to50_ht40to70_madgraph",
+    id=14940968,
+    processes=[procs.dy_m4to50_ht40to70],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=330,
+    n_events=93054475,
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht70to100_madgraph",
+    id=14932916,
+    processes=[procs.dy_m4to50_ht70to100],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=379,
+    n_events=60204442,
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht100to400_madgraph",
+    id=14931409,
+    processes=[procs.dy_m4to50_ht100to400],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=288,
+    n_events=60303665,
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht400to800_madgraph",
+    id=14930583,
+    processes=[procs.dy_m4to50_ht400to800],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=36,
+    n_events=1282075,
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht800to1500_madgraph",
+    id=14930329,
+    processes=[procs.dy_m4to50_ht800to1500],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=33,
+    n_events=983581,
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht1500to2500_madgraph",
+    id=14930083,
+    processes=[procs.dy_m4to50_ht1500to2500],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=81,
+    n_events=1008126,
+)
+
+cpn.add_dataset(
+    name="dy_m4to50_ht2500toinf_madgraph",
+    id=14931162,
+    processes=[procs.dy_m4to50_ht2500toinf],
+    keys=[
+        "/DYto2L-4Jets_MLL-4to50_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=183,
+    n_events=1049891,
+)
+
+# DY, m_ll 50-120 GeV, HT-binned
+
+cpn.add_dataset(
+    name="dy_m50to120_ht40to70_madgraph",
+    id=14897395,
+    processes=[procs.dy_m50to120_ht40to70],
+    keys=[
+        "/DYto2L-4Jets_MLL-50to120_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=197,
+    n_events=36265983,
+)
+
+cpn.add_dataset(
+    name="dy_m50to120_ht70to100_madgraph",
+    id=14890434,
+    processes=[procs.dy_m50to120_ht70to100],
+    keys=[
+        "/DYto2L-4Jets_MLL-50to120_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=245,
+    n_events=29460714,
+)
+
+cpn.add_dataset(
+    name="dy_m50to120_ht100to400_madgraph",
+    id=14890344,
+    processes=[procs.dy_m50to120_ht100to400],
+    keys=[
+        "/DYto2L-4Jets_MLL-50to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=294,
+    n_events=36635356,
+)
+
+cpn.add_dataset(
+    name="dy_m50to120_ht400to800_madgraph",
+    id=14894799,
+    processes=[procs.dy_m50to120_ht400to800],
+    keys=[
+        "/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=22,
+    n_events=1108513,
+)
+
 #
 # w_lnu
 #
@@ -439,6 +564,74 @@ cpn.add_dataset(
 #         ),
 #     ),
 # )
+
+# m_lnu 0-120 GeV, Ht binned
+
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht40to100_madgraph",
+    id=14890730,
+    processes=[procs.w_lnu_mlnu0to120_ht40to100],
+    keys=[
+        "/WtoLNu-4Jets_MLNu-0to120_HT-40to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=477,
+    n_events=135155699,
+)
+
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht100to400_madgraph",
+    id=14892497,
+    processes=[procs.w_lnu_mlnu0to120_ht100to400],
+    keys=[
+        "/WtoLNu-4Jets_MLNu-0to120_HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=475,
+    n_events=94723033,
+)
+
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht400to800_madgraph",
+    id=14890066,
+    processes=[procs.w_lnu_mlnu0to120_ht400to800],
+    keys=[
+        "/WtoLNu-4Jets_MLNu-0to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=154,
+    n_events=13133728,
+)
+
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht800to1500_madgraph",
+    id=14929209,
+    processes=[procs.w_lnu_mlnu0to120_ht800to1500],
+    keys=[
+        "/WtoLNu-4Jets_MLNu-0to120_HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=33,
+    n_events=1431810,
+)
+
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht1500to2500_madgraph",
+    id=14930928,
+    processes=[procs.w_lnu_mlnu0to120_ht1500to2500],
+    keys=[
+        "/WtoLNu-4Jets_MLNu-0to120_HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=31,
+    n_events=522080,
+)
+
+cpn.add_dataset(
+    name="w_lnu_mlnu0to120_ht2500toinf_madgraph",
+    id=15200286,
+    processes=[procs.w_lnu_mlnu0to120_ht2500toinf],
+    keys=[
+        "/WtoLNu-4Jets_MLNu-0to120_HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=12,
+    n_events=501900,
+)
 
 #
 # diboson
