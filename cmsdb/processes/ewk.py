@@ -45,7 +45,7 @@ __all__ = [  # noqa: F822
     *[
         f"dy_{ll}_m50toinf_{nj}j"
         for ll in ["ee", "mumu", "tautau"]
-        for nj in ["0", "ge3"]
+        for nj in ["0", "1", "2", "ge3"]
     ],
     *[
         f"dy_{ll}_m50toinf_{nj}j_pt{pt}"
