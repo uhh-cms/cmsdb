@@ -354,9 +354,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_hvv_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14966434,
-    processes=[procs.hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_hvv_kv2p12_k2v3p87_klm5p96],
     keys=[
         "/VBFHHto2B2V_CV_m2p12_C2V_3p87_C3_m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
@@ -514,9 +514,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_vbf_hbb_hvv2l2nu_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14966238,
-    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv2p12_k2v3p87_klm5p96],
     keys=[
         "/VBFHHto2B2Vto2L2Nu_CV_m2p12_C2V_3p87_C3_m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
@@ -674,9 +674,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_vbf_hbb_hvvqqlnu_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14966353,
-    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv2p12_k2v3p87_klm5p96],
     keys=[
         "/VBFHHto2B2WtoLNu2Q_CV_m2p12_C2V_3p87_C3_m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],

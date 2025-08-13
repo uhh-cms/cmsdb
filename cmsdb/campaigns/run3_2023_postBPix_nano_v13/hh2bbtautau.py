@@ -117,9 +117,9 @@ cpn.add_dataset(
     n_events=1306333,
 )
 cpn.add_dataset(
-    name="hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14964374,
-    processes=[procs.hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96],
     keys=[
         "/VBFHHto2B2Tau_CV_m2p12_C2V_3p87_C3_m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixNanoAODv13-133X_mcRun3_2023_realistic_postBPix_ForNanov13_v2-v2/NANOAODSIM",  # noqa
     ],
