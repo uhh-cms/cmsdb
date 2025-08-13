@@ -11,7 +11,7 @@ bound and exclusive in the upper bound, i.e. (a, b) means a <= x < b:
 - njets: number of extra jets on generator level (mostly NLO)
 """
 
-__all__ = [
+__all__ = [  # noqa: F822
     "dy",
     "dy_m4to10",
     "dy_m10to50",
@@ -31,15 +31,39 @@ __all__ = [
     "dy_m4to50_ht800to1500", "dy_m4to50_ht1500to2500", "dy_m4to50_ht2500toinf",
     "dy_m50toinf_pt40to100", "dy_m50toinf_pt100to200", "dy_m50toinf_pt200to400",
     "dy_m50toinf_pt400to600", "dy_m50toinf_pt600toinf",
-    "dy_ee_m50toinf", "dy_ee_m10to50", "dy_ee_m50to120", "dy_ee_m120to200", "dy_ee_m200to400",
+    "dy_ee", "dy_mumu", "dy_tautau",
+    "dy_ee_m10to50", "dy_ee_m50toinf", "dy_ee_m50to120", "dy_ee_m120to200", "dy_ee_m200to400",
     "dy_ee_m400to800", "dy_ee_m800to1500", "dy_ee_m1500to2500", "dy_ee_m2500to4000",
     "dy_ee_m4000to6000", "dy_ee_m6000toinf",
-    "dy_mumu_m10to50", "dy_mumu_m50to120", "dy_mumu_m120to200", "dy_mumu_m200to400",
+    "dy_mumu_m10to50", "dy_mumu_m50toinf", "dy_mumu_m50to120", "dy_mumu_m120to200", "dy_mumu_m200to400",
     "dy_mumu_m400to800", "dy_mumu_m800to1500", "dy_mumu_m1500to2500", "dy_mumu_m2500to4000",
     "dy_mumu_m4000to6000", "dy_mumu_m6000toinf",
-    "dy_tautau_m10to50", "dy_tautau_m50to120", "dy_tautau_m120to200", "dy_tautau_m200to400",
+    "dy_tautau_m10to50", "dy_tautau_m50toinf", "dy_tautau_m50to120", "dy_tautau_m120to200", "dy_tautau_m200to400",
     "dy_tautau_m400to800", "dy_tautau_m800to1500", "dy_tautau_m1500to2500", "dy_tautau_m2500to4000",
     "dy_tautau_m4000to6000", "dy_tautau_m6000toinf",
+    "dy_ee_m50toinf_0j", "dy_ee_m50toinf_1j", "dy_ee_m50toinf_2j", "dy_ee_m50toinf_ge3j",
+    *[
+        f"dy_{ll}_m50toinf_{nj}j"
+        for ll in ["ee", "mumu", "tautau"]
+        for nj in ["0", "1", "2", "ge3"]
+    ],
+    *[
+        f"dy_{ll}_m50toinf_{nj}j_pt{pt}"
+        for ll in ["ee", "mumu", "tautau"]
+        for nj in ["1", "2"]
+        for pt in ["0to40", "40to100", "100to200", "200to400", "400to600", "600toinf"]
+    ],
+    *[
+        f"dy_tautau_m50toinf_{nj}j_{fname}"
+        for nj in ["0", "1", "2", "ge3"]
+        for fname in ["filtered", "nonfiltered"]
+    ],
+    *[
+        f"dy_tautau_m50toinf_{nj}j_pt{pt}_{fname}"
+        for nj in ["1", "2"]
+        for pt in ["0to40", "40to100", "100to200", "200to400", "400to600", "600toinf"]
+        for fname in ["filtered", "nonfiltered"]
+    ],
     "z",
     "z_nunu",
     "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
@@ -771,28 +795,55 @@ dy_pt650toinf = dy.add_process(
 # (cross sections from xsdb)
 #
 
-# 2 e
-dy_ee_m50toinf = dy.add_process(
-    name="dy_ee_m50toinf",
-    id=51800,
-    xsecs={
-        13.6: dy_m50toinf.get_xsec(13.6) / const.n_leps,
-    },
+dy_ee = dy.add_process(
+    name="dy_ee",
+    id=50100,
     aux={
-        "mll": (50.0, const.inf),
+        "lep_id": 11,
     },
 )
 
-dy_ee_m10to50 = dy.add_process(
+dy_mumu = dy.add_process(
+    name="dy_mumu",
+    id=50200,
+    aux={
+        "lep_id": 13,
+    },
+)
+
+dy_tautau = dy.add_process(
+    name="dy_tautau",
+    id=50300,
+    aux={
+        "lep_id": 15,
+    },
+)
+
+# 2 e
+dy_ee_m10to50 = dy_ee.add_process(
     name="dy_ee_m10to50",
     id=51810,
     xsecs={
         13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
     },
     aux={
+        "lep_id": 11,
         "mll": (10.0, 50.0),
     },
 )
+
+dy_ee_m50toinf = dy_ee.add_process(
+    name="dy_ee_m50toinf",
+    id=51800,
+    xsecs={
+        13.6: dy_m50toinf.get_xsec(13.6) / const.n_leps,
+    },
+    aux={
+        "lep_id": 11,
+        "mll": (50.0, const.inf),
+    },
+)
+dy_ee_m50toinf.add_parent_process(dy_m50toinf)
 
 dy_ee_m50to120 = dy_ee_m50toinf.add_process(
     name="dy_ee_m50to120",
@@ -803,6 +854,7 @@ dy_ee_m50to120 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (50.0, 120),
     },
 )
@@ -816,6 +868,7 @@ dy_ee_m120to200 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (120.0, 200.0),
     },
 )
@@ -829,6 +882,7 @@ dy_ee_m200to400 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (200.0, 400.0),
     },
 )
@@ -842,6 +896,7 @@ dy_ee_m400to800 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (400.0, 800.0),
     },
 )
@@ -855,6 +910,7 @@ dy_ee_m800to1500 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (800.0, 1500.0),
     },
 )
@@ -868,6 +924,7 @@ dy_ee_m1500to2500 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (1500.0, 2500.0),
     },
 )
@@ -881,6 +938,7 @@ dy_ee_m2500to4000 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (2500.0, 4000.0),
     },
 )
@@ -894,6 +952,7 @@ dy_ee_m4000to6000 = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (4000.0, 6000.0),
     },
 )
@@ -907,6 +966,7 @@ dy_ee_m6000toinf = dy_ee_m50toinf.add_process(
         }),
     },
     aux={
+        "lep_id": 11,
         "mll": (6000.0, const.inf),
     },
 )
@@ -931,130 +991,150 @@ for proc in dy_ee_m_procs:
     proc.xsecs[13.6] *= dy_ee_m_corr_13p6
 
 # 2 mu
-dy_mumu_m10to50 = dy.add_process(
+dy_mumu_m10to50 = dy_mumu.add_process(
     name="dy_mumu_m10to50",
     id=51620,
     xsecs={
         13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
     },
     aux={
+        "lep_id": 13,
         "mll": (10.0, 50.0),
     },
 )
 
-dy_mumu_m50to120 = dy.add_process(
-    name="dy_mumu_m50to120",
+dy_mumu_m50toinf = dy_mumu.add_process(
+    name="dy_mumu_m50toinf",
     id=51621,
+    aux={
+        "lep_id": 13,
+        "mll": (50.0, const.inf),
+    },
+)
+dy_mumu_m50toinf.add_parent_process(dy_m50toinf)
+
+dy_mumu_m50to120 = dy_mumu_m50toinf.add_process(
+    name="dy_mumu_m50to120",
+    id=51622,
     xsecs={
         13.6: Number(2219, {
             "tot": 0.2327,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (50.0, 120.0),
     },
 )
 
-dy_mumu_m120to200 = dy.add_process(
+dy_mumu_m120to200 = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m120to200",
-    id=51622,
+    id=51623,
     xsecs={
         13.6: Number(21.65, {
             "tot": 0.003184,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (120.0, 200.0),
     },
 )
 
-dy_mumu_m200to400 = dy.add_process(
+dy_mumu_m200to400 = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m200to400",
-    id=51623,
+    id=51624,
     xsecs={
         13.6: Number(3.058, {
             "tot": 0.000465,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (200.0, 400.0),
     },
 )
 
-dy_mumu_m400to800 = dy.add_process(
+dy_mumu_m400to800 = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m400to800",
-    id=51624,
+    id=51625,
     xsecs={
         13.6: Number(0.2691, {
             "tot": 0.00004215,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (400.0, 800.0),
     },
 )
 
-dy_mumu_m800to1500 = dy.add_process(
+dy_mumu_m800to1500 = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m800to1500",
-    id=51625,
+    id=51626,
     xsecs={
         13.6: Number(0.01915, {
             "tot": 0.000003085,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (800.0, 1500.0),
     },
 )
 
-dy_mumu_m1500to2500 = dy.add_process(
+dy_mumu_m1500to2500 = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m1500to2500",
-    id=51626,
+    id=51627,
     xsecs={
         13.6: Number(0.001111, {
             "tot": 1.787e-7,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (1500.0, 2500.0),
     },
 )
 
-dy_mumu_m2500to4000 = dy.add_process(
+dy_mumu_m2500to4000 = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m2500to4000",
-    id=51627,
+    id=51628,
     xsecs={
         13.6: Number(0.00005949, {
             "tot": 9.162e-9,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (2500.0, 4000.0),
     },
 )
 
-dy_mumu_m4000to6000 = dy.add_process(
+dy_mumu_m4000to6000 = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m4000to6000",
-    id=51628,
+    id=51629,
     xsecs={
         13.6: Number(0.000001558, {
             "tot": 2.078e-10,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (4000.0, 6000.0),
     },
 )
 
-dy_mumu_m6000toinf = dy.add_process(
+dy_mumu_m6000toinf = dy_mumu_m50toinf.add_process(
     name="dy_mumu_m6000toinf",
-    id=51629,
+    id=51630,
     xsecs={
         13.6: Number(3.519e-8, {
             "tot": 6.811e-12,
         }),
     },
     aux={
+        "lep_id": 13,
         "mll": (6000.0, const.inf),
     },
 )
@@ -1079,130 +1159,150 @@ for proc in dy_mumu_m_procs:
     proc.xsecs[13.6] *= dy_mumu_m_corr_13p6
 
 # 2 tau
-dy_tautau_m10to50 = dy.add_process(
+dy_tautau_m10to50 = dy_tautau.add_process(
     name="dy_tautau_m10to50",
-    id=51630,
+    id=51631,
     xsecs={
         13.6: dy_m10to50.get_xsec(13.6) / const.n_leps,
     },
     aux={
+        "lep_id": 15,
         "mll": (10.0, 50.0),
     },
 )
 
-dy_tautau_m50to120 = dy.add_process(
+dy_tautau_m50toinf = dy_tautau.add_process(
+    name="dy_tautau_m50toinf",
+    id=51632,
+    aux={
+        "lep_id": 15,
+        "mll": (50.0, const.inf),
+    },
+)
+dy_tautau_m50toinf.add_parent_process(dy_m50toinf)
+
+dy_tautau_m50to120 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m50to120",
-    id=51631,
+    id=51633,
     xsecs={
         13.6: Number(2219, {
             "tot": 0.2327,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (50.0, 120.0),
     },
 )
 
-dy_tautau_m120to200 = dy.add_process(
+dy_tautau_m120to200 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m120to200",
-    id=51632,
+    id=51634,
     xsecs={
         13.6: Number(21.65, {
             "tot": 0.003184,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (120.0, 200.0),
     },
 )
 
-dy_tautau_m200to400 = dy.add_process(
+dy_tautau_m200to400 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m200to400",
-    id=51633,
+    id=51635,
     xsecs={
         13.6: Number(3.058, {
             "tot": 0.000465,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (200.0, 400.0),
     },
 )
 
-dy_tautau_m400to800 = dy.add_process(
+dy_tautau_m400to800 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m400to800",
-    id=51634,
+    id=51636,
     xsecs={
         13.6: Number(0.2691, {
             "tot": 0.00004215,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (400.0, 800.0),
     },
 )
 
-dy_tautau_m800to1500 = dy.add_process(
+dy_tautau_m800to1500 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m800to1500",
-    id=51635,
+    id=51637,
     xsecs={
         13.6: Number(0.01915, {
             "tot": 0.000003085,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (800.0, 1500.0),
     },
 )
 
-dy_tautau_m1500to2500 = dy.add_process(
+dy_tautau_m1500to2500 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m1500to2500",
-    id=51636,
+    id=51638,
     xsecs={
         13.6: Number(0.001111, {
             "tot": 1.787e-7,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (1500.0, 2500.0),
     },
 )
 
-dy_tautau_m2500to4000 = dy.add_process(
+dy_tautau_m2500to4000 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m2500to4000",
-    id=51637,
+    id=51639,
     xsecs={
         13.6: Number(0.00005949, {
             "tot": 9.162e-9,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (2500.0, 4000.0),
     },
 )
 
-dy_tautau_m4000to6000 = dy.add_process(
+dy_tautau_m4000to6000 = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m4000to6000",
-    id=51638,
+    id=51640,
     xsecs={
         13.6: Number(0.000001558, {
             "tot": 2.078e-10,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (4000.0, 6000.0),
     },
 )
 
-dy_tautau_m6000toinf = dy.add_process(
+dy_tautau_m6000toinf = dy_tautau_m50toinf.add_process(
     name="dy_tautau_m6000toinf",
-    id=51639,
+    id=51641,
     xsecs={
         13.6: Number(3.519e-8, {
             "tot": 6.811e-12,
         }),
     },
     aux={
+        "lep_id": 15,
         "mll": (6000.0, const.inf),
     },
 )
@@ -1225,6 +1325,78 @@ dy_tautau_m_corr_13p6 = (
 )
 for proc in dy_tautau_m_procs:
     proc.xsecs[13.6] *= dy_tautau_m_corr_13p6
+
+# lepton decays, with jet multiplicity bins, and optionally also pt bins
+dy_ll_m_id = 51660
+for ll, lid, split_filtered in [("ee", 11, False), ("mumu", 13, False), ("tautau", 15, True)]:
+    dy_ll_m = locals()[f"dy_{ll}_m50toinf"]
+    # jet multiplicity bins
+    for nj, nj_range, split_pt in [
+        ("0j", (0, 1), False),
+        ("1j", (1, 2), True),
+        ("2j", (2, 3), True),
+        ("ge3j", (3, const.inf), False),
+    ]:
+        dy_ll_m_nj = locals()[f"dy_{ll}_m50toinf_{nj}"] = dy_ll_m.add_process(
+            name=f"dy_{ll}_m50toinf_{nj}",
+            id=(dy_ll_m_id := dy_ll_m_id + 1),
+            aux={
+                "lep_id": lid,
+                "mll": (50.0, const.inf),
+                "njets": nj_range,
+            },
+        )
+        dy_ll_m_nj.add_parent_process(locals()[f"dy_m50toinf_{nj}"])
+        # split into filtered / nonfiltered
+        if split_filtered:
+            for fname in ["filtered", "nonfiltered"]:
+                locals()[f"dy_{ll}_m50toinf_{nj}_{fname}"] = dy_ll_m_nj.add_process(
+                    name=f"dy_{ll}_m50toinf_{nj}_{fname}",
+                    id=(dy_ll_m_id := dy_ll_m_id + 1),
+                    aux={
+                        "lep_id": lid,
+                        "mll": (50.0, const.inf),
+                        "njets": nj_range,
+                        "filtered": fname == "filtered",
+                    },
+                )
+        # split into pt bins
+        if split_pt:
+            for pt, pt_range in [
+                ("0to40", (0.0, 40.0)),
+                ("40to100", (40.0, 100.0)),
+                ("100to200", (100.0, 200.0)),
+                ("200to400", (200.0, 400.0)),
+                ("400to600", (400.0, 600.0)),
+                ("600toinf", (600.0, const.inf)),
+            ]:
+                dy_ll_m_nj_pt = locals()[f"dy_{ll}_m50toinf_{nj}_pt{pt}"] = dy_ll_m_nj.add_process(
+                    name=f"dy_{ll}_m50toinf_{nj}_pt{pt}",
+                    id=(dy_ll_m_id := dy_ll_m_id + 1),
+                    aux={
+                        "lep_id": lid,
+                        "mll": (50.0, const.inf),
+                        "njets": nj_range,
+                        "ptll": pt_range,
+                    },
+                )
+                dy_ll_m_nj_pt.add_parent_process(locals()[f"dy_m50toinf_{nj}_pt{pt}"])
+                # split into filtered / nonfiltered
+                # (see fragment in https://cms-pdmv-prod.web.cern.ch/mcm/requests?prepid=HIG-Run3Summer22EEwmLHEGS-01476&page=0&shown=140737488355327)  # noqa
+                if split_filtered:
+                    for fname in ["filtered", "nonfiltered"]:
+                        dy_ll_m_nj_pt_f = locals()[f"dy_{ll}_m50toinf_{nj}_pt{pt}_{fname}"] = dy_ll_m_nj_pt.add_process(
+                            name=f"dy_{ll}_m50toinf_{nj}_pt{pt}_{fname}",
+                            id=(dy_ll_m_id := dy_ll_m_id + 1),
+                            aux={
+                                "lep_id": lid,
+                                "mll": (50.0, const.inf),
+                                "njets": nj_range,
+                                "ptll": pt_range,
+                                "filtered": fname == "filtered",
+                            },
+                        )
+                        dy_ll_m_nj_pt_f.add_parent_process(locals()[f"dy_{ll}_m50toinf_{nj}_{fname}"])
 
 #
 # Z boson (no photon/DY)

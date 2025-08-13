@@ -26,6 +26,7 @@ campaign_run3_2022_preEE_nano_uhh_v14 = Campaign(
             "name": "run3_2022_preEE_nano_uhh_v14",
             "creator": "uhh",
             "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/nprouvos/nanogen_store/MergeNano/config_22pre_v14/prod1",  # noqa
+            "nanogen_version": "prod1",
         },
     },
     tags={"preEE"},
