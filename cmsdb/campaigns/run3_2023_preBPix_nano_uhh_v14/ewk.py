@@ -760,7 +760,53 @@ cpn.add_dataset(
 # Drell-Yan amcatnlo, tautau reprocessed in njet bins
 #
 
-# TODO
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_0j_amcatnlo",
+    id=15369008,
+    processes=[procs.dy_tautau_m50toinf_0j],
+    keys=[
+        "/DYto2Tau-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=86,
+    n_events=86_010_297,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_1j_amcatnlo",
+    id=15369329,
+    processes=[procs.dy_tautau_m50toinf_1j],
+    keys=[
+        "/DYto2Tau-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=165,
+    n_events=123_286_592,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_2j_amcatnlo",
+    id=15365008,
+    processes=[procs.dy_tautau_m50toinf_2j],
+    keys=[
+        "/DYto2Tau-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=495,
+    n_events=311_488_056,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
 
 #
 # Drell-Yan amcatnlo, tautau reprocessed in njet bins, filtered to some tautau kinematic phase space
