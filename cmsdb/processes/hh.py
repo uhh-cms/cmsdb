@@ -373,7 +373,7 @@ hh_vbf_kv2p12_k2v3p87_klm5p96 = hh_vbf.add_process(
     xsecs={
         # no 13p0TeV sample generated, but we could use the scaling formula in the hh tools
         # 13: Number(TODO, hh_vbf_uncs_13p0) * 0.001,
-        13.6: Number(671.9 * hh_vbf_k_13p6, hh_vbf_uncs_13p6) * 0.001,  # TODO: need to check this value
+        13.6: Number(671.9 * hh_vbf_k_13p6, hh_vbf_uncs_13p6) * 0.001,
     },
     aux={"production_mode_parent": hh_vbf},
 )
