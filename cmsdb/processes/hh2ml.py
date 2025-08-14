@@ -13,19 +13,19 @@ __all__ = [
     "hh_vbf_htt_htt_kvm0p012_k2v0p03_kl10p2", "hh_vbf_htt_htt_kvm0p758_k2v1p44_klm19p3",
     "hh_vbf_htt_htt_kvm0p962_k2v0p959_klm1p43", "hh_vbf_htt_htt_kvm1p21_k2v1p94_klm0p94",
     "hh_vbf_htt_htt_kvm1p6_k2v2p72_klm1p36", "hh_vbf_htt_htt_kvm1p83_k2v3p57_klm3p39",
-    "hh_vbf_htt_htt_kvm2p12_k2v3p87_klm5p96",
+    "hh_vbf_htt_htt_kv2p12_k2v3p87_klm5p96",
     "hh_vbf_hvv_hvv",
     "hh_vbf_hvv_hvv_kv1_k2v0_kl1", "hh_vbf_hvv_hvv_kv1_k2v1_kl1", "hh_vbf_hvv_hvv_kv1p74_k2v1p37_kl14p4",
     "hh_vbf_hvv_hvv_kvm0p012_k2v0p03_kl10p2", "hh_vbf_hvv_hvv_kvm0p758_k2v1p44_klm19p3",
     "hh_vbf_hvv_hvv_kvm0p962_k2v0p959_klm1p43", "hh_vbf_hvv_hvv_kvm1p21_k2v1p94_klm0p94",
     "hh_vbf_hvv_hvv_kvm1p6_k2v2p72_klm1p36", "hh_vbf_hvv_hvv_kvm1p83_k2v3p57_klm3p39",
-    "hh_vbf_hvv_hvv_kvm2p12_k2v3p87_klm5p96",
+    "hh_vbf_hvv_hvv_kv2p12_k2v3p87_klm5p96",
     "hh_vbf_htt_hvv",
     "hh_vbf_htt_hvv_kv1_k2v0_kl1", "hh_vbf_htt_hvv_kv1_k2v1_kl1", "hh_vbf_htt_hvv_kv1p74_k2v1p37_kl14p4",
     "hh_vbf_htt_hvv_kvm0p012_k2v0p03_kl10p2", "hh_vbf_htt_hvv_kvm0p758_k2v1p44_klm19p3",
     "hh_vbf_htt_hvv_kvm0p962_k2v0p959_klm1p43", "hh_vbf_htt_hvv_kvm1p21_k2v1p94_klm0p94",
     "hh_vbf_htt_hvv_kvm1p6_k2v2p72_klm1p36", "hh_vbf_htt_hvv_kvm1p83_k2v3p57_klm3p39",
-    "hh_vbf_htt_hvv_kvm2p12_k2v3p87_klm5p96",
+    "hh_vbf_htt_hvv_kv2p12_k2v3p87_klm5p96",
 ]
 
 import cmsdb.constants as const
@@ -36,7 +36,7 @@ from cmsdb.processes.hh import (
     hh_vbf,
     hh_vbf_kv1_k2v1_kl1, hh_vbf_kv1_k2v0_kl1, hh_vbf_kv1p74_k2v1p37_kl14p4, hh_vbf_kvm0p012_k2v0p03_kl10p2,
     hh_vbf_kvm0p758_k2v1p44_klm19p3, hh_vbf_kvm0p962_k2v0p959_klm1p43, hh_vbf_kvm1p21_k2v1p94_klm0p94,
-    hh_vbf_kvm1p6_k2v2p72_klm1p36, hh_vbf_kvm1p83_k2v3p57_klm3p39, hh_vbf_kvm2p12_k2v3p87_klm5p96,
+    hh_vbf_kvm1p6_k2v2p72_klm1p36, hh_vbf_kvm1p83_k2v3p57_klm3p39, hh_vbf_kv2p12_k2v3p87_klm5p96,
 )
 from cmsdb.util import multiply_xsecs
 
@@ -211,11 +211,11 @@ hh_vbf_htt_htt_kvm1p83_k2v3p57_klm3p39 = hh_vbf_kvm1p83_k2v3p57_klm3p39.add_proc
     xsecs=multiply_xsecs(hh_vbf_kvm1p83_k2v3p57_klm3p39, const.br_hh.tttt),
 )
 
-hh_vbf_htt_htt_kvm2p12_k2v3p87_klm5p96 = hh_vbf_kvm2p12_k2v3p87_klm5p96.add_process(
-    name="hh_vbf_htt_htt_kvm2p12_k2v3p87_klm5p96",
+hh_vbf_htt_htt_kv2p12_k2v3p87_klm5p96 = hh_vbf_kv2p12_k2v3p87_klm5p96.add_process(
+    name="hh_vbf_htt_htt_kv2p12_k2v3p87_klm5p96",
     id=95010,
-    label=r"$HH_{vbf} \rightarrow 4\tau$ ($\kappa_{V}=-2.12$, $\kappa_{2V}=3.87$, $\kappa_{\lambda}=-5.96$)",
-    xsecs=multiply_xsecs(hh_vbf_kvm2p12_k2v3p87_klm5p96, const.br_hh.tttt),
+    label=r"$HH_{vbf} \rightarrow 4\tau$ ($\kappa_{V}=2.12$, $\kappa_{2V}=3.87$, $\kappa_{\lambda}=-5.96$)",
+    xsecs=multiply_xsecs(hh_vbf_kv2p12_k2v3p87_klm5p96, const.br_hh.tttt),
 )
 
 #
@@ -292,11 +292,11 @@ hh_vbf_hvv_hvv_kvm1p83_k2v3p57_klm3p39 = hh_vbf_kvm1p83_k2v3p57_klm3p39.add_proc
     xsecs=multiply_xsecs(hh_vbf_kvm1p83_k2v3p57_klm3p39, const.br_hh.vvvv),
 )
 
-hh_vbf_hvv_hvv_kvm2p12_k2v3p87_klm5p96 = hh_vbf_kvm2p12_k2v3p87_klm5p96.add_process(
-    name="hh_vbf_hvv_hvv_kvm2p12_k2v3p87_klm5p96",
+hh_vbf_hvv_hvv_kv2p12_k2v3p87_klm5p96 = hh_vbf_kv2p12_k2v3p87_klm5p96.add_process(
+    name="hh_vbf_hvv_hvv_kv2p12_k2v3p87_klm5p96",
     id=96010,
-    label=r"$HH_{vbf} \rightarrow 4V$ ($\kappa_{V}=-2.12$, $\kappa_{2V}=3.87$, $\kappa_{\lambda}=-5.96$)",
-    xsecs=multiply_xsecs(hh_vbf_kvm2p12_k2v3p87_klm5p96, const.br_hh.vvvv),
+    label=r"$HH_{vbf} \rightarrow 4V$ ($\kappa_{V}=2.12$, $\kappa_{2V}=3.87$, $\kappa_{\lambda}=-5.96$)",
+    xsecs=multiply_xsecs(hh_vbf_kv2p12_k2v3p87_klm5p96, const.br_hh.vvvv),
 )
 
 #
@@ -373,9 +373,9 @@ hh_vbf_htt_hvv_kvm1p83_k2v3p57_klm3p39 = hh_vbf_kvm1p83_k2v3p57_klm3p39.add_proc
     xsecs=multiply_xsecs(hh_vbf_kvm1p83_k2v3p57_klm3p39, const.br_hh.ttvv),
 )
 
-hh_vbf_htt_hvv_kvm2p12_k2v3p87_klm5p96 = hh_vbf_kvm2p12_k2v3p87_klm5p96.add_process(
-    name="hh_vbf_htt_hvv_kvm2p12_k2v3p87_klm5p96",
+hh_vbf_htt_hvv_kv2p12_k2v3p87_klm5p96 = hh_vbf_kv2p12_k2v3p87_klm5p96.add_process(
+    name="hh_vbf_htt_hvv_kv2p12_k2v3p87_klm5p96",
     id=97010,
-    label=r"$HH_{vbf} \rightarrow \tau\tau VV$ ($\kappa_{V}=-2.12$, $\kappa_{2V}=3.87$, $\kappa_{\lambda}=-5.96$)",
-    xsecs=multiply_xsecs(hh_vbf_kvm2p12_k2v3p87_klm5p96, const.br_hh.ttvv),
+    label=r"$HH_{vbf} \rightarrow \tau\tau VV$ ($\kappa_{V}=2.12$, $\kappa_{2V}=3.87$, $\kappa_{\lambda}=-5.96$)",
+    xsecs=multiply_xsecs(hh_vbf_kv2p12_k2v3p87_klm5p96, const.br_hh.ttvv),
 )
