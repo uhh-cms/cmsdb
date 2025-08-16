@@ -56,13 +56,13 @@ cpn.add_dataset(
         "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v1/NANOAODSIM",  # noqa
         "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext2-v2/NANOAODSIM",  # noqa
     ],
-    n_files=88 + 124 + 124,
+    n_files=94 + 133 + 137,
     n_events=72_913_933 + 100_280_322 + 103_042_871,
     aux={
         "merging_factors": {
-            "nominal": 14,
-            "nominal_ext1": 15,
-            "nominal_ext2": 21,
+            "nominal": 13,
+            "nominal_ext1": 14,
+            "nominal_ext2": 19,
         },
     },
 )
@@ -74,11 +74,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=92,
+    n_files=105,
     n_events=87_955_912,
     aux={
         "merging_factors": {
-            "nominal": 16,
+            "nominal": 14,
         },
     },
 )
@@ -90,11 +90,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=127,
+    n_files=138,
     n_events=96_932_233,
     aux={
         "merging_factors": {
-            "nominal": 13,
+            "nominal": 12,
         },
     },
 )
@@ -106,11 +106,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=114,
+    n_files=126,
     n_events=71_990_957,
     aux={
         "merging_factors": {
-            "nominal": 11,
+            "nominal": 10,
         },
     },
 )
@@ -122,11 +122,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=72,
+    n_files=78,
     n_events=50_272_820,
     aux={
         "merging_factors": {
-            "nominal": 14,
+            "nominal": 13,
         },
     },
 )
@@ -138,11 +138,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=31,
+    n_files=33,
     n_events=18_682_106,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 14,
         },
     },
 )
@@ -154,11 +154,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=4,
+    n_files=5,
     n_events=1_939_721,
     aux={
         "merging_factors": {
-            "nominal": 16,
+            "nominal": 13,
         },
     },
 )
@@ -170,11 +170,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=1,
+    n_files=2,
     n_events=503_786,
     aux={
         "merging_factors": {
-            "nominal": 28,
+            "nominal": 14,
         },
     },
 )
@@ -186,11 +186,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=1,
+    n_files=2,
     n_events=508_646,
     aux={
         "merging_factors": {
-            "nominal": 28,
+            "nominal": 14,
         },
     },
 )
@@ -202,11 +202,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=32,
+    n_files=35,
     n_events=19_307_377,
     aux={
         "merging_factors": {
-            "nominal": 13,
+            "nominal": 12,
         },
     },
 )
@@ -218,11 +218,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=37,
+    n_files=40,
     n_events=19_139_796,
     aux={
         "merging_factors": {
-            "nominal": 13,
+            "nominal": 12,
         },
     },
 )
@@ -234,11 +234,11 @@ cpn.add_dataset(
     keys=[
         "/DYto2L-2Jets_MLL-50_PTLL-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=9,
+    n_files=10,
     n_events=3_651_560,
     aux={
         "merging_factors": {
-            "nominal": 13,
+            "nominal": 12,
         },
     },
 )
