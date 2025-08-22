@@ -565,12 +565,12 @@ tttt = Process(
     xsecs={
         # source: https://www.arxiv.org/abs/2212.03259
         13: Number(13.37e-03, {
-            "scale": (0.48, 1.52),
-            "pdf": 0.92,
+            "scale": (0.48e-03, 1.52e-03),
+            "pdf": 0.92e-03,
         }),
         13.6: Number(15.82e-03, {
-            "scale": (0.24, 1.83),
-            "pdf": 1.06,
+            "scale": (0.24e-03, 1.83e-03),
+            "pdf": 1.06e-03,
         }),
     },
 )
