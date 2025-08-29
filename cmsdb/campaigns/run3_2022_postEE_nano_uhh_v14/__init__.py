@@ -25,9 +25,9 @@ campaign_run3_2022_postEE_nano_uhh_v14 = Campaign(
         "custom": {
             "name": "run3_2022_postEE_nano_uhh_v14",
             "creator": "uhh",
-            "nanogen_version": "prod1",
+            "nanogen_version": "prod2",
             "locations": {
-                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/aalvesan/nanogen_store/MergeNano/config_22post_v14/prod1",  # noqa
+                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/aalvesan/nanogen_store/MergeNano/config_22post_v14/prod2",  # noqa
             },
         },
     },
