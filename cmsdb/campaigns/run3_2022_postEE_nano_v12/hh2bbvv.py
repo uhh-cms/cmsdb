@@ -203,9 +203,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_hvv_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14879734,
-    processes=[procs.hh_vbf_hbb_hvv_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_hvv_kv2p12_k2v3p87_klm5p96],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -273,9 +273,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="hh_vbf_hbb_hvv2l2nu_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_hvv2l2nu_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14877430,
-    processes=[procs.hh_vbf_hbb_hvv2l2nu_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_hvv2l2nu_kv2p12_k2v3p87_klm5p96],
     info=dict(
         nominal=DatasetInfo(
             keys=[
@@ -483,9 +483,9 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="hh_vbf_hbb_hvvqqlnu_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_hvvqqlnu_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14870854,
-    processes=[procs.hh_vbf_hbb_hvvqqlnu_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_hvvqqlnu_kv2p12_k2v3p87_klm5p96],
     info=dict(
         nominal=DatasetInfo(
             keys=[

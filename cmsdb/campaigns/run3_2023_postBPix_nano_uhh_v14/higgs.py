@@ -14,6 +14,22 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_uhh_v14 import campaign_run3_2023_p
 #
 
 cpn.add_dataset(
+    name="h_ggf_hww2l2nu_powheg",
+    id=14997435,
+    processes=[procs.h_ggf_hww2l2nu],
+    keys=[
+        "/GluGluHto2Wto2L2Nu_M-125_TuneCP5_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1_697_000,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+cpn.add_dataset(
     name="h_ggf_htt_powheg",
     id=14845170,
     processes=[procs.h_ggf_htt],
@@ -41,6 +57,22 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 18,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="h_vbf_hww2l2nu_powheg",
+    id=14998526,
+    processes=[procs.h_vbf_hww2l2nu],
+    keys=[
+        "/VBFHto2Wto2L2Nu_M-125_TuneCP5_13p6TeV_powheg-jhugen752-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1_688_000,
+    aux={
+        "merging_factors": {
+            "nominal": 19,
         },
     },
 )
@@ -169,6 +201,22 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 2,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="zh_hww2l2nu_powheg",
+    id=14944238,
+    processes=[procs.zh_hww2l2nu],
+    keys=[
+        "/ZH_ZtoAll_Hto2Wto2L2Nu_M-125_TuneCP5_13p6TeV_powheg-minlo-HZJ-jhugenv752-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1_243_809,
+    aux={
+        "merging_factors": {
+            "nominal": 29,
         },
     },
 )
@@ -310,6 +358,78 @@ cpn.add_dataset(
     ],
     n_files=19,
     n_events=5_943_987,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+#
+# tH
+#
+
+cpn.add_dataset(
+    name="thq_4f_madgraph",
+    id=15041844,
+    processes=[procs.thq],
+    keys=[
+        "/THQ_ctcvcp_HIncl_M-125_4FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=5,
+    n_events=1_984_998,
+    aux={
+        "merging_factors": {
+            "nominal": 11,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="thw_madgraph",
+    id=15142176,
+    processes=[procs.thw],
+    keys=[
+        "/THW_ctcvcp_HIncl_M-125_5FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=988_000,
+    aux={
+        "merging_factors": {
+            "nominal": 16,
+        },
+    },
+)
+
+#
+# ttVH
+#
+
+cpn.add_dataset(
+    name="ttzh_madgraph",
+    id=14942804,
+    processes=[procs.ttzh],
+    keys=[
+        "/TTZH_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=994_000,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="ttwh_madgraph",
+    id=14932715,
+    processes=[procs.ttwh],
+    keys=[
+        "/TTWH_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=4,
+    n_events=993_000,
     aux={
         "merging_factors": {
             "nominal": 16,

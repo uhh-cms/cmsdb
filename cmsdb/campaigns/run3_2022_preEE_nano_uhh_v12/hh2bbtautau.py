@@ -342,9 +342,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14877633,
-    processes=[procs.hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96],
     keys=[
         "/VBFHHto2B2Tau_CV-m2p12_C2V-3p87_C3-m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
