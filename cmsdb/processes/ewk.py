@@ -1782,9 +1782,23 @@ w_lnu_ht2500toinf = w_lnu.add_process(
     },
 )
 
+w_lnu_xsdb_xsecs = {
+    13.6: {
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=DAS=WtoLNu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+        "incl": Number(67400, {"tot": 278.9}),
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=DAS=WtoLNu-2Jets_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+        "0j": Number(55760, {"tot": 75.39}),
+        "1j": Number(9529, {"tot": 56.7}),
+        "2j": Number(3532, {"tot": 34.81}),
+    }
+}
+
 w_lnu_0j = w_lnu.add_process(
     name="w_lnu_0j",
     id=610000,
+    xsecs={
+        13.6: w_lnu.get_xsec(13.6) * w_lnu_xsdb_xsecs[13.6]["0j"] / w_lnu_xsdb_xsecs[13.6]["incl"],
+    },
     label=rf"{w_lnu.label[:-1]}, 0j)",
     aux={
         "njets": (0, 1),
@@ -1794,6 +1808,9 @@ w_lnu_0j = w_lnu.add_process(
 w_lnu_1j = w_lnu.add_process(
     name="w_lnu_1j",
     id=610010,
+    xsecs={
+        13.6: w_lnu.get_xsec(13.6) * w_lnu_xsdb_xsecs[13.6]["1j"] / w_lnu_xsdb_xsecs[13.6]["incl"],
+    },
     label=rf"{w_lnu.label[:-1]}, 1j)",
     aux={
         "njets": (1, 2),
@@ -1803,6 +1820,9 @@ w_lnu_1j = w_lnu.add_process(
 w_lnu_2j = w_lnu.add_process(
     name="w_lnu_2j",
     id=610020,
+    xsecs={
+        13.6: w_lnu.get_xsec(13.6) * w_lnu_xsdb_xsecs[13.6]["2j"] / w_lnu_xsdb_xsecs[13.6]["incl"],
+    },
     label=rf"{w_lnu.label[:-1]}, 2j)",
     aux={
         "njets": (2, 3),
