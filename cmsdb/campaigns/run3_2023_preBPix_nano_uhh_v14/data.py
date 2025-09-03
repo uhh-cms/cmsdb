@@ -441,7 +441,7 @@ cpn.add_dataset(
     name="data_parking_vbf_c3",
     id=14826159,
     is_data=True,
-    processes=[procs.data_parking],
+    processes=[procs.data_vbf],
     keys=[
         "/ParkingVBF0/Run2023C-22Sep2023_v3_NanoAODv14UHH-v1/NANOAOD",
         "/ParkingVBF1/Run2023C-22Sep2023_v3_NanoAODv14UHH-v1/NANOAOD",
@@ -466,7 +466,7 @@ cpn.add_dataset(
     name="data_parking_vbf_c4",
     id=14825784,
     is_data=True,
-    processes=[procs.data_parking],
+    processes=[procs.data_vbf],
     keys=[
         "/ParkingVBF0/Run2023C-22Sep2023_v4_NanoAODv14UHH-v1/NANOAOD",
         "/ParkingVBF1/Run2023C-22Sep2023_v4_NanoAODv14UHH-v1/NANOAOD",
@@ -491,6 +491,6 @@ cpn.add_dataset(
             "nominal_ext7": 14,
         },
         "era": "VBF",
-        "jec_era": "RunCv466",
+        "jec_era": "RunCv4",
     },
 )
