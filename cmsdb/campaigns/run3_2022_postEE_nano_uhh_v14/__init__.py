@@ -13,7 +13,7 @@ from order import Campaign
 
 campaign_run3_2022_postEE_nano_uhh_v14 = Campaign(
     name="run3_2022_postEE_nano_uhh_v14",
-    id=320222141,  # (run)3(year)2022(part)2(version)14(prod)1
+    id=320222142,  # (run)3(year)2022(part)2(version)14(prod)2
     ecm=13.6,
     bx=25,
     aux={
