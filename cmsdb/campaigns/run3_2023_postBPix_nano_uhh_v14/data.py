@@ -220,3 +220,71 @@ cpn.add_dataset(
         "era": "D",
     },
 )
+
+#
+# VBF parking
+#
+
+cpn.add_dataset(
+    name="data_parking_vbf_d1",
+    id=14826079,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF1/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF2/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF3/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF4/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF5/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF6/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF7/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=78 + 79 + 77 + 77 + 77 + 78 + 77 + 78,  # 0 + 1 + 0 + 0 + 0 + 0 + 0 + 0 skipped
+    n_events=65_139_138 + 65_244_498 + 65_300_193 + 65_137_849 + 65_139_877 + 65_275_863 + 65_248_479 + 65_244_286,  # 0 + 56_714 + 0 + 0 + 0 + 0 + 0 + 0 skipped # noqa
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+            "nominal_ext1": 14,
+            "nominal_ext2": 14,
+            "nominal_ext3": 14,
+            "nominal_ext4": 14,
+            "nominal_ext5": 14,
+            "nominal_ext6": 14,
+            "nominal_ext7": 14,
+        },
+        "era": "VBF",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_d2",
+    id=14826114,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF1/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF2/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF3/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF4/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF5/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF6/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF7/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=18 + 18 + 18 + 18 + 18 + 18 + 18 + 18,
+    n_events=13_845_112 + 13_874_062 + 13_872_438 + 13_871_931 + 13_872_999 + 13_873_320 + 13_872_756 + 13_873_107,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+            "nominal_ext1": 14,
+            "nominal_ext2": 14,
+            "nominal_ext3": 14,
+            "nominal_ext4": 14,
+            "nominal_ext5": 14,
+            "nominal_ext6": 14,
+            "nominal_ext7": 14,
+        },
+        "era": "VBF",
+    },
+)
