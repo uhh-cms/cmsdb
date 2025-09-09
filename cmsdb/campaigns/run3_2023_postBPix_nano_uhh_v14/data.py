@@ -22,12 +22,12 @@ cpn.add_dataset(
         "/Muon0/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
         "/Muon1/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=82 + 84,
+    n_files=92 + 94,
     n_events=100_211_533 + 100_281_976,
     aux={
         "merging_factors": {
-            "nominal": 19,
-            "nominal_ext1": 18,
+            "nominal": 17,
+            "nominal_ext1": 16,
         },
         "era": "D",
     },
@@ -42,12 +42,12 @@ cpn.add_dataset(
         "/Muon0/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
         "/Muon1/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=19 + 19,
+    n_files=21 + 20,
     n_events=21_462_916 + 21_463_645,
     aux={
         "merging_factors": {
-            "nominal": 20,
-            "nominal_ext1": 19,
+            "nominal": 18,
+            "nominal_ext1": 18,
         },
         "era": "D",
     },
@@ -83,11 +83,11 @@ cpn.add_dataset(
     keys=[
         "/MuonEG/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=5,
+    n_files=6,
     n_events=3_751_587,
     aux={
         "merging_factors": {
-            "nominal": 14,
+            "nominal": 12,
         },
         "era": "D",
     },
@@ -106,12 +106,12 @@ cpn.add_dataset(
         "/EGamma0/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
         "/EGamma1/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=106 + 113,
+    n_files=122 + 121,
     n_events=105_892_646 + 105_850_543,
     aux={
         "merging_factors": {
-            "nominal": 16,
-            "nominal_ext1": 15,
+            "nominal": 14,
+            "nominal_ext1": 14,
         },
         "era": "D",
     },
@@ -126,12 +126,12 @@ cpn.add_dataset(
         "/EGamma0/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
         "/EGamma1/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=25 + 25,
+    n_files=27 + 27,
     n_events=22_657_211 + 22_653_287,
     aux={
         "merging_factors": {
-            "nominal": 16,
-            "nominal_ext1": 16,
+            "nominal": 15,
+            "nominal_ext1": 15,
         },
         "era": "D",
     },
@@ -149,11 +149,11 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=39,
+    n_files=42,
     n_events=32_092_659,
     aux={
         "merging_factors": {
-            "nominal": 14,
+            "nominal": 13,
         },
         "era": "D",
     },
@@ -167,11 +167,11 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=9,
+    n_files=10,
     n_events=7_246_202,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 13,
         },
         "era": "D",
     },
