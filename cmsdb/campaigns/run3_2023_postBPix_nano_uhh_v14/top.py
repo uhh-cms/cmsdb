@@ -256,7 +256,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m4to50_amcatnlo",
+    name="ttz_zll_m4to50_amcatnlo", # -> not yet updated (9th Sep 2025), issue with DAS files not found
     id=14982174,
     processes=[procs.ttz_zll_m4to50],
     keys=[
@@ -272,7 +272,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m50toinf_amcatnlo",
+    name="ttz_zll_m50toinf_amcatnlo", # -> not yet updated (9th Sep 2025), issue with DAS files not found
     id=14989609,
     processes=[procs.ttz_zll_m50toinf],
     keys=[
