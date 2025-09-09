@@ -84,11 +84,11 @@ cpn.add_dataset(
     keys=[
         "/VBFHToTauTau_M125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
-    n_files=6,
+    n_files=7,
     n_events=3_843_000,
     aux={
         "merging_factors": {
-            "nominal": 17,
+            "nominal": 15,
         },
     },
 )
@@ -100,11 +100,11 @@ cpn.add_dataset(
     keys=[
         "/VBFHto2B_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
     ],
-    n_files=17,
+    n_files=18,
     n_events=11_049_000,
     aux={
         "merging_factors": {
-            "nominal": 20,
+            "nominal": 18,
         },
     },
 )
@@ -116,11 +116,11 @@ cpn.add_dataset(
     keys=[
         "/ggZH_Hto2B_Zto2L_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
     ],
-    n_files=26,
+    n_files=28,
     n_events=11_066_000,
     aux={
         "merging_factors": {
-            "nominal": 16,
+            "nominal": 15,
         },
     },
 )
@@ -132,11 +132,11 @@ cpn.add_dataset(
     keys=[
         "/ggZH_Hto2B_Zto2Nu_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
     ],
-    n_files=17,
+    n_files=18,
     n_events=10_848_000,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 14,
         },
     },
 )
@@ -196,11 +196,11 @@ cpn.add_dataset(
     keys=[
         "/ZH_Hto2B_Zto2L_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
     ],
-    n_files=23,
+    n_files=24,
     n_events=10_970_000,
     aux={
         "merging_factors": {
-            "nominal": 22,
+            "nominal": 21,
         },
     },
 )
@@ -212,11 +212,11 @@ cpn.add_dataset(
     keys=[
         "/ZH_Hto2B_Zto2Q_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
     ],
-    n_files=20,
+    n_files=21,
     n_events=11_061_000,
     aux={
         "merging_factors": {
-            "nominal": 25,
+            "nominal": 23,
         },
     },
 )
@@ -244,11 +244,11 @@ cpn.add_dataset(
     keys=[
         "/WminusH_Hto2B_WtoLNu_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
     ],
-    n_files=19,
+    n_files=20,
     n_events=10_881_782,
     aux={
         "merging_factors": {
-            "nominal": 35,
+            "nominal": 33,
         },
     },
 )
@@ -260,11 +260,11 @@ cpn.add_dataset(
     keys=[
         "/WminusH_Hto2B_Wto2Q_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
     ],
-    n_files=19,
+    n_files=20,
     n_events=11_064_878,
     aux={
         "merging_factors": {
-            "nominal": 35,
+            "nominal": 34,
         },
     },
 )
@@ -292,11 +292,11 @@ cpn.add_dataset(
     keys=[
         "/WplusH_Hto2B_WtoLNu_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
     ],
-    n_files=20,
+    n_files=21,
     n_events=11_042_360,
     aux={
         "merging_factors": {
-            "nominal": 34,
+            "nominal": 32,
         },
     },
 )
@@ -308,11 +308,11 @@ cpn.add_dataset(
     keys=[
         "/WplusH_Hto2B_Wto2Q_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
     ],
-    n_files=19,
+    n_files=20,
     n_events=11_032_400,
     aux={
         "merging_factors": {
-            "nominal": 34,
+            "nominal": 33,
         },
     },
 )
@@ -340,11 +340,11 @@ cpn.add_dataset(
     keys=[
         "/TTHto2B_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
     ],
-    n_files=33,
+    n_files=35,
     n_events=10_916_000,
     aux={
         "merging_factors": {
-            "nominal": 13,
+            "nominal": 12,
         },
     },
 )
@@ -356,11 +356,11 @@ cpn.add_dataset(
     keys=[
         "/TTHtoNon2B_M-125_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
     ],
-    n_files=36,
+    n_files=38,
     n_events=11_901_980,
     aux={
         "merging_factors": {
-            "nominal": 16,
+            "nominal": 15,
         },
     },
 )
