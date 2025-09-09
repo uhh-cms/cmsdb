@@ -13,7 +13,7 @@ from order import Campaign
 
 campaign_run3_2022_postEE_nano_uhh_v14 = Campaign(
     name="run3_2022_postEE_nano_uhh_v14",
-    id=320222141,  # (run)3(year)2022(part)2(version)14(prod)1
+    id=320222142,  # (run)3(year)2022(part)2(version)14(prod)2
     ecm=13.6,
     bx=25,
     aux={
@@ -25,8 +25,8 @@ campaign_run3_2022_postEE_nano_uhh_v14 = Campaign(
         "custom": {
             "name": "run3_2022_postEE_nano_uhh_v14",
             "creator": "uhh",
-            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/aalvesan/nanogen_store/MergeNano/config_22post_v14/prod1",  # noqa
-            "nanogen_version": "prod1",
+            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/aalvesan/nanogen_store/MergeNano/config_22post_v14/prod2",  # noqa
+            "nanogen_version": "prod2",
         },
     },
     tags={"EE", "postEE"},
