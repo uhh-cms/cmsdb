@@ -8,6 +8,7 @@ __all__ = [
     "data", "data_e", "data_mu",
     "data_tau", "data_met", "data_pho",
     "data_egamma", "data_muoneg", "data_jetht", "data_jethtmet",
+    "data_vbf",
 ]
 
 from order import Process
@@ -66,6 +67,7 @@ data_egamma = data.add_process(
     is_data=True,
     label=r"Data $e/\gamma$",
 )
+
 data_muoneg = data.add_process(
     name="data_muoneg",
     id=70,
@@ -79,9 +81,17 @@ data_jetht = data.add_process(
     is_data=True,
     label=r"Data JetHT",
 )
+
 data_jethtmet = data.add_process(
     name="data_jethtmet",
     id=140,
     is_data=True,
     label=r"Data JetHT/MET",
+)
+
+data_vbf = data.add_process(
+    name="data_vbf",
+    id=150,
+    is_data=True,
+    label=r"Data VBF",
 )
