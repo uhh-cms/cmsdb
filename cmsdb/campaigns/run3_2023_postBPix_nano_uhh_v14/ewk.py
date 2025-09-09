@@ -1100,11 +1100,11 @@ cpn.add_dataset(
     keys=[
         "/Zto2Q-2Jets_PTQQ-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
     ],
-    n_files=15,
+    n_files=16,
     n_events=10_126_628,
     aux={
         "merging_factors": {
-            "nominal": 18,
+            "nominal": 17,
         },
     },
 )
@@ -1164,11 +1164,11 @@ cpn.add_dataset(
     keys=[
         "/Zto2Q-2Jets_PTQQ-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
     ],
-    n_files=17,
+    n_files=18,
     n_events=9_629_569,
     aux={
         "merging_factors": {
-            "nominal": 17,
+            "nominal": 16,
         },
     },
 )
@@ -1180,11 +1180,11 @@ cpn.add_dataset(
     keys=[
         "/Zto2Q-2Jets_PTQQ-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
     ],
-    n_files=23,
+    n_files=24,
     n_events=10_218_032,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 14,
         },
     },
 )
