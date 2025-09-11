@@ -152,8 +152,8 @@ dy_m50toinf = dy.add_process(
             "pdf": 14.78,
         }),
         # nnlo
-        13.6: const.n_leps * Number(2091.7, {
-            "scale": (0.008j, 0.013j),
+        13.6: const.n_leps * Number(2094.2, {
+            "scale": (0.007j, 0.011j),
             "pdf": 0.01j,
         }),
     },
@@ -1660,11 +1660,11 @@ w_munu = w.add_process(
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
-wm_lnu_xs_13p6 = const.n_leps * Number(9009.5, {
-    "scale": (0.014j, 0.012j),
+wm_lnu_xs_13p6 = const.n_leps * Number(9013.3, {
+    "scale": (0.013j, 0.011j),
     "pdf": 0.008j,
 })
-wp_lnu_xs_13p6 = const.n_leps * Number(12122.5, {
+wp_lnu_xs_13p6 = const.n_leps * Number(12128.4, {
     "scale": (0.011j, 0.014),
     "pdf": 0.007j,
 })
