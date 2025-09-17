@@ -1462,8 +1462,8 @@ thw = h.add_process(
             "pdf": 0.063j,
         }),
         13.6: Number(1.720E-02, {
-            "scale": (0.024j, 0.017j),
-            "pdf": 0.022j,
+            "scale": (0.050j, 0.068j),
+            "pdf": 0.063j,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
