@@ -1452,6 +1452,9 @@ ttwh = ttvh.add_process(
     aux={"production_mode_parent": ttvh},
 )
 
+# set combined xsec for ttvh
+ttvh.xsecs = add_xsecs(ttzh, ttwh)
+
 thw = h.add_process(
     name="thw",
     id=140000,
