@@ -786,7 +786,7 @@ cpn.add_dataset(
     keys=[
         "/WZ_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=46,
+    n_files=46 - 1,  # 1 file missing 07.08.25
     n_events=7527043,
 )
 
