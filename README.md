@@ -29,7 +29,7 @@ Database of physics processes, cross sections and scientific constants as well a
 | [`run3_2023_preBPix_nano_uhh_v14`](./cmsdb/campaigns/run3_2023_preBPix_nano_uhh_v14)   | `""`     | `{"preBPix"}`               |
 | [`run3_2023_postBPix_nano_uhh_v14`](./cmsdb/campaigns/run3_2023_postBPix_nano_uhh_v14) | `"BPix"` | `{"postBPix", "BPix"}`      |
 | [`run3_2024_nano_uhh_v15`](./cmsdb/campaigns/run3_4_nano_uhh_v15)                      | `""`     | `{}`                        |
-| [`run3_2024_nano_v14`](./cmsdb/campaigns/run3_2024_nano_v14)                           | `""`     | `{}`                        |
+| [`run3_2024_nano_v15`](./cmsdb/campaigns/run3_2024_nano_v15)                           | `""`     | `{}`                        |
 
 ## Dependencies
 

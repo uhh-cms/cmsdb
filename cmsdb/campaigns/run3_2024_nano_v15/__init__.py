@@ -25,7 +25,7 @@ campaign_run3_2024_nano_v14 = Campaign(
         "tier": "NanoAOD",
         "run": 3,
         "year": 2024,
-        "version": 14,
+        "version": 15,
         "postfix": "",
     },
     tags={},
@@ -36,7 +36,7 @@ campaign_run3_2024_nano_v14 = Campaign(
 # import cmsdb.campaigns.run3_2022_preEE_nano_v12.data  # noqa
 # import cmsdb.campaigns.run3_2022_preEE_nano_v12.top  # noqa
 # import cmsdb.campaigns.run3_2022_preEE_nano_v12.ewk  # noqa
-import cmsdb.campaigns.run3_2022_preEE_nano_v12.qcd  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.qcd  # noqa
 # import cmsdb.campaigns.run3_2022_preEE_nano_v12.higgs  # noqa
 # import cmsdb.campaigns.run3_2022_preEE_nano_v12.hh2bbtautau  # noqa
 # import cmsdb.campaigns.run3_2022_preEE_nano_v12.hh2bbvv  # noqa
