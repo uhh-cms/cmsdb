@@ -859,7 +859,604 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# none yet
+# NLO up to two jets (leptonic)
+cpn.add_dataset(
+    name="w_enu_2j_inc_amcatnlo",
+    id=15297431,
+    processes=[procs.w_enu_2j_inc],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoENu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=3017,  # 3017-0
+            n_events=553868158,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_munu_2j_inc_amcatnlo",
+    id=15292952,
+    processes=[procs.w_munu_2j_inc],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoMuNu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2962,  # 2962-0
+            n_events=534824098,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_taunu_2j_inc_amcatnlo",
+    id=15292944,
+    processes=[procs.w_taunu_2j_inc],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoTauNu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2747,  # 2747-0
+            n_events=500139084,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_enu_2j_0j_amcatnlo",
+    id=15300303,
+    processes=[procs.w_enu_2j_0j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoENu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=491,  # 491-0
+            n_events=478887010,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_munu_2j_0j_amcatnlo",
+    id=15296227,
+    processes=[procs.w_munu_2j_0j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoMuNu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=495,  # 495-0
+            n_events=464632230,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_taunu_2j_0j_amcatnlo",
+    id=15304427,
+    processes=[procs.w_taunu_2j_0j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoTauNu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=504,  # 504-0
+            n_events=442672319,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_pt40to100_amcatnlo",
+    id=15297303,
+    processes=[procs.w_lnu_1j_pt40to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-1J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=3384,  # 3384-0
+            n_events=447467775,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_pt100to200_amcatnlo",
+    id=15300033,
+    processes=[procs.w_lnu_1j_pt100to200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-1J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=3089,  # 3089-0
+            n_events=494167270,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_pt200to400_amcatnlo",
+    id=15304490,
+    processes=[procs.w_lnu_1j_pt200to400],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-1J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=109,  # 109-0
+            n_events=45096548,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_pt400to600_amcatnlo",
+    id=15304489,
+    processes=[procs.w_lnu_1j_pt400to600],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-1J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=62,  # 62-0
+            n_events=14159808,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_pt600toinf_amcatnlo",
+    id=15304609,
+    processes=[procs.w_lnu_1j_pt600toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-1J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=27,  # 27-0
+            n_events=15305397,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_pt40to100_amcatnlo",
+    id=15300032,
+    processes=[procs.w_lnu_2j_pt40to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-2J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=3309,  # 3309-0
+            n_events=483030994,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_pt100to200_amcatnlo",
+    id=15299994,
+    processes=[procs.w_lnu_2j_pt100to200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-2J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=3262,  # 3262-0
+            n_events=470520533,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_pt200to400_amcatnlo",
+    id=15304499,
+    processes=[procs.w_lnu_2j_pt200to400],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-2J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=136,  # 136-0
+            n_events=75124628,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_pt400to600_amcatnlo",
+    id=15304459,
+    processes=[procs.w_lnu_2j_pt400to600],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-2J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=51,  # 51-0
+            n_events=14222725,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_pt600toinf_amcatnlo",
+    id=15304506,
+    processes=[procs.w_lnu_2j_pt600toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-2Jets_Bin-2J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=67,  # 67-0
+            n_events=14991109,
+        ),
+    ),
+)
+
+# LO up to four jets (leptonic)
+cpn.add_dataset(
+    name="w_enu_4j_inc_madgraph",
+    id=15301798,
+    processes=[procs.w_enu_4j_inc],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoENu-4Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2952,  # 2952-0
+            n_events=500792358,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_munu_4j_inc_madgraph",
+    id=15305399,
+    processes=[procs.w_munu_4j_inc],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoMuNu-4Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2366,  # 2366-0
+            n_events=425220142,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_taunu_4j_inc_madgraph",
+    id=15304606,
+    processes=[procs.w_taunu_4j_inc],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoTauNu-4Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2589,  # 2589-0
+            n_events=481997294,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_enu_4j_1j_madgraph",
+    id=15300448,
+    processes=[procs.w_enu_4j_1j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoENu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2648,  # 2648-0
+            n_events=479079357,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_munu_4j_1j_madgraph",
+    id=15304622,
+    processes=[procs.w_munu_4j_1j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoMuNu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2513,  # 2513-0
+            n_events=445870925,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_taunu_4j_1j_madgraph",
+    id=15305387,
+    processes=[procs.w_taunu_4j_1j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoTauNu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2589,  # 2589-0
+            n_events=471084889,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_madgraph",
+    id=15316677,
+    processes=[procs.w_lnu_1j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2491,  # 2491-0
+            n_events=429800607,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_madgraph",
+    id=15298612,
+    processes=[procs.w_lnu_2j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_Bin-2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=1632,  # 1632-0
+            n_events=286526689,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_3j_madgraph",
+    id=15298945,
+    processes=[procs.w_lnu_3j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_Bin-3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=915,  # 915-0
+            n_events=139773986,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="w_lnu_4j_madgraph",
+    id=15298088,
+    processes=[procs.w_lnu_4j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoLNu-4Jets_Bin-4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=644,  # 644-0
+            n_events=85950957,
+        ),
+    ),
+)
+
+# hadronic/other with no process/xs yet
+"""
+cpn.add_dataset(
+    name="PLACEHOLDER_amcatnlo",
+    id=15407579,
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Wto2Q-2Jets_Bin-PTQQ-200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=994,  # 994-0
+            n_events=156003498,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="PLACEHOLDER_amcatnlo",
+    id=15407581,
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Wto2Q-2Jets_Bin-PTQQ-400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=356,  # 356-0
+            n_events=47423661,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="PLACEHOLDER_amcatnlo",
+    id=15411349,
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Wto2Q-2Jets_Bin-PTQQ-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=389,  # 389-0
+            n_events=51483908,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="PLACEHOLDER_madgraph",
+    id=15404212,
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Wto2Q-3Jets_Bin-HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=1925,  # 1925-0
+            n_events=383183449,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="PLACEHOLDER_madgraph",
+    id=15404438,
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Wto2Q-3Jets_Bin-HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=372,  # 372-0
+            n_events=48297099,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="PLACEHOLDER_madgraph",
+    id=15407704,
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Wto2Q-3Jets_Bin-HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=414,  # 414-0
+            n_events=53389988,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="PLACEHOLDER_pythia8",
+    id=15321748,
+    processes=[procs.PLACEHOLDER],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WtoTauNu-Tauto3Mu_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=37,  # 37-0
+            n_events=3963712,
+        ),
+    ),
+)
+"""
 
 ####################################################################################################
 #
@@ -867,7 +1464,115 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# none yet
+# inclusive
+cpn.add_dataset(
+    name="zz_pythia8",
+    id=15315163,
+    processes=[procs.zz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZ_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=76,  # 76-0
+            n_events=4800000,
+        ),
+    ),
+)
+
+# per decay mode
+cpn.add_dataset(
+    name="zz_zll_zll_powheg",
+    id=15297464,
+    processes=[procs.zz_zll_zll],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZto4L_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=273,  # 273-0
+            n_events=236757511,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_zqq_zll_powheg",
+    id=15304456,
+    processes=[procs.zz_zqq_zll],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=215,  # 215-0
+            n_events=171627615,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_zll_znunu_powheg",
+    id=15304432,
+    processes=[procs.zz_zll_znunu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=228,  # 228-0
+            n_events=188715312,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_znunu_zqq_powheg",
+    id=15304447,
+    processes=[procs.zz_znunu_zqq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZto2Nu2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=65,  # 65-0
+            n_events=46047410,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_zqq_zqq_amcatnlo",
+    id=15377566,
+    processes=[procs.zz_zqq_zqq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZto4Q-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=58,  # 58-0
+            n_events=4971870,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
@@ -879,11 +1584,181 @@ cpn.add_dataset(
 
 ####################################################################################################
 #
+# WW boson production
+#
+####################################################################################################
+
+# inclusive
+cpn.add_dataset(
+    name="ww_pythia8",
+    id=15315231,
+    processes=[procs.ww],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WW_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=518,  # 518-0
+            n_events=63986968,
+        ),
+    ),
+)
+
+# per decay mode
+cpn.add_dataset(
+    name="ww_dl_powheg",
+    id=15304453,
+    processes=[procs.ww_dl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=278,  # 278-0
+            n_events=239943886,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ww_sl_powheg",
+    id=15296280,
+    processes=[procs.ww_sl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WWtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=326,  # 326-0
+            n_events=275723961,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ww_fh_powheg",
+    id=15304426,
+    processes=[procs.ww_fh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WWto4Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=185,  # 185-0
+            n_events=151214029,
+        ),
+    ),
+)
+
+####################################################################################################
+#
 # WZ boson production
 #
 ####################################################################################################
 
-# none yet
+# inclusive pythia
+cpn.add_dataset(
+    name="wz_pythia8",
+    id=15315210,
+    processes=[procs.wz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZ_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=307,  # 307-0
+            n_events=30547825,
+        ),
+    ),
+)
+
+# by decay powheg ((semi-)leptonic)/amcatnlo(fully hadronic)
+cpn.add_dataset(
+    name="wz_wlnu_zll_powheg",
+    id=15304502,
+    processes=[procs.wz_wlnu_zll],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=296,  # 296-0
+            n_events=248149069,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="wz_wqq_zll_powheg",
+    id=15300434,
+    processes=[procs.wz_wqq_zll],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=257,  # 257-0
+            n_events=236049432,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="wz_wlnu_zqq_powheg",
+    id=15304500,
+    processes=[procs.wz_wlnu_zqq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=156,  # 156-0
+            n_events=143874689,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="wz_wqq_zqq_amcatnlo",
+    id=15393674,
+    processes=[procs.wz_wqq_zqq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZto4Q-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=52,  # 52-0
+            n_events=6163657,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
@@ -899,7 +1774,23 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# none yet
+cpn.add_dataset(
+    name="www_amcatnlo",
+    id=15349413,
+    processes=[procs.www],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WWW-4F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=49,  # 49-0
+            n_events=4299284,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
@@ -907,7 +1798,23 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# none yet
+cpn.add_dataset(
+    name="wwz_amcatnlo",
+    id=15348589,
+    processes=[procs.wwz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WWZ-4F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=171,  # 171-0
+            n_events=16184379,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
@@ -915,7 +1822,23 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# none yet
+cpn.add_dataset(
+    name="wwz_amcatnlo",
+    id=15348847,
+    processes=[procs.wwz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZZ-5F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=127,  # 127-0
+            n_events=16199286,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
@@ -923,7 +1846,23 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# none yet
+cpn.add_dataset(
+    name="zzz_amcatnlo",
+    id=15349235,
+    processes=[procs.zzz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZZ-5F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=201,  # 201-0
+            n_events=16192091,
+        ),
+    ),
+)
 
 ####################################################################################################
 #
@@ -931,4 +1870,20 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# none yet
+cpn.add_dataset(
+    name="wzg_lnuzg_amcatnlo",
+    id=15348696,
+    processes=[procs.wzg_lnuzg],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WZGtoLNuZG_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=39,  # 39-0
+            n_events=2800000,
+        ),
+    ),
+)
