@@ -7,7 +7,7 @@ Data process definitions.
 __all__ = [
     "data", "data_e", "data_mu",
     "data_tau", "data_met", "data_pho",
-    "data_egamma", "data_muoneg", "data_jetht", "data_jethtmet", "data_doublemu"
+    "data_egamma", "data_muoneg", "data_jetht", "data_jethtmet", "data_doublemu",
 ]
 
 from order import Process
