@@ -7,7 +7,7 @@ A->ZH->llttbar MC Datasets
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v12 import campaign_run3_2022_preEE_nano_uhh_v12 as cpn
 
-#MA 1000, MH: 330
+# MA 1000, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h330_amcatnlo",
     id=15109555,
@@ -19,7 +19,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 350
+# MA 1000, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h350_amcatnlo",
     id=15111270,
@@ -31,7 +31,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 400
+# MA 1000, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h400_amcatnlo",
     id=15111326,
@@ -43,7 +43,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 450
+# MA 1000, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h450_amcatnlo",
     id=15111404,
@@ -55,7 +55,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 500
+# MA 1000, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h500_amcatnlo",
     id=15109580,
@@ -67,7 +67,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 550
+# MA 1000, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h550_amcatnlo",
     id=15109652,
@@ -79,7 +79,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 600
+# MA 1000, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h600_amcatnlo",
     id=15110447,
@@ -91,7 +91,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 650
+# MA 1000, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h650_amcatnlo",
     id=15104168,
@@ -103,7 +103,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 700
+# MA 1000, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h700_amcatnlo",
     id=15111521,
@@ -115,7 +115,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 750
+# MA 1000, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h750_amcatnlo",
     id=15098967,
@@ -127,7 +127,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 800
+# MA 1000, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h800_amcatnlo",
     id=15109768,
@@ -139,7 +139,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 850
+# MA 1000, MH: 850
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h850_amcatnlo",
     id=15103969,
@@ -151,7 +151,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1000, MH: 900
+# MA 1000, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1000_h900_amcatnlo",
     id=15109775,
@@ -163,7 +163,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 330
+# MA 1050, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h330_amcatnlo",
     id=15109804,
@@ -175,7 +175,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 350
+# MA 1050, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h350_amcatnlo",
     id=15111368,
@@ -187,7 +187,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 400
+# MA 1050, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h400_amcatnlo",
     id=15110247,
@@ -199,7 +199,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 450
+# MA 1050, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h450_amcatnlo",
     id=15110696,
@@ -211,7 +211,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 500
+# MA 1050, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h500_amcatnlo",
     id=15109167,
@@ -223,7 +223,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 550
+# MA 1050, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h550_amcatnlo",
     id=15109235,
@@ -235,7 +235,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 600
+# MA 1050, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h600_amcatnlo",
     id=15110471,
@@ -247,7 +247,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 650
+# MA 1050, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h650_amcatnlo",
     id=15111514,
@@ -259,7 +259,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 700
+# MA 1050, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h700_amcatnlo",
     id=15109559,
@@ -271,7 +271,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 750
+# MA 1050, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h750_amcatnlo",
     id=15110749,
@@ -283,7 +283,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 800
+# MA 1050, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h800_amcatnlo",
     id=15111671,
@@ -295,7 +295,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 850
+# MA 1050, MH: 850
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h850_amcatnlo",
     id=15110940,
@@ -307,7 +307,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 900
+# MA 1050, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h900_amcatnlo",
     id=15110949,
@@ -319,7 +319,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1050, MH: 950
+# MA 1050, MH: 950
 cpn.add_dataset(
     name="azh_htt_zll_a1050_h950_amcatnlo",
     id=15111135,
@@ -331,7 +331,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 1000
+# MA 1100, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h1000_amcatnlo",
     id=15103971,
@@ -343,7 +343,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 330
+# MA 1100, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h330_amcatnlo",
     id=15109728,
@@ -355,7 +355,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 350
+# MA 1100, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h350_amcatnlo",
     id=15110870,
@@ -367,7 +367,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 400
+# MA 1100, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h400_amcatnlo",
     id=15110490,
@@ -379,7 +379,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 450
+# MA 1100, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h450_amcatnlo",
     id=15111811,
@@ -391,7 +391,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 500
+# MA 1100, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h500_amcatnlo",
     id=15111084,
@@ -403,7 +403,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 550
+# MA 1100, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h550_amcatnlo",
     id=15111657,
@@ -415,7 +415,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 600
+# MA 1100, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h600_amcatnlo",
     id=15110119,
@@ -427,7 +427,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 650
+# MA 1100, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h650_amcatnlo",
     id=15111211,
@@ -439,7 +439,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 700
+# MA 1100, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h700_amcatnlo",
     id=15103973,
@@ -451,7 +451,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 750
+# MA 1100, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h750_amcatnlo",
     id=15109617,
@@ -463,7 +463,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 800
+# MA 1100, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h800_amcatnlo",
     id=15111905,
@@ -475,7 +475,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 850
+# MA 1100, MH: 850
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h850_amcatnlo",
     id=15111872,
@@ -487,7 +487,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 900
+# MA 1100, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h900_amcatnlo",
     id=15109606,
@@ -499,7 +499,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1100, MH: 950
+# MA 1100, MH: 950
 cpn.add_dataset(
     name="azh_htt_zll_a1100_h950_amcatnlo",
     id=15109894,
@@ -511,7 +511,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 1000
+# MA 1150, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h1000_amcatnlo",
     id=15110349,
@@ -523,7 +523,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 1050
+# MA 1150, MH: 1050
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h1050_amcatnlo",
     id=15110267,
@@ -535,7 +535,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 330
+# MA 1150, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h330_amcatnlo",
     id=15110817,
@@ -547,7 +547,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 350
+# MA 1150, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h350_amcatnlo",
     id=15103975,
@@ -559,7 +559,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 400
+# MA 1150, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h400_amcatnlo",
     id=15110663,
@@ -571,7 +571,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 450
+# MA 1150, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h450_amcatnlo",
     id=15110408,
@@ -583,7 +583,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 500
+# MA 1150, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h500_amcatnlo",
     id=15104106,
@@ -595,7 +595,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 550
+# MA 1150, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h550_amcatnlo",
     id=15109766,
@@ -607,7 +607,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 600
+# MA 1150, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h600_amcatnlo",
     id=15109510,
@@ -619,7 +619,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 650
+# MA 1150, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h650_amcatnlo",
     id=15110893,
@@ -631,7 +631,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 700
+# MA 1150, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h700_amcatnlo",
     id=15110981,
@@ -643,7 +643,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 750
+# MA 1150, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h750_amcatnlo",
     id=15112269,
@@ -655,7 +655,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 800
+# MA 1150, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h800_amcatnlo",
     id=15109798,
@@ -667,7 +667,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 850
+# MA 1150, MH: 850
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h850_amcatnlo",
     id=15110282,
@@ -679,7 +679,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 900
+# MA 1150, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h900_amcatnlo",
     id=15109933,
@@ -691,7 +691,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1150, MH: 950
+# MA 1150, MH: 950
 cpn.add_dataset(
     name="azh_htt_zll_a1150_h950_amcatnlo",
     id=15110542,
@@ -703,7 +703,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 1000
+# MA 1200, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h1000_amcatnlo",
     id=15109646,
@@ -715,7 +715,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 1050
+# MA 1200, MH: 1050
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h1050_amcatnlo",
     id=15110271,
@@ -727,7 +727,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 1100
+# MA 1200, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h1100_amcatnlo",
     id=15111932,
@@ -739,7 +739,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 330
+# MA 1200, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h330_amcatnlo",
     id=15109520,
@@ -751,7 +751,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 350
+# MA 1200, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h350_amcatnlo",
     id=15109751,
@@ -763,7 +763,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 400
+# MA 1200, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h400_amcatnlo",
     id=15111399,
@@ -775,7 +775,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 450
+# MA 1200, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h450_amcatnlo",
     id=15110620,
@@ -787,7 +787,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 500
+# MA 1200, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h500_amcatnlo",
     id=15110634,
@@ -799,7 +799,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 550
+# MA 1200, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h550_amcatnlo",
     id=15110760,
@@ -811,7 +811,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 600
+# MA 1200, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h600_amcatnlo",
     id=15111359,
@@ -823,7 +823,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 650
+# MA 1200, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h650_amcatnlo",
     id=15109440,
@@ -835,7 +835,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 700
+# MA 1200, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h700_amcatnlo",
     id=15111848,
@@ -847,7 +847,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 750
+# MA 1200, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h750_amcatnlo",
     id=15111620,
@@ -859,7 +859,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 800
+# MA 1200, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h800_amcatnlo",
     id=15110414,
@@ -871,7 +871,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 850
+# MA 1200, MH: 850
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h850_amcatnlo",
     id=15104974,
@@ -883,7 +883,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 900
+# MA 1200, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h900_amcatnlo",
     id=15110102,
@@ -895,7 +895,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1200, MH: 950
+# MA 1200, MH: 950
 cpn.add_dataset(
     name="azh_htt_zll_a1200_h950_amcatnlo",
     id=15109934,
@@ -907,7 +907,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 1000
+# MA 1250, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h1000_amcatnlo",
     id=15111827,
@@ -919,7 +919,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 1050
+# MA 1250, MH: 1050
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h1050_amcatnlo",
     id=15110444,
@@ -931,7 +931,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 1100
+# MA 1250, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h1100_amcatnlo",
     id=15111055,
@@ -943,7 +943,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 1150
+# MA 1250, MH: 1150
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h1150_amcatnlo",
     id=15109419,
@@ -955,7 +955,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 330
+# MA 1250, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h330_amcatnlo",
     id=15110171,
@@ -967,7 +967,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 350
+# MA 1250, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h350_amcatnlo",
     id=15110710,
@@ -979,7 +979,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 400
+# MA 1250, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h400_amcatnlo",
     id=15110062,
@@ -991,7 +991,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 450
+# MA 1250, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h450_amcatnlo",
     id=15110565,
@@ -1003,7 +1003,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 500
+# MA 1250, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h500_amcatnlo",
     id=15111707,
@@ -1015,7 +1015,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 550
+# MA 1250, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h550_amcatnlo",
     id=15109203,
@@ -1027,7 +1027,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 600
+# MA 1250, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h600_amcatnlo",
     id=15104328,
@@ -1039,7 +1039,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 650
+# MA 1250, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h650_amcatnlo",
     id=15109820,
@@ -1051,7 +1051,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 700
+# MA 1250, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h700_amcatnlo",
     id=15109486,
@@ -1063,7 +1063,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 750
+# MA 1250, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h750_amcatnlo",
     id=15111822,
@@ -1075,7 +1075,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 800
+# MA 1250, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h800_amcatnlo",
     id=15109712,
@@ -1087,7 +1087,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 850
+# MA 1250, MH: 850
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h850_amcatnlo",
     id=15109973,
@@ -1099,7 +1099,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 900
+# MA 1250, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h900_amcatnlo",
     id=15109174,
@@ -1111,7 +1111,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1250, MH: 950
+# MA 1250, MH: 950
 cpn.add_dataset(
     name="azh_htt_zll_a1250_h950_amcatnlo",
     id=15111153,
@@ -1123,7 +1123,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 1000
+# MA 1300, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h1000_amcatnlo",
     id=15111470,
@@ -1135,7 +1135,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 1100
+# MA 1300, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h1100_amcatnlo",
     id=15110388,
@@ -1147,7 +1147,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 1200
+# MA 1300, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h1200_amcatnlo",
     id=15110045,
@@ -1159,7 +1159,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 350
+# MA 1300, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h350_amcatnlo",
     id=15109236,
@@ -1171,7 +1171,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 400
+# MA 1300, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h400_amcatnlo",
     id=15110640,
@@ -1183,7 +1183,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 500
+# MA 1300, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h500_amcatnlo",
     id=15111522,
@@ -1195,7 +1195,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 600
+# MA 1300, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h600_amcatnlo",
     id=15110006,
@@ -1207,7 +1207,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 700
+# MA 1300, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h700_amcatnlo",
     id=15111406,
@@ -1219,7 +1219,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 800
+# MA 1300, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h800_amcatnlo",
     id=15110739,
@@ -1231,7 +1231,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1300, MH: 900
+# MA 1300, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1300_h900_amcatnlo",
     id=15111865,
@@ -1243,7 +1243,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 1000
+# MA 1400, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h1000_amcatnlo",
     id=15104694,
@@ -1255,7 +1255,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 1100
+# MA 1400, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h1100_amcatnlo",
     id=15110873,
@@ -1267,7 +1267,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 1200
+# MA 1400, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h1200_amcatnlo",
     id=15109434,
@@ -1279,7 +1279,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 1300
+# MA 1400, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h1300_amcatnlo",
     id=15110175,
@@ -1291,7 +1291,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 350
+# MA 1400, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h350_amcatnlo",
     id=15111645,
@@ -1303,7 +1303,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 400
+# MA 1400, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h400_amcatnlo",
     id=15104566,
@@ -1315,7 +1315,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 500
+# MA 1400, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h500_amcatnlo",
     id=15103902,
@@ -1327,7 +1327,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 600
+# MA 1400, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h600_amcatnlo",
     id=15109408,
@@ -1339,7 +1339,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 700
+# MA 1400, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h700_amcatnlo",
     id=15109888,
@@ -1351,7 +1351,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 800
+# MA 1400, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h800_amcatnlo",
     id=15109531,
@@ -1363,7 +1363,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1400, MH: 900
+# MA 1400, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1400_h900_amcatnlo",
     id=15111213,
@@ -1375,7 +1375,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 1000
+# MA 1500, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h1000_amcatnlo",
     id=15109729,
@@ -1387,7 +1387,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 1100
+# MA 1500, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h1100_amcatnlo",
     id=15109900,
@@ -1399,7 +1399,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 1200
+# MA 1500, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h1200_amcatnlo",
     id=15109995,
@@ -1411,7 +1411,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 1300
+# MA 1500, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h1300_amcatnlo",
     id=15111516,
@@ -1423,7 +1423,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 1400
+# MA 1500, MH: 1400
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h1400_amcatnlo",
     id=15104493,
@@ -1435,7 +1435,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 350
+# MA 1500, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h350_amcatnlo",
     id=15109625,
@@ -1447,7 +1447,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 400
+# MA 1500, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h400_amcatnlo",
     id=15109577,
@@ -1459,7 +1459,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 500
+# MA 1500, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h500_amcatnlo",
     id=15110586,
@@ -1471,7 +1471,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 600
+# MA 1500, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h600_amcatnlo",
     id=15104397,
@@ -1483,7 +1483,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 700
+# MA 1500, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h700_amcatnlo",
     id=15111328,
@@ -1495,7 +1495,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 800
+# MA 1500, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h800_amcatnlo",
     id=15109594,
@@ -1507,7 +1507,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1500, MH: 900
+# MA 1500, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1500_h900_amcatnlo",
     id=15111617,
@@ -1519,7 +1519,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 1000
+# MA 1600, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h1000_amcatnlo",
     id=15104578,
@@ -1531,7 +1531,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 1100
+# MA 1600, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h1100_amcatnlo",
     id=15110476,
@@ -1543,7 +1543,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 1200
+# MA 1600, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h1200_amcatnlo",
     id=15111615,
@@ -1555,7 +1555,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 1300
+# MA 1600, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h1300_amcatnlo",
     id=15103978,
@@ -1567,7 +1567,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 1400
+# MA 1600, MH: 1400
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h1400_amcatnlo",
     id=15110383,
@@ -1579,7 +1579,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 1500
+# MA 1600, MH: 1500
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h1500_amcatnlo",
     id=15109613,
@@ -1591,7 +1591,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 350
+# MA 1600, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h350_amcatnlo",
     id=15103981,
@@ -1603,7 +1603,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 400
+# MA 1600, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h400_amcatnlo",
     id=15109971,
@@ -1615,7 +1615,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 500
+# MA 1600, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h500_amcatnlo",
     id=15111172,
@@ -1627,7 +1627,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 600
+# MA 1600, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h600_amcatnlo",
     id=15110991,
@@ -1639,7 +1639,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 700
+# MA 1600, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h700_amcatnlo",
     id=15110866,
@@ -1651,7 +1651,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 800
+# MA 1600, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h800_amcatnlo",
     id=15111096,
@@ -1663,7 +1663,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1600, MH: 900
+# MA 1600, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1600_h900_amcatnlo",
     id=15111136,
@@ -1675,7 +1675,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 1000
+# MA 1700, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h1000_amcatnlo",
     id=15111784,
@@ -1687,7 +1687,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 1100
+# MA 1700, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h1100_amcatnlo",
     id=15109609,
@@ -1699,7 +1699,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 1200
+# MA 1700, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h1200_amcatnlo",
     id=15111074,
@@ -1711,7 +1711,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 1300
+# MA 1700, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h1300_amcatnlo",
     id=15110683,
@@ -1723,7 +1723,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 1400
+# MA 1700, MH: 1400
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h1400_amcatnlo",
     id=15111833,
@@ -1735,7 +1735,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 1500
+# MA 1700, MH: 1500
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h1500_amcatnlo",
     id=15110783,
@@ -1747,7 +1747,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 1600
+# MA 1700, MH: 1600
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h1600_amcatnlo",
     id=15110910,
@@ -1759,7 +1759,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 350
+# MA 1700, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h350_amcatnlo",
     id=15104409,
@@ -1771,7 +1771,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 400
+# MA 1700, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h400_amcatnlo",
     id=15111420,
@@ -1783,7 +1783,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 500
+# MA 1700, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h500_amcatnlo",
     id=15110128,
@@ -1795,7 +1795,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 600
+# MA 1700, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h600_amcatnlo",
     id=15109539,
@@ -1807,7 +1807,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 700
+# MA 1700, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h700_amcatnlo",
     id=15110658,
@@ -1819,7 +1819,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 800
+# MA 1700, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h800_amcatnlo",
     id=15111300,
@@ -1831,7 +1831,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1700, MH: 900
+# MA 1700, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1700_h900_amcatnlo",
     id=15110016,
@@ -1843,7 +1843,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1000
+# MA 1800, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1000_amcatnlo",
     id=15109201,
@@ -1855,7 +1855,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1100
+# MA 1800, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1100_amcatnlo",
     id=15109727,
@@ -1867,7 +1867,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1200
+# MA 1800, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1200_amcatnlo",
     id=15110215,
@@ -1879,7 +1879,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1300
+# MA 1800, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1300_amcatnlo",
     id=15109664,
@@ -1891,7 +1891,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1400
+# MA 1800, MH: 1400
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1400_amcatnlo",
     id=15110774,
@@ -1903,7 +1903,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1500
+# MA 1800, MH: 1500
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1500_amcatnlo",
     id=15110106,
@@ -1915,7 +1915,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1600
+# MA 1800, MH: 1600
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1600_amcatnlo",
     id=15109656,
@@ -1927,7 +1927,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 1700
+# MA 1800, MH: 1700
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h1700_amcatnlo",
     id=15112002,
@@ -1939,7 +1939,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 350
+# MA 1800, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h350_amcatnlo",
     id=15111257,
@@ -1951,7 +1951,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 400
+# MA 1800, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h400_amcatnlo",
     id=15111489,
@@ -1963,7 +1963,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 500
+# MA 1800, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h500_amcatnlo",
     id=15111372,
@@ -1975,7 +1975,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 600
+# MA 1800, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h600_amcatnlo",
     id=15103985,
@@ -1987,7 +1987,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 700
+# MA 1800, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h700_amcatnlo",
     id=15111818,
@@ -1999,7 +1999,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 800
+# MA 1800, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h800_amcatnlo",
     id=15109280,
@@ -2011,7 +2011,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1800, MH: 900
+# MA 1800, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1800_h900_amcatnlo",
     id=15111990,
@@ -2023,7 +2023,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1000
+# MA 1900, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1000_amcatnlo",
     id=15103987,
@@ -2035,7 +2035,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1100
+# MA 1900, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1100_amcatnlo",
     id=15111376,
@@ -2047,7 +2047,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1200
+# MA 1900, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1200_amcatnlo",
     id=15110220,
@@ -2059,7 +2059,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1300
+# MA 1900, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1300_amcatnlo",
     id=15111432,
@@ -2071,7 +2071,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1400
+# MA 1900, MH: 1400
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1400_amcatnlo",
     id=15111895,
@@ -2083,7 +2083,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1500
+# MA 1900, MH: 1500
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1500_amcatnlo",
     id=15104733,
@@ -2095,7 +2095,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1600
+# MA 1900, MH: 1600
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1600_amcatnlo",
     id=15109497,
@@ -2107,7 +2107,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1700
+# MA 1900, MH: 1700
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1700_amcatnlo",
     id=15109550,
@@ -2119,7 +2119,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 1800
+# MA 1900, MH: 1800
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h1800_amcatnlo",
     id=15111133,
@@ -2131,7 +2131,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 350
+# MA 1900, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h350_amcatnlo",
     id=15111151,
@@ -2143,7 +2143,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 400
+# MA 1900, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h400_amcatnlo",
     id=15113436,
@@ -2155,7 +2155,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 500
+# MA 1900, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h500_amcatnlo",
     id=15110793,
@@ -2167,7 +2167,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 600
+# MA 1900, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h600_amcatnlo",
     id=15110625,
@@ -2179,7 +2179,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 700
+# MA 1900, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h700_amcatnlo",
     id=15110270,
@@ -2191,7 +2191,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 800
+# MA 1900, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h800_amcatnlo",
     id=15111077,
@@ -2203,7 +2203,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 1900, MH: 900
+# MA 1900, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a1900_h900_amcatnlo",
     id=15110888,
@@ -2215,7 +2215,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1000
+# MA 2000, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1000_amcatnlo",
     id=15111742,
@@ -2227,7 +2227,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1100
+# MA 2000, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1100_amcatnlo",
     id=15110177,
@@ -2239,7 +2239,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1200
+# MA 2000, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1200_amcatnlo",
     id=15109793,
@@ -2251,7 +2251,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1300
+# MA 2000, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1300_amcatnlo",
     id=15111240,
@@ -2263,7 +2263,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1400
+# MA 2000, MH: 1400
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1400_amcatnlo",
     id=15111864,
@@ -2275,7 +2275,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1500
+# MA 2000, MH: 1500
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1500_amcatnlo",
     id=15110258,
@@ -2287,7 +2287,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1600
+# MA 2000, MH: 1600
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1600_amcatnlo",
     id=15111972,
@@ -2299,7 +2299,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1700
+# MA 2000, MH: 1700
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1700_amcatnlo",
     id=15109905,
@@ -2311,7 +2311,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1800
+# MA 2000, MH: 1800
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1800_amcatnlo",
     id=15104110,
@@ -2323,7 +2323,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 1900
+# MA 2000, MH: 1900
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h1900_amcatnlo",
     id=15111000,
@@ -2335,7 +2335,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 350
+# MA 2000, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h350_amcatnlo",
     id=15110558,
@@ -2347,7 +2347,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 400
+# MA 2000, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h400_amcatnlo",
     id=15111169,
@@ -2359,7 +2359,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 500
+# MA 2000, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h500_amcatnlo",
     id=15110436,
@@ -2371,7 +2371,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 600
+# MA 2000, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h600_amcatnlo",
     id=15111215,
@@ -2383,7 +2383,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 700
+# MA 2000, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h700_amcatnlo",
     id=15111633,
@@ -2395,7 +2395,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 800
+# MA 2000, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h800_amcatnlo",
     id=15110784,
@@ -2407,7 +2407,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2000, MH: 900
+# MA 2000, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a2000_h900_amcatnlo",
     id=15104314,
@@ -2419,7 +2419,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1000
+# MA 2100, MH: 1000
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1000_amcatnlo",
     id=15110927,
@@ -2431,7 +2431,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1100
+# MA 2100, MH: 1100
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1100_amcatnlo",
     id=15109931,
@@ -2443,7 +2443,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1200
+# MA 2100, MH: 1200
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1200_amcatnlo",
     id=15111536,
@@ -2455,7 +2455,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1300
+# MA 2100, MH: 1300
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1300_amcatnlo",
     id=15126018,
@@ -2467,7 +2467,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1400
+# MA 2100, MH: 1400
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1400_amcatnlo",
     id=15104502,
@@ -2479,7 +2479,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1500
+# MA 2100, MH: 1500
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1500_amcatnlo",
     id=15111867,
@@ -2491,7 +2491,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1600
+# MA 2100, MH: 1600
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1600_amcatnlo",
     id=15110225,
@@ -2503,7 +2503,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1700
+# MA 2100, MH: 1700
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1700_amcatnlo",
     id=15110221,
@@ -2515,7 +2515,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1800
+# MA 2100, MH: 1800
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1800_amcatnlo",
     id=15111191,
@@ -2527,7 +2527,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 1900
+# MA 2100, MH: 1900
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h1900_amcatnlo",
     id=15110830,
@@ -2539,7 +2539,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 2000
+# MA 2100, MH: 2000
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h2000_amcatnlo",
     id=15111519,
@@ -2551,7 +2551,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 350
+# MA 2100, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h350_amcatnlo",
     id=15103904,
@@ -2563,7 +2563,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 400
+# MA 2100, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h400_amcatnlo",
     id=15111844,
@@ -2575,7 +2575,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 500
+# MA 2100, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h500_amcatnlo",
     id=15111218,
@@ -2587,7 +2587,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 600
+# MA 2100, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h600_amcatnlo",
     id=15104316,
@@ -2599,7 +2599,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 700
+# MA 2100, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h700_amcatnlo",
     id=15111067,
@@ -2611,7 +2611,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 800
+# MA 2100, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h800_amcatnlo",
     id=15111871,
@@ -2623,7 +2623,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 2100, MH: 900
+# MA 2100, MH: 900
 cpn.add_dataset(
     name="azh_htt_zll_a2100_h900_amcatnlo",
     id=15111788,
@@ -2635,7 +2635,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 430, MH: 330
+# MA 430, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a430_h330_amcatnlo",
     id=15104176,
@@ -2647,7 +2647,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 450, MH: 330
+# MA 450, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a450_h330_amcatnlo",
     id=15111843,
@@ -2659,7 +2659,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 450, MH: 350
+# MA 450, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a450_h350_amcatnlo",
     id=15109772,
@@ -2671,7 +2671,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 500, MH: 330
+# MA 500, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a500_h330_amcatnlo",
     id=15110023,
@@ -2683,7 +2683,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 500, MH: 350
+# MA 500, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a500_h350_amcatnlo",
     id=15109573,
@@ -2695,7 +2695,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 500, MH: 400
+# MA 500, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a500_h400_amcatnlo",
     id=15110534,
@@ -2707,7 +2707,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 550, MH: 330
+# MA 550, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a550_h330_amcatnlo",
     id=15111178,
@@ -2719,7 +2719,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 550, MH: 350
+# MA 550, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a550_h350_amcatnlo",
     id=15109724,
@@ -2731,7 +2731,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 550, MH: 400
+# MA 550, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a550_h400_amcatnlo",
     id=15110638,
@@ -2743,7 +2743,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 550, MH: 450
+# MA 550, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a550_h450_amcatnlo",
     id=15109685,
@@ -2755,7 +2755,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 600, MH: 330
+# MA 600, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a600_h330_amcatnlo",
     id=15111592,
@@ -2767,7 +2767,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 600, MH: 350
+# MA 600, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a600_h350_amcatnlo",
     id=15109441,
@@ -2779,7 +2779,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 600, MH: 400
+# MA 600, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a600_h400_amcatnlo",
     id=15110209,
@@ -2791,7 +2791,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 600, MH: 450
+# MA 600, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a600_h450_amcatnlo",
     id=15111739,
@@ -2803,7 +2803,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 600, MH: 500
+# MA 600, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a600_h500_amcatnlo",
     id=15109138,
@@ -2815,7 +2815,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 650, MH: 330
+# MA 650, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a650_h330_amcatnlo",
     id=15111756,
@@ -2827,7 +2827,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 650, MH: 350
+# MA 650, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a650_h350_amcatnlo",
     id=15110420,
@@ -2839,7 +2839,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 650, MH: 400
+# MA 650, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a650_h400_amcatnlo",
     id=15104039,
@@ -2851,7 +2851,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 650, MH: 450
+# MA 650, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a650_h450_amcatnlo",
     id=15109298,
@@ -2863,7 +2863,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 650, MH: 500
+# MA 650, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a650_h500_amcatnlo",
     id=15109316,
@@ -2875,7 +2875,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 650, MH: 550
+# MA 650, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a650_h550_amcatnlo",
     id=15103962,
@@ -2887,7 +2887,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 700, MH: 330
+# MA 700, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a700_h330_amcatnlo",
     id=15110687,
@@ -2899,7 +2899,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 700, MH: 350
+# MA 700, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a700_h350_amcatnlo",
     id=15110085,
@@ -2911,7 +2911,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 700, MH: 400
+# MA 700, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a700_h400_amcatnlo",
     id=15111157,
@@ -2923,7 +2923,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 700, MH: 450
+# MA 700, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a700_h450_amcatnlo",
     id=15110904,
@@ -2935,7 +2935,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 700, MH: 500
+# MA 700, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a700_h500_amcatnlo",
     id=15110411,
@@ -2947,7 +2947,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 700, MH: 550
+# MA 700, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a700_h550_amcatnlo",
     id=15110771,
@@ -2959,7 +2959,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 700, MH: 600
+# MA 700, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a700_h600_amcatnlo",
     id=15109787,
@@ -2971,7 +2971,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 330
+# MA 750, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a750_h330_amcatnlo",
     id=15111245,
@@ -2983,7 +2983,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 350
+# MA 750, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a750_h350_amcatnlo",
     id=15111206,
@@ -2995,7 +2995,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 400
+# MA 750, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a750_h400_amcatnlo",
     id=15110325,
@@ -3007,7 +3007,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 450
+# MA 750, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a750_h450_amcatnlo",
     id=15111718,
@@ -3019,7 +3019,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 500
+# MA 750, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a750_h500_amcatnlo",
     id=15110091,
@@ -3031,7 +3031,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 550
+# MA 750, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a750_h550_amcatnlo",
     id=15111224,
@@ -3043,7 +3043,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 600
+# MA 750, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a750_h600_amcatnlo",
     id=15104179,
@@ -3055,7 +3055,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 750, MH: 650
+# MA 750, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a750_h650_amcatnlo",
     id=15110610,
@@ -3067,7 +3067,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 330
+# MA 800, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a800_h330_amcatnlo",
     id=15111967,
@@ -3079,7 +3079,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 350
+# MA 800, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a800_h350_amcatnlo",
     id=15110720,
@@ -3091,7 +3091,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 400
+# MA 800, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a800_h400_amcatnlo",
     id=15110794,
@@ -3103,7 +3103,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 450
+# MA 800, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a800_h450_amcatnlo",
     id=15110956,
@@ -3115,7 +3115,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 500
+# MA 800, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a800_h500_amcatnlo",
     id=15110583,
@@ -3127,7 +3127,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 550
+# MA 800, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a800_h550_amcatnlo",
     id=15110606,
@@ -3139,7 +3139,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 600
+# MA 800, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a800_h600_amcatnlo",
     id=15110887,
@@ -3151,7 +3151,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 650
+# MA 800, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a800_h650_amcatnlo",
     id=15110363,
@@ -3163,7 +3163,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 800, MH: 700
+# MA 800, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a800_h700_amcatnlo",
     id=15110004,
@@ -3175,7 +3175,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 330
+# MA 850, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a850_h330_amcatnlo",
     id=15110999,
@@ -3187,7 +3187,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 350
+# MA 850, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a850_h350_amcatnlo",
     id=15110918,
@@ -3199,7 +3199,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 400
+# MA 850, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a850_h400_amcatnlo",
     id=15110921,
@@ -3211,7 +3211,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 450
+# MA 850, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a850_h450_amcatnlo",
     id=15110230,
@@ -3223,7 +3223,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 500
+# MA 850, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a850_h500_amcatnlo",
     id=15109415,
@@ -3235,7 +3235,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 550
+# MA 850, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a850_h550_amcatnlo",
     id=15110895,
@@ -3247,7 +3247,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 600
+# MA 850, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a850_h600_amcatnlo",
     id=15111126,
@@ -3259,7 +3259,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 650
+# MA 850, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a850_h650_amcatnlo",
     id=15111080,
@@ -3271,7 +3271,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 700
+# MA 850, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a850_h700_amcatnlo",
     id=15111038,
@@ -3283,7 +3283,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 850, MH: 750
+# MA 850, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a850_h750_amcatnlo",
     id=15110136,
@@ -3295,7 +3295,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 330
+# MA 900, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a900_h330_amcatnlo",
     id=15110236,
@@ -3307,7 +3307,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 350
+# MA 900, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a900_h350_amcatnlo",
     id=15110513,
@@ -3319,7 +3319,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 400
+# MA 900, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a900_h400_amcatnlo",
     id=15110979,
@@ -3331,7 +3331,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 450
+# MA 900, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a900_h450_amcatnlo",
     id=15110352,
@@ -3343,7 +3343,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 500
+# MA 900, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a900_h500_amcatnlo",
     id=15110732,
@@ -3355,7 +3355,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 550
+# MA 900, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a900_h550_amcatnlo",
     id=15110777,
@@ -3367,7 +3367,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 600
+# MA 900, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a900_h600_amcatnlo",
     id=15110168,
@@ -3379,7 +3379,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 650
+# MA 900, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a900_h650_amcatnlo",
     id=15111729,
@@ -3391,7 +3391,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 700
+# MA 900, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a900_h700_amcatnlo",
     id=15111681,
@@ -3403,7 +3403,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 750
+# MA 900, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a900_h750_amcatnlo",
     id=15109312,
@@ -3415,7 +3415,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 900, MH: 800
+# MA 900, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a900_h800_amcatnlo",
     id=15109549,
@@ -3427,7 +3427,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 330
+# MA 950, MH: 330
 cpn.add_dataset(
     name="azh_htt_zll_a950_h330_amcatnlo",
     id=15111878,
@@ -3439,7 +3439,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 350
+# MA 950, MH: 350
 cpn.add_dataset(
     name="azh_htt_zll_a950_h350_amcatnlo",
     id=15111460,
@@ -3451,7 +3451,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 400
+# MA 950, MH: 400
 cpn.add_dataset(
     name="azh_htt_zll_a950_h400_amcatnlo",
     id=15109901,
@@ -3463,7 +3463,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 450
+# MA 950, MH: 450
 cpn.add_dataset(
     name="azh_htt_zll_a950_h450_amcatnlo",
     id=15111483,
@@ -3475,7 +3475,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 500
+# MA 950, MH: 500
 cpn.add_dataset(
     name="azh_htt_zll_a950_h500_amcatnlo",
     id=15110298,
@@ -3487,7 +3487,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 550
+# MA 950, MH: 550
 cpn.add_dataset(
     name="azh_htt_zll_a950_h550_amcatnlo",
     id=15111860,
@@ -3499,7 +3499,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 600
+# MA 950, MH: 600
 cpn.add_dataset(
     name="azh_htt_zll_a950_h600_amcatnlo",
     id=15109869,
@@ -3511,7 +3511,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 650
+# MA 950, MH: 650
 cpn.add_dataset(
     name="azh_htt_zll_a950_h650_amcatnlo",
     id=15103907,
@@ -3523,7 +3523,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 700
+# MA 950, MH: 700
 cpn.add_dataset(
     name="azh_htt_zll_a950_h700_amcatnlo",
     id=15104044,
@@ -3535,7 +3535,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 750
+# MA 950, MH: 750
 cpn.add_dataset(
     name="azh_htt_zll_a950_h750_amcatnlo",
     id=15109958,
@@ -3547,7 +3547,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 800
+# MA 950, MH: 800
 cpn.add_dataset(
     name="azh_htt_zll_a950_h800_amcatnlo",
     id=15109761,
@@ -3559,7 +3559,7 @@ cpn.add_dataset(
     n_events=11500,
 )
 
-#MA 950, MH: 850
+# MA 950, MH: 850
 cpn.add_dataset(
     name="azh_htt_zll_a950_h850_amcatnlo",
     id=15111208,
