@@ -73,6 +73,13 @@ data_muoneg = data.add_process(
     label=r"Data $\mu e/\gamma$",
 )
 
+data_doublemu = data.add_process(
+    name="data_doublemu",
+    id=80,
+    is_data=True,
+    label=r"Data $\mu$",
+)
+
 data_jetht = data.add_process(
     name="data_jetht",
     id=100,
