@@ -1412,6 +1412,18 @@ bbh = h.add_process(
     aux={"production_mode_parent": h},
 )
 
+bbh_htt = add_decay_process(bbh, h_decay_map.htt)
+bbh_hww = add_decay_process(bbh, h_decay_map.hww)
+bbh_hzz = add_decay_process(bbh, h_decay_map.hzz)
+bbh_hbb = add_decay_process(bbh, h_decay_map.hbb)
+bbh_hnonbb = add_decay_process(bbh, h_decay_map.hnonbb)
+bbh_hcc = add_decay_process(bbh, h_decay_map.hcc)
+bbh_hzg = add_decay_process(bbh, h_decay_map.hzg)
+bbh_hgg = add_decay_process(bbh, h_decay_map.hgg)
+bbh_hmm = add_decay_process(bbh, h_decay_map.hmm)
+
+bbh_hzz4l = add_sub_decay_process(bbh_hzz, zz_decay_map["4l"])
+
 ttvh = h.add_process(
     name="ttvh",
     id=110000,
