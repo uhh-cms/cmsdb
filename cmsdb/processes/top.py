@@ -24,6 +24,7 @@ __all__ = [
     "ttvv",
     "ttzz", "ttwz", "ttww",
     "tttt",
+    "ttzz_zz4b",
 ]
 
 
@@ -510,6 +511,15 @@ ttzz = ttvv.add_process(
         13.6: Number(0.001562, {
             "tot": 0.0000003675,  # xsdb Number(0.001579, {"tot": 0.000003248})
         }),
+    },
+)
+
+ttzz_zz4b = ttzz.add_process(
+    name="ttzz_zz4b",
+    id=4101,
+    xsecs={
+        # XSDB LO (Summer22)
+        13.6: Number(0.02391, {"tot": 0.00001709}),
     },
 )
 

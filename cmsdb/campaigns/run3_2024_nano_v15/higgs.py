@@ -797,6 +797,50 @@ cpn.add_dataset(
 
 ####################################################################################################
 #
+# TTVH
+#
+####################################################################################################
+
+cpn.add_dataset(
+    name="ttwh_madgraph",
+    id=15396854,
+    processes=[procs.ttwh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTWH_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=100,  # 100-0
+            n_events=10595000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttzh_hbb_zbb_madgraph",
+    id=15292701,
+    processes=[procs.ttzh_hbb_zbb],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTZH-ZHto4B_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=27,  # 27-0
+            n_events=9984820,
+        ),
+    ),
+)
+
+# inclusive ZH missing!
+
+####################################################################################################
+#
 # bbH
 #
 ####################################################################################################

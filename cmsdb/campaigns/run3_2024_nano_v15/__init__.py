@@ -34,7 +34,7 @@ campaign_run3_2024_nano_v14 = Campaign(
 
 # trailing imports to load datasets
 # import cmsdb.campaigns.run3_2022_preEE_nano_v12.data  # noqa
-# import cmsdb.campaigns.run3_2022_preEE_nano_v12.top  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.top  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.ewk  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.qcd  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.higgs  # noqa

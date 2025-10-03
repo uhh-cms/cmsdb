@@ -32,6 +32,7 @@ br_ww = DotDict(
 
 br_z = DotDict(
     qq=Number(0.69911, {"br_z_qq": 0.00056}),
+    bb=Number(0.1512, {"br_z_qq": 0.0005}),
     clep=Number(0.033658, {"br_z_clep": 0.000023}) * n_leps,
 )
 br_z.nunu = 1 - br_z.qq - br_z.clep

@@ -255,7 +255,8 @@ __all__ = [
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
     # TODO: the following processes are not yet implemented in full combination
-    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb",
+    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb", "ttzh_hbb", "ttzh_hbb_zbb",
+    "bbh_htt", "bbh_hww", "bbh_hzz", "bbh_hbb", "bbh_hnonbb", "bbh_hcc", "bbh_hzg", "bbh_hgg", "bbh_hmm", "bbh_hzz4l",
 ]
 
 
@@ -430,6 +431,12 @@ z_decay_map = DotDict.wrap({
         "id": 2,
         "label": r"$Z \rightarrow qq$",
         "br": const.br_z.qq,
+    },
+    "zbb": {
+        "name": "zbb",
+        "id": 21,
+        "label": r"$Z \rightarrow bb$",
+        "br": const.br_z.bb,
     },
     "znunu": {
         "name": "znunu",
@@ -1451,6 +1458,9 @@ ttzh = ttvh.add_process(
     },
     aux={"production_mode_parent": ttvh},
 )
+
+ttzh_hbb = add_decay_process(ttzh, h_decay_map.hbb)
+ttzh_hbb_zbb = add_decay_process(ttzh_hbb, z_decay_map.zbb)
 
 ttwh = ttvh.add_process(
     name="ttwh",
