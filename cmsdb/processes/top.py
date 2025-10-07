@@ -8,7 +8,8 @@ __all__ = [
     "tt",
     "tt_sl", "tt_dl", "tt_fh",
     "st",
-    "st_tchannel", "st_tchannel_t", "st_tchannel_tbar",
+    "st_tchannel", "st_tchannel_t", "st_tchannel_t_qq", "st_tchannel_t_lnu",
+    "st_tchannel_tbar", "st_tchannel_tbar_qq", "st_tchannel_t_lnu",
     "st_twchannel", "st_twchannel_t", "st_twchannel_tbar",
     "st_twchannel_t_sl", "st_twchannel_tbar_sl",
     "st_twchannel_t_dl", "st_twchannel_tbar_dl",
@@ -24,6 +25,7 @@ __all__ = [
     "ttvv",
     "ttzz", "ttwz", "ttww",
     "tttt",
+    "ttzz_zz4b",
 ]
 
 
@@ -152,6 +154,24 @@ st_tchannel_t = st_tchannel.add_process(
     },
 )
 
+st_tchannel_t_qq = st_tchannel_t.add_process(
+    name="st_tchannel_t_qq",
+    id=2111,
+    xsecs={
+        13: st_tchannel_t.get_xsec(13) * const.br_w.had,
+        13.6: st_tchannel_t.get_xsec(13.6) * const.br_w.had,
+    },
+)
+
+st_tchannel_t_lnu = st_tchannel_t.add_process(
+    name="st_tchannel_t_lnu",
+    id=2112,
+    xsecs={
+        13: st_tchannel_t.get_xsec(13) * const.br_w.lep,
+        13.6: st_tchannel_t.get_xsec(13.6) * const.br_w.lep,
+    },
+)
+
 st_tchannel_tbar = st_tchannel.add_process(
     name="st_tchannel_tbar",
     id=2120,
@@ -170,6 +190,24 @@ st_tchannel_tbar = st_tchannel.add_process(
             E_beam=(0.2, 0.2),
             integration=0.1,
         )),
+    },
+)
+
+st_tchannel_tbar_qq = st_tchannel_tbar.add_process(
+    name="st_tchannel_tbar_qq",
+    id=2121,
+    xsecs={
+        13: st_tchannel_tbar.get_xsec(13) * const.br_w.had,
+        13.6: st_tchannel_tbar.get_xsec(13.6) * const.br_w.had,
+    },
+)
+
+st_tchannel_t_lnu = st_tchannel_tbar.add_process(
+    name="st_tchannel_tbar_lnu",
+    id=2122,
+    xsecs={
+        13: st_tchannel_tbar.get_xsec(13) * const.br_w.lep,
+        13.6: st_tchannel_tbar.get_xsec(13.6) * const.br_w.lep,
     },
 )
 
@@ -510,6 +548,15 @@ ttzz = ttvv.add_process(
         13.6: Number(0.001562, {
             "tot": 0.0000003675,  # xsdb Number(0.001579, {"tot": 0.000003248})
         }),
+    },
+)
+
+ttzz_zz4b = ttzz.add_process(
+    name="ttzz_zz4b",
+    id=4101,
+    xsecs={
+        # XSDB LO (Summer22)
+        13.6: Number(0.02391, {"tot": 0.00001709}),
     },
 )
 

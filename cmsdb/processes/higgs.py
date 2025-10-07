@@ -255,7 +255,8 @@ __all__ = [
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
     # TODO: the following processes are not yet implemented in full combination
-    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb",
+    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb", "ttzh_hbb", "ttzh_hbb_zbb",
+    "bbh_htt", "bbh_hww", "bbh_hzz", "bbh_hbb", "bbh_hnonbb", "bbh_hcc", "bbh_hzg", "bbh_hgg", "bbh_hmm", "bbh_hzz4l",
 ]
 
 
@@ -430,6 +431,12 @@ z_decay_map = DotDict.wrap({
         "id": 2,
         "label": r"$Z \rightarrow qq$",
         "br": const.br_z.qq,
+    },
+    "zbb": {
+        "name": "zbb",
+        "id": 21,
+        "label": r"$Z \rightarrow bb$",
+        "br": const.br_z.bb,
     },
     "znunu": {
         "name": "znunu",
@@ -1412,6 +1419,18 @@ bbh = h.add_process(
     aux={"production_mode_parent": h},
 )
 
+bbh_htt = add_decay_process(bbh, h_decay_map.htt)
+bbh_hww = add_decay_process(bbh, h_decay_map.hww)
+bbh_hzz = add_decay_process(bbh, h_decay_map.hzz)
+bbh_hbb = add_decay_process(bbh, h_decay_map.hbb)
+bbh_hnonbb = add_decay_process(bbh, h_decay_map.hnonbb)
+bbh_hcc = add_decay_process(bbh, h_decay_map.hcc)
+bbh_hzg = add_decay_process(bbh, h_decay_map.hzg)
+bbh_hgg = add_decay_process(bbh, h_decay_map.hgg)
+bbh_hmm = add_decay_process(bbh, h_decay_map.hmm)
+
+bbh_hzz4l = add_sub_decay_process(bbh_hzz, zz_decay_map["4l"])
+
 ttvh = h.add_process(
     name="ttvh",
     id=110000,
@@ -1439,6 +1458,9 @@ ttzh = ttvh.add_process(
     },
     aux={"production_mode_parent": ttvh},
 )
+
+ttzh_hbb = add_decay_process(ttzh, h_decay_map.hbb)
+ttzh_hbb_zbb = add_decay_process(ttzh_hbb, z_decay_map.zbb)
 
 ttwh = ttvh.add_process(
     name="ttwh",

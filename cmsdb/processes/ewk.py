@@ -73,7 +73,7 @@ __all__ = [  # noqa: F822
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
     "z_qq_1j_pt100to200", "z_qq_2j_pt100to200", "z_qq_1j_pt200to400", "z_qq_2j_pt200to400",
     "z_qq_1j_pt400to600", "z_qq_2j_pt400to600", "z_qq_1j_pt600toinf", "z_qq_2j_pt600toinf",
-    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf",
+    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf", "z_vbf_zqq",
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
@@ -83,18 +83,23 @@ __all__ = [  # noqa: F822
     "w_lnu_1j", "w_lnu_1j_pt0to40", "w_lnu_1j_pt40to100", "w_lnu_1j_pt100to200", "w_lnu_1j_pt200to400",
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
-    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j",
-    "w_vbf", "w_vbf_wlnu",
+    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j", "w_lnu_3j", "w_lnu_4j",
+    "w_enu_2j_inc", "w_enu_2j_0j", "w_munu_2j_inc", "w_munu_2j_0j", "w_taunu_2j_inc", "w_taunu_2j_0j",
+    "w_enu_4j_inc", "w_enu_4j_1j", "w_munu_4j_inc", "w_munu_4j_1j", "w_taunu_4j_inc", "w_taunu_4j_1j",
+    "w_vbf", "w_vbf_wlnu", "w_vbf_qq",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
-    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
+    "zz_zee_zee", "zz_zee_zmumu", "zz_zee_ztautau", "zz_zmumu_zmumu", "zz_zmumu_ztautau", "zz_ztautau_ztautau",
+    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq", "wz_wqq_zqq",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
+    "ww_wenu_wenu", "ww_wenu_wmunu", "ww_wenu_wtaunu", "ww_wmunu_wmunu", "ww_wmunu_wtaunu", "ww_wtaunu_wtaunu",
     "vvv",
     "zzz", "wzz", "wwz", "www",
+    "wzg", "wzg_lnuzg",
 ]
 
 
@@ -1630,6 +1635,15 @@ z_vbf_zll_m50toinf = z_vbf_zll.add_process(
     },
 )
 
+z_vbf_zqq = z_vbf.add_process(
+    name="z_vbf_zqq",
+    id=55314,
+    label=r"Z $\rightarrow qq$ (VBF)",
+    xsecs={
+        # XSDB (Run3Summer22)
+        13.6: Number(13.67, {"tot": 0.005891}),
+    },
+)
 #
 # W boson
 #
@@ -1799,6 +1813,10 @@ w_lnu_1j = w_lnu.add_process(
     aux={
         "njets": (1, 2),
     },
+    xsecs={
+        # XSDB (Run3Summer24) LO x 13 TeV k-factor..
+        13.6: Number(9141, {"tot": 24.37}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
 w_lnu_2j = w_lnu.add_process(
@@ -1807,6 +1825,36 @@ w_lnu_2j = w_lnu.add_process(
     label=rf"{w_lnu.label[:-1]}, 2j)",
     aux={
         "njets": (2, 3),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) LO x 13 TeV k-factor..
+        13.6: Number(2931, {"tot": 8.539}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+)
+
+w_lnu_3j = w_lnu.add_process(
+    name="w_lnu_3j",
+    id=610040,
+    label=rf"{w_lnu.label[:-1]}, 3j)",
+    aux={
+        "njets": (3, 4),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) LO x 13 TeV k-factor..
+        13.6: Number(864.6, {"tot": 2.634}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+)
+
+w_lnu_4j = w_lnu.add_process(
+    name="w_lnu_4j",
+    id=610041,
+    label=rf"{w_lnu.label[:-1]}, 4j)",
+    aux={
+        "njets": (3, 4),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) LO x 13 TeV k-factor..
+        13.6: Number(417.8, {"tot": 1.283}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
 
@@ -1828,6 +1876,10 @@ w_lnu_1j_pt40to100 = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (40.0, 100.0),
     },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(4211, {"tot": 27.71}),
+    },
 )
 
 w_lnu_1j_pt100to200 = w_lnu_1j.add_process(
@@ -1837,6 +1889,10 @@ w_lnu_1j_pt100to200 = w_lnu_1j.add_process(
     aux={
         "njets": (1, 2),
         "ptll": (100.0, 200.0),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(342.3, {"tot": 1.842}),
     },
 )
 
@@ -1848,6 +1904,10 @@ w_lnu_1j_pt200to400 = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (200.0, 400.0),
     },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(21.84, {"tot": 0.1076}),
+    },
 )
 
 w_lnu_1j_pt400to600 = w_lnu_1j.add_process(
@@ -1858,6 +1918,10 @@ w_lnu_1j_pt400to600 = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (400.0, 600.0),
     },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(0.6845, {"tot": 0.003095}),
+    },
 )
 
 w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
@@ -1867,6 +1931,10 @@ w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
     aux={
         "njets": (1, 2),
         "ptll": (600.0, const.inf),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(0.07753, {"tot": 0.0003313}),
     },
 )
 
@@ -1888,6 +1956,10 @@ w_lnu_2j_pt40to100 = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (40.0, 100.0),
     },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(1581, {"tot": 16.18}),
+    },
 )
 
 w_lnu_2j_pt100to200 = w_lnu_2j.add_process(
@@ -1897,6 +1969,10 @@ w_lnu_2j_pt100to200 = w_lnu_2j.add_process(
     aux={
         "njets": (2, 3),
         "ptll": (100.0, 200.0),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(411.1, {"tot": 3.841}),
     },
 )
 
@@ -1908,6 +1984,10 @@ w_lnu_2j_pt200to400 = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (200.0, 400.0),
     },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(53.59, {"tot": 0.4098}),
+    },
 )
 
 w_lnu_2j_pt400to600 = w_lnu_2j.add_process(
@@ -1917,6 +1997,10 @@ w_lnu_2j_pt400to600 = w_lnu_2j.add_process(
     aux={
         "njets": (2, 3),
         "ptll": (400.0, 600.0),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(3.099, {"tot": 0.01935}),
     },
 )
 
@@ -1928,6 +2012,10 @@ w_lnu_2j_pt600toinf = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (600.0, const.inf),
     },
+    xsecs={
+        # XSDB (Run3Summer24) NLO
+        13.6: Number(0.5259, {"tot": 0.002768}),
+    },
 )
 
 w_lnu_ge3j = w_lnu.add_process(
@@ -1935,6 +2023,150 @@ w_lnu_ge3j = w_lnu.add_process(
     id=610026,
     aux={
         "njets": (3, const.inf),
+    },
+)
+
+w_enu_2j_inc = w_lnu.add_process(
+    name="w_enu_2j_inc",
+    id=610027,
+    xsecs={
+        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
+        13.6: Number(68430, {"tot": 272.8}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_enu_2j_0j = w_lnu.add_process(
+    name="w_enu_2j_0j",
+    id=610028,
+    xsecs={
+        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
+        13.6: Number(55850, {"tot": 75.07}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_munu_2j_inc = w_lnu.add_process(
+    name="w_munu_2j_inc",
+    id=610029,
+    xsecs={
+        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
+        13.6: Number(68100, {"tot": 271.5}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_munu_2j_0j = w_lnu.add_process(
+    name="w_munu_2j_0j",
+    id=610030,
+    xsecs={
+        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
+        13.6: Number(55920, {"tot": 74.79}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_taunu_2j_inc = w_lnu.add_process(
+    name="w_taunu_2j_inc",
+    id=610031,
+    xsecs={
+        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
+        13.6: Number(68080, {"tot": 270.4}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_taunu_2j_0j = w_lnu.add_process(
+    name="w_taunu_2j_0j",
+    id=610032,
+    xsecs={
+        # XSDB (Run3Summer24), weirdly large.. lep filter missing?
+        13.6: Number(55890, {"tot": 74.87}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_enu_4j_inc = w_lnu.add_process(
+    name="w_enu_4j_inc",
+    id=610033,
+    xsecs={
+        # XSDB (Run3Summer24) LO, weirdly large.. lep filter missing?
+        13.6: Number(55330, {"tot": 131.1}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_enu_4j_1j = w_lnu.add_process(
+    name="w_enu_4j_1j",
+    id=610034,
+    xsecs={
+        # XSDB (Run3Summer24) LO, weirdly large.. lep filter missing?
+        13.6: Number(9180, {"tot": 24.45}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_munu_4j_inc = w_lnu.add_process(
+    name="w_munu_4j_inc",
+    id=610035,
+    xsecs={
+        # XSDB (Run3Summer24) LO, weirdly large.. lep filter missing?
+        13.6: Number(55380, {"tot": 131.1}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_munu_4j_1j = w_lnu.add_process(
+    name="w_munu_4j_1j",
+    id=610036,
+    xsecs={
+        # XSDB (Run3Summer24) LO, weirdly large.. lep filter missing?
+        13.6: Number(9187, {"tot": 24.49}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_taunu_4j_inc = w_lnu.add_process(
+    name="w_taunu_4j_inc",
+    id=610037,
+    xsecs={
+        # XSDB (Run3Summer24) LO, weirdly large.. lep filter missing?
+        13.6: Number(55460, {"tot": 131.1}),
+    },
+    aux={
+        "njets": (0, 2),
+    },
+)
+
+w_taunu_4j_1j = w_lnu.add_process(
+    name="w_taunu_4j_1j",
+    id=610038,
+    xsecs={
+        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
+        13.6: Number(9188, {"tot": 24.48}),
+    },
+    aux={
+        "njets": (0, 2),
     },
 )
 
@@ -1956,6 +2188,16 @@ w_vbf_wlnu = w_vbf.add_process(
 )
 
 w_vbf.set_xsec(13.6, w_vbf_wlnu.get_xsec(13.6) / const.br_w.lep)
+
+
+w_vbf_qq = w_vbf.add_process(
+    name="w_vbf_wqq",
+    id=6311,
+    label=r"W $\rightarrow qq$ (VBF)",
+    xsecs={
+        13.6: w_vbf.get_xsec(13.6) * const.br_w.had,
+    },
+)
 
 #
 # EWK radiations
@@ -2057,6 +2299,42 @@ zz_znunu_zqq = zz.add_process(
     xsecs=multiply_xsecs(zz, const.br_zz.qqnunu),
 )
 
+zz_zee_zee = zz.add_process(
+    name="zz_zee_zee",
+    id=8160,
+    xsecs=multiply_xsecs(zz, const.br_zz.eeee),
+)
+
+zz_zee_zmumu = zz.add_process(
+    name="zz_zee_zmumu",
+    id=8161,
+    xsecs=multiply_xsecs(zz, const.br_zz.eemumu),
+)
+
+zz_zee_ztautau = zz.add_process(
+    name="zz_zee_ztautau",
+    id=8162,
+    xsecs=multiply_xsecs(zz, const.br_zz.eetautau),
+)
+
+zz_zmumu_zmumu = zz.add_process(
+    name="zz_zmumu_zmumu",
+    id=8163,
+    xsecs=multiply_xsecs(zz, const.br_zz.mumumumu),
+)
+
+zz_zmumu_ztautau = zz.add_process(
+    name="zz_zmumu_ztautau",
+    id=8164,
+    xsecs=multiply_xsecs(zz, const.br_zz.mumutautau),
+)
+
+zz_ztautau_ztautau = zz.add_process(
+    name="zz_ztautau_ztautau",
+    id=8165,
+    xsecs=multiply_xsecs(zz, const.br_zz.tautautautau),
+)
+
 # WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
 wp_z_xsec = {
     13: Number(28.55, {"scale": (0.041j, 0.032j)}),
@@ -2111,6 +2389,14 @@ wz_wlnu_zqq = wz.add_process(
     },
 )
 
+wz_wqq_zqq = wz.add_process(
+    name="wz_wlnu_zqq",
+    id=8240,
+    xsecs={
+        13: wz.get_xsec(13) * const.br_w.had * const.br_z.qq,
+    },
+)
+
 # NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
 # itself from https://arxiv.org/pdf/1408.5243.pdf v1
 
@@ -2144,7 +2430,44 @@ ww_dl = ww.add_process(
     id=8310,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.dl,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
+        13.6: ww.get_xsec(13.6) * const.br_ww.dl,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
     },
+)
+
+ww_wenu_wenu = ww_dl.add_process(
+    name="ww_wenu_wenu",
+    id=8311,
+    xsecs=multiply_xsecs(ww, const.br_ww.enuenu),
+)
+
+ww_wenu_wmunu = ww_dl.add_process(
+    name="ww_wenu_wmunu",
+    id=8312,
+    xsecs=multiply_xsecs(ww, const.br_ww.enumunu),
+)
+
+ww_wenu_wtaunu = ww_dl.add_process(
+    name="ww_wenu_wtaunu",
+    id=8313,
+    xsecs=multiply_xsecs(ww, const.br_ww.enutaunu),
+)
+
+ww_wmunu_wmunu = ww_dl.add_process(
+    name="ww_wmunu_wmunu",
+    id=8314,
+    xsecs=multiply_xsecs(ww, const.br_ww.munumunu),
+)
+
+ww_wmunu_wtaunu = ww_dl.add_process(
+    name="ww_wmunu_wtaunu",
+    id=8315,
+    xsecs=multiply_xsecs(ww, const.br_ww.munutaunu),
+)
+
+ww_wtaunu_wtaunu = ww_dl.add_process(
+    name="ww_wtaunu_wtaunu",
+    id=8316,
+    xsecs=multiply_xsecs(ww, const.br_ww.taunutaunu),
 )
 
 # no additional cut found in generator card in MCM:
@@ -2158,6 +2481,7 @@ ww_sl = ww.add_process(
     id=8320,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.sl,  # value around 50.06 for comparison to GenXSecAnalyzer NLO result
+        13.6: ww.get_xsec(13.6) * const.br_ww.sl,  # value around 50.06 for comparison to GenXSecAnalyzer NLO result
     },
 )
 
@@ -2172,6 +2496,7 @@ ww_fh = ww.add_process(
     id=8330,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
+        13.6: ww.get_xsec(13.6) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
     },
 )
 
@@ -2263,3 +2588,23 @@ www = vvv.add_process(
 # update vvv cross section
 for cme in [13]:
     vvv.set_xsec(cme, www.get_xsec(cme) + wwz.get_xsec(cme) + wzz.get_xsec(cme) + zzz.get_xsec(cme))
+
+# + photon
+
+wzg = Process(
+    name="wzg",
+    id=9500,
+    label=r"WZ + $\gamma$",
+)
+
+wzg_lnuzg = wzg.add_process(
+    name="wzg_lnuzg",
+    id=9501,
+    label=r"$W(\rightarrow \ell\nu)Z + \gamma$",
+    xsecs={
+        # XSDB (Run3Summer22)
+        13.6: Number(0.08425, {
+            "tot": 4.238e-05,
+        }),
+    },
+)
