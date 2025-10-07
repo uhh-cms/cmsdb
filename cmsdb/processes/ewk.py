@@ -83,7 +83,9 @@ __all__ = [  # noqa: F822
     "w_lnu_1j", "w_lnu_1j_pt0to40", "w_lnu_1j_pt40to100", "w_lnu_1j_pt100to200", "w_lnu_1j_pt200to400",
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
-    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j",
+    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j", "w_lnu_3j", "w_lnu_4j",
+    "w_enu_2j_inc", "w_enu_2j_0j", "w_munu_2j_inc", "w_munu_2j_0j", "w_taunu_2j_inc", "w_taunu_2j_0j",
+    "w_enu_4j_inc", "w_enu_4j_1j", "w_munu_4j_inc", "w_munu_4j_1j", "w_taunu_4j_inc", "w_taunu_4j_1j",
     "w_vbf", "w_vbf_wlnu", "w_vbf_qq",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
@@ -91,12 +93,13 @@ __all__ = [  # noqa: F822
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
     "zz_zee_zee", "zz_zee_zmumu", "zz_zee_ztautau", "zz_zmumu_zmumu", "zz_zmumu_ztautau", "zz_ztautau_ztautau",
-    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
+    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq", "wz_wqq_zqq",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
     "ww_wenu_wenu", "ww_wenu_wmunu", "ww_wenu_wtaunu", "ww_wmunu_wmunu", "ww_wmunu_wtaunu", "ww_wtaunu_wtaunu",
     "vvv",
     "zzz", "wzz", "wwz", "www",
+    "wzg", "wzg_lnuzg",
 ]
 
 

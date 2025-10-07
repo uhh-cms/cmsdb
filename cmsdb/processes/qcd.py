@@ -80,6 +80,18 @@ __all__ = [
     "qcd_doubleem_pt30to40_mgg80toinf",
     "qcd_doubleem_pt40toinf_mgg80toinf",
     "qcd_doubleem_pt30toinf_mgg40to80",
+    "qcd_fil_mu_pt15to20",
+    "qcd_fil_mu_pt20to30",
+    "qcd_fil_mu_pt30to50",
+    "qcd_fil_mu_pt50to80",
+    "qcd_fil_mu_pt80to120",
+    "qcd_fil_mu_pt120to170",
+    "qcd_fil_mu_pt170to300",
+    "qcd_fil_mu_pt300to470",
+    "qcd_fil_mu_pt470to600",
+    "qcd_fil_mu_pt600to800",
+    "qcd_fil_mu_pt800to1000",
+    "qcd_fil_mu_pt1000toinf",
 ]
 
 from order import Process
