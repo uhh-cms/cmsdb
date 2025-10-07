@@ -240,6 +240,79 @@ cpn.add_dataset(
     ),
 )
 
+
+cpn.add_dataset(
+    name="dy_m10to50_madgraph",
+    id=14889650,
+    processes=[procs.dy_m10to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=481,
+            n_events=142310722,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_1j_madgraph",
+    id=14895190,
+    processes=[procs.dy_m50toinf_1j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=94,
+            n_events=13040044,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_m50toinf_2j_madgraph",
+    id=14892625,
+    processes=[procs.dy_m50toinf_2j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=121,
+            n_events=14194783,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_m50toinf_3j_madgraph",
+    id=14894781,
+    processes=[procs.dy_m50toinf_3j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=114,
+            n_events=9139978,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_m50toinf_4j_madgraph",
+    id=14895189,
+    processes=[procs.dy_m50toinf_4j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=107,
+            n_events=3202454,
+        ),
+    ),
+)
+
 #
 # w_lnu
 #
