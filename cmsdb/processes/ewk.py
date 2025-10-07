@@ -73,7 +73,7 @@ __all__ = [  # noqa: F822
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
     "z_qq_1j_pt100to200", "z_qq_2j_pt100to200", "z_qq_1j_pt200to400", "z_qq_2j_pt200to400",
     "z_qq_1j_pt400to600", "z_qq_2j_pt400to600", "z_qq_1j_pt600toinf", "z_qq_2j_pt600toinf",
-    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf",
+    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf", "z_vbf_zqq",
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
@@ -84,15 +84,17 @@ __all__ = [  # noqa: F822
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
     "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j",
-    "w_vbf", "w_vbf_wlnu",
+    "w_vbf", "w_vbf_wlnu", "w_vbf_qq",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
+    "zz_zee_zee", "zz_zee_zmumu", "zz_zee_ztautau", "zz_zmumu_zmumu", "zz_zmumu_ztautau", "zz_ztautau_ztautau",
     "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
+    "ww_wenu_wenu", "ww_wenu_wmunu", "ww_wenu_wtaunu", "ww_wmunu_wmunu", "ww_wmunu_wtaunu", "ww_wtaunu_wtaunu",
     "vvv",
     "zzz", "wzz", "wwz", "www",
 ]
@@ -1630,6 +1632,15 @@ z_vbf_zll_m50toinf = z_vbf_zll.add_process(
     },
 )
 
+z_vbf_zqq = z_vbf.add_process(
+    name="z_vbf_zqq",
+    id=55314,
+    label=r"Z $\rightarrow qq$ (VBF)",
+    xsecs={
+        # XSDB (Run3Summer22)
+        13.6: Number(13.67, {"tot": 0.005891}),
+    },
+)
 #
 # W boson
 #
@@ -2175,6 +2186,16 @@ w_vbf_wlnu = w_vbf.add_process(
 
 w_vbf.set_xsec(13.6, w_vbf_wlnu.get_xsec(13.6) / const.br_w.lep)
 
+
+w_vbf_qq = w_vbf.add_process(
+    name="w_vbf_wqq",
+    id=6311,
+    label=r"W $\rightarrow qq$ (VBF)",
+    xsecs={
+        13.6: w_vbf.get_xsec(13.6) * const.br_w.had,
+    },
+)
+
 #
 # EWK radiations
 # TODO: EWK is inaccurate, use dedicated z_vbf and w_vbf processes instead
@@ -2275,6 +2296,42 @@ zz_znunu_zqq = zz.add_process(
     xsecs=multiply_xsecs(zz, const.br_zz.qqnunu),
 )
 
+zz_zee_zee = zz.add_process(
+    name="zz_zee_zee",
+    id=8160,
+    xsecs=multiply_xsecs(zz, const.br_zz.eeee),
+)
+
+zz_zee_zmumu = zz.add_process(
+    name="zz_zee_zmumu",
+    id=8161,
+    xsecs=multiply_xsecs(zz, const.br_zz.eemumu),
+)
+
+zz_zee_ztautau = zz.add_process(
+    name="zz_zee_ztautau",
+    id=8162,
+    xsecs=multiply_xsecs(zz, const.br_zz.eetautau),
+)
+
+zz_zmumu_zmumu = zz.add_process(
+    name="zz_zmumu_zmumu",
+    id=8163,
+    xsecs=multiply_xsecs(zz, const.br_zz.mumumumu),
+)
+
+zz_zmumu_ztautau = zz.add_process(
+    name="zz_zmumu_ztautau",
+    id=8164,
+    xsecs=multiply_xsecs(zz, const.br_zz.mumutautau),
+)
+
+zz_ztautau_ztautau = zz.add_process(
+    name="zz_ztautau_ztautau",
+    id=8165,
+    xsecs=multiply_xsecs(zz, const.br_zz.tautautautau),
+)
+
 # WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
 wp_z_xsec = {
     13: Number(28.55, {"scale": (0.041j, 0.032j)}),
@@ -2370,7 +2427,44 @@ ww_dl = ww.add_process(
     id=8310,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.dl,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
+        13.6: ww.get_xsec(13.6) * const.br_ww.dl,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
     },
+)
+
+ww_wenu_wenu = ww_dl.add_process(
+    name="ww_wenu_wenu",
+    id=8311,
+    xsecs=multiply_xsecs(ww, const.br_ww.enuenu),
+)
+
+ww_wenu_wmunu = ww_dl.add_process(
+    name="ww_wenu_wmunu",
+    id=8312,
+    xsecs=multiply_xsecs(ww, const.br_ww.enumunu),
+)
+
+ww_wenu_wtaunu = ww_dl.add_process(
+    name="ww_wenu_wtaunu",
+    id=8313,
+    xsecs=multiply_xsecs(ww, const.br_ww.enutaunu),
+)
+
+ww_wmunu_wmunu = ww_dl.add_process(
+    name="ww_wmunu_wmunu",
+    id=8314,
+    xsecs=multiply_xsecs(ww, const.br_ww.munumunu),
+)
+
+ww_wmunu_wtaunu = ww_dl.add_process(
+    name="ww_wmunu_wtaunu",
+    id=8315,
+    xsecs=multiply_xsecs(ww, const.br_ww.munutaunu),
+)
+
+ww_wtaunu_wtaunu = ww_dl.add_process(
+    name="ww_wtaunu_wtaunu",
+    id=8316,
+    xsecs=multiply_xsecs(ww, const.br_ww.taunutaunu),
 )
 
 # no additional cut found in generator card in MCM:
@@ -2384,6 +2478,7 @@ ww_sl = ww.add_process(
     id=8320,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.sl,  # value around 50.06 for comparison to GenXSecAnalyzer NLO result
+        13.6: ww.get_xsec(13.6) * const.br_ww.sl,  # value around 50.06 for comparison to GenXSecAnalyzer NLO result
     },
 )
 
@@ -2398,6 +2493,7 @@ ww_fh = ww.add_process(
     id=8330,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
+        13.6: ww.get_xsec(13.6) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
     },
 )
 

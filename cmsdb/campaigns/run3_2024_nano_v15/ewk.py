@@ -1458,11 +1458,48 @@ cpn.add_dataset(
 )
 """
 
+cpn.add_dataset(
+    name="w_vbf_qq_madgraph",
+    id=15304404,
+    processes=[procs.w_vbf_qq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFWto2Q_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=349,  # 349-0
+            n_events=218132349,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="z_vbf_zqq_madgraph",
+    id=15304454,
+    processes=[procs.z_vbf_zqq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/VBFZto2Q_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=74,  # 74-0
+            n_events=13834407,
+        ),
+    ),
+)
+
 ####################################################################################################
 #
 # ZZ boson production
 #
 ####################################################################################################
+# qqZZ
 
 # inclusive
 cpn.add_dataset(
@@ -1574,6 +1611,116 @@ cpn.add_dataset(
     ),
 )
 
+# split by lepton decay, are the previous ones really ggZZ as the XS indicates? what about qqZZ?
+
+cpn.add_dataset(
+    name="zz_zee_zee_pythia8",
+    id=15415633,
+    processes=[procs.zz_zee_zee],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlu2Zto4E_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=33,  # 33-0
+            n_events=2100000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_zee_zmumu_pythia8",
+    id=15415905,
+    processes=[procs.zz_zee_zmumu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlu2Zto2E2Mu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=49,  # 49-0
+            n_events=2078216,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_zee_ztautau_pythia8",
+    id=15414868,
+    processes=[procs.zz_zee_ztautau],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlu2Zto2E2Tau_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=51,  # 51-0
+            n_events=2100000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_zmumu_zmumu_pythia8",
+    id=15415766,
+    processes=[procs.zz_zmumu_zmumu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlu2Zto4Mu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=34,  # 34-0
+            n_events=2097498,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_zmumu_ztautau_pythia8",
+    id=15415743,
+    processes=[procs.zz_zmumu_ztautau],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlu2Zto2Mu2Tau_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=31,  # 31-0
+            n_events=2095000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="zz_ztautau_ztautau_pythia8",
+    id=15415794,
+    processes=[procs.zz_ztautau_ztautau],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGlu2Zto4Tau_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=34,  # 34-0
+            n_events=2099160,
+        ),
+    ),
+)
+
 ####################################################################################################
 #
 # ZGamma boson production
@@ -1604,6 +1751,16 @@ cpn.add_dataset(
             n_files=518,  # 518-0
             n_events=63986968,
         ),
+        # xxx=DatasetInfo(
+        #     keys=[
+        #         "/WW-DPS_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+        #     ],
+        #     aux={
+        #         "broken_files": [],
+        #     },
+        #     n_files=104,  # 104-0
+        #     n_events=9500000,
+        # ),
     ),
 )
 
@@ -1658,6 +1815,119 @@ cpn.add_dataset(
             },
             n_files=185,  # 185-0
             n_events=151214029,
+        ),
+    ),
+)
+
+# finer lepton decay modes (or different production mode?)
+
+cpn.add_dataset(
+    name="ww_wenu_wenu_pythia8",
+    id=15349213,
+    processes=[procs.ww_wenu_wenu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGluWWto2E2Nu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=64,  # 64-0
+            n_events=1994224,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ww_wenu_wmunu_pythia8",
+    id=15350676,  # id from GluGluWWtoENuMuNu
+    processes=[procs.ww_wenu_wmunu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGluWWtoENuMuNu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+                "/GluGluWWtoMuNuENu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=48 + 29,  # 48-0 / 29-0
+            n_events=1992025 + 1999275,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ww_wenu_wtaunu_pythia8",
+    id=15348543,  # id from GluGluWWtoENuTauNu
+    processes=[procs.ww_wenu_wtaunu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGluWWtoENuTauNu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+                "/GluGluWWtoTauNuENu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=34 + 32,  # 34-0 / 32-0
+            n_events=1994939 + 1997822,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ww_wmunu_wmunu_pythia8",
+    id=15349364,
+    processes=[procs.ww_wmunu_wmunu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGluWWto2Mu2Nu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=33,  # 33-0
+            n_events=1997092,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ww_wmunu_wtaunu_pythia8",
+    id=15349359,  # id from GluGluWWtoMuNuTauNu
+    processes=[procs.ww_wmunu_wtaunu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGluWWtoMuNuTauNu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+                "/GluGluWWtoTauNuMuNu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=31 + 93,  # 31-0 / 93-0
+            n_events=1997816 + 1998548,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ww_wtaunu_wtaunu_pythia8",
+    id=15349363,
+    processes=[procs.ww_wtaunu_wtaunu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/GluGluWWto2Tau2Nu_TuneCP5_13p6TeV_mcfm-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=35,  # 35-0
+            n_events=1999273,
         ),
     ),
 )

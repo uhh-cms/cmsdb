@@ -1,4 +1,4 @@
-cmsdb/processes/higgs.py# coding: utf-8
+# coding: utf-8
 
 """
 top quark datasets for the 2024 data-taking campaign (Nano v15)
@@ -7,7 +7,7 @@ top quark datasets for the 2024 data-taking campaign (Nano v15)
 from order import DatasetInfo
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
+from cmsdb.campaigns.run3_2024_nano_v15 import run3_2024_nano_v15 as cpn
 
 
 #
@@ -202,17 +202,119 @@ cpn.add_dataset(
 # single top (t-channel)
 #
 
+cpn.add_dataset(
+    name="st_tchannel_t_4f_qq_powheg",
+    id=15370314,
+    processes=[procs.st_tchannel_t_qq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TBbarQto2Q-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=778,  # 778-0
+            n_events=87576444,
+        ),
+    ),
+)
 
 cpn.add_dataset(
-    name="st_tchannel_t_4f_powheg",
-    id=14803181,
-    processes=[procs.st_tchannel_t],
-    keys=[
-        "/TBbarQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=43,
-    n_events=2973675,
+    name="st_tchannel_t_4f_lnu_powheg",
+    id=15316276,
+    processes=[procs.st_tchannel_t_lnu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TBbarQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=391,  # 391-0
+            n_events=44258039,
+        ),
+        tune_down=DatasetInfo(
+            keys=[
+                "/TBbarQtoLNu-t-channel-4FS_TuneCP5Down_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=218,  # 218-0
+            n_events=21903026,
+        ),
+        tune_up=DatasetInfo(
+            keys=[
+                "/TBbarQtoLNu-t-channel-4FS_TuneCP5Up_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=389,  # 389-0
+            n_events=22008628,
+        ),
+    ),
 )
+
+
+cpn.add_dataset(
+    name="st_tchannel_tbar_4f_qq_powheg",
+    id=15363774,
+    processes=[procs.st_tchannel_tbar_qq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TbarBQto2Q-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=825,  # 825-0
+            n_events=43273264,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="st_tchannel_tbar_4f_lnu_powheg",
+    id=15316115,
+    processes=[procs.st_tchannel_t_lnu],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TbarBQtoLNu-t-channel-4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=249,  # 249-0
+            n_events=22102160,
+        ),
+        tune_down=DatasetInfo(
+            keys=[
+                "/TbarBQtoLNu-t-channel-4FS_TuneCP5Down_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=188,  # 188-0
+            n_events=10997130,
+        ),
+        tune_up=DatasetInfo(
+            keys=[
+                "/TbarBQtoLNu-t-channel-4FS_TuneCP5Up_13p6TeV_powheg-madspin-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=166,  # 166-0
+            n_events=11000625,
+        ),
+    ),
+)
+
 
 cpn.add_dataset(
     name="st_tchannel_tbar_4f_powheg",
@@ -904,7 +1006,7 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# Missing: ttZ, ttZ, TTg, TgJets, TTTT, TZq
+# Missing: ttZ, ttW, TTg, TgJets, TTTT, TZq
 
 """
 # ttgg?

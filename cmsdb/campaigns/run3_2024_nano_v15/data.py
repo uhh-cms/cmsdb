@@ -7,7 +7,7 @@ CMS datasets from the 2024 data-taking campaign (atill preliminary)
 from order import DatasetInfo
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
+from cmsdb.campaigns.run3_2024_nano_v15 import run3_2024_nano_v15 as cpn
 
 cpn.add_dataset(
     name="data_mu_b",

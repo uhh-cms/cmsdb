@@ -14,8 +14,8 @@ __all__ = [
     "hh_ggf_hbb_htt_kl1_kt1", "hh_ggf_hbb_htt_kl0_kt1", "hh_ggf_hbb_htt_kl0_kt1_c21",
     "hh_ggf_hbb_htt_kl1_kt1_c20p10", "hh_ggf_hbb_htt_kl1_kt1_c20p35", "hh_ggf_hbb_htt_kl1_kt1_c23",
     "hh_ggf_hbb_htt_kl1_kt1_c2m2", "hh_ggf_hbb_htt_kl2p45_kt1", "hh_ggf_hbb_htt_kl5_kt1",
-    "hh_ggf_hbb_htt_node1", "hh_ggf_hbb_htt_node2", "hh_ggf_hbb_htt_node3",
-    "hh_ggf_hbb_htt_node4", "hh_ggf_hbb_htt_node5", "hh_ggf_hbb_htt_node6",
+    "hh_ggf_hbb_htt_klm20_kt1_c22p24", "hh_ggf_hbb_htt_node1", "hh_ggf_hbb_htt_node2",
+    "hh_ggf_hbb_htt_node3", "hh_ggf_hbb_htt_node4", "hh_ggf_hbb_htt_node5", "hh_ggf_hbb_htt_node6",
     "hh_ggf_hbb_htt_node7", "hh_ggf_hbb_htt_node8", "hh_ggf_hbb_htt_node9",
     "hh_ggf_hbb_htt_node10", "hh_ggf_hbb_htt_node11", "hh_ggf_hbb_htt_node12",
     "radion_hh_ggf_hbb_htt",
@@ -89,7 +89,7 @@ from cmsdb.processes.hh import (
     hh_ggf_kl1_kt1_c20p10, hh_ggf_kl1_kt1_c20p35, hh_ggf_kl1_kt1_c23,
     hh_ggf_kl1_kt1_c2m2, hh_ggf_kl2p45_kt1, hh_ggf_kl5_kt1,
     hh_vbf_kv1_k2v1_kl1, hh_vbf_kv1_k2v0_kl1, hh_vbf_kv1_k2v1_kl2,
-    hh_vbf_kv1_k2v2_kl1, hh_vbf_kv1p74_k2v1p37_kl14p4,
+    hh_vbf_kv1_k2v2_kl1, hh_vbf_kv1p74_k2v1p37_kl14p4, hh_ggf_klm20_kt1_c22p24,
     hh_vbf_kvm0p012_k2v0p03_kl10p2, hh_vbf_kvm0p758_k2v1p44_klm19p3,
     hh_vbf_kvm0p962_k2v0p959_klm1p43, hh_vbf_kvm1p21_k2v1p94_klm0p94,
     hh_vbf_kvm1p6_k2v2p72_klm1p36, hh_vbf_kvm1p83_k2v3p57_klm3p39,
@@ -293,6 +293,12 @@ hh_ggf_hbb_htt_kl5_kt1 = hh_ggf_kl5_kt1.add_process(
     xsecs=multiply_xsecs(hh_ggf_kl5_kt1, const.br_hh.bbtt),
 )
 
+hh_ggf_hbb_htt_klm20_kt1_c22p24 = hh_ggf_klm20_kt1_c22p24.add_process(
+    name="hh_ggf_hbb_htt_klm20_kt1_c22p24",
+    id=21122,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = -20$, $\kappa_t = 1, C_2 = 2.4$)",
+    xsecs=multiply_xsecs(hh_ggf_kl1_kt1_c2m2, const.br_hh.bbtt),
+)
 
 #
 # ggF -> radion -> HH

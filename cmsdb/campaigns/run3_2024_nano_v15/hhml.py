@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-HHH -> bbbbtautau datasets for the 2024 data-taking campaign with datasets at NanoAOD tier in
+HH -> Multilepton datasets for the 2024 data-taking campaign with datasets at NanoAOD tier in
 version 15, provided centrally by CMS
 """
 
