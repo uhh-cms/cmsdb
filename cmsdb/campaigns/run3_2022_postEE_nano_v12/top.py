@@ -1045,6 +1045,35 @@ cpn.add_dataset(
 #     ),
 # )
 cpn.add_dataset(
+    name="ttz_zll_m4to50_amcatnlo",
+    id=14793929,
+    processes=[procs.ttz_zll_m4to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM ",  # noqa
+            ],
+            n_files=25,
+            n_events=1049999,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="ttz_zll_m50toinf_amcatnlo",
+    id=14793589,
+    processes=[procs.ttz_zll_m4to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=23,
+            n_events=1343867,
+        ),
+    ),
+)
+
+cpn.add_dataset(
     name="ttzz_madgraph",
     id=14826688,
     processes=[procs.ttzz],
