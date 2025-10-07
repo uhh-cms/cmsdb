@@ -269,6 +269,77 @@ cpn.add_dataset(
     ),
 )
 
+cpn.add_dataset(
+    name="dy_m10to50_madgraph",
+    id=14873228,
+    processes=[procs.dy_m10to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=349,
+            n_events=154413937,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_m50toinf_1j_madgraph",
+    id=14791072,
+    processes=[procs.dy_m50toinf_1j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=84,
+            n_events=14552563,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_m50toinf_2j_madgraph",
+    id=14801226,
+    processes=[procs.dy_m50toinf_2j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=67,
+            n_events=14777208,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_m50toinf_3j_madgraph",
+    id=14791492,
+    processes=[procs.dy_m50toinf_3j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=72,
+            n_events=8672888,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="dy_m50toinf_4j_madgraph",
+    id=14792386,
+    processes=[procs.dy_m50toinf_4j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=71,
+            n_events=3278755,
+        ),
+    ),
+)
+
 
 ####################################################################################################
 #
