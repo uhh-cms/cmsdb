@@ -7,6 +7,8 @@ fetched to local storage via rucio.
 
 from order import Campaign
 
+from cmsdb.util import transfer_datasets
+
 
 #
 # campaign
@@ -14,7 +16,7 @@ from order import Campaign
 
 campaign_run3_2024_nano_v15 = Campaign(
     name="run3_2024_nano_v15",
-    id=320241150,  # (run)3(year)2024(part)1(version)15(prod)0, 0 -> central nano fetched via rucio
+    id=32024115,  # (run)3(year)2024(part)1(version)15
     ecm=13.6,
     bx=25,
     aux={
@@ -23,11 +25,6 @@ campaign_run3_2024_nano_v15 = Campaign(
         "year": 2024,
         "version": 15,
         "postfix": "",
-        "custom": {
-            "name": "run3_2024_nano_v15",
-            "creator": "rucio",
-            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2",
-        },
     },
     tags=set(),
 )
@@ -41,3 +38,30 @@ campaign_run3_2024_nano_v15 = Campaign(
 import cmsdb.campaigns.run3_2024_nano_v15.hh2bbtautau  # noqa
 # import cmsdb.campaigns.run3_2024_nano_v15.hhh4b2tau  # noqa
 # import cmsdb.campaigns.run3_2024_nano_v15.hh2ml  # noqa
+
+
+#
+# variant of the campaign with datasets fetched to local resources via rucio
+# (the main difference is the "custom" aux entry with additional info that can be interpreted by analyses)
+#
+
+campaign_run3_2024_nano_local_v15 = Campaign(
+    name="run3_2024_nano_local_v15",
+    id=10 * campaign_run3_2024_nano_v15.id,  # adds trailing 0
+    ecm=campaign_run3_2024_nano_v15.ecm,
+    bx=campaign_run3_2024_nano_v15.bx,
+    aux={
+        **campaign_run3_2024_nano_v15.aux,
+        "custom": {
+            "name": "run3_2024_nano_local_v15",
+            "creator": "rucio",
+            "locations": {
+                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2",
+                "cern": "root://eoscms.cern.ch/eos/cms",
+            },
+        },
+    },
+    tags=campaign_run3_2024_nano_v15.tags,
+)
+
+transfer_datasets(campaign_run3_2024_nano_v15, campaign_run3_2024_nano_local_v15)
