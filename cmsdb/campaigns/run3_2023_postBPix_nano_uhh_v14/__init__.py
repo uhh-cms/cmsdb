@@ -26,8 +26,10 @@ campaign_run3_2023_postBPix_nano_uhh_v14 = Campaign(
         "custom": {
             "name": "run3_2023_postBPix_nano_uhh_v14",
             "creator": "uhh",
-            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/roward/nanogen_store/MergeNano/config_23post_v14/prod1",  # noqa
             "nanogen_version": "prod1",
+            "locations": {
+                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/roward/nanogen_store/MergeNano/config_23post_v14/prod1",  # noqa
+            },
         },
     },
     tags={"postBPix", "BPix"},
