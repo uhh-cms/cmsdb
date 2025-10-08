@@ -24,8 +24,8 @@ cpn.add_dataset(
             keys=[
                 "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
             ],
-            n_files=187,
-            n_events=87986940,
+            n_files=125,
+            n_events=49771670,
         ),
         extension=DatasetInfo(
             keys=[
