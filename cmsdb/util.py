@@ -6,13 +6,13 @@ Helpful utilities.
 
 from __future__ import annotations
 
-__all__ = ["DotDict", "multiply_xsecs", "add_xsecs", "add_decay_process", "add_sub_decay_process"]
+__all__ = ["DotDict", "multiply_xsecs", "add_xsecs", "add_decay_process", "add_sub_decay_process", "transfer_datasets"]
 
 from typing import Callable
 from functools import partial
 from scinum import Number
 
-from order import Process
+from order import Process, Campaign
 from collections import OrderedDict
 
 
@@ -188,3 +188,20 @@ add_sub_decay_process = partial(
     name_func=lambda parent_name, decay_name: f"{parent_name}{decay_name}",
     label_func=lambda parent_label, decay_label: f"{parent_label}{decay_label}",
 )
+
+
+def transfer_datasets(src_campaign: Campaign, dst_campaign: Campaign) -> None:
+    """
+    Copy all datasets from one *src_campaign* to another *dst_campaign*, making sure that linked processes are not
+    copied but shared.
+    """
+    for dataset in src_campaign.datasets:
+        # shallow copy of the dataset (no processes, no campaign reference)
+        copy = dataset.copy_shallow()
+
+        # add it
+        dst_campaign.add_dataset(copy)
+
+        # link same processes
+        for process in dataset.processes:
+            copy.add_process(process)
