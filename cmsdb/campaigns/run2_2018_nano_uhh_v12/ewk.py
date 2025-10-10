@@ -552,9 +552,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zqq_zll_pythia",
+    name="zz_2l2q_pythia",
     id=14284213,
-    processes=[procs.zz_zqq_zll],
+    processes=[procs.zz_2l2q],
     keys=[
         "/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -564,9 +564,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zll_znunu_pythia",
+    name="zz_2l2nu_pythia",
     id=14196326,
-    processes=[procs.zz_zll_znunu],
+    processes=[procs.zz_2l2nu],
     keys=[
         "/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -576,9 +576,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_znunu_zqq_pythia",
+    name="zz_2nu2q_pythia",
     id=14245915,
-    processes=[procs.zz_znunu_zqq],
+    processes=[procs.zz_2nu2q],
     keys=[
         "/ZZTo2Q2Nu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -588,9 +588,9 @@ cpn.add_dataset(
 
 # there is a 4 GeV mZ cut, which has no effect on the cross section though
 cpn.add_dataset(
-    name="zz_zqq_zqq_pythia",
+    name="zz_4q_pythia",
     id=14373150,
-    processes=[procs.zz_zqq_zqq],
+    processes=[procs.zz_4q],
     keys=[
         "/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -599,9 +599,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_zll_zll_powheg",
+    name="zz_4l_powheg",
     id=14241106,
-    processes=[procs.zz_zll_zll],
+    processes=[procs.zz_4l],
     keys=[
         "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -622,9 +622,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zll_pythia",
+    name="wz_3lnu_pythia",
     id=14253723,
-    processes=[procs.wz_wlnu_zll],
+    processes=[procs.wz_3lnu],
     keys=[
         "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -633,9 +633,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wqq_zll_pythia",
+    name="wz_2l2q_pythia",
     id=14284121,
-    processes=[procs.wz_wqq_zll],
+    processes=[procs.wz_2l2q],
     keys=[
         "/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -644,9 +644,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zqq_4f_amcatnlo",
+    name="wz_lnu2q_4f_amcatnlo",
     id=14373352,
-    processes=[procs.wz_wlnu_zqq],
+    processes=[procs.wz_lnu2q],
     keys=[
         "/WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -667,9 +667,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_sl_4f_pythia",
+    name="ww_lnu2q_4f_pythia",
     id=14372963,
-    processes=[procs.ww_sl],
+    processes=[procs.ww_lnu2q],
     keys=[
         "/WWTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -678,9 +678,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_dl_powheg",
+    name="ww_2l2nu_powheg",
     id=14241325,
-    processes=[procs.ww_dl],
+    processes=[procs.ww_2l2nu],
     keys=[
         "/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -689,9 +689,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_fh_4f_amcatnlo",
+    name="ww_4q_4f_amcatnlo",
     id=14373134,
-    processes=[procs.ww_fh],
+    processes=[procs.ww_4q],
     keys=[
         "/WWTo4Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv12-106X_upgrade2018_realistic_v16_L1v1-v3/NANOAODSIM",  # noqa
     ],
