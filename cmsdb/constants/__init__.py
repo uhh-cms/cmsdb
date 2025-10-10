@@ -23,16 +23,28 @@ m_z = Number(91.1876, {"z_mass": 0.0021})
 br_w = DotDict()
 br_w["had"] = Number(0.6741, {"br_w_had": 0.0027})
 br_w["lep"] = 1 - br_w.had
+br_w["enu"] = Number(0.1071, {"br_w_enu": 0.0016})
+br_w["mnu"] = Number(0.1063, {"br_w_mnu": 0.0015})
+br_w["tnu"] = Number(0.1138, {"br_w_tnu": 0.0021})
 
 br_ww = DotDict(
     fh=br_w.had ** 2,
     dl=br_w.lep ** 2,
     sl=2 * ((br_w.had * Correlation(br_w_had=-1)) * br_w.lep),  # use correlation to reduce error on br
+    enuenu=br_w.enu ** 2,
+    enumnu=2 * br_w.enu * br_w.mnu,
+    enutnu=2 * br_w.enu * br_w.tnu,
+    mnumnu=br_w.mnu ** 2,
+    mnutnu=2 * br_w.mnu * br_w.tnu,
+    tnutnu=br_w.tnu ** 2,
 )
 
 br_z = DotDict(
     qq=Number(0.69911, {"br_z_qq": 0.00056}),
     clep=Number(0.033658, {"br_z_clep": 0.000023}) * n_leps,
+    ee=Number(0.033632, {"br_z_ee": 0.000042}),
+    mm=Number(0.033662, {"br_z_mm": 0.000066}),
+    tt=Number(0.033696, {"br_z_tt": 0.000083}),
 )
 br_z.nunu = 1 - br_z.qq - br_z.clep
 
@@ -43,6 +55,12 @@ br_zz = DotDict(
     llnunu=2 * br_z.nunu * br_z.clep,
     llqq=2 * br_z.clep * br_z.qq,
     qqnunu=2 * br_z.qq * br_z.nunu,
+    eeee=br_z.ee ** 2,
+    eemm=2 * br_z.ee * br_z.mm,
+    eett=2 * br_z.ee * br_z.tt,
+    mmtt=2 * br_z.mm * br_z.tt,
+    mmmm=br_z.mm ** 2,
+    tttt=br_z.tt ** 2,
 )
 
 # higgs branching ratios from lhchwg, taken for mH = 125GeV
