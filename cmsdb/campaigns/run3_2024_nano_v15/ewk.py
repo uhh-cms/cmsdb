@@ -601,16 +601,16 @@ cpn.add_dataset(
     n_events=113_042_539,
 )
 
-cpn.add_dataset(
-    name="z_vbf_zll_m50toinf_madgraph",
-    id=15304452,
-    processes=[procs.z_vbf_zll_m50toinf],
-    keys=[
-        "/VBFto2L_Bin-MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=0,
-    n_events=0,
-)
+# cpn.add_dataset(
+#     name="z_vbf_zll_m50toinf_madgraph",
+#     id=15304452,
+#     processes=[procs.z_vbf_zll_m50toinf],
+#     keys=[
+#         "/VBFto2L_Bin-MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=0,
+#     n_events=0,
+# )
 
 #
 # Di-boson
