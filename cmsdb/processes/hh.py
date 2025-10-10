@@ -32,8 +32,8 @@ __all__ = [
     # Di-Higgs
     "hh",
     "hh_ggf", "hh_ggf_kl0_kt1", "hh_ggf_kl1_kt1", "hh_ggf_kl2p45_kt1", "hh_ggf_kl5_kt1",
-    "hh_ggf_kl0_kt1_c21", "hh_ggf_kl1_kt1_c20p10", "hh_ggf_kl1_kt1_c20p35",
-    "hh_ggf_kl1_kt1_c23", "hh_ggf_kl1_kt1_c2m2",
+    "hh_ggf_kl0_kt1_c21", "hh_ggf_kl1_kt1_c20p1", "hh_ggf_kl1_kt1_c20p35",
+    "hh_ggf_kl1_kt1_c23", "hh_ggf_kl1_kt1_c2m2", "hh_ggf_kl1_kt1_c21",
     "hh_vbf", "hh_vbf_kv1_k2v1_kl1", "hh_vbf_kv1_k2v1_kl0", "hh_vbf_kv1_k2v1_kl2",
     "hh_vbf_kv1_k2v0_kl1", "hh_vbf_kv1_k2v2_kl1", "hh_vbf_kv0p5_k2v1_kl1", "hh_vbf_kv1p5_k2v1_kl1",
     "hh_vbf_kv1p74_k2v1p37_kl14p4", "hh_vbf_kvm0p012_k2v0p03_kl10p2",
@@ -160,8 +160,8 @@ hh_ggf_kl0_kt1_c21 = hh_ggf.add_process(
     aux={"production_mode_parent": hh_ggf},
 )
 
-hh_ggf_kl1_kt1_c20p10 = hh_ggf.add_process(
-    name="hh_ggf_kl1_kt1_c20p10",
+hh_ggf_kl1_kt1_c20p1 = hh_ggf.add_process(
+    name="hh_ggf_kl1_kt1_c20p1",
     id=21006,
     aux={"production_mode_parent": hh_ggf},
 )
@@ -181,6 +181,12 @@ hh_ggf_kl1_kt1_c23 = hh_ggf.add_process(
 hh_ggf_kl1_kt1_c2m2 = hh_ggf.add_process(
     name="hh_ggf_kl1_kt1_c2m2",
     id=21009,
+    aux={"production_mode_parent": hh_ggf},
+)
+
+hh_ggf_kl1_kt1_c21 = hh_ggf.add_process(
+    name="hh_ggf_kl1_kt1_c21",
+    id=21010,
     aux={"production_mode_parent": hh_ggf},
 )
 
