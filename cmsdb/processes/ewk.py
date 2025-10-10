@@ -1938,6 +1938,22 @@ w_lnu_ge3j = w_lnu.add_process(
     },
 )
 
+w_lnu_3j = w_lnu.add_process(
+    name="w_lnu_3j",
+    id=610027,
+    aux={
+        "njets": (3, 4),
+    },
+)
+
+w_lnu_4j = w_lnu.add_process(
+    name="w_lnu_4j",
+    id=610028,
+    aux={
+        "njets": (4, 5),
+    },
+)
+
 # dedicated vbf production (pp -> w + qq)
 w_vbf = w.add_process(
     name="w_vbf",
