@@ -20,17 +20,22 @@ n_leps = Number(3)
 m_z = Number(91.1876, {"z_mass": 0.0021})
 
 # branching ratios
-br_w = DotDict()
-br_w["had"] = Number(0.6741, {"br_w_had": 0.0027})
-br_w["lep"] = 1 - br_w.had
-br_w["enu"] = Number(0.1071, {"br_w_enu": 0.0016})
-br_w["mnu"] = Number(0.1063, {"br_w_mnu": 0.0015})
-br_w["tnu"] = Number(0.1138, {"br_w_tnu": 0.0021})
+br_w = DotDict(
+    # main division
+    had=(_ := Number(0.6741, {"br_w_had": 0.0027})),
+    lep=1 - _,
+    # specific leptonic deca<ys
+    enu=Number(0.1071, {"br_w_enu": 0.0016}),
+    mnu=Number(0.1063, {"br_w_mnu": 0.0015}),
+    tnu=Number(0.1138, {"br_w_tnu": 0.0021}),
+)
 
 br_ww = DotDict(
+    # main division
     fh=br_w.had ** 2,
     dl=br_w.lep ** 2,
     sl=2 * ((br_w.had * Correlation(br_w_had=-1)) * br_w.lep),  # use correlation to reduce error on br
+    # specific leptonic decays
     enuenu=br_w.enu ** 2,
     enumnu=2 * br_w.enu * br_w.mnu,
     enutnu=2 * br_w.enu * br_w.tnu,
@@ -49,12 +54,15 @@ br_z = DotDict(
 br_z.nunu = 1 - br_z.qq - br_z.clep
 
 br_zz = DotDict(
+    # main division
     qqqq=br_z.qq ** 2,
     llll=br_z.clep ** 2,
+    llqq=2 * br_z.clep * br_z.qq,
+    # neutrinos
     nunununu=br_z.nunu ** 2,
     llnunu=2 * br_z.nunu * br_z.clep,
-    llqq=2 * br_z.clep * br_z.qq,
     qqnunu=2 * br_z.qq * br_z.nunu,
+    # specific leptonic decays
     eeee=br_z.ee ** 2,
     eemm=2 * br_z.ee * br_z.mm,
     eett=2 * br_z.ee * br_z.tt,

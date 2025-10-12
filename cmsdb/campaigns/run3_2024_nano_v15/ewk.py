@@ -573,142 +573,9 @@ cpn.add_dataset(
     n_events=14_991_109,
 )
 
-# dedicated lepton final states with up to 2 jets at matrix element level
-cpn.add_dataset(
-    name="w_enu_m2j_amcatnlo",
-    id=15297431,
-    processes=[procs.w_enu],
-    keys=[
-        "/WtoENu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=3_017,
-    n_events=553_868_158,
-)
-
-cpn.add_dataset(
-    name="w_mnu_m2j_amcatnlo",
-    id=15292952,
-    processes=[procs.w_mnu],
-    keys=[
-        "/WtoMuNu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_962,
-    n_events=534_824_098,
-)
-
-cpn.add_dataset(
-    name="w_tnu_m2j_inc_amcatnlo",
-    id=15292944,
-    processes=[procs.w_tnu],
-    keys=[
-        "/WtoTauNu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_747,
-    n_events=500_139_084,
-)
-
-cpn.add_dataset(
-    name="w_enu_m2j_0j_amcatnlo",
-    id=15300303,
-    processes=[procs.w_enu_0j],
-    keys=[
-        "/WtoENu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=491,
-    n_events=478_887_010,
-)
-
-cpn.add_dataset(
-    name="w_mnu_m2j_0j_amcatnlo",
-    id=15296227,
-    processes=[procs.w_mnu_0j],
-    keys=[
-        "/WtoMuNu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=495,
-    n_events=46_4632_230,
-)
-
-cpn.add_dataset(
-    name="w_tnu_m2j_0j_amcatnlo",
-    id=15304427,
-    processes=[procs.w_tnu_0j],
-    keys=[
-        "/WtoTauNu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=504,
-    n_events=442_672_319,
-)
-
 # dedicated lepton final states with up to 4 jets at matrix element level
 cpn.add_dataset(
-    name="w_enu_m4j_madgraph",
-    id=15301798,
-    processes=[procs.w_enu],
-    keys=[
-        "/WtoENu-4Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_952,
-    n_events=500_792_358,
-)
-
-cpn.add_dataset(
-    name="w_mnu_m4j_madgraph",
-    id=15305399,
-    processes=[procs.w_mnu],
-    keys=[
-        "/WtoMuNu-4Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_366,
-    n_events=425_220_142,
-)
-
-cpn.add_dataset(
-    name="w_tnu_m4j_madgraph",
-    id=15304606,
-    processes=[procs.w_tnu],
-    keys=[
-        "/WtoTauNu-4Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_589,
-    n_events=481_997_294,
-)
-
-cpn.add_dataset(
-    name="w_enu_m4j_1j_madgraph",
-    id=15300448,
-    processes=[procs.w_enu_1j],
-    keys=[
-        "/WtoENu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_648,
-    n_events=479_079_357,
-)
-
-cpn.add_dataset(
-    name="w_mnu_m4j_1j_madgraph",
-    id=15304622,
-    processes=[procs.w_mnu_1j],
-    keys=[
-        "/WtoMuNu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_513,
-    n_events=445_870_925,
-)
-
-cpn.add_dataset(
-    name="w_tnu_m4j_1j_madgraph",
-    id=15305387,
-    processes=[procs.w_tnu_1j],
-    keys=[
-        "/WtoTauNu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=2_589,
-    n_events=471_084_889,
-)
-
-cpn.add_dataset(
-    name="w_lnu_m4j_1j_madgraph",
+    name="w_lnu_1j_madgraph",
     id=15316677,
     processes=[procs.w_lnu_1j],
     keys=[
@@ -719,7 +586,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_m4j_2j_madgraph",
+    name="w_lnu_2j_madgraph",
     id=15298612,
     processes=[procs.w_lnu_2j],
     keys=[
@@ -730,7 +597,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_m4j_3j_madgraph",
+    name="w_lnu_3j_madgraph",
     id=15298945,
     processes=[procs.w_lnu_3j],
     keys=[
@@ -741,7 +608,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_m4j_4j_madgraph",
+    name="w_lnu_4j_madgraph",
     id=15298088,
     processes=[procs.w_lnu_4j],
     keys=[

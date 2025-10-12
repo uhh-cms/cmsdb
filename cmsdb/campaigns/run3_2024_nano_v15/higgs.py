@@ -35,6 +35,17 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="h_ggf_hzz4l_powheg",
+    id=15381502,
+    processes=[procs.h_ggf_hzz4l],
+    keys=[
+        "/GluGluHto2Zto4L_Par-M-125_TuneCP5_13p6TeV_powhegMINNLO-jhugen-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=157,
+    n_events=14_967_000,
+)
+
+cpn.add_dataset(
     name="h_vbf_htt_powheg",
     id=15348632,
     processes=[procs.h_vbf_htt],
@@ -66,6 +77,17 @@ cpn.add_dataset(
     ],
     n_files=135,
     n_events=17_957_727,
+)
+
+cpn.add_dataset(
+    name="h_vbf_hzz4l_powheg",
+    id=15381251,
+    processes=[procs.h_vbf_hzz4l],
+    keys=[
+        "/VBFHto2Zto4L_Par-M-125_TuneCP5_13p6TeV_powheg-jhugen-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=26,
+    n_events=1_372_933,
 )
 
 cpn.add_dataset(

@@ -34,9 +34,11 @@ campaign_run3_2024_nano_v15 = Campaign(
 import cmsdb.campaigns.run3_2024_nano_v15.data  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.top  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.ewk  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.qcd  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.higgs  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.hh2bbtautau  # noqa
-# import cmsdb.campaigns.run3_2024_nano_v15.hh2ml  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.hh2bbvv  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.hh2ml  # noqa
 
 
 #

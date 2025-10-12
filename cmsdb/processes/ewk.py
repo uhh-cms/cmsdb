@@ -84,7 +84,6 @@ __all__ = [  # noqa: F822
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
     "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j", "w_lnu_3j", "w_lnu_4j",
-    "w_enu", "w_enu_0j", "w_enu_1j", "w_mnu", "w_mnu_0j", "w_mnu_1j", "w_tnu", "w_tnu_0j", "w_tnu_1j",
     "w_vbf", "w_vbf_wlnu", "w_vbf_wqq",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
@@ -1975,105 +1974,6 @@ w_lnu_ge3j = w_lnu.add_process(
     id=610026,
     aux={
         "njets": (3, const.inf),
-    },
-)
-
-w_enu = w_lnu.add_process(
-    name="w_enu",
-    id=610027,
-    xsecs={
-        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
-        13.6: Number(68430, {"tot": 272.8}),
-    },
-)
-
-w_enu_0j = w_enu.add_process(
-    name="w_enu_0j",
-    id=610028,
-    xsecs={
-        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
-        13.6: Number(55850, {"tot": 75.07}),
-    },
-    aux={
-        "njets": (0, 1),
-    },
-)
-
-w_enu_1j = w_enu.add_process(
-    name="w_enu_1j",
-    id=610034,
-    xsecs={
-        # XSDB (Run3Summer24) LO, weirdly large.. lep filter missing?
-        13.6: Number(9180, {"tot": 24.45}),
-    },
-    aux={
-        "njets": (1, 2),
-    },
-)
-
-w_mnu = w_lnu.add_process(
-    name="w_mnu",
-    id=610029,
-    xsecs={
-        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
-        13.6: Number(68100, {"tot": 271.5}),
-    },
-)
-
-w_mnu_0j = w_mnu.add_process(
-    name="w_mnu_0j",
-    id=610030,
-    xsecs={
-        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
-        13.6: Number(55920, {"tot": 74.79}),
-    },
-    aux={
-        "njets": (0, 1),
-    },
-)
-
-w_mnu_1j = w_mnu.add_process(
-    name="w_mnu_1j",
-    id=610036,
-    xsecs={
-        # XSDB (Run3Summer24) LO, weirdly large.. lep filter missing?
-        13.6: Number(9187, {"tot": 24.49}),
-    },
-    aux={
-        "njets": (1, 2),
-    },
-)
-
-w_tnu = w_lnu.add_process(
-    name="w_tnu",
-    id=610031,
-    xsecs={
-        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
-        13.6: Number(68080, {"tot": 270.4}),
-    },
-)
-
-w_tnu_0j = w_tnu.add_process(
-    name="w_tnu_0j",
-    id=610032,
-    xsecs={
-        # XSDB (Run3Summer24), weirdly large.. lep filter missing?
-        13.6: Number(55890, {"tot": 74.87}),
-    },
-    aux={
-        "njets": (0, 1),
-    },
-)
-
-w_tnu_1j = w_tnu.add_process(
-    name="w_tnu_1j",
-    id=610038,
-    xsecs={
-        # XSDB (Run3Summer24) NLO, weirdly large.. lep filter missing?
-        13.6: Number(9188, {"tot": 24.48}),
-    },
-    aux={
-        "njets": (1, 2),
     },
 )
 

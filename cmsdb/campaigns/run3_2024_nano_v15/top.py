@@ -185,11 +185,16 @@ cpn.add_dataset(
     n_events=5_529_000,
 )
 
-# missing
-# cpn.add_dataset(
-#     name="ttzz_madgraph",
-#     ...
-# )
+cpn.add_dataset(
+    name="ttzz_madgraph",
+    id=15292170,
+    processes=[procs.ttzz],
+    keys=[
+        "/TTZZ-ZZto4B_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=37,
+    n_events=9_911_305,
+)
 
 #
 # single top
