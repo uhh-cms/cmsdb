@@ -7,13 +7,21 @@ QCD-related process definitions.
 __all__ = [
     "qcd",
     "qcd_flat",
+    "qcd_ht40to70",
+    "qcd_ht70to100",
     "qcd_ht50to100",
     "qcd_ht100to200",
     "qcd_ht200to300",
+    "qcd_ht200to400",
     "qcd_ht300to500",
+    "qcd_ht400to600",
     "qcd_ht500to700",
+    "qcd_ht600to800",
     "qcd_ht700to1000",
+    "qcd_ht800to1000",
+    "qcd_ht1000to1200",
     "qcd_ht1000to1500",
+    "qcd_ht1200to1500",
     "qcd_ht1500to2000",
     "qcd_ht2000toinf",
     "qcd_pt15to30",
@@ -176,6 +184,46 @@ qcd_ht2000toinf = qcd.add_process(
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(22),
     },
+)
+
+qcd_ht40to70 = qcd.add_process(
+    name="qcd_ht40to70",
+    id=31010,
+)
+
+qcd_ht70to100 = qcd.add_process(
+    name="qcd_ht70to100",
+    id=31011,
+)
+
+qcd_ht200to400 = qcd.add_process(
+    name="qcd_ht200to400",
+    id=31012,
+)
+
+qcd_ht400to600 = qcd.add_process(
+    name="qcd_ht400to600",
+    id=31013,
+)
+
+qcd_ht600to800 = qcd.add_process(
+    name="qcd_ht600to800",
+    id=31014,
+)
+
+qcd_ht800to1000 = qcd.add_process(
+    name="qcd_ht800to1000",
+    id=31015,
+)
+
+qcd_ht1000to1200 = qcd.add_process(
+    name="qcd_ht1000to1200",
+    id=31016,
+)
+
+qcd_ht1200to1500 = qcd.add_process(
+    name="qcd_ht1200to1500",
+    id=31017,
 )
 
 #
