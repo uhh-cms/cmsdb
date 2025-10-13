@@ -73,7 +73,7 @@ __all__ = [  # noqa: F822
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
     "z_qq_1j_pt100to200", "z_qq_2j_pt100to200", "z_qq_1j_pt200to400", "z_qq_2j_pt200to400",
     "z_qq_1j_pt400to600", "z_qq_2j_pt400to600", "z_qq_1j_pt600toinf", "z_qq_2j_pt600toinf",
-    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf",
+    "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf", "z_vbf_zqq",
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
@@ -83,16 +83,19 @@ __all__ = [  # noqa: F822
     "w_lnu_1j", "w_lnu_1j_pt0to40", "w_lnu_1j_pt40to100", "w_lnu_1j_pt100to200", "w_lnu_1j_pt200to400",
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt0to40", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
-    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j",
-    "w_vbf", "w_vbf_wlnu",
+    "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf", "w_lnu_ge3j", "w_lnu_3j", "w_lnu_4j",
+    "w_vbf", "w_vbf_wlnu", "w_vbf_wqq",
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
-    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
+    "zz_zee_zee", "zz_zee_zmm", "zz_zee_ztt", "zz_zmm_zmm", "zz_zmm_ztt", "zz_ztt_ztt",
+    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wqq_zqq", "wz_wlnu_zqq",
+    "wzg", "wzg_wlnu",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
+    "ww_wenu_wenu", "ww_wenu_wmnu", "ww_wenu_wtnu", "ww_wmnu_wmnu", "ww_wmnu_wtnu", "ww_wtnu_wtnu",
     "vvv",
     "zzz", "wzz", "wwz", "www",
 ]
@@ -1630,6 +1633,16 @@ z_vbf_zll_m50toinf = z_vbf_zll.add_process(
     },
 )
 
+z_vbf_zqq = z_vbf.add_process(
+    name="z_vbf_zqq",
+    id=55314,
+    label=r"Z $\rightarrow qq$ (VBF)",
+    xsecs={
+        # XSDB (Run3Summer22)
+        13.6: Number(13.67, {"tot": 0.005891}),
+    },
+)
+
 #
 # W boson
 #
@@ -1810,6 +1823,32 @@ w_lnu_2j = w_lnu.add_process(
     },
 )
 
+w_lnu_3j = w_lnu.add_process(
+    name="w_lnu_3j",
+    id=610040,
+    label=rf"{w_lnu.label[:-1]}, 3j)",
+    aux={
+        "njets": (3, 4),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) LO x 13 TeV k-factor..
+        13.6: Number(864.6, {"tot": 2.634}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+)
+
+w_lnu_4j = w_lnu.add_process(
+    name="w_lnu_4j",
+    id=610041,
+    label=rf"{w_lnu.label[:-1]}, 4j)",
+    aux={
+        "njets": (4, 5),
+    },
+    xsecs={
+        # XSDB (Run3Summer24) LO x 13 TeV k-factor..
+        13.6: Number(417.8, {"tot": 1.283}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+)
+
 w_lnu_1j_pt0to40 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt0to40",
     id=6100100,  # FIXME: come up with better id
@@ -1957,6 +1996,15 @@ w_vbf_wlnu = w_vbf.add_process(
 
 w_vbf.set_xsec(13.6, w_vbf_wlnu.get_xsec(13.6) / const.br_w.lep)
 
+w_vbf_wqq = w_vbf.add_process(
+    name="w_vbf_wqq",
+    id=6311,
+    label=r"W $\rightarrow q\bar{q}$ (VBF)",
+    xsecs={
+        13.6: w_vbf.get_xsec(13.6) * const.br_w.had,
+    },
+)
+
 #
 # EWK radiations
 # TODO: EWK is inaccurate, use dedicated z_vbf and w_vbf processes instead
@@ -2057,6 +2105,42 @@ zz_znunu_zqq = zz.add_process(
     xsecs=multiply_xsecs(zz, const.br_zz.qqnunu),
 )
 
+zz_zee_zee = zz.add_process(
+    name="zz_zee_zee",
+    id=8160,
+    xsecs=multiply_xsecs(zz, const.br_zz.eeee),
+)
+
+zz_zee_zmm = zz.add_process(
+    name="zz_zee_zmm",
+    id=8161,
+    xsecs=multiply_xsecs(zz, const.br_zz.eemm),
+)
+
+zz_zee_ztt = zz.add_process(
+    name="zz_zee_ztt",
+    id=8162,
+    xsecs=multiply_xsecs(zz, const.br_zz.eett),
+)
+
+zz_zmm_zmm = zz.add_process(
+    name="zz_zmm_zmm",
+    id=8163,
+    xsecs=multiply_xsecs(zz, const.br_zz.mmmm),
+)
+
+zz_zmm_ztt = zz.add_process(
+    name="zz_zmm_ztt",
+    id=8164,
+    xsecs=multiply_xsecs(zz, const.br_zz.mmtt),
+)
+
+zz_ztt_ztt = zz.add_process(
+    name="zz_ztt_ztt",
+    id=8165,
+    xsecs=multiply_xsecs(zz, const.br_zz.tttt),
+)
+
 # WZ xsec values at NLO from https://arxiv.org/pdf/1105.0020.pdf v1
 wp_z_xsec = {
     13: Number(28.55, {"scale": (0.041j, 0.032j)}),
@@ -2087,15 +2171,20 @@ wz = vv.add_process(
 wz_wlnu_zll = wz.add_process(
     name="wz_wlnu_zll",
     id=8210,
-    xsecs=multiply_xsecs(zz, const.br_w.lep * const.br_z.clep),
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.clep),
 )
 
 wz_wqq_zll = wz.add_process(
     name="wz_wqq_zll",
     id=8220,
-    xsecs=multiply_xsecs(zz, const.br_w.had * const.br_z.clep),
+    xsecs=multiply_xsecs(wz, const.br_w.had * const.br_z.clep),
 )
 
+wz_wqq_zqq = wz.add_process(
+    name="wz_wqq_zqq",
+    id=8240,
+    xsecs=multiply_xsecs(wz, const.br_w.had * const.br_z.qq),
+)
 
 # no additional cut found in generator card in MCM:
 # dataset: /WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2/MINIAODSIM  # noqa
@@ -2106,8 +2195,25 @@ wz_wqq_zll = wz.add_process(
 wz_wlnu_zqq = wz.add_process(
     name="wz_wlnu_zqq",
     id=8230,
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.qq),
+)
+
+# wz + photon
+wzg = Process(
+    name="wzg",
+    id=9500,
+    label=r"WZ + $\gamma$",
+)
+
+wzg_wlnu = wzg.add_process(
+    name="wzg_wlnu",
+    id=9501,
+    label=r"$W(\rightarrow \ell\nu)Z + \gamma$",
     xsecs={
-        13: wz.get_xsec(13) * const.br_w.lep * const.br_z.qq,  # value around 10.65
+        # XSDB (Run3Summer22)
+        13.6: Number(0.08425, {
+            "tot": 4.238e-05,
+        }),
     },
 )
 
@@ -2175,6 +2281,41 @@ ww_fh = ww.add_process(
     },
 )
 
+ww_wenu_wenu = ww_dl.add_process(
+    name="ww_wenu_wenu",
+    id=8311,
+    xsecs=multiply_xsecs(ww, const.br_ww.enuenu),
+)
+
+ww_wenu_wmnu = ww_dl.add_process(
+    name="ww_wenu_wmnu",
+    id=8312,
+    xsecs=multiply_xsecs(ww, const.br_ww.enumnu),
+)
+
+ww_wenu_wtnu = ww_dl.add_process(
+    name="ww_wenu_wtnu",
+    id=8313,
+    xsecs=multiply_xsecs(ww, const.br_ww.enutnu),
+)
+
+ww_wmnu_wmnu = ww_dl.add_process(
+    name="ww_wmnu_wmnu",
+    id=8314,
+    xsecs=multiply_xsecs(ww, const.br_ww.mnumnu),
+)
+
+ww_wmnu_wtnu = ww_dl.add_process(
+    name="ww_wmnu_wtnu",
+    id=8315,
+    xsecs=multiply_xsecs(ww, const.br_ww.mnutnu),
+)
+
+ww_wtnu_wtnu = ww_dl.add_process(
+    name="ww_wtnu_wtnu",
+    id=8316,
+    xsecs=multiply_xsecs(ww, const.br_ww.tnutnu),
+)
 
 #
 # Triple-boson
