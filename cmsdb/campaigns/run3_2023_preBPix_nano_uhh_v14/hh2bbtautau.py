@@ -177,7 +177,24 @@ cpn.add_dataset(
     },
 )
 
-# TODO: k2v0 sample still being centrally processed
+# TODO: add missing information from this dataset
+# also, copy over to correct file system
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kv1_k2v0_kl1_madgraph",
+    id=9917283,  # placeholder ID until official dataset is available
+    processes=[procs.hh_vbf_hbb_htt_kv1_k2v0_kl1],
+    keys=[
+
+        "/VBFHHto2B2Tau_CV_1_C2V_0_C3_1_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23MiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_v15-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=7,
+    n_events=-1,
+    aux={
+        "merging_factors": {
+            "nominal": -1,
+        },
+    },
+)
 
 cpn.add_dataset(
     name="hh_vbf_hbb_htt_kv1p74_k2v1p37_kl14p4_madgraph",
