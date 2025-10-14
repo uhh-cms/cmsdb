@@ -15,6 +15,10 @@ __all__ = [  # noqa: F822
     "hhh_4b2tau_c319_d419", "hhh_4b2tau_c31_d40", "hhh_4b2tau_c31_d42",
     "hhh_4b2tau_c32_d4m1", "hhh_4b2tau_c34_d49", "hhh_4b2tau_c3m1_d40",
     "hhh_4b2tau_c3m1_d4m1", "hhh_4b2tau_c3m1p5_d4m0p5",
+    "hhh_4b2w2l2nu_c30_d40", "hhh_4b2w2l2nu_c30_d499", "hhh_4b2w2l2nu_c30_d4m1",
+    "hhh_4b2w2l2nu_c319_d419", "hhh_4b2w2l2nu_c31_d40", "hhh_4b2w2l2nu_c31_d42",
+    "hhh_4b2w2l2nu_c32_d4m1", "hhh_4b2w2l2nu_c34_d49", "hhh_4b2w2l2nu_c3m1_d40",
+    "hhh_4b2w2l2nu_c3m1_d4m1", "hhh_4b2w2l2nu_c3m1p5_d4m0p5",
 ]
 
 
@@ -98,6 +102,12 @@ subdecay_dict = DotDict.wrap({
         "id": 100,
         "label": r"$\rightarrow 4b2\tau$",
     },
+    "4b2w2l2nu": {
+        "name": "4b2w2l2nu",
+        "br": 3 * const.br_h.ww * const.br_h.bb**2 * const.br_ww.dl,
+        "id": 200,
+        "label": r"$\rightarrow 4b2w$",
+    },
 })
 
 coupling_combinations = DotDict.wrap({
@@ -169,21 +179,20 @@ coupling_combinations = DotDict.wrap({
     },
 })
 
-for decay_name, decay_dict in subdecay_dict.items():
-    for coupling_comb, coupling_dict in coupling_combinations.items():
-        name = f"hhh_{coupling_dict.name}"
+for coupling_comb, coupling_dict in coupling_combinations.items():
+    name = f"hhh_{coupling_dict.name}"
+    c3 = coupling_dict.c3
+    d4 = coupling_dict.d4
+    locals().update({
+        name: hhh_ggf.add_process(
+            name=name,
+            id=hhh_ggf.id + coupling_dict.id,
+            label=f"{hhh_ggf.label} $(c_{{3}}={c3}, d_{{4}}={d4})$",
+            xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)),
+        ),
+    })
+    for decay_name, decay_dict in subdecay_dict.items():
         subdecay_name = f"hhh_{decay_dict.name}_{coupling_dict.name}"
-        c3 = coupling_dict.c3
-        d4 = coupling_dict.d4
-
-        locals().update({
-            name: hhh_ggf.add_process(
-                name=name,
-                id=hhh_ggf.id + coupling_dict.id,
-                label=f"{hhh_ggf.label} $(c_{{3}}={c3}, d_{{4}}={d4})$",
-                xsecs=multiply_xsecs(hhh_ggf, xs_scaler(c3=c3, d4=d4)),
-            ),
-        })
 
         tmp = locals().get(name)
         locals().update({
