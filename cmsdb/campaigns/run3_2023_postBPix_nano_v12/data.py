@@ -165,7 +165,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "D",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -181,5 +181,5 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "D",
-    }
+    },
 )
