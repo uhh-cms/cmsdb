@@ -124,6 +124,28 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="zh_zll_hbb_powheg",
+    id=15370480,
+    processes=[procs.zh_zll_hbb],
+    keys=[
+        "/ZH-Zto2L-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=32,
+    n_events=960_506,
+)
+
+cpn.add_dataset(
+    name="zh_zqq_hbb_powheg",
+    id=15382483,
+    processes=[procs.zh_zqq_hbb],
+    keys=[
+        "/ZH-Zto2Q-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=23,
+    n_events=2_877_591,
+)
+
+cpn.add_dataset(
     name="zh_gg_zll_hbb_powheg",
     id=15315686,
     processes=[procs.zh_gg_zll_hbb],
