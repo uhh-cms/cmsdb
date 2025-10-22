@@ -91,6 +91,50 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="wmh_wlnu_hbb_powheg",
+    id=15330078,
+    processes=[procs.wmh_wlnu_hbb],
+    keys=[
+        "/WminusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=20,
+    n_events=1_976_960,
+)
+
+cpn.add_dataset(
+    name="wph_wlnu_hbb_powheg",
+    id=15321740,
+    processes=[procs.wph_wlnu_hbb],
+    keys=[
+        "/WplusH-WtoLNu-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=28,
+    n_events=3_068_881,
+)
+
+cpn.add_dataset(
+    name="wmh_wqq_hbb_powheg",
+    id=15341180,
+    processes=[procs.wmh_wqq_hbb],
+    keys=[
+        "/WminusH-Wto2Q-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=13,
+    n_events=3_966_909,
+)
+
+cpn.add_dataset(
+    name="wph_wqq_hbb_powheg",
+    id=15325013,
+    processes=[procs.wph_wqq_hbb],
+    keys=[
+        "/WplusH-Wto2Q-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=30,
+    n_events=6_261_825,
+)
+
+cpn.add_dataset(
     name="wph_htt_powheg",
     id=15383312,
     processes=[procs.wph_htt],
