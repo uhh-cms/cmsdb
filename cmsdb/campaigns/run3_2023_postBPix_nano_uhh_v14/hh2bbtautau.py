@@ -20,11 +20,11 @@ cpn.add_dataset(
     keys=[
         "/GluGlutoHHto2B2Tau_kl-1p00_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
     ],
-    n_files=3,
+    n_files=4,
     n_events=1_331_688,
     aux={
         "merging_factors": {
-            "nominal": 42,
+            "nominal": 31,
         },
     },
 )

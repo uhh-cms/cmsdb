@@ -22,12 +22,12 @@ cpn.add_dataset(
         "/SingleMuon/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
         "/Muon/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=16 + 89,
+    n_files=18 + 99,
     n_events=20_162_441 + 138_329_693,
     aux={
         "merging_factors": {
-            "nominal": 16,
-            "nominal_ext1": 20,
+            "nominal": 14,
+            "nominal_ext1": 18,
         },
         "era": "C",
         "jec_era": "RunCD",
@@ -42,11 +42,11 @@ cpn.add_dataset(
     keys=[
         "/Muon/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=56,
+    n_files=63,
     n_events=75_440_027,
     aux={
         "merging_factors": {
-            "nominal": 18,
+            "nominal": 16,
         },
         "era": "D",
         "jec_era": "RunCD",
@@ -108,11 +108,11 @@ cpn.add_dataset(
     keys=[
         "/EGamma/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=187,
+    n_files=210,
     n_events=263_549_470,
     aux={
         "merging_factors": {
-            "nominal": 18,
+            "nominal": 16,
         },
         "era": "C",
         "jec_era": "RunCD",
@@ -127,11 +127,11 @@ cpn.add_dataset(
     keys=[
         "/EGamma/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=82,
+    n_files=87,
     n_events=89_134_996,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 14,
         },
         "era": "D",
         "jec_era": "RunCD",
@@ -150,11 +150,11 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=25,
+    n_files=27,
     n_events=25_903_135,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 14,
         },
         "era": "C",
         "jec_era": "RunCD",
@@ -169,11 +169,11 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=17,
+    n_files=18,
     n_events=16_686_692,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 14,
         },
         "era": "D",
         "jec_era": "RunCD",
