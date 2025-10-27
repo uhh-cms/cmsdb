@@ -105,6 +105,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
+from cmsdb.processes.stitched_xsecs import get_stitched_dy_m50toinf_xsec, get_stitched_w_lnu_xsec
 from cmsdb.util import multiply_xsecs
 
 
@@ -1178,6 +1179,9 @@ dy_tautau_m10to50 = dy_tautau.add_process(
 dy_tautau_m50toinf = dy_tautau.add_process(
     name="dy_tautau_m50toinf",
     id=51632,
+    xsecs={
+        13.6: get_stitched_dy_m50toinf_xsec(13.6, "dy_tautau_m50toinf*"),
+    },
     aux={
         "lep_id": 15,
         "mll": (50.0, const.inf),
@@ -1330,6 +1334,9 @@ dy_tautau_m_corr_13p6 = (
 for proc in dy_tautau_m_procs:
     proc.xsecs[13.6] *= dy_tautau_m_corr_13p6
 
+# helper to insert stitched xsec info
+get_dy_ll_m50toinf_xsec_13p6 = lambda *name: {"xsecs": {13.6: get_stitched_dy_m50toinf_xsec(13.6, *name)}}
+
 # lepton decays, with jet multiplicity bins, and optionally also pt bins
 dy_ll_m_id = 51660
 for ll, lid, split_filtered in [("ee", 11, False), ("mumu", 13, False), ("tautau", 15, True)]:
@@ -1341,9 +1348,10 @@ for ll, lid, split_filtered in [("ee", 11, False), ("mumu", 13, False), ("tautau
         ("2j", (2, 3), True),
         ("ge3j", (3, const.inf), False),
     ]:
-        dy_ll_m_nj = locals()[f"dy_{ll}_m50toinf_{nj}"] = dy_ll_m.add_process(
-            name=f"dy_{ll}_m50toinf_{nj}",
+        dy_ll_m_nj = locals()[n] = dy_ll_m.add_process(
+            name=(n := f"dy_{ll}_m50toinf_{nj}"),
             id=(dy_ll_m_id := dy_ll_m_id + 1),
+            **(get_dy_ll_m50toinf_xsec_13p6(n + "*")),
             aux={
                 "lep_id": lid,
                 "mll": (50.0, const.inf),
@@ -1354,9 +1362,10 @@ for ll, lid, split_filtered in [("ee", 11, False), ("mumu", 13, False), ("tautau
         # split into filtered / nonfiltered
         if split_filtered:
             for fname in ["filtered", "nonfiltered"]:
-                locals()[f"dy_{ll}_m50toinf_{nj}_{fname}"] = dy_ll_m_nj.add_process(
-                    name=f"dy_{ll}_m50toinf_{nj}_{fname}",
+                locals()[n] = dy_ll_m_nj.add_process(
+                    name=(n := f"dy_{ll}_m50toinf_{nj}_{fname}"),
                     id=(dy_ll_m_id := dy_ll_m_id + 1),
+                    **(get_dy_ll_m50toinf_xsec_13p6(n + "*")),
                     aux={
                         "lep_id": lid,
                         "mll": (50.0, const.inf),
@@ -1374,9 +1383,10 @@ for ll, lid, split_filtered in [("ee", 11, False), ("mumu", 13, False), ("tautau
                 ("400to600", (400.0, 600.0)),
                 ("600toinf", (600.0, const.inf)),
             ]:
-                dy_ll_m_nj_pt = locals()[f"dy_{ll}_m50toinf_{nj}_pt{pt}"] = dy_ll_m_nj.add_process(
-                    name=f"dy_{ll}_m50toinf_{nj}_pt{pt}",
+                dy_ll_m_nj_pt = locals()[n] = dy_ll_m_nj.add_process(
+                    name=(n := f"dy_{ll}_m50toinf_{nj}_pt{pt}"),
                     id=(dy_ll_m_id := dy_ll_m_id + 1),
+                    **(get_dy_ll_m50toinf_xsec_13p6(n + "*")),
                     aux={
                         "lep_id": lid,
                         "mll": (50.0, const.inf),
@@ -1800,6 +1810,9 @@ w_lnu_0j = w_lnu.add_process(
     name="w_lnu_0j",
     id=610000,
     label=rf"{w_lnu.label[:-1]}, 0j)",
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_0j*"),
+    },
     aux={
         "njets": (0, 1),
     },
@@ -1809,6 +1822,9 @@ w_lnu_1j = w_lnu.add_process(
     name="w_lnu_1j",
     id=610010,
     label=rf"{w_lnu.label[:-1]}, 1j)",
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_1j*"),
+    },
     aux={
         "njets": (1, 2),
     },
@@ -1818,6 +1834,9 @@ w_lnu_2j = w_lnu.add_process(
     name="w_lnu_2j",
     id=610020,
     label=rf"{w_lnu.label[:-1]}, 2j)",
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_2j*"),
+    },
     aux={
         "njets": (2, 3),
     },
@@ -1827,12 +1846,12 @@ w_lnu_3j = w_lnu.add_process(
     name="w_lnu_3j",
     id=610040,
     label=rf"{w_lnu.label[:-1]}, 3j)",
-    aux={
-        "njets": (3, 4),
-    },
     xsecs={
         # XSDB (Run3Summer24) LO x 13 TeV k-factor..
         13.6: Number(864.6, {"tot": 2.634}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+    aux={
+        "njets": (3, 4),
     },
 )
 
@@ -1840,19 +1859,22 @@ w_lnu_4j = w_lnu.add_process(
     name="w_lnu_4j",
     id=610041,
     label=rf"{w_lnu.label[:-1]}, 4j)",
-    aux={
-        "njets": (4, 5),
-    },
     xsecs={
         # XSDB (Run3Summer24) LO x 13 TeV k-factor..
         13.6: Number(417.8, {"tot": 1.283}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
+    aux={
+        "njets": (4, 5),
     },
 )
 
 w_lnu_1j_pt0to40 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt0to40",
-    id=6100100,  # FIXME: come up with better id
+    id=6100100,
     label=w_lnu_1j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_1j_pt0to40*"),
+    },
     aux={
         "njets": (1, 2),
         "ptll": (0.0, 40.0),
@@ -1863,6 +1885,9 @@ w_lnu_1j_pt40to100 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt40to100",
     id=610011,
     label=w_lnu_1j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_1j_pt40to100*"),
+    },
     aux={
         "njets": (1, 2),
         "ptll": (40.0, 100.0),
@@ -1873,6 +1898,9 @@ w_lnu_1j_pt100to200 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt100to200",
     id=610012,
     label=w_lnu_1j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_1j_pt100to200*"),
+    },
     aux={
         "njets": (1, 2),
         "ptll": (100.0, 200.0),
@@ -1883,6 +1911,9 @@ w_lnu_1j_pt200to400 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt200to400",
     id=610013,
     label=w_lnu_1j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_1j_pt200to400*"),
+    },
     aux={
         "njets": (1, 2),
         "ptll": (200.0, 400.0),
@@ -1893,6 +1924,9 @@ w_lnu_1j_pt400to600 = w_lnu_1j.add_process(
     name="w_lnu_1j_pt400to600",
     id=610014,
     label=w_lnu_1j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_1j_pt400to600*"),
+    },
     aux={
         "njets": (1, 2),
         "ptll": (400.0, 600.0),
@@ -1903,6 +1937,9 @@ w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
     name="w_lnu_1j_pt600toinf",
     id=610015,
     label=w_lnu_1j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_1j_pt600toinf*"),
+    },
     aux={
         "njets": (1, 2),
         "ptll": (600.0, const.inf),
@@ -1911,8 +1948,11 @@ w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
 
 w_lnu_2j_pt0to40 = w_lnu_2j.add_process(
     name="w_lnu_2j_pt0to40",
-    id=6100200,  # FIXME: come up with better id
+    id=6100200,
     label=w_lnu_2j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_2j_pt0to40*"),
+    },
     aux={
         "njets": (2, 3),
         "ptll": (0.0, 40.0),
@@ -1923,6 +1963,9 @@ w_lnu_2j_pt40to100 = w_lnu_2j.add_process(
     name="w_lnu_2j_pt40to100",
     id=610021,
     label=w_lnu_2j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_2j_pt40to100*"),
+    },
     aux={
         "njets": (2, 3),
         "ptll": (40.0, 100.0),
@@ -1933,6 +1976,9 @@ w_lnu_2j_pt100to200 = w_lnu_2j.add_process(
     name="w_lnu_2j_pt100to200",
     id=610022,
     label=w_lnu_2j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_2j_pt100to200*"),
+    },
     aux={
         "njets": (2, 3),
         "ptll": (100.0, 200.0),
@@ -1943,6 +1989,9 @@ w_lnu_2j_pt200to400 = w_lnu_2j.add_process(
     name="w_lnu_2j_pt200to400",
     id=610023,
     label=w_lnu_2j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_2j_pt200to400*"),
+    },
     aux={
         "njets": (2, 3),
         "ptll": (200.0, 400.0),
@@ -1953,6 +2002,9 @@ w_lnu_2j_pt400to600 = w_lnu_2j.add_process(
     name="w_lnu_2j_pt400to600",
     id=610024,
     label=w_lnu_2j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_2j_pt400to600*"),
+    },
     aux={
         "njets": (2, 3),
         "ptll": (400.0, 600.0),
@@ -1963,6 +2015,9 @@ w_lnu_2j_pt600toinf = w_lnu_2j.add_process(
     name="w_lnu_2j_pt600toinf",
     id=610025,
     label=w_lnu_2j.label,
+    xsecs={
+        13.6: get_stitched_w_lnu_xsec(13.6, "w_lnu_2j_pt600toinf*"),
+    },
     aux={
         "njets": (2, 3),
         "ptll": (600.0, const.inf),

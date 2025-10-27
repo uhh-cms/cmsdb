@@ -122,6 +122,33 @@ cpn.add_dataset(
     n_events=9_801_431,
 )
 
+# tau filtered, inclusive and in jet bins
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_amcatnlo",
+    id=15401531,
+    processes=[procs.dy_tautau_m50toinf],
+    keys=[
+        "/DYto2Tau-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v7/NANOAODSIM",  # noqa
+    ],
+    n_files=1_837,
+    n_events=349_164_447,
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_0j_amcatnlo",
+    id=15411600,
+    processes=[procs.dy_tautau_m50toinf_0j],
+    keys=[
+        "/DYto2Tau-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=2_666,
+    n_events=493_132_017,
+)
+
+# 1j missing: https://cms-pdmv-prod.web.cern.ch/grasp/samples?dataset_query=DYto2Tau-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8&campaign=Phase2Spring23*GS,Run3Summer22*GS,Run3Summer23*GS,Run3Winter22*GS,Run3Winter23*GS,Run3Winter24*GS,Run3Winter25*GS,RunIII2024Summer24*GS,RunIISummer20UL16*GEN,RunIISummer20UL16*GENAPV,RunIISummer20UL17*GEN,RunIISummer20UL18*GEN # noqa
+# 2j missing: not requested yet?
+
+
 #
 # Drell-Yan, powheg
 #
@@ -459,21 +486,6 @@ cpn.add_dataset(
     n_events=992_190,
 )
 
-# 2 tau, n jet bins
-cpn.add_dataset(
-    name="dy_tautau_m50toinf_0j_amcatnlo",
-    id=15411600,
-    processes=[procs.dy_tautau_m50toinf_0j],
-    keys=[
-        "/DYto2Tau-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
-    ],
-    n_files=2_666,
-    n_events=493_132_017,
-)
-
-# 1j missing
-# 2j missing
-
 #
 # W boson production
 #
@@ -677,17 +689,16 @@ cpn.add_dataset(
     n_events=13_834_407,
 )
 
-# invalid
-# cpn.add_dataset(
-#     name="z_vbf_zll_m50toinf_madgraph",
-#     id=15304452,
-#     processes=[procs.z_vbf_zll_m50toinf],
-#     keys=[
-#         "/VBFto2L_Bin-MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
-#     ],
-#     n_files=0,
-#     n_events=0,
-# )
+cpn.add_dataset(
+    name="z_vbf_zll_m50toinf_madgraph",
+    id=15407645,
+    processes=[procs.z_vbf_zll_m50toinf],
+    keys=[
+        "/VBFto2L_Bin-MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=395,
+    n_events=41_993_000,
+)
 
 #
 # Di-boson
