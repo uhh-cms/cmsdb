@@ -24,6 +24,18 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="h_ggf_hbb_powheg",
+    id=15315620,
+    processes=[procs.h_ggf_hbb],
+    keys=[
+        "/GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+        "/GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=36 + 188,
+    n_events=9_874_198 + 19_933_636,
+)
+
+cpn.add_dataset(
     name="h_ggf_hww2l2nu_powheg",
     id=15349216,
     processes=[procs.h_ggf_hww2l2nu],

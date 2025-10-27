@@ -583,17 +583,28 @@ cpn.add_dataset(
     ),
 )
 
-# missing
-# cpn.add_dataset(
-#     name="st_schannel_t_lep_4f_amcatnlo",
-#     ...
-# )
+cpn.add_dataset(
+    name="st_schannel_t_lep_4f_amcatnlo",
+    id=15436558,
+    processes=[procs.st_schannel_t_lep],
+    keys=[
+        "/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=94,
+    n_events=12_999_000,
+)
 
-# missing
-# cpn.add_dataset(
-#     name="st_schannel_tbar_lep_4f_amcatnlo",
-#     ...
-# )
+cpn.add_dataset(
+    name="st_schannel_tbar_lep_4f_amcatnlo",
+    id=15436986,
+    processes=[procs.st_schannel_tbar_lep],
+    keys=[
+        "/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=68,
+    n_events=7_980_999,
+)
+
 
 #
 # 4 top
