@@ -22,12 +22,12 @@ cpn.add_dataset(
         "/Muon0/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
         "/Muon1/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=82 + 84,
+    n_files=92 + 94,
     n_events=100_211_533 + 100_281_976,
     aux={
         "merging_factors": {
-            "nominal": 19,
-            "nominal_ext1": 18,
+            "nominal": 17,
+            "nominal_ext1": 16,
         },
         "era": "D",
     },
@@ -42,12 +42,12 @@ cpn.add_dataset(
         "/Muon0/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
         "/Muon1/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=19 + 19,
+    n_files=21 + 20,
     n_events=21_462_916 + 21_463_645,
     aux={
         "merging_factors": {
-            "nominal": 20,
-            "nominal_ext1": 19,
+            "nominal": 18,
+            "nominal_ext1": 18,
         },
         "era": "D",
     },
@@ -83,11 +83,11 @@ cpn.add_dataset(
     keys=[
         "/MuonEG/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=5,
+    n_files=6,
     n_events=3_751_587,
     aux={
         "merging_factors": {
-            "nominal": 14,
+            "nominal": 12,
         },
         "era": "D",
     },
@@ -106,12 +106,12 @@ cpn.add_dataset(
         "/EGamma0/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
         "/EGamma1/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=106 + 113,
+    n_files=122 + 121,
     n_events=105_892_646 + 105_850_543,
     aux={
         "merging_factors": {
-            "nominal": 16,
-            "nominal_ext1": 15,
+            "nominal": 14,
+            "nominal_ext1": 14,
         },
         "era": "D",
     },
@@ -126,12 +126,12 @@ cpn.add_dataset(
         "/EGamma0/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
         "/EGamma1/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=25 + 25,
+    n_files=27 + 27,
     n_events=22_657_211 + 22_653_287,
     aux={
         "merging_factors": {
-            "nominal": 16,
-            "nominal_ext1": 16,
+            "nominal": 15,
+            "nominal_ext1": 15,
         },
         "era": "D",
     },
@@ -149,11 +149,11 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=39,
+    n_files=42,
     n_events=32_092_659,
     aux={
         "merging_factors": {
-            "nominal": 14,
+            "nominal": 13,
         },
         "era": "D",
     },
@@ -167,11 +167,11 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
     ],
-    n_files=9,
+    n_files=10,
     n_events=7_246_202,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 13,
         },
         "era": "D",
     },
@@ -218,5 +218,73 @@ cpn.add_dataset(
             "nominal_ext1": 15,
         },
         "era": "D",
+    },
+)
+
+#
+# VBF parking
+#
+
+cpn.add_dataset(
+    name="data_parking_vbf_d1",
+    id=14826079,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF1/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF2/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF3/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF4/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF5/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF6/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF7/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=78 + 79 + 77 + 77 + 77 + 78 + 77 + 78,  # 0 + 1 + 0 + 0 + 0 + 0 + 0 + 0 skipped
+    n_events=65_139_138 + 65_244_498 + 65_300_193 + 65_137_849 + 65_139_877 + 65_275_863 + 65_248_479 + 65_244_286,  # 0 + 56_714 + 0 + 0 + 0 + 0 + 0 + 0 skipped # noqa
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+            "nominal_ext1": 14,
+            "nominal_ext2": 14,
+            "nominal_ext3": 14,
+            "nominal_ext4": 14,
+            "nominal_ext5": 14,
+            "nominal_ext6": 14,
+            "nominal_ext7": 14,
+        },
+        "era": "VBF",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_d2",
+    id=14826114,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF1/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF2/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF3/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF4/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF5/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF6/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+        "/ParkingVBF7/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=18 + 18 + 18 + 18 + 18 + 18 + 18 + 18,
+    n_events=13_845_112 + 13_874_062 + 13_872_438 + 13_871_931 + 13_872_999 + 13_873_320 + 13_872_756 + 13_873_107,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+            "nominal_ext1": 14,
+            "nominal_ext2": 14,
+            "nominal_ext3": 14,
+            "nominal_ext4": 14,
+            "nominal_ext5": 14,
+            "nominal_ext6": 14,
+            "nominal_ext7": 14,
+        },
+        "era": "VBF",
     },
 )
