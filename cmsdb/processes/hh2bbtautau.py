@@ -11,8 +11,8 @@ For graviton vbf, the IDs are the range 26100-26199. As of 11.06.24, they go up 
 """
 
 __all__ = [
-    "hh_ggf_hbb_htt_kl1_kt1", "hh_ggf_hbb_htt_kl0_kt1", "hh_ggf_hbb_htt_kl0_kt1_c21",
-    "hh_ggf_hbb_htt_kl1_kt1_c20p10", "hh_ggf_hbb_htt_kl1_kt1_c20p35", "hh_ggf_hbb_htt_kl1_kt1_c23",
+    "hh_ggf_hbb_htt_kl1_kt1", "hh_ggf_hbb_htt_kl0_kt1", "hh_ggf_hbb_htt_kl0_kt1_c21", "hh_ggf_hbb_htt_kl1_kt1_c21",
+    "hh_ggf_hbb_htt_kl1_kt1_c20p1", "hh_ggf_hbb_htt_kl1_kt1_c20p35", "hh_ggf_hbb_htt_kl1_kt1_c23",
     "hh_ggf_hbb_htt_kl1_kt1_c2m2", "hh_ggf_hbb_htt_kl2p45_kt1", "hh_ggf_hbb_htt_kl5_kt1",
     "hh_ggf_hbb_htt_node1", "hh_ggf_hbb_htt_node2", "hh_ggf_hbb_htt_node3",
     "hh_ggf_hbb_htt_node4", "hh_ggf_hbb_htt_node5", "hh_ggf_hbb_htt_node6",
@@ -84,16 +84,15 @@ __all__ = [
 import cmsdb.constants as const
 
 from cmsdb.processes.hh import (
-    hh_ggf, radion_hh_ggf, graviton_hh_ggf, hh_vbf, radion_hh_vbf, graviton_hh_vbf,
-    hh_ggf_kl1_kt1, hh_ggf_kl0_kt1, hh_ggf_kl0_kt1_c21,
-    hh_ggf_kl1_kt1_c20p10, hh_ggf_kl1_kt1_c20p35, hh_ggf_kl1_kt1_c23,
-    hh_ggf_kl1_kt1_c2m2, hh_ggf_kl2p45_kt1, hh_ggf_kl5_kt1,
-    hh_vbf_kv1_k2v1_kl1, hh_vbf_kv1_k2v0_kl1, hh_vbf_kv1_k2v1_kl2,
-    hh_vbf_kv1_k2v2_kl1, hh_vbf_kv1p74_k2v1p37_kl14p4,
-    hh_vbf_kvm0p012_k2v0p03_kl10p2, hh_vbf_kvm0p758_k2v1p44_klm19p3,
-    hh_vbf_kvm0p962_k2v0p959_klm1p43, hh_vbf_kvm1p21_k2v1p94_klm0p94,
-    hh_vbf_kvm1p6_k2v2p72_klm1p36, hh_vbf_kvm1p83_k2v3p57_klm3p39,
+    hh_ggf,
+    hh_ggf_kl1_kt1, hh_ggf_kl0_kt1, hh_ggf_kl2p45_kt1, hh_ggf_kl5_kt1,
+    hh_ggf_kl0_kt1_c21, hh_ggf_kl1_kt1_c21, hh_ggf_kl1_kt1_c20p1, hh_ggf_kl1_kt1_c20p35, hh_ggf_kl1_kt1_c23,
+    hh_ggf_kl1_kt1_c2m2,
+    hh_vbf_kv1_k2v1_kl1, hh_vbf_kv1_k2v0_kl1, hh_vbf_kv1_k2v1_kl2, hh_vbf_kv1_k2v2_kl1, hh_vbf_kv1p74_k2v1p37_kl14p4,
+    hh_vbf_kvm0p012_k2v0p03_kl10p2, hh_vbf_kvm0p758_k2v1p44_klm19p3, hh_vbf_kvm0p962_k2v0p959_klm1p43,
+    hh_vbf_kvm1p21_k2v1p94_klm0p94, hh_vbf_kvm1p6_k2v2p72_klm1p36, hh_vbf_kvm1p83_k2v3p57_klm3p39,
     hh_vbf_kv2p12_k2v3p87_klm5p96,
+    radion_hh_ggf, graviton_hh_ggf, hh_vbf, radion_hh_vbf, graviton_hh_vbf,
 )
 from cmsdb.xsec_bsm_nodes import calculate_xsec_node
 from cmsdb.util import multiply_xsecs
@@ -251,11 +250,11 @@ hh_ggf_hbb_htt_kl0_kt1_c21 = hh_ggf_kl0_kt1_c21.add_process(
     xsecs=multiply_xsecs(hh_ggf_kl0_kt1_c21, const.br_hh.bbtt),
 )
 
-hh_ggf_hbb_htt_kl1_kt1_c20p10 = hh_ggf_kl1_kt1_c20p10.add_process(
-    name="hh_ggf_hbb_htt_kl1_kt1_c20p10",
+hh_ggf_hbb_htt_kl1_kt1_c20p1 = hh_ggf_kl1_kt1_c20p1.add_process(
+    name="hh_ggf_hbb_htt_kl1_kt1_c20p1",
     id=21116,
     label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 1$, $\kappa_t = 1, C_2 = 0.1$)",
-    xsecs=multiply_xsecs(hh_ggf_kl1_kt1_c20p10, const.br_hh.bbtt),
+    xsecs=multiply_xsecs(hh_ggf_kl1_kt1_c20p1, const.br_hh.bbtt),
 )
 
 hh_ggf_hbb_htt_kl1_kt1_c20p35 = hh_ggf_kl1_kt1_c20p35.add_process(
@@ -277,6 +276,13 @@ hh_ggf_hbb_htt_kl1_kt1_c2m2 = hh_ggf_kl1_kt1_c2m2.add_process(
     id=21119,
     label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 1$, $\kappa_t = 1, C_2 = -2$)",
     xsecs=multiply_xsecs(hh_ggf_kl1_kt1_c2m2, const.br_hh.bbtt),
+)
+
+hh_ggf_hbb_htt_kl1_kt1_c21 = hh_ggf_kl1_kt1_c21.add_process(
+    name="hh_ggf_hbb_htt_kl1_kt1_c21",
+    id=21122,
+    label=r"$HH_{ggf} \rightarrow bb\tau\tau$ ($\kappa_{\lambda} = 1$, $\kappa_t = 1, C_2 = 1$)",
+    xsecs=multiply_xsecs(hh_ggf_kl1_kt1_c21, const.br_hh.bbtt),
 )
 
 hh_ggf_hbb_htt_kl2p45_kt1 = hh_ggf_kl2p45_kt1.add_process(
