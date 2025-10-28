@@ -864,10 +864,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+                "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
             ],
-            n_files=17,
-            n_events=294000,
+            n_files=7,
+            n_events=290000,
         ),
     ),
 )
@@ -878,17 +878,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+                "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
             ],
-            n_files=23,
+            n_files=7,
             n_events=400000,
-        ),
-        extension=DatasetInfo(
-            keys=[
-                "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6_ext1-v2/NANOAODSIM",  # noqa
-            ],
-            n_files=43,
-            n_events=3856000,
         ),
     ),
 )
