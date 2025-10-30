@@ -2365,7 +2365,7 @@ azh_htt_zll_a2100_h1100 = azh_htt_zll.add_process(
     xsecs={
         13: Number(0.1),
         13.6: Number(1),
-    },  
+    },
 )
 
 azh_htt_zll_a2100_h1200 = azh_htt_zll.add_process(
