@@ -955,7 +955,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_zee_zmmm_pythia",
+    name="zz_zee_zmm_pythia",
     id=15415905,
     processes=[procs.zz_zee_zmm],
     keys=[
