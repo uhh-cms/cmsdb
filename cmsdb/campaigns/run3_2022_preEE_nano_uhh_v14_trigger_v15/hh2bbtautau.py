@@ -20,11 +20,11 @@ cpn.add_dataset(
     keys=[
         "/GluGlutoHHto2B2Tau_kl-1p00_kt-1p00_c2-0p00_LHEweights_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=2,
+    n_files=3,
     n_events=913_840,
     aux={
         "merging_factors": {
-            "nominal": 59,
+            "nominal": 39,
         },
     },
 )
@@ -52,11 +52,11 @@ cpn.add_dataset(
     keys=[
         "/GluGlutoHHto2B2Tau_kl-2p45_kt-1p00_c2-0p00_LHEweights_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
     ],
-    n_files=2,
+    n_files=3,
     n_events=891_890,
     aux={
         "merging_factors": {
-            "nominal": 36,
+            "nominal": 24,
         },
     },
 )
