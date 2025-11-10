@@ -6,7 +6,7 @@ version 14, created with custom content at UHH.
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14_trg_v15 import campaign_run3_2023_preBPix_nano_uhh_v14_trg_v15 as cpn
+from cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14_trg_v15 import campaign_run3_2023_preBPix_nano_uhh_v14_trg_v15 as cpn  # noqa: E501
 
 
 #
