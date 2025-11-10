@@ -287,22 +287,6 @@ cpn.add_dataset(
     },
 )
 
-cpn.add_dataset(
-    name="ttz_znunu_amcatnlo",
-    id=14928724,
-    processes=[procs.ttz_znunu],
-    keys=[
-        "/TTNuNu_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=492_000,
-    aux={
-        "merging_factors": {
-            "nominal": 13,
-        },
-    },
-)
-
 #
 # ttbar + 2 vector boson
 #
@@ -827,26 +811,6 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 17,
-        },
-    },
-)
-
-#
-# 4 top
-#
-
-cpn.add_dataset(
-    name="tttt_amcatnlo",
-    id=14987007,
-    processes=[procs.tttt],
-    keys=[
-        "/TTTT_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=11,
-    n_events=2_477_775,
-    aux={
-        "merging_factors": {
-            "nominal": 15,
         },
     },
 )

@@ -178,50 +178,6 @@ cpn.add_dataset(
 )
 
 #
-# Jet/MET
-#
-
-cpn.add_dataset(
-    name="data_met_d1",
-    id=14787275,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/JetMET0/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
-        "/JetMET1/Run2023D-22Sep2023_v1_NanoAODv14UHH-v1/NANOAOD",
-    ],
-    n_files=76 + 77,
-    n_events=61_507_467 + 61_491_693,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-            "nominal_ext1": 14,
-        },
-        "era": "D",
-    },
-)
-
-cpn.add_dataset(
-    name="data_met_d2",
-    id=14787322,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/JetMET0/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
-        "/JetMET1/Run2023D-22Sep2023_v2_NanoAODv14UHH-v1/NANOAOD",
-    ],
-    n_files=17 + 17,
-    n_events=13_254_510 + 13_252_102,
-    aux={
-        "merging_factors": {
-            "nominal": 15,
-            "nominal_ext1": 15,
-        },
-        "era": "D",
-    },
-)
-
-#
 # VBF parking
 #
 

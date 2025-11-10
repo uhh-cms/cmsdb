@@ -54,49 +54,6 @@ cpn.add_dataset(
 )
 
 #
-# MuonEG
-#
-
-cpn.add_dataset(
-    name="data_muoneg_c",
-    id=14784124,
-    is_data=True,
-    processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
-    ],
-    n_files=16,
-    n_events=15_768_439,
-    aux={
-        "merging_factors": {
-            "nominal": 18,
-        },
-        "era": "C",
-        "jec_era": "RunCD",
-    },
-)
-
-cpn.add_dataset(
-    name="data_muoneg_d",
-    id=14784162,
-    is_data=True,
-    processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
-    ],
-    n_files=9,
-    n_events=8_007_031,
-    aux={
-        "merging_factors": {
-            "nominal": 15,
-        },
-        "era": "D",
-        "jec_era": "RunCD",
-    },
-)
-
-
-#
 # E/Gamma
 #
 
@@ -174,48 +131,6 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 14,
-        },
-        "era": "D",
-        "jec_era": "RunCD",
-    },
-)
-
-#
-# Jet/MET
-#
-
-cpn.add_dataset(
-    name="data_met_c",
-    id=14784128,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/JetMET/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
-    ],
-    n_files=162,
-    n_events=169_113_266,
-    aux={
-        "merging_factors": {
-            "nominal": 15,
-        },
-        "era": "C",
-        "jec_era": "RunCD",
-    },
-)
-
-cpn.add_dataset(
-    name="data_met_d",
-    id=14809044,
-    is_data=True,
-    processes=[procs.data_met],
-    keys=[
-        "/JetMET/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
-    ],
-    n_files=122,
-    n_events=100_853_361,
-    aux={
-        "merging_factors": {
-            "nominal": 12,
         },
         "era": "D",
         "jec_era": "RunCD",
