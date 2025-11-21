@@ -4,6 +4,8 @@
 Electroweak datasets for the 2024 data-taking campaign with datasets at NanoAOD tier in version 15.
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
 
@@ -11,6 +13,114 @@ from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cp
 #
 # Drell-Yan, amcatnlo
 #
+
+# cpn.add_dataset(
+#     name="dy_ee_m10to50_powheg",
+#     id=15297455,
+#     processes=[procs.dy_ee_m10to50],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/DYto2E_Bin-MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+#             ],
+#             aux={
+#                 "broken_files": [],
+#             },
+#             n_files=395,  # 395-0
+#             n_events=348121585,
+#         ),
+#     ),
+# )
+
+# cpn.add_dataset(
+#     name="dy_mumu_m10to50_powheg",
+#     id=15297453,
+#     processes=[procs.dy_mumu_m10to50],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/DYto2Mu_Bin-MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+#             ],
+#             aux={
+#                 "broken_files": [],
+#             },
+#             n_files=405,  # 405-0
+#             n_events=341634068,
+#         ),
+#     ),
+# )
+
+# cpn.add_dataset(
+#     name="dy_tautau_m10to50_powheg",
+#     id=15297458,
+#     processes=[procs.dy_tautau_m10to50],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/DYto2Tau_Bin-MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+#             ],
+#             aux={
+#                 "broken_files": [],
+#             },
+#             n_files=400,  # 400-0
+#             n_events=344069532,
+#         ),
+#     ),
+# )
+
+cpn.add_dataset(
+    name="dy_ee_m50toinf_amcatnlo",
+    id=15292625,
+    processes=[procs.dy_ee_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2E-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2990,  # 2990-0
+            n_events=486448139,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m50toinf_amcatnlo",
+    id=15302208,
+    processes=[procs.dy_mumu_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2Mu-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v6/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2975,  # 2975-0
+            n_events=490076405,
+        ),
+    ),
+)
+
+# cpn.add_dataset(
+#     name="dy_tautau_m50toinf_amcatnlo",
+#     id=15401531,
+#     processes=[procs.dy_tautau_m50toinf],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/DYto2Tau-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v7/NANOAODSIM",  # noqa: E501
+#             ],
+#             aux={
+#                 "broken_files": [],
+#             },
+#             n_files=1837,  # 1837-0
+#             n_events=349164447,
+#         ),
+#     ),
+# )
 
 cpn.add_dataset(
     name="dy_m50toinf_1j_pt40to100_amcatnlo",
