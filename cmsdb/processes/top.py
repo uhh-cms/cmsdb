@@ -7,6 +7,8 @@ Top-related process definitions.
 __all__ = [
     "tt",
     "tt_sl", "tt_dl", "tt_fh",
+    "ttbb",
+    "ttbb_sl", "ttbb_dl", "ttbb_fh",
     "st",
     "st_tchannel", "st_tchannel_t", "st_tchannel_t_had", "st_tchannel_t_lep", "st_tchannel_tbar",
     "st_tchannel_tbar_had", "st_tchannel_tbar_lep",
@@ -86,6 +88,45 @@ tt_fh = tt.add_process(
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs=multiply_xsecs(tt, const.br_ww.fh),
+)
+
+ttbb = Process(
+    name="ttbb",
+    id=1010,
+    label=r"$t\bar{t}$ + bb",
+    color=(205, 0, 9),
+    # NOTE: To be added 
+    xsecs={
+        13.6: Number(923.6, {
+            "scale": (22.6, 33.4),
+            "pdf": 22.8,
+            "mtop": (25.4, 24.6),
+        }),
+    },
+)
+
+ttbb_sl = ttbb.add_process(
+    name="ttbb_sl",
+    id=1110,
+    label=f"{tt.label}+bb, SL",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb, const.br_ww.sl),
+)
+
+ttbb_dl = ttbb.add_process(
+    name="ttbb_dl",
+    id=1210,
+    label=f"{tt.label}+bb, DL",
+    color=(235, 230, 10),
+    xsecs=multiply_xsecs(ttbb, const.br_ww.dl),
+)
+
+ttbb_fh = ttbb.add_process(
+    name="ttbb_fh",
+    id=1310,
+    label=f"{tt.label}+bb, FH",
+    color=(255, 153, 0),
+    xsecs=multiply_xsecs(ttbb, const.br_ww.fh),
 )
 
 

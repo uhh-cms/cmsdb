@@ -115,6 +115,65 @@ cpn.add_dataset(
     ),
 )
 
+
+#
+# ttbb
+#
+
+cpn.add_dataset(
+    name="ttbb_dl_powheg",
+    id=15379709,
+    processes=[procs.ttbb_dl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTBBto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=203,  # 203-0
+            n_events=12499196,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttbb_fh_powheg",
+    id=15381639,
+    processes=[procs.ttbb_fh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTBBto4Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=189,  # 189-0
+            n_events=14990580,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttbb_sl_powheg",
+    id=15381195,
+    processes=[procs.ttbb_sl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTBBtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=283,  # 283-0
+            n_events=22473402,
+        ),
+    ),
+)
+
 #
 # ttbar + 1 vector boson
 #
