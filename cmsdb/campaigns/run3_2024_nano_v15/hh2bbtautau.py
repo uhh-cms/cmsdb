@@ -203,6 +203,28 @@ cpn.add_dataset(
     n_events=5_000_000,
 )
 
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kv1p74_k2v1p37_kl14p4_madgraph",
+    id=15415631,
+    processes=[procs.hh_vbf_hbb_htt_kv1p74_k2v1p37_kl14p4],
+    keys=[
+        "/VBFHHto2B2Tau_Par-CV1p74-C2V-1p37-C3-14p4_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=42,
+    n_events=4_876_000,
+)
+
+cpn.add_dataset(
+    name="hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96_madgraph",
+    id=15415634,
+    processes=[procs.hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96],
+    keys=[
+        "/VBFHHto2B2Tau_Par-CV-2p12-C2V-3p87-C3-m5p96_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=46,
+    n_events=5_000_000,
+)
+
 #
 # ggf -> graviton -> HH
 #
