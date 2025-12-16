@@ -4,8 +4,69 @@
 Electroweak datasets for the 2024 data-taking campaign with datasets at NanoAOD tier in version 15.
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
+
+
+#
+# Drell-Yan, LO madgraph
+#
+
+cpn.add_dataset(
+    name="dy_4j_mumu_m50toinf_madgraph",
+    id=15297414,
+    processes=[procs.dy_4j_mumu_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2Mu-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=3194,  # 3194-0
+            n_events=530955854,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="dy_4j_ee_m50toinf_madgraph",
+    id=15298106,
+    processes=[procs.dy_4j_ee_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2E-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=2821,  # 2821-0
+            n_events=494826377,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="dy_4j_tautau_m50toinf_madgraph",
+    id=15405784,
+    processes=[procs.dy_4j_tautau_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2Tau-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v5/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=3352,  # 3352-0
+            n_events=534679865,
+        ),
+    ),
+)
 
 
 #

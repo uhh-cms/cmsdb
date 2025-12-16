@@ -35,12 +35,15 @@ __all__ = [  # noqa: F822
     "dy_ee_m10to50", "dy_ee_m50toinf", "dy_ee_m50to120", "dy_ee_m120to200", "dy_ee_m200to400",
     "dy_ee_m400to800", "dy_ee_m800to1500", "dy_ee_m1500to2500", "dy_ee_m2500to4000",
     "dy_ee_m4000to6000", "dy_ee_m6000toinf",
+    "dy_4j_ee_m50toinf",
     "dy_mumu_m10to50", "dy_mumu_m50toinf", "dy_mumu_m50to120", "dy_mumu_m120to200", "dy_mumu_m200to400",
     "dy_mumu_m400to800", "dy_mumu_m800to1500", "dy_mumu_m1500to2500", "dy_mumu_m2500to4000",
     "dy_mumu_m4000to6000", "dy_mumu_m6000toinf",
+    "dy_4j_mumu_m50toinf",
     "dy_tautau_m10to50", "dy_tautau_m50toinf", "dy_tautau_m50to120", "dy_tautau_m120to200", "dy_tautau_m200to400",
     "dy_tautau_m400to800", "dy_tautau_m800to1500", "dy_tautau_m1500to2500", "dy_tautau_m2500to4000",
     "dy_tautau_m4000to6000", "dy_tautau_m6000toinf",
+    "dy_4j_tautau_m50toinf",
     "dy_ee_m50toinf_0j", "dy_ee_m50toinf_1j", "dy_ee_m50toinf_2j", "dy_ee_m50toinf_ge3j",
     *[
         f"dy_{ll}_m50toinf_{nj}j"
@@ -976,6 +979,19 @@ dy_ee_m6000toinf = dy_ee_m50toinf.add_process(
     },
 )
 
+dy_4j_ee_m50toinf = dy.add_process(
+    name="dy_4j_ee_m50toinf",
+    id=51900,
+    xsecs={
+        13.6: Number(5481.0, {"tot": 13.23}),  # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=process_name%3DDYto2E-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8 # noqa
+    },
+    aux={
+        "lep_id": 11,
+        "mll": (50.0, const.inf),
+        "njets": (4, const.inf),
+    },
+)
+
 # normalize ee mll bins to nnlo expectation from inclusive m50toinf / 3
 dy_ee_m_procs = [
     dy_ee_m50to120,
@@ -1141,6 +1157,19 @@ dy_mumu_m6000toinf = dy_mumu_m50toinf.add_process(
     aux={
         "lep_id": 13,
         "mll": (6000.0, const.inf),
+    },
+)
+
+dy_4j_mumu_m50toinf = dy.add_process(
+    name="dy_4j_mumu_m50toinf",
+    id=51910,
+    xsecs={
+        13.6: Number(5447.0, {"tot": 13.17}),  # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2Mu-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8 # noqa
+    },
+    aux={
+        "lep_id": 13,
+        "mll": (50.0, const.inf),
+        "njets": (4, const.inf),
     },
 )
 
@@ -1312,6 +1341,19 @@ dy_tautau_m6000toinf = dy_tautau_m50toinf.add_process(
     aux={
         "lep_id": 15,
         "mll": (6000.0, const.inf),
+    },
+)
+
+dy_4j_tautau_m50toinf = dy.add_process(
+    name="dy_4j_tautau_m50toinf",
+    id=51920,
+    xsecs={
+        13.6: Number(5441.0, {"tot": 13.16}),  # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2Tau-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8 # noqa
+    },
+    aux={
+        "lep_id": 15,
+        "mll": (50.0, const.inf),
+        "njets": (4, const.inf),
     },
 )
 
@@ -1892,6 +1934,10 @@ w_lnu_1j_pt40to100 = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (40.0, 100.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-1J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(4211, {"tot": 27.71}),
+    # },
 )
 
 w_lnu_1j_pt100to200 = w_lnu_1j.add_process(
@@ -1905,6 +1951,10 @@ w_lnu_1j_pt100to200 = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (100.0, 200.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-1J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(342.3, {"tot": 1.842}),
+    # },
 )
 
 w_lnu_1j_pt200to400 = w_lnu_1j.add_process(
@@ -1918,6 +1968,10 @@ w_lnu_1j_pt200to400 = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (200.0, 400.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-1J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(21.84, {"tot": 0.1076}),
+    # },
 )
 
 w_lnu_1j_pt400to600 = w_lnu_1j.add_process(
@@ -1931,6 +1985,10 @@ w_lnu_1j_pt400to600 = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (400.0, 600.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-1J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(0.6845, {"tot": 0.003095}),
+    # },
 )
 
 w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
@@ -1944,6 +2002,10 @@ w_lnu_1j_pt600toinf = w_lnu_1j.add_process(
         "njets": (1, 2),
         "ptll": (600.0, const.inf),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-1J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(0.07753, {"tot": 0.0003313}),
+    # },
 )
 
 w_lnu_2j_pt0to40 = w_lnu_2j.add_process(
@@ -1970,6 +2032,10 @@ w_lnu_2j_pt40to100 = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (40.0, 100.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-2J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(1581, {"tot": 16.18}),
+    # }
 )
 
 w_lnu_2j_pt100to200 = w_lnu_2j.add_process(
@@ -1983,6 +2049,10 @@ w_lnu_2j_pt100to200 = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (100.0, 200.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-2J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(411.1, {"tot": 3.841}),
+    # },
 )
 
 w_lnu_2j_pt200to400 = w_lnu_2j.add_process(
@@ -1996,6 +2066,10 @@ w_lnu_2j_pt200to400 = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (200.0, 400.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-2J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(53.59, {"tot": 0.4098}),
+    # },
 )
 
 w_lnu_2j_pt400to600 = w_lnu_2j.add_process(
@@ -2009,6 +2083,10 @@ w_lnu_2j_pt400to600 = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (400.0, 600.0),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-2J-PTLNu-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(3.099, {"tot": 0.01935}),
+    # },
 )
 
 w_lnu_2j_pt600toinf = w_lnu_2j.add_process(
@@ -2022,6 +2100,10 @@ w_lnu_2j_pt600toinf = w_lnu_2j.add_process(
         "njets": (2, 3),
         "ptll": (600.0, const.inf),
     },
+    # xsecs={
+    #     # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_Bin-2J-PTLNu-600toInf_TuneCP5_13p6TeV_amcatnloFXFX-pythia8  # noqa
+    #     13.6: Number(0.5259, {"tot": 0.002768}),
+    # },
 )
 
 w_lnu_ge3j = w_lnu.add_process(
