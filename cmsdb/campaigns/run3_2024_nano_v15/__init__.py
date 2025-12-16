@@ -39,6 +39,7 @@ import cmsdb.campaigns.run3_2024_nano_v15.higgs  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.hh2bbtautau  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.hh2bbvv  # noqa
 import cmsdb.campaigns.run3_2024_nano_v15.hh2ml  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.mttbar  # noqa
 
 
 #
