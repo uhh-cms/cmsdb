@@ -380,8 +380,8 @@ cpn.add_dataset(
     keys=[
         "/WZ_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=46,
-    n_events=7527043,
+    n_files=45,
+    n_events=7479528,
 )
 
 cpn.add_dataset(
@@ -393,4 +393,19 @@ cpn.add_dataset(
     ],
     n_files=21,
     n_events=1181750,
+)
+
+#
+# Triboson
+#
+
+cpn.add_dataset(
+    name="wwz_amcatnlo",
+    id=14797985,
+    processes=[procs.wwz],
+    keys=[
+        "/WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa: E501
+    ],
+    n_files=40,
+    n_events=1950044,
 )

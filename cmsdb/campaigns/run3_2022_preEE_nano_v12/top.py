@@ -543,8 +543,8 @@ cpn.add_dataset(
                 "/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
 
             ],
-            n_files=50,
-            n_events=4407845,
+            n_files=49,
+            n_events=4366467,
         ),
         extension=DatasetInfo(
             keys=[
@@ -763,8 +763,8 @@ cpn.add_dataset(
             keys=[
                 "/TbarWplusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
             ],
-            n_files=26,
-            n_events=2465972,
+            n_files=24,
+            n_events=2327688,
         ),
         extension=DatasetInfo(
             keys=[
