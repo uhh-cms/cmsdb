@@ -575,6 +575,6 @@ cpn.add_dataset(
             ],
             n_files=28,
             n_events=1746000,
-            ),
+        ),
     ),
 )
