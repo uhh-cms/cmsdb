@@ -122,7 +122,8 @@ cpn.add_dataset(
     n_events=9_801_431,
 )
 
-# tau filtered, inclusive and in jet bins
+# tautau filtered, inclusive and in jet bins
+
 cpn.add_dataset(
     name="dy_tautau_m50toinf_amcatnlo",
     id=15401531,
@@ -145,9 +146,119 @@ cpn.add_dataset(
     n_events=493_132_017,
 )
 
-# 1j missing: https://cms-pdmv-prod.web.cern.ch/grasp/samples?dataset_query=DYto2Tau-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8&campaign=Phase2Spring23*GS,Run3Summer22*GS,Run3Summer23*GS,Run3Winter22*GS,Run3Winter23*GS,Run3Winter24*GS,Run3Winter25*GS,RunIII2024Summer24*GS,RunIISummer20UL16*GEN,RunIISummer20UL16*GENAPV,RunIISummer20UL17*GEN,RunIISummer20UL18*GEN # noqa
-# 2j missing: not requested yet?
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_1j_amcatnlo",
+    id=15453487,
+    processes=[procs.dy_tautau_m50toinf_1j],
+    keys=[
+        "/DYto2Tau-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=2_026,
+    n_events=428_387_857,
+)
 
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_2j_amcatnlo",
+    id=15454616,
+    processes=[procs.dy_tautau_m50toinf_2j],
+    keys=[
+        "/DYto2Tau-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=1_592,
+    n_events=232_971_613,
+)
+
+# ee filtered, inclusive and in jet bins
+
+cpn.add_dataset(
+    name="dy_ee_m50toinf_amcatnlo",
+    id=15292625,
+    processes=[procs.dy_ee_m50toinf],
+    keys=[
+        "/DYto2E-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=2_990,
+    n_events=486_448_139,
+)
+
+cpn.add_dataset(
+    name="dy_ee_m50toinf_0j_amcatnlo",
+    id=15300391,
+    processes=[procs.dy_ee_m50toinf_0j],
+    keys=[
+        "/DYto2E-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=548,
+    n_events=453_230_267,
+)
+
+cpn.add_dataset(
+    name="dy_ee_m50toinf_1j_amcatnlo",
+    id=15484364,
+    processes=[procs.dy_ee_m50toinf_1j],
+    keys=[
+        "/DYto2E-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=2_108,
+    n_events=338_867_940,
+)
+
+cpn.add_dataset(
+    name="dy_ee_m50toinf_2j_amcatnlo",
+    id=15497029,
+    processes=[procs.dy_ee_m50toinf_2j],
+    keys=[
+        "/DYto2E-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=317,
+    n_events=307_042_054,
+)
+
+# mumu filtered, inclusive and in jet bins
+
+cpn.add_dataset(
+    name="dy_mumu_m50toinf_amcatnlo",
+    id=15302208,
+    processes=[procs.dy_mumu_m50toinf],
+    keys=[
+        "/DYto2Mu-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v6/NANOAODSIM",  # noqa
+    ],
+    n_files=2_975,
+    n_events=490_076_405,
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m50toinf_0j_amcatnlo",
+    id=15304256,
+    processes=[procs.dy_mumu_m50toinf_0j],
+    keys=[
+        "/DYto2Mu-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=534,
+    n_events=466_773_211,
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m50toinf_1j_amcatnlo",
+    id=15511331,
+    processes=[procs.dy_mumu_m50toinf_1j],
+    keys=[
+        "/DYto2Mu-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=327,
+    n_events=404_580_799,
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m50toinf_2j_amcatnlo",
+    id=15483620,
+    processes=[procs.dy_mumu_m50toinf_2j],
+    keys=[
+        "/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=1_739,
+    n_events=285_910_646,
+)
 
 #
 # Drell-Yan, powheg
