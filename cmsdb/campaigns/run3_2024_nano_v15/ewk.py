@@ -6,7 +6,7 @@ Electroweak datasets for the 2024 data-taking campaign with datasets at NanoAOD 
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
-
+from order import DatasetInfo
 
 #
 # Drell-Yan, amcatnlo
@@ -249,15 +249,38 @@ cpn.add_dataset(
     n_events=404_580_799,
 )
 
+# DO NOT OVERWRITE THIS DATASET ENTRY
+# skip files potentially stored on pnfs but not reported by rucio
 cpn.add_dataset(
     name="dy_mumu_m50toinf_2j_amcatnlo",
     id=15483620,
     processes=[procs.dy_mumu_m50toinf_2j],
-    keys=[
-        "/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=1_739,
-    n_events=285_910_646,
+    info={
+        "nominal": DatasetInfo(
+            keys=[
+                "/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=1_674,
+            n_events=276_486_780,
+            aux={
+                "skip_lfns": [
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/16ddaa45-3eb4-47d8-8969-909c6b5c1d35.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/1759e30d-24c5-4539-89e3-c6f849c057fa.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/1bf1e958-2c4f-45d3-82ec-be25261200b5.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/32f6c29f-0252-40d1-a77d-8a0b0b1deb20.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/3b8da05c-d2f8-44af-9d20-0fdea61c3268.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/683946db-1a40-4a65-ab64-3793105bf70f.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/7084b198-a2b1-4772-8c7c-1eb18507d9aa.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/82efc54a-a3c8-470f-a420-625b33e7220d.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/8b319bae-20d4-41ad-b8f2-b7c5560e0d48.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/912617c9-7468-44d3-9467-0fc32fb9415c.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/9ab07e80-d321-4bfd-8474-057b79f158f1.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/c535cff9-00ec-4bb2-8029-783fcc3990ff.root",   # noqa
+                    "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/e1a3b537-e844-4bfd-9e97-2f7c90d57b07.root",   # noqa
+                ],
+            },
+        ),
+    },
 )
 
 #
