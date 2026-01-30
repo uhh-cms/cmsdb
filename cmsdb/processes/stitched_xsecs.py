@@ -75,17 +75,17 @@ get_stitched_dy_m50toinf_xsec = functools.partial(_get_stitched_xsec, _dy_lep_m5
 
 _w_lnu_13p6_xsecs = {
     "w_lnu_0j": Number(0.808247, 2.2e-05j),
+    "w_lnu_1j_pt0to40": Number(0.0688332, 0.000139j),
     "w_lnu_1j_pt40to100": Number(0.0645822, 0.000141j),
     "w_lnu_1j_pt100to200": Number(0.00538203, 0.000402j),
     "w_lnu_1j_pt200to400": Number(0.000373607, 0.001777j),
     "w_lnu_1j_pt400to600": Number(1.26886e-05, 0.010522j),
     "w_lnu_1j_pt600toinf": Number(1.59701e-06, 0.031335j),
+    "w_lnu_2j_pt0to40": Number(0.0215056, 0.000214j),
     "w_lnu_2j_pt40to100": Number(0.0237533, 0.000212j),
     "w_lnu_2j_pt100to200": Number(0.00640614, 0.000282j),
     "w_lnu_2j_pt200to400": Number(0.000845196, 0.000764j),
     "w_lnu_2j_pt400to600": Number(4.87396e-05, 0.003524j),
     "w_lnu_2j_pt600toinf": Number(8.27863e-06, 0.008918j),
-    "w_lnu_1j_pt0to40": Number(0.0688332, 0.000139j),
-    "w_lnu_2j_pt0to40": Number(0.0215056, 0.000214j),
 }
 get_stitched_w_lnu_xsec = functools.partial(_get_stitched_xsec, _w_lnu_13p6_xsecs, "W->lnu")
