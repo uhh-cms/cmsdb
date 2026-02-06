@@ -18,9 +18,10 @@ cpn.add_dataset(
     processes=[procs.hh_ggf_hbb_htt_kl1_kt1],
     keys=[
         "/GluGluHHto2B2Tau_Par-c2-0p00-kl-1p00-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+        "/GluGluHHto2B2Tau_Par-c2-0p00-kl-1p00-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=101,
-    n_events=957_670,
+    n_files=101 + 96,
+    n_events=957_670 + 3_952_185,
 )
 
 cpn.add_dataset(
@@ -29,9 +30,10 @@ cpn.add_dataset(
     processes=[procs.hh_ggf_hbb_htt_kl0_kt1],
     keys=[
         "/GluGluHHto2B2Tau_Par-c2-0p00-kl-0p00-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+        "/GluGluHHto2B2Tau_Par-c2-0p00-kl-0p00-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=55,
-    n_events=988_954,
+    n_files=55 + 117,
+    n_events=988_954 + 3_975_072,
 )
 
 cpn.add_dataset(
@@ -40,9 +42,10 @@ cpn.add_dataset(
     processes=[procs.hh_ggf_hbb_htt_kl2p45_kt1],
     keys=[
         "/GluGluHHto2B2Tau_Par-c2-0p00-kl-2p45-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/GluGluHHto2B2Tau_Par-c2-0p00-kl-2p45-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=66,
-    n_events=951_424,
+    n_files=66 + 89,
+    n_events=951_424 + 3_967_870,
 )
 
 cpn.add_dataset(
@@ -51,9 +54,10 @@ cpn.add_dataset(
     processes=[procs.hh_ggf_hbb_htt_kl5_kt1],
     keys=[
         "/GluGluHHto2B2Tau_Par-c2-0p00-kl-5p00-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+        "/GluGluHHto2B2Tau_Par-c2-0p00-kl-5p00-kt-1p00_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-PowhegBugFix_150X_mcRun3_2024_realistic_v2_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=66,
-    n_events=1_000_000,
+    n_files=66 + 123,
+    n_events=1_000_000 + 3_967_258,
 )
 
 cpn.add_dataset(
