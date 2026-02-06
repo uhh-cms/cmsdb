@@ -16,19 +16,18 @@ from order import Campaign
 # campaign
 #
 
-campaign_run3_2023_preBPix_nano_v13 = Campaign(
-    name="run3_2023_preBPix_nano_v13",
-    id=320231301,  # 3 2023 13 01(u)
+campaign_run3_2024_nano_custom_v15 = Campaign(
+    name="run3_2024_nano_custom_v15",
+    id=320241502,  # 3 2023 13 01(u)
     ecm=13.6,
     bx=25,
     aux={
         "tier": "NanoAOD",
         "run": 3,
-        "year": 2023,
-        "version": 13,
+        "year": 2024,
+        "version": 15,
         "postfix": "",
     },
-    tags={"preBPix"},
 )
 
 
@@ -38,6 +37,6 @@ campaign_run3_2023_preBPix_nano_v13 = Campaign(
 # import cmsdb.campaigns.run3_2023_preBPix_nano_v13.ewk  # noqa
 # import cmsdb.campaigns.run3_2023_preBPix_nano_v13.qcd  # noqa
 # import cmsdb.campaigns.run3_2023_preBPix_nano_v13.higgs  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v13.hh2bbvv  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v13.hh2bbtautau  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v13.hhhto4b2W  # noqa
+# import cmsdb.campaigns.run3_2023_preBPix_nano_v13.hh2bbvv  # noqa
+# import cmsdb.campaigns.run3_2023_preBPix_nano_v13.hh2bbtautau  # noqa
+import cmsdb.campaigns.run3_2024_nano_custom_v15.hhhto4b2W  # noqa

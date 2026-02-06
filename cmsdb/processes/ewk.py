@@ -1183,7 +1183,7 @@ dy_tautau_m50toinf = dy_tautau.add_process(
     name="dy_tautau_m50toinf",
     id=51632,
     xsecs={
-        13.6: dy_m50toinf.get_xsec(13.6) / const.n_leps
+        13.6: dy_m50toinf.get_xsec(13.6) / const.n_leps,
         # 13.6: get_stitched_dy_m50toinf_xsec(13.6, "dy_tautau_m50toinf*"),
     },
     aux={

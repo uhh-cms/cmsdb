@@ -9,6 +9,10 @@ __all__ = [
     "tt_sl", "tt_dl", "tt_fh",
     "ttbb",
     "ttbb_sl", "ttbb_dl", "ttbb_fh",
+    "ttbb_1b", "ttbb_dl_1b", "ttbb_sl_1b", "ttbb_fh_1b",
+    "ttbb_nonb", "ttbb_dl_nonb", "ttbb_sl_nonb", "ttbb_fh_nonb",
+    "tt_1b", "tt_dl_1b", "tt_sl_1b", "tt_fh_1b",
+    "tt_nonb", "tt_dl_nonb", "tt_sl_nonb", "tt_fh_nonb",
     "st",
     "st_tchannel", "st_tchannel_t", "st_tchannel_t_had", "st_tchannel_t_lep", "st_tchannel_tbar",
     "st_tchannel_tbar_had", "st_tchannel_tbar_lep",
@@ -90,18 +94,107 @@ tt_fh = tt.add_process(
     xsecs=multiply_xsecs(tt, const.br_ww.fh),
 )
 
+#
+# ttbar samples without additional b jets from PS
+#
+
+# NOTE: xsec taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/105
+# scaled by ratio of tt inclusive (13.6 TeV)/(13 TeV)
+tt_nonb = tt.add_process(
+    name="tt_nonb",
+    id=1710,
+    label=r"$t\bar{t} (+ \geq 1c / lf)$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number((923.6 - 19.71), {
+            "scale": (22.6, 33.4),
+            "pdf": 22.8,
+            "mtop": (25.4, 24.6),
+        }),
+    },
+)
+
+tt_dl_nonb = tt_dl.add_process(
+    name="tt_dl_nonb",
+    id=1711,
+    label=r"$t\bar{t} (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_nonb, const.br_ww.dl),
+)
+
+tt_sl_nonb = tt_sl.add_process(
+    name="tt_sl_nonb",
+    id=1712,
+    label=r"$t\bar{t} (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_nonb, const.br_ww.sl),
+)
+
+tt_fh_nonb = tt_fh.add_process(
+    name="tt_fh_nonb",
+    id=1713,
+    label=r"$t\bar{t} (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_nonb, const.br_ww.fh),
+)
+
+#
+# ttbar samples with additional b jets from PS
+#
+
+# NOTE: xsec taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/105
+# scaled by ratio of tt inclusive (13.6 TeV)/(13 TeV)
+tt_1b = tt.add_process(
+    name="tt_1b",
+    id=1810,
+    label=r"$t\bar{t} (+b)$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number(19.71, {
+            # "scale": (22.6, 33.4), # TODO: update
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
+
+tt_dl_1b = tt_dl.add_process(
+    name="tt_dl_1b",
+    id=1811,
+    label=r"$t\bar{t} (+b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_1b, const.br_ww.dl),
+)
+
+tt_sl_1b = tt_sl.add_process(
+    name="tt_sl_1b",
+    id=1812,
+    label=r"$t\bar{t} (+b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_1b, const.br_ww.sl),
+)
+
+tt_fh_1b = tt_fh.add_process(
+    name="tt_fh_1b",
+    id=1813,
+    label=r"$t\bar{t} (+b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_1b, const.br_ww.fh),
+)
+
+#
+# ttbb samples with 4FS
+#
+
+# NOTE: xsec taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/105
+# scaled by ratio of tt inclusive (13.6 TeV)/(13 TeV)
 ttbb = Process(
     name="ttbb",
     id=1010,
     label=r"$t\bar{t}$ + bb",
     color=(205, 0, 9),
-    # NOTE: To be added 
     xsecs={
-        13.6: Number(923.6, {
-            "scale": (22.6, 33.4),
-            "pdf": 22.8,
-            "mtop": (25.4, 24.6),
-        }),
+        13.6: Number(48.57, {}),
     },
 )
 
@@ -127,6 +220,91 @@ ttbb_fh = ttbb.add_process(
     label=f"{tt.label}+bb, FH",
     color=(255, 153, 0),
     xsecs=multiply_xsecs(ttbb, const.br_ww.fh),
+)
+
+#
+# ttbb samples with additional b jets from PS
+#
+
+# NOTE: xsec taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/105
+# scaled by ratio of tt inclusive (13.6 TeV)/(13 TeV)
+ttbb_1b = ttbb.add_process(
+    name="ttbb_1b",
+    id=1910,
+    label=r"$t\bar{t} (+ \geq 1b)$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number(23.7, {
+            # "scale": (22.6, 33.4),
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
+
+ttbb_dl_1b = ttbb_dl.add_process(
+    name="ttbb_dl_1b",
+    id=1914,
+    label=r"$t\bar{t} (+ \geq 1b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_1b, const.br_ww.dl),
+)
+
+ttbb_sl_1b = ttbb_sl.add_process(
+    name="ttbb_sl_1b",
+    id=1912,
+    label=r"$t\bar{t} (+ \geq 1b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_1b, const.br_ww.sl),
+)
+
+ttbb_fh_1b = ttbb_fh.add_process(
+    name="ttbb_fh_1b",
+    id=1913,
+    label=r"$t\bar{t} (+ \geq 1b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_1b, const.br_ww.fh),
+)
+
+#
+# ttbb samples without additional b jets from PS
+#
+
+# NOTE: xsec taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2023/105
+# scaled by ratio of tt inclusive (13.6 TeV)/(13 TeV)
+
+ttbb_nonb = ttbb.add_process(
+    name="ttbb_nonb",
+    id=1611,
+    label=r"$t\bar{t} + bb$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number((48.57 - 23.7), {}),
+    },
+)
+
+ttbb_dl_nonb = ttbb_dl.add_process(
+    name="ttbb_dl_nonb",
+    id=1612,
+    label=r"$t\bar{t} + bb (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_nonb, const.br_ww.dl),
+)
+
+ttbb_sl_nonb = ttbb_sl.add_process(
+    name="ttbb_sl_nonb",
+    id=1613,
+    label=r"$t\bar{t} + bb  (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_nonb, const.br_ww.sl),
+)
+
+ttbb_fh_nonb = ttbb_fh.add_process(
+    name="ttbb_fh_nonb",
+    id=1614,
+    label=r"$t\bar{t} + bb (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_nonb, const.br_ww.fh),
 )
 
 
