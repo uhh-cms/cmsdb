@@ -47,3 +47,4 @@ import cmsdb.campaigns.run3_2022_preEE_nano_v12.hh2bbtautau  # noqa
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.hh2bbvv  # noqa
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.hhh4b2tau  # noqa
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.azh # noqa
+import cmsdb.campaigns.run3_2022_preEE_nano_v12.hh4b # noqa

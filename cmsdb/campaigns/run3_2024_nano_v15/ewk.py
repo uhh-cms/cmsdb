@@ -104,6 +104,60 @@ cpn.add_dataset(
     ),
 )
 
+cpn.add_dataset(
+    name="dy_ee_m10to50_amcatnlo",
+    id=15496468,
+    processes=[procs.dy_ee_m10to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2E-2Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=694,  # 694-0
+            n_events=139117188,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="dy_mumu_m10to50_amcatnlo",
+    id=15490267,
+    processes=[procs.dy_mumu_m10to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2Mu-2Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=1015,  # 1015-0
+            n_events=144889491,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m10to50_amcatnlo",
+    id=15497149,
+    processes=[procs.dy_tautau_m10to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2Tau-2Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=715,  # 715-0
+            n_events=133351364,
+        ),
+    ),
+)
+
 # cpn.add_dataset(
 #     name="dy_tautau_m50toinf_amcatnlo",
 #     id=15401531,
