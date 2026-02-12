@@ -41,7 +41,6 @@ __all__ = [  # noqa: F822
     "dy_tautau_m10to50", "dy_tautau_m50toinf", "dy_tautau_m50to120", "dy_tautau_m120to200", "dy_tautau_m200to400",
     "dy_tautau_m400to800", "dy_tautau_m800to1500", "dy_tautau_m1500to2500", "dy_tautau_m2500to4000",
     "dy_tautau_m4000to6000", "dy_tautau_m6000toinf",
-    "dy_ee_m50toinf_0j", "dy_ee_m50toinf_1j", "dy_ee_m50toinf_2j", "dy_ee_m50toinf_ge3j",
     *[
         f"dy_{ll}_m50toinf_{nj}j"
         for ll in ["ee", "mumu", "tautau"]
@@ -841,7 +840,7 @@ dy_ee_m50toinf = dy_ee.add_process(
     name="dy_ee_m50toinf",
     id=51800,
     xsecs={
-        13.6: dy_m50toinf.get_xsec(13.6) / const.n_leps,
+        13.6: get_stitched_dy_m50toinf_xsec(13.6, "dy_ee_m50toinf*"),
     },
     aux={
         "lep_id": 11,
@@ -1011,6 +1010,9 @@ dy_mumu_m10to50 = dy_mumu.add_process(
 dy_mumu_m50toinf = dy_mumu.add_process(
     name="dy_mumu_m50toinf",
     id=51621,
+    xsecs={
+        13.6: get_stitched_dy_m50toinf_xsec(13.6, "dy_mumu_m50toinf*"),
+    },
     aux={
         "lep_id": 13,
         "mll": (50.0, const.inf),
