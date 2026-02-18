@@ -24,7 +24,7 @@ cpn.add_dataset(
             keys=[
                 "GF_HHH_Run3Summer24_merged.root",
             ],
-            n_files=1,
+            n_files=11,
             n_events=1000000,  # can be approximate
             aux={
                 "is_local": True,
