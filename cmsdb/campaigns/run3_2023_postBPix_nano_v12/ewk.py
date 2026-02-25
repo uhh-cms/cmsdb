@@ -559,3 +559,22 @@ cpn.add_dataset(
         ),
     ),
 )
+
+#
+# Triboson
+#
+
+cpn.add_dataset(
+    name="wwz_amcatnlo",
+    id=14827071,
+    processes=[procs.wwz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa: E501
+            ],
+            n_files=28,
+            n_events=1746000,
+        ),
+    ),
+)

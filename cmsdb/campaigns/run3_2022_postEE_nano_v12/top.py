@@ -1061,7 +1061,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ttz_zll_m50toinf_amcatnlo",
     id=14793589,
-    processes=[procs.ttz_zll_m4to50],
+    processes=[procs.ttz_zll_m50toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
