@@ -615,3 +615,289 @@ cpn.add_dataset(
         "era": "I",
     },
 )
+
+# VBF parking
+
+cpn.add_dataset(
+    name="data_parking_vbf_c",
+    id=15297211,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF1/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF2/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF3/Run2024C-MINIv6NANOv15-v2/NANOAOD",
+        "/ParkingVBF4/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF5/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF6/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF7/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+    ],
+    n_files=168 + 197 + 180 + 115 + 150 + 173 + 198 + 237,
+    n_events=45_446_278 + 45_471_089 + 45_475_567 + 45_489_416 + 45_438_075 + 45_468_127 + 45_487_079 + 45_469_363,
+    aux={
+        "prompt": True,
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_d",
+    id=15297254,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF1/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF2/Run2024D-MINIv6NANOv15-v2/NANOAOD",
+        "/ParkingVBF3/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF4/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF5/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF6/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF7/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+    ],
+    n_files=142 + 83 + 104 + 78 + 210 + 192 + 206 + 178,
+    n_events=49_870_696 + 49_952_836 + 49_918_963 + 49_183_514 + 49_951_704 + 49_948_317 + 49_951_168 + 49_943_179,
+    aux={
+        "prompt": True,
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_e",
+    id=15296463,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF1/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF2/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF3/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF4/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF5/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF6/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+        "/ParkingVBF7/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+    ],
+    n_files=270 + 263 + 137 + 220 + 260 + 300 + 278 + 264,
+    n_events=80_737_942 + 80_798_944 + 80_804_580 + 80_773_409 + 80_741_780 + 80_798_285 + 80_779_423 + 80_795_458,
+    aux={
+        "prompt": True,
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_f",
+    id=15312474,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2024F-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF1/Run2024F-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF2/Run2024F-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF3/Run2024F-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF4/Run2024F-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF5/Run2024F-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF6/Run2024F-MINIv6NANOv15-v4/NANOAOD",
+        "/ParkingVBF7/Run2024F-MINIv6NANOv15-v3/NANOAOD",
+    ],
+    n_files=230 + 221 + 217 + 213 + 235 + 225 + 245 + 204,
+    n_events=198_580_900 + 198_576_897 + 198_858_244 + 198_404_835 + 196_929_563 + 198_830_251 + 198_580_150 + 198_581_314,
+    aux={
+        "prompt": True,
+        "era": "F",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_g",
+    id=15312419,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2024G-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF1/Run2024G-MINIv6NANOv15-v4/NANOAOD",
+        "/ParkingVBF2/Run2024G-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF3/Run2024G-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF4/Run2024G-MINIv6NANOv15-v4/NANOAOD",
+        "/ParkingVBF5/Run2024G-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF6/Run2024G-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF7/Run2024G-MINIv6NANOv15-v3/NANOAOD",
+    ],
+    n_files=291 + 345 + 266 + 273 + 333 + 284 + 300 + 331,
+    n_events=268_099_742 + 268_816_012 + 268_585_092 + 269_076_738 + 268_606_701 + 268_694_582 + 268_816_559 + 268_249_462,
+    aux={
+        "prompt": True,
+        "era": "G",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_h",
+    id=15312906,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2024H-MINIv6NANOv15-v2/NANOAOD",
+        "/ParkingVBF1/Run2024H-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF2/Run2024H-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF3/Run2024H-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF4/Run2024H-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF5/Run2024H-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF6/Run2024H-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF7/Run2024H-MINIv6NANOv15-v4/NANOAOD",
+    ],
+    n_files=58 + 46 + 54 + 51 + 47 + 62 + 50 + 54,
+    n_events=38_191_175 + 38_191_079 + 38_049_441 + 38_189_554 + 38_157_067 + 38_041_718 + 38_190_851 + 38_191_513,
+    aux={
+        "prompt": True,
+        "era": "H",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_vbf_i",
+    id=15312317,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2024I-MINIv6NANOv15-v2/NANOAOD",
+        "/ParkingVBF1/Run2024I-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF2/Run2024I-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF3/Run2024I-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF4/Run2024I-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF5/Run2024I-MINIv6NANOv15-v2/NANOAOD",
+        "/ParkingVBF6/Run2024I-MINIv6NANOv15-v2/NANOAOD",
+        "/ParkingVBF7/Run2024I-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingVBF0/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+        "/ParkingVBF1/Run2024I-MINIv6NANOv15_v2-v3/NANOAOD",
+        "/ParkingVBF2/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+        "/ParkingVBF3/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+        "/ParkingVBF4/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+        "/ParkingVBF5/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+        "/ParkingVBF6/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+        "/ParkingVBF7/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+    ],
+    n_files=57 + 48 + 50 + 56 + 57 + 57 + 57 + 48 + 44 + 58 + 56 + 39 + 43 + 56 + 51 + 44,
+    n_events=37_162_955 + 37_212_846 + 38_052_423 + 38_052_618 + 38_036_277 + 37_736_540 + 38_640_355 + 38_050_874 + 37_607_068 + 37_607_718 + 37_607_584 + 37_477_354 + 37_605_272 + 37_606_998 + 37_607_295 + 37_607_228,
+    aux={
+        "prompt": True,
+        "era": "I",
+    },
+)
+
+# HH parking
+
+cpn.add_dataset(
+    name="data_parking_hh_c",
+    id=15297243,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH/Run2024C-MINIv6NANOv15-v1/NANOAOD",
+    ],
+    n_files=237,
+    n_events=105_158_321,
+    aux={
+        "prompt": True,
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_hh_d",
+    id=15297245,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH/Run2024D-MINIv6NANOv15-v1/NANOAOD",
+    ],
+    n_files=271,
+    n_events=125_986_310,
+    aux={
+        "prompt": True,
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_hh_e",
+    id=15297110,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH/Run2024E-MINIv6NANOv15-v1/NANOAOD",
+    ],
+    n_files=378,
+    n_events=177_971_586,
+    aux={
+        "prompt": True,
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_hh_f",
+    id=15352583,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH/Run2024F-MINIv6NANOv15-v4/NANOAOD",
+    ],
+    n_files=599,
+    n_events=486_729_639,
+    aux={
+        "prompt": True,
+        "era": "F",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_hh_g",
+    id=15312442,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH/Run2024G-MINIv6NANOv15-v3/NANOAOD",
+    ],
+    n_files=856,
+    n_events=709_609_093,
+    aux={
+        "prompt": True,
+        "era": "G",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_hh_h",
+    id=15310552,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH/Run2024H-MINIv6NANOv15-v3/NANOAOD",
+    ],
+    n_files=136,
+    n_events=99_559_443,
+    aux={
+        "prompt": True,
+        "era": "H",
+    },
+)
+
+cpn.add_dataset(
+    name="data_parking_hh_i",
+    id=15313174,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH/Run2024I-MINIv6NANOv15-v3/NANOAOD",
+        "/ParkingHH/Run2024I-MINIv6NANOv15_v2-v2/NANOAOD",
+    ],
+    n_files=136 + 158,
+    n_events=103_497_248 + 104_677_951,
+    aux={
+        "prompt": True,
+        "era": "I",
+    },
+)
