@@ -636,7 +636,7 @@ cpn.add_dataset(
     n_files=168 + 197 + 180 + 115 + 150 + 173 + 198 + 237,
     n_events=45_446_278 + 45_471_089 + 45_475_567 + 45_489_416 + 45_438_075 + 45_468_127 + 45_487_079 + 45_469_363,
     aux={
-        "prompt": True,
+        "prompt": False,
         "era": "C",
     },
 )
@@ -659,7 +659,7 @@ cpn.add_dataset(
     n_files=142 + 83 + 104 + 78 + 210 + 192 + 206 + 178,
     n_events=49_870_696 + 49_952_836 + 49_918_963 + 49_183_514 + 49_951_704 + 49_948_317 + 49_951_168 + 49_943_179,
     aux={
-        "prompt": True,
+        "prompt": False,
         "era": "D",
     },
 )
@@ -682,7 +682,7 @@ cpn.add_dataset(
     n_files=270 + 263 + 137 + 220 + 260 + 300 + 278 + 264,
     n_events=80_737_942 + 80_798_944 + 80_804_580 + 80_773_409 + 80_741_780 + 80_798_285 + 80_779_423 + 80_795_458,
     aux={
-        "prompt": True,
+        "prompt": False,
         "era": "E",
     },
 )
@@ -800,7 +800,7 @@ cpn.add_dataset(
     n_files=237,
     n_events=105_158_321,
     aux={
-        "prompt": True,
+        "prompt": False,
         "era": "C",
     },
 )
@@ -816,7 +816,7 @@ cpn.add_dataset(
     n_files=271,
     n_events=125_986_310,
     aux={
-        "prompt": True,
+        "prompt": False,
         "era": "D",
     },
 )
@@ -832,7 +832,7 @@ cpn.add_dataset(
     n_files=378,
     n_events=177_971_586,
     aux={
-        "prompt": True,
+        "prompt": False,
         "era": "E",
     },
 )
