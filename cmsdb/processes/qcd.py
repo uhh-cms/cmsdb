@@ -120,6 +120,8 @@ qcd_ht100to200 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(23610000),
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=DAS=QCD-4Jets_HT-100to200_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(25400000),
     },
 )
 
@@ -174,6 +176,8 @@ qcd_ht1500to2000 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(108),
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-1500to2000_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(125.2),
     },
 )
 
@@ -183,6 +187,8 @@ qcd_ht2000toinf = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(22),
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-2000_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(26.49),
     },
 )
 
@@ -199,31 +205,55 @@ qcd_ht70to100 = qcd.add_process(
 qcd_ht200to400 = qcd.add_process(
     name="qcd_ht200to400",
     id=31012,
+    xsecs={
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(1961000),
+    },
 )
 
 qcd_ht400to600 = qcd.add_process(
     name="qcd_ht400to600",
     id=31013,
+    xsecs={
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-400to600_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(95620),
+    },
 )
 
 qcd_ht600to800 = qcd.add_process(
     name="qcd_ht600to800",
     id=31014,
+    xsecs={
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-600to800_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(13540),
+    },
 )
 
 qcd_ht800to1000 = qcd.add_process(
     name="qcd_ht800to1000",
     id=31015,
+    xsecs={
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-800to1000_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(3033),
+    },
 )
 
 qcd_ht1000to1200 = qcd.add_process(
     name="qcd_ht1000to1200",
     id=31016,
+    xsecs={
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-1000to1200_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(883.7),
+    },
 )
 
 qcd_ht1200to1500 = qcd.add_process(
     name="qcd_ht1200to1500",
     id=31017,
+    xsecs={
+        # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_HT-1200to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa: E501
+        13.6: Number(383.5),
+    },
 )
 
 #
