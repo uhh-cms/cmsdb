@@ -836,6 +836,7 @@ dy_ee_m10to50 = dy_ee.add_process(
         "mll": (10.0, 50.0),
     },
 )
+dy_ee_m10to50.add_parent_process(dy_m10to50)
 
 dy_ee_m50toinf = dy_ee.add_process(
     name="dy_ee_m50toinf",
@@ -1007,6 +1008,7 @@ dy_mumu_m10to50 = dy_mumu.add_process(
         "mll": (10.0, 50.0),
     },
 )
+dy_mumu_m10to50.add_parent_process(dy_m10to50)
 
 dy_mumu_m50toinf = dy_mumu.add_process(
     name="dy_mumu_m50toinf",
@@ -1178,6 +1180,7 @@ dy_tautau_m10to50 = dy_tautau.add_process(
         "mll": (10.0, 50.0),
     },
 )
+dy_tautau_m10to50.add_parent_process(dy_m10to50)
 
 dy_tautau_m50toinf = dy_tautau.add_process(
     name="dy_tautau_m50toinf",
