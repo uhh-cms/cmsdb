@@ -102,6 +102,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
+from cmsdb.util import add_xsecs
 
 
 #
@@ -2106,5 +2107,4 @@ www = vvv.add_process(
 )
 
 # update vvv cross section
-for cme in [13]:
-    vvv.set_xsec(cme, www.get_xsec(cme) + wwz.get_xsec(cme) + wzz.get_xsec(cme) + zzz.get_xsec(cme))
+vvv.xsecs = add_xsecs(www, wwz, wzz, zzz)
