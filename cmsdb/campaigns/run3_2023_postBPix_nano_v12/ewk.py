@@ -250,8 +250,8 @@ cpn.add_dataset(
             keys=[
                 "/DYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
             ],
-            n_files=481,
-            n_events=142310722,
+            n_files=495,
+            n_events=141512287,
         ),
     ),
 )
@@ -265,8 +265,8 @@ cpn.add_dataset(
             keys=[
                 "/DYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
             ],
-            n_files=94,
-            n_events=13040044,
+            n_files=67,
+            n_events=15289548,
         ),
     ),
 )
@@ -279,8 +279,8 @@ cpn.add_dataset(
             keys=[
                 "/DYto2L-4Jets_MLL-50_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
             ],
-            n_files=121,
-            n_events=14194783,
+            n_files=76,
+            n_events=14740579,
         ),
     ),
 )
@@ -293,8 +293,8 @@ cpn.add_dataset(
             keys=[
                 "/DYto2L-4Jets_MLL-50_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
             ],
-            n_files=114,
-            n_events=9139978,
+            n_files=71,
+            n_events=8393375,
         ),
     ),
 )
@@ -307,8 +307,8 @@ cpn.add_dataset(
             keys=[
                 "/DYto2L-4Jets_MLL-50_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
             ],
-            n_files=107,
-            n_events=3202454,
+            n_files=74,
+            n_events=2890434,
         ),
     ),
 )
