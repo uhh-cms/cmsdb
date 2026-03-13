@@ -1,7 +1,8 @@
 # coding: utf-8
 
 """
-Minimal set of external information and helpers to access cross sections extracted from stitching methods.
+Minimal set of external information and helpers to access branching ratios and cross sections extracted from stitching
+methods.
 """
 
 from __future__ import annotations
@@ -12,25 +13,31 @@ import fnmatch
 from scinum import Number
 
 
-def _get_stitched_xsec(xsecs: dict[str, Number], name: str, ecm: float, *process_patterns: str) -> Number:
-    if ecm != 13.6:
-        raise NotImplementedError(f"ecm {ecm} not existing for stitched DY xsecs")
+def _get_stitched_sum(
+    values: dict[str, Number],
+    name: str,
+    target_ecm: float,
+    ecm: float,
+    *process_patterns: str,
+) -> Number:
+    if ecm != target_ecm:
+        raise NotImplementedError(f"ecm {ecm} not existing for stitched {name} values")
 
     # start with zero
-    xsec = Number(0.0)
+    val = Number(0.0)
 
     # loop over processes and compare patterns
-    for proc, _xsec in xsecs.items():
+    for proc, _val in values.items():
         if any(fnmatch.fnmatch(proc, pattern) for pattern in process_patterns):
             # add with uncorrelated uncertainties
-            xsec.add(_xsec, rho=0.0, inplace=True)
+            val.add(_val, rho=0.0, inplace=True)
 
-    return xsec
+    return val
 
 
 # retrieved in 2022preEE from inclusive and exclusive samples, checking LHE-level quantities and comparing
 # mc weight sum ratios
-_dy_lep_m50toinf_13p6_xsecs = {
+_dy_lep_m50toinf_13p6_brs = {
     "dy_ee_m50toinf_0j": Number(0.263901, 7.9e-05j),
     "dy_ee_m50toinf_1j_pt0to40": Number(0.0236902, 0.000165j),
     "dy_ee_m50toinf_1j_pt40to100": Number(0.0241268, 0.000133j),
@@ -71,9 +78,9 @@ _dy_lep_m50toinf_13p6_xsecs = {
     "dy_tautau_m50toinf_2j_pt400to600": Number(2.21629e-05, 0.003084j),
     "dy_tautau_m50toinf_2j_pt600toinf": Number(3.75471e-06, 0.007865j),
 }
-get_stitched_dy_m50toinf_xsec = functools.partial(_get_stitched_xsec, _dy_lep_m50toinf_13p6_xsecs, "DY")
+get_stitched_dy_m50toinf_br = functools.partial(_get_stitched_sum, _dy_lep_m50toinf_13p6_brs, "DY", 0.0, 0.0)
 
-_w_lnu_13p6_xsecs = {
+_w_lnu_13p6_brs = {
     "w_lnu_0j": Number(0.808247, 2.2e-05j),
     "w_lnu_1j_pt0to40": Number(0.0688332, 0.000139j),
     "w_lnu_1j_pt40to100": Number(0.0645822, 0.000141j),
@@ -88,4 +95,4 @@ _w_lnu_13p6_xsecs = {
     "w_lnu_2j_pt400to600": Number(4.87396e-05, 0.003524j),
     "w_lnu_2j_pt600toinf": Number(8.27863e-06, 0.008918j),
 }
-get_stitched_w_lnu_xsec = functools.partial(_get_stitched_xsec, _w_lnu_13p6_xsecs, "W->lnu")
+get_stitched_w_lnu_br = functools.partial(_get_stitched_sum, _w_lnu_13p6_brs, "W->lnu", 0.0, 0.0)
