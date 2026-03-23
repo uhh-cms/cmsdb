@@ -460,16 +460,16 @@ cpn.add_dataset(
     n_events=349_164_447,
 )
 
-cpn.add_dataset(
-    name="dy_tautau_m50toinf_0j_amcatnlo",
-    id=15411600,
-    processes=[procs.dy_tautau_m50toinf_0j],
-    keys=[
-        "/DYto2Tau-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
-    ],
-    n_files=2_666,
-    n_events=493_132_017,
-)
+# cpn.add_dataset(
+#     name="dy_tautau_m50toinf_0j_amcatnlo",
+#     id=15411600,
+#     processes=[procs.dy_tautau_m50toinf_0j],
+#     keys=[
+#         "/DYto2Tau-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
+#     ],
+#     n_files=2_666,
+#     n_events=493_132_017,
+# )
 
 # 1j missing: https://cms-pdmv-prod.web.cern.ch/grasp/samples?dataset_query=DYto2Tau-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8&campaign=Phase2Spring23*GS,Run3Summer22*GS,Run3Summer23*GS,Run3Winter22*GS,Run3Winter23*GS,Run3Winter24*GS,Run3Winter25*GS,RunIII2024Summer24*GS,RunIISummer20UL16*GEN,RunIISummer20UL16*GENAPV,RunIISummer20UL17*GEN,RunIISummer20UL18*GEN # noqa
 # 2j missing: not requested yet?

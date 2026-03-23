@@ -189,11 +189,23 @@ cpn.add_dataset(
     n_events=2_999_000,
 )
 
-# missing
-# cpn.add_dataset(
-#     name="ttz_zqq_amcatnlo",
-#     ...
-# )
+cpn.add_dataset(
+    name="ttz_zqq_amcatnlo",
+    id=15437649,
+    processes=[procs.ttz_zqq],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=65,  # 65-0
+            n_events=4078419,
+        ),
+    ),
+)
 
 cpn.add_dataset(
     name="ttz_zll_m4to50_amcatnlo",
@@ -669,8 +681,20 @@ cpn.add_dataset(
 # 4 top
 #
 
-# missing
-# cpn.add_dataset(
-#     name="tttt_amcatnlo",
-#     ...
-# )
+cpn.add_dataset(
+    name="tttt_amcatnlo",
+    id=15529183,
+    processes=[procs.tttt],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTTT_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=101,  # 101-0
+            n_events=9776800,
+        ),
+    ),
+)
