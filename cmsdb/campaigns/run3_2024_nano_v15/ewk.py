@@ -483,16 +483,16 @@ cpn.add_dataset(
     n_events=349_164_447,
 )
 
-cpn.add_dataset(
-    name="dy_tautau_m50toinf_0j_amcatnlo",
-    id=15411600,
-    processes=[procs.dy_tautau_m50toinf_0j],
-    keys=[
-        "/DYto2Tau-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
-    ],
-    n_files=2_666,
-    n_events=493_132_017,
-)
+# cpn.add_dataset(
+#     name="dy_tautau_m50toinf_0j_amcatnlo",
+#     id=15411600,
+#     processes=[procs.dy_tautau_m50toinf_0j],
+#     keys=[
+#         "/DYto2Tau-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
+#     ],
+#     n_files=2_666,
+#     n_events=493_132_017,
+# )
 
 cpn.add_dataset(
     name="dy_tautau_m50toinf_1j_amcatnlo",
