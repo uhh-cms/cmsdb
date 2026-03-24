@@ -30,6 +30,23 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_mu_d2",
+    name="data_mu_d1",
+    id=14787767,
+    processes=[procs.data_mu],
+    keys=[
+        "/Muon0/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
+        "/Muon1/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
+    ],
+    n_files=125 + 100,
+    n_events=100291308 + 100281976,
+    is_data=True,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_d2",
     id=14787686,  # id from Muon0 dataset
     is_data=True,
     processes=[procs.data_mu],
@@ -142,6 +159,42 @@ cpn.add_dataset(
     ],
     n_files=11,
     n_events=3751587,
+    is_data=True,
+    aux={
+        "era": "D",
+    },
+)
+
+#
+# JetMET
+#
+
+cpn.add_dataset(
+    name="data_jethtmet_d1",
+    id=14787276,
+    processes=[procs.data_jethtmet],
+    keys=[
+        "/JetMET0/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
+        "/JetMET1/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
+    ],
+    n_files=70 + 80,
+    n_events=61507467 + 61491693,
+    is_data=True,
+    aux={
+        "era": "D",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jethtmet_d2",
+    id=14787323,
+    processes=[procs.data_jethtmet],
+    keys=[
+        "/JetMET0/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa
+        "/JetMET1/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa
+    ],
+    n_files=22 + 25,
+    n_events=13254510 + 13252102,
     is_data=True,
     aux={
         "era": "D",

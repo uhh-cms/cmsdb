@@ -26,8 +26,10 @@ campaign_run3_2023_preBPix_nano_uhh_v14 = Campaign(
         "custom": {
             "name": "run3_2023_preBPix_nano_uhh_v14",
             "creator": "uhh",
-            "location": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/bwieders/nanogen_store/MergeNano/config_23pre_v14/prod1",  # noqa
             "nanogen_version": "prod1",
+            "locations": {
+                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/bwieders/nanogen_store/MergeNano/config_23pre_v14/prod1",  # noqa
+            },
         },
     },
     tags={"preBPix"},
@@ -40,5 +42,6 @@ import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.top  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.ewk  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.higgs  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.hh2bbtautau  # noqa
+import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.hh2bbvv  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.hhh4b2tau  # noqa
 import cmsdb.campaigns.run3_2023_preBPix_nano_uhh_v14.hh2ml  # noqa

@@ -54,6 +54,49 @@ cpn.add_dataset(
 )
 
 #
+# MuonEG
+#
+
+cpn.add_dataset(
+    name="data_muoneg_c",
+    id=14784124,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022C-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=16,
+    n_events=15_768_439,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+        },
+        "era": "C",
+        "jec_era": "RunCD",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_d",
+    id=14784162,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022D-22Sep2023_NanoAODv14UHH-v1/NANOAOD",
+    ],
+    n_files=9,
+    n_events=8_007_031,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+        "era": "D",
+        "jec_era": "RunCD",
+    },
+)
+
+
+#
 # E/Gamma
 #
 

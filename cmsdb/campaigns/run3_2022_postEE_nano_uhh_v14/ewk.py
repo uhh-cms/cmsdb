@@ -278,7 +278,7 @@ cpn.add_dataset(
 )
 
 #
-# Drell-Yan NNLO
+# Drell-Yan powheg
 #
 
 # 2 e
@@ -776,6 +776,111 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 13,
+        },
+    },
+)
+
+#
+# Drell-Yan amcatnlo, tautau reprocessed in njet bins
+#
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_0j_amcatnlo",
+    id=15364990,
+    processes=[procs.dy_tautau_m50toinf_0j],
+    keys=[
+        "/DYto2Tau-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EEMiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=121,
+    n_events=125_936_677,
+    aux={
+        "merging_factors": {
+            "nominal": 19,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_1j_amcatnlo",
+    id=15366207,
+    processes=[procs.dy_tautau_m50toinf_1j],
+    keys=[
+        "/DYto2Tau-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EEMiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=239,
+    n_events=186_908_781,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_2j_amcatnlo",
+    id=15368956,
+    processes=[procs.dy_tautau_m50toinf_2j],
+    keys=[
+        "/DYto2Tau-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EEMiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=585,
+    n_events=371_596_298,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+#
+# Drell-Yan amcatnlo, tautau reprocessed in njet bins, filtered to some tautau kinematic phase space
+# (see fragment in https://cms-pdmv-prod.web.cern.ch/mcm/requests?prepid=HIG-Run3Summer22EEwmLHEGS-01476&page=0&shown=140737488355327)  # noqa
+#
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_0j_filtered_amcatnlo",
+    id=15368545,
+    processes=[procs.dy_tautau_m50toinf_0j_filtered],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_0J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EEMiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=55,
+    n_events=43_864_206,
+    aux={
+        "merging_factors": {
+            "nominal": 17,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_1j_filtered_amcatnlo",
+    id=15363805,
+    processes=[procs.dy_tautau_m50toinf_1j_filtered],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_1J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EEMiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=104,
+    n_events=66_688_589,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_tautau_m50toinf_2j_filtered_amcatnlo",
+    id=15364952,
+    processes=[procs.dy_tautau_m50toinf_2j_filtered],
+    keys=[
+        "/DYto2Tau-2Jets_M-50_2J_Filtered_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EEMiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=229,
+    n_events=116_750_138,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
         },
     },
 )

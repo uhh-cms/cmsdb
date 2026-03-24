@@ -94,9 +94,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_ggf_hbb_htt_kl1_kt1_c20p10_powheg",
+    name="hh_ggf_hbb_htt_kl1_kt1_c20p1_powheg",
     id=14800226,
-    processes=[procs.hh_ggf_hbb_htt_kl1_kt1_c20p10],
+    processes=[procs.hh_ggf_hbb_htt_kl1_kt1_c20p1],
     keys=[
         "/GluGlutoHHto2B2Tau_kl-1p00_kt-1p00_c2-0p10_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EEMiniAODv4_NanoAODv12UHH-Poisson60KeepRAW_130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
@@ -226,9 +226,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96_madgraph",
+    name="hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96_madgraph",
     id=14877436,
-    processes=[procs.hh_vbf_hbb_htt_kvm2p12_k2v3p87_klm5p96],
+    processes=[procs.hh_vbf_hbb_htt_kv2p12_k2v3p87_klm5p96],
     keys=[
         "/VBFHHto2B2Tau_CV-m2p12_C2V-3p87_C3-m5p96_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EEMiniAODv4_NanoAODv12UHH-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],

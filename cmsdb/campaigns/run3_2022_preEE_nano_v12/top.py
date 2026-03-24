@@ -24,8 +24,8 @@ cpn.add_dataset(
             keys=[
                 "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
             ],
-            n_files=187 - 62,  # 62 files are missing 07.08.25
-            n_events=87986940,
+            n_files=125,
+            n_events=49771670,
         ),
         extension=DatasetInfo(
             keys=[
@@ -543,8 +543,8 @@ cpn.add_dataset(
                 "/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
 
             ],
-            n_files=50,
-            n_events=4407845,
+            n_files=49,
+            n_events=4366467,
         ),
         extension=DatasetInfo(
             keys=[
@@ -763,8 +763,8 @@ cpn.add_dataset(
             keys=[
                 "/TbarWplusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
             ],
-            n_files=26 - 2,  # 2 files are missing 07.08.25
-            n_events=2465972,
+            n_files=24,
+            n_events=2327688,
         ),
         extension=DatasetInfo(
             keys=[
@@ -1101,6 +1101,51 @@ cpn.add_dataset(
 #         ),
 #     ),
 # )
+
+cpn.add_dataset(
+    name="ttz_zll_m4to50_amcatnlo",
+    id=14793929,
+    processes=[procs.ttz_zll_m4to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=25,
+            n_events=300000,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="ttz_zll_m50toinf_amcatnlo",
+    id=14793589,
+    processes=[procs.ttz_zll_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=28,
+            n_events=400000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttw_amcatnlo",
+    id=14836097,
+    processes=[procs.ttw],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=1,
+            n_events=111308,
+        ),
+    ),
+)
+
 cpn.add_dataset(
     name="ttzz_madgraph",
     id=14800072,
@@ -1127,6 +1172,23 @@ cpn.add_dataset(
             ],
             n_files=23,
             n_events=448443,
+        ),
+    ),
+)
+cpn.add_dataset(
+    name="ttwz_madgraph",
+    id=15006953,
+    processes=[procs.ttwz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTWZ_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=21,  # 21-0
+            n_events=272400,
         ),
     ),
 )

@@ -16,6 +16,51 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 
 
 cpn.add_dataset(
+    name="data_doublemu_a",
+    id=14783253,
+    is_data=True,
+    processes=[procs.data_doublemu],
+    keys=[
+        "/DoubleMuon/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=4,
+    n_events=25309,
+    aux={
+        "era": "A",
+    },
+)
+
+cpn.add_dataset(
+    name="data_doublemu_b",
+    id=14784149,
+    is_data=True,
+    processes=[procs.data_doublemu],
+    keys=[
+        "/DoubleMuon/Run2022B-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=7,
+    n_events=929009,
+    aux={
+        "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_doublemu_c",
+    id=14784138,
+    is_data=True,
+    processes=[procs.data_doublemu],
+    keys=[
+        "/DoubleMuon/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=12,
+    n_events=4646904,
+    aux={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
     name="data_mu_c",
     id=14784127,
     is_data=True,
