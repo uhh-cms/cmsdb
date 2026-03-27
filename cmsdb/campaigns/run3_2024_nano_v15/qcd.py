@@ -180,6 +180,174 @@ cpn.add_dataset(
     n_events=27_404_416,
 )
 
+cpn.add_dataset(
+    name="qcd_em_pt15to20_pythia",
+    id=15533112,
+    processes=[procs.qcd_em_pt15to20],
+    keys=[
+        "/QCD_Bin-PT-15to20_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=193,  # 193-0
+    n_events=31078562,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt20to30_pythia",
+    id=15533221,
+    processes=[procs.qcd_em_pt20to30],
+    keys=[
+        "/QCD_Bin-PT-20to30_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=175,  # 175-0
+    n_events=27305022,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt30to50_pythia",
+    id=15533148,
+    processes=[procs.qcd_em_pt30to50],
+    keys=[
+        "/QCD_Bin-PT-30to50_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=198,  # 198-0
+    n_events=29008060,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt50to80_pythia",
+    id=15533151,
+    processes=[procs.qcd_em_pt50to80],
+    keys=[
+        "/QCD_Bin-PT-50to80_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=218,  # 218-0
+    n_events=29059468,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt80to120_pythia",
+    id=15533309,
+    processes=[procs.qcd_em_pt80to120],
+    keys=[
+        "/QCD_Bin-PT-80to120_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=208,  # 208-0
+    n_events=29437751,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt120to170_pythia",
+    id=15533119,
+    processes=[procs.qcd_em_pt120to170],
+    keys=[
+        "/QCD_Bin-PT-120to170_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=213,  # 213-0
+    n_events=27584498,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt170to300_pythia",
+    id=15533528,
+    processes=[procs.qcd_em_pt170to300],
+    keys=[
+        "/QCD_Bin-PT-170to300_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=231,  # 231-0
+    n_events=29515968,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt300to470_pythia",
+    id=15533244,
+    processes=[procs.qcd_em_pt300to470],
+    keys=[
+        "/QCD_Bin-PT-300to470_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=181,  # 181-0
+    n_events=30174212,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt470to600_pythia",
+    id=15533253,
+    processes=[procs.qcd_em_pt470to600],
+    keys=[
+        "/QCD_Bin-PT-470to600_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=214,  # 214-0
+    n_events=34732273,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt600to800_pythia",
+    id=15533455,
+    processes=[procs.qcd_em_pt600to800],
+    keys=[
+        "/QCD_Bin-PT-600to800_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=249,  # 249-0
+    n_events=32404726,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt800to1000_pythia",
+    id=15533186,
+    processes=[procs.qcd_em_pt800to1000],
+    keys=[
+        "/QCD_Bin-PT-800to1000_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=243,  # 243-0
+    n_events=32040195,
+)
+
+cpn.add_dataset(
+    name="qcd_em_pt1000toinf_pythia",
+    id=15533157,
+    processes=[procs.qcd_em_pt1000toinf],
+    keys=[
+        "/QCD_Bin-PT-1000_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+    ],
+    aux={
+        "broken_files": [],
+    },
+    n_files=182,  # 182-0
+    n_events=22920551,
+)
+
 # ht-binned
 cpn.add_dataset(
     name="qcd_ht40to70_madgraph",

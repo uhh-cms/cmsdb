@@ -69,7 +69,13 @@ __all__ = [
     "qcd_em_pt120to170",
     "qcd_em_pt170to300",
     "qcd_em_pt300toinf",
+    # different bins
     "qcd_em_pt10to30",
+    "qcd_em_pt300to470",
+    "qcd_em_pt470to600",
+    "qcd_em_pt600to800",
+    "qcd_em_pt800to1000",
+    "qcd_em_pt1000toinf",
     "qcd_bctoe",
     "qcd_bctoe_pt15to20",
     "qcd_bctoe_pt20to30",
@@ -200,45 +206,45 @@ qcd_ht2000toinf = qcd.add_process(
     },
 )
 
-qcd_ht40to70 = qcd.add_process(
-    name="qcd_ht40to70",
-    id=31010,
-)
+# qcd_ht40to70 = qcd.add_process(
+#     name="qcd_ht40to70",
+#     id=31010,
+# )
 
-qcd_ht70to100 = qcd.add_process(
-    name="qcd_ht70to100",
-    id=31011,
-)
+# qcd_ht70to100 = qcd.add_process(
+#     name="qcd_ht70to100",
+#     id=31011,
+# )
 
-qcd_ht200to400 = qcd.add_process(
-    name="qcd_ht200to400",
-    id=31012,
-)
+# qcd_ht200to400 = qcd.add_process(
+#     name="qcd_ht200to400",
+#     id=31012,
+# )
 
-qcd_ht400to600 = qcd.add_process(
-    name="qcd_ht400to600",
-    id=31013,
-)
+# qcd_ht400to600 = qcd.add_process(
+#     name="qcd_ht400to600",
+#     id=31013,
+# )
 
-qcd_ht600to800 = qcd.add_process(
-    name="qcd_ht600to800",
-    id=31014,
-)
+# qcd_ht600to800 = qcd.add_process(
+#     name="qcd_ht600to800",
+#     id=31014,
+# )
 
-qcd_ht800to1000 = qcd.add_process(
-    name="qcd_ht800to1000",
-    id=31015,
-)
+# qcd_ht800to1000 = qcd.add_process(
+#     name="qcd_ht800to1000",
+#     id=31015,
+# )
 
-qcd_ht1000to1200 = qcd.add_process(
-    name="qcd_ht1000to1200",
-    id=31016,
-)
+# qcd_ht1000to1200 = qcd.add_process(
+#     name="qcd_ht1000to1200",
+#     id=31016,
+# )
 
-qcd_ht1200to1500 = qcd.add_process(
-    name="qcd_ht1200to1500",
-    id=31017,
-)
+# qcd_ht1200to1500 = qcd.add_process(
+#     name="qcd_ht1200to1500",
+#     id=31017,
+# )
 
 #
 # QCD HT-binned (Run 3)
@@ -656,6 +662,46 @@ qcd_em_pt10to30 = qcd_em.add_process(
     id=31209,
     xsecs={
         13.6: Number(6854000.0, {"tot": 68270.0}),
+    },
+)
+
+qcd_em_pt300to470 = qcd_em.add_process(
+    name="qcd_em_pt300to470",
+    id=31210,
+    xsecs={
+        13.6: Number(1116.0, {"tot": 1.052}),
+    },
+)
+
+qcd_em_pt470to600 = qcd_em.add_process(
+    name="qcd_em_pt470to600",
+    id=31211,
+    xsecs={
+        13.6: Number(82.76, {"tot": 0.07835}),
+    },
+)
+
+qcd_em_pt600to800 = qcd_em.add_process(
+    name="qcd_em_pt600to800",
+    id=31212,
+    xsecs={
+        13.6: Number(21.62, {"tot": 0.02058}),
+    },
+)
+
+qcd_em_pt800to1000 = qcd_em.add_process(
+    name="qcd_em_pt800to1000",
+    id=31213,
+    xsecs={
+        13.6: Number(3.361, {"tot": 0.003213}),
+    },
+)
+
+qcd_em_pt1000toinf = qcd_em.add_process(
+    name="qcd_em_pt1000toinf",
+    id=31214,
+    xsecs={
+        13.6: Number(1.02, {"tot": 0.0009792}),
     },
 )
 

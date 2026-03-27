@@ -45,41 +45,6 @@ cpn.add_dataset(
     },
 )
 
-
-cpn.add_dataset(
-    name="data_mu_c1",
-    id=14787055,
-    processes=[procs.data_mu],
-    keys=[
-        "/Muon0/Run2023C-22Sep2023_v1-v1/NANOAOD",  # noqa
-        "/Muon1/Run2023C-22Sep2023_v1-v1/NANOAOD",  # noqa
-    ],
-    n_files=90 + 73,
-    n_events=54715896 + 54698315,
-    is_data=True,
-    aux={
-        "era": "C",
-        "jec_era": "RunCv123",
-    },
-)
-
-cpn.add_dataset(
-    name="data_mu_c2",
-    id=14787019,
-    processes=[procs.data_mu],
-    keys=[
-        "/Muon0/Run2023C-22Sep2023_v2-v1/NANOAOD",  # noqa
-        "/Muon1/Run2023C-22Sep2023_v2-v1/NANOAOD",  # noqa
-    ],
-    n_files=31 + 33,
-    n_events=17063451 + 17059895,
-    is_data=True,
-    aux={
-        "era": "C",
-        "jec_era": "RunCv123",
-    },
-)
-
 cpn.add_dataset(
     name="data_mu_c3",
     id=14787140,

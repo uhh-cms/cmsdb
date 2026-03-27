@@ -30,23 +30,6 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_mu_d2",
-    name="data_mu_d1",
-    id=14787767,
-    processes=[procs.data_mu],
-    keys=[
-        "/Muon0/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
-        "/Muon1/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
-    ],
-    n_files=125 + 100,
-    n_events=100291308 + 100281976,
-    is_data=True,
-    aux={
-        "era": "D",
-    },
-)
-
-cpn.add_dataset(
-    name="data_mu_d2",
     id=14787686,  # id from Muon0 dataset
     is_data=True,
     processes=[procs.data_mu],

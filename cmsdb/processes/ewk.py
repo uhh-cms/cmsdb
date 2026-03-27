@@ -39,12 +39,15 @@ __all__ = [  # noqa: F822
     "dy_ee_m10to50", "dy_ee_m50toinf", "dy_ee_m50to120", "dy_ee_m120to200", "dy_ee_m200to400",
     "dy_ee_m400to800", "dy_ee_m800to1500", "dy_ee_m1500to2500", "dy_ee_m2500to4000",
     "dy_ee_m4000to6000", "dy_ee_m6000toinf",
+    "dy_4j_ee_m50toinf",
     "dy_mumu_m10to50", "dy_mumu_m50toinf", "dy_mumu_m50to120", "dy_mumu_m120to200", "dy_mumu_m200to400",
     "dy_mumu_m400to800", "dy_mumu_m800to1500", "dy_mumu_m1500to2500", "dy_mumu_m2500to4000",
     "dy_mumu_m4000to6000", "dy_mumu_m6000toinf",
+    "dy_4j_mumu_m50toinf",
     "dy_tautau_m10to50", "dy_tautau_m50toinf", "dy_tautau_m50to120", "dy_tautau_m120to200", "dy_tautau_m200to400",
     "dy_tautau_m400to800", "dy_tautau_m800to1500", "dy_tautau_m1500to2500", "dy_tautau_m2500to4000",
     "dy_tautau_m4000to6000", "dy_tautau_m6000toinf",
+    "dy_4j_tautau_m50toinf",
     *[
         f"dy_{ll}_m50toinf_{nj}j"
         for ll in ["ee", "mumu", "tautau"]
@@ -1134,6 +1137,19 @@ dy_ee_m6000toinf = dy_ee_m50toinf.add_process(
     },
 )
 
+dy_4j_ee_m50toinf = dy.add_process(
+    name="dy_4j_ee_m50toinf",
+    id=51900,
+    xsecs={
+        13.6: Number(5481.0, {"tot": 13.23}),  # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?searchQuery=process_name%3DDYto2E-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8 # noqa
+    },
+    aux={
+        "lep_id": 11,
+        "mll": (50.0, const.inf),
+        "njets": (4, const.inf),
+    },
+)
+
 # normalize ee mll bins to nnlo expectation from inclusive m50toinf / 3
 dy_ee_m_procs = [
     dy_ee_m50to120,
@@ -1305,6 +1321,19 @@ dy_mumu_m6000toinf = dy_mumu_m50toinf.add_process(
     },
 )
 
+dy_4j_mumu_m50toinf = dy.add_process(
+    name="dy_4j_mumu_m50toinf",
+    id=51910,
+    xsecs={
+        13.6: Number(5447.0, {"tot": 13.17}),  # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2Mu-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8 # noqa
+    },
+    aux={
+        "lep_id": 13,
+        "mll": (50.0, const.inf),
+        "njets": (4, const.inf),
+    },
+)
+
 # normalize mumu mll bins to nnlo expectation from inclusive m50toinf / 3
 dy_mumu_m_procs = [
     dy_mumu_m50to120,
@@ -1473,6 +1502,19 @@ dy_tautau_m6000toinf = dy_tautau_m50toinf.add_process(
     aux={
         "lep_id": 15,
         "mll": (6000.0, const.inf),
+    },
+)
+
+dy_4j_tautau_m50toinf = dy.add_process(
+    name="dy_4j_tautau_m50toinf",
+    id=51920,
+    xsecs={
+        13.6: Number(5441.0, {"tot": 13.16}),  # https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DDYto2Tau-4Jets_Bin-MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8 # noqa
+    },
+    aux={
+        "lep_id": 15,
+        "mll": (50.0, const.inf),
+        "njets": (4, const.inf),
     },
 )
 
