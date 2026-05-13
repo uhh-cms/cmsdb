@@ -276,10 +276,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
             ],
-            n_files=349,
-            n_events=154413937,
+            n_files=1473,
+            n_events=146779695,
         ),
     ),
 )
@@ -290,10 +290,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-50_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
             ],
-            n_files=84,
-            n_events=14552563,
+            n_files=137,
+            n_events=15216450,
         ),
     ),
 )
@@ -304,10 +304,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-50_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
             ],
-            n_files=67,
-            n_events=14777208,
+            n_files=126,
+            n_events=15269289,
         ),
     ),
 )
@@ -318,10 +318,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-50_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-50_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
             ],
-            n_files=72,
-            n_events=8672888,
+            n_files=155,
+            n_events=8842997,
         ),
     ),
 )
@@ -332,10 +332,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-50_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-50_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
             ],
-            n_files=71,
-            n_events=3278755,
+            n_files=78,
+            n_events=2770615,
         ),
     ),
 )
