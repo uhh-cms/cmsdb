@@ -4,6 +4,7 @@
 Higgs datasets for the 2024 data-taking campaign with datasets at NanoAOD tier in version 15.
 """
 
+from order import DatasetInfo
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
 
@@ -261,6 +262,24 @@ cpn.add_dataset(
 #
 
 # tba
+
+cpn.add_dataset(
+    name="thw_madgraph",
+    id=15539363,
+    processes=[procs.thw],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/THW-5FS-ctcvcp_Par-M-125_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=267,  # 267-0
+            n_events=14995985,
+        ),
+    ),
+)
 
 #
 # ttVH
