@@ -127,47 +127,36 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="dy_m50toinf_1j_madgraph",
-    id=14986094,
-    processes=[procs.dy_m50toinf_1j],
+    name="dy_ee_m10to50_madgraph",
+    id=15490161,
+    processes=[procs.dy_ee_m10to50],
     keys=[
-        "/DYto2L-4Jets_MLL-50_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v2/NANOAODSIM",  # noqa: E501
+        "/DYto2E-4Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
     ],
-    n_files=96,  # 96-0
-    n_events=14879937,
+    n_files=2425,  # 2425-0
+    n_events=403551955,
 )
 
 cpn.add_dataset(
-    name="dy_m50toinf_2j_madgraph",
-    id=14986209,
-    processes=[procs.dy_m50toinf_2j],
+    name="dy_mumu_m10to50_madgraph",
+    id=15476126,
+    processes=[procs.dy_mumu_m10to50],
     keys=[
-        "/DYto2L-4Jets_MLL-50_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v2/NANOAODSIM",  # noqa: E501
+        "/DYto2Mu-4Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
     ],
-    n_files=104,  # 104-0
-    n_events=14712856,
+    n_files=3080,  # 3080-0
+    n_events=465720002,
 )
 
 cpn.add_dataset(
-    name="dy_m50toinf_3j_madgraph",
-    id=14986860,
-    processes=[procs.dy_m50toinf_3j],
+    name="dy_tautau_m10to50_madgraph",
+    id=15479911,
+    processes=[procs.dy_tautau_m10to50],
     keys=[
-        "/DYto2L-4Jets_MLL-50_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v2/NANOAODSIM",  # noqa: E501
+        "/DYto2Tau-4Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
     ],
-    n_files=68,  # 68-0
-    n_events=9176837,
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_4j_madgraph",
-    id=14986576,
-    processes=[procs.dy_m50toinf_4j],
-    keys=[
-        "/DYto2L-4Jets_MLL-50_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=32,  # 32-0
-    n_events=2830240,
+    n_files=2951,  # 2951-0
+    n_events=487548385,
 )
 
 # tautau filtered, inclusive and in jet bins
