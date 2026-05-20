@@ -257,6 +257,24 @@ cpn.add_dataset(
     n_events=53_980_865,
 )
 
+cpn.add_dataset(
+    name="bbh_htt_powheg",
+    id=15350425,
+    processes=[procs.bbh_htt],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/BBH-Hto2Tau_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=31,  # 31-0
+            n_events=1754262,
+        ),
+    ),
+)
+
 #
 # tH
 #
