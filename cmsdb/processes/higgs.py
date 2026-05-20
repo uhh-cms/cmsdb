@@ -1406,7 +1406,7 @@ bbh = h.add_process(
             "scale_pdf": (0.202j, 0.239j),
         }),
         13.6: Number(0.4385, {  # value for mH=125 GeV from xsdb, previously 0.5269 was used
-            #"scale_pdf": (0.201j, 0.240j),
+            # "scale_pdf": (0.201j, 0.240j),
             "tot": 0.003563,
         }),  # TODO: only preliminary
     },

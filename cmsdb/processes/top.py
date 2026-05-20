@@ -169,7 +169,7 @@ tt_b = tt.add_process(
     label=r"$t\bar{t} (+b)$",
     color=(205, 0, 9),
     xsecs={
-        13.6: Number((16.14/2), {
+        13.6: Number((16.14 / 2), {
             # "scale": (22.6, 33.4), # TODO: update
             # "pdf": 22.8,
             # "mtop": (25.4, 24.6),
@@ -182,7 +182,7 @@ tt_2b = tt.add_process(
     label=r"$t\bar{t} (+b (g))$",
     color=(205, 0, 9),
     xsecs={
-        13.6: Number((16.14/2), {
+        13.6: Number((16.14 / 2), {
             # "scale": (22.6, 33.4), # TODO: update
             # "pdf": 22.8,
             # "mtop": (25.4, 24.6),
@@ -364,7 +364,7 @@ ttbb_b = ttbb.add_process(
     label=r"$t\bar{t} (+ 1b)$",
     color=(205, 0, 9),
     xsecs={
-        13.6: Number((18.58/2), {
+        13.6: Number((18.58 / 2), {
             # "scale": (22.6, 33.4),
             # "pdf": 22.8,
             # "mtop": (25.4, 24.6),
@@ -377,7 +377,7 @@ ttbb_2b = ttbb.add_process(
     label=r"$t\bar{t} (+ 1b (g))$",
     color=(205, 0, 9),
     xsecs={
-        13.6: Number((18.58/2), {
+        13.6: Number((18.58 / 2), {
             # "scale": (22.6, 33.4),
             # "pdf": 22.8,
             # "mtop": (25.4, 24.6),
