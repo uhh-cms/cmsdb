@@ -255,7 +255,7 @@ __all__ = [
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
     # TODO: the following processes are not yet implemented in full combination
-    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb",
+    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb", "bbh_htt",
 ]
 
 
@@ -263,7 +263,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
-from cmsdb.util import add_xsecs, DotDict, add_decay_process, add_sub_decay_process
+from cmsdb.util import add_xsecs, DotDict, add_decay_process, add_sub_decay_process, multiply_xsecs
 
 ####################################################################################################
 #
@@ -1405,9 +1405,9 @@ bbh = h.add_process(
         13: Number(4.880E-01, {
             "scale_pdf": (0.202j, 0.239j),
         }),
-        13.6: Number(0.4385, {  # value for mH=125 GeV from xsdb, previously 0.5269 was used
-            # "scale_pdf": (0.201j, 0.240j),
-            "tot": 0.003563,
+        13.6: Number(0.5269, {  # value for mH=125 GeV from, 0.4385 on xsdb
+            "scale_pdf": (0.201j, 0.240j),
+            # "tot": 0.003563, (xsdb)
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
