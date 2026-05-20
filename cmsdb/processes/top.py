@@ -10,8 +10,14 @@ __all__ = [
     "ttbb",
     "ttbb_sl", "ttbb_dl", "ttbb_fh",
     "ttbb_1b", "ttbb_dl_1b", "ttbb_sl_1b", "ttbb_fh_1b",
+    "ttbb_b", "ttbb_dl_b", "ttbb_sl_b", "ttbb_fh_b",
+    "ttbb_2b", "ttbb_dl_2b", "ttbb_sl_2b", "ttbb_fh_2b",
+    "ttbb_bb", "ttbb_dl_bb", "ttbb_sl_bb", "ttbb_fh_bb",
     "ttbb_nonb", "ttbb_dl_nonb", "ttbb_sl_nonb", "ttbb_fh_nonb",
     "tt_1b", "tt_dl_1b", "tt_sl_1b", "tt_fh_1b",
+    "tt_b", "tt_dl_b", "tt_sl_b", "tt_fh_b",
+    "tt_2b", "tt_dl_2b", "tt_sl_2b", "tt_fh_2b",
+    "tt_bb", "tt_dl_bb", "tt_sl_bb", "tt_fh_bb",
     "tt_nonb", "tt_dl_nonb", "tt_sl_nonb", "tt_fh_nonb",
     "st",
     "st_tchannel", "st_tchannel_t", "st_tchannel_t_had", "st_tchannel_t_lep", "st_tchannel_tbar",
@@ -147,10 +153,49 @@ tt_fh_nonb = tt_fh.add_process(
 tt_1b = tt.add_process(
     name="tt_1b",
     id=1810,
-    label=r"$t\bar{t} (+b)$",
+    label=r"$t\bar{t} (+ \geq 1b)$",
     color=(205, 0, 9),
     xsecs={
         13.6: Number(19.71, {
+            # "scale": (22.6, 33.4), # TODO: update
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
+tt_b = tt.add_process(
+    name="tt_b",
+    id=1823,
+    label=r"$t\bar{t} (+b)$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number((16.14/2), {
+            # "scale": (22.6, 33.4), # TODO: update
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
+tt_2b = tt.add_process(
+    name="tt_2b",
+    id=1824,
+    label=r"$t\bar{t} (+b (g))$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number((16.14/2), {
+            # "scale": (22.6, 33.4), # TODO: update
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
+tt_bb = tt.add_process(
+    name="tt_bb",
+    id=1825,
+    label=r"$t\bar{t} (+2b)$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number(3.52, {
             # "scale": (22.6, 33.4), # TODO: update
             # "pdf": 22.8,
             # "mtop": (25.4, 24.6),
@@ -180,6 +225,78 @@ tt_fh_1b = tt_fh.add_process(
     label=r"$t\bar{t} (+b) (FH)$",
     color=(205, 0, 9),
     xsecs=multiply_xsecs(tt_1b, const.br_ww.fh),
+)
+
+tt_dl_b = tt_dl.add_process(
+    name="tt_dl_b",
+    id=1814,
+    label=r"$t\bar{t} (+b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_b, const.br_ww.dl),
+)
+
+tt_sl_b = tt_sl.add_process(
+    name="tt_sl_b",
+    id=1815,
+    label=r"$t\bar{t} (+b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_b, const.br_ww.sl),
+)
+
+tt_fh_b = tt_fh.add_process(
+    name="tt_fh_b",
+    id=1816,
+    label=r"$t\bar{t} (+b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_b, const.br_ww.fh),
+)
+
+tt_dl_2b = tt_dl.add_process(
+    name="tt_dl_2b",
+    id=1817,
+    label=r"$t\bar{t} (+b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_2b, const.br_ww.dl),
+)
+
+tt_sl_2b = tt_sl.add_process(
+    name="tt_sl_2b",
+    id=1818,
+    label=r"$t\bar{t} (+b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_2b, const.br_ww.sl),
+)
+
+tt_fh_2b = tt_fh.add_process(
+    name="tt_fh_2b",
+    id=1819,
+    label=r"$t\bar{t} (+b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_2b, const.br_ww.fh),
+)
+
+tt_dl_bb = tt_dl.add_process(
+    name="tt_dl_bb",
+    id=1820,
+    label=r"$t\bar{t} (+b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_bb, const.br_ww.dl),
+)
+
+tt_sl_bb = tt_sl.add_process(
+    name="tt_sl_bb",
+    id=1821,
+    label=r"$t\bar{t} (+b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_bb, const.br_ww.sl),
+)
+
+tt_fh_bb = tt_fh.add_process(
+    name="tt_fh_bb",
+    id=1822,
+    label=r"$t\bar{t} (+b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tt_bb, const.br_ww.fh),
 )
 
 #
@@ -241,6 +358,45 @@ ttbb_1b = ttbb.add_process(
         }),
     },
 )
+ttbb_b = ttbb.add_process(
+    name="ttbb_b",
+    id=1915,
+    label=r"$t\bar{t} (+ 1b)$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number((18.58/2), {
+            # "scale": (22.6, 33.4),
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
+ttbb_2b = ttbb.add_process(
+    name="ttbb_2b",
+    id=1916,
+    label=r"$t\bar{t} (+ 1b (g))$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number((18.58/2), {
+            # "scale": (22.6, 33.4),
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
+ttbb_bb = ttbb.add_process(
+    name="ttbb_bb",
+    id=1917,
+    label=r"$t\bar{t} (+ 2b)$",
+    color=(205, 0, 9),
+    xsecs={
+        13.6: Number(5.05, {
+            # "scale": (22.6, 33.4),
+            # "pdf": 22.8,
+            # "mtop": (25.4, 24.6),
+        }),
+    },
+)
 
 ttbb_dl_1b = ttbb_dl.add_process(
     name="ttbb_dl_1b",
@@ -264,6 +420,78 @@ ttbb_fh_1b = ttbb_fh.add_process(
     label=r"$t\bar{t} (+ \geq 1b) (FH)$",
     color=(205, 0, 9),
     xsecs=multiply_xsecs(ttbb_1b, const.br_ww.fh),
+)
+
+ttbb_dl_b = ttbb_dl.add_process(
+    name="ttbb_dl_b",
+    id=1918,
+    label=r"$t\bar{t} (+b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_b, const.br_ww.dl),
+)
+
+ttbb_sl_b = ttbb_sl.add_process(
+    name="ttbb_sl_b",
+    id=1919,
+    label=r"$t\bar{t} (+ b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_b, const.br_ww.sl),
+)
+
+ttbb_fh_b = ttbb_fh.add_process(
+    name="ttbb_fh_b",
+    id=1920,
+    label=r"$t\bar{t} (+b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_b, const.br_ww.fh),
+)
+
+ttbb_dl_2b = ttbb_dl.add_process(
+    name="ttbb_dl_2b",
+    id=1921,
+    label=r"$t\bar{t} (+b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_2b, const.br_ww.dl),
+)
+
+ttbb_sl_2b = ttbb_sl.add_process(
+    name="ttbb_sl_2b",
+    id=1922,
+    label=r"$t\bar{t} (+ b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_2b, const.br_ww.sl),
+)
+
+ttbb_fh_2b = ttbb_fh.add_process(
+    name="ttbb_fh_2b",
+    id=1923,
+    label=r"$t\bar{t} (+b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_2b, const.br_ww.fh),
+)
+
+ttbb_dl_bb = ttbb_dl.add_process(
+    name="ttbb_dl_bb",
+    id=1924,
+    label=r"$t\bar{t} (+b) (DL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_bb, const.br_ww.dl),
+)
+
+ttbb_sl_bb = ttbb_sl.add_process(
+    name="ttbb_sl_bb",
+    id=1925,
+    label=r"$t\bar{t} (+ b) (SL)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_bb, const.br_ww.sl),
+)
+
+ttbb_fh_bb = ttbb_fh.add_process(
+    name="ttbb_fh_bb",
+    id=1926,
+    label=r"$t\bar{t} (+b) (FH)$",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(ttbb_bb, const.br_ww.fh),
 )
 
 #
