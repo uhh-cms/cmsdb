@@ -1405,12 +1405,14 @@ bbh = h.add_process(
         13: Number(4.880E-01, {
             "scale_pdf": (0.202j, 0.239j),
         }),
-        13.6: Number(0.5269, {  # value for mH=125 GeV
-            "scale_pdf": (0.201j, 0.240j),
+        13.6: Number(0.4385, {  # value for mH=125 GeV from xsdb, previously 0.5269 was used
+            #"scale_pdf": (0.201j, 0.240j),
+            "tot": 0.003563,
         }),  # TODO: only preliminary
     },
     aux={"production_mode_parent": h},
 )
+bbh_htt = add_decay_process(bbh, h_decay_map.htt)
 
 ttvh = h.add_process(
     name="ttvh",
