@@ -263,7 +263,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
-from cmsdb.util import add_xsecs, DotDict, add_decay_process, add_sub_decay_process, multiply_xsecs
+from cmsdb.util import add_xsecs, DotDict, add_decay_process, add_sub_decay_process
 
 ####################################################################################################
 #
