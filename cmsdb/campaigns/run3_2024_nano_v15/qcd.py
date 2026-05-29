@@ -131,7 +131,9 @@ cpn.add_dataset(
         "/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
     ],
     aux={
-        "broken_files": ["/store/mc/RunIII2024Summer24NanoAODv15/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v2/2550000/a7d8632e-0a31-4d72-9d55-65df40527939.root"],
+        "broken_files": [
+            "/store/mc/RunIII2024Summer24NanoAODv15/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v2/2550000/a7d8632e-0a31-4d72-9d55-65df40527939.root",  # noqa: E501
+        ],
     },
     n_files=672,
     n_events=81_633_640,

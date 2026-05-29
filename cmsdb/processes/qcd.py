@@ -196,16 +196,16 @@ qcd_ht2000toinf = qcd.add_process(
 qcd_ht40to70 = qcd.add_process(
     name="qcd_ht40to70",
     id=31010,
-    xsecs={      
-        13.6: Number(312300000)
+    xsecs={
+        13.6: Number(312300000),
     },
 )
 
 qcd_ht70to100 = qcd.add_process(
     name="qcd_ht70to100",
     id=31011,
-    xsecs={      
-        13.6: Number(58470000)
+    xsecs={
+        13.6: Number(58470000),
     },
 )
 
@@ -403,7 +403,7 @@ qcd_mu = qcd.add_process(
 # https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt-15To20_MuEnrichedPt5_TuneCP5_13TeV-pythia8  # noqa
 # 13.6 TeV xsecs based on datasets QCD_PT-{i}to{j}_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8 (Run3Summer22)
 # https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_PT-15to20_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8  # noqa
-# update 170-300,470-600, 1000toinf https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Bin-PT-1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8 
+# update 170-300,470-600, 1000toinf https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Bin-PT-1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8  # noqa
 qcd_mu_pt15to20 = qcd_mu.add_process(
     name="qcd_mu_pt15to20",
     id=31101,
@@ -462,7 +462,7 @@ qcd_mu_pt170to300 = qcd_mu.add_process(
     id=31107,
     xsecs={
         13: Number(7019.0),
-        13.6: Number(7754.0)
+        13.6: Number(7754.0),
     },
 )
 
@@ -480,7 +480,7 @@ qcd_mu_pt470to600 = qcd_mu.add_process(
     id=31109,
     xsecs={
         13: Number(58.86),
-        13.6: Number(67.67)
+        13.6: Number(67.67),
     },
 )
 
@@ -507,7 +507,7 @@ qcd_mu_pt1000toinf = qcd_mu.add_process(
     id=31112,
     xsecs={
         13: Number(1.08),  # NOTE: not found via XSDB, taken from an old reference
-        13.6: Number(1.323)
+        13.6: Number(1.323),
     },
 )
 
