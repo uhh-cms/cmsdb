@@ -104,7 +104,7 @@ qcd_flat = Process(
 #
 # QCD HT-binned
 #
-# 13.6 TeV from XSDB:https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_Bin-HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8
+# 13.6 TeV from XSDB:https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD-4Jets_Bin-HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8  # noqa
 
 qcd_ht50to100 = qcd.add_process(
     name="qcd_ht50to100",
