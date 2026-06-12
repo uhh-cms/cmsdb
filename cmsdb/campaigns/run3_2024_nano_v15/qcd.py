@@ -4,6 +4,8 @@
 QCD datasets for the 2024 data-taking campaign with datasets at NanoAOD tier in version 15.
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
 
@@ -130,8 +132,13 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
     ],
-    n_files=673,
+    n_files=673 - 1,
     n_events=81_633_640,
+    aux={
+        "broken_files": [
+            "/store/mc/RunIII2024Summer24NanoAODv15/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v2/2550000/a7d8632e-0a31-4d72-9d55-65df40527939.root",
+        ],  # FIXME doesn't work like this..., I deleted the file from the LFN task output.
+    },
 )
 
 cpn.add_dataset(
@@ -468,4 +475,292 @@ cpn.add_dataset(
     ],
     n_files=221,
     n_events=91_953_615,
+)
+
+cpn.add_dataset(
+    name="qcd_pt600to800_pythia",
+    id=15315319,
+    processes=[procs.qcd_pt600to800],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-600to800_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=690,  # 690-0
+            n_events=79708520,
+        ),
+    ),
+)
+
+# cpn.add_dataset(
+#     name="qcd_pt15to20_pythia",
+#     id=15315874,
+#     processes=[procs.qcd_pt15to20],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/QCD_Bin-PT-15to20_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+#             ],
+#             aux={
+#                 "broken_files": [],
+#             },
+#             n_files=566,  # 566-0
+#             n_events=99984691,
+#         ),
+#     ),
+# )
+
+cpn.add_dataset(
+    name="qcd_pt470to600_pythia",
+    id=15316542,
+    processes=[procs.qcd_pt470to600],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-470to600_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=600,  # 600-0
+            n_events=77529080,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt50to80_pythia",
+    id=15315188,
+    processes=[procs.qcd_pt50to80],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-50to80_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=660,  # 660-0
+            n_events=97814968,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt2500to3000_pythia",
+    id=15315583,
+    processes=[procs.qcd_pt2500to3000],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-2500to3000_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=222,  # 222-0
+            n_events=19996725,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt300to470_pythia",
+    id=15315306,
+    processes=[procs.qcd_pt300to470],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-300to470_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=630,  # 630-0
+            n_events=79821382,
+        ),
+    ),
+)
+
+# cpn.add_dataset(
+#     name="qcd_pt20to30_pythia",
+#     id=15316550,
+#     processes=[procs.qcd_pt20to30],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/QCD_Bin-PT-20to30_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+#             ],
+#             aux={
+#                 "broken_files": [],
+#             },
+#             n_files=578,  # 578-0
+#             n_events=99972336,
+#         ),
+#     ),
+# )
+
+cpn.add_dataset(
+    name="qcd_pt1000to1500_pythia",
+    id=15315846,
+    processes=[procs.qcd_pt1000to1500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-1000to1500_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=621,  # 621-0
+            n_events=79974618,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt1500to2000_pythia",
+    id=15315893,
+    processes=[procs.qcd_pt1500to2000],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-1500to2000_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=225,  # 225-0
+            n_events=19997308,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt800to1000_pythia",
+    id=15315356,
+    processes=[procs.qcd_pt800to1000],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-800to1000_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=650,  # 650-0
+            n_events=79505640,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt3000toinf_pythia",
+    id=15315205,
+    processes=[procs.qcd_pt3000toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-3000_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=315,  # 315-0
+            n_events=19347697,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt30to50_pythia",
+    id=15315325,
+    processes=[procs.qcd_pt30to50],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-30to50_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=631,  # 631-0
+            n_events=99983302,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt120to170_pythia",
+    id=15316666,
+    processes=[procs.qcd_pt120to170],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-120to170_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=668,  # 668-0
+            n_events=99956202,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt80to120_pythia",
+    id=15315195,
+    processes=[procs.qcd_pt80to120],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-80to120_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=750,  # 750-0
+            n_events=99244066,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt2000to2500_pythia",
+    id=15315211,
+    processes=[procs.qcd_pt2000to2500],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-2000to2500_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=250,  # 250-0
+            n_events=19311060,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="qcd_pt170to300_pythia",
+    id=15316566,
+    processes=[procs.qcd_pt170to300],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-170to300_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=678,  # 678-0
+            n_events=99860965,
+        ),
+    ),
 )

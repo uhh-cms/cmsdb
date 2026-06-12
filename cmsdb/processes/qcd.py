@@ -47,6 +47,12 @@ __all__ = [
     "qcd_pt1800to2400",
     "qcd_pt2400to3200",
     "qcd_pt3200toinf",
+    # 2024 binnings (different pT bins)
+    "qcd_pt1000to1500",
+    "qcd_pt1500to2000",
+    "qcd_pt2000to2500",
+    "qcd_pt2500to3000",
+    "qcd_pt3000toinf",
     "qcd_mu",
     "qcd_mu_pt15to20",
     "qcd_mu_pt20to30",
@@ -374,6 +380,8 @@ qcd_pt120to170 = qcd.add_process(
     id=31905,
     xsecs={
         13: Number(466200),
+        # Run 3 xs from Fikri's list, taking 2024 value. Different values for 22/23!!!
+        13.6: Number(440600),
     },
 )
 
@@ -382,6 +390,7 @@ qcd_pt170to300 = qcd.add_process(
     id=31906,
     xsecs={
         13: Number(117200),
+        13.6: Number(112900),
     },
 )
 
@@ -390,6 +399,7 @@ qcd_pt300to470 = qcd.add_process(
     id=31907,
     xsecs={
         13: Number(7763),
+        13.6: Number(7583),
     },
 )
 
@@ -398,6 +408,7 @@ qcd_pt470to600 = qcd.add_process(
     id=31908,
     xsecs={
         13: Number(641),
+        13.6: Number(622.4),
     },
 )
 
@@ -406,6 +417,7 @@ qcd_pt600to800 = qcd.add_process(
     id=31909,
     xsecs={
         13: Number(185.7),
+        13.6: Number(178.8),
     },
 )
 
@@ -414,6 +426,7 @@ qcd_pt800to1000 = qcd.add_process(
     id=31910,
     xsecs={
         13: Number(32.02),
+        13.6: Number(30.56),
     },
 )
 
@@ -422,6 +435,8 @@ qcd_pt1000to1400 = qcd.add_process(
     id=31911,
     xsecs={
         13: Number(9.375),
+        # 13.6 TeV xs from Fikri's list, taking 22/23 value.
+        13.6: Number(8.946),
     },
 )
 
@@ -430,6 +445,7 @@ qcd_pt1400to1800 = qcd.add_process(
     id=31912,
     xsecs={
         13: Number(0.8384),
+        13.6: Number(0.8099),
     },
 )
 
@@ -438,6 +454,7 @@ qcd_pt1800to2400 = qcd.add_process(
     id=31913,
     xsecs={
         13: Number(0.1133),
+        13.6: Number(0.1152),
     },
 )
 
@@ -446,6 +463,7 @@ qcd_pt2400to3200 = qcd.add_process(
     id=31914,
     xsecs={
         13: Number(0.006746),
+        13.6: Number(0.007595),
     },
 )
 
@@ -454,6 +472,48 @@ qcd_pt3200toinf = qcd.add_process(
     id=31915,
     xsecs={
         13: Number(0.0001623),
+        13.6: Number(0.0002308),
+    },
+)
+
+# different binning in 2024
+qcd_pt1000to1500 = qcd.add_process(
+    name="qcd_pt1000to1500",
+    id=31916,
+    xsecs={
+        13.6: Number(9.292),
+    },
+)
+
+qcd_pt1500to2000 = qcd.add_process(
+    name="qcd_pt1500to2000",
+    id=31917,
+    xsecs={
+        13.6: Number(0.4991),
+    },
+)
+
+qcd_pt2000to2500 = qcd.add_process(
+    name="qcd_pt2000to2500",
+    id=31918,
+    xsecs={
+        13.6: Number(0.04268),
+    },
+)
+
+qcd_pt2500to3000 = qcd.add_process(
+    name="qcd_pt2500to3000",
+    id=31919,
+    xsecs={
+        13.6: Number(0.004443),
+    },
+)
+
+qcd_pt3000toinf = qcd.add_process(
+    name="qcd_pt3000toinf",
+    id=31920,
+    xsecs={
+        13.6: Number(0.0005551),
     },
 )
 
