@@ -57,8 +57,14 @@ campaign_run3_2024_nano_local_v15 = Campaign(
             "name": "run3_2024_nano_local_v15",
             "creator": "rucio",
             "locations": {
-                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2",
-                "cern": "root://eoscms.cern.ch/eos/cms",
+                "desy": {
+                    "site": "T2_DE_DESY",
+                    "uri": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2",
+                },
+                "cern": {
+                    "site": "T2_CH_CERN",
+                    "uri": "root://eoscms.cern.ch/eos/cms",
+                },
             },
         },
     },

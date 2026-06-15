@@ -146,6 +146,7 @@ def add_the_production_mode_parent(
 def add_decay_process(
     parent: Process,
     decay_map: DotDict,
+    additional_parents: list[Process] | None = None,
     add_production_mode_parent: bool = True,
     name_func: Callable = lambda parent_name, decay_name: f"{parent_name}_{decay_name}",
     label_func: Callable = lambda parent_label, decay_label: f"{parent_label}, {decay_label}",
@@ -157,6 +158,7 @@ def add_decay_process(
     :param parent: Parent process.
     :param decay_map: Dictionary with decay channel information. Needs to include the keys
     *name*, *id*, *br*, and *label*. When passing the *custom_id* parameter, the *id* key is ignored.
+    :param additional_parents: List of additional parent processes to which the subprocess should be added.
     :param add_production_mode_parent: Whether to add the process with the same final state but different
     production mode as parent. Also adds the *production_mode_parent* attribute to the subprocess.
     :param name_func: Function to generate the name of the subprocess from the parent name and the decay name.
@@ -179,6 +181,12 @@ def add_decay_process(
     child = parent.add_process(**child_kwargs)
     if add_production_mode_parent:
         add_the_production_mode_parent(child, parent, decay_map, name_func)
+
+    # add to additional parents
+    if additional_parents is not None:
+        for p in additional_parents:
+            if p not in child.parent_processes:
+                child.add_parent_process(p)
 
     return child
 
