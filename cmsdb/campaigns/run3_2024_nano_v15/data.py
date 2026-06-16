@@ -254,10 +254,10 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="data_e_c",
+    name="data_egamma_c",
     id=15289158,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2024C-MINIv6NANOv15-v1/NANOAOD",
         "/EGamma1/Run2024C-MINIv6NANOv15-v1/NANOAOD",
@@ -271,10 +271,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_d",
+    name="data_egamma_d",
     id=15291573,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2024D-MINIv6NANOv15-v1/NANOAOD",
         "/EGamma1/Run2024D-MINIv6NANOv15-v1/NANOAOD",
@@ -288,10 +288,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_e",
+    name="data_egamma_e",
     id=15291143,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2024E-MINIv6NANOv15-v1/NANOAOD",
         "/EGamma1/Run2024E-MINIv6NANOv15-v1/NANOAOD",
@@ -305,10 +305,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_f",
+    name="data_egamma_f",
     id=15290277,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2024F-MINIv6NANOv15-v1/NANOAOD",
         "/EGamma1/Run2024F-MINIv6NANOv15-v1/NANOAOD",
@@ -322,10 +322,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_g",
+    name="data_egamma_g",
     id=15299541,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2024G-MINIv6NANOv15-v2/NANOAOD",
         "/EGamma1/Run2024G-MINIv6NANOv15-v2/NANOAOD",
@@ -339,10 +339,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_h",
+    name="data_egamma_h",
     id=15299592,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2024H-MINIv6NANOv15-v2/NANOAOD",
         "/EGamma1/Run2024H-MINIv6NANOv15-v1/NANOAOD",
@@ -356,10 +356,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_e_i",
+    name="data_egamma_i",
     id=15291530,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma0/Run2024I-MINIv6NANOv15-v1/NANOAOD",
         "/EGamma1/Run2024I-MINIv6NANOv15-v1/NANOAOD",
