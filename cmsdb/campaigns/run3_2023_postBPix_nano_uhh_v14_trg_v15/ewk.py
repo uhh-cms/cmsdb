@@ -14,6 +14,22 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_uhh_v14_trg_v15 import campaign_run
 #
 
 cpn.add_dataset(
+    name="dy_m10to50_amcatnlo",
+    id=15431502,
+    processes=[procs.dy_m10to50],
+    keys=[
+        "/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2_ext1-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=75,
+    n_events=101_317_595,
+    aux={
+        "merging_factors": {
+            "nominal": 25,
+        },
+    },
+)
+
+cpn.add_dataset(
     name="dy_m50toinf_amcatnlo",
     id=14851213,
     processes=[procs.dy_m50toinf],

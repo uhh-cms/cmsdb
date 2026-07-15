@@ -1051,24 +1051,24 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM ",  # noqa
+                "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM ",  # noqa
             ],
-            n_files=25,
-            n_events=1049999,
+            n_files=40,
+            n_events=1049000,
         ),
     ),
 )
 cpn.add_dataset(
     name="ttz_zll_m50toinf_amcatnlo",
     id=14793589,
-    processes=[procs.ttz_zll_m4to50],
+    processes=[procs.ttz_zll_m50toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+                "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
             ],
-            n_files=23,
-            n_events=1343867,
+            n_files=50,
+            n_events=1400000,
         ),
     ),
 )

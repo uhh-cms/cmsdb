@@ -7,7 +7,8 @@ Data process definitions.
 __all__ = [
     "data", "data_e", "data_mu",
     "data_tau", "data_met", "data_pho",
-    "data_egamma", "data_muoneg", "data_jetht", "data_jethtmet", "data_doublemu", "data_vbf",
+    "data_egamma", "data_muoneg", "data_jetht",
+    "data_jethtmet", "data_doublemu", "data_vbf", "data_hh",
 ]
 
 from order import Process
@@ -100,4 +101,11 @@ data_vbf = data.add_process(
     id=150,
     is_data=True,
     label=r"Data VBF",
+)
+
+data_hh = data.add_process(
+    name="data_hh",
+    id=160,
+    is_data=True,
+    label=r"Data HH",
 )

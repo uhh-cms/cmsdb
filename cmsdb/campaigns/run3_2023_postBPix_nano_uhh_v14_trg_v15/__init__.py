@@ -28,7 +28,10 @@ campaign_run3_2023_postBPix_nano_uhh_v14_trg_v15 = Campaign(
             "creator": "uhh",
             "nanogen_version": "prod2",
             "locations": {
-                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/roward/nanogen_store/MergeNano/config_23post_v14/prod2",  # noqa
+                "desy": {
+                    "site": "T2_DE_DESY",
+                    "uri": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/roward/nanogen_store/MergeNano/config_23post_v14/prod2",  # noqa
+                },
             },
         },
     },
