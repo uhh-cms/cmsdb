@@ -13,12 +13,12 @@ from cmsdb.campaigns.run3_2026_nano_v15 import campaign_run3_2026_nano_v15 as cp
 #
 
 cpn.add_dataset(
-    name="data_jethtmet_a",
+    name="data_met_a",
     id=15552525,
-    processes=[procs.data_jethtmet],
+    processes=[procs.data_met],
     keys=[
-        "/JetMET0/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET1/Run2026A-PromptReco-v1/NANOAOD",  # noqa
+        "/JetMET0/Run2026A-PromptReco-v1/NANOAOD",
+        "/JetMET1/Run2026A-PromptReco-v1/NANOAOD",
     ],
     n_files=72 + 76,
     n_events=16602265 + 16588421,
@@ -29,12 +29,12 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_jethtmet_d",
+    name="data_met_d",
     id=15591506,
-    processes=[procs.data_jethtmet],
+    processes=[procs.data_met],
     keys=[
-        "/JetMET0/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET1/Run2026D-PromptReco-v1/NANOAOD",  # noqa
+        "/JetMET0/Run2026D-PromptReco-v1/NANOAOD",
+        "/JetMET1/Run2026D-PromptReco-v1/NANOAOD",
     ],
     n_files=405 + 399,
     n_events=151375589 + 151355297,
@@ -45,16 +45,16 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_jethtmet_c",
+    name="data_met_c",
     id=15569003,
-    processes=[procs.data_jethtmet],
+    processes=[procs.data_met],
     keys=[
-        "/JetMET0/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET1/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET2/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET3/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET4/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET5/Run2026C-PromptReco-v1/NANOAOD",  # noqa
+        "/JetMET0/Run2026C-PromptReco-v1/NANOAOD",
+        "/JetMET1/Run2026C-PromptReco-v1/NANOAOD",
+        "/JetMET2/Run2026C-PromptReco-v1/NANOAOD",
+        "/JetMET3/Run2026C-PromptReco-v1/NANOAOD",
+        "/JetMET4/Run2026C-PromptReco-v1/NANOAOD",
+        "/JetMET5/Run2026C-PromptReco-v1/NANOAOD",
     ],
     n_files=1393 + 1383 + 1371 + 1362 + 1360 + 1354,
     n_events=1756939928 + 1756363080 + 1755211834 + 1755216678 + 1755215414 + 1755211453,
@@ -65,12 +65,12 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_jethtmet_b",
+    name="data_met_b",
     id=15558208,
-    processes=[procs.data_jethtmet],
+    processes=[procs.data_met],
     keys=[
-        "/JetMET0/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/JetMET1/Run2026B-PromptReco-v1/NANOAOD",  # noqa
+        "/JetMET0/Run2026B-PromptReco-v1/NANOAOD",
+        "/JetMET1/Run2026B-PromptReco-v1/NANOAOD",
     ],
     n_files=612 + 621,
     n_events=245424748 + 245406692,
@@ -90,7 +90,7 @@ cpn.add_dataset(
     id=15552736,
     processes=[procs.data_muoneg],
     keys=[
-        "/MuonEG/Run2026A-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonEG/Run2026A-PromptReco-v1/NANOAOD",
     ],
     n_files=38,
     n_events=2699844,
@@ -105,7 +105,7 @@ cpn.add_dataset(
     id=15557575,
     processes=[procs.data_muoneg],
     keys=[
-        "/MuonEG/Run2026B-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonEG/Run2026B-PromptReco-v1/NANOAOD",
     ],
     n_files=193,
     n_events=50921430,
@@ -120,7 +120,7 @@ cpn.add_dataset(
     id=15568792,
     processes=[procs.data_muoneg],
     keys=[
-        "/MuonEG/Run2026C-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonEG/Run2026C-PromptReco-v1/NANOAOD",
     ],
     n_files=65,
     n_events=5291221,
@@ -135,7 +135,7 @@ cpn.add_dataset(
     id=15591468,
     processes=[procs.data_muoneg],
     keys=[
-        "/MuonEG/Run2026D-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonEG/Run2026D-PromptReco-v1/NANOAOD",
     ],
     n_files=120,
     n_events=32379047,
@@ -151,10 +151,10 @@ cpn.add_dataset(
     id=15552450,
     processes=[procs.data_mu],
     keys=[
-        "/Muon0/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon1/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon2/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon3/Run2026A-PromptReco-v1/NANOAOD",  # noqa
+        "/Muon0/Run2026A-PromptReco-v1/NANOAOD",
+        "/Muon1/Run2026A-PromptReco-v1/NANOAOD",
+        "/Muon2/Run2026A-PromptReco-v1/NANOAOD",
+        "/Muon3/Run2026A-PromptReco-v1/NANOAOD",
     ],
     n_files=52 + 56 + 54 + 51,
     n_events=7347312 + 7347779 + 7344116 + 7345253,
@@ -169,10 +169,10 @@ cpn.add_dataset(
     id=15558192,
     processes=[procs.data_mu],
     keys=[
-        "/Muon0/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon1/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon2/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon3/Run2026B-PromptReco-v1/NANOAOD",  # noqa
+        "/Muon0/Run2026B-PromptReco-v1/NANOAOD",
+        "/Muon1/Run2026B-PromptReco-v1/NANOAOD",
+        "/Muon2/Run2026B-PromptReco-v1/NANOAOD",
+        "/Muon3/Run2026B-PromptReco-v1/NANOAOD",
     ],
     n_files=448 + 443 + 448 + 443,
     n_events=155034715 + 155028140 + 155029788 + 155025135,
@@ -187,10 +187,10 @@ cpn.add_dataset(
     id=15569405,
     processes=[procs.data_mu],
     keys=[
-        "/Muon0/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon1/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon2/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon3/Run2026C-PromptReco-v1/NANOAOD",  # noqa
+        "/Muon0/Run2026C-PromptReco-v1/NANOAOD",
+        "/Muon1/Run2026C-PromptReco-v1/NANOAOD",
+        "/Muon2/Run2026C-PromptReco-v1/NANOAOD",
+        "/Muon3/Run2026C-PromptReco-v1/NANOAOD",
     ],
     n_files=813 + 778 + 784 + 777,
     n_events=779902163 + 779231920 + 779164947 + 779192881,
@@ -204,10 +204,10 @@ cpn.add_dataset(
     id=15592049,
     processes=[procs.data_mu],
     keys=[
-        "/Muon0/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon1/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon2/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/Muon3/Run2026D-PromptReco-v1/NANOAOD",  # noqa
+        "/Muon0/Run2026D-PromptReco-v1/NANOAOD",
+        "/Muon1/Run2026D-PromptReco-v1/NANOAOD",
+        "/Muon2/Run2026D-PromptReco-v1/NANOAOD",
+        "/Muon3/Run2026D-PromptReco-v1/NANOAOD",
     ],
     n_files=321 + 317 + 313 + 321,
     n_events=112288744 + 112284014 + 112290907 + 112282726,
@@ -223,7 +223,7 @@ cpn.add_dataset(
     id=15552147,
     processes=[procs.data_muonshower],
     keys=[
-        "/MuonShower/Run2026A-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonShower/Run2026A-PromptReco-v1/NANOAOD",
     ],
     n_files=58,
     n_events=22284,
@@ -238,7 +238,7 @@ cpn.add_dataset(
     id=15557263,
     processes=[procs.data_muonshower],
     keys=[
-        "/MuonShower/Run2026B-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonShower/Run2026B-PromptReco-v1/NANOAOD",
     ],
     n_files=259,
     n_events=230562,
@@ -253,7 +253,7 @@ cpn.add_dataset(
     id=15568686,
     processes=[procs.data_muonshower],
     keys=[
-        "/MuonShower/Run2026C-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonShower/Run2026C-PromptReco-v1/NANOAOD",
     ],
     n_files=319,
     n_events=667697,
@@ -268,7 +268,7 @@ cpn.add_dataset(
     id=15590836,
     processes=[procs.data_muonshower],
     keys=[
-        "/MuonShower/Run2026D-PromptReco-v1/NANOAOD",  # noqa
+        "/MuonShower/Run2026D-PromptReco-v1/NANOAOD",
     ],
     n_files=199,
     n_events=414608,
@@ -282,16 +282,16 @@ cpn.add_dataset(
 # E Gamma datasets
 #
 cpn.add_dataset(
-    name="data_egamma_a",
+    name="data_e_a",
     id=15552635,
-    processes=[procs.data_egamma],
+    processes=[procs.data_e],
     keys=[
-        "/EGamma0/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma1/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma2/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma3/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma4/Run2026A-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma5/Run2026A-PromptReco-v1/NANOAOD",  # noqa
+        "/EGamma0/Run2026A-PromptReco-v1/NANOAOD",
+        "/EGamma1/Run2026A-PromptReco-v1/NANOAOD",
+        "/EGamma2/Run2026A-PromptReco-v1/NANOAOD",
+        "/EGamma3/Run2026A-PromptReco-v1/NANOAOD",
+        "/EGamma4/Run2026A-PromptReco-v1/NANOAOD",
+        "/EGamma5/Run2026A-PromptReco-v1/NANOAOD",
     ],
     n_files=62 + 61 + 66 + 65 + 60 + 60,
     n_events=11733359 + 11731043 + 11732795 + 11731165 + 11733095 + 11731599,
@@ -302,16 +302,16 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma_b",
+    name="data_e_b",
     id=15557176,
-    processes=[procs.data_egamma],
+    processes=[procs.data_e],
     keys=[
-        "/EGamma0/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma1/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma2/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma3/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma4/Run2026B-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma5/Run2026B-PromptReco-v1/NANOAOD",  # noqa
+        "/EGamma0/Run2026B-PromptReco-v1/NANOAOD",
+        "/EGamma1/Run2026B-PromptReco-v1/NANOAOD",
+        "/EGamma2/Run2026B-PromptReco-v1/NANOAOD",
+        "/EGamma3/Run2026B-PromptReco-v1/NANOAOD",
+        "/EGamma4/Run2026B-PromptReco-v1/NANOAOD",
+        "/EGamma5/Run2026B-PromptReco-v1/NANOAOD",
     ],
     n_files=536 + 532 + 534 + 529 + 533 + 535,
     n_events=205275441 + 205266455 + 205274221 + 205271520 + 205273231 + 205265468,
@@ -322,16 +322,16 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma_c",
+    name="data_e_c",
     id=15568826,
-    processes=[procs.data_egamma],
+    processes=[procs.data_e],
     keys=[
-        "/EGamma0/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma1/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma2/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma3/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma4/Run2026C-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma5/Run2026C-PromptReco-v1/NANOAOD",  # noqa
+        "/EGamma0/Run2026C-PromptReco-v1/NANOAOD",
+        "/EGamma1/Run2026C-PromptReco-v1/NANOAOD",
+        "/EGamma2/Run2026C-PromptReco-v1/NANOAOD",
+        "/EGamma3/Run2026C-PromptReco-v1/NANOAOD",
+        "/EGamma4/Run2026C-PromptReco-v1/NANOAOD",
+        "/EGamma5/Run2026C-PromptReco-v1/NANOAOD",
     ],
     n_files=603 + 611 + 594 + 590 + 592 + 589,
     n_events=375030929 + 374809724 + 374832870 + 374811337 + 374793369 + 374804007,
@@ -342,16 +342,16 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma_d",
+    name="data_e_d",
     id=15591574,
-    processes=[procs.data_egamma],
+    processes=[procs.data_e],
     keys=[
-        "/EGamma0/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma1/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma2/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma3/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma4/Run2026D-PromptReco-v1/NANOAOD",  # noqa
-        "/EGamma5/Run2026D-PromptReco-v1/NANOAOD",  # noqa
+        "/EGamma0/Run2026D-PromptReco-v1/NANOAOD",
+        "/EGamma1/Run2026D-PromptReco-v1/NANOAOD",
+        "/EGamma2/Run2026D-PromptReco-v1/NANOAOD",
+        "/EGamma3/Run2026D-PromptReco-v1/NANOAOD",
+        "/EGamma4/Run2026D-PromptReco-v1/NANOAOD",
+        "/EGamma5/Run2026D-PromptReco-v1/NANOAOD",
     ],
     n_files=334 + 325 + 335 + 327 + 332 + 327,
     n_events=125742096 + 125740549 + 125741242 + 125739959 + 125741715 + 125738632,

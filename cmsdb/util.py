@@ -12,7 +12,7 @@ from typing import Callable
 from functools import partial
 from scinum import Number
 
-from order import Process, Campaign
+from order import Process, Campaign, Dataset
 from collections import OrderedDict
 
 
@@ -198,12 +198,23 @@ add_sub_decay_process = partial(
 )
 
 
-def transfer_datasets(src_campaign: Campaign, dst_campaign: Campaign) -> None:
+def transfer_datasets(
+    src_campaign: Campaign,
+    dst_campaign: Campaign,
+    skip_fn: Callable[[Dataset], bool] | None = None,
+) -> None:
     """
     Copy all datasets from one *src_campaign* to another *dst_campaign*, making sure that linked processes are not
     copied but shared.
     """
+    if skip_fn is None:
+        skip_fn = lambda ds: False
+
     for dataset in src_campaign.datasets:
+        # potentially skip
+        if skip_fn(dataset):
+            continue
+
         # shallow copy of the dataset (no processes, no campaign reference)
         copy = dataset.copy_shallow()
 

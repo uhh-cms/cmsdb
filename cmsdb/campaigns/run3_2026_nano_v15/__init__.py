@@ -7,26 +7,34 @@ fetched to local storage via rucio.
 
 from order import Campaign
 
+from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15
 from cmsdb.util import transfer_datasets
-from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn24
-
 
 #
 # campaign
 #
 
-campaign_run3_2026_nano_v15 = cpn24.copy()
-campaign_run3_2026_nano_v15.name = "run3_2026_nano_v15"
-campaign_run3_2026_nano_v15.id = 32025116  # (run)3(year)2026(part)1(version)15
-campaign_run3_2026_nano_v15.set_aux("year", 2026)
+campaign_run3_2026_nano_v15 = Campaign(
+    name="run3_2026_nano_v15",
+    id=32026115,  # (run)3(year)2026(part)1(version)15
+    ecm=13.6,
+    bx=25,
+    aux={
+        "tier": "NanoAOD",
+        "run": 3,
+        "year": 2026,
+        "version": 15,
+        "postfix": "",
+    },
+    tags=set(),
+)
 
-# remove 'data_' datasets from the 2024 campaign
-for ds in campaign_run3_2026_nano_v15.datasets.names():
-    if ds.startswith("data_"):
-        campaign_run3_2026_nano_v15.remove_dataset(ds)
 
 # trailing imports to load datasets
 import cmsdb.campaigns.run3_2026_nano_v15.data  # noqa
+
+# transfer all but data from the 2024 campaign
+transfer_datasets(campaign_run3_2024_nano_v15, campaign_run3_2026_nano_v15, skip_fn=lambda d: d.is_data)
 
 
 #
@@ -45,8 +53,14 @@ campaign_run3_2026_nano_local_v15 = Campaign(
             "name": "run3_2026_nano_local_v15",
             "creator": "rucio",
             "locations": {
-                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2",
-                "cern": "root://eoscms.cern.ch/eos/cms",
+                "desy": {
+                    "site": "T2_DE_DESY",
+                    "uri": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2",
+                },
+                "cern": {
+                    "site": "T2_CH_CERN",
+                    "uri": "root://eoscms.cern.ch/eos/cms",
+                },
             },
         },
     },
