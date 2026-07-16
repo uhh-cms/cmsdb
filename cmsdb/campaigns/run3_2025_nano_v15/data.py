@@ -25,7 +25,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "B",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -43,7 +43,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "C",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -59,7 +59,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "D",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -75,7 +75,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "E",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -93,7 +93,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "F",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -109,7 +109,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "G",
-    }
+    },
 )
 
 #
@@ -129,7 +129,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "B",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -145,7 +145,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "C",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -160,7 +160,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "D",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -175,7 +175,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "E",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -191,7 +191,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "F",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -206,7 +206,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "G",
-    }
+    },
 )
 
 # muon
@@ -223,7 +223,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "B",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -241,7 +241,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "C",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -257,7 +257,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "D",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -273,7 +273,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "E",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -291,7 +291,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "F",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -307,7 +307,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "G",
-    }
+    },
 )
 
 # muon shower
@@ -324,7 +324,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "A",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -339,7 +339,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "B",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -355,7 +355,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "C",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -370,7 +370,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "D",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -385,7 +385,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "E",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -401,7 +401,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "F",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -416,7 +416,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "G",
-    }
+    },
 )
 
 #
@@ -437,7 +437,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "B",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -459,7 +459,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "C",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -477,7 +477,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "D",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -495,7 +495,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "E",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -517,7 +517,7 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "F",
-    }
+    },
 )
 
 cpn.add_dataset(
@@ -535,5 +535,5 @@ cpn.add_dataset(
     is_data=True,
     aux={
         "era": "G",
-    }
+    },
 )
