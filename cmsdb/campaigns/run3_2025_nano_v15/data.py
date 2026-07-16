@@ -312,9 +312,9 @@ cpn.add_dataset(
 
 # muon shower
 cpn.add_dataset(
-    name="data_mushower_a",
+    name="data_muonshower_a",
     id=15300570,
-    processes=[procs.data_mushower],
+    processes=[procs.data_muonshower],
     keys=[
         "/MuonShower/Run2025A-PromptReco-v1/NANOAOD",  # noqa
         "/MuonShower/Run2025A-PromptReco-v2/NANOAOD",  # noqa
@@ -328,9 +328,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mushower_b",
+    name="data_muonshower_b",
     id=15310631,
-    processes=[procs.data_mushower],
+    processes=[procs.data_muonshower],
     keys=[
         "/MuonShower/Run2025B-PromptReco-v1/NANOAOD",  # noqa
     ],
@@ -343,9 +343,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mushower_c",
+    name="data_muonshower_c",
     id=15336187,
-    processes=[procs.data_mushower],
+    processes=[procs.data_muonshower],
     keys=[
         "/MuonShower/Run2025C-PromptReco-v1/NANOAOD",  # noqa
         "/MuonShower/Run2025C-PromptReco-v2/NANOAOD",  # noqa
@@ -359,9 +359,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mushower_d",
+    name="data_muonshower_d",
     id=15369146,
-    processes=[procs.data_mushower],
+    processes=[procs.data_muonshower],
     keys=[
         "/MuonShower/Run2025D-PromptReco-v1/NANOAOD",  # noqa
     ],
@@ -374,9 +374,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mushower_e",
+    name="data_muonshower_e",
     id=15395625,
-    processes=[procs.data_mushower],
+    processes=[procs.data_muonshower],
     keys=[
         "/MuonShower/Run2025E-PromptReco-v1/NANOAOD",  # noqa
     ],
@@ -389,9 +389,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mushower_f",
+    name="data_muonshower_f",
     id=15416847,
-    processes=[procs.data_mushower],
+    processes=[procs.data_muonshower],
     keys=[
         "/MuonShower/Run2025F-PromptReco-v1/NANOAOD",  # noqa
         "/MuonShower/Run2025F-PromptReco-v2/NANOAOD",  # noqa
@@ -405,9 +405,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mushower_g",
+    name="data_muonshower_g",
     id=15422929,
-    processes=[procs.data_mushower],
+    processes=[procs.data_muonshower],
     keys=[
         "/MuonShower/Run2025G-PromptReco-v1/NANOAOD",  # noqa
     ],
