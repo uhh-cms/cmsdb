@@ -8,7 +8,6 @@ from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
-from order import DatasetInfo
 
 #
 # Drell-Yan, LO madgraph
