@@ -250,7 +250,8 @@ __all__ = [
     "wmh_wqq_hzz4l", "wmh_wqq_hzz2l2nu", "wmh_wqq_hzz2l2q", "wmh_wqq_hzz2q2nu", "wmh_wqq_hzz4nu", "wmh_wqq_hzz4q",
     "wmh_wqq_hzg_zll", "wmh_wqq_hzg_zqq", "wmh_wqq_hzg_znunu",
     "tth",
-    "tth_htt", "tth_hww", "tth_hzz", "tth_hbb", "tth_hnonbb", "tth_hcc", "tth_hzg", "tth_hgg", "tth_hmm",
+    "tth_htt", "tth_hww", "tth_hzz", "tth_hbb", "tth_hbb_dl", "tth_hbb_sl", "tth_hbb_fh",
+    "tth_hnonbb", "tth_hcc", "tth_hzg", "tth_hgg", "tth_hmm",
     "tth_hwwqqlnu", "tth_hww2l2nu", "tth_hww4q",
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
@@ -263,7 +264,7 @@ from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
-from cmsdb.util import add_xsecs, DotDict, add_decay_process, add_sub_decay_process
+from cmsdb.util import add_xsecs, DotDict, add_decay_process, add_sub_decay_process, multiply_xsecs
 
 ####################################################################################################
 #
@@ -1389,6 +1390,30 @@ tth_hzg_zll = add_decay_process(tth_hzg, hzg_decay_map["zll"])
 tth_hzg_zqq = add_decay_process(tth_hzg, hzg_decay_map["zqq"])
 tth_hzg_znunu = add_decay_process(tth_hzg, hzg_decay_map["znunu"])
 
+# tt subdecay channels for tth hbb
+tth_hbb_sl = tth_hbb.add_process(
+    name="tth_hbb_sl",
+    id=1101,
+    label=f"{tth_hbb.label}, SL",
+    color=(205, 0, 9),
+    xsecs=multiply_xsecs(tth_hbb, const.br_ww.sl),
+)
+
+tth_hbb_dl = tth_hbb.add_process(
+    name="tth_hbb_dl",
+    id=1201,
+    label=f"{tth_hbb.label}, DL",
+    color=(235, 230, 10),
+    xsecs=multiply_xsecs(tth_hbb, const.br_ww.dl),
+)
+
+tth_hbb_fh = tth_hbb.add_process(
+    name="tth_hbb_fh",
+    id=1301,
+    label=f"{tth_hbb.label}, FH",
+    color=(255, 153, 0),
+    xsecs=multiply_xsecs(tth_hbb, const.br_ww.fh),
+)
 ####################################################################################################
 #
 # bbH, ttVH, tHq, tHW, tH

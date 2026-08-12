@@ -15,7 +15,7 @@ from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cp
 #
 
 cpn.add_dataset(
-    name="tthh_4b_madgraph",
+    name="tthh_4b_incl_madgraph",
     id=15292837,
     processes=[procs.tthh_4b],
     info=dict(
@@ -28,6 +28,119 @@ cpn.add_dataset(
             },
             n_files=32,  # 32-0
             n_events=9999300,
+        ),
+    ),
+)
+
+
+#
+# ttHH -> other stuff
+#
+
+cpn.add_dataset(
+    name="tthh_2b2t_dl_madgraph",
+    id=15292838,
+    processes=[procs.tthh_2b2t_dl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTHH-TTto2L2Nu-HHto2B2Tau_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=30,  # 32-0
+            n_events=999_000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tthh_2b2w_dl_madgraph",
+    id=15292839,
+    processes=[procs.tthh_2b2w_dl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTHH-TTto2L2Nu-HHto2B2W_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=220,  # 32-0
+            n_events=9_987_962,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tthh_2b2z_dl_madgraph",
+    id=15292840,
+    processes=[procs.tthh_2b2z_dl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTHH-TTto2L2Nu-HHto2B2Z_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=53,  # 32-0
+            n_events=993_991,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tthh_2b2t_sl_madgraph",
+    id=15292841,
+    processes=[procs.tthh_2b2t_sl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTHH-TTtoLNu2Q-HHto2B2Tau_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=26,  # 32-0
+            n_events=1_000_000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tthh_2b2w_sl_madgraph",
+    id=15292842,
+    processes=[procs.tthh_2b2w_sl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTHH-TTtoLNu2Q-HHto2B2W_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=223,  # 32-0
+            n_events=9_998_963,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tthh_2b2z_sl_madgraph",
+    id=15292843,
+    processes=[procs.tthh_2b2z_sl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTHH-TTtoLNu2Q-HHto2B2Z_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [],
+            },
+            n_files=21,  # 32-0
+            n_events=999991,
         ),
     ),
 )
