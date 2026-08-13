@@ -8,65 +8,11 @@ from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
-from order import DatasetInfo
+# from order import DatasetInfo
 
 #
 # Drell-Yan, amcatnlo
 #
-
-# cpn.add_dataset(
-#     name="dy_ee_m10to50_powheg",
-#     id=15297455,
-#     processes=[procs.dy_ee_m10to50],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/DYto2E_Bin-MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-#             ],
-#             aux={
-#                 "broken_files": [],
-#             },
-#             n_files=395,  # 395-0
-#             n_events=348121585,
-#         ),
-#     ),
-# )
-
-# cpn.add_dataset(
-#     name="dy_mumu_m10to50_powheg",
-#     id=15297453,
-#     processes=[procs.dy_mumu_m10to50],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/DYto2Mu_Bin-MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-#             ],
-#             aux={
-#                 "broken_files": [],
-#             },
-#             n_files=405,  # 405-0
-#             n_events=341634068,
-#         ),
-#     ),
-# )
-
-# cpn.add_dataset(
-#     name="dy_tautau_m10to50_powheg",
-#     id=15297458,
-#     processes=[procs.dy_tautau_m10to50],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/DYto2Tau_Bin-MLL-10to50_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-#             ],
-#             aux={
-#                 "broken_files": [],
-#             },
-#             n_files=400,  # 400-0
-#             n_events=344069532,
-#         ),
-#     ),
-# )
 
 cpn.add_dataset(
     name="dy_ee_m50toinf_amcatnlo",
@@ -158,24 +104,6 @@ cpn.add_dataset(
     ),
 )
 
-# cpn.add_dataset(
-#     name="dy_tautau_m50toinf_amcatnlo",
-#     id=15401531,
-#     processes=[procs.dy_tautau_m50toinf],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/DYto2Tau-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v7/NANOAODSIM",  # noqa: E501
-#             ],
-#             aux={
-#                 "broken_files": [],
-#             },
-#             n_files=1837,  # 1837-0
-#             n_events=349164447,
-#         ),
-#     ),
-# )
-
 cpn.add_dataset(
     name="dy_ee_m50toinf_0j_amcatnlo",
     id=15300391,
@@ -266,45 +194,45 @@ cpn.add_dataset(
     ),
 )
 
-cpn.add_dataset(
-    name="dy_mumu_m50toinf_2j_amcatnlo",
-    id=15483620,
-    processes=[procs.dy_mumu_m50toinf_2j],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
-            ],
-            aux={
-                "broken_files": [
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/afc52c71-3b68-4def-8534-06f6f4e75ad2.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/47abdfc0-9626-4942-82f3-221c6d99531e.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/2d62dc57-c119-43f3-98d4-f9de72e094ec.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/b7f78461-41ff-4ddc-8655-6a8f862d21a1.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/848fc0fa-4d12-4bdc-a2f0-5e027ef89819.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/2c8082b0-5349-43ca-8f79-ecec789a7549.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/a6f15fac-cd5f-4f56-8722-dae5e93b95b7.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/f45c01ae-d5e4-4b65-b2e2-9f834a2fe50e.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/3bd9c333-44cb-4da5-bec0-cee673c562c0.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/f65c8092-3005-4a07-a1bb-06df9704222c.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/343a5031-7e8f-4b7b-a1fb-4a071554ebf9.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/2630dd34-4de2-4c6c-9cd4-309b22f56b8a.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/3a57297c-3b4e-4f99-aa9f-37a81594eae6.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/cc621b64-de8e-4de2-9c1b-bf9e08d380bb.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/9841e879-64b6-4f3e-85ba-2bd7aa85887b.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/303afc86-5041-48aa-9c13-9723c806dfea.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/cf8d3b7c-ff8f-439f-88c4-9fe17ec0f3b9.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/4413a548-c9e2-4ebc-b73e-338be3c282e1.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/c16d916f-d52b-4c9b-9a95-b90cd1c11209.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/f7fbdad2-b59b-4946-9bf5-a9aedf8980de.root",  # noqa: E501
-                    # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/91e00958-e35b-41d3-b9af-1cdb76e990f2.root",  # noqa: E501
-                ],
-            },
-            n_files=1739,  # 1739-21
-            n_events=285910646,
-        ),
-    ),
-)
+# cpn.add_dataset(
+#     name="dy_mumu_m50toinf_2j_amcatnlo",
+#     id=15483620,
+#     processes=[procs.dy_mumu_m50toinf_2j],
+#     info=dict(
+#         nominal=DatasetInfo(
+#             keys=[
+#                 "/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa: E501
+#             ],
+#             aux={
+#                 "broken_files": [
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/afc52c71-3b68-4def-8534-06f6f4e75ad2.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/47abdfc0-9626-4942-82f3-221c6d99531e.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/2d62dc57-c119-43f3-98d4-f9de72e094ec.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/b7f78461-41ff-4ddc-8655-6a8f862d21a1.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/848fc0fa-4d12-4bdc-a2f0-5e027ef89819.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/2c8082b0-5349-43ca-8f79-ecec789a7549.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/a6f15fac-cd5f-4f56-8722-dae5e93b95b7.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/f45c01ae-d5e4-4b65-b2e2-9f834a2fe50e.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/3bd9c333-44cb-4da5-bec0-cee673c562c0.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/f65c8092-3005-4a07-a1bb-06df9704222c.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/343a5031-7e8f-4b7b-a1fb-4a071554ebf9.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/2630dd34-4de2-4c6c-9cd4-309b22f56b8a.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/3a57297c-3b4e-4f99-aa9f-37a81594eae6.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/cc621b64-de8e-4de2-9c1b-bf9e08d380bb.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/9841e879-64b6-4f3e-85ba-2bd7aa85887b.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/303afc86-5041-48aa-9c13-9723c806dfea.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/cf8d3b7c-ff8f-439f-88c4-9fe17ec0f3b9.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/4413a548-c9e2-4ebc-b73e-338be3c282e1.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/c16d916f-d52b-4c9b-9a95-b90cd1c11209.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/f7fbdad2-b59b-4946-9bf5-a9aedf8980de.root",  # noqa: E501
+#                     # "/store/mc/RunIII2024Summer24NanoAODv15/DYto2Mu-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v3/140000/91e00958-e35b-41d3-b9af-1cdb76e990f2.root",  # noqa: E501
+#                 ],
+#             },
+#             n_files=1739,  # 1739-21
+#             n_events=285910646,
+#         ),
+#     ),
+# )
 
 cpn.add_dataset(
     name="dy_tautau_m50toinf_0j_amcatnlo",
@@ -481,120 +409,6 @@ cpn.add_dataset(
     ],
     n_files=1_837,
     n_events=349_164_447,
-)
-
-# cpn.add_dataset(
-#     name="dy_tautau_m50toinf_0j_amcatnlo",
-#     id=15411600,
-#     processes=[procs.dy_tautau_m50toinf_0j],
-#     keys=[
-#         "/DYto2Tau-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
-#     ],
-#     n_files=2_666,
-#     n_events=493_132_017,
-# )
-
-cpn.add_dataset(
-    name="dy_tautau_m50toinf_1j_amcatnlo",
-    id=15453487,
-    processes=[procs.dy_tautau_m50toinf_1j],
-    keys=[
-        "/DYto2Tau-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=2_026,
-    n_events=428_387_857,
-)
-
-cpn.add_dataset(
-    name="dy_tautau_m50toinf_2j_amcatnlo",
-    id=15454616,
-    processes=[procs.dy_tautau_m50toinf_2j],
-    keys=[
-        "/DYto2Tau-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=1_592,
-    n_events=232_971_613,
-)
-
-# ee filtered, inclusive and in jet bins
-
-cpn.add_dataset(
-    name="dy_ee_m50toinf_amcatnlo",
-    id=15292625,
-    processes=[procs.dy_ee_m50toinf],
-    keys=[
-        "/DYto2E-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
-    ],
-    n_files=2_990,
-    n_events=486_448_139,
-)
-
-cpn.add_dataset(
-    name="dy_ee_m50toinf_0j_amcatnlo",
-    id=15300391,
-    processes=[procs.dy_ee_m50toinf_0j],
-    keys=[
-        "/DYto2E-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=548,
-    n_events=453_230_267,
-)
-
-cpn.add_dataset(
-    name="dy_ee_m50toinf_1j_amcatnlo",
-    id=15484364,
-    processes=[procs.dy_ee_m50toinf_1j],
-    keys=[
-        "/DYto2E-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=2_108,
-    n_events=338_867_940,
-)
-
-cpn.add_dataset(
-    name="dy_ee_m50toinf_2j_amcatnlo",
-    id=15497029,
-    processes=[procs.dy_ee_m50toinf_2j],
-    keys=[
-        "/DYto2E-2Jets_Bin-2J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=317,
-    n_events=307_042_054,
-)
-
-# mumu filtered, inclusive and in jet bins
-
-cpn.add_dataset(
-    name="dy_mumu_m50toinf_amcatnlo",
-    id=15302208,
-    processes=[procs.dy_mumu_m50toinf],
-    keys=[
-        "/DYto2Mu-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v6/NANOAODSIM",  # noqa
-    ],
-    n_files=2_975,
-    n_events=490_076_405,
-)
-
-cpn.add_dataset(
-    name="dy_mumu_m50toinf_0j_amcatnlo",
-    id=15304256,
-    processes=[procs.dy_mumu_m50toinf_0j],
-    keys=[
-        "/DYto2Mu-2Jets_Bin-0J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=534,
-    n_events=466_773_211,
-)
-
-cpn.add_dataset(
-    name="dy_mumu_m50toinf_1j_amcatnlo",
-    id=15511331,
-    processes=[procs.dy_mumu_m50toinf_1j],
-    keys=[
-        "/DYto2Mu-2Jets_Bin-1J-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=327,
-    n_events=404_580_799,
 )
 
 # DO NOT OVERWRITE THIS DATASET ENTRY
