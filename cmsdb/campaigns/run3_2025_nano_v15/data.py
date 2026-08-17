@@ -252,7 +252,7 @@ cpn.add_dataset(
         "/Muon0/Run2025D-PromptReco-v1/NANOAOD",
         "/Muon1/Run2025D-PromptReco-v1/NANOAOD",
     ],
-    n_files=1160 + 1159,
+    n_files=1166 + 1159,
     n_events=479676562 + 479642866,
     is_data=True,
     aux={
