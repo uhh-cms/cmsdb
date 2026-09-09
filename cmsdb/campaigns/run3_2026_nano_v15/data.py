@@ -360,3 +360,175 @@ cpn.add_dataset(
         "era": "D",
     },
 )
+
+# Tau
+
+cpn.add_dataset(
+    name="data_tau_b",
+    id=15557609,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2026B-PromptReco-v1/NANOAOD",
+    ],
+    n_files=453,
+    n_events=144_513_582,
+    aux={
+        "prompt": True,
+        "era": "B",
+    },
+)
+cpn.add_dataset(
+    name="data_tau_c",
+    id=15568796,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2026C-PromptReco-v1/NANOAOD",
+    ],
+    n_files=92,
+    n_events=15_120_082,
+    aux={
+        "prompt": True,
+        "era": "C",
+    },
+)
+cpn.add_dataset(
+    name="data_tau_d",
+    id=15591451,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2026D-PromptReco-v1/NANOAOD",
+    ],
+    n_files=324,
+    n_events=114_250_021,
+    aux={
+        "prompt": True,
+        "era": "D",
+    },
+)
+
+
+# Parking dataset (HH/VBF)
+
+# HH parking
+
+cpn.add_dataset(
+    name="data_parking_hh_b",
+    id=15557438,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH0/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingHH1/Run2026B-PromptReco-v1/NANOAOD",
+    ],
+    n_files=473 + 463,
+    n_events=129_014_771 + 129_007_618,
+    aux={
+        "prompt": True,
+        "era": "B",
+    },
+)
+cpn.add_dataset(
+    name="data_parking_hh_c",
+    id=15569248,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH0/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingHH1/Run2026C-PromptReco-v1/NANOAOD",
+    ],
+    n_files=85 + 80,
+    n_events=11_246_253 + 11_289_404,
+    aux={
+        "prompt": True,
+        "era": "C",
+    },
+)
+cpn.add_dataset(
+    name="data_parking_hh_d",
+    id=15591927,
+    is_data=True,
+    processes=[procs.data_hh],
+    keys=[
+        "/ParkingHH0/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingHH1/Run2026D-PromptReco-v1/NANOAOD",
+    ],
+    n_files=307 + 313,
+    n_events=86_830_065 + 86_825_827,
+    aux={
+        "prompt": True,
+        "era": "D",
+    },
+)
+
+
+# VBF parking
+
+cpn.add_dataset(
+    name="data_parking_vbf_b",
+    id=15557569,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingVBF1/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingVBF2/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingVBF3/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingVBF4/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingVBF5/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingVBF6/Run2026B-PromptReco-v1/NANOAOD",
+        "/ParkingVBF7/Run2026B-PromptReco-v1/NANOAOD",
+    ],
+    n_files=362 + 356 + 365 + 362 + 359 + 355 + 361 + 363,
+    n_events=97_446_800 + 97_445_187 + 97_446_832 + 97_448_260 + 97_448_666 + 97_449_045 + 97_442_546 + 97_440_256,
+    aux={
+        "prompt": True,
+        "era": "B",
+    },
+)
+cpn.add_dataset(
+    name="data_parking_vbf_c",
+    id=15569253,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingVBF1/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingVBF2/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingVBF3/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingVBF4/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingVBF5/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingVBF6/Run2026C-PromptReco-v1/NANOAOD",
+        "/ParkingVBF7/Run2026C-PromptReco-v1/NANOAOD",
+    ],
+    n_files=71 + 65 + 67 + 65 + 68 + 66 + 65 + 64,
+    n_events=10_005_016 + 10_004_293 + 10_012_802 + 10_006_339 + 10_013_372 + 10_000_594 + 10_013_728 + 10_008_466,
+    aux={
+        "prompt": True,
+        "era": "C",
+    },
+)
+cpn.add_dataset(
+    name="data_parking_vbf_d",
+    id=15591915,
+    is_data=True,
+    processes=[procs.data_vbf],
+    keys=[
+        "/ParkingVBF0/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingVBF1/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingVBF2/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingVBF3/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingVBF4/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingVBF5/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingVBF6/Run2026D-PromptReco-v1/NANOAOD",
+        "/ParkingVBF7/Run2026D-PromptReco-v1/NANOAOD",
+    ],
+    n_files=204 + 205 + 205 + 206 + 201 + 205 + 203 + 209,
+    n_events=61_868_372 + 61_867_304 + 61_868_622 + 61_868_878 + 61_869_027 + 61_868_922 + 61_869_141 + 61_868_337,
+    aux={
+        "prompt": True,
+        "era": "D",
+    },
+)
