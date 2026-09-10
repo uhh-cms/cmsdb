@@ -876,6 +876,122 @@ cpn.add_dataset(
 
 ####################################################################################################
 #
+# DY + photon (Zγ)
+#
+####################################################################################################
+
+cpn.add_dataset(
+    name="dyg_m50toinf_amcatnlo",
+    id=15618387,
+    processes=[procs.dyg_m50toinf],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=287,
+    n_events=49_351_934,
+)
+
+cpn.add_dataset(
+    name="dyg_m50toinf_ptg10to100_amcatnlo",
+    id=15047524,
+    processes=[procs.dyg_m50toinf_ptg10to100],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=237,
+    n_events=97_352_254,
+)
+
+cpn.add_dataset(
+    name="dyg_m50toinf_ptg100to200_amcatnlo",
+    id=14931202,
+    processes=[procs.dyg_m50toinf_ptg100to200],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=33,
+    n_events=1_889_390,
+)
+
+cpn.add_dataset(
+    name="dyg_m50toinf_ptg200to400_amcatnlo",
+    id=14930013,
+    processes=[procs.dyg_m50toinf_ptg200to400],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=5,
+    n_events=981_022,
+)
+
+cpn.add_dataset(
+    name="dyg_m50toinf_ptg400to600_amcatnlo",
+    id=14930683,
+    processes=[procs.dyg_m50toinf_ptg400to600],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=21,
+    n_events=969_648,
+)
+
+cpn.add_dataset(
+    name="dyg_m50toinf_ptg600toinf_amcatnlo",
+    id=14931380,
+    processes=[procs.dyg_m50toinf_ptg600toinf],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=26,
+    n_events=940_148,
+)
+
+cpn.add_dataset(
+    name="dyg_m4to50_amcatnlo",
+    id=15671863,
+    processes=[procs.dyg_m4to50],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-4to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=353,
+    n_events=50_249_469,
+)
+
+cpn.add_dataset(
+    name="dyg_m4to50_ptg10to100_amcatnlo",
+    id=15281760,
+    processes=[procs.dyg_m4to50_ptg10to100],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-4to50_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=159,
+    n_events=50_266_088,
+)
+
+cpn.add_dataset(
+    name="dyg_m4to50_ptg100to200_amcatnlo",
+    id=15246913,
+    processes=[procs.dyg_m4to50_ptg100to200],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-4to50_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=44,
+    n_events=5_683_089,
+)
+
+cpn.add_dataset(
+    name="dyg_m4to50_ptg200toinf_amcatnlo",
+    id=15251596,
+    processes=[procs.dyg_m4to50_ptg200toinf],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-4to50_PTG-200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=31,
+    n_events=2_045_586,
+)
+
+####################################################################################################
+#
 # Triboson
 #
 ####################################################################################################
