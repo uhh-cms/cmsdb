@@ -22,9 +22,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=187,  # 187-0
             n_events=110777315,
         ),
@@ -40,9 +37,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=194,  # 194-0
             n_events=108584880,
         ),
@@ -58,9 +52,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-100to200_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=270,  # 270-0
             n_events=120388125,
         ),
@@ -76,9 +67,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=238,  # 238-0
             n_events=115255250,
         ),
@@ -94,9 +82,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-400to600_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=232,  # 232-0
             n_events=106725734,
         ),
@@ -112,9 +97,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-600to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=268,  # 268-0
             n_events=128192794,
         ),
@@ -130,9 +112,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-800to1000_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=351,  # 351-0
             n_events=125650480,
         ),
@@ -148,9 +127,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-1000to1200_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=296,  # 296-0
             n_events=114412542,
         ),
@@ -166,9 +142,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-1200to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=285,  # 285-0
             n_events=107835822,
         ),
@@ -184,9 +157,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-1500to2000_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=294,  # 294-0
             n_events=113208234,
         ),
@@ -202,9 +172,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_Bin-HT-2000_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24NanoAODv15-JMENanoV15_150X_mcRun3_2024_realistic_v2-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=306,  # 306-0
             n_events=91407008,
         ),

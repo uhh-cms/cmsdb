@@ -409,9 +409,6 @@ cpn.add_dataset(
             keys=[
                 "/TbarBtoLminusNuB-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=41,  # 41-0
             n_events=1600000,
         ),
@@ -427,9 +424,6 @@ cpn.add_dataset(
             keys=[
                 "/TBbartoLplusNuBbar-s-channel-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=49,  # 49-0
             n_events=2596000,
         ),
@@ -450,9 +444,6 @@ cpn.add_dataset(
             keys=[
                 "/TBbarQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=92,  # 92-0
             n_events=5786000,
         ),
@@ -468,9 +459,6 @@ cpn.add_dataset(
             keys=[
                 "/TbarBQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=61,  # 61-0
             n_events=2878000,
         ),
@@ -1191,9 +1179,6 @@ cpn.add_dataset(
             keys=[
                 "/TTTT_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=113,  # 113-0
             n_events=4994204,
         ),
@@ -1213,9 +1198,6 @@ cpn.add_dataset(
             keys=[
                 "/TTG-1Jets_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=37,  # 37-0
             n_events=1976537,
         ),
@@ -1231,9 +1213,6 @@ cpn.add_dataset(
             keys=[
                 "/TTG-1Jets_PTG-200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=22,  # 22-0
             n_events=606104,
         ),
@@ -1249,9 +1228,6 @@ cpn.add_dataset(
             keys=[
                 "/TTG-1Jets_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=27,  # 27-0
             n_events=605263,
         ),
@@ -1267,9 +1243,6 @@ cpn.add_dataset(
             keys=[
                 "/TGQB-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=59,  # 59-0
             n_events=4419000,
         ),
