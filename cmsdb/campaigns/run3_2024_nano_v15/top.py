@@ -620,8 +620,50 @@ cpn.add_dataset(
 # 4 top
 #
 
-# missing
-# cpn.add_dataset(
-#     name="tttt_amcatnlo",
-#     ...
-# )
+cpn.add_dataset(
+    name="tttt_amcatnlo",
+    id=15529183,
+    processes=[procs.tttt],
+    keys=[
+        "/TTTT_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=101,
+    n_events=9_776_800,
+)
+
+#
+# top + photon
+#
+
+cpn.add_dataset(
+    name="ttg_amcatnlo",
+    id=15536929,
+    processes=[procs.ttg],
+    keys=[
+        "/TTG-1Jets_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=143,
+    n_events=19_416_271,
+)
+
+cpn.add_dataset(
+    name="ttg_pt100to200_amcatnlo",
+    id=15536699,
+    processes=[procs.ttg_pt100to200],
+    keys=[
+        "/TTG-1Jets_Bin-PTG-100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=113,
+    n_events=10_495_130,
+)
+
+cpn.add_dataset(
+    name="ttg_pt200toinf_amcatnlo",
+    id=15536925,
+    processes=[procs.ttg_pt200toinf],
+    keys=[
+        "/TTG-1Jets_Bin-PTG-200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=107,
+    n_events=9_630_092,
+)
