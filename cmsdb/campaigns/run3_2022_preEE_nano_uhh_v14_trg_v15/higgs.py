@@ -219,16 +219,16 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="zh_htt_powheg",
-    id=14927153,
+    id=15614490,
     processes=[procs.zh_htt],
     keys=[
-        "/ZHto2TauUncorrelatedDecay_M-125_CP5_13p6TeV_powheg-minnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/ZHto2TauUncorrelatedDecay_M-125_CP5_13p6TeV_powheg-minnlo-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v4/NANOAODSIM",  # noqa
     ],
     n_files=1,
-    n_events=28_992,
+    n_events=30_000,
     aux={
         "merging_factors": {
-            "nominal": 22,
+            "nominal": 7,
         },
     },
 )
@@ -315,6 +315,38 @@ cpn.add_dataset(
     aux={
         "merging_factors": {
             "nominal": 12,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="thq_4f_madgraph",
+    id=15426551,
+    processes=[procs.thq],
+    keys=[
+        "/THQ_ctcvcp_HIncl_M-125_4FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=11,
+    n_events=3_943_999,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="thw_madgraph",
+    id=15426554,
+    processes=[procs.thw],
+    keys=[
+        "/THW_ctcvcp_HIncl_M-125_5FS_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=7,
+    n_events=1_955_999,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
         },
     },
 )

@@ -22,9 +22,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=31,
             n_events=19198295,
         ),
@@ -40,9 +37,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=31,
             n_events=20146328,
         ),
@@ -58,9 +52,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-100to200_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=30,
             n_events=19458869,
         ),
@@ -76,9 +67,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=36,
             n_events=18478637,
         ),
@@ -94,9 +82,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-400to600_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=33,
             n_events=19101232,
         ),
@@ -112,9 +97,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-600to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=46,
             n_events=19122441,
         ),
@@ -130,9 +112,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-800to1000_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=35,
             n_events=18550980,
         ),
@@ -148,9 +127,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-1000to1200_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=43,
             n_events=20564271,
         ),
@@ -166,9 +142,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-1200to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=53,
             n_events=19537640,
         ),
@@ -184,9 +157,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-1500to2000_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=34,
             n_events=17527147,
         ),
@@ -202,9 +172,6 @@ cpn.add_dataset(
             keys=[
                 "/QCD-4Jets_HT-2000_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Winter24NanoAOD-JMENanoV14_133X_mcRun3_2024_realistic_v10-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=42,
             n_events=19336092,
         ),

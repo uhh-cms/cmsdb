@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Physics processes and cross sections.
+Physics processes and cross sections (all in pb).
 """
 
 # provisioning imports

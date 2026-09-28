@@ -5,6 +5,10 @@
 
 Database of physics processes, cross sections and scientific constants as well as CMS-related campaign information on datasets.
 
+## Implicit units
+
+- Cross sections: *pb*
+
 ## Campaign names and descriptions
 
 | Name                                                                                                   | Postfix  | Tags                        | Notes                 |
@@ -35,6 +39,8 @@ Database of physics processes, cross sections and scientific constants as well a
 | [`run3_2023_postBPix_nano_uhh_v14`](./cmsdb/campaigns/run3_2023_postBPix_nano_uhh_v14)                 | `"BPix"` | `{"postBPix", "BPix"}`      |                       |
 | [`run3_2023_postBPix_nano_uhh_v14_trg_v15`](./cmsdb/campaigns/run3_2023_postBPix_nano_uhh_v14_trg_v15) | `"BPix"` | `{"postBPix", "BPix"}`      | Nano V15 trigger bits |
 | [`run3_2024_nano_v15`](./cmsdb/campaigns/run3_2024_nano_v15)                                           | `""`     | `{}`                        |                       |
+| [`run3_2025_nano_v15`](./cmsdb/campaigns/run3_2025_nano_v15)                                           | `""`     | `{}`                        |                       |
+| [`run3_2026_nano_v15`](./cmsdb/campaigns/run3_2026_nano_v15)                                           | `""`     | `{}`                        |                       |
 
 ## Dependencies
 

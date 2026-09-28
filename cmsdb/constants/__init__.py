@@ -135,3 +135,108 @@ br_hh = DotDict(
     wwzz=2 * br_h.ww * br_h.zz,
     wwgg=2 * br_h.ww * br_h.gg,
 )
+
+#
+# HH -> 4V filtered branching ratios.
+# Methodology follows the official notebook referenced in genproductions PR #3537:
+# https://github.com/cms-sw/genproductions/pull/3537
+# https://cernbox.cern.ch/s/1NxyzV8kAYewuSv
+#
+# HH -> 4V is split into three mutually exclusive filtered samples:
+#   vvvv_2lplus : >= 2 charged leptons (e/mu/tau) from V decays
+#   vvvv_1l     : exactly 1 charged lepton from V decays
+#   vvvv_0l     : 0 charged leptons and >= 6 jets from V decays
+# Note: a small residual phase space (0L, <6 jets) is not covered by any filter.
+#
+
+# --- HH -> 4W individual decay modes ---
+_br_4w_4l4nu = br_h.ww**2 * br_w.lep**4
+_br_4w_3l3nu2q = br_h.ww**2 * 4 * br_w.lep**3 * br_w.had
+_br_4w_2l2nu4q = br_h.ww**2 * 6 * br_w.lep**2 * br_w.had**2
+_br_4w_1l1nu6q = br_h.ww**2 * 4 * br_w.lep * br_w.had**3
+_br_4w_8q = br_h.ww**2 * br_w.had**4
+
+# --- HH -> 2W2Z individual decay modes (>=2L) ---
+_br_2w2z_6l2nu = 2 * br_h.ww * br_h.zz * br_w.lep**2 * br_z.clep**2
+_br_2w2z_5l1nu2q = 2 * br_h.ww * br_h.zz * 2 * br_w.lep * br_w.had * br_z.clep**2
+_br_2w2z_4l4q = 2 * br_h.ww * br_h.zz * br_w.had**2 * br_z.clep**2
+_br_2w2z_4l4nu = 2 * br_h.ww * br_h.zz * br_w.lep**2 * 2 * br_z.clep * br_z.nunu
+_br_2w2z_4l2nu2q = 2 * br_h.ww * br_h.zz * br_w.lep**2 * 2 * br_z.clep * br_z.qq
+_br_2w2z_3l3nu2q = 2 * br_h.ww * br_h.zz * 2 * br_w.lep * br_w.had * 2 * br_z.clep * br_z.nunu
+_br_2w2z_3l1nu4q = 2 * br_h.ww * br_h.zz * 2 * br_w.lep * br_w.had * 2 * br_z.clep * br_z.qq
+_br_2w2z_2l6q = 2 * br_h.ww * br_h.zz * br_w.had**2 * 2 * br_z.qq * br_z.clep
+_br_2w2z_2l2nu4q = 2 * br_h.ww * br_h.zz * (
+    br_w.lep**2 * br_z.qq**2 + br_w.had**2 * 2 * br_z.clep * br_z.nunu
+)
+_br_2w2z_2l4nu2q = 2 * br_h.ww * br_h.zz * br_w.lep**2 * 2 * br_z.qq * br_z.nunu
+_br_2w2z_2l6nu = 2 * br_h.ww * br_h.zz * br_w.lep**2 * br_z.nunu**2
+
+# --- HH -> 2W2Z individual decay modes (1L) ---
+_br_2w2z_1l1nu6q = 2 * br_h.ww * br_h.zz * 2 * br_w.lep * br_w.had * br_z.qq**2
+_br_2w2z_1l3nu4q = 2 * br_h.ww * br_h.zz * 2 * br_w.lep * br_w.had * 2 * br_z.qq * br_z.nunu
+_br_2w2z_1l5nu2q = 2 * br_h.ww * br_h.zz * 2 * br_w.lep * br_w.had * br_z.nunu**2
+
+# --- HH -> 2W2Z individual decay modes (0L) ---
+_br_2w2z_8q = 2 * br_h.ww * br_h.zz * br_w.had**2 * br_z.qq**2
+_br_2w2z_6q2nu = 2 * br_h.ww * br_h.zz * br_w.had**2 * 2 * br_z.qq * br_z.nunu
+
+# --- HH -> 4Z individual decay modes (>=2L) ---
+_br_4z_8l = br_h.zz**2 * br_z.clep**4
+_br_4z_6l2nu = br_h.zz**2 * 4 * br_z.clep**3 * br_z.nunu
+_br_4z_6l2q = br_h.zz**2 * 4 * br_z.clep**3 * br_z.qq
+_br_4z_4l4nu = br_h.zz**2 * 6 * br_z.clep**2 * br_z.nunu**2
+_br_4z_4l2nu2q = br_h.zz**2 * 6 * br_z.clep**2 * 2 * br_z.qq * br_z.nunu
+_br_4z_4l4q = br_h.zz**2 * 6 * br_z.clep**2 * br_z.qq**2
+_br_4z_2l6q = br_h.zz**2 * 4 * br_z.clep * br_z.qq**3
+_br_4z_2l4q2nu = br_h.zz**2 * 4 * br_z.clep * 3 * br_z.qq**2 * br_z.nunu
+_br_4z_2l2q4nu = br_h.zz**2 * 4 * br_z.clep * 3 * br_z.qq * br_z.nunu**2
+_br_4z_2l6nu = br_h.zz**2 * 4 * br_z.clep * br_z.nunu**3
+
+# --- HH -> 4Z individual decay modes (0L) ---
+_br_4z_8q = br_h.zz**2 * br_z.qq**4
+_br_4z_6q2nu = br_h.zz**2 * 4 * br_z.qq**3 * br_z.nunu
+
+# --- Sum into filter categories ---
+# HH -> 4V -> >=2L (all modes with 2 or more charged leptons from V decays)
+br_hh.vvvv_2lplus = (
+    # 4W modes
+    _br_4w_4l4nu + _br_4w_3l3nu2q + _br_4w_2l2nu4q +
+    # 2W2Z modes
+    _br_2w2z_6l2nu + _br_2w2z_5l1nu2q + _br_2w2z_4l4q + _br_2w2z_4l4nu +
+    _br_2w2z_4l2nu2q + _br_2w2z_3l3nu2q + _br_2w2z_3l1nu4q + _br_2w2z_2l6q +
+    _br_2w2z_2l2nu4q + _br_2w2z_2l4nu2q + _br_2w2z_2l6nu +
+    # 4Z modes
+    _br_4z_8l + _br_4z_6l2nu + _br_4z_6l2q + _br_4z_4l4nu + _br_4z_4l2nu2q +
+    _br_4z_4l4q + _br_4z_2l6q + _br_4z_2l4q2nu + _br_4z_2l2q4nu + _br_4z_2l6nu
+)
+
+# HH -> 4V -> 1L (exactly 1 charged lepton; no 4Z contribution since Z gives 0 or 2 leptons)
+br_hh.vvvv_1l = (
+    _br_4w_1l1nu6q +
+    _br_2w2z_1l1nu6q + _br_2w2z_1l3nu4q + _br_2w2z_1l5nu2q
+)
+
+# HH -> 4V -> 0L + >=6J (0 charged leptons with at least 6 jets)
+br_hh.vvvv_0l = (
+    _br_4w_8q +
+    _br_2w2z_8q + _br_2w2z_6q2nu +
+    _br_4z_8q + _br_4z_6q2nu
+)
+
+#
+# HH -> 2W2Z with Z->nunu veto, filtered by lepton multiplicity.
+# "VetoZto2Nu" means events where any Z decays to neutrinos are rejected.
+# Only Z->ll and Z->qq modes survive. The veto-surviving fraction is (br_z.qq + br_z.clep)^2,
+# but since we enumerate only modes without Z->nunu, the veto normalization cancels.
+#
+
+# HH -> WWZZ -> 3L (veto Znunu): W(lv,qq) + Z(ll,qq) — the only 3L mode without Z->nunu
+br_hh.wwzz_veto_nunu_3l = _br_2w2z_3l1nu4q
+
+# HH -> WWZZ -> >=4L (veto Znunu): all >=4L modes without Z->nunu
+br_hh.wwzz_veto_nunu_4lplus = (
+    _br_2w2z_4l2nu2q +   # W(lv,lv) + Z(ll,qq)
+    _br_2w2z_4l4q +       # W(qq,qq) + Z(ll,ll)
+    _br_2w2z_5l1nu2q +   # W(lv,qq) + Z(ll,ll)
+    _br_2w2z_6l2nu        # W(lv,lv) + Z(ll,ll)
+)

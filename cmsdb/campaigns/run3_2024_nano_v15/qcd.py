@@ -6,7 +6,7 @@ QCD datasets for the 2024 data-taking campaign with datasets at NanoAOD tier in 
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
-
+from order import DatasetInfo
 
 #
 # QCD
@@ -127,11 +127,20 @@ cpn.add_dataset(
     name="qcd_mu_pt800to1000_pythia",
     id=15315633,
     processes=[procs.qcd_mu_pt800to1000],
-    keys=[
-        "/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
-    ],
-    n_files=673,
-    n_events=81_633_640,
+    info={
+        "nominal": DatasetInfo(
+            keys=[
+                "/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                    "/store/mc/RunIII2024Summer24NanoAODv15/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/NANOAODSIM/150X_mcRun3_2024_realistic_v2-v2/2550000/a7d8632e-0a31-4d72-9d55-65df40527939.root",  # noqa: E501
+                ],
+            },
+            n_files=672,
+            n_events=81_633_640,
+        ),
+    },
 )
 
 cpn.add_dataset(

@@ -12,7 +12,7 @@ from typing import Callable
 from functools import partial
 from scinum import Number
 
-from order import Process, Campaign
+from order import Process, Campaign, Dataset
 from collections import OrderedDict
 
 
@@ -146,6 +146,7 @@ def add_the_production_mode_parent(
 def add_decay_process(
     parent: Process,
     decay_map: DotDict,
+    additional_parents: list[Process] | None = None,
     add_production_mode_parent: bool = True,
     name_func: Callable = lambda parent_name, decay_name: f"{parent_name}_{decay_name}",
     label_func: Callable = lambda parent_label, decay_label: f"{parent_label}, {decay_label}",
@@ -157,6 +158,7 @@ def add_decay_process(
     :param parent: Parent process.
     :param decay_map: Dictionary with decay channel information. Needs to include the keys
     *name*, *id*, *br*, and *label*. When passing the *custom_id* parameter, the *id* key is ignored.
+    :param additional_parents: List of additional parent processes to which the subprocess should be added.
     :param add_production_mode_parent: Whether to add the process with the same final state but different
     production mode as parent. Also adds the *production_mode_parent* attribute to the subprocess.
     :param name_func: Function to generate the name of the subprocess from the parent name and the decay name.
@@ -180,6 +182,12 @@ def add_decay_process(
     if add_production_mode_parent:
         add_the_production_mode_parent(child, parent, decay_map, name_func)
 
+    # add to additional parents
+    if additional_parents is not None:
+        for p in additional_parents:
+            if p not in child.parent_processes:
+                child.add_parent_process(p)
+
     return child
 
 
@@ -190,12 +198,23 @@ add_sub_decay_process = partial(
 )
 
 
-def transfer_datasets(src_campaign: Campaign, dst_campaign: Campaign) -> None:
+def transfer_datasets(
+    src_campaign: Campaign,
+    dst_campaign: Campaign,
+    skip_fn: Callable[[Dataset], bool] | None = None,
+) -> None:
     """
     Copy all datasets from one *src_campaign* to another *dst_campaign*, making sure that linked processes are not
     copied but shared.
     """
+    if skip_fn is None:
+        skip_fn = lambda ds: False
+
     for dataset in src_campaign.datasets:
+        # potentially skip
+        if skip_fn(dataset):
+            continue
+
         # shallow copy of the dataset (no processes, no campaign reference)
         copy = dataset.copy_shallow()
 

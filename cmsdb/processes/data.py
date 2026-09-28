@@ -9,6 +9,7 @@ __all__ = [
     "data_tau", "data_met", "data_pho",
     "data_egamma", "data_muoneg", "data_jetht",
     "data_jethtmet", "data_doublemu", "data_vbf", "data_hh",
+    "data_muonshower",
 ]
 
 from order import Process
@@ -78,6 +79,13 @@ data_muoneg = data.add_process(
 data_doublemu = data.add_process(
     name="data_doublemu",
     id=80,
+    is_data=True,
+    label=r"Data $\mu$",
+)
+
+data_muonshower = data.add_process(
+    name="data_muonshower",
+    id=90,
     is_data=True,
     label=r"Data $\mu$",
 )

@@ -1184,9 +1184,6 @@ cpn.add_dataset(
             keys=[
                 "/TTWZ_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=21,  # 21-0
             n_events=272400,
         ),
@@ -1206,9 +1203,6 @@ cpn.add_dataset(
             keys=[
                 "/TTTT_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=47,  # 47-0
             n_events=2396925,
         ),
@@ -1228,9 +1222,6 @@ cpn.add_dataset(
             keys=[
                 "/TTG-1Jets_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=22,  # 22-0
             n_events=986777,
         ),
@@ -1246,9 +1237,6 @@ cpn.add_dataset(
             keys=[
                 "/TTG-1Jets_PTG-200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=28,  # 28-0
             n_events=286306,
         ),
@@ -1264,9 +1252,6 @@ cpn.add_dataset(
             keys=[
                 "/TTG-1Jets_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=26,  # 26-0
             n_events=317194,
         ),
@@ -1282,9 +1267,6 @@ cpn.add_dataset(
             keys=[
                 "/TGQB-4FS_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=62,  # 62-0
             n_events=2160840,
         ),

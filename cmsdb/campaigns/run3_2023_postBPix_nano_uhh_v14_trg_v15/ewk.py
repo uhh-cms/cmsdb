@@ -14,126 +14,14 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_uhh_v14_trg_v15 import campaign_run
 #
 
 cpn.add_dataset(
-    name="dy_m50toinf_amcatnlo",
-    id=14851213,
-    processes=[procs.dy_m50toinf],
+    name="dy_m10to50_amcatnlo",
+    id=15431502,
+    processes=[procs.dy_m10to50],
     keys=[
-        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2_ext1-v4/NANOAODSIM",  # noqa
     ],
-    n_files=129,
-    n_events=95_646_832,
-    aux={
-        "merging_factors": {
-            "nominal": 13,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_0j_amcatnlo",
-    id=14892800,
-    processes=[procs.dy_m50toinf_0j],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=111,
-    n_events=96_541_209,
-    aux={
-        "merging_factors": {
-            "nominal": 17,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_amcatnlo",
-    id=14893834,
-    processes=[procs.dy_m50toinf_1j],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=130,
-    n_events=91_332_285,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_amcatnlo",
-    id=14897349,
-    processes=[procs.dy_m50toinf_2j],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v3/NANOAODSIM",  # noqa
-    ],
-    n_files=140,
-    n_events=77_408_545,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt40to100_amcatnlo",
-    id=14826069,
-    processes=[procs.dy_m50toinf_1j_pt40to100],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=81,
-    n_events=52_938_287,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt100to200_amcatnlo",
-    id=14826410,
-    processes=[procs.dy_m50toinf_1j_pt100to200],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=35,
-    n_events=19_384_285,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt200to400_amcatnlo",
-    id=14825925,
-    processes=[procs.dy_m50toinf_1j_pt200to400],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=5,
-    n_events=1_985_212,
-    aux={
-        "merging_factors": {
-            "nominal": 18,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt400to600_amcatnlo",
-    id=14824627,
-    processes=[procs.dy_m50toinf_1j_pt400to600],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=1,
-    n_events=459_553,
+    n_files=75,
+    n_events=101_317_595,
     aux={
         "merging_factors": {
             "nominal": 25,
@@ -142,78 +30,14 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_m50toinf_1j_pt600toinf_amcatnlo",
-    id=14825270,
-    processes=[procs.dy_m50toinf_1j_pt600toinf],
+    name="dy_m50toinf_amcatnlo",
+    id=15413230,
+    processes=[procs.dy_m50toinf],
     keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
     ],
-    n_files=1,
-    n_events=456_439,
-    aux={
-        "merging_factors": {
-            "nominal": 33,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt40to100_amcatnlo",
-    id=14825645,
-    processes=[procs.dy_m50toinf_2j_pt40to100],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=38,
-    n_events=20_416_556,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt100to200_amcatnlo",
-    id=14826149,
-    processes=[procs.dy_m50toinf_2j_pt100to200],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=42,
-    n_events=19_943_443,
-    aux={
-        "merging_factors": {
-            "nominal": 15,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt200to400_amcatnlo",
-    id=14822125,
-    processes=[procs.dy_m50toinf_2j_pt200to400],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=10,
-    n_events=3_623_077,
-    aux={
-        "merging_factors": {
-            "nominal": 13,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt400to600_amcatnlo",
-    id=14823406,
-    processes=[procs.dy_m50toinf_2j_pt400to600],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=493_730,
+    n_files=124,
+    n_events=95_217_757,
     aux={
         "merging_factors": {
             "nominal": 17,
@@ -222,17 +46,49 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_m50toinf_2j_pt600toinf_amcatnlo",
-    id=14825018,
-    processes=[procs.dy_m50toinf_2j_pt600toinf],
+    name="dy_m50toinf_0j_amcatnlo",
+    id=15527037,
+    processes=[procs.dy_m50toinf_0j],
     keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v1/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
     ],
-    n_files=2,
-    n_events=477_040,
+    n_files=114,
+    n_events=99_748_250,
     aux={
         "merging_factors": {
-            "nominal": 20,
+            "nominal": 18,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_1j_amcatnlo",
+    id=15526922,
+    processes=[procs.dy_m50toinf_1j],
+    keys=[
+        "/DYto2L-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v4/NANOAODSIM",  # noqa
+    ],
+    n_files=143,
+    n_events=99_565_880,
+    aux={
+        "merging_factors": {
+            "nominal": 15,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_2j_amcatnlo",
+    id=15550833,
+    processes=[procs.dy_m50toinf_2j],
+    keys=[
+        "/DYto2L-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v2-v5/NANOAODSIM",  # noqa
+    ],
+    n_files=132,
+    n_events=73_167_776,
+    aux={
+        "merging_factors": {
+            "nominal": 14,
         },
     },
 )
@@ -724,16 +580,16 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="z_vbf_zll_m50toinf_madgraph",
-    id=15015836,
+    id=15535180,
     processes=[procs.z_vbf_zll_m50toinf],
     keys=[
-        "/VBFto2L_MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6_ext1-v2/NANOAODSIM",  # noqa
+        "/VBFto2L_MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6_ext1-v3/NANOAODSIM",  # noqa
     ],
     n_files=5,
-    n_events=3_488_000,
+    n_events=3_458_000,
     aux={
         "merging_factors": {
-            "nominal": 14,
+            "nominal": 21,
         },
     },
 )

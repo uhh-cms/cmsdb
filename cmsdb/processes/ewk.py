@@ -70,6 +70,7 @@ __all__ = [  # noqa: F822
     "z_nunu_ht2500toinf",
     "z_qq",
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800toinf",
+    "z_qq_pt100toinf", "z_qq_pt200toinf", "z_qq_pt400toinf", "z_qq_pt600toinf",
     "z_qq_1j_pt100to200", "z_qq_2j_pt100to200", "z_qq_1j_pt200to400", "z_qq_2j_pt200to400",
     "z_qq_1j_pt400to600", "z_qq_2j_pt400to600", "z_qq_1j_pt600toinf", "z_qq_2j_pt600toinf",
     "z_vbf", "z_vbf_zll", "z_vbf_zll_m50toinf", "z_vbf_zqq",
@@ -1525,6 +1526,9 @@ z_qq_ht200to400 = z_qq.add_process(
     xsecs={
         13: Number(1012.0, {"total": 0.4260}),
     },
+    aux={
+        "ht": (200.0, 400.0),
+    },
 )
 
 z_qq_ht400to600 = z_qq.add_process(
@@ -1532,6 +1536,9 @@ z_qq_ht400to600 = z_qq.add_process(
     id=55220,
     xsecs={
         13: Number(114.5, {"total": 0.04884}),
+    },
+    aux={
+        "ht": (400.0, 600.0),
     },
 )
 
@@ -1541,6 +1548,9 @@ z_qq_ht600to800 = z_qq.add_process(
     xsecs={
         13: Number(25.38, {"total": 0.01088}),
     },
+    aux={
+        "ht": (600.0, 800.0),
+    },
 )
 
 z_qq_ht800toinf = z_qq.add_process(
@@ -1548,6 +1558,57 @@ z_qq_ht800toinf = z_qq.add_process(
     id=55240,
     xsecs={
         13: Number(12.92, {"total": 0.005923}),
+    },
+    aux={
+        "ht": (800.0, const.inf),
+    },
+)
+
+z_qq_pt100toinf = z_qq.add_process(
+    name="z_qq_pt100toinf",
+    id=55251,
+    xsecs={
+        # XSDB
+        13.6: Number(706.5, {"total": 1.906}),
+    },
+    aux={
+        "ptqq": (100.0, const.inf),
+    },
+)
+
+z_qq_pt200toinf = z_qq.add_process(
+    name="z_qq_pt200toinf",
+    id=55252,
+    xsecs={
+        # XSDB
+        13.6: Number(70.55, {"total": 0.4536}),
+    },
+    aux={
+        "ptqq": (200.0, const.inf),
+    },
+)
+
+z_qq_pt400toinf = z_qq.add_process(
+    name="z_qq_pt400toinf",
+    id=55253,
+    xsecs={
+        # XSDB
+        13.6: Number(3.792, {"total": 0.008495}),
+    },
+    aux={
+        "ptqq": (400.0, const.inf),
+    },
+)
+
+z_qq_pt600toinf = z_qq.add_process(
+    name="z_qq_pt600toinf",
+    id=55254,
+    xsecs={
+        # XSDB
+        13.6: Number(0.5073, {"total": 0.001065}),
+    },
+    aux={
+        "ptqq": (600.0, const.inf),
     },
 )
 
@@ -1558,6 +1619,10 @@ z_qq_1j_pt100to200 = z_qq.add_process(
         # XSDB
         13.6: Number(302.0, {"total": 1.493}),
     },
+    aux={
+        "njets": (1, 2),
+        "ptqq": (100.0, 200.0),
+    },
 )
 
 z_qq_2j_pt100to200 = z_qq.add_process(
@@ -1566,6 +1631,10 @@ z_qq_2j_pt100to200 = z_qq.add_process(
     xsecs={
         # XSDB
         13.6: Number(343.9, {"total": 2.979}),
+    },
+    aux={
+        "njets": (2, 3),
+        "ptqq": (100.0, 200.0),
     },
 )
 
@@ -1576,6 +1645,10 @@ z_qq_1j_pt200to400 = z_qq.add_process(
         # XSDB
         13.6: Number(21.64, {"total": 0.1029}),
     },
+    aux={
+        "njets": (1, 2),
+        "ptqq": (200.0, 400.0),
+    },
 )
 
 z_qq_2j_pt200to400 = z_qq.add_process(
@@ -1584,6 +1657,10 @@ z_qq_2j_pt200to400 = z_qq.add_process(
     xsecs={
         # XSDB
         13.6: Number(48.36, {"total": 0.375}),
+    },
+    aux={
+        "njets": (2, 3),
+        "ptqq": (200.0, 400.0),
     },
 )
 
@@ -1594,6 +1671,10 @@ z_qq_1j_pt400to600 = z_qq.add_process(
         # XSDB
         13.6: Number(0.7376, {"total": 0.003183}),
     },
+    aux={
+        "njets": (1, 2),
+        "ptqq": (400.0, 600.0),
+    },
 )
 
 z_qq_2j_pt400to600 = z_qq.add_process(
@@ -1603,23 +1684,35 @@ z_qq_2j_pt400to600 = z_qq.add_process(
         # XSDB
         13.6: Number(2.683, {"total": 0.01553}),
     },
+    aux={
+        "njets": (2, 3),
+        "ptqq": (400.0, 600.0),
+    },
 )
 
-z_qq_1j_pt600toinf = z_qq.add_process(
+z_qq_1j_pt600toinf = z_qq_pt600toinf.add_process(
     name="z_qq_1j_pt600toinf",
     id=55267,
     xsecs={
         # XSDB
         13.6: Number(0.08717, {"total": 0.0003566}),
     },
+    aux={
+        "njets": (1, 2),
+        "ptqq": (600.0, const.inf),
+    },
 )
 
-z_qq_2j_pt600toinf = z_qq.add_process(
+z_qq_2j_pt600toinf = z_qq_pt600toinf.add_process(
     name="z_qq_2j_pt600toinf",
     id=55268,
     xsecs={
         # XSDB
         13.6: Number(0.4459, {"total": 0.002084}),
+    },
+    aux={
+        "njets": (2, 3),
+        "ptqq": (600.0, const.inf),
     },
 )
 

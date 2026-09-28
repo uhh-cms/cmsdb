@@ -256,33 +256,33 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m4to50_amcatnlo",  # -> checked entry by hand (9th Sep 2025), issue with DAS files not found
-    id=14982174,
+    name="ttz_zll_m4to50_amcatnlo",
+    id=15401410,
     processes=[procs.ttz_zll_m4to50],
     keys=[
-        "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+        "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
     ],
     n_files=1,
-    n_events=294_000,
+    n_events=290_000,
     aux={
         "merging_factors": {
-            "nominal": 21,
+            "nominal": 16,
         },
     },
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m50toinf_amcatnlo",  # -> checked entry by hand (9th Sep 2025), issue with DAS files not found
-    id=14989609,
+    name="ttz_zll_m50toinf_amcatnlo",
+    id=15401392,
     processes=[procs.ttz_zll_m50toinf],
     keys=[
-        "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+        "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixMiniAODv4_NanoAODv14UHH-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
     ],
     n_files=2,
     n_events=400_000,
     aux={
         "merging_factors": {
-            "nominal": 15,
+            "nominal": 9,
         },
     },
 )

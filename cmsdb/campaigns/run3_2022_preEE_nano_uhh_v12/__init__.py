@@ -32,7 +32,10 @@ campaign_run3_2022_preEE_nano_uhh_v12 = Campaign(
             "creator": "uhh",
             "nanogen_version": "prod3",
             "locations": {
-                "desy": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/nprouvos/nanogen_store/MergeNano/config_22pre_v12/prod3",  # noqa
+                "desy": {
+                    "site": "T2_DE_DESY",
+                    "uri": "davs://dcache-cms-webdav-wan.desy.de:2880/pnfs/desy.de/cms/tier2/store/user/nprouvos/nanogen_store/MergeNano/config_22pre_v12/prod3",  # noqa
+                },
             },
         },
     },

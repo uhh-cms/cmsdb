@@ -127,9 +127,6 @@ cpn.add_dataset(
             keys=[
                 "/MuonEG/Run2022E-22Sep2023-v1/NANOAOD",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=29,  # 29-0
             n_events=12873327,
         ),
@@ -204,9 +201,6 @@ cpn.add_dataset(
             keys=[
                 "/JetMET/Run2022E-19Dec2023-v1/NANOAOD",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=185,  # 185-0
             n_events=140001854,
         ),
@@ -226,9 +220,6 @@ cpn.add_dataset(
             keys=[
                 "/JetMET/Run2022F-19Dec2023-v2/NANOAOD",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=722,  # 722-0
             n_events=514342877,
         ),
@@ -248,9 +239,6 @@ cpn.add_dataset(
             keys=[
                 "/JetMET/Run2022G-19Dec2023-v1/NANOAOD",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=139,  # 139-0
             n_events=84795124,
         ),

@@ -220,9 +220,6 @@ cpn.add_dataset(
             keys=[
                 "/MuonEG/Run2022C-22Sep2023-v1/NANOAOD",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=28,  # 28-0
             n_events=15768439,
         ),
@@ -242,9 +239,6 @@ cpn.add_dataset(
             keys=[
                 "/MuonEG/Run2022D-22Sep2023-v1/NANOAOD",  # noqa: E501
             ],
-            aux={
-                "broken_files": [],
-            },
             n_files=16,  # 16-0
             n_events=8007031,
         ),

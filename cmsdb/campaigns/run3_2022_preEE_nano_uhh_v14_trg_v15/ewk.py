@@ -14,229 +14,85 @@ from cmsdb.campaigns.run3_2022_preEE_nano_uhh_v14_trg_v15 import campaign_run3_2
 #
 
 cpn.add_dataset(
-    name="dy_m50toinf_amcatnlo",
-    id=14796025,
-    processes=[procs.dy_m50toinf],
+    name="dy_m10to50_amcatnlo",
+    id=15489585,
+    processes=[procs.dy_m10to50],
     keys=[
-        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v1/NANOAODSIM",  # noqa
-        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext2-v2/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v4/NANOAODSIM",  # noqa
     ],
-    n_files=94 + 133 + 137,
-    n_events=72_913_933 + 100_280_322 + 103_042_871,
+    n_files=76,
+    n_events=97_526_817,
     aux={
         "merging_factors": {
-            "nominal": 13,
-            "nominal_ext1": 14,
-            "nominal_ext2": 19,
+            "nominal": 24,
+        },
+    },
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_amcatnlo",
+    id=15413231,
+    processes=[procs.dy_m50toinf],
+    keys=[
+        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v5/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext2-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=129 + 123 + 127,
+    n_events=93_967_480 + 92_895_045 + 94_127_967,
+    aux={
+        "merging_factors": {
+            "nominal": 18,
+            "nominal_ext1": 23,
+            "nominal_ext2": 18,
         },
     },
 )
 
 cpn.add_dataset(
     name="dy_m50toinf_0j_amcatnlo",
-    id=14791239,
+    id=15440054,
     processes=[procs.dy_m50toinf_0j],
     keys=[
-        "/DYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-50_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
     ],
-    n_files=105,
-    n_events=87_955_912,
+    n_files=116,
+    n_events=98_461_524,
     aux={
         "merging_factors": {
-            "nominal": 14,
+            "nominal": 21,
         },
     },
 )
 
 cpn.add_dataset(
     name="dy_m50toinf_1j_amcatnlo",
-    id=14791368,
+    id=15530356,
     processes=[procs.dy_m50toinf_1j],
     keys=[
-        "/DYto2L-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
     ],
-    n_files=138,
-    n_events=96_932_233,
+    n_files=142,
+    n_events=96_328_349,
     aux={
         "merging_factors": {
-            "nominal": 12,
+            "nominal": 16,
         },
     },
 )
 
 cpn.add_dataset(
     name="dy_m50toinf_2j_amcatnlo",
-    id=14790842,
+    id=15432108,
     processes=[procs.dy_m50toinf_2j],
     keys=[
-        "/DYto2L-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+        "/DYto2L-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
     ],
-    n_files=126,
-    n_events=71_990_957,
+    n_files=143,
+    n_events=77_379_235,
     aux={
         "merging_factors": {
-            "nominal": 10,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt40to100_amcatnlo",
-    id=14825012,
-    processes=[procs.dy_m50toinf_1j_pt40to100],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=78,
-    n_events=50_272_820,
-    aux={
-        "merging_factors": {
-            "nominal": 13,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt100to200_amcatnlo",
-    id=14824884,
-    processes=[procs.dy_m50toinf_1j_pt100to200],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=33,
-    n_events=18_682_106,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt200to400_amcatnlo",
-    id=14826002,
-    processes=[procs.dy_m50toinf_1j_pt200to400],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=5,
-    n_events=1_939_721,
-    aux={
-        "merging_factors": {
-            "nominal": 13,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt400to600_amcatnlo",
-    id=14822087,
-    processes=[procs.dy_m50toinf_1j_pt400to600],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=503_786,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_1j_pt600toinf_amcatnlo",
-    id=14830407,
-    processes=[procs.dy_m50toinf_1j_pt600toinf],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=508_646,
-    aux={
-        "merging_factors": {
-            "nominal": 14,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt40to100_amcatnlo",
-    id=14822136,
-    processes=[procs.dy_m50toinf_2j_pt40to100],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=35,
-    n_events=19_307_377,
-    aux={
-        "merging_factors": {
-            "nominal": 12,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt100to200_amcatnlo",
-    id=14825259,
-    processes=[procs.dy_m50toinf_2j_pt100to200],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=40,
-    n_events=19_139_796,
-    aux={
-        "merging_factors": {
-            "nominal": 12,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt200to400_amcatnlo",
-    id=14824840,
-    processes=[procs.dy_m50toinf_2j_pt200to400],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=10,
-    n_events=3_651_560,
-    aux={
-        "merging_factors": {
-            "nominal": 12,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt400to600_amcatnlo",
-    id=14822163,
-    processes=[procs.dy_m50toinf_2j_pt400to600],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=488_707,
-    aux={
-        "merging_factors": {
-            "nominal": 18,
-        },
-    },
-)
-
-cpn.add_dataset(
-    name="dy_m50toinf_2j_pt600toinf_amcatnlo",
-    id=14825895,
-    processes=[procs.dy_m50toinf_2j_pt600toinf],
-    keys=[
-        "/DYto2L-2Jets_MLL-50_PTLL-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=474_576,
-    aux={
-        "merging_factors": {
-            "nominal": 20,
+            "nominal": 17,
         },
     },
 )
@@ -728,16 +584,16 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="z_vbf_zll_m50toinf_madgraph",
-    id=15015907,
+    id=15535982,
     processes=[procs.z_vbf_zll_m50toinf],
     keys=[
-        "/VBFto2L_MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
+        "/VBFto2L_MLL-50_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22MiniAODv4_NanoAODv14UHH-130X_mcRun3_2022_realistic_v5_ext1-v3/NANOAODSIM",  # noqa
     ],
     n_files=5,
-    n_events=3_492_580,
+    n_events=3_498_000,
     aux={
         "merging_factors": {
-            "nominal": 18,
+            "nominal": 22,
         },
     },
 )
