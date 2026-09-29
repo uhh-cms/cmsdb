@@ -634,7 +634,7 @@ zh_gg = vh.add_process(
         }),  # TODO: only preliminary
         # unclear if error (originally for ZH) is also applicable here.
         # only in original presentation:
-        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf
     },
     label=r"$ZH_{gg}$",
     aux={"production_mode_parent": vh},
@@ -661,7 +661,7 @@ wph = wh.add_process(
             "pdf": 0.018j,
         }),  # TODO: only preliminary
         # only in original presentation:
-        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf
     },
     aux={"production_mode_parent": wh},
 )
@@ -680,7 +680,7 @@ wmh = wh.add_process(
             "pdf": 0.018j,
         }),  # TODO: only preliminary
         # only in original presentation:
-        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf  # noqa
+        # https://indico.cern.ch/event/1119741/contributions/4715908/attachments/2383849/4073592/YR4_13p6_VH_update.pdf
     },
     aux={"production_mode_parent": wh},
 )
@@ -1067,13 +1067,13 @@ zh_gg_znunu_hgg = add_decay_process(zh_gg_znunu, h_decay_map.hgg, additional_par
 zh_gg_znunu_hmm = add_decay_process(zh_gg_znunu, h_decay_map.hmm, additional_parents=[zh_gg_hmm])
 
 # Higgs sub-decay channels
-zh_gg_znunu_hwwqqlnu = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["qqlnu"], additional_parents=[zh_gg_hwwqqlnu])
-zh_gg_znunu_hww2l2nu = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["2l2nu"], additional_parents=[zh_gg_hww2l2nu])
+zh_gg_znunu_hwwqqlnu = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["qqlnu"], additional_parents=[zh_gg_hwwqqlnu])  # noqa: E501
+zh_gg_znunu_hww2l2nu = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["2l2nu"], additional_parents=[zh_gg_hww2l2nu])  # noqa: E501
 zh_gg_znunu_hww4q = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["4q"], additional_parents=[zh_gg_hww4q])
 zh_gg_znunu_hzz4l = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["4l"], additional_parents=[zh_gg_hzz4l])
-zh_gg_znunu_hzz2l2nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2l2nu"], additional_parents=[zh_gg_hzz2l2nu])
+zh_gg_znunu_hzz2l2nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2l2nu"], additional_parents=[zh_gg_hzz2l2nu])  # noqa: E501
 zh_gg_znunu_hzz2l2q = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2l2q"], additional_parents=[zh_gg_hzz2l2q])
-zh_gg_znunu_hzz2q2nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2q2nu"], additional_parents=[zh_gg_hzz2q2nu])
+zh_gg_znunu_hzz2q2nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["2q2nu"], additional_parents=[zh_gg_hzz2q2nu])  # noqa: E501
 zh_gg_znunu_hzz4nu = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["4nu"], additional_parents=[zh_gg_hzz4nu])
 zh_gg_znunu_hzz4q = add_sub_decay_process(zh_gg_znunu_hzz, zz_decay_map["4q"], additional_parents=[zh_gg_hzz4q])
 zh_gg_znunu_hzg_zll = add_decay_process(zh_gg_znunu_hzg, hzg_decay_map["zll"], additional_parents=[zh_gg_hzg_zll])
