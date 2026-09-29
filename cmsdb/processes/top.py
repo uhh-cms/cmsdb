@@ -588,14 +588,14 @@ tttt = Process(
     id=4400,
     label=r"$t\bar{t}t\bar{t}$",
     xsecs={
-        # source: https://www.arxiv.org/abs/2212.03259
-        13: Number(13.37e-03, {
-            "scale": (0.48, 1.52),
-            "pdf": 0.92,
+        # source: https://www.arxiv.org/abs/2212.03259 (v2)
+        13: Number(14.65e-03, {
+            "scale": (1.20e-03, 2.55e-03),
+            "pdf": 1.01e-03,
         }),
-        13.6: Number(15.82e-03, {
-            "scale": (0.24, 1.83),
-            "pdf": 1.06,
+        13.6: Number(17.36e-03, {
+            "scale": (1.43e-03, 3.04e-03),
+            "pdf": 1.16e-03,
         }),
     },
 )
