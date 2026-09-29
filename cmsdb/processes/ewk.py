@@ -1791,7 +1791,7 @@ w_lnu_xsdb_xsecs = {
         "0j": Number(55760, {"tot": 75.39}),
         "1j": Number(9529, {"tot": 56.7}),
         "2j": Number(3532, {"tot": 34.81}),
-    }
+    },
 }
 
 w_lnu_0j = w_lnu.add_process(
