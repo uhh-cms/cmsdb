@@ -71,6 +71,15 @@ br_zz = DotDict(
     tttt=br_z.tt ** 2,
 )
 
+br_wz = DotDict.wrap({
+    "3lnu": br_z.clep * br_w.lep,
+    "l3nu": br_z.nunu * br_w.lep,
+    "lnu2q": br_z.qq * br_w.lep,
+    "2l2q": br_z.clep * br_w.had,
+    "2nu2q": br_z.nunu * br_w.had,
+    "4q": br_z.qq * br_w.had,
+})
+
 # higgs branching ratios from lhchwg, taken for mH = 125GeV
 # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR?rev=23
 
