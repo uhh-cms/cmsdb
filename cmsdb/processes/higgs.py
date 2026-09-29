@@ -1426,12 +1426,12 @@ ttzh = ttvh.add_process(
     id=120000,
     label=r"$t\bar{t}ZH$",
     xsecs={
-        # taken from https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2022/122 (v25)
+        # taken from https://arxiv.org/pdf/1610.07922 (p.165)
         13: Number(1.535e-03, {
             "scale": (0.019j, 0.068j),
             "pdf": 0.030j,
         }),
-        # 13.6 TeV values obtained from naice xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
+        # 13.6 TeV values obtained from naive xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
         13.6: Number(1.535e-03, {
             "scale": (0.019j, 0.068j),
             "pdf": 0.030j,
@@ -1440,14 +1440,24 @@ ttzh = ttvh.add_process(
     aux={"production_mode_parent": ttvh},
 )
 
+# taken from https://arxiv.org/pdf/1610.07922 (p.165)
+ttwph_xs = Number(1.089e-03, {
+    "scale": (0.018j, 0.059j),
+    "pdf": 0.026j,
+})
+ttwmh_xs = Number(4.930e-04, {
+    "scale": (0.026j, 0.064j),
+    "pdf": 0.034j,
+})
+
 ttwh = ttvh.add_process(
     name="ttwh",
     id=130000,
     label=r"$t\bar{t}WH$",
     xsecs={
-        13: Number(1.538e-03),
-        # 13.6 TeV values obtained from naice xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
-        13.6: Number(1.538e-03) * k_factor_13p6_tev,
+        13: ttwph_xs + ttwmh_xs,
+        # 13.6 TeV values obtained from naive xs scaling using h_ggf (TODO: update to genuine 13.6 TeV value)
+        13.6: (ttwph_xs + ttwmh_xs) * k_factor_13p6_tev,
     },
     aux={"production_mode_parent": ttvh},
 )
@@ -1468,6 +1478,9 @@ thw = h.add_process(
     },
     aux={"production_mode_parent": h},
 )
+
+# set combined xsec for ttvh
+ttvh.xsecs = add_xsecs(ttzh, ttwh)
 
 # also named tH t-channel
 thq = h.add_process(
