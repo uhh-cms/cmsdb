@@ -106,7 +106,7 @@ from scinum import Number
 
 import cmsdb.constants as const
 from cmsdb.processes.stitching import get_stitched_dy_m50toinf_br, get_stitched_w_lnu_br
-from cmsdb.util import multiply_xsecs
+from cmsdb.util import add_xsecs, multiply_xsecs
 
 
 #
@@ -1786,7 +1786,7 @@ wm_lnu_xs_13p6 = const.n_leps * Number(9013.3, {
     "pdf": 0.008j,
 })
 wp_lnu_xs_13p6 = const.n_leps * Number(12128.4, {
-    "scale": (0.011j, 0.014),
+    "scale": (0.011j, 0.014j),
     "pdf": 0.007j,
 })
 
@@ -2555,5 +2555,4 @@ www = vvv.add_process(
 )
 
 # update vvv cross section
-for cme in [13]:
-    vvv.set_xsec(cme, www.get_xsec(cme) + wwz.get_xsec(cme) + wzz.get_xsec(cme) + zzz.get_xsec(cme))
+vvv.xsecs = add_xsecs(www, wwz, wzz, zzz)
