@@ -1786,7 +1786,7 @@ wm_lnu_xs_13p6 = const.n_leps * Number(9013.3, {
     "pdf": 0.008j,
 })
 wp_lnu_xs_13p6 = const.n_leps * Number(12128.4, {
-    "scale": (0.011j, 0.014),
+    "scale": (0.011j, 0.014j),
     "pdf": 0.007j,
 })
 
